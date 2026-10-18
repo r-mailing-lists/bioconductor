@@ -1,0 +1,208 @@
+From olivier.martin@inrialpes.fr  Thu Feb 14 18:26:54 2002
+From: olivier.martin@inrialpes.fr (Olivier Martin)
+Date: Thu, 14 Feb 2002 19:26:54 +0100
+Subject: [BioC] help with  library(NBIR)
+Message-ID: <3C6C016E.D58777EA@inrialpes.fr>
+
+--------------EC7355746203A2B4FADEEE3D
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Hi all,
+
+I have installed the NBIR library.
+I try to load it in a R session but it fails. I have the error message :
+
+Error in readLines(con) : cannot open file
+`/usr/lib/R/library/annotate/data/hgu95v2fgroup'
+
+Could you help me ??
+Thanks,
+Olivier
+
+--
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+Olivier MARTIN
+PhD student                  phone: (33) 04 76 61 53 55
+Projet IS2                               06 08 67 93 42
+INRIA Rhone-Alpes            fax  : (33) 04 76 61 54 77
+655, Av. de l'Europe
+Montbonnot                   e-mail:olivier.martin@inrialpes.fr
+38334 Saint Ismier cedex
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+
+
+
+--------------EC7355746203A2B4FADEEE3D
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+Hi all,
+<p>I have installed the NBIR library.
+<br>I try to load it in a R session but it fails. I have the error message
+:
+<p>Error in readLines(con) : cannot open file `/usr/lib/R/library/annotate/data/hgu95v2fgroup'
+<p>Could you help me ??
+<br>Thanks,
+<br>Olivier
+<pre>--&nbsp;
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+Olivier MARTIN
+PhD student&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; phone: (33) 04 76 61 53 55
+Projet IS2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 06 08 67 93 42&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+INRIA Rhone-Alpes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fax&nbsp; : (33) 04 76 61 54 77
+655, Av. de l'Europe
+Montbonnot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e-mail:olivier.martin@inrialpes.fr
+38334 Saint Ismier cedex
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-</pre>
+&nbsp;</html>
+
+--------------EC7355746203A2B4FADEEE3D--
+
+
+From John Zhang <jzhang@jimmy.harvard.edu>  Thu Feb 14 17:47:15 2002
+From: John Zhang <jzhang@jimmy.harvard.edu> (John Zhang)
+Date: Thu, 14 Feb 2002 12:47:15 -0500 (EST)
+Subject: [BioC] help with  library(NBIR)
+Message-ID: <200202141747.MAA04321@blaise.dfci.harvard.edu>
+
+Oliver,
+
+It failed because /usr/lib/R/library/annotate/data/hgu95v2fgroup is an old file 
+we used before but does not exist in annotate/data any more. I will let the 
+maintainer of the package know about the change and have the bug fixed. Thanks.
+
+Jianhua
+
+
+From stvjc@channing.harvard.edu  Thu Feb 14 18:08:51 2002
+From: stvjc@channing.harvard.edu (Vincent Carey 525-2265)
+Date: Thu, 14 Feb 2002 13:08:51 -0500 (EST)
+Subject: [BioC] help with  library(NBIR)
+In-Reply-To: <3C6C016E.D58777EA@inrialpes.fr>
+Message-ID: <Pine.GSO.4.40.0202141307140.22962-100000@falmouth.bwh.harvard.edu>
+
+hi -- my experience with NBIR under R 1.5 is that
+it fails because SNetscape and the methods library
+are incompatible.  NBIR has not been touched for
+some time owing to that.
+
+If you have evidence to the contrary let me know
+and I will try to rebuild and correct the
+current bugs.
+
+Let me know what version of R you are running and
+on what platform please.
+
+---
+Vince Carey, PhD
+Ass't Prof Med (Biostatistics)
+Harvard Medical School
+Channing Laboratory - ph 6175252265 fa 6177311541
+181 Longwood Ave Boston MA 02115 USA
+stvjc@channing.harvard.edu
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: PGP 6.5.8
+
+mQCNAzqIeGUAAAEEAMJXU941vIornTS52rl6z7eo+A7wwB0km/idLnkxzIhc1uLi
+Qtn19OyOfG6IDSucLrtmpvwagemAnQ9jL6TVDrmlrKnqsh+FFtvUuZ37eV85L70E
+BsS8RZCmMYHJKfrpCwegbTVZrEkd1ByquLIN/yUwxU4IcVuHxbNQk69riQ8tAAUR
+tBVWaW5jZW50IEouIENhcmV5LCBKci6JAJUDBRA6iHhls1CTr2uJDy0BAdsLA/wM
+cCzEDsP9MqodKZfDI1s/gXW6BcCuQ6n7MdEplLgmWvyqfbvRYx4upYZ3pNp8L0zU
+MrlR6eCTs/eDtMO/ZbGvkqqiQO6wS2fZb1T5L/DhhtT4mEAHt0E8dNBVCj+lKr3W
+vYS5GqO9gY4CiT3JXFH9N19pSbUQFiNDqpmG6EbWng==
+=DQNF
+-----END PGP PUBLIC KEY BLOCK-----
+
+
+On Thu, 14 Feb 2002, Olivier Martin wrote:
+
+> Hi all,
+>
+> I have installed the NBIR library.
+> I try to load it in a R session but it fails. I have the error message :
+>
+> Error in readLines(con) : cannot open file
+> `/usr/lib/R/library/annotate/data/hgu95v2fgroup'
+>
+> Could you help me ??
+> Thanks,
+> Olivier
+>
+> --
+> -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+> Olivier MARTIN
+> PhD student                  phone: (33) 04 76 61 53 55
+> Projet IS2                               06 08 67 93 42
+> INRIA Rhone-Alpes            fax  : (33) 04 76 61 54 77
+> 655, Av. de l'Europe
+> Montbonnot                   e-mail:olivier.martin@inrialpes.fr
+> 38334 Saint Ismier cedex
+> -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+>
+>
+>
+
+
+From laurent@genome.cbs.dtu.dk  Thu Feb 14 21:37:53 2002
+From: laurent@genome.cbs.dtu.dk (Laurent Gautier)
+Date: Thu, 14 Feb 2002 22:37:53 +0100 (MET)
+Subject: [BioC] help with  library(NBIR)
+In-Reply-To: <3C6C016E.D58777EA@inrialpes.fr>
+Message-ID: <Pine.SGI.3.95.1020214223446.4130271B-100000@genome.cbs.dtu.dk>
+
+Salut Olivier,
+
+
+Je ne suis pas certain de mon coup, mais il pourrait que ce soit du au
+fait qu'il faille egalement avoir la bibliotheque 'annotate'...
+
+..est-ce le cas ?
+
+
+
+
+.....oups, sorry...
+
+summary of above: it might be cause by the package 'annotate' not
+installed (but I am not sure)
+
+
+
+
+Laurent Gautier			CBS, Building 208, DTU
+PhD. Student			D-2800 Lyngby,Denmark	
+tel: +45 45 25 24 85		http://www.cbs.dtu.dk/laurent
+
+On Thu, 14 Feb 2002, Olivier Martin wrote:
+
+> Hi all,
+> 
+> I have installed the NBIR library.
+> I try to load it in a R session but it fails. I have the error message :
+> 
+> Error in readLines(con) : cannot open file
+> `/usr/lib/R/library/annotate/data/hgu95v2fgroup'
+> 
+> Could you help me ??
+> Thanks,
+> Olivier
+> 
+> --
+> -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+> Olivier MARTIN
+> PhD student                  phone: (33) 04 76 61 53 55
+> Projet IS2                               06 08 67 93 42
+> INRIA Rhone-Alpes            fax  : (33) 04 76 61 54 77
+> 655, Av. de l'Europe
+> Montbonnot                   e-mail:olivier.martin@inrialpes.fr
+> 38334 Saint Ismier cedex
+> -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+> 
+> 
+> 
+
+

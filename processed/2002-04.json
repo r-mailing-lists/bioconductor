@@ -1,0 +1,845 @@
+{
+  "list": "bioconductor",
+  "description": "",
+  "month": "2002-04",
+  "messages": [
+    {
+      "id": "msg-6cf8fbbf7e84",
+      "message_id": "<Pine.GSO.4.10.10204011500420.17080-100000@biosun08>",
+      "from_name": "Rafael A. Irizarry",
+      "from_email_hash": "05a677c1148207b83eb8bc3532d7193bce333c0fe976f77ab582c8bfe9f05d4d",
+      "date": "2002-04-01T20:01:26Z",
+      "subject": "[BioC] widgets",
+      "subject_clean": "[BioC] widgets",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "i agree that sometimes the dirs are sometimes necesary. thats why i\nsuggest we implement an option, say 'showdirs=T'\n\nbtw, i forgot to mention that on the system where im testing this (redhat\n7.1 running R 1.5) if you select a directory nothing happens.\n\nOn Mon, 1 Apr 2002, Robert Gentleman wrote:\n\n> On Mon, Apr 01, 2002 at 02:18:57PM -0500, Rafael A. Irizarry wrote:\n> > hi! some comments about the fileBrowser function.\n> > \n> > 1 - is it possible to have an argumet, say showdirs=F, that lets you\n> > decide if you want to see directories or not. i would usually want to only\n> > see files.\n> \n>   The problem with that is: how do you navigate? If you get the\n>   working directory right all is well and good -- otherwise you're\n>   toast. Jianhua did this in some of the early versions and it could\n>   be reinstated.\n> \n>   If you think about the example below, usually I have the cdf files\n>   in one place and the cel files in another -- I want to select both\n>   at one time == navigation\n> \n> > \n> > 2 - is is possible to have an argument, say text=\"\", that lets you add\n> > test that will apear on the widget? for example i would have it say\n> > \"choose ond cdf file and any cel file you want to read in\"\n> > \n>    That should be pretty straight forward.\n> \n>    Instructions: (paste your text here).\n> \n> \n>   good ideas -- thanks Rafael.\n>  (but please -- bioconductor is the place for discussions)\n> \n> \n> \n> > _______________________________________________\n> > Biocore mailing list\n> > Biocore@stat.math.ethz.ch\n> > http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n> \n> -- \n> +---------------------------------------------------------------------------+\n> | Robert Gentleman                 phone : (617) 632-5250                   |\n> | Associate Professor              fax:   (617)  632-2444                   |\n> | Department of Biostatistics      office: M1B28\n> | Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n> +---------------------------------------------------------------------------+\n>",
+      "body_snippet": "i agree that sometimes the dirs are sometimes necesary. thats why i\nsuggest we implement an option, say 'showdirs=T'\n\nbtw, i forgot to mention that on the system where im testing this (redhat\n7.1 runn",
+      "thread_id": "thread-6cf8fbbf7e84",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-750ba8b9c764",
+      "message_id": "<200204012018.PAA15960@blaise.dfci.harvard.edu>",
+      "from_name": "John Zhang",
+      "from_email_hash": "a9b29fa5c7919bc7d02dec7bdc0c62c5f96a282f20bb4efd587867f549843181",
+      "date": "2002-04-01T20:18:22Z",
+      "subject": "[BioC] Re: fileBrowser",
+      "subject_clean": "[BioC] Re: fileBrowser",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": ">From: \"Rafael A. Irizarry\" <ririzarr@jhsph.edu>\n>X-Sender: ririzarr@biosun08\n>To: biocore@stat.math.ethz.ch\n>MIME-version: 1.0\n>Content-transfer-encoding: 7BIT\n>Subject: (no subject)\n>X-BeenThere: biocore@stat.math.ethz.ch\n>X-Mailman-Version: 2.0.2\n>List-Help: <mailto:biocore-request@stat.math.ethz.ch?subject=help>\n>List-Post: <mailto:biocore@stat.math.ethz.ch>\n>List-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/biocore>, \n<mailto:biocore-request@stat.math.ethz.ch?subject=subscribe>\n>List-Id: Developers in the Bioconductor project <biocore.stat.math.ethz.ch>\n>List-Unsubscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/biocore>, \n<mailto:biocore-request@stat.math.ethz.ch?subject=unsubscribe>\n>List-Archive: <http://www.stat.math.ethz.ch/mailman/private/biocore/>\n>Date: Mon, 01 Apr 2002 14:18:57 -0500 (EST)\n>\n>hi! some comments about the fileBrowser function.\n>\n>1 - is it possible to have an argumet, say showdirs=F, that lets you\n>decide if you want to see directories or not. i would usually want to only\n>see files.\n\nThat can be done if we want to.\n>\n>2 - is is possible to have an argument, say text=\"\", that lets you add\n>test that will apear on the widget? for example i would have it say\n>\"choose ond cdf file and any cel file you want to read in\"\n\nHas been done. fileBrowser now takes another parameter - textToShow - that will \nbe displayed on the GUI.\n\n>\n>_______________________________________________\n>Biocore mailing list\n>Biocore@stat.math.ethz.ch\n>http://www.stat.math.ethz.ch/mailman/listinfo/biocore",
+      "body_snippet": ">From: \"Rafael A. Irizarry\" <ririzarr@jhsph.edu>\n>X-Sender: ririzarr@biosun08\n>To: biocore@stat.math.ethz.ch\n>MIME-version: 1.0\n>Content-transfer-encoding: 7BIT\n>Subject: (no subject)\n>X-BeenThere: bi",
+      "thread_id": "thread-750ba8b9c764",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-16824ad992f6",
+      "message_id": "<200204012020.PAA16066@blaise.dfci.harvard.edu>",
+      "from_name": "John Zhang",
+      "from_email_hash": "a9b29fa5c7919bc7d02dec7bdc0c62c5f96a282f20bb4efd587867f549843181",
+      "date": "2002-04-01T20:20:54Z",
+      "subject": "[BioC] Re: fileBrowser",
+      "subject_clean": "[BioC] Re: fileBrowser",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": ">From: \"Rafael A. Irizarry\" <ririzarr@jhsph.edu>\n>Subject: Re: (no subject)\n>X-Sender: ririzarr@biosun08\n>To: Robert Gentleman <rgentlem@jimmy.harvard.edu>\n>Cc: biocore@stat.math.ethz.ch\n>MIME-version: 1.0\n>Content-transfer-encoding: 7BIT\n>X-BeenThere: biocore@stat.math.ethz.ch\n>X-Mailman-Version: 2.0.2\n>List-Help: <mailto:biocore-request@stat.math.ethz.ch?subject=help>\n>List-Post: <mailto:biocore@stat.math.ethz.ch>\n>List-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/biocore>, \n<mailto:biocore-request@stat.math.ethz.ch?subject=subscribe>\n>List-Id: Developers in the Bioconductor project <biocore.stat.math.ethz.ch>\n>List-Unsubscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/biocore>, \n<mailto:biocore-request@stat.math.ethz.ch?subject=unsubscribe>\n>List-Archive: <http://www.stat.math.ethz.ch/mailman/private/biocore/>\n>Date: Mon, 01 Apr 2002 14:59:32 -0500 (EST)\n>\n>i agree that sometimes the dirs are sometimes necesary. thats why i\n>suggest we implement an option, say 'showdirs=T'\n>\n>btw, i forgot to mention that on the system where im testing this (redhat\n>7.1 running R 1.5) if you select a directory nothing happens.\n\n\nIf you double click a directory, you will go into that directory. Single click \nonly allows you to choose that directory.\n\n\n>On Mon, 1 Apr 2002, Robert Gentleman wrote:\n>\n>> On Mon, Apr 01, 2002 at 02:18:57PM -0500, Rafael A. Irizarry wrote:\n>> > hi! some comments about the fileBrowser function.\n>> > \n>> > 1 - is it possible to have an argumet, say showdirs=F, that lets you\n>> > decide if you want to see directories or not. i would usually want to only\n>> > see files.\n>> \n>>   The problem with that is: how do you navigate? If you get the\n>>   working directory right all is well and good -- otherwise you're\n>>   toast. Jianhua did this in some of the early versions and it could\n>>   be reinstated.\n>> \n>>   If you think about the example below, usually I have the cdf files\n>>   in one place and the cel files in another -- I want to select both\n>>   at one time == navigation\n>> \n>> > \n>> > 2 - is is possible to have an argument, say text=\"\", that lets you add\n>> > test that will apear on the widget? for example i would have it say\n>> > \"choose ond cdf file and any cel file you want to read in\"\n>> > \n>>    That should be pretty straight forward.\n>> \n>>    Instructions: (paste your text here).\n>> \n>> \n>>   good ideas -- thanks Rafael.\n>>  (but please -- bioconductor is the place for discussions)\n>> \n>> \n>> \n>> > _______________________________________________\n>> > Biocore mailing list\n>> > Biocore@stat.math.ethz.ch\n>> > http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n>> \n>> -- \n>> +---------------------------------------------------------------------------+\n>> | Robert Gentleman                 phone : (617) 632-5250                   |\n>> | Associate Professor              fax:   (617)  632-2444                   |\n>> | Department of Biostatistics      office: M1B28\n>> | Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n>> +---------------------------------------------------------------------------+\n>> \n>\n>_______________________________________________\n>Biocore mailing list\n>Biocore@stat.math.ethz.ch\n>http://www.stat.math.ethz.ch/mailman/listinfo/biocore",
+      "body_snippet": ">From: \"Rafael A. Irizarry\" <ririzarr@jhsph.edu>\n>Subject: Re: (no subject)\n>X-Sender: ririzarr@biosun08\n>To: Robert Gentleman <rgentlem@jimmy.harvard.edu>\n>Cc: biocore@stat.math.ethz.ch\n>MIME-version",
+      "thread_id": "thread-16824ad992f6",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-ecaf8cece5c2",
+      "message_id": "<Pine.GSO.4.10.10204011526410.17080-100000@biosun08>",
+      "from_name": "Rafael A. Irizarry",
+      "from_email_hash": "05a677c1148207b83eb8bc3532d7193bce333c0fe976f77ab582c8bfe9f05d4d",
+      "date": "2002-04-01T20:27:45Z",
+      "subject": "[BioC] Re: fileBrowser",
+      "subject_clean": "[BioC] Re: fileBrowser",
+      "in_reply_to": "<200204012018.PAA15960@blaise.dfci.harvard.edu>",
+      "references": [],
+      "body_plain": "regarding the directories, another possiblity is to have 3 windows:\n1-directories, 2-files, and 3-chosen files.\n\nOn Mon, 1 Apr 2002, John Zhang wrote:\n\n> \n> >From: \"Rafael A. Irizarry\" <ririzarr@jhsph.edu>\n> >X-Sender: ririzarr@biosun08\n> >To: biocore@stat.math.ethz.ch\n> >MIME-version: 1.0\n> >Content-transfer-encoding: 7BIT\n> >Subject: (no subject)\n> >X-BeenThere: biocore@stat.math.ethz.ch\n> >X-Mailman-Version: 2.0.2\n> >List-Help: <mailto:biocore-request@stat.math.ethz.ch?subject=help>\n> >List-Post: <mailto:biocore@stat.math.ethz.ch>\n> >List-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/biocore>, \n> <mailto:biocore-request@stat.math.ethz.ch?subject=subscribe>\n> >List-Id: Developers in the Bioconductor project <biocore.stat.math.ethz.ch>\n> >List-Unsubscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/biocore>, \n> <mailto:biocore-request@stat.math.ethz.ch?subject=unsubscribe>\n> >List-Archive: <http://www.stat.math.ethz.ch/mailman/private/biocore/>\n> >Date: Mon, 01 Apr 2002 14:18:57 -0500 (EST)\n> >\n> >hi! some comments about the fileBrowser function.\n> >\n> >1 - is it possible to have an argumet, say showdirs=F, that lets you\n> >decide if you want to see directories or not. i would usually want to only\n> >see files.\n> \n> That can be done if we want to.\n> >\n> >2 - is is possible to have an argument, say text=\"\", that lets you add\n> >test that will apear on the widget? for example i would have it say\n> >\"choose ond cdf file and any cel file you want to read in\"\n> \n> Has been done. fileBrowser now takes another parameter - textToShow - that will \n> be displayed on the GUI.\n> \n> >\n> >_______________________________________________\n> >Biocore mailing list\n> >Biocore@stat.math.ethz.ch\n> >http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>",
+      "body_snippet": "regarding the directories, another possiblity is to have 3 windows:\n1-directories, 2-files, and 3-chosen files.\n\nOn Mon, 1 Apr 2002, John Zhang wrote:\n\n> \n> >From: \"Rafael A. Irizarry\" <ririzarr@jhsph",
+      "thread_id": "thread-750ba8b9c764",
+      "thread_depth": 1,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-6a74978d2b74",
+      "message_id": "<20020401153521.J7028@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-04-01T20:35:21Z",
+      "subject": "[BioC] widgets",
+      "subject_clean": "[BioC] widgets",
+      "in_reply_to": "<Pine.GSO.4.10.10204011500420.17080-100000@biosun08>; from ririzarr@jhsph.edu on Mon, Apr 01, 2002 at 03:01:26PM -0500",
+      "references": [
+        "<Pine.GSO.4.10.10204011500420.17080-100000@biosun08>"
+      ],
+      "body_plain": "On Mon, Apr 01, 2002 at 03:01:26PM -0500, Rafael A. Irizarry wrote:\n> \n> i agree that sometimes the dirs are sometimes necesary. thats why i\n> suggest we implement an option, say 'showdirs=T'\n\n Yes, but the problem here is who is deciding this? You cannot know\n how your users have their data stored.\n\n Also, as regards the .CEL/CDF file thing -- it will probably be a\n good idea to follow the dChip model (and one used by lots of others),\n and have yet another widget that sets up \n  1) where the CEL files are\n  2) where the CDF file is\n  3) where output will be saved (if done automatically)\n\n Then, the fileBrowser widget is activated by a Browse button at those\n locations in your applications pop up widget.\n\n It is reasonably important not to try to do too many things with one\n tool (this leads to non-modular code and can lock you in to things\n that you never intended).\n\n r\n\n\n> \n> btw, i forgot to mention that on the system where im testing this (redhat\n> 7.1 running R 1.5) if you select a directory nothing happens.\n> \n> On Mon, 1 Apr 2002, Robert Gentleman wrote:\n> \n> > On Mon, Apr 01, 2002 at 02:18:57PM -0500, Rafael A. Irizarry wrote:\n> > > hi! some comments about the fileBrowser function.\n> > > \n> > > 1 - is it possible to have an argumet, say showdirs=F, that lets you\n> > > decide if you want to see directories or not. i would usually want to only\n> > > see files.\n> > \n> >   The problem with that is: how do you navigate? If you get the\n> >   working directory right all is well and good -- otherwise you're\n> >   toast. Jianhua did this in some of the early versions and it could\n> >   be reinstated.\n> > \n> >   If you think about the example below, usually I have the cdf files\n> >   in one place and the cel files in another -- I want to select both\n> >   at one time == navigation\n> > \n> > > \n> > > 2 - is is possible to have an argument, say text=\"\", that lets you add\n> > > test that will apear on the widget? for example i would have it say\n> > > \"choose ond cdf file and any cel file you want to read in\"\n> > > \n> >    That should be pretty straight forward.\n> > \n> >    Instructions: (paste your text here).\n> > \n> > \n> >   good ideas -- thanks Rafael.\n> >  (but please -- bioconductor is the place for discussions)\n> > \n> > \n> > \n> > > _______________________________________________\n> > > Biocore mailing list\n> > > Biocore@stat.math.ethz.ch\n> > > http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n> > \n> > -- \n> > +---------------------------------------------------------------------------+\n> > | Robert Gentleman                 phone : (617) 632-5250                   |\n> > | Associate Professor              fax:   (617)  632-2444                   |\n> > | Department of Biostatistics      office: M1B28\n> > | Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n> > +---------------------------------------------------------------------------+\n> > \n> \n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B28\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "On Mon, Apr 01, 2002 at 03:01:26PM -0500, Rafael A. Irizarry wrote:\n> \n> i agree that sometimes the dirs are sometimes necesary. thats why i\n> suggest we implement an option, say 'showdirs=T'\n\n Yes, b",
+      "thread_id": "thread-6cf8fbbf7e84",
+      "thread_depth": 1,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-5a4892bace89",
+      "message_id": "<200204012036.PAA17197@blaise.dfci.harvard.edu>",
+      "from_name": "John Zhang",
+      "from_email_hash": "a9b29fa5c7919bc7d02dec7bdc0c62c5f96a282f20bb4efd587867f549843181",
+      "date": "2002-04-01T20:36:11Z",
+      "subject": "[BioC] Re: fileBrowser",
+      "subject_clean": "[BioC] Re: fileBrowser",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": ">From: \"Rafael A. Irizarry\" <ririzarr@jhsph.edu>\n>Subject: Re: [BioC] Re: fileBrowser\n>X-Sender: ririzarr@biosun08\n>To: John Zhang <jzhang@jimmy.harvard.edu>\n>Cc: rafa@jhu.edu, bioconductor@stat.math.ethz.ch\n>MIME-version: 1.0\n>Content-transfer-encoding: 7BIT\n>X-BeenThere: bioconductor@stat.math.ethz.ch\n>X-Mailman-Version: 2.0.2\n>List-Help: <mailto:bioconductor-request@stat.math.ethz.ch?subject=help>\n>List-Post: <mailto:bioconductor@stat.math.ethz.ch>\n>List-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n<mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe>\n>List-Id: The Bioconductor Project Mailing List <bioconductor.stat.math.ethz.ch>\n>List-Unsubscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n<mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe>\n>List-Archive: <http://www.stat.math.ethz.ch/pipermail/bioconductor/>\n>Date: Mon, 01 Apr 2002 15:27:45 -0500 (EST)\n>\n>regarding the directories, another possiblity is to have 3 windows:\n>1-directories, 2-files, and 3-chosen files.\n\nI personally will not be bothered by seeing directories together with other \nfiles in the same window. That is commonly done by other applications as well. I \nam not sure if it is worthwile to put a third window just for the directories.\n\n>\n>On Mon, 1 Apr 2002, John Zhang wrote:\n>\n>> \n>> >From: \"Rafael A. Irizarry\" <ririzarr@jhsph.edu>\n>> >X-Sender: ririzarr@biosun08\n>> >To: biocore@stat.math.ethz.ch\n>> >MIME-version: 1.0\n>> >Content-transfer-encoding: 7BIT\n>> >Subject: (no subject)\n>> >X-BeenThere: biocore@stat.math.ethz.ch\n>> >X-Mailman-Version: 2.0.2\n>> >List-Help: <mailto:biocore-request@stat.math.ethz.ch?subject=help>\n>> >List-Post: <mailto:biocore@stat.math.ethz.ch>\n>> >List-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/biocore>, \n>> <mailto:biocore-request@stat.math.ethz.ch?subject=subscribe>\n>> >List-Id: Developers in the Bioconductor project <biocore.stat.math.ethz.ch>\n>> >List-Unsubscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/biocore>, \n>> <mailto:biocore-request@stat.math.ethz.ch?subject=unsubscribe>\n>> >List-Archive: <http://www.stat.math.ethz.ch/mailman/private/biocore/>\n>> >Date: Mon, 01 Apr 2002 14:18:57 -0500 (EST)\n>> >\n>> >hi! some comments about the fileBrowser function.\n>> >\n>> >1 - is it possible to have an argumet, say showdirs=F, that lets you\n>> >decide if you want to see directories or not. i would usually want to only\n>> >see files.\n>> \n>> That can be done if we want to.\n>> >\n>> >2 - is is possible to have an argument, say text=\"\", that lets you add\n>> >test that will apear on the widget? for example i would have it say\n>> >\"choose ond cdf file and any cel file you want to read in\"\n>> \n>> Has been done. fileBrowser now takes another parameter - textToShow - that \nwill \n>> be displayed on the GUI.\n>> \n>> >\n>> >_______________________________________________\n>> >Biocore mailing list\n>> >Biocore@stat.math.ethz.ch\n>> >http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n>> \n>> _______________________________________________\n>> Bioconductor mailing list\n>> Bioconductor@stat.math.ethz.ch\n>> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>> \n>\n>_______________________________________________\n>Bioconductor mailing list\n>Bioconductor@stat.math.ethz.ch\n>http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor",
+      "body_snippet": ">From: \"Rafael A. Irizarry\" <ririzarr@jhsph.edu>\n>Subject: Re: [BioC] Re: fileBrowser\n>X-Sender: ririzarr@biosun08\n>To: John Zhang <jzhang@jimmy.harvard.edu>\n>Cc: rafa@jhu.edu, bioconductor@stat.math.",
+      "thread_id": "thread-5a4892bace89",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-06d335388827",
+      "message_id": "<Pine.LNX.4.43.0204011248400.23936@hymn04.u.washington.edu>",
+      "from_name": "Anthony Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-04-01T20:48:40Z",
+      "subject": "[BioC] Re: fileBrowser",
+      "subject_clean": "[BioC] Re: fileBrowser",
+      "in_reply_to": "<pine.gso.4.10.10204011526410.17080_100000@biosun08>",
+      "references": [],
+      "body_plain": "On Mon, 1 Apr 2002, Rafael A. Irizarry wrote:\n\n> regarding the directories, another possiblity is to have 3 windows:\n> 1-directories, 2-files, and 3-chosen files.\n\nToo bad it isn't a simple matter to \"describe\" directory layouts, i.e. \nvia some form of simple config file that specified where experiments were described and where the corresponding types of files might be present.  This would restrict the above solution to a more manageable starting point.\n\ni.e. \n\nExperimentDirectory=/path/to/experiment1:/path/to/experiment2/\nFileNames=*wildcard.*describing?file.names:alt.name*.cdf\n\n\netc... though XML could be used, instead of sh or similar variable assignment. \n\n(by simple, I mean \"few minutes of coding\").\n\nFor an example of what I am sort of thinking about, try Emacs's ECB (code browser), which does is configurable to add project homes for browsing and hypertext links.  (but it isn't exactly, since I'm thinking of refining more for data analysis rather than project/software development).\n\nbest,\n-tony\n\n\n\n\n\n\n\n\nA.J. Rossini                            Rsrch Asst Professor of Biostatistics\nrossini@u.washington.edu                http://software.biostat.washington.edu/\nBiostatistics/Univ. of Washington       206-543-1044 (3286=fax) (Thursdays)\nHIV Vaccine Trials Network/FHCRC        206-667-7025 (4812=fax) (M/Tu/W)\n(Friday location is generally unknown).",
+      "body_snippet": "On Mon, 1 Apr 2002, Rafael A. Irizarry wrote:\n\n> regarding the directories, another possiblity is to have 3 windows:\n> 1-directories, 2-files, and 3-chosen files.\n\nToo bad it isn't a simple matter to ",
+      "thread_id": "thread-06d335388827",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-06ddb3244bfe",
+      "message_id": "<Pine.GSO.4.21.0204021017370.28509-100000@sf3.comp.nus.edu.sg>",
+      "from_name": "Nicholas Lewin-Koh",
+      "from_email_hash": "fb679c3a1e67513bd9b2744feed9bd8656e50736b581241a91f3a184202472f7",
+      "date": "2002-04-02T02:19:01Z",
+      "subject": "[BioC] Re: fileBrowser",
+      "subject_clean": "[BioC] Re: fileBrowser",
+      "in_reply_to": "<Pine.LNX.4.43.0204011248400.23936@hymn04.u.washington.edu>",
+      "references": [],
+      "body_plain": "Hi,\nWhat about a directory tree? and a file window for the selected directory.\n\nNicholas\n\nOn Mon, 1 Apr 2002, Anthony Rossini wrote:\n\n> On Mon, 1 Apr 2002, Rafael A. Irizarry wrote:\n> \n> > regarding the directories, another possiblity is to have 3 windows:\n> > 1-directories, 2-files, and 3-chosen files.\n> \n> Too bad it isn't a simple matter to \"describe\" directory layouts, i.e. \n> via some form of simple config file that specified where experiments were described and where the corresponding types of files might be present.  This would restrict the above solution to a more manageable starting point.\n> \n> i.e. \n> \n> ExperimentDirectory=/path/to/experiment1:/path/to/experiment2/\n> FileNames=*wildcard.*describing?file.names:alt.name*.cdf\n> \n> \n> etc... though XML could be used, instead of sh or similar variable assignment. \n> \n> (by simple, I mean \"few minutes of coding\").\n> \n> For an example of what I am sort of thinking about, try Emacs's ECB (code browser), which does is configurable to add project homes for browsing and hypertext links.  (but it isn't exactly, since I'm thinking of refining more for data analysis rather than project/software development).\n> \n> best,\n> -tony\n> \n> \n> \n> \n> \n> \n> \n> \n> A.J. Rossini                            Rsrch Asst Professor of Biostatistics\n> rossini@u.washington.edu                http://software.biostat.washington.edu/\n> Biostatistics/Univ. of Washington       206-543-1044 (3286=fax) (Thursdays)\n> HIV Vaccine Trials Network/FHCRC        206-667-7025 (4812=fax) (M/Tu/W)\n> (Friday location is generally unknown).\n> \n> \n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n> \n\n                 CH3\n                  |\n                  N             Nicholas Lewin-Koh\n                 / \\            Dept of Statistics\n           N----C   C==O        Program in Ecology and Evolutionary Biology\n          ||   ||   |           Iowa State University\n          ||   ||   |           Ames, IA 50011\n          CH    C   N--CH3      http://www.public.iastate.edu/~nlewin\n            \\  / \\ /            nlewin@iastate.edu\n             N    C\n             |   ||             Currently\n            CH3   O             Graphics Lab\n                                School of Computing\n                                National University of Singapore\n     The Real Part of Coffee    kohnicho@comp.nus.edu.sg",
+      "body_snippet": "Hi,\nWhat about a directory tree? and a file window for the selected directory.\n\nNicholas\n\nOn Mon, 1 Apr 2002, Anthony Rossini wrote:\n\n> On Mon, 1 Apr 2002, Rafael A. Irizarry wrote:\n> \n> > regarding t",
+      "thread_id": "thread-06d335388827",
+      "thread_depth": 1,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-49dbf1790583",
+      "message_id": "<87elhy25f7.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-04-02T02:35:55Z",
+      "subject": "[BioC] Re: fileBrowser",
+      "subject_clean": "[BioC] Re: fileBrowser",
+      "in_reply_to": "<Pine.GSO.4.21.0204021017370.28509-100000@sf3.comp.nus.edu.sg>",
+      "references": [
+        "<Pine.GSO.4.21.0204021017370.28509-100000@sf3.comp.nus.edu.sg>"
+      ],
+      "body_plain": ">>>>> \"nl\" == Nicholas Lewin-Koh <kohnicho@comp.nus.edu.sg> writes:\n\n    nl> Hi,\n    nl> What about a directory tree? and a file window for the selected directory.\n\nThat's 2/5th of ECB :-).  But we still need it for bioconductor.\n\nbest,\n-tony\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my friday location is usually completely unpredictable.)",
+      "body_snippet": ">>>>> \"nl\" == Nicholas Lewin-Koh <kohnicho@comp.nus.edu.sg> writes:\n\n    nl> Hi,\n    nl> What about a directory tree? and a file window for the selected directory.\n\nThat's 2/5th of ECB :-).  But we st",
+      "thread_id": "thread-06d335388827",
+      "thread_depth": 2,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-60cfbc85d249",
+      "message_id": "<Pine.LNX.4.43.0204020709590.31764@hymn04.u.washington.edu>",
+      "from_name": "Anthony Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-04-02T15:09:59Z",
+      "subject": "[BioC] Re: R-1.5",
+      "subject_clean": "[BioC] Re: R-1.5",
+      "in_reply_to": "<pine.gso.4.10.10204020954000.17417_100000@biosun08>",
+      "references": [],
+      "body_plain": "I thought we were targetting just 1.5 with all packages?   (hence the timing of release to be with 1.5).\n\nOr do we plan on supporting older versions of R (i.e. 1.4.1 and past).\n\nI'm worried about opening up a can of worms with respect to support.\n\n\n\nOn Tue, 2 Apr 2002, Rafael A. Irizarry wrote:\n\n> sorry if this was already discussed.\n> \n> affy only works with R 1.5. In R 1.4.1 we get many of these:\n> \n> Error in conformMethod(signature, mnames, fnames) : \n>         Method has formal arguments not in generic function:\n> \n> \n> is this going to be a problem?\n> \n> \n> when R starts we get many messages if Biobase is attached. like this:\n> \n> Creating a new generic function for \"[[<-\" on element \n> 2 of the search path \n> \n> \n> many more with affy. \n> \n> is there a way to get rid of these?\n> \n> _______________________________________________\n> Biocore mailing list\n> Biocore@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n> \n\n\n\n\nA.J. Rossini                            Rsrch Asst Professor of Biostatistics\nrossini@u.washington.edu                http://software.biostat.washington.edu/\nBiostatistics/Univ. of Washington       206-543-1044 (3286=fax) (Thursdays)\nHIV Vaccine Trials Network/FHCRC        206-667-7025 (4812=fax) (M/Tu/W)\n(Friday location is generally unknown).",
+      "body_snippet": "I thought we were targetting just 1.5 with all packages?   (hence the timing of release to be with 1.5).\n\nOr do we plan on supporting older versions of R (i.e. 1.4.1 and past).\n\nI'm worried about open",
+      "thread_id": "thread-60cfbc85d249",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-23e09dfaa940",
+      "message_id": "<Pine.SOL.4.31.0204021231290.3476-100000@shelob.Berkeley.EDU>",
+      "from_name": "Sandrine Dudoit",
+      "from_email_hash": "ae24e16d9b77568c82aebe9ec46f28ffe28989a4eb18e68fa9273758b0117d09",
+      "date": "2002-04-02T20:34:59Z",
+      "subject": "[BioC] alias in .Rd and bundles",
+      "subject_clean": "[BioC] alias in .Rd and bundles",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hello,\n\nI have a couple of R questions.\n\n1. When we have several aliases in a .Rd file is there a way to have only\nthe first alias listed in the index for the package (00Index.html)\nI am asking this especially in the context of the marrayClasses package\nfor the .Rd files for the classes. The index now lists both\nmarrayLayout and marrayLayout-class. We added the alias marrayLayout because\nit's easier for people to use ? marrayLayout than ? marrayLayout-class.\n\n2. I've installed the bundle Bioconductor. Is there a way to load all\npackages with one command in R, instead of going library(package1),\nlibrary(package2), etc.?\n\nThanks for your help.\n\nSandrine\n\n-------------------------------------------------------------------------------\nSandrine Dudoit, Ph.D.               E-mail: sandrine@stat.berkeley.edu\nAssistant Professor                  Tel: (510) 643-1108\nDivision of Biostatistics            Fax: (510) 643-5163\nSchool of Public Health\t\t     http://www.stat.berkeley.edu/~sandrine\nUniversity of California, Berkeley\n140 Earl Warren Hall, #7360\nBerkeley, CA 94720-7360\n-------------------------------------------------------------------------------",
+      "body_snippet": "Hello,\n\nI have a couple of R questions.\n\n1. When we have several aliases in a .Rd file is there a way to have only\nthe first alias listed in the index for the package (00Index.html)\nI am asking this e",
+      "thread_id": "thread-23e09dfaa940",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-608f83f761e1",
+      "message_id": "<Pine.LNX.4.43.0204021248530.31764@hymn04.u.washington.edu>",
+      "from_name": "Anthony Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-04-02T20:48:53Z",
+      "subject": "[BioC] alias in .Rd and bundles",
+      "subject_clean": "[BioC] alias in .Rd and bundles",
+      "in_reply_to": "<pine.sol.4.31.0204021231290.3476_100000@shelob.berkeley.edu>",
+      "references": [],
+      "body_plain": "On Tue, 2 Apr 2002, Sandrine Dudoit wrote:\n\n\n> 2. I've installed the bundle Bioconductor. Is there a way to load all\n> packages with one command in R, instead of going library(package1),\n> library(package2), etc.?\n\nDo we need a dummy library, Bioconductor, with \n\n.First.lib <- function() {\n  while (library in bioconductor.libraries)\n    require(library)\n}\n\nIt appears that there are numerous subsets that might be of interest, and might not be worth power-loading everything (but it might be worth some kind of \"topic/activity\" based loader of the above, i.e. Bioconductor.topic(\"cDNA\"), Bioconductor.topic(\"affy\"), or similar activity-sets.\n\nComments?\n\nbest,\n-tony\n\n\n\nA.J. Rossini                            Rsrch Asst Professor of Biostatistics\nrossini@u.washington.edu                http://software.biostat.washington.edu/\nBiostatistics/Univ. of Washington       206-543-1044 (3286=fax) (Thursdays)\nHIV Vaccine Trials Network/FHCRC        206-667-7025 (4812=fax) (M/Tu/W)\n(Friday location is generally unknown).",
+      "body_snippet": "On Tue, 2 Apr 2002, Sandrine Dudoit wrote:\n\n\n> 2. I've installed the bundle Bioconductor. Is there a way to load all\n> packages with one command in R, instead of going library(package1),\n> library(pac",
+      "thread_id": "thread-608f83f761e1",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-e4428a6e3906",
+      "message_id": "<20020402181823.K7028@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-04-02T23:18:23Z",
+      "subject": "[BioC] alias in .Rd and bundles",
+      "subject_clean": "[BioC] alias in .Rd and bundles",
+      "in_reply_to": "<Pine.LNX.4.43.0204021248530.31764@hymn04.u.washington.edu>; from rossini@u.washington.edu on Tue, Apr 02, 2002 at 12:48:53PM -0800",
+      "references": [
+        "<pine.sol.4.31.0204021231290.3476_100000@shelob.berkeley.edu>",
+        "<Pine.LNX.4.43.0204021248530.31764@hymn04.u.washington.edu>"
+      ],
+      "body_plain": "On Tue, Apr 02, 2002 at 12:48:53PM -0800, Anthony Rossini wrote:\n> On Tue, 2 Apr 2002, Sandrine Dudoit wrote:\n> \n> \n> > 2. I've installed the bundle Bioconductor. Is there a way to load all\n> > packages with one command in R, instead of going library(package1),\n> > library(package2), etc.?\n> \n> Do we need a dummy library, Bioconductor, with \n> \n> .First.lib <- function() {\n>   while (library in bioconductor.libraries)\n>     require(library)\n> }\n> \n> It appears that there are numerous subsets that might be of interest, and might not be worth power-loading everything (but it might be worth some kind of \"topic/activity\" based loader of the above, i.e. Bioconductor.topic(\"cDNA\"), Bioconductor.topic(\"affy\"), or similar activity-sets.\n> \n> Comments?\n\n\n  These all seem reasonable, don't forget that if a package has a\n  requires for something else that something else gets loaded with the\n  package. \n\n  For those of us working off of cvs there is an install target for\n  the makefile in madman/Rpacks...\n\n\n\n> \n> best,\n> -tony\n> \n> \n> \n> A.J. Rossini                            Rsrch Asst Professor of Biostatistics\n> rossini@u.washington.edu                http://software.biostat.washington.edu/\n> Biostatistics/Univ. of Washington       206-543-1044 (3286=fax) (Thursdays)\n> HIV Vaccine Trials Network/FHCRC        206-667-7025 (4812=fax) (M/Tu/W)\n> (Friday location is generally unknown).\n> \n> \n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B28\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "On Tue, Apr 02, 2002 at 12:48:53PM -0800, Anthony Rossini wrote:\n> On Tue, 2 Apr 2002, Sandrine Dudoit wrote:\n> \n> \n> > 2. I've installed the bundle Bioconductor. Is there a way to load all\n> > packag",
+      "thread_id": "thread-608f83f761e1",
+      "thread_depth": 1,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-51f19f0364df",
+      "message_id": "<20020403095006.GA22372@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "705d8edac5ac54e7a46a96bc0a17ff702f94febca76adcf0760433ab56a07f0d",
+      "date": "2002-04-03T09:50:06Z",
+      "subject": "[BioC] Re: writing exprSet to a flat file",
+      "subject_clean": "[BioC] Re: writing exprSet to a flat file",
+      "in_reply_to": "<Pine.GSO.4.10.10204021347090.17417-100000@biosun08>",
+      "references": [
+        "<Pine.GSO.4.10.10204021347090.17417-100000@biosun08>"
+      ],
+      "body_plain": "On Tue, Apr 02, 2002 at 01:50:05PM -0500, Rafael A. Irizarry wrote:\n> is there (or are there plans of writing) a method for the exprSet\n> class that writes out expression values to a flat file? if not ill put one\n> in affy.\n> \n> _______________________________________________\n> Biocore mailing list\n> Biocore@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n\n\n\n\nI think I saw a related post not too long ago in the bioconductor list.\n\nI am not familiar enough with the exprSet to know if everything they include could be dumped in a flat file (sometimes objects can be put in files through serialization).\n\nI would be in favor of incitating users to learn a bit of R too... having to solve, or ask how to do, things like 'how do I write expression values from an instance of exprSet in a file ?' appears to me like a good way to do it....\n\ncomments ?\n\n\n\n\n\n\n\n\n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tD-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "On Tue, Apr 02, 2002 at 01:50:05PM -0500, Rafael A. Irizarry wrote:\n> is there (or are there plans of writing) a method for the exprSet\n> class that writes out expression values to a flat file? if not",
+      "thread_id": "thread-51f19f0364df",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-b4e3c7b163cb",
+      "message_id": "<20020403074722.S7028@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-04-03T12:47:22Z",
+      "subject": "[BioC] SOAP",
+      "subject_clean": "[BioC] SOAP",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This link was posted at slashdot but looks like it could be generally\ninteresting -- it's an introduction to SOAP -- which may be worth\nlooking at if we consider providing web services.\n\n r\n\nhttp://www-106.ibm.com/developerworks/webservices/library/ws-soapmap1/?open&l=251,t=grws\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B28\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "This link was posted at slashdot but looks like it could be generally\ninteresting -- it's an introduction to SOAP -- which may be worth\nlooking at if we consider providing web services.\n\n r\n\nhttp://ww",
+      "thread_id": "thread-b4e3c7b163cb",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-2e1c5d268f8f",
+      "message_id": "<Pine.GSO.4.10.10204030835100.18830-100000@biosun08>",
+      "from_name": "Rafael A. Irizarry",
+      "from_email_hash": "05a677c1148207b83eb8bc3532d7193bce333c0fe976f77ab582c8bfe9f05d4d",
+      "date": "2002-04-03T13:36:35Z",
+      "subject": "[BioC] Re: writing exprSet to a flat file",
+      "subject_clean": "[BioC] Re: writing exprSet to a flat file",
+      "in_reply_to": "<20020403095006.GA22372@giraffa.cbs.dtu.dk>",
+      "references": [],
+      "body_plain": "i think we need a basic write function for people who dont want to learn\nto much R. especially if they want to import into things like genespring\netc...ill just write a simple one and put it in Biobase.\n\nOn Wed, 3 Apr 2002, Laurent Gautier wrote:\n\n> On Tue, Apr 02, 2002 at 01:50:05PM -0500, Rafael A. Irizarry wrote:\n> > is there (or are there plans of writing) a method for the exprSet\n> > class that writes out expression values to a flat file? if not ill put one\n> > in affy.\n> > \n> > _______________________________________________\n> > Biocore mailing list\n> > Biocore@stat.math.ethz.ch\n> > http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n> \n> \n> \n> \n> I think I saw a related post not too long ago in the bioconductor list.\n> \n> I am not familiar enough with the exprSet to know if everything they include could be dumped in a flat file (sometimes objects can be put in files through serialization).\n> \n> I would be in favor of incitating users to learn a bit of R too... having to solve, or ask how to do, things like 'how do I write expression values from an instance of exprSet in a file ?' appears to me like a good way to do it....\n> \n> comments ?\n> \n> \n> \n> \n> \n> \n> \n> \n> --------------------------------------------------------------\n> Laurent Gautier\t\t\tCBS, Building 208, DTU\n> PhD. Student\t\t\tD-2800 Lyngby,Denmark\t\n> tel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>",
+      "body_snippet": "i think we need a basic write function for people who dont want to learn\nto much R. especially if they want to import into things like genespring\netc...ill just write a simple one and put it in Biobas",
+      "thread_id": "thread-51f19f0364df",
+      "thread_depth": 1,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-6748902f0445",
+      "message_id": "<20020403085521.V7028@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-04-03T13:55:21Z",
+      "subject": "[BioC] Re: writing exprSet to a flat file",
+      "subject_clean": "[BioC] Re: writing exprSet to a flat file",
+      "in_reply_to": "<Pine.GSO.4.10.10204030835100.18830-100000@biosun08>; from ririzarr@jhsph.edu on Wed, Apr 03, 2002 at 08:36:35AM -0500",
+      "references": [
+        "<20020403095006.GA22372@giraffa.cbs.dtu.dk>",
+        "<Pine.GSO.4.10.10204030835100.18830-100000@biosun08>"
+      ],
+      "body_plain": "On Wed, Apr 03, 2002 at 08:36:35AM -0500, Rafael A. Irizarry wrote:\n> i think we need a basic write function for people who dont want to learn\n> to much R. especially if they want to import into things like genespring\n> etc...ill just write a simple one and put it in Biobase.\n> \n\n  Rafael,\n    I think that is a good idea. If you make it a fairly simple\n    interface to write.table it shouldn't be too hard\n\n   write.exprs(eset, file=\"\", ...) \n       write.table(exprs(eset), file, ...)\n\n\n   seems like enough for a start.\n   If you know of particular formats for different packages, such as\n   genespring then writing specialized, named functions for those\n   would be a good thing\n\n\n> On Wed, 3 Apr 2002, Laurent Gautier wrote:\n> \n> > On Tue, Apr 02, 2002 at 01:50:05PM -0500, Rafael A. Irizarry wrote:\n> > > is there (or are there plans of writing) a method for the exprSet\n> > > class that writes out expression values to a flat file? if not ill put one\n> > > in affy.\n> > > \n> > > _______________________________________________\n> > > Biocore mailing list\n> > > Biocore@stat.math.ethz.ch\n> > > http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n> > \n> > \n> > \n> > \n> > I think I saw a related post not too long ago in the bioconductor list.\n> > \n> > I am not familiar enough with the exprSet to know if everything they include could be dumped in a flat file (sometimes objects can be put in files through serialization).\n> > \n> > I would be in favor of incitating users to learn a bit of R too... having to solve, or ask how to do, things like 'how do I write expression values from an instance of exprSet in a file ?' appears to me like a good way to do it....\n> > \n> > comments ?\n> > \n> > \n> > \n> > \n> > \n> > \n> > \n> > \n> > --------------------------------------------------------------\n> > Laurent Gautier\t\t\tCBS, Building 208, DTU\n> > PhD. Student\t\t\tD-2800 Lyngby,Denmark\t\n> > tel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent\n> > _______________________________________________\n> > Bioconductor mailing list\n> > Bioconductor@stat.math.ethz.ch\n> > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n> > \n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B28\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "On Wed, Apr 03, 2002 at 08:36:35AM -0500, Rafael A. Irizarry wrote:\n> i think we need a basic write function for people who dont want to learn\n> to much R. especially if they want to import into thing",
+      "thread_id": "thread-51f19f0364df",
+      "thread_depth": 2,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-396e651fcede",
+      "message_id": "<87r8lwg8s5.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-04-03T14:24:10Z",
+      "subject": "[BioC] Re: writing exprSet to a flat file",
+      "subject_clean": "[BioC] Re: writing exprSet to a flat file",
+      "in_reply_to": "<20020403085521.V7028@jimmy.harvard.edu>",
+      "references": [
+        "<20020403095006.GA22372@giraffa.cbs.dtu.dk>",
+        "<Pine.GSO.4.10.10204030835100.18830-100000@biosun08>",
+        "<20020403085521.V7028@jimmy.harvard.edu>"
+      ],
+      "body_plain": ">>>>> \"robert\" == Robert Gentleman <rgentlem@jimmy.harvard.edu> writes:\n\n    robert>    seems like enough for a start.\n    robert>    If you know of particular formats for different packages, such as\n    robert>    genespring then writing specialized, named functions for those\n    robert>    would be a good thing\n\nGenespring was one that came to mind to me, as well (the GPR file\nformat).  I think we've got a GPR reader as part of the semi-aborted\nwork at the Hutch, I'll have to check, which would be useful (come to\nthink of it, I ought to have us write that one, perhaps).  \n\nMAGEML also comes to mind, especially for exporting to Rosetta.  \n\nI'm not sure what Research Genetic's Pathways uses for a format, I'll\nhave to check.\n\nbest,\n-tony\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my friday location is usually completely unpredictable.)",
+      "body_snippet": ">>>>> \"robert\" == Robert Gentleman <rgentlem@jimmy.harvard.edu> writes:\n\n    robert>    seems like enough for a start.\n    robert>    If you know of particular formats for different packages, such as\n",
+      "thread_id": "thread-51f19f0364df",
+      "thread_depth": 3,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-fd13a84317dd",
+      "message_id": "<15531.14459.497214.485453@mithrandir.hornik.net>",
+      "from_name": "Kurt Hornik",
+      "from_email_hash": "dfc03d436af227183dcbabe36b829a44be2a91bd9e2296453b21196256824acc",
+      "date": "2002-04-03T17:14:35Z",
+      "subject": "[BioC] alias in .Rd and bundles",
+      "subject_clean": "[BioC] alias in .Rd and bundles",
+      "in_reply_to": "<Pine.SOL.4.31.0204021231290.3476-100000@shelob.Berkeley.EDU>",
+      "references": [
+        "<Pine.SOL.4.31.0204021231290.3476-100000@shelob.Berkeley.EDU>"
+      ],
+      "body_plain": ">>>>> Sandrine Dudoit writes:\n\n> Hello,\n\n> I have a couple of R questions.\n\n> 1. When we have several aliases in a .Rd file is there a way to have only\n> the first alias listed in the index for the package (00Index.html)\n> I am asking this especially in the context of the marrayClasses package\n> for the .Rd files for the classes. The index now lists both\n> marrayLayout and marrayLayout-class. We added the alias marrayLayout because\n> it's easier for people to use ? marrayLayout than ?\n> marrayLayout-class.\n\nSandrine,\n\nThat's a limitation of the current Rd system: the INDEX file is\ngenerated from the info in the *name* and title slots of the Rd file.\n[This was not too bad in the old days but is really braindead now that\nwe even say that the name is just an id which must be unique across the\nRd objs in the package].  The \\alias info is currently not used.\n\nR 1.6 should have a 3-arg \\index command along the lines of\n\n\t\\index{TOPIC}{TYPE}{DESCRIPTION}\nor\n\t\\index[TYPE]{TOPIC}{DESCRIPTION}\n\nthe latter being my pref, which will allow us to have a real index\nsystem.  For the time being, all you can do is split into small pieces,\nor write good vignettes so that no one needs to look at the INDEX\nfiles.\n\n-k",
+      "body_snippet": ">>>>> Sandrine Dudoit writes:\n\n> Hello,\n\n> I have a couple of R questions.\n\n> 1. When we have several aliases in a .Rd file is there a way to have only\n> the first alias listed in the index for the pa",
+      "thread_id": "thread-23e09dfaa940",
+      "thread_depth": 1,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-4ccc6ff74584",
+      "message_id": "<15531.14737.358782.325717@mithrandir.hornik.net>",
+      "from_name": "Kurt Hornik",
+      "from_email_hash": "dfc03d436af227183dcbabe36b829a44be2a91bd9e2296453b21196256824acc",
+      "date": "2002-04-03T17:19:13Z",
+      "subject": "[BioC] alias in .Rd and bundles",
+      "subject_clean": "[BioC] alias in .Rd and bundles",
+      "in_reply_to": "<20020402181823.K7028@jimmy.harvard.edu>",
+      "references": [
+        "<pine.sol.4.31.0204021231290.3476_100000@shelob.berkeley.edu>",
+        "<Pine.LNX.4.43.0204021248530.31764@hymn04.u.washington.edu>",
+        "<20020402181823.K7028@jimmy.harvard.edu>"
+      ],
+      "body_plain": ">>>>> Robert Gentleman writes:\n\n> On Tue, Apr 02, 2002 at 12:48:53PM -0800, Anthony Rossini wrote:\n>> On Tue, 2 Apr 2002, Sandrine Dudoit wrote:\n>> \n>> \n>> > 2. I've installed the bundle Bioconductor. Is there a way to load all\n>> > packages with one command in R, instead of going library(package1),\n>> > library(package2), etc.?\n>> \n>> Do we need a dummy library, Bioconductor, with \n>> \n>> .First.lib <- function() {\n>> while (library in bioconductor.libraries)\n>> require(library)\n>> }\n>> \n>> It appears that there are numerous subsets that might be of interest, and might not be worth power-loading everything (but it might be worth some kind of \"topic/activity\" based loader of the above, i.e. Bioconductor.topic(\"cDNA\"), Bioconductor.topic(\"affy\"), or similar activity-sets.\n>> \n>> Comments?\n\n\n>   These all seem reasonable, don't forget that if a package has a\n>   requires for something else that something else gets loaded with the\n>   package.\n\nBtw, note that require does *not* throw an error in case a 'feature'\n(which really means a package) is not found: in case the required\npackage is critical one should check the return value.  e.g.\n\n\tfor(pkg in BioConductorPackages) {\n          if(!require(pkg)) stop(......)\n\t}\n\n-k",
+      "body_snippet": ">>>>> Robert Gentleman writes:\n\n> On Tue, Apr 02, 2002 at 12:48:53PM -0800, Anthony Rossini wrote:\n>> On Tue, 2 Apr 2002, Sandrine Dudoit wrote:\n>> \n>> \n>> > 2. I've installed the bundle Bioconductor.",
+      "thread_id": "thread-608f83f761e1",
+      "thread_depth": 2,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-324286e915e1",
+      "message_id": "<Pine.GSO.4.10.10204031228510.18830-100000@biosun08>",
+      "from_name": "Rafael A. Irizarry",
+      "from_email_hash": "05a677c1148207b83eb8bc3532d7193bce333c0fe976f77ab582c8bfe9f05d4d",
+      "date": "2002-04-03T17:33:14Z",
+      "subject": "[BioC] Re: writing exprSet to a flat file",
+      "subject_clean": "[BioC] Re: writing exprSet to a flat file",
+      "in_reply_to": "<20020403085521.V7028@jimmy.harvard.edu>",
+      "references": [],
+      "body_plain": "which do you think is better\n\n1 a method for exprSet called write\n2 a method for exprSet called write.table\n3 a method for exprSet call write.exprs\n4 a function called write.exprs\n\n?\n\nim leaning torwards 2\n\nOn Wed, 3 Apr 2002, Robert Gentleman wrote:\n\n> On Wed, Apr 03, 2002 at 08:36:35AM -0500, Rafael A. Irizarry wrote:\n> > i think we need a basic write function for people who dont want to learn\n> > to much R. especially if they want to import into things like genespring\n> > etc...ill just write a simple one and put it in Biobase.\n> > \n> \n>   Rafael,\n>     I think that is a good idea. If you make it a fairly simple\n>     interface to write.table it shouldn't be too hard\n> \n>    write.exprs(eset, file=\"\", ...) \n>        write.table(exprs(eset), file, ...)\n> \n> \n>    seems like enough for a start.\n>    If you know of particular formats for different packages, such as\n>    genespring then writing specialized, named functions for those\n>    would be a good thing\n> \n> \n> > On Wed, 3 Apr 2002, Laurent Gautier wrote:\n> > \n> > > On Tue, Apr 02, 2002 at 01:50:05PM -0500, Rafael A. Irizarry wrote:\n> > > > is there (or are there plans of writing) a method for the exprSet\n> > > > class that writes out expression values to a flat file? if not ill put one\n> > > > in affy.\n> > > > \n> > > > _______________________________________________\n> > > > Biocore mailing list\n> > > > Biocore@stat.math.ethz.ch\n> > > > http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n> > > \n> > > \n> > > \n> > > \n> > > I think I saw a related post not too long ago in the bioconductor list.\n> > > \n> > > I am not familiar enough with the exprSet to know if everything they include could be dumped in a flat file (sometimes objects can be put in files through serialization).\n> > > \n> > > I would be in favor of incitating users to learn a bit of R too... having to solve, or ask how to do, things like 'how do I write expression values from an instance of exprSet in a file ?' appears to me like a good way to do it....\n> > > \n> > > comments ?\n> > > \n> > > \n> > > \n> > > \n> > > \n> > > \n> > > \n> > > \n> > > --------------------------------------------------------------\n> > > Laurent Gautier\t\t\tCBS, Building 208, DTU\n> > > PhD. Student\t\t\tD-2800 Lyngby,Denmark\t\n> > > tel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent\n> > > _______________________________________________\n> > > Bioconductor mailing list\n> > > Bioconductor@stat.math.ethz.ch\n> > > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n> > > \n> > \n> > _______________________________________________\n> > Bioconductor mailing list\n> > Bioconductor@stat.math.ethz.ch\n> > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n> \n> -- \n> +---------------------------------------------------------------------------+\n> | Robert Gentleman                 phone : (617) 632-5250                   |\n> | Associate Professor              fax:   (617)  632-2444                   |\n> | Department of Biostatistics      office: M1B28\n> | Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n> +---------------------------------------------------------------------------+\n>",
+      "body_snippet": "which do you think is better\n\n1 a method for exprSet called write\n2 a method for exprSet called write.table\n3 a method for exprSet call write.exprs\n4 a function called write.exprs\n\n?\n\nim leaning torwa",
+      "thread_id": "thread-51f19f0364df",
+      "thread_depth": 3,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-dd8ac1e16fff",
+      "message_id": "<Pine.GSO.4.40.0204031358370.25143-100000@falmouth.bwh.harvard.edu>",
+      "from_name": "Vincent Carey 525-2265",
+      "from_email_hash": "381a0cc24e3b8c000e48897854dc66548b429ce8fc8f23a93430f715efbf37a0",
+      "date": "2002-04-03T19:27:35Z",
+      "subject": "[BioC] Re: writing exprSet to a flat file/exprSet superclass",
+      "subject_clean": "[BioC] Re: writing exprSet to a flat file/exprSet superclass",
+      "in_reply_to": "<Pine.GSO.4.10.10204031228510.18830-100000@biosun08>",
+      "references": [],
+      "body_plain": "> which do you think is better\n>\n> 1 a method for exprSet called write\n> 2 a method for exprSet called write.table\n> 3 a method for exprSet call write.exprs\n> 4 a function called write.exprs\n\nthe simple approach suggested in\n\n> >    write.exprs(eset, file=\"\", ...)\n> >        write.table(exprs(eset), file, ...)\n\nis very nice, in my view.  it  would just be\n\n    write.exprs <- function(eset, file=\"\", ...)\n        write.table(exprs(eset), file, ...)\n\nand now it is a first class function.  lots of flexibility,\nno safety.\n\nindependently, we might get mileage out of a\n\"write\" method with signature (\"exprSet\", \"character\",\n\"eSetElement\", \"targetFmt\")\nand reasonable defaults, so that if one said write(golubTrain,\"myExprs\")\none just gets write.table of the exprs data to \"myFile\", or if one said\nwrite(golubTrain, \"myPhen.xml\", \"phenoData\", \"phenXML\") one could get\na suitable markup of the phenoData\n\nwe need to enumerate the eSetElements and targetFmts to control\nthe requests that would be handled\n\ni am not comfortable with the long signature and the need to define\nnew classes of elements or target formats; perhaps some additional\ndiscussion can clarify.\n\nwhile we are on this important topic, let's see if there is interest\nin a 'superclass' for exprSets.  it seems to me that the key\nproperty of the exprSet is the tight linkage between expression\nmatrix columns and phenoData rows.  in other applications we\nwill want to have tightly linked structures, but of different forms.\n\nit seems to me that we might define a binfoSet class, which has\nslots binfoData, phenoData, metaData.  the various shaping operations\nare defined for this class.  exprSet specializes\nbinfoSet so that the binfoData slot is the numerical matrix \"exprs\",\nseqSet specializes binfoSet so that the binfoData slot is the\ncharacter matrix \"seqs\".   i am thinking of the case where individuals\nare infected with HIV and i have the subject-specific sequences of the\nvirus associated with each individual\n\ni am not entirely clear on how this could be carried out using\nextends and setAs.  can exprSet extend binfoSet and rename the binfoData\nslot to exprs?",
+      "body_snippet": "> which do you think is better\n>\n> 1 a method for exprSet called write\n> 2 a method for exprSet called write.table\n> 3 a method for exprSet call write.exprs\n> 4 a function called write.exprs\n\nthe simp",
+      "thread_id": "thread-51f19f0364df",
+      "thread_depth": 4,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-fdde45a11a10",
+      "message_id": "<Pine.SOL.4.31.0204050900520.11914-100000@shelob.Berkeley.EDU>",
+      "from_name": "Sandrine Dudoit",
+      "from_email_hash": "ae24e16d9b77568c82aebe9ec46f28ffe28989a4eb18e68fa9273758b0117d09",
+      "date": "2002-04-05T17:03:28Z",
+      "subject": "[BioC] alias in .Rd and bundles",
+      "subject_clean": "[BioC] alias in .Rd and bundles",
+      "in_reply_to": "<15531.14459.497214.485453@mithrandir.hornik.net>",
+      "references": [],
+      "body_plain": "Hi Kurt,\n\nThanks for the reply.\n\n> > 1. When we have several aliases in a .Rd file is there a way to have only\n> > the first alias listed in the index for the package (00Index.html)\n> > I am asking this especially in the context of the marrayClasses package\n> > for the .Rd files for the classes. The index now lists both\n> > marrayLayout and marrayLayout-class. We added the alias marrayLayout because\n> > it's easier for people to use ? marrayLayout than ?\n> > marrayLayout-class.\n>\n> Sandrine,\n>\n> That's a limitation of the current Rd system: the INDEX file is\n> generated from the info in the *name* and title slots of the Rd file.\n> [This was not too bad in the old days but is really braindead now that\n> we even say that the name is just an id which must be unique across the\n> Rd objs in the package].  The \\alias info is currently not used.\n>\n> R 1.6 should have a 3-arg \\index command along the lines of\n>\n> \t\\index{TOPIC}{TYPE}{DESCRIPTION}\n> or\n> \t\\index[TYPE]{TOPIC}{DESCRIPTION}\n>\n> the latter being my pref, which will allow us to have a real index\n> system.  For the time being, all you can do is split into small pieces,\n> or write good vignettes so that no one needs to look at the INDEX\n> files.\n\n\nI meant the html index in /html/00Index.html. This ones seems to be using\nthe alias and adds an entry for each aliased name.\n\nBest,\nSandrine",
+      "body_snippet": "Hi Kurt,\n\nThanks for the reply.\n\n> > 1. When we have several aliases in a .Rd file is there a way to have only\n> > the first alias listed in the index for the package (00Index.html)\n> > I am asking th",
+      "thread_id": "thread-23e09dfaa940",
+      "thread_depth": 2,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-ae6a12777a8f",
+      "message_id": "<Pine.GSO.4.40.0204051953170.4075-100000@falmouth.bwh.harvard.edu>",
+      "from_name": "Vincent Carey 525-2265",
+      "from_email_hash": "381a0cc24e3b8c000e48897854dc66548b429ce8fc8f23a93430f715efbf37a0",
+      "date": "2002-04-06T00:53:51Z",
+      "subject": "[BioC] peer review process for bioconductor packages",
+      "subject_clean": "[BioC] peer review process for bioconductor packages",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Persons interested in peer review of Bioconductor\npackages please send me an e-mail with content\n\nPACKAGE  [package id]\nREVIEWER [your name and email address]\n\nthen contact the maintainer of the package you are\ninterested in (retrieve email address from the associated\nDESCRIPTION file)\n\nPeer review must be completed April 20.  If there\nare not enough volunteers, core members will be\nassigned peer review tasks.\n\n-------------------------------------------------------\n\nPeer review process for Bioconductor R packages\n\nRelease date is April 29, 2002.  Upcoming events\n   April 8: feature freeze\n   April 15: code freeze\n   April 29: release\n\nHere is a list of packages distributed at bioconductor.org\n\nThe peer review process should consist of\n  a) reviewer identifies self and contacts maintainer\nto determine condition of code around april 15, and\nalso contacts me to update this reviewer database\n  b) reviewer obtains code and doc and verifies claims\nand performance\n  c) reviewer indicates necessary changes and wishes\n  d) maintainer responds in writing to review carboning\nme for archiving of software evaluation\n\nPackage       Maintainer     Version     Peer reviewer\n-------       ----------     -------     -------------\nBiobase       RG, VC         0.5-2\nannotate      RG             0.5\naffy          RI             0.8.0\nAnnBuilder    JZ             0.5\nbin2d         RG             0.5\nedd           VC             0.5-2\ngenecluster   RG             0.1\ngenefilter    RG             0.5-2\ngeneplotter   JG             0.1\nrhdf5         RG             0.1-0\nmulttest      YG             0.6\nNBIR          VC             0.1-1\nRanForests    VC             0.2\nROC           VC             0.5-4\ntkWidgets     JZ             0.5\nmarrayClasses SD             0.1\nmarrayNorm    SD             0.1\nmarrayPlots   SD             0.1\n\n\n---\nVince Carey, PhD\nAss't Prof Med (Biostatistics)\nHarvard Medical School\nChanning Laboratory - ph 6175252265 fa 6177311541\n181 Longwood Ave Boston MA 02115 USA\nstvjc@channing.harvard.edu",
+      "body_snippet": "Persons interested in peer review of Bioconductor\npackages please send me an e-mail with content\n\nPACKAGE  [package id]\nREVIEWER [your name and email address]\n\nthen contact the maintainer of the packa",
+      "thread_id": "thread-ae6a12777a8f",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-89ec9dfdfd2f",
+      "message_id": "<87adshskxq.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-04-06T00:57:37Z",
+      "subject": "[BioC] peer review process for bioconductor packages",
+      "subject_clean": "[BioC] peer review process for bioconductor packages",
+      "in_reply_to": "<Pine.GSO.4.40.0204051953170.4075-100000@falmouth.bwh.harvard.edu>",
+      "references": [
+        "<Pine.GSO.4.40.0204051953170.4075-100000@falmouth.bwh.harvard.edu>"
+      ],
+      "body_plain": ">>>> \"vincent\" == Vincent Carey <525-2265 <stvjc@channing.harvard.edu>> writes:\n\n    vincent>    April 29: release\n\nIs that Apr 29, or Apr 26 (as per Jeff G's earlier email)?\n\nbest,\n-tony\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my friday location is usually completely unpredictable.)",
+      "body_snippet": ">>>> \"vincent\" == Vincent Carey <525-2265 <stvjc@channing.harvard.edu>> writes:\n\n    vincent>    April 29: release\n\nIs that Apr 29, or Apr 26 (as per Jeff G's earlier email)?\n\nbest,\n-tony\n\n-- \nA.J. Ro",
+      "thread_id": "thread-ae6a12777a8f",
+      "thread_depth": 1,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-ae944e5751ac",
+      "message_id": "<200204060101.UAA04134@falmouth.bwh.harvard.edu>",
+      "from_name": "Vincent J. Carey, Jr.",
+      "from_email_hash": "381a0cc24e3b8c000e48897854dc66548b429ce8fc8f23a93430f715efbf37a0",
+      "date": "2002-04-06T01:01:25Z",
+      "subject": "[BioC] peer review process/DATE CORRECTION",
+      "subject_clean": "[BioC] peer review process/DATE CORRECTION",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "[NOTE RELEASE DATE CHANGED TO 26 April]\n  \n  Persons interested in peer review of Bioconductor\n  packages please send me an e-mail with content\n  \n  PACKAGE  [package id]\n  REVIEWER [your name and email address]\n  \n  then contact the maintainer of the package you are\n  interested in (retrieve email address from the associated\n  DESCRIPTION file)\n  \n  Peer review must be completed April 20.  If there\n  are not enough volunteers, core members will be\n  assigned peer review tasks.\n  \n  -------------------------------------------------------\n  \n  Peer review process for Bioconductor R packages\n  \n  Release date is April 26, 2002.  Upcoming events\n     April 8: feature freeze\n     April 15: code freeze\n     April 26: release\n  \n  Here is a list of packages distributed at bioconductor.org\n  \n  The peer review process should consist of\n    a) reviewer identifies self and contacts maintainer\n  to determine condition of code around april 15, and\n  also contacts me to update this reviewer database\n    b) reviewer obtains code and doc and verifies claims\n  and performance\n    c) reviewer indicates necessary changes and wishes\n    d) maintainer responds in writing to review carboning\n  me for archiving of software evaluation\n  \n  Package       Maintainer     Version     Peer reviewer\n  -------       ----------     -------     -------------\n  Biobase       RG, VC         0.5-2\n  annotate      RG             0.5\n  affy          RI             0.8.0\n  AnnBuilder    JZ             0.5\n  bin2d         RG             0.5\n  edd           VC             0.5-2\n  genecluster   RG             0.1\n  genefilter    RG             0.5-2\n  geneplotter   JG             0.1\n  rhdf5         RG             0.1-0\n  multtest      YG             0.6\n  NBIR          VC             0.1-1\n  RanForests    VC             0.2\n  ROC           VC             0.5-4\n  tkWidgets     JZ             0.5\n  marrayClasses SD             0.1\n  marrayNorm    SD             0.1\n  marrayPlots   SD             0.1\n  \n  \n  ---\n  Vince Carey, PhD\n  Ass't Prof Med (Biostatistics)\n  Harvard Medical School\n  Channing Laboratory - ph 6175252265 fa 6177311541\n  181 Longwood Ave Boston MA 02115 USA\n  stvjc@channing.harvard.edu\n  \n  _______________________________________________\n  Bioconductor mailing list\n  Bioconductor@stat.math.ethz.ch\n  http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor",
+      "body_snippet": "[NOTE RELEASE DATE CHANGED TO 26 April]\n  \n  Persons interested in peer review of Bioconductor\n  packages please send me an e-mail with content\n  \n  PACKAGE  [package id]\n  REVIEWER [your name and ema",
+      "thread_id": "thread-ae944e5751ac",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-61de8b47eedc",
+      "message_id": "<Pine.SOL.4.20.0204052007250.12546-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-04-06T01:08:16Z",
+      "subject": "[BioC] peer review process for bioconductor packages",
+      "subject_clean": "[BioC] peer review process for bioconductor packages",
+      "in_reply_to": "<87adshskxq.fsf@jeeves.blindglobe.net>",
+      "references": [],
+      "body_plain": "> Is that Apr 29, or Apr 26 (as per Jeff G's earlier email)?\n\nIt should be Apr 26th.",
+      "body_snippet": "> Is that Apr 29, or Apr 26 (as per Jeff G's earlier email)?\n\nIt should be Apr 26th.",
+      "thread_id": "thread-ae6a12777a8f",
+      "thread_depth": 2,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-f31341e10620",
+      "message_id": "<Pine.GSO.4.10.10204052109200.21990-100000@hsph.harvard.edu>",
+      "from_name": "Byron Ellis",
+      "from_email_hash": "9ab40472e1e849b90f771886956aec2b3b32280760d7f49df959005b2a72cffb",
+      "date": "2002-04-06T02:10:28Z",
+      "subject": "[BioC] peer review process for bioconductor packages",
+      "subject_clean": "[BioC] peer review process for bioconductor packages",
+      "in_reply_to": "<Pine.SOL.4.20.0204052007250.12546-100000@santiam.dfci.harvard.edu>",
+      "references": [],
+      "body_plain": "Why is our release before R 1.5.0 if some packages will require 1.5.0?\nThis will make it hard to build against the release DLL for 1.5.0 on\nWin32.\n\nByron Ellis (bellis@hsph.harvard.edu)\n\"Oook\" - The Librarian\n\nPlease finger bellis@hsph.harvard.edu for PGP keys\n\nOn Fri, 5 Apr 2002, Jeff Gentry wrote:\n\n> > Is that Apr 29, or Apr 26 (as per Jeff G's earlier email)?\n> \n> It should be Apr 26th.  \n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>",
+      "body_snippet": "Why is our release before R 1.5.0 if some packages will require 1.5.0?\nThis will make it hard to build against the release DLL for 1.5.0 on\nWin32.\n\nByron Ellis (bellis@hsph.harvard.edu)\n\"Oook\" - The L",
+      "thread_id": "thread-ae6a12777a8f",
+      "thread_depth": 3,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-108e28c4bf8e",
+      "message_id": "<Pine.GSO.4.40.0204061846340.7926-100000@falmouth.bwh.harvard.edu>",
+      "from_name": "Vincent Carey 525-2265",
+      "from_email_hash": "381a0cc24e3b8c000e48897854dc66548b429ce8fc8f23a93430f715efbf37a0",
+      "date": "2002-04-06T23:51:43Z",
+      "subject": "[BioC] peer review process for bioconductor packages",
+      "subject_clean": "[BioC] peer review process for bioconductor packages",
+      "in_reply_to": "<873cy86882.fsf@jeeves.blindglobe.net>",
+      "references": [],
+      "body_plain": "Administration of bioc pkg peer review will now be\nconducted using the bioc Twiki\n\nThis is a password controlled collaborative web-editable\ndocument.\n\nTo enter, visit www.bioconductor.org, left margin has\nProjects; click on Collaborative beneath that\n\nactual URL is\n\nhttp://www.bioconductor.org/twiki/bin/view/Bioconductor/PeerReview\n\nyou will need to register if you wish to edit that document\nto enter yourself as a reviewer.  if for some reason you\nare not allowed to register, just send me a note with your\nconcerns.\n\nall changes are logged.  I will enter the initials of\na reviewer with [vol [date]] if they volunteer by email\nto me.  assignments will begin next week.\n\nthose who read the list will note that there are problems\nwith the date of the release.  don't worry about the\nactual release date at the moment; we still need peer\nreview to begin soon.\n\n\n---\nVince Carey, PhD\nAss't Prof Med (Biostatistics)\nHarvard Medical School\nChanning Laboratory - ph 6175252265 fa 6177311541\n181 Longwood Ave Boston MA 02115 USA\nstvjc@channing.harvard.edu",
+      "body_snippet": "Administration of bioc pkg peer review will now be\nconducted using the bioc Twiki\n\nThis is a password controlled collaborative web-editable\ndocument.\n\nTo enter, visit www.bioconductor.org, left margin",
+      "thread_id": "thread-108e28c4bf8e",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-81cfa3d6064a",
+      "message_id": "<Pine.GSO.4.40.0204081806010.17247-100000@falmouth.bwh.harvard.edu>",
+      "from_name": "Vincent Carey 525-2265",
+      "from_email_hash": "381a0cc24e3b8c000e48897854dc66548b429ce8fc8f23a93430f715efbf37a0",
+      "date": "2002-04-08T22:08:06Z",
+      "subject": "[BioC] new approach to Peer Review data collection",
+      "subject_clean": "[BioC] new approach to Peer Review data collection",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Here is the latest static table of peer review\nallocations for bioconductor packages.\n\nPackage       Maintainer     Version     Peer reviewer\n-------       ----------     -------     -------------\nBiobase       RG, VC         0.5-2       RI [vol 6apr]\nannotate      RG             0.5         JZ [vol 8apr]\naffy          RI             0.8.0       BE [vol 8apr]\nAnnBuilder    JZ             0.5         RI [vol 6apr]\nbin2d         RG             0.5\nedd           VC             0.5-2       DB [vol 8apr]\ngenecluster   RG             0.1\ngenefilter    RG             0.5-2       SD [vol 6apr]\ngeneplotter   JG             0.1         DB [vol 8apr]\nrhdf5         RG             0.1-0\nmulttest      YG             0.6\nNBIR          VC             0.1-1\nRanForests    VC             0.2\nROC           VC             0.5-4\ntkWidgets     JZ             0.5         JG [vol 8apr]\nmarrayClasses SD             0.1\nmarrayNorm    SD             0.1\nmarrayPlots   SD             0.1\nmarrayInput   JY             0.1         JZ [vol 9apr]\n\nI have created an R structure with this package/version list and\na function df2html that is used to create the information in\nPRevSandBox, accessible at the wiki under the peer review\nnode.\n\nTo get to the new structure, go to the bioconductor wiki,\nand follow the link to peer review from the first page.\n\nthere is a new introductory paragraph on the PeerReview\npage with a link to PRevSandBox.  Go there.\n\nYou will see an HTML version of the table above.  The\nrightmost column is a column of anchors.  Clicking\non an anchor takes you down a level into a package-specific\nevaluation area.  [Some packages have question-mark next\nto the PRNode suffix ... you can click on the question\nmark to establish the new area yourself]\n\nAt the moment we do not have a specified structure for\npeer review data but that will be forthcoming.\n\nIf you don't want to use the wiki, just email me your text\nand i will get it in there.\n\nI have little experience programming the wiki content.\nAnyone with thoughts about how to get a nice template\nin there to help reviewers cover the key points for the\nreview should e-mail me, or implement it in the sandbox.\nAt my current level of knowledge I would have to go to\neach package's node and enter a template more or less\nmanually.  of course that burden can be passed to the\nreviewer, and may be.",
+      "body_snippet": "Here is the latest static table of peer review\nallocations for bioconductor packages.\n\nPackage       Maintainer     Version     Peer reviewer\n-------       ----------     -------     -------------\nBio",
+      "thread_id": "thread-81cfa3d6064a",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-dc3048af7bbb",
+      "message_id": "<Pine.GSO.4.40.0204091310400.21216-100000@falmouth.bwh.harvard.edu>",
+      "from_name": "Vincent Carey 525-2265",
+      "from_email_hash": "381a0cc24e3b8c000e48897854dc66548b429ce8fc8f23a93430f715efbf37a0",
+      "date": "2002-04-09T17:16:29Z",
+      "subject": "[BioC] Re: vignett",
+      "subject_clean": "[BioC] Re: vignett",
+      "in_reply_to": "<Pine.GSO.4.10.10204091252190.23429-100000@biosun08>",
+      "references": [],
+      "body_plain": "> which best described the purpose of the vignete for the packages?\n>\n>\n> 1 - concise document so that non expert users or R can get started\n> 2 - long document describing all that can be done with the package\n> 3 - some examples showing off the package to attract people to use it.\n>\n\nhere's a personal view.  we will never have a formal\ndefinition, but of the above i think 1 is closest, 3\nis OK, and 2 is not what is primarily intended.  but\n2 has some relevance.\n\nfirst note that there may be multiple vignettes per package.\n\na vignette should be brief.  it should be a self contained narrative.\nmost likely it should address an application topic from\nthe point of view of the investigator, rather than\nfrom the point of view of a coder, even though it may\nhave content that can inspire additional software development.\n\nfinally, it should be noted that one of the aims of the\nvignette concept was to have something of broader scope than\nthe examples section of an R doc page that would verify\nthat all the bioconductor components relevant to a particular\ntopic are working together as intended.  however this can lead\nto long documents and long run times.  the vignette elements\nare not well-suited to this requirement at present.",
+      "body_snippet": "> which best described the purpose of the vignete for the packages?\n>\n>\n> 1 - concise document so that non expert users or R can get started\n> 2 - long document describing all that can be done with th",
+      "thread_id": "thread-dc3048af7bbb",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-4af4be3c1690",
+      "message_id": "<Pine.GSO.4.40.0204121807290.25162-100000@falmouth.bwh.harvard.edu>",
+      "from_name": "Vincent Carey 525-2265",
+      "from_email_hash": "381a0cc24e3b8c000e48897854dc66548b429ce8fc8f23a93430f715efbf37a0",
+      "date": "2002-04-12T22:08:20Z",
+      "subject": "[BioC] peer review",
+      "subject_clean": "[BioC] peer review",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "a question arose as to deadlines.  reviewer should\ncontact the author by 15 april.  the review should\nbe done by 22 april.\n\n---\nVince Carey, PhD\nAss't Prof Med (Biostatistics)\nHarvard Medical School\nChanning Laboratory - ph 6175252265 fa 6177311541\n181 Longwood Ave Boston MA 02115 USA\nstvjc@channing.harvard.edu\n\n-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: PGP 6.5.8\n\nmQCNAzqIeGUAAAEEAMJXU941vIornTS52rl6z7eo+A7wwB0km/idLnkxzIhc1uLi\nQtn19OyOfG6IDSucLrtmpvwagemAnQ9jL6TVDrmlrKnqsh+FFtvUuZ37eV85L70E\nBsS8RZCmMYHJKfrpCwegbTVZrEkd1ByquLIN/yUwxU4IcVuHxbNQk69riQ8tAAUR\ntBVWaW5jZW50IEouIENhcmV5LCBKci6JAJUDBRA6iHhls1CTr2uJDy0BAdsLA/wM\ncCzEDsP9MqodKZfDI1s/gXW6BcCuQ6n7MdEplLgmWvyqfbvRYx4upYZ3pNp8L0zU\nMrlR6eCTs/eDtMO/ZbGvkqqiQO6wS2fZb1T5L/DhhtT4mEAHt0E8dNBVCj+lKr3W\nvYS5GqO9gY4CiT3JXFH9N19pSbUQFiNDqpmG6EbWng==\n=DQNF\n-----END PGP PUBLIC KEY BLOCK-----",
+      "body_snippet": "a question arose as to deadlines.  reviewer should\ncontact the author by 15 april.  the review should\nbe done by 22 april.\n\n---\nVince Carey, PhD\nAss't Prof Med (Biostatistics)\nHarvard Medical School\nC",
+      "thread_id": "thread-4af4be3c1690",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-953ab711486a",
+      "message_id": "<200204151941.PAA18226@falmouth.bwh.harvard.edu>",
+      "from_name": "Vincent J. Carey, Jr.",
+      "from_email_hash": "381a0cc24e3b8c000e48897854dc66548b429ce8fc8f23a93430f715efbf37a0",
+      "date": "2002-04-15T19:41:20Z",
+      "subject": "[BioC] peer review of packages, update",
+      "subject_clean": "[BioC] peer review of packages, update",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "all packages have a peer reviewer assigned except for\ngenecluster, bin2d and NBIR\n\ngenecluster has been static for some time and\nmay be removed from the first release.\n\nbin2d does not have very high priority at the moment and\nmay not be in the first release.  community members with\nconcerns about genecluster or bin2d, please write.\n\nNBIR is not a bad package but it is parasitic upon\nSNetscape, and this is currently not working under\nSolaris.  NBIR may be removed from this version of \nthe distribution if no one is using it at this time.  \nplease write if you have succeeded in using NBIR.\n\n--\nreviewers should have contacted the package\nmaintainers by this time, and should be familiar\nwith the Wiki interface to the review archive.\nif you have questions, please let me know -- you\nhave to register to get write access to the wiki.\n\n\n-- \n---\nVince Carey, PhD\nAss't Prof Med (Biostatistics)\nHarvard Medical School\nChanning Laboratory - ph 6175252265 fa 6177311541\n181 Longwood Ave Boston MA 02115 USA\n\nstvjc@channing.harvard.edu",
+      "body_snippet": "all packages have a peer reviewer assigned except for\ngenecluster, bin2d and NBIR\n\ngenecluster has been static for some time and\nmay be removed from the first release.\n\nbin2d does not have very high p",
+      "thread_id": "thread-953ab711486a",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-bc885c10ab84",
+      "message_id": "<20020422123332.GB1358@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "705d8edac5ac54e7a46a96bc0a17ff702f94febca76adcf0760433ab56a07f0d",
+      "date": "2002-04-22T12:33:32Z",
+      "subject": "[BioC] Re: affy R cdf",
+      "subject_clean": "[BioC] Re: affy R cdf",
+      "in_reply_to": "<000001c1e7b4$4b79af40$52401dac@Demmos>",
+      "references": [
+        "<000001c1e7b4$4b79af40$52401dac@Demmos>"
+      ],
+      "body_plain": "On Fri, Apr 19, 2002 at 08:09:59AM -0700, Dennis P. Wall wrote:\n> Dear Dr. Laurent,\n>  \n>  \n> I recently found your very helpful affy package and preprocessed HU_95A\n> CDF file.  I am confused about how to use the cdf file with the CEL file\n> to generate expression data.  I keep getting the message \"Error in\n> read.cdf file (CDF file, compress = compress.cdf) : The specified file\n> does not appear to be a CDF file.\"  Do you know how to avoid such an\n> error?\n>  \n> I sincerely appreciate your help.\n>  \n>  \n> Best,\n>  \n>  \n> \n> Dennis\n\n\nDear Dr. Dennis,\n\n\nThanks for your comments and for reporting the problem.\n\n\nThis error message is usually generated when then given file is not a CDF file.\nor when trying to read a compressed file while the flag 'compress' is set to FALSE (or the contrary). \n\n\n\nDoes this help ?\n\n\n\n\n\nL.\n\n\n\n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tD-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "On Fri, Apr 19, 2002 at 08:09:59AM -0700, Dennis P. Wall wrote:\n> Dear Dr. Laurent,\n>  \n>  \n> I recently found your very helpful affy package and preprocessed HU_95A\n> CDF file.  I am confused about h",
+      "thread_id": "thread-bc885c10ab84",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-ceddd516e6ac",
+      "message_id": "<E171uy2-00046r-00@bernie.ethz.ch>",
+      "from_name": "Obin Christopher",
+      "from_email_hash": "f8e8aa51dcb8b8d23aeee5e50191eb62a1ac7b837b9caf4fde3804b26790a2fd",
+      "date": "2002-04-29T16:05:00Z",
+      "subject": "[BioC] #Contact Strictly Confidential#",
+      "subject_clean": "[BioC] #Contact Strictly Confidential#",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Dear Sir, \nI am Bamidele Emmanuel Bank Manager of Zenith Bank,Lagos, Nigeria. I have urgent and very confidential business proposition for you\n. On June 6, 1997, a Foreign Oil consultant/contractor with the Nigerian National Petroleum Corporation, Mr.Barry Kelly made a number\ned time (Fixed) Deposit for twelve calendar months, valued at US$20,000,000.00, (Twenty Million Dollars) in my branch. Upon maturity,\n I sent a routine notification to his forwarding address but got no reply. After a month, I sent a reminder and finally I discovered from his\n contract employers, the Nigerian National Petroleum Corporation that Mr. Barry Kelly died from an automobile accident. On further \ninvestigation, I found out that he died without making a WILL, and all attempts to trace his next of kin was fruitless. I therefore made \nfurther investigation and discovered that Mr. Barry Kelly did not declare any kin or relations in all his official documents, including his\n Bank Deposit paperwork in my Bank. This sum of US$20,000,000.00 has carefully been moved out of my bank to a security \ncompany for safekeeping. No one will ever come forward to claim it. According to Nigerian Law, at the expiration of 5 (five) years,\nthe money will revert to the ownership of the Nigerian Government if nobody applies to claim the fund. Consequently, my proposal is \nthat I will like you as an Foreigner to stand in as the owner of the money I deposited it in a security company in two trunk boxes though\n the security company does not know the contents of the boxes as I tagged them to be photographic materials for export. I am writing \nyou because I as a public servant (Manager with the bank), I cannot operate a foreign account or have an account that is more than \n$1m. I want to present you as the owner of the boxes in the security company so you can be able to claim them with the help of my \nattorney. This is simple. I will like you to provide immediately your full names and address so that the Attorney will prepare the \nnecessary documents which will put you in place as the owner of the boxes. The money will be moved out for us to share in the ratio \nof 80% for me and 20% for you. There is no risk at all as all the paperwork for this transaction will be done by the Attorney and this \nwill guarantees the successful execution of this transaction, please reply immediately via my email address. Upon your response, I shall\n then provide you with more details and relevant documents that will help you understand the transaction\nThanks and God bless.\nBamidele Emmanuel",
+      "body_snippet": "Dear Sir, \nI am Bamidele Emmanuel Bank Manager of Zenith Bank,Lagos, Nigeria. I have urgent and very confidential business proposition for you\n. On June 6, 1997, a Foreign Oil consultant/contractor wi",
+      "thread_id": "thread-ceddd516e6ac",
+      "thread_depth": 0,
+      "month": "2002-04"
+    },
+    {
+      "id": "msg-e452f3a9d245",
+      "message_id": "<876629b109.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-04-30T16:32:38Z",
+      "subject": "[BioC] Release date - tonight",
+      "subject_clean": "[BioC] Release date - tonight",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "All -\n\ndue to circumstances beyond our control, the release has been\npostponed until tonight (30 April 2002).  There are still a few things\nto be verified and fixed both the packages and the WWW site, and I'm\nworking on both issues most of today, leaving work when I release.\n\nbest,\n-tony\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my friday location is usually completely unpredictable.)",
+      "body_snippet": "All -\n\ndue to circumstances beyond our control, the release has been\npostponed until tonight (30 April 2002).  There are still a few things\nto be verified and fixed both the packages and the WWW site,",
+      "thread_id": "thread-e452f3a9d245",
+      "thread_depth": 0,
+      "month": "2002-04"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-6cf8fbbf7e84",
+      "subject": "[BioC] widgets",
+      "message_count": 2,
+      "participants": [
+        "Rafael A. Irizarry",
+        "Robert Gentleman"
+      ],
+      "started": "2002-04-01T20:01:26Z",
+      "last_reply": "2002-04-01T20:35:21Z",
+      "root_message_id": "msg-6cf8fbbf7e84"
+    },
+    {
+      "id": "thread-750ba8b9c764",
+      "subject": "[BioC] Re: fileBrowser",
+      "message_count": 2,
+      "participants": [
+        "John Zhang",
+        "Rafael A. Irizarry"
+      ],
+      "started": "2002-04-01T20:18:22Z",
+      "last_reply": "2002-04-01T20:27:45Z",
+      "root_message_id": "msg-750ba8b9c764"
+    },
+    {
+      "id": "thread-16824ad992f6",
+      "subject": "[BioC] Re: fileBrowser",
+      "message_count": 1,
+      "participants": [
+        "John Zhang"
+      ],
+      "started": "2002-04-01T20:20:54Z",
+      "last_reply": "2002-04-01T20:20:54Z",
+      "root_message_id": "msg-16824ad992f6"
+    },
+    {
+      "id": "thread-5a4892bace89",
+      "subject": "[BioC] Re: fileBrowser",
+      "message_count": 1,
+      "participants": [
+        "John Zhang"
+      ],
+      "started": "2002-04-01T20:36:11Z",
+      "last_reply": "2002-04-01T20:36:11Z",
+      "root_message_id": "msg-5a4892bace89"
+    },
+    {
+      "id": "thread-06d335388827",
+      "subject": "[BioC] Re: fileBrowser",
+      "message_count": 3,
+      "participants": [
+        "A.J. Rossini",
+        "Anthony Rossini",
+        "Nicholas Lewin-Koh"
+      ],
+      "started": "2002-04-01T20:48:40Z",
+      "last_reply": "2002-04-02T02:35:55Z",
+      "root_message_id": "msg-06d335388827"
+    },
+    {
+      "id": "thread-60cfbc85d249",
+      "subject": "[BioC] Re: R-1.5",
+      "message_count": 1,
+      "participants": [
+        "Anthony Rossini"
+      ],
+      "started": "2002-04-02T15:09:59Z",
+      "last_reply": "2002-04-02T15:09:59Z",
+      "root_message_id": "msg-60cfbc85d249"
+    },
+    {
+      "id": "thread-23e09dfaa940",
+      "subject": "[BioC] alias in .Rd and bundles",
+      "message_count": 3,
+      "participants": [
+        "Kurt Hornik",
+        "Sandrine Dudoit"
+      ],
+      "started": "2002-04-02T20:34:59Z",
+      "last_reply": "2002-04-05T17:03:28Z",
+      "root_message_id": "msg-23e09dfaa940"
+    },
+    {
+      "id": "thread-608f83f761e1",
+      "subject": "[BioC] alias in .Rd and bundles",
+      "message_count": 3,
+      "participants": [
+        "Anthony Rossini",
+        "Kurt Hornik",
+        "Robert Gentleman"
+      ],
+      "started": "2002-04-02T20:48:53Z",
+      "last_reply": "2002-04-03T17:19:13Z",
+      "root_message_id": "msg-608f83f761e1"
+    },
+    {
+      "id": "thread-51f19f0364df",
+      "subject": "[BioC] Re: writing exprSet to a flat file",
+      "message_count": 6,
+      "participants": [
+        "A.J. Rossini",
+        "Laurent Gautier",
+        "Rafael A. Irizarry",
+        "Robert Gentleman",
+        "Vincent Carey 525-2265"
+      ],
+      "started": "2002-04-03T09:50:06Z",
+      "last_reply": "2002-04-03T19:27:35Z",
+      "root_message_id": "msg-51f19f0364df"
+    },
+    {
+      "id": "thread-b4e3c7b163cb",
+      "subject": "[BioC] SOAP",
+      "message_count": 1,
+      "participants": [
+        "Robert Gentleman"
+      ],
+      "started": "2002-04-03T12:47:22Z",
+      "last_reply": "2002-04-03T12:47:22Z",
+      "root_message_id": "msg-b4e3c7b163cb"
+    },
+    {
+      "id": "thread-ae6a12777a8f",
+      "subject": "[BioC] peer review process for bioconductor packages",
+      "message_count": 4,
+      "participants": [
+        "A.J. Rossini",
+        "Byron Ellis",
+        "Jeff Gentry",
+        "Vincent Carey 525-2265"
+      ],
+      "started": "2002-04-06T00:53:51Z",
+      "last_reply": "2002-04-06T02:10:28Z",
+      "root_message_id": "msg-ae6a12777a8f"
+    },
+    {
+      "id": "thread-ae944e5751ac",
+      "subject": "[BioC] peer review process/DATE CORRECTION",
+      "message_count": 1,
+      "participants": [
+        "Vincent J. Carey, Jr."
+      ],
+      "started": "2002-04-06T01:01:25Z",
+      "last_reply": "2002-04-06T01:01:25Z",
+      "root_message_id": "msg-ae944e5751ac"
+    },
+    {
+      "id": "thread-108e28c4bf8e",
+      "subject": "[BioC] peer review process for bioconductor packages",
+      "message_count": 1,
+      "participants": [
+        "Vincent Carey 525-2265"
+      ],
+      "started": "2002-04-06T23:51:43Z",
+      "last_reply": "2002-04-06T23:51:43Z",
+      "root_message_id": "msg-108e28c4bf8e"
+    },
+    {
+      "id": "thread-81cfa3d6064a",
+      "subject": "[BioC] new approach to Peer Review data collection",
+      "message_count": 1,
+      "participants": [
+        "Vincent Carey 525-2265"
+      ],
+      "started": "2002-04-08T22:08:06Z",
+      "last_reply": "2002-04-08T22:08:06Z",
+      "root_message_id": "msg-81cfa3d6064a"
+    },
+    {
+      "id": "thread-dc3048af7bbb",
+      "subject": "[BioC] Re: vignett",
+      "message_count": 1,
+      "participants": [
+        "Vincent Carey 525-2265"
+      ],
+      "started": "2002-04-09T17:16:29Z",
+      "last_reply": "2002-04-09T17:16:29Z",
+      "root_message_id": "msg-dc3048af7bbb"
+    },
+    {
+      "id": "thread-4af4be3c1690",
+      "subject": "[BioC] peer review",
+      "message_count": 1,
+      "participants": [
+        "Vincent Carey 525-2265"
+      ],
+      "started": "2002-04-12T22:08:20Z",
+      "last_reply": "2002-04-12T22:08:20Z",
+      "root_message_id": "msg-4af4be3c1690"
+    },
+    {
+      "id": "thread-953ab711486a",
+      "subject": "[BioC] peer review of packages, update",
+      "message_count": 1,
+      "participants": [
+        "Vincent J. Carey, Jr."
+      ],
+      "started": "2002-04-15T19:41:20Z",
+      "last_reply": "2002-04-15T19:41:20Z",
+      "root_message_id": "msg-953ab711486a"
+    },
+    {
+      "id": "thread-bc885c10ab84",
+      "subject": "[BioC] Re: affy R cdf",
+      "message_count": 1,
+      "participants": [
+        "Laurent Gautier"
+      ],
+      "started": "2002-04-22T12:33:32Z",
+      "last_reply": "2002-04-22T12:33:32Z",
+      "root_message_id": "msg-bc885c10ab84"
+    },
+    {
+      "id": "thread-ceddd516e6ac",
+      "subject": "[BioC] #Contact Strictly Confidential#",
+      "message_count": 1,
+      "participants": [
+        "Obin Christopher"
+      ],
+      "started": "2002-04-29T16:05:00Z",
+      "last_reply": "2002-04-29T16:05:00Z",
+      "root_message_id": "msg-ceddd516e6ac"
+    },
+    {
+      "id": "thread-e452f3a9d245",
+      "subject": "[BioC] Release date - tonight",
+      "message_count": 1,
+      "participants": [
+        "A.J. Rossini"
+      ],
+      "started": "2002-04-30T16:32:38Z",
+      "last_reply": "2002-04-30T16:32:38Z",
+      "root_message_id": "msg-e452f3a9d245"
+    }
+  ]
+}

@@ -1,0 +1,4918 @@
+From laurent.buffat@it-omics.com  Tue Oct  1 10:18:06 2002
+From: laurent.buffat@it-omics.com (laurent  buffat)
+Date: Tue, 1 Oct 2002 11:18:06 +0200
+Subject: [BioC] logo of bioconductor ?
+Message-ID: <DGEIIIMDDGKLGHFCOPOFOEGCCAAA.laurent.buffat@it-omics.com>
+
+Hi,
+
+I would like to cite the bioconductor projet in a powerpoint presentation,
+and I'm looking for a nice logo about your project (like the R logo for
+example). Do you have one ?
+Actually I'm using the image on the top of the main page of your web site,
+but it's not very nice, because of the background.
+
+L. Buffat
+
+
+From jgentry@jimmy.harvard.edu  Tue Oct  1 17:32:47 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Tue, 1 Oct 2002 12:32:47 -0400 (EDT)
+Subject: [BioC] logo of bioconductor ?
+In-Reply-To: <DGEIIIMDDGKLGHFCOPOFOEGCCAAA.laurent.buffat@it-omics.com>
+Message-ID: <Pine.SOL.4.20.0210011231560.2721-100000@santiam.dfci.harvard.edu>
+
+> I would like to cite the bioconductor projet in a powerpoint presentation,
+> and I'm looking for a nice logo about your project (like the R logo for
+> example). Do you have one ?
+
+Not to my knowledge, unfortunately.  The best example I know is the logo
+bar on the top of the website, which as you noted isn't ideal in all
+circumstances.
+
+If there are any aspiring graphic artists out there .... :)
+
+-J
+
+
+From laurent@cbs.dtu.dk  Wed Oct  2 21:05:02 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Wed, 2 Oct 2002 22:05:02 +0200
+Subject: [BioC] Re: AFFY package for R, image of cell file turned upside down?
+In-Reply-To: <5.1.1.6.0.20021002122620.00b1b948@mbox.ki.se>
+References: <5.1.1.6.0.20021002122620.00b1b948@mbox.ki.se>
+Message-ID: <20021002200502.GA3157@giraffa.cbs.dtu.dk>
+
+On Wed, Oct 02, 2002 at 02:09:00PM +0200, Jesper Ryge wrote:
+> Hi laurent
+> 
+> I am using the affy package for R.  I just have one question.  I tried to 
+> read a cell file and plot it with image(cel.file).  That works fine, except 
+> the image is turned upside down!  It is a rat neuro chip, so  there is a 
+> control sequence in the top of the chip that reads "genechip Rat neurochip" 
+> if the spike-ins hybridize OK.   But this is now shown in the bottom of the 
+> image an upside down?  How is that?
+> 
+> Jesper Ryge
+> 
+
+
+Hi,
+
+I CC'ed this to bioconductor as it might be of interest to others.
+
+The chip image seems flipped with the Hu6800 too
+(my benchmark since it is the first Affymetrix cheap I met)
+
+When a CEL files is parsed, the intensity values are stored in a
+matrix (using the X and Y to index the row and column respectively).
+You may want to read the affy.pdf vignette around the page 18 to know
+more.
+
+However, there is something I realized quite recently (and I am
+about to address for the next version of the package).
+There is something like follows in the header of
+CEL files:
+-----------
+Axis-invertX=0
+AxisInvertY=0
+swapXY=0
+-----------
+
+I never found files where it was set to one, so the code is not
+looking closely at the values of these properties. I would appreciate
+reports about CEL where the values change.
+
+In the meanwhile I'll add a little something to make the parser yell
+if the values change (just in case). 'should be in BioC by this
+week-end.
+
+
+Hopin' it helps,
+
+
+
+Laurent
+
+
+
+
+
+-- 
+--------------------------------------------------------------
+Laurent Gautier			CBS, Building 208, DTU
+PhD. Student			DK-2800 Lyngby,Denmark	
+tel: +45 45 25 24 89		http://www.cbs.dtu.dk/laurent
+
+From w.huber@dkfz-heidelberg.de  Wed Oct  2 22:33:00 2002
+From: w.huber@dkfz-heidelberg.de (Wolfgang Huber)
+Date: Wed, 2 Oct 2002 23:33:00 +0200
+Subject: [BioC] Bioconductor data sets - Unigene IDs
+Message-ID: <AGEOLPCFGCEABFJOOAAMMELGCAAA.w.huber@dkfz-heidelberg.de>
+
+Hi,
+
+I send this through the mailing list since it may be of general interest. On
+the bioconductor page, there are a number of data packages, such as hgu95a,
+hgu133a. Among other goodies, they contain XDR files with environments full
+of mappings from Affymetrix probe set identifiers to Unigene cluster IDs.
+For example, these may be used to figure out which probe sets from the same,
+or from different chips, represent a given gene.
+
+Now here's a quote from the NCBI web page:
+"... Since the sequences which make up a cluster may change from week to
+week, and since the cluster identifier may disappear (typically when two
+clusters merge) using the cluster identifier as a reference is ill-advised.
+Using the GB accession numbers of the sequences which comprise the cluster
+is a safe alternative."
+(from http://www.ncbi.nlm.nih.gov/UniGene/build.shtml)
+
+>From this it sounds that clusters only ever merge, but from what I
+understand there are also situations in which they may split. Hence, Unigene
+cluster IDs are very useful intermediate IDs for processing data at a given
+time, but they cannot be used as persistent identifiers. And whenever one
+does such processing, one has to make sure that all Unigene-IDs involved
+refer to the same Unigene-Build. Now, to come to the point, I haven't seen
+that information (about the Unigene build) in the data packages on
+Bioconductor, and I would like to suggest to include that information in the
+package data, and to document how to find the information in a prominent
+place, so software using these packages can make sure the Unigene IDs are
+consistent.
+
+Best regards
+Wolfgang.
+
+Dr. Wolfgang Huber
+http://www.dkfz.de/abt0840/whuber
+Tel +49-6221-424709
+Fax +49-6221-42524709
+DKFZ
+Division of Molecular Genome Analysis
+69120 Heidelberg
+Germany
+
+
+From rgentlem@jimmy.harvard.edu  Wed Oct  2 22:51:30 2002
+From: rgentlem@jimmy.harvard.edu (Robert Gentleman)
+Date: Wed, 2 Oct 2002 17:51:30 -0400
+Subject: [BioC] Bioconductor data sets - Unigene IDs
+In-Reply-To: <AGEOLPCFGCEABFJOOAAMMELGCAAA.w.huber@dkfz-heidelberg.de>; from w.huber@dkfz-heidelberg.de on Wed, Oct 02, 2002 at 11:33:00PM +0200
+References: <AGEOLPCFGCEABFJOOAAMMELGCAAA.w.huber@dkfz-heidelberg.de>
+Message-ID: <20021002175130.R5909@jimmy.harvard.edu>
+
+Funny that you should mention that, in the soon to be released -- new
+and improved builds, you will get just that (and much more).
+For example, in the hgu95a package (up later this week),
+I get:
+UniGene Date built: Build #155.<URL:
+     ftp://ftp.ncbi.nih.gov/repository/UniGene/Hs.data.gz>.
+
+I agree completely that this is what we want. And we have done some
+work to ensure that all data sources are adequately documented. 
+We (Jianhua and myself) would like to hear from others with similar
+concerns, if the new format does not address the issues appropriately.
+
+Robert
+
+On Wed, Oct 02, 2002 at 11:33:00PM +0200, Wolfgang Huber wrote:
+> Hi,
+> 
+> I send this through the mailing list since it may be of general interest. On
+> the bioconductor page, there are a number of data packages, such as hgu95a,
+> hgu133a. Among other goodies, they contain XDR files with environments full
+> of mappings from Affymetrix probe set identifiers to Unigene cluster IDs.
+> For example, these may be used to figure out which probe sets from the same,
+> or from different chips, represent a given gene.
+> 
+> Now here's a quote from the NCBI web page:
+> "... Since the sequences which make up a cluster may change from week to
+> week, and since the cluster identifier may disappear (typically when two
+> clusters merge) using the cluster identifier as a reference is ill-advised.
+> Using the GB accession numbers of the sequences which comprise the cluster
+> is a safe alternative."
+> (from http://www.ncbi.nlm.nih.gov/UniGene/build.shtml)
+> 
+> >From this it sounds that clusters only ever merge, but from what I
+> understand there are also situations in which they may split. Hence, Unigene
+> cluster IDs are very useful intermediate IDs for processing data at a given
+> time, but they cannot be used as persistent identifiers. And whenever one
+> does such processing, one has to make sure that all Unigene-IDs involved
+> refer to the same Unigene-Build. Now, to come to the point, I haven't seen
+> that information (about the Unigene build) in the data packages on
+> Bioconductor, and I would like to suggest to include that information in the
+> package data, and to document how to find the information in a prominent
+> place, so software using these packages can make sure the Unigene IDs are
+> consistent.
+> 
+> Best regards
+> Wolfgang.
+> 
+> Dr. Wolfgang Huber
+> http://www.dkfz.de/abt0840/whuber
+> Tel +49-6221-424709
+> Fax +49-6221-42524709
+> DKFZ
+> Division of Molecular Genome Analysis
+> 69120 Heidelberg
+> Germany
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+-- 
++---------------------------------------------------------------------------+
+| Robert Gentleman                 phone : (617) 632-5250                   |
+| Associate Professor              fax:   (617)  632-2444                   |
+| Department of Biostatistics      office: M1B20
+| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |
++---------------------------------------------------------------------------+
+
+From laurent@cbs.dtu.dk  Thu Oct  3 08:08:14 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Thu, 3 Oct 2002 09:08:14 +0200
+Subject: [BioC] Bioconductor data sets - Unigene IDs
+In-Reply-To: <AGEOLPCFGCEABFJOOAAMMELGCAAA.w.huber@dkfz-heidelberg.de>
+References: <AGEOLPCFGCEABFJOOAAMMELGCAAA.w.huber@dkfz-heidelberg.de>
+Message-ID: <20021003070814.GA11386@giraffa.cbs.dtu.dk>
+
+On Wed, Oct 02, 2002 at 11:33:00PM +0200, Wolfgang Huber wrote:
+> 
+> >From this it sounds that clusters only ever merge, but from what I
+> understand there are also situations in which they may split. Hence, Unigene
+> cluster IDs are very useful intermediate IDs for processing data at a given
+> time, but they cannot be used as persistent identifiers. And whenever one
+> does such processing, one has to make sure that all Unigene-IDs involved
+> refer to the same Unigene-Build. Now, to come to the point, I haven't seen
+> that information (about the Unigene build) in the data packages on
+> Bioconductor, and I would like to suggest to include that information in the
+> package data, and to document how to find the information in a prominent
+> place, so software using these packages can make sure the Unigene IDs are
+> consistent.
+
+
+I agree with Wolfgang. I am currently working on environments that are
+not completely unrelated to the one provided by the Data package and
+I would like to attach extra information to the environment.
+I would be happy to follow a convention to stick the information to the
+environment.
+Here are few thoughts about that (just in case):
+- set a class for 'Data' environment (chipData)
+- set an attribute 'cdfName' (to be used with the affy package.
+  indicates the chip it corresponds to)
+- set an attribute 'releaseDate' or 'bestBefore'
+- set an attribute 'size' (memory usage)
+- set an attribute 'comments'
+
+
+
+
+
+Cheers,
+
+
+
+
+L.
+
+
+
+> 
+> Best regards
+> Wolfgang.
+> 
+> Dr. Wolfgang Huber
+> http://www.dkfz.de/abt0840/whuber
+> Tel +49-6221-424709
+> Fax +49-6221-42524709
+> DKFZ
+> Division of Molecular Genome Analysis
+> 69120 Heidelberg
+> Germany
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+-- 
+--------------------------------------------------------------
+Laurent Gautier			CBS, Building 208, DTU
+PhD. Student			DK-2800 Lyngby,Denmark	
+tel: +45 45 25 24 89		http://www.cbs.dtu.dk/laurent
+
+From laurent@cbs.dtu.dk  Thu Oct  3 11:41:39 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Thu, 3 Oct 2002 12:41:39 +0200
+Subject: [BioC] package methods in R-1.6.0 ?
+Message-ID: <20021003104139.GB12655@giraffa.cbs.dtu.dk>
+
+Hi,
+
+
+I upgraded to R-1.6.0 and I get the following when doing
+library(affy) with the devel version of the package...
+
+----
+
+Error in mlistMetaName(f) : No way to associate a generic function with
+an object of class "NULL"
+
+----
+
+Am I the only one ?
+
+
+L.
+
+
+
+From gregory_r_warnes@groton.pfizer.com  Thu Oct  3 22:36:46 2002
+From: gregory_r_warnes@groton.pfizer.com (Warnes, Gregory R)
+Date: Thu, 3 Oct 2002 17:36:46 -0400
+Subject: [BioC] parallel mods to affy package
+Message-ID: <D7A3CFD7825BD6119B880002A58F06C20149D039@groexmb02.pfizer.com>
+
+I'm just starting to look at integrating Luke Tierney's 'snow' package with
+the 'affy' package in order to parallelize the work.  
+
+Initially, I'm planning on modifying 'express' by adding a new parameter
+"cl" for cluster.    Next I'll probably tackle ReadAffy and friends.
+
+When 'cl' is a valid snow cluster, parRapply, parCapply, clusterAppy,  ..
+will be called instead of 'apply( ..., 1, ...)',  'apply(.., 2, ..)',
+lapply, etc. 
+
+1) Comments on the plan?
+
+2) Can I get CVS access (I'll do my work in a branch until OK'ed by the
+group)?  This will save me the trouble of creating a local CVS archive for
+this and trying to keep it in sync.
+
+-Greg
+
+
+LEGAL NOTICE
+Unless expressly stated otherwise, this message is confidential and may be privileged. It is intended for the addressee(s) only. Access to this E-mail by anyone else is unauthorized. If you are not an addressee, any disclosure or copying of the contents of this E-mail or any action taken (or not taken) in reliance on it is unauthorized and may be unlawful. If you are not an addressee, please inform the sender immediately.
+
+From stvjc@channing.harvard.edu  Fri Oct  4 02:43:23 2002
+From: stvjc@channing.harvard.edu (Vincent Carey 525-2265)
+Date: Thu, 3 Oct 2002 21:43:23 -0400 (EDT)
+Subject: [BioC] parallel mods to affy package
+In-Reply-To: <D7A3CFD7825BD6119B880002A58F06C20149D039@groexmb02.pfizer.com>
+Message-ID: <Pine.GSO.4.40.0210032135010.13277-100000@capecod.bwh.harvard.edu>
+
+>
+> I'm just starting to look at integrating Luke Tierney's 'snow' package with
+> the 'affy' package in order to parallelize the work.
+>
+> Initially, I'm planning on modifying 'express' by adding a new parameter
+> "cl" for cluster.    Next I'll probably tackle ReadAffy and friends.
+>
+> When 'cl' is a valid snow cluster, parRapply, parCapply, clusterAppy,  ..
+> will be called instead of 'apply( ..., 1, ...)',  'apply(.., 2, ..)',
+> lapply, etc.
+>
+> 1) Comments on the plan?
+
+seems a worthy endeavor, but
+does the source of the affy package really need to be modified
+for this?  can't wrappers be written that break up the
+problem and reassemble the results?  keep the package distinct
+from the various modes of execution
+
+
+
+From Steffen.Durinck@esat.kuleuven.ac.be  Fri Oct  4 10:47:48 2002
+From: Steffen.Durinck@esat.kuleuven.ac.be (Steffen Durinck)
+Date: Fri, 04 Oct 2002 11:47:48 +0200
+Subject: [BioC] problem installing the package on Red Hat 7.3
+Message-ID: <3D9D63C4.4090105@esat.kuleuven.ac.be>
+
+Hi,
+
+I installed the Bioconductor package (on Red Hat 7.3) using the install 
+script.
+
+The libraries seem to be installed properly but when i load in a library
+e.g.
+
+  library('marrayPlots')
+
+i get a warning that the library contains no R code
+I also cannot run the demo's
+
+Can anyone help
+Thanks,
+
+Steffen Durinck
+
+
+From gregory_r_warnes@groton.pfizer.com  Fri Oct  4 17:05:06 2002
+From: gregory_r_warnes@groton.pfizer.com (Warnes, Gregory R)
+Date: Fri, 4 Oct 2002 12:05:06 -0400
+Subject: [BioC] parallel mods to affy package
+Message-ID: <D7A3CFD7825BD6119B880002A58F06C20149D03C@groexmb02.pfizer.com>
+
+
+> -----Original Message-----
+> From: Vincent Carey 525-2265 [mailto:stvjc@channing.harvard.edu]
+[...] 
+> >
+> > I'm just starting to look at integrating Luke Tierney's 
+> 'snow' package with
+> > the 'affy' package in order to parallelize the work.
+> >
+> > Initially, I'm planning on modifying 'express' by adding a 
+> new parameter
+> > "cl" for cluster.    Next I'll probably tackle ReadAffy and friends.
+> >
+[...]
+> > 1) Comments on the plan?
+> 
+> seems a worthy endeavor, but
+> does the source of the affy package really need to be modified
+> for this?  can't wrappers be written that break up the
+> problem and reassemble the results?  keep the package distinct
+> from the various modes of execution
+
+Actually, it does look simplest to modify the source of the affy package.
+'apply' and friends are already being used in the right places, and the
+changes are simple substitutions like:
+
+	if( missing(cl) )
+	  # do the normal apply thing
+	else
+	  # do the parallel apply thing
+
+There would need to be quite a bit more thought -- and probably
+synchronization -- required to properly split up the data before, run the
+affy functions on the subsets, then reassemble the data.  The basic problem
+is knowing which functions have data dependencies that prevent
+parallelization and which don't.  
+
+It would be painful, from the outside, to do
+
+	split data for fun1
+	run fun1 in parallel
+	join the data for un-parallelizable fun2
+	run fun2 on all the data
+	split the data for fun3
+	run fun 3 in parallel
+
+especially since some of the alternative approaches a particular step allow
+easy parallelization, and some don't.  So, for instance, quantile
+normalization isn't trivially parellizable by splitting along chips, while
+globally scaling the trimmed mean to, say, 300 is trivially parallelizable.
+Knowing when to split and join will be a problem that requires examining the
+code for each potential function.  Once you hit that level, its easier to
+just modify the functions themselves.
+
+-Greg
+
+
+
+-Greg
+
+
+LEGAL NOTICE
+Unless expressly stated otherwise, this message is confidential and may be privileged. It is intended for the addressee(s) only. Access to this E-mail by anyone else is unauthorized. If you are not an addressee, any disclosure or copying of the contents of this E-mail or any action taken (or not taken) in reliance on it is unauthorized and may be unlawful. If you are not an addressee, please inform the sender immediately.
+
+From matthias.bauer@itg.fzk.de  Mon Oct  7 10:29:30 2002
+From: matthias.bauer@itg.fzk.de (Matthias Bauer)
+Date: Mon, 7 Oct 2002 11:29:30 +0200
+Subject: [BioC] tkWidges
+Message-ID: <000801c26de4$09e997f0$0f62348d@igenmarie>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0005_01C26DF4.CD59D6E0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hallo Bioconductor!
+Auf der Seite der Packages-Downloads funktioniert der Link zum =
+tkWidgets-Package nicht.
+
+Viele Gr=FC=DFe,
+Matthias Bauer
+
+***************
+Dipl. Biol. t.o. Matthias Bauer
+Gruppe Pankratz
+Institut f=FCr Toxikologie und Genetik
+Forschungszentrum Karlsruhe
+Tel. 07247/82-6087
+Fax 07247/82-3354
+WWW: http://itgmv1.fzk.de/www/itg/pankratz/pankratz.html
+------=_NextPart_000_0005_01C26DF4.CD59D6E0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2800.1106" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>Hallo Bioconductor!</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Auf der Seite der=20
+Packages-Downloads&nbsp;funktioniert der Link zum tkWidgets-Package=20
+nicht.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Viele Gr=FC=DFe,</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Matthias Bauer</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>***************<BR>Dipl. Biol. t.o. =
+Matthias=20
+Bauer<BR>Gruppe Pankratz<BR>Institut f=FCr Toxikologie und=20
+Genetik<BR>Forschungszentrum Karlsruhe<BR>Tel. 07247/82-6087<BR>Fax=20
+07247/82-3354<BR>WWW: <A=20
+href=3D"http://itgmv1.fzk.de/www/itg/pankratz/pankratz.html">http://itgmv=
+1.fzk.de/www/itg/pankratz/pankratz.html</A></FONT></DIV></BODY></HTML>
+
+------=_NextPart_000_0005_01C26DF4.CD59D6E0--
+
+
+From Waclaw.Marcin.Kusnierczyk@idi.ntnu.no  Mon Oct  7 16:01:34 2002
+From: Waclaw.Marcin.Kusnierczyk@idi.ntnu.no (Wacek Kusnierczyk)
+Date: Mon, 7 Oct 2002 17:01:34 +0200
+Subject: [BioC] Workshops
+Message-ID: <CIEPKDJNOLBAHPOAKCIGAEHJCDAA.waku@idi.ntnu.no>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0083_01C26E23.30DDD3F0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_0084_01C26E23.30DDD3F0"
+
+
+------=_NextPart_001_0084_01C26E23.30DDD3F0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+I have found information on interesting workshops on your website.
+I am working with microarray data analysis, and the workshop in Heidelberg
+suits my interests well.
+
+I suppose it is not possible to join the workshop now. How could I reach
+information on future workshops before it is too late to book a place?
+Please support me with relevant information.
+
+Hopefully, you will present similar issues soon.
+
+Regards,
+
+Waclaw Kusnierczyk
+_________________________________________________
+WORK
+Dept. of Computer and Information Science
+Norwegian University of Science and Technology
+N-7491 Trondheim, Norway 
+tel +47 73591875
+fax +47 73594466
+email waku@idi.ntnu.no
+_________________________________________________
+HOME
+Martin Stokkens v. 71
+N-7027 Trondheim, Norway
+tel +47 72556026
+mob +47 48286885
+_________________________________________________
+http://www.idi.ntnu.no/~waku
+
+
+
+
+
+------=_NextPart_001_0084_01C26E23.30DDD3F0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2600.0" name=3DGENERATOR></HEAD>
+<BODY>
+<DIV><SPAN class=3D590585714-07102002><FONT =
+size=3D2>Hello,</FONT></SPAN></DIV>
+<DIV><SPAN class=3D590585714-07102002><FONT =
+size=3D2></FONT></SPAN>&nbsp;</DIV>
+<DIV><SPAN class=3D590585714-07102002><FONT size=3D2>I have found =
+information on=20
+interesting workshops on your website.</FONT></SPAN></DIV>
+<DIV><SPAN class=3D590585714-07102002><FONT size=3D2>I am working with =
+microarray=20
+data analysis, and the workshop in Heidelberg</FONT></SPAN></DIV>
+<DIV><SPAN class=3D590585714-07102002><FONT size=3D2>suits my interests=20
+well.</FONT></SPAN></DIV>
+<DIV><SPAN class=3D590585714-07102002><FONT =
+size=3D2></FONT></SPAN>&nbsp;</DIV>
+<DIV><SPAN class=3D590585714-07102002><FONT size=3D2>I suppose it is not =
+possible to=20
+join the workshop now. How could I reach</FONT></SPAN></DIV>
+<DIV><SPAN class=3D590585714-07102002><FONT size=3D2>information on =
+future workshops=20
+before it is too late to book a place?</FONT></SPAN></DIV>
+<DIV><SPAN class=3D590585714-07102002><FONT size=3D2>Please support me =
+with relevant=20
+information.</FONT></SPAN></DIV>
+<DIV><SPAN class=3D590585714-07102002><FONT =
+size=3D2></FONT></SPAN>&nbsp;</DIV>
+<DIV><SPAN class=3D590585714-07102002><FONT size=3D2>Hopefully, you will =
+present=20
+similar issues soon.</FONT></SPAN></DIV>
+<DIV><SPAN class=3D590585714-07102002><FONT =
+size=3D2></FONT></SPAN>&nbsp;</DIV>
+<DIV><SPAN class=3D590585714-07102002><FONT =
+size=3D2>Regards,</FONT></SPAN></DIV>
+<DIV><SPAN class=3D590585714-07102002><FONT =
+size=3D2></FONT></SPAN>&nbsp;</DIV>
+<P><FONT color=3D#000080 size=3D3><B>Waclaw Kusnierczyk</B></FONT><FONT=20
+size=3D4><BR></FONT><FONT=20
+size=3D2>_________________________________________________<BR><B>WORK</B>=
+<BR></FONT><FONT=20
+size=3D2>Dept. of Computer and Information Science<BR>Norwegian =
+University of=20
+Science and Technology<BR>N-7491 Trondheim, Norway&nbsp;</FONT><FONT=20
+size=3D2><BR>tel +47 73591875<BR>fax +47 73594466<BR>email <A=20
+href=3D"mailto:waku@idi.ntnu.no">waku@idi.ntnu.no</A><BR>________________=
+_________________________________<BR><B>HOME<BR></B>Martin=20
+Stokkens v. 71<BR>N-7027 Trondheim, Norway<BR>tel +47 72556026<BR>mob =
++47=20
+48286885<BR>_________________________________________________<BR><A=20
+href=3D"http://www.idi.ntnu.no/~waku">http://www.idi.ntnu.no/~waku</A></F=
+ONT></P>
+<P><FONT size=3D2><A href=3D"http://www.ntnu.no/"><IMG height=3D54=20
+src=3D"cid:590585714@07102002-236c" width=3D184 =
+border=3D0></A></FONT></P>
+<DIV>&nbsp;</DIV></BODY></HTML>
+
+------=_NextPart_001_0084_01C26E23.30DDD3F0--
+
+------=_NextPart_000_0083_01C26E23.30DDD3F0
+Content-Type: image/gif;
+	name="ntnu.logo.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <590585714@07102002-236c>
+
+R0lGODlhLAFNALMAAJKRk/z8/WdnZh4dojY2NsLCw7SzwuXk50JBsM/P1vLy821tw9vb3gAAAAAA
+mf///yH5BAEAAA8ALAAAAAAsAU0AQAT+8MlJq7046827/2AojmRpnmiqrmzrvnAsi8Hi3Hiu73zP
+A4FVoiEYNo7Io4J0OB4ygeRRsMwApEeGxoAFaAQNAxhLDI6uAvPn2l2hVwPfbTBA2O/4vP4uvy3U
+JU1pFAEEZA1eHlENVReLBh9jUo0bi4kYV5AUDIcNTx5cAiIFZJopXJcocXILEjV9OwkSCqs+CIBM
+ZRqkZAS4FAqGlCiSScMnmRqFh6kWoaOlK6hwfa0PALA8srR9tyhNvh/Bh6YPi8cmxUjoJckfRmSU
+zyG8UuUn8ym1PdYYAQcKDvyawE2OtxOCBnpg04kdCXVKWLgbMa6TqBDwktwzMU1Ito/+IHVoScEp
+XAoFWByeIfNJBZiNJbgkuRiiCRaTJcbJmsGzp8+fQIMKHUq0qNGjSJMqXcq0qdOiBwwsQECnqtWr
+WLMiWGBAJYgAAgiIHUu2bAEQAMqqJXvW1dq3cOPGNcVAblmvhOyOHUQhrV61MCuA/UtTRMGQiGEN
+wNshoTmGUviKEwYFCc4v8TrUa1bB3SIybUHk+1BP4wpSnEvs49GPoA0eAwzgOtzjoAlwA1EeGqks
+IgYFBmRHyuyBAQDeFyZ2PnQZExFoWAKPGH1i9Y5WAaxnw649h+1AuipBnPLrHIvxjNeEadxp5/LC
+HkojkS6io75qFAx8HNAyezeFIDj+FgInhzwxTnoeoCfReiGAdcgg1GkWjQr2oYBAYhjCkpoIuJ3g
+4E0IdqCgGwze9qBhZMBXgoP0lcBAdxl205IKpDSHQj0hcjAecsQg0sKHKoJQVy8AJKCAQgEowIAY
+RxAQ2lNQRinllFRWaeWVWGap5ZZcdunll2CGKeaYZJapCDYxhhQbgIoE4Kab8kXGJiFvvmmTQHWq
+8dlNABhQQAEMBMrAeAYImsCfAIx3xCV5uqnoEe5x0GgAV/iSpwWNQoYEEI12MCkaneaU5qgODDDn
+B5yIUlF0Iywyo2CTcKCpE7ImsaEEycgE4kqSLTRhCm+o8Bqpo7boQYcS2MTSV77+OdLkqRKMWKuP
+VpR4zYPQThAsCHFai89zKsDoBwr+GZStBgLmxxy0B1bmyXApDXfrtRstQ8a86ga5QbfGflBhdfhN
+wMBHttHGw3e59AqMoviat4K0wHpLgbJYvGrBtqT9isK/JojrgDX6JWagxwiPgGwGuoHmT7MpQIyC
+cs71olCEHPArDbj3sWKOx/w8YPAOJXMYXs0NVdDuw8SpADMUiqqIcXwaf4svCB5bE8CFIWnysw5B
+1zS0rzK7wnKP8ZLYLzCG/Pq0hKxSSG3OPrQmQQJYs/bq1t6dm8HJX6XdhcMuJR3x2RZkNAnN+0bN
+Ec6qdBPc45BHLnnkJOuNQbr+JnfCyHmCvyxxCLMioe8u95I4NarEkmpx5gqToKsxnJet9Oc0+C26
+YS7nsjkL5aYOUtcjDGHjipIQkOMGofN4Ahinf0Dx6JWQQwKltM4QFVW+z4GAAavToI4hts93wtH1
+MdcA+Of3whiBUoS/zgmkQC9OAom6rzkBAhRwvJn89+///wAMoAAHSMACGvCACEygAhfIwAY68IEQ
+jKAEJ0jBClrwgk5hwLCyh4MBLKB7X/ELWTphvDWspUllcU/KNMfCFjJjAgdQi+aaZ46wlMUyZKFC
+Z2TYi7IYazA3ROFeyLVBDvLDchsQXicIZwGbKI8gvUiAQnbkiAOEbl5gsN/+EZCoLcaBTQo01JEX
+N2ZEkETqBENIQ+i+Jo7qXWCFRPBK6EAoAfYtCjMFsBcWnoSWOIbgdZsikfxCUMQy9iGM6DpfEOwY
+qxDoxiEr5GPMpEBHtwSyWpD4EBZaV6tBOkNx7RhjTAyJmCcKTYfm0CITfbZFlCFBkhgYD7su6RxT
+GA52ffRkBWzmNkRqgGekzIHcEgaINQ7vN+eD5BTgJYVsGWFeytGjPXIJnWn2khqscJMCtsnNbnrz
+m9us3DcUWQGKScGUFtANgHSDTgvIUhGGoM/S1sjJ5IgycW07xT1HULXLSeUOwUEH3nAAPOf5UTBa
+BAIH1OnKBpzrnQl6mz3+YcLIJFQSV/vMAC/16csM9JMCCagaJQZ6g4Iei40TAKRlvIKSEiINC1zE
+pD8SygHEkS6fG5MowHQ2C2D6wQwkdYBJ2XPMB5gzCWc0Witf2swFyZM5Klkb0XD6LV124KMHSIw3
+gjpUDghCJZqUEzIdGrummm0DcERqtaw6gY3mtKMY6OfVMAQJrsZ0Yii1QLeS+Ua+MjUJd52opBg2
+EKni05ocxWbcfOZTru3sP+Msal4OIUmG/hUJgb0Y7fQK1U+yVQJurapiezbXxHjBruNEpaToOdKl
+Bg6mTjXoIc5o2Jsi9q2jZU0dE2MqxkIWIXnNwC2R0JKW7i8DEJ0dE8P+OhM11FajoHSdTjsWMKOG
+5CCoBa5k36jKWbi2ZWTI7HJW+YC97u65GAjt4j77y+pKIGRy4A8wxAlc1fZRZpZ9rVmV26ruovcC
+6o3JdFXjXoIUYAGroMMH30hfE9WTAxVFQgIMIV4KJHdwoUzRfzlL1cXB9QIf3aktxMu3BmnRr/oF
+bGxdpDn2RvjDmoVxBRobzGGy7rhdPESFJ3Bhz5HXaFp0cekCJ+O+BBMkP25icAN0CBxfoMfI2Ox9
+I1O7TVZ4Ge1sUN2OHLcKfzUFzHXp7Cq24nFSWQShg2X52FuJLXNZB39QgfB2XN79RozMSCvyBMLK
+ZuYeIcld3C4TaEydrMWwYM4sWJWTNYuFpKZDyiOoB5uTxYyLEmLCf56BAhB85NgsmlICCHWo0ybq
+UmdZPCimR6lFbb9VixpaB3B1k1z9YPZktAPAOTH+BACAXifKhrayNO8OkIDJGfvYj2OAQHiXpyNN
+yk03ErQ/nk3tUEmq2pPykAAA/RsGFMAAvl51r/0EEAya+9zoTre6183udrv73fCOt7zn7e4IAAA7
+
+------=_NextPart_000_0083_01C26E23.30DDD3F0--
+
+
+From John Zhang <jzhang@jimmy.harvard.edu>  Mon Oct  7 17:00:34 2002
+From: John Zhang <jzhang@jimmy.harvard.edu> (John Zhang)
+Date: Mon, 7 Oct 2002 12:00:34 -0400 (EDT)
+Subject: [BioC] tkWidges
+Message-ID: <200210071600.MAA12040@blaise.dfci.harvard.edu>
+
+>From: "Matthias Bauer" <matthias.bauer@itg.fzk.de>
+>To: <bioconductor@stat.math.ethz.ch>
+>MIME-Version: 1.0
+>X-Priority: 3
+>X-MSMail-Priority: Normal
+>X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1106
+>Subject: [BioC] tkWidges
+>X-BeenThere: bioconductor@stat.math.ethz.ch
+>X-Mailman-Version: 2.0.13
+>List-Help: <mailto:bioconductor-request@stat.math.ethz.ch?subject=help>
+>List-Post: <mailto:bioconductor@stat.math.ethz.ch>
+>List-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, 
+<mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe>
+>List-Id: The Bioconductor Project Mailing List <bioconductor.stat.math.ethz.ch>
+>List-Unsubscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, 
+<mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe>
+>List-Archive: <http://www.stat.math.ethz.ch/pipermail/bioconductor/>
+>Date: Mon, 7 Oct 2002 11:29:30 +0200
+>
+>Hallo Bioconductor!
+>Auf der Seite der Packages-Downloads funktioniert der Link zum 
+tkWidgets-Package nicht.
+
+Please post in English. Thanks.
+
+>
+>Viele Grüße,
+>Matthias Bauer
+>
+>***************
+>Dipl. Biol. t.o. Matthias Bauer
+>Gruppe Pankratz
+>Institut für Toxikologie und Genetik
+>Forschungszentrum Karlsruhe
+>Tel. 07247/82-6087
+>Fax 07247/82-3354
+>WWW: http://itgmv1.fzk.de/www/itg/pankratz/pankratz.html
+
+
+
+From Wolfgang Huber <w.huber@dkfz-heidelberg.de>  Tue Oct  8 09:40:55 2002
+From: Wolfgang Huber <w.huber@dkfz-heidelberg.de> (Wolfgang Huber)
+Date: Tue, 8 Oct 2002 10:40:55 +0200 (MET DST)
+Subject: [BioC] Workshops
+In-Reply-To: <CIEPKDJNOLBAHPOAKCIGAEHJCDAA.waku@idi.ntnu.no>
+Message-ID: <Pine.GSO.4.21.0210081037180.15861-100000@husar.inet.dkfz-heidelberg.de>
+
+Hi Waclaw,
+
+similar courses as the one in Heidelberg (which took place in September)
+are planned for 2003 in Heidelberg and in Berlin, but there is no definite
+date yet. We will get back to you when that is the case. 
+
+Best regards
+Wolfgang Huber
+
+On Mon, 7 Oct 2002, Wacek Kusnierczyk wrote:
+
+> Hello,
+> 
+> I have found information on interesting workshops on your website.
+> I am working with microarray data analysis, and the workshop in Heidelberg
+> suits my interests well.
+> 
+> I suppose it is not possible to join the workshop now. How could I reach
+> information on future workshops before it is too late to book a place?
+> Please support me with relevant information.
+> 
+> Hopefully, you will present similar issues soon.
+> 
+> Regards,
+> 
+> Waclaw Kusnierczyk
+> _________________________________________________
+> WORK
+> Dept. of Computer and Information Science
+> Norwegian University of Science and Technology
+> N-7491 Trondheim, Norway 
+> tel +47 73591875
+> fax +47 73594466
+> email waku@idi.ntnu.no
+> _________________________________________________
+> HOME
+> Martin Stokkens v. 71
+> N-7027 Trondheim, Norway
+> tel +47 72556026
+> mob +47 48286885
+> _________________________________________________
+> http://www.idi.ntnu.no/~waku
+> 
+> 
+> 
+> 
+> 
+
+
+From eugene@necker.fr  Tue Oct  8 10:44:03 2002
+From: eugene@necker.fr (eugene@necker.fr)
+Date: Tue, 08 Oct 2002 11:44:03 +0200
+Subject: [BioC] Using Bioconductor
+Message-ID: <3DA2A8E4.629FF756@necker.fr>
+
+Hi,
+
+After downloading the macintosh R-1.5.1 version as well as Macintosh
+version of Bioconductor, I follow the installation procedure described:
+I drag all inside the folder in the "library" folder of rm151.
+
+The first problem I have is to run Bioconductor: I write "getBioc()"
+into an R session but an error occurs.
+
+Would you please tell me the correct procedure for the installation of
+Bioconductor on a Macintosh, in other to have the graphical interface
+which could help me a lot in using all of these packages.
+
+Sincerely
+--
+Emmanuel EUGÈNE
+INSERM U570
+Faculté de Médecine Necker
+Paris - France
+
+
+
+From laurent@cbs.dtu.dk  Tue Oct  8 17:26:00 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Tue, 8 Oct 2002 18:26:00 +0200
+Subject: [BioC] Using Bioconductor
+In-Reply-To: <3DA2A8E4.629FF756@necker.fr>
+References: <3DA2A8E4.629FF756@necker.fr>
+Message-ID: <20021008162600.GA25784@giraffa.cbs.dtu.dk>
+
+On Tue, Oct 08, 2002 at 11:44:03AM +0200, eugene@necker.fr wrote:
+> Hi,
+> 
+> After downloading the macintosh R-1.5.1 version as well as Macintosh
+> version of Bioconductor, I follow the installation procedure described:
+> I drag all inside the folder in the "library" folder of rm151.
+> 
+> The first problem I have is to run Bioconductor: I write "getBioc()"
+> into an R session but an error occurs.
+
+The 'getBioc()' function gets the bioconductor package over the net to
+install them on your machine.
+
+To run bioconductor, you must start an R session then call the
+respective packages you are interested in by entering
+'library(<package name>)'.
+
+Describing more precisely the error would help us to see what is going
+on...
+
+
+> 
+> Would you please tell me the correct procedure for the installation of
+> Bioconductor on a Macintosh, in other to have the graphical interface
+> which could help me a lot in using all of these packages.
+> 
+
+Do you mean tcltk/tkWidgets ?
+
+
+> Sincerely
+> --
+> Emmanuel EUGÈNE
+> INSERM U570
+> Faculté de Médecine Necker
+> Paris - France
+> 
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+-- 
+--------------------------------------------------------------
+Laurent Gautier			CBS, Building 208, DTU
+PhD. Student			DK-2800 Lyngby,Denmark	
+tel: +45 45 25 24 89		http://www.cbs.dtu.dk/laurent
+
+From jgentry@jimmy.harvard.edu  Fri Oct 11 04:07:14 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Thu, 10 Oct 2002 23:07:14 -0400 (EDT)
+Subject: [BioC] New documentation on website
+Message-ID: <Pine.SOL.4.20.0210102303050.7162-100000@santiam.dfci.harvard.edu>
+
+Hello ...
+
+A quick pointer to some new documentation on the Bioconductor website.
+
+Under the "Downloads" heading on the left menu bar there is now:
+- 'Howto': Provides a basic description of how to install and get started
+with the Bioconductor packages
+
+- 'Vignettes':  Provides links to download package vignettes directly from
+the website.  These provide overview information for packages,
+"HowTo" instructions for package functionality, etc.
+
+If you have any questions, don't hesitate to ask.
+
+-Jeff
+
+
+From sbhatta3@hgmp.mrc.ac.uk  Fri Oct 11 14:41:04 2002
+From: sbhatta3@hgmp.mrc.ac.uk (S.Bhattacharyya)
+Date: Fri, 11 Oct 2002 14:41:04 +0100
+Subject: [BioC] Bioconductor query
+Message-ID: <005d01c2712b$d8acc950$6ac13ec1@hgmp.mrc.ac.uk>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_005A_01C27134.3A129690
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+Just a quick email to ask whether there are any plans to run a =
+Bioconductor/R course/workshop on microarray analysis in the UK and if =
+not, whether you know of any similar courses that might satisfy our =
+requirements.
+I've had a look on the website---and have seen that there are no plans =
+for 2002, but wonder whether there are plans to run such a course in =
+2003.
+Also--might I ask if there are any tutorials or guides that you would =
+recommend for newcomers to both this field and R to study.
+Many thanks for your help,
+Sumit.
+
+------=_NextPart_000_005A_01C27134.3A129690
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 5.50.4134.600" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>Hello,</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Just a quick email to ask whether there =
+are any=20
+plans to run a Bioconductor/R course/workshop on microarray analysis in =
+the=20
+UK&nbsp;and if not, whether you know of any similar courses =
+that&nbsp;might=20
+satisfy&nbsp;our requirements.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>I've had a look on the website---and =
+have seen that=20
+there are no plans for 2002, but wonder whether there are plans to run =
+such a=20
+course in 2003.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Also--might I ask if there are any =
+tutorials or=20
+guides that you would recommend for newcomers to both this field and R =
+to=20
+study.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Many thanks for your help,</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Sumit.</FONT></DIV></BODY></HTML>
+
+------=_NextPart_000_005A_01C27134.3A129690--
+
+
+From rafa@jhu.edu  Fri Oct 11 16:53:17 2002
+From: rafa@jhu.edu (Rafael A. Irizarry)
+Date: Fri, 11 Oct 2002 11:53:17 -0400 (EDT)
+Subject: [BioC] Bioconductor query
+In-Reply-To: <005d01c2712b$d8acc950$6ac13ec1@hgmp.mrc.ac.uk>
+Message-ID: <Pine.LNX.4.33.0210111147530.5744-100000@localhost.localdomain>
+
+hi! i will be teaching a one week course in lancaster (organized by peter 
+diggle) on analysis of microarray data starting around feb 10 2003.. the 
+labs will be on bioconductor. i dont know any of the logistics though
+
+as for tutorials look at this
+http://www.bioconductor.org/packages/release/html/index.html
+http://www.bioconductor.org/workshop.html
+http://cran.r-project.org/manuals.html
+
+hope this helps,
+rafael
+
+On Fri, 11 Oct 2002, 
+S.Bhattacharyya wrote:
+
+> Hello,
+> Just a quick email to ask whether there are any plans to run a 
+Bioconductor/R course/workshop on microarray analysis in the UK and if not, whether you know of any similar courses that might satisfy our requirements. 
+> I've had a look on the website---and have seen that there are no plans 
+for 2002, but wonder whether there are plans to run such a course in 2003.  
+> Also--might I ask if there are any tutorials or guides that you would 
+recommend for newcomers to both this field and R to study. 
+> Many thanks for your help,
+> Sumit.
+> 
+
+
+
+From jgentry@jimmy.harvard.edu  Fri Oct 11 17:14:55 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Fri, 11 Oct 2002 12:14:55 -0400 (EDT)
+Subject: [BioC] Bioconductor query
+In-Reply-To: <Pine.LNX.4.33.0210111147530.5744-100000@localhost.localdomain>
+Message-ID: <Pine.SOL.4.20.0210111212580.9540-100000@santiam.dfci.harvard.edu>
+
+
+On Fri, 11 Oct 2002, Rafael A. Irizarry wrote:
+> as for tutorials look at this
+> http://www.bioconductor.org/packages/release/html/index.html
+> http://www.bioconductor.org/workshop.html
+> http://cran.r-project.org/manuals.html
+
+I'd add:
+http://www.bioconductor.org/viglistingindex.html, which lists
+documentation files (quite a few "How To" type documents) for the packages
+in Rafael's first link.  These can help give you an idea of what the
+different Bioconductor packages can do for you.
+
+-J
+
+
+From laurent@cbs.dtu.dk  Mon Oct 14 20:35:49 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Mon, 14 Oct 2002 21:35:49 +0200
+Subject: [BioC] question for users of Affymetrix MAS
+Message-ID: <20021014193549.GB6875@giraffa.cbs.dtu.dk>
+
+Dear all,
+
+I'd like to know what is the largest number of arrays known to man
+that Affymetrix software MAS is able to handle... would anybody have
+a hint ?
+
+Thanks,
+
+
+L.
+
+
+From donghu@itsa.ucsf.edu  Mon Oct 14 20:11:07 2002
+From: donghu@itsa.ucsf.edu (donghu@itsa.ucsf.edu)
+Date: Mon, 14 Oct 2002 12:11:07 PDT
+Subject: [BioC] question for users of Affymetrix MAS
+Message-ID: <200210141911.g9EJB7A26524@itswm.ucsf.edu>
+
+I think it depends on what kind of work you do with MAS and what kind of
+computer you have.  I have used MAS 5.0 to conduct 30 - 40 batch
+analyses.  It was slow but worked.
+
+Donglei Hu
+Gene Array Core Lab
+Diabetes Center
+UCSF
+
+On Mon, 14 Oct 2002 21:35:49 +0200 Laurent Gautier wrote:
+
+> Dear all,
+> 
+> I'd like to know what is the largest number of arrays known to man
+> that Affymetrix software MAS is able to handle... would anybody have
+> a hint ?
+> 
+> Thanks,
+> 
+> 
+> L.
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> 
+
+
+
+From rgentlem@jimmy.harvard.edu  Tue Oct 15 00:50:43 2002
+From: rgentlem@jimmy.harvard.edu (Robert Gentleman)
+Date: Mon, 14 Oct 2002 19:50:43 -0400
+Subject: [BioC] Bioconductor query
+In-Reply-To: <005d01c2712b$d8acc950$6ac13ec1@hgmp.mrc.ac.uk>; from sbhatta3@hgmp.mrc.ac.uk on Fri, Oct 11, 2002 at 02:41:04PM +0100
+References: <005d01c2712b$d8acc950$6ac13ec1@hgmp.mrc.ac.uk>
+Message-ID: <20021014195043.P10602@jimmy.harvard.edu>
+
+Hi,
+ I will be giving two workshop sessions at DSC 2003
+
+  http://www.ci.tuwien.ac.at/Conferences/DSC-2003/
+ 
+ in Vienna, March 20-22
+
+   Robert
+
+
+On Fri, Oct 11, 2002 at 02:41:04PM +0100, S.Bhattacharyya wrote:
+> Hello,
+> Just a quick email to ask whether there are any plans to run a Bioconductor/R course/workshop on microarray analysis in the UK and if not, whether you know of any similar courses that might satisfy our requirements.
+> I've had a look on the website---and have seen that there are no plans for 2002, but wonder whether there are plans to run such a course in 2003.
+> Also--might I ask if there are any tutorials or guides that you would recommend for newcomers to both this field and R to study.
+> Many thanks for your help,
+> Sumit.
+
+-- 
++---------------------------------------------------------------------------+
+| Robert Gentleman                 phone : (617) 632-5250                   |
+| Associate Professor              fax:   (617)  632-2444                   |
+| Department of Biostatistics      office: M1B20
+| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |
++---------------------------------------------------------------------------+
+
+From kye@ams.sunysb.edu  Wed Oct 16 07:39:45 2002
+From: kye@ams.sunysb.edu (Kenny Ye)
+Date: Wed, 16 Oct 2002 02:39:45 -0400 (EDT)
+Subject: [BioC] Obtain MAS5.0 Signal using affy
+Message-ID: <Pine.SO4.4.02.10210160144460.6577-100000@fisher>
+
+has anyone wrote a function for the MAS5.0 signal measure in affy? I am
+processing DAT files of some customized chips, and couldn't find the CIF
+file that MAS requires. As the CDF file is available, I am able to process
+DAT files and obtain CEL files using dChip, then import everything to
+affy. Interesting how dChip does it without the CIF file but MAS insists
+on it.
+
+I looked at Hubbell's powerpoint file on Terry's website, but the
+equations given there are quite confusing. It shouldn't be difficult to
+write the function as long as the formulae are set straight. following is
+my best guess
+
+Signal = Average of Tukey_Biweight(log(PM-CT)) 
+
+if MM < PM, CT=MM
+if MM > PM, CT=PM/exp(proportion)
+
+proportion = Average of Tukey_Biweight(log(PM/MM)) (over all pairs
+on the chip or just the set?). proportion is set to be 0 if the
+average is negative.
+
+However, one still need to decide the support of the Tukey_Biweight
+function. Maybe that doesn't matter much. Or simply take the
+median. I don't understand why affymetrix doesn't want to disclose
+their algorithm completely. 
+
+Thanks in advance for your suggestions. 
+
+Kenny
+
+
+
+
+Kenny Ye
+Assistant Professor
+Department of Applied Math and Statistics
+SUNY at  Stony Brook
+Stony Brook, New York 11794-3600
+Phone (631)632-9344
+Fax   (631)632-8490
+
+
+From isaac.neuhaus@bms.com  Wed Oct 16 14:27:09 2002
+From: isaac.neuhaus@bms.com (Isaac Neuhaus)
+Date: Wed, 16 Oct 2002 09:27:09 -0400
+Subject: [BioC] Obtain MAS5.0 Signal using affy
+References: <Pine.SO4.4.02.10210160144460.6577-100000@fisher>
+Message-ID: <3DAD692D.357EEDF5@bms.com>
+
+Kenny:
+
+A full description of the algorithm has been released by  Affymetrix. I have
+a perl version of MAS 5.0 and I will make it available as soon as Affymetrix
+agrees to it.
+
+Regards,
+
+Isaac
+
+Ye wrote:
+
+> has anyone wrote a function for the MAS5.0 signal measure in affy? I am
+> processing DAT files of some customized chips, and couldn't find the CIF
+> file that MAS requires. As the CDF file is available, I am able to process
+> DAT files and obtain CEL files using dChip, then import everything to
+> affy. Interesting how dChip does it without the CIF file but MAS insists
+> on it.
+>
+> I looked at Hubbell's powerpoint file on Terry's website, but the
+> equations given there are quite confusing. It shouldn't be difficult to
+> write the function as long as the formulae are set straight. following is
+> my best guess
+>
+> Signal = Average of Tukey_Biweight(log(PM-CT))
+>
+> if MM < PM, CT=MM
+> if MM > PM, CT=PM/exp(proportion)
+>
+> proportion = Average of Tukey_Biweight(log(PM/MM)) (over all pairs
+> on the chip or just the set?). proportion is set to be 0 if the
+> average is negative.
+>
+> However, one still need to decide the support of the Tukey_Biweight
+> function. Maybe that doesn't matter much. Or simply take the
+> median. I don't understand why affymetrix doesn't want to disclose
+> their algorithm completely.
+>
+> Thanks in advance for your suggestions.
+>
+> Kenny
+>
+> Kenny Ye
+> Assistant Professor
+> Department of Applied Math and Statistics
+> SUNY at  Stony Brook
+> Stony Brook, New York 11794-3600
+> Phone (631)632-9344
+> Fax   (631)632-8490
+>
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+
+From rafa@jhu.edu  Wed Oct 16 14:21:24 2002
+From: rafa@jhu.edu (Rafael A. Irizarry)
+Date: Wed, 16 Oct 2002 09:21:24 -0400 (EDT)
+Subject: [BioC] Obtain MAS5.0 Signal using affy
+In-Reply-To: <Pine.SO4.4.02.10210160144460.6577-100000@fisher>
+Message-ID: <Pine.LNX.4.33.0210160900550.14962-100000@localhost.localdomain>
+
+we have plans to do this but not to high in the to-do list. 
+obviously contributions are welcome. 
+
+rafael
+
+On Wed, 16 Oct 2002, Kenny Ye wrote:
+
+> 
+> has anyone wrote a function for the MAS5.0 signal measure in affy? I am
+> processing DAT files of some customized chips, and couldn't find the CIF
+> file that MAS requires. As the CDF file is available, I am able to process
+> DAT files and obtain CEL files using dChip, then import everything to
+> affy. Interesting how dChip does it without the CIF file but MAS insists
+> on it.
+> 
+> I looked at Hubbell's powerpoint file on Terry's website, but the
+> equations given there are quite confusing. It shouldn't be difficult to
+> write the function as long as the formulae are set straight. following is
+> my best guess
+> 
+> Signal = Average of Tukey_Biweight(log(PM-CT)) 
+> 
+> if MM < PM, CT=MM
+> if MM > PM, CT=PM/exp(proportion)
+> 
+> proportion = Average of Tukey_Biweight(log(PM/MM)) (over all pairs
+> on the chip or just the set?). proportion is set to be 0 if the
+> average is negative.
+> 
+> However, one still need to decide the support of the Tukey_Biweight
+> function. Maybe that doesn't matter much. Or simply take the
+> median. I don't understand why affymetrix doesn't want to disclose
+> their algorithm completely. 
+> 
+> Thanks in advance for your suggestions. 
+> 
+> Kenny
+> 
+> 
+> 
+> 
+> Kenny Ye
+> Assistant Professor
+> Department of Applied Math and Statistics
+> SUNY at  Stony Brook
+> Stony Brook, New York 11794-3600
+> Phone (631)632-9344
+> Fax   (631)632-8490
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> 
+
+
+
+From bolstad@stat.berkeley.edu  Wed Oct 16 16:03:56 2002
+From: bolstad@stat.berkeley.edu (Ben Bolstad)
+Date: 16 Oct 2002 08:03:56 -0700
+Subject: [BioC] Obtain MAS5.0 Signal using affy
+In-Reply-To: <3DAD692D.357EEDF5@bms.com>
+References: <Pine.SO4.4.02.10210160144460.6577-100000@fisher>
+ <3DAD692D.357EEDF5@bms.com>
+Message-ID: <1034780637.2073.13.camel@bmbbox.yi.org>
+
+You can find a full description of MAS5.0 (or at least the most complete
+I have seen) at 
+
+http://www.affymetrix.com/support/technical/whitepapers/sadd_whitepaper.pdf
+
+Ben
+
+
+> Kenny:
+> 
+> A full description of the algorithm has been released by  Affymetrix. I have
+> a perl version of MAS 5.0 and I will make it available as soon as Affymetrix
+> agrees to it.
+> 
+> Regards,
+> 
+> Isaac
+> 
+> Ye wrote:
+> 
+> > has anyone wrote a function for the MAS5.0 signal measure in affy? I am
+> > processing DAT files of some customized chips, and couldn't find the CIF
+> > file that MAS requires. As the CDF file is available, I am able to process
+> > DAT files and obtain CEL files using dChip, then import everything to
+> > affy. Interesting how dChip does it without the CIF file but MAS insists
+> > on it.
+> >
+> > I looked at Hubbell's powerpoint file on Terry's website, but the
+> > equations given there are quite confusing. It shouldn't be difficult to
+> > write the function as long as the formulae are set straight. following is
+> > my best guess
+> >
+> > Signal = Average of Tukey_Biweight(log(PM-CT))
+> >
+> > if MM < PM, CT=MM
+> > if MM > PM, CT=PM/exp(proportion)
+> >
+> > proportion = Average of Tukey_Biweight(log(PM/MM)) (over all pairs
+> > on the chip or just the set?). proportion is set to be 0 if the
+> > average is negative.
+> >
+> > However, one still need to decide the support of the Tukey_Biweight
+> > function. Maybe that doesn't matter much. Or simply take the
+> > median. I don't understand why affymetrix doesn't want to disclose
+> > their algorithm completely.
+> >
+> > Thanks in advance for your suggestions.
+> >
+> > Kenny
+> >
+> > Kenny Ye
+> > Assistant Professor
+> > Department of Applied Math and Statistics
+> > SUNY at  Stony Brook
+> > Stony Brook, New York 11794-3600
+> > Phone (631)632-9344
+> > Fax   (631)632-8490
+> >
+> > _______________________________________________
+> > Bioconductor mailing list
+> > Bioconductor@stat.math.ethz.ch
+> > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+
+
+From kye@ams.sunysb.edu  Wed Oct 16 18:17:49 2002
+From: kye@ams.sunysb.edu (Kenny Ye)
+Date: Wed, 16 Oct 2002 13:17:49 -0400 (EDT)
+Subject: [BioC] Obtain MAS5.0 Signal using affy
+In-Reply-To: <1034780637.2073.13.camel@bmbbox.yi.org>
+Message-ID: <Pine.SO4.4.02.10210161314470.6577-100000@fisher>
+
+Ben and Julien, thanks for pointing me to this document. glad that they
+removed it from ``confidential''.
+
+Kenny
+
+
+Kenny Ye
+Assistant Professor
+Department of Applied Math and Statistics
+SUNY at  Stony Brook
+Stony Brook, New York 11794-3600
+Phone (631)632-9344
+Fax   (631)632-8490
+
+On 16 Oct 2002, Ben Bolstad wrote:
+
+> You can find a full description of MAS5.0 (or at least the most complete
+> I have seen) at 
+> 
+> http://www.affymetrix.com/support/technical/whitepapers/sadd_whitepaper.pdf
+> 
+> Ben
+> 
+> 
+> > Kenny:
+> > 
+> > A full description of the algorithm has been released by  Affymetrix. I have
+> > a perl version of MAS 5.0 and I will make it available as soon as Affymetrix
+> > agrees to it.
+> > 
+> > Regards,
+> > 
+> > Isaac
+> > 
+> > Ye wrote:
+> > 
+> > > has anyone wrote a function for the MAS5.0 signal measure in affy? I am
+> > > processing DAT files of some customized chips, and couldn't find the CIF
+> > > file that MAS requires. As the CDF file is available, I am able to process
+> > > DAT files and obtain CEL files using dChip, then import everything to
+> > > affy. Interesting how dChip does it without the CIF file but MAS insists
+> > > on it.
+> > >
+> > > I looked at Hubbell's powerpoint file on Terry's website, but the
+> > > equations given there are quite confusing. It shouldn't be difficult to
+> > > write the function as long as the formulae are set straight. following is
+> > > my best guess
+> > >
+> > > Signal = Average of Tukey_Biweight(log(PM-CT))
+> > >
+> > > if MM < PM, CT=MM
+> > > if MM > PM, CT=PM/exp(proportion)
+> > >
+> > > proportion = Average of Tukey_Biweight(log(PM/MM)) (over all pairs
+> > > on the chip or just the set?). proportion is set to be 0 if the
+> > > average is negative.
+> > >
+> > > However, one still need to decide the support of the Tukey_Biweight
+> > > function. Maybe that doesn't matter much. Or simply take the
+> > > median. I don't understand why affymetrix doesn't want to disclose
+> > > their algorithm completely.
+> > >
+> > > Thanks in advance for your suggestions.
+> > >
+> > > Kenny
+> > >
+> > > Kenny Ye
+> > > Assistant Professor
+> > > Department of Applied Math and Statistics
+> > > SUNY at  Stony Brook
+> > > Stony Brook, New York 11794-3600
+> > > Phone (631)632-9344
+> > > Fax   (631)632-8490
+> > >
+> > > _______________________________________________
+> > > Bioconductor mailing list
+> > > Bioconductor@stat.math.ethz.ch
+> > > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> > 
+> > _______________________________________________
+> > Bioconductor mailing list
+> > Bioconductor@stat.math.ethz.ch
+> > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> 
+> 
+> 
+
+
+From donghu@itsa.ucsf.edu  Wed Oct 16 23:54:56 2002
+From: donghu@itsa.ucsf.edu (donghu@itsa.ucsf.edu)
+Date: Wed, 16 Oct 2002 15:54:56 PDT
+Subject: [BioC] Help with raw p-value
+Message-ID: <200210162254.g9GMsuA12877@itswm.ucsf.edu>
+
+I have played with multtest package using Golub data.  After loading the
+dataset, I followed the steps descripted in the document to calculate t
+stat and raw p-values.  Here are what I did:
+
+>teststat <- mt.teststat(golub, golub.cl)
+>rawp0 <- 2*(1-pnorm(abs(teststat)))
+
+Then I took a look of the t stat and raw p-value of the first gene.  I got:
+
+>teststat[1]
+[1] 1.759195
+>rawp0[1]
+[1] 0.07854436
+
+I also tried to calculate t stat and p-value of the first gene using
+t.test.  I did the followings.
+
+> x <- golub[1,1:27]
+> y <- golub[1,28:38]
+> t.test(x,y)
+
+The result showed "t = -1.7592" and "p-value = 0.1062".  I don't
+understand why the "p-value" I got here is different from "rawp0[1]"
+although the t stat is same.  Can someone let me know why?  Thank you in
+advance.
+
+Donglei Hu
+Gene Array Core Lab
+Diabetes Center
+UCSF
+
+
+
+From l.heisler@utoronto.ca  Thu Oct 17 12:51:17 2002
+From: l.heisler@utoronto.ca (Larry)
+Date: Thu, 17 Oct 2002 07:51:17 -0400
+Subject: [BioC] Re: Bioconductor digest, Vol 1 #134 - 5 msgs
+References: <20021017100005.3684.27121.Mailman@hypatia.math.ethz.ch>
+Message-ID: <000801c275d3$805ea230$1651968e@derb01>
+
+I have written R functions for MAS5.0 Signal and Background Correction
+(Ideal MisMatch).  I still need to test it out thoroughly though.  If you
+are interested I can send the code.
+Regards
+Larry Heisler
+l.heisler@utoronto.ca
+
+----- Original Message -----
+From: <bioconductor-request@stat.math.ethz.ch>
+To: <bioconductor@stat.math.ethz.ch>
+Sent: Thursday, October 17, 2002 6:00 AM
+Subject: Bioconductor digest, Vol 1 #134 - 5 msgs
+
+
+> Send Bioconductor mailing list submissions to
+> bioconductor@stat.math.ethz.ch
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> or, via email, send a message with subject or body 'help' to
+> bioconductor-request@stat.math.ethz.ch
+>
+> You can reach the person managing the list at
+> bioconductor-admin@stat.math.ethz.ch
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of Bioconductor digest..."
+>
+>
+> Today's Topics:
+>
+>    1. Re: Obtain MAS5.0 Signal using affy (Isaac Neuhaus)
+>    2. Re: Obtain MAS5.0 Signal using affy (Rafael A. Irizarry)
+>    3. Re: Obtain MAS5.0 Signal using affy (Ben Bolstad)
+>    4. Re: Obtain MAS5.0 Signal using affy (Kenny Ye)
+>    5. Help with raw p-value (donghu@itsa.ucsf.edu)
+>
+> --__--__--
+>
+> Message: 1
+> Date: Wed, 16 Oct 2002 09:27:09 -0400
+> From: Isaac Neuhaus <isaac.neuhaus@bms.com>
+> Subject: Re: [BioC] Obtain MAS5.0 Signal using affy
+> To: Kenny Ye <kye@ams.sunysb.edu>
+> Cc: bioconductor@stat.math.ethz.ch
+>
+> Kenny:
+>
+> A full description of the algorithm has been released by  Affymetrix. I
+have
+> a perl version of MAS 5.0 and I will make it available as soon as
+Affymetrix
+> agrees to it.
+>
+> Regards,
+>
+> Isaac
+>
+> Ye wrote:
+>
+> > has anyone wrote a function for the MAS5.0 signal measure in affy? I am
+> > processing DAT files of some customized chips, and couldn't find the CIF
+> > file that MAS requires. As the CDF file is available, I am able to
+process
+> > DAT files and obtain CEL files using dChip, then import everything to
+> > affy. Interesting how dChip does it without the CIF file but MAS insists
+> > on it.
+> >
+> > I looked at Hubbell's powerpoint file on Terry's website, but the
+> > equations given there are quite confusing. It shouldn't be difficult to
+> > write the function as long as the formulae are set straight. following
+is
+> > my best guess
+> >
+> > Signal = Average of Tukey_Biweight(log(PM-CT))
+> >
+> > if MM < PM, CT=MM
+> > if MM > PM, CT=PM/exp(proportion)
+> >
+> > proportion = Average of Tukey_Biweight(log(PM/MM)) (over all pairs
+> > on the chip or just the set?). proportion is set to be 0 if the
+> > average is negative.
+> >
+> > However, one still need to decide the support of the Tukey_Biweight
+> > function. Maybe that doesn't matter much. Or simply take the
+> > median. I don't understand why affymetrix doesn't want to disclose
+> > their algorithm completely.
+> >
+> > Thanks in advance for your suggestions.
+> >
+> > Kenny
+> >
+> > Kenny Ye
+> > Assistant Professor
+> > Department of Applied Math and Statistics
+> > SUNY at  Stony Brook
+> > Stony Brook, New York 11794-3600
+> > Phone (631)632-9344
+> > Fax   (631)632-8490
+> >
+> > _______________________________________________
+> > Bioconductor mailing list
+> > Bioconductor@stat.math.ethz.ch
+> > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+>
+>
+> --__--__--
+>
+> Message: 2
+> Date: Wed, 16 Oct 2002 09:21:24 -0400 (EDT)
+> From: "Rafael A. Irizarry" <ririzarr@jhsph.edu>
+> Subject: Re: [BioC] Obtain MAS5.0 Signal using affy
+> To: Kenny Ye <kye@ams.sunysb.edu>
+> Cc: bioconductor@stat.math.ethz.ch
+> Reply-to: rafa@jhu.edu
+>
+> we have plans to do this but not to high in the to-do list.
+> obviously contributions are welcome.
+>
+> rafael
+>
+> On Wed, 16 Oct 2002, Kenny Ye wrote:
+>
+> >
+> > has anyone wrote a function for the MAS5.0 signal measure in affy? I am
+> > processing DAT files of some customized chips, and couldn't find the CIF
+> > file that MAS requires. As the CDF file is available, I am able to
+process
+> > DAT files and obtain CEL files using dChip, then import everything to
+> > affy. Interesting how dChip does it without the CIF file but MAS insists
+> > on it.
+> >
+> > I looked at Hubbell's powerpoint file on Terry's website, but the
+> > equations given there are quite confusing. It shouldn't be difficult to
+> > write the function as long as the formulae are set straight. following
+is
+> > my best guess
+> >
+> > Signal = Average of Tukey_Biweight(log(PM-CT))
+> >
+> > if MM < PM, CT=MM
+> > if MM > PM, CT=PM/exp(proportion)
+> >
+> > proportion = Average of Tukey_Biweight(log(PM/MM)) (over all pairs
+> > on the chip or just the set?). proportion is set to be 0 if the
+> > average is negative.
+> >
+> > However, one still need to decide the support of the Tukey_Biweight
+> > function. Maybe that doesn't matter much. Or simply take the
+> > median. I don't understand why affymetrix doesn't want to disclose
+> > their algorithm completely.
+> >
+> > Thanks in advance for your suggestions.
+> >
+> > Kenny
+> >
+> >
+> >
+> >
+> > Kenny Ye
+> > Assistant Professor
+> > Department of Applied Math and Statistics
+> > SUNY at  Stony Brook
+> > Stony Brook, New York 11794-3600
+> > Phone (631)632-9344
+> > Fax   (631)632-8490
+> >
+> > _______________________________________________
+> > Bioconductor mailing list
+> > Bioconductor@stat.math.ethz.ch
+> > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> >
+>
+>
+>
+> --__--__--
+>
+> Message: 3
+> Subject: Re: [BioC] Obtain MAS5.0 Signal using affy
+> From: Ben Bolstad <bolstad@stat.berkeley.edu>
+> To: Isaac Neuhaus <isaac.neuhaus@bms.com>
+> Cc: Kenny Ye <kye@ams.sunysb.edu>, bioconductor@stat.math.ethz.ch
+> Date: 16 Oct 2002 08:03:56 -0700
+>
+> You can find a full description of MAS5.0 (or at least the most complete
+> I have seen) at
+>
+>
+http://www.affymetrix.com/support/technical/whitepapers/sadd_whitepaper.pdf
+>
+> Ben
+>
+>
+> > Kenny:
+> >
+> > A full description of the algorithm has been released by  Affymetrix. I
+have
+> > a perl version of MAS 5.0 and I will make it available as soon as
+Affymetrix
+> > agrees to it.
+> >
+> > Regards,
+> >
+> > Isaac
+> >
+> > Ye wrote:
+> >
+> > > has anyone wrote a function for the MAS5.0 signal measure in affy? I
+am
+> > > processing DAT files of some customized chips, and couldn't find the
+CIF
+> > > file that MAS requires. As the CDF file is available, I am able to
+process
+> > > DAT files and obtain CEL files using dChip, then import everything to
+> > > affy. Interesting how dChip does it without the CIF file but MAS
+insists
+> > > on it.
+> > >
+> > > I looked at Hubbell's powerpoint file on Terry's website, but the
+> > > equations given there are quite confusing. It shouldn't be difficult
+to
+> > > write the function as long as the formulae are set straight. following
+is
+> > > my best guess
+> > >
+> > > Signal = Average of Tukey_Biweight(log(PM-CT))
+> > >
+> > > if MM < PM, CT=MM
+> > > if MM > PM, CT=PM/exp(proportion)
+> > >
+> > > proportion = Average of Tukey_Biweight(log(PM/MM)) (over all pairs
+> > > on the chip or just the set?). proportion is set to be 0 if the
+> > > average is negative.
+> > >
+> > > However, one still need to decide the support of the Tukey_Biweight
+> > > function. Maybe that doesn't matter much. Or simply take the
+> > > median. I don't understand why affymetrix doesn't want to disclose
+> > > their algorithm completely.
+> > >
+> > > Thanks in advance for your suggestions.
+> > >
+> > > Kenny
+> > >
+> > > Kenny Ye
+> > > Assistant Professor
+> > > Department of Applied Math and Statistics
+> > > SUNY at  Stony Brook
+> > > Stony Brook, New York 11794-3600
+> > > Phone (631)632-9344
+> > > Fax   (631)632-8490
+> > >
+> > > _______________________________________________
+> > > Bioconductor mailing list
+> > > Bioconductor@stat.math.ethz.ch
+> > > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> >
+> > _______________________________________________
+> > Bioconductor mailing list
+> > Bioconductor@stat.math.ethz.ch
+> > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+>
+>
+>
+> --__--__--
+>
+> Message: 4
+> Date: Wed, 16 Oct 2002 13:17:49 -0400 (EDT)
+> From: Kenny Ye <kye@ams.sunysb.edu>
+> To: Ben Bolstad <bolstad@stat.berkeley.edu>, julien.sylvestre@wotan.ens.fr
+> cc: bioconductor@stat.math.ethz.ch
+> Subject: Re: [BioC] Obtain MAS5.0 Signal using affy
+>
+>
+> Ben and Julien, thanks for pointing me to this document. glad that they
+> removed it from ``confidential''.
+>
+> Kenny
+>
+>
+> Kenny Ye
+> Assistant Professor
+> Department of Applied Math and Statistics
+> SUNY at  Stony Brook
+> Stony Brook, New York 11794-3600
+> Phone (631)632-9344
+> Fax   (631)632-8490
+>
+> On 16 Oct 2002, Ben Bolstad wrote:
+>
+> > You can find a full description of MAS5.0 (or at least the most complete
+> > I have seen) at
+> >
+> >
+http://www.affymetrix.com/support/technical/whitepapers/sadd_whitepaper.pdf
+> >
+> > Ben
+> >
+> >
+> > > Kenny:
+> > >
+> > > A full description of the algorithm has been released by  Affymetrix.
+I have
+> > > a perl version of MAS 5.0 and I will make it available as soon as
+Affymetrix
+> > > agrees to it.
+> > >
+> > > Regards,
+> > >
+> > > Isaac
+> > >
+> > > Ye wrote:
+> > >
+> > > > has anyone wrote a function for the MAS5.0 signal measure in affy? I
+am
+> > > > processing DAT files of some customized chips, and couldn't find the
+CIF
+> > > > file that MAS requires. As the CDF file is available, I am able to
+process
+> > > > DAT files and obtain CEL files using dChip, then import everything
+to
+> > > > affy. Interesting how dChip does it without the CIF file but MAS
+insists
+> > > > on it.
+> > > >
+> > > > I looked at Hubbell's powerpoint file on Terry's website, but the
+> > > > equations given there are quite confusing. It shouldn't be difficult
+to
+> > > > write the function as long as the formulae are set straight.
+following is
+> > > > my best guess
+> > > >
+> > > > Signal = Average of Tukey_Biweight(log(PM-CT))
+> > > >
+> > > > if MM < PM, CT=MM
+> > > > if MM > PM, CT=PM/exp(proportion)
+> > > >
+> > > > proportion = Average of Tukey_Biweight(log(PM/MM)) (over all pairs
+> > > > on the chip or just the set?). proportion is set to be 0 if the
+> > > > average is negative.
+> > > >
+> > > > However, one still need to decide the support of the Tukey_Biweight
+> > > > function. Maybe that doesn't matter much. Or simply take the
+> > > > median. I don't understand why affymetrix doesn't want to disclose
+> > > > their algorithm completely.
+> > > >
+> > > > Thanks in advance for your suggestions.
+> > > >
+> > > > Kenny
+> > > >
+> > > > Kenny Ye
+> > > > Assistant Professor
+> > > > Department of Applied Math and Statistics
+> > > > SUNY at  Stony Brook
+> > > > Stony Brook, New York 11794-3600
+> > > > Phone (631)632-9344
+> > > > Fax   (631)632-8490
+> > > >
+> > > > _______________________________________________
+> > > > Bioconductor mailing list
+> > > > Bioconductor@stat.math.ethz.ch
+> > > > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> > >
+> > > _______________________________________________
+> > > Bioconductor mailing list
+> > > Bioconductor@stat.math.ethz.ch
+> > > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> >
+> >
+> >
+>
+>
+> --__--__--
+>
+> Message: 5
+> To: bioconductor@stat.math.ethz.ch
+> From: donghu@itsa.ucsf.edu
+> Reply-To: donghu@itsa.ucsf.edu
+> Date: Wed, 16 Oct 2002 15:54:56 PDT
+> Subject: [BioC] Help with raw p-value
+>
+> I have played with multtest package using Golub data.  After loading the
+> dataset, I followed the steps descripted in the document to calculate t
+> stat and raw p-values.  Here are what I did:
+>
+> >teststat <- mt.teststat(golub, golub.cl)
+> >rawp0 <- 2*(1-pnorm(abs(teststat)))
+>
+> Then I took a look of the t stat and raw p-value of the first gene.  I
+got:
+>
+> >teststat[1]
+> [1] 1.759195
+> >rawp0[1]
+> [1] 0.07854436
+>
+> I also tried to calculate t stat and p-value of the first gene using
+> t.test.  I did the followings.
+>
+> > x <- golub[1,1:27]
+> > y <- golub[1,28:38]
+> > t.test(x,y)
+>
+> The result showed "t = -1.7592" and "p-value = 0.1062".  I don't
+> understand why the "p-value" I got here is different from "rawp0[1]"
+> although the t stat is same.  Can someone let me know why?  Thank you in
+> advance.
+>
+> Donglei Hu
+> Gene Array Core Lab
+> Diabetes Center
+> UCSF
+>
+>
+>
+>
+> --__--__--
+>
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+>
+>
+> End of Bioconductor Digest
+>
+
+
+From laurent@cbs.dtu.dk  Thu Oct 17 13:53:47 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Thu, 17 Oct 2002 14:53:47 +0200
+Subject: [BioC] Re: Bioconductor digest, Vol 1 #134 - 5 msgs
+In-Reply-To: <000801c275d3$805ea230$1651968e@derb01>
+References: <20021017100005.3684.27121.Mailman@hypatia.math.ethz.ch> <000801c275d3$805ea230$1651968e@derb01>
+Message-ID: <20021017125347.GE25408@giraffa.cbs.dtu.dk>
+
+You can send it. I'll put in affy-devel and see how it behaves
+(nice if you could send the '.Rd' documentation for it too).
+
+Thanks,
+
+
+L.
+
+
+
+On Thu, Oct 17, 2002 at 07:51:17AM -0400, Larry wrote:
+> I have written R functions for MAS5.0 Signal and Background Correction
+> (Ideal MisMatch).  I still need to test it out thoroughly though.  If you
+> are interested I can send the code.
+> Regards
+> Larry Heisler
+> l.heisler@utoronto.ca
+> 
+
+From Michael.Man@pfizer.com  Thu Oct 17 16:24:24 2002
+From: Michael.Man@pfizer.com (Man, Michael)
+Date: Thu, 17 Oct 2002 11:24:24 -0400
+Subject: [BioC] can't get summary.stat after "invariantset" normalization
+Message-ID: <4E2F83D5DEE32C41B4816FE9D6346242040D1CE5@anagrdexm01.research.aa.wl.com>
+
+Any idea?  BTW, it works fine when I used unnormalized data.  -michael
+
+###############################
+> tmp <- normalize.Plob.invariantset(latin)  # use the first CHIP as
+reference
+> latin.LiWong <- express(tmp, normalize=F, bg=subtractmm,
+summary.stat=li.wong)
+Background correcting
+Preparing Data
+Computing expression. This may take a while.
+Error in while (change > delta & iter < maxit) { : 
+        missing value where logical needed
+In addition: Warning message: 
+No convergence in inner loop after 50 in outerler tieration 4 
+ in: fit.li.wong(t(data.matrix), remove.outliers, normal.array.quantile,  
+
+
+> latin.LiWong <- express(tmp, normalize=F, summary.stat=li.wong)
+Background correcting
+Error in density(x, kernel = "epanechnikov", n = n.pts) : 
+        x contains missing values
+
+
+> latin.avdf <- express(tmp,normalize=F,bg=subtractmm,summary.stat=avdiff)
+Background correcting
+Preparing Data
+Computing expression. This may take a while.
+Error in var(x, na.rm = na.rm) : missing observations in cov/cor
+
+
+> latin.avdf <- express(tmp,normalize=F,bg=subtractmm,
++                       summary.stat=function(x) apply(x,2,mean,trim=.2))
+Background correcting
+Preparing Data
+Computing expression. This may take a while.
+Error in psort(x, partial) : index 13 outside bounds
+
+From laurent@cbs.dtu.dk  Thu Oct 17 17:27:16 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Thu, 17 Oct 2002 18:27:16 +0200
+Subject: [BioC] can't get summary.stat after "invariantset" normalization
+In-Reply-To: <4E2F83D5DEE32C41B4816FE9D6346242040D1CE5@anagrdexm01.research.aa.wl.com>
+References: <4E2F83D5DEE32C41B4816FE9D6346242040D1CE5@anagrdexm01.research.aa.wl.com>
+Message-ID: <20021017162716.GH25408@giraffa.cbs.dtu.dk>
+
+On Thu, Oct 17, 2002 at 11:24:24AM -0400, Man, Michael wrote:
+> Any idea?  BTW, it works fine when I used unnormalized data.  -michael
+
+
+Several even... which version of R and of the package are you using ?
+
+
+L.
+
+
+> 
+> ###############################
+> > tmp <- normalize.Plob.invariantset(latin)  # use the first CHIP as
+> reference
+> > latin.LiWong <- express(tmp, normalize=F, bg=subtractmm,
+> summary.stat=li.wong)
+> Background correcting
+> Preparing Data
+> Computing expression. This may take a while.
+> Error in while (change > delta & iter < maxit) { : 
+>         missing value where logical needed
+> In addition: Warning message: 
+> No convergence in inner loop after 50 in outerler tieration 4 
+>  in: fit.li.wong(t(data.matrix), remove.outliers, normal.array.quantile,  
+> 
+> 
+> > latin.LiWong <- express(tmp, normalize=F, summary.stat=li.wong)
+> Background correcting
+> Error in density(x, kernel = "epanechnikov", n = n.pts) : 
+>         x contains missing values
+> 
+> 
+> > latin.avdf <- express(tmp,normalize=F,bg=subtractmm,summary.stat=avdiff)
+> Background correcting
+> Preparing Data
+> Computing expression. This may take a while.
+> Error in var(x, na.rm = na.rm) : missing observations in cov/cor
+> 
+> 
+> > latin.avdf <- express(tmp,normalize=F,bg=subtractmm,
+> +                       summary.stat=function(x) apply(x,2,mean,trim=.2))
+> Background correcting
+> Preparing Data
+> Computing expression. This may take a while.
+> Error in psort(x, partial) : index 13 outside bounds
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+-- 
+--------------------------------------------------------------
+Laurent Gautier			CBS, Building 208, DTU
+PhD. Student			DK-2800 Lyngby,Denmark	
+tel: +45 45 25 24 89		http://www.cbs.dtu.dk/laurent
+
+From luo.f@pg.com  Thu Oct 17 17:05:46 2002
+From: luo.f@pg.com (luo.f@pg.com)
+Date: Thu, 17 Oct 2002 12:05:46 -0400
+Subject: [BioC] Bioconductor Software
+Message-ID: <OFC3E098F3.BD1B963D-ON85256C55.00582E8D@na.pg.com>
+
+Dear Bioconductor developers,
+
+Is Bioconductor software free for industry or profit organizations?
+
+Thanks,
+Fangyi
+
+
+From jgentry@jimmy.harvard.edu  Thu Oct 17 17:28:12 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Thu, 17 Oct 2002 12:28:12 -0400 (EDT)
+Subject: [BioC] Bioconductor Software
+In-Reply-To: <OFC3E098F3.BD1B963D-ON85256C55.00582E8D@na.pg.com>
+Message-ID: <Pine.SOL.4.20.0210171220540.814-100000@santiam.dfci.harvard.edu>
+
+> Is Bioconductor software free for industry or profit organizations?
+
+Yes, insofar as the license of the packages is still respected.  I believe
+that all packages are licensed under the LGPL or the GPL (You can see what
+license a package is under by looking at the DESCRIPTION file, or
+alternatively by clicking on the package name on the download pages).
+
+Information on the GPL: http://www.gnu.org/copyleft/gpl.html
+With a FAQ at: http://www.gnu.org/licenses/gpl-faq.html
+Information on the LGPL: http://www.gnu.org/copyleft/lesser.html
+
+-J
+
+
+From Michael.Man@pfizer.com  Thu Oct 17 17:45:02 2002
+From: Michael.Man@pfizer.com (Man, Michael)
+Date: Thu, 17 Oct 2002 12:45:02 -0400
+Subject: [BioC] can't get summary.stat after "invariantset" normalizat
+ ion
+Message-ID: <4E2F83D5DEE32C41B4816FE9D6346242040D1CE6@anagrdexm01.research.aa.wl.com>
+
+R1.6 and Affy on IBM Thinkpad T22 . -m
+
+-----Original Message-----
+From: Laurent Gautier [mailto:laurent@cbs.dtu.dk]
+Sent: Thursday, October 17, 2002 12:27 PM
+To: Man, Michael
+Cc: 'bioconductor@stat.math.ethz.ch'
+Subject: Re: [BioC] can't get summary.stat after "invariantset"
+normalization
+
+
+
+On Thu, Oct 17, 2002 at 11:24:24AM -0400, Man, Michael wrote:
+> Any idea?  BTW, it works fine when I used unnormalized data.  -michael
+
+
+Several even... which version of R and of the package are you using ?
+
+
+L.
+
+
+> 
+> ###############################
+> > tmp <- normalize.Plob.invariantset(latin)  # use the first CHIP as
+> reference
+> > latin.LiWong <- express(tmp, normalize=F, bg=subtractmm,
+> summary.stat=li.wong)
+> Background correcting
+> Preparing Data
+> Computing expression. This may take a while.
+> Error in while (change > delta & iter < maxit) { : 
+>         missing value where logical needed
+> In addition: Warning message: 
+> No convergence in inner loop after 50 in outerler tieration 4 
+>  in: fit.li.wong(t(data.matrix), remove.outliers, normal.array.quantile,  
+> 
+> 
+> > latin.LiWong <- express(tmp, normalize=F, summary.stat=li.wong)
+> Background correcting
+> Error in density(x, kernel = "epanechnikov", n = n.pts) : 
+>         x contains missing values
+> 
+> 
+> > latin.avdf <- express(tmp,normalize=F,bg=subtractmm,summary.stat=avdiff)
+> Background correcting
+> Preparing Data
+> Computing expression. This may take a while.
+> Error in var(x, na.rm = na.rm) : missing observations in cov/cor
+> 
+> 
+> > latin.avdf <- express(tmp,normalize=F,bg=subtractmm,
+> +                       summary.stat=function(x) apply(x,2,mean,trim=.2))
+> Background correcting
+> Preparing Data
+> Computing expression. This may take a while.
+> Error in psort(x, partial) : index 13 outside bounds
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+-- 
+--------------------------------------------------------------
+Laurent Gautier			CBS, Building 208, DTU
+PhD. Student			DK-2800 Lyngby,Denmark	
+tel: +45 45 25 24 89		http://www.cbs.dtu.dk/laurent
+
+From ph53d@udcf.gla.ac.uk  Thu Oct 17 17:47:02 2002
+From: ph53d@udcf.gla.ac.uk (Pawel Herzyk)
+Date: Thu, 17 Oct 2002 17:47:02 +0100
+Subject: [BioC] marrayInput and QuantArray
+Message-ID: <00ae01c275fc$d12f94c0$f934d182@FUNGEN4>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_00AB_01C27605.32E333E0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hi there,
+
+The tutorial shows that marrayInput can read GenePix and Spot files. Is =
+there any way to read QuantArray files?=20
+QuantArray doesn't seem to use blocks but uses rows and columns in the =
+layout definition.=20
+I could write a script to preprocess the QuantArray files but perhaps =
+there is an easier way?
+
+Pawel
+
+
+
+------=_NextPart_000_00AB_01C27605.32E333E0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type>
+<META content=3D"MSHTML 5.00.3315.2870" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#c8e0d8>
+<DIV><FONT face=3DArial size=3D2>Hi there,</FONT></DIV>
+<DIV>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>The tutorial shows that marrayInput can =
+read=20
+GenePix and Spot files. Is there any way to read QuantArray files? =
+</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>QuantArray doesn't seem to use blocks =
+but uses rows=20
+and columns in the layout definition. </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>I could write a script to preprocess =
+the QuantArray=20
+files but perhaps there is an easier way?</FONT></DIV>
+<DIV>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Pawel</FONT></DIV>
+<DIV>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV></BODY></HTML>
+
+------=_NextPart_000_00AB_01C27605.32E333E0--
+
+
+From pcboutro@engmail.uwaterloo.ca  Thu Oct 17 19:51:09 2002
+From: pcboutro@engmail.uwaterloo.ca (Paul Boutros)
+Date: Thu, 17 Oct 2002 14:51:09 -0400 (EDT)
+Subject: [BioC] qspline Normalization
+Message-ID: <Pine.GSO.4.05.10210171442230.20854-100000@engmail.uwaterloo.ca>
+
+Hi all,
+
+I'd like to use the qspline normalization method:
+normalize.celfile.qspline {affy}
+
+I have two problems with this:
+a) I would like to use this normalization on cDNA data.  Am I correct in
+interpreting that this method can either be fun directly on a
+Cel.container object, or alternately can be called a data.matrix of
+intensity values and a target vector?  Or do I need to do something in
+addition to use it for non-Affy data?
+
+b) I am a bit unclear on some of the arguments, and I am unsure how to
+pick appropriate levels.  In particular, I am unclear about how to
+determine realistic values for:
+fit.iters
+spline.method
+spar
+incl.ends
+na.rm
+
+Any advice or ideas would be very much appreciated.  And if this isn't the
+right place for these questions, guidance on where to go would also be
+welcome.
+
+Paul
+
+
+From gregory_r_warnes@groton.pfizer.com  Thu Oct 17 19:55:13 2002
+From: gregory_r_warnes@groton.pfizer.com (Warnes, Gregory R)
+Date: Thu, 17 Oct 2002 14:55:13 -0400
+Subject: FW: [BioC] can't get summary.stat after "invariantset" normalizat
+ ion
+Message-ID: <D7A3CFD7825BD6119B880002A58F06C20149D0C2@groexmb02.pfizer.com>
+
+
+-----Original Message-----
+From: Man, Michael 
+Sent: Thursday, October 17, 2002 1:57 PM
+To: Warnes, Gregory R
+Subject: RE: [BioC] can't get summary.stat after "invariantset"
+normalizat ion
+
+
+It's version 1.0.  -m
+
+-----Original Message-----
+From: Warnes, Gregory R 
+Sent: Thursday, October 17, 2002 1:16 PM
+To: Man, Michael
+Subject: RE: [BioC] can't get summary.stat after "invariantset"
+normalizat ion
+
+
+We will want to know which version of affy.  To find out do
+'library(help=affy)'.  
+
+-Greg
+
+> -----Original Message-----
+> From: Man, Michael 
+> Sent: Thursday, October 17, 2002 12:45 PM
+> To: 'Laurent Gautier'
+> Cc: 'bioconductor@stat.math.ethz.ch'
+> Subject: RE: [BioC] can't get summary.stat after "invariantset"
+> normalizat ion
+> 
+> 
+> R1.6 and Affy on IBM Thinkpad T22 . -m
+> 
+> -----Original Message-----
+> From: Laurent Gautier [mailto:laurent@cbs.dtu.dk]
+> Sent: Thursday, October 17, 2002 12:27 PM
+> To: Man, Michael
+> Cc: 'bioconductor@stat.math.ethz.ch'
+> Subject: Re: [BioC] can't get summary.stat after "invariantset"
+> normalization
+> 
+> 
+> 
+> On Thu, Oct 17, 2002 at 11:24:24AM -0400, Man, Michael wrote:
+> > Any idea?  BTW, it works fine when I used unnormalized 
+> data.  -michael
+> 
+> 
+> Several even... which version of R and of the package are you using ?
+> 
+> 
+> L.
+> 
+> 
+> > 
+> > ###############################
+> > > tmp <- normalize.Plob.invariantset(latin)  # use the first CHIP as
+> > reference
+> > > latin.LiWong <- express(tmp, normalize=F, bg=subtractmm,
+> > summary.stat=li.wong)
+> > Background correcting
+> > Preparing Data
+> > Computing expression. This may take a while.
+> > Error in while (change > delta & iter < maxit) { : 
+> >         missing value where logical needed
+> > In addition: Warning message: 
+> > No convergence in inner loop after 50 in outerler tieration 4 
+> >  in: fit.li.wong(t(data.matrix), remove.outliers, 
+> normal.array.quantile,  
+> > 
+> > 
+> > > latin.LiWong <- express(tmp, normalize=F, summary.stat=li.wong)
+> > Background correcting
+> > Error in density(x, kernel = "epanechnikov", n = n.pts) : 
+> >         x contains missing values
+> > 
+> > 
+> > > latin.avdf <- 
+> express(tmp,normalize=F,bg=subtractmm,summary.stat=avdiff)
+> > Background correcting
+> > Preparing Data
+> > Computing expression. This may take a while.
+> > Error in var(x, na.rm = na.rm) : missing observations in cov/cor
+> > 
+> > 
+> > > latin.avdf <- express(tmp,normalize=F,bg=subtractmm,
+> > +                       summary.stat=function(x) 
+> apply(x,2,mean,trim=.2))
+> > Background correcting
+> > Preparing Data
+> > Computing expression. This may take a while.
+> > Error in psort(x, partial) : index 13 outside bounds
+> > _______________________________________________
+> > Bioconductor mailing list
+> > Bioconductor@stat.math.ethz.ch
+> > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> 
+> -- 
+> --------------------------------------------------------------
+> Laurent Gautier			CBS, Building 208, DTU
+> PhD. Student			DK-2800 Lyngby,Denmark	
+> tel: +45 45 25 24 89		http://www.cbs.dtu.dk/laurent
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> 
+
+
+LEGAL NOTICE
+Unless expressly stated otherwise, this message is confidential and may be privileged. It is intended for the addressee(s) only. Access to this E-mail by anyone else is unauthorized. If you are not an addressee, any disclosure or copying of the contents of this E-mail or any action taken (or not taken) in reliance on it is unauthorized and may be unlawful. If you are not an addressee, please inform the sender immediately.
+
+From laurent@cbs.dtu.dk  Thu Oct 17 22:33:49 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Thu, 17 Oct 2002 23:33:49 +0200
+Subject: [BioC] can't get summary.stat after "invariantset" normalizat ion
+In-Reply-To: <4E2F83D5DEE32C41B4816FE9D6346242040D1CE6@anagrdexm01.research.aa.wl.com>
+References: <4E2F83D5DEE32C41B4816FE9D6346242040D1CE6@anagrdexm01.research.aa.wl.com>
+Message-ID: <20021017213349.GB31386@giraffa.cbs.dtu.dk>
+
+Well... seems I've been boasting too much (and I was secretely hoping
+it was the devel version...). I do not have run affy-release on 1.6.0,
+I can only suggests reasons.
+
+> On Thu, Oct 17, 2002 at 11:24:24AM -0400, Man, Michael wrote:
+> > Any idea?  BTW, it works fine when I used unnormalized data.  -michael
+
+This is the funny part. I wonder why it does 
+> 
+> 
+> Several even... which version of R and of the package are you using ?
+> 
+> 
+> L.
+> 
+> 
+> > 
+> > ###############################
+> > > tmp <- normalize.Plob.invariantset(latin)  # use the first CHIP as
+> > reference
+
+The following do it too (preferred way):
+
+tmp <- normalize(latin, method="invariantset")
+
+
+> > > latin.LiWong <- express(tmp, normalize=F, bg=subtractmm,
+> > summary.stat=li.wong)
+> > Background correcting
+> > Preparing Data
+> > Computing expression. This may take a while.
+> > Error in while (change > delta & iter < maxit) { : 
+> >         missing value where logical needed
+
+Would you have variables called 'T' or 'F' around ?
+(the code relied (too much) on (T == TRUE) and (F == FALSE) but this
+was fixed about a week ago I believe). 
+
+> > In addition: Warning message: 
+> > No convergence in inner loop after 50 in outerler tieration 4 
+> >  in: fit.li.wong(t(data.matrix), remove.outliers, normal.array.quantile,  
+> > 
+
+This only a warning.
+
+> > 
+> > > latin.LiWong <- express(tmp, normalize=F, summary.stat=li.wong)
+> > Background correcting
+> > Error in density(x, kernel = "epanechnikov", n = n.pts) : 
+> >         x contains missing values
+> >
+
+In this case the default 'bg' is rma. You might get 'masked' probes from
+your CEL files (to avoid taking them into consideration, try to set the
+flags related to masked and outlying probes to FALSE (see man related
+man page)). I thought it was fixed... but may be only in affy-devel.
+Try to patch bg.parameters with the following:
+
+bg.parameters <- function(pm, mm, n.pts=2^14){
+
+  max.density <- function(x,n.pts){
+    aux <- density(x, kernel="epanechnikov", n=n.pts, na.rm=TRUE) 
+    aux$x[order(-aux$y)[1]] 
+  }
+    mmbg <- max.density(mm,n.pts)
+    pmbg <- max.density(pm,n.pts)
+		   
+    bg.data <- mm[mm < mmbg]
+    bg.data <- bg.data-mmbg
+    bgsd <- sqrt(sum(bg.data^2)/(length(bg.data)-1))*sqrt(2)/.85
+			  
+    sig.data <- pm[pm > pmbg]
+    sig.data <- sig.data-pmbg
+			       
+    alpha <- 1/mean(sig.data)
+    mubg <- mmbg
+    list(alpha=alpha,mu=mubg,sigma=bgsd)  
+}
+				     
+
+> > 
+> > > latin.avdf <- express(tmp,normalize=F,bg=subtractmm,summary.stat=avdiff)
+> > Background correcting
+> > Preparing Data
+> > Computing expression. This may take a while.
+> > Error in var(x, na.rm = na.rm) : missing observations in cov/cor
+> > 
+
+A patch was contributed for that and I was convinced I applied it to
+both the released and devel version (I cannot find track of it in CVS ?!
+I am (much) confused now...)
+The reason is like above: presence of NAs.
+
+> > 
+> > > latin.avdf <- express(tmp,normalize=F,bg=subtractmm,
+> > +                       summary.stat=function(x) apply(x,2,mean,trim=.2))
+> > Background correcting
+> > Preparing Data
+> > Computing expression. This may take a while.
+> > Error in psort(x, partial) : index 13 outside bounds
+
+
+What does give 'traceback()' on this one ?
+
+
+
+
+L.
+
+From hjm@tacgi.com  Fri Oct 18 20:32:30 2002
+From: hjm@tacgi.com (Harry Mangalam)
+Date: Fri, 18 Oct 2002 12:32:30 -0700
+Subject: [BioC] marrayInput and QuantArray
+References: <00ae01c275fc$d12f94c0$f934d182@FUNGEN4>
+Message-ID: <3DB061CE.5000204@tacgi.com>
+
+I'm also interested in supporting QuantArray files.  Obviously some processing 
+is going to be necessary; but better to do this internally if possible for 
+better integration, I guess.  Is there a definition of what minimum variables 
+have to be supported in order to use the rest of the package?
+
+Harry
+
+Pawel Herzyk wrote:
+> Hi there,
+>  
+> The tutorial shows that marrayInput can read GenePix and Spot files. Is 
+> there any way to read QuantArray files?
+> QuantArray doesn't seem to use blocks but uses rows and columns in the 
+> layout definition.
+> I could write a script to preprocess the QuantArray files but perhaps 
+> there is an easier way?
+>  
+> Pawel
+>  
+>  
+
+-- 
+Cheers, Harry
+Harry J Mangalam - 949 856 2847 (v&f) - hjm@tacgi.com
+             <<plain text preferred>>
+
+
+From Michael.Man@pfizer.com  Fri Oct 18 21:21:48 2002
+From: Michael.Man@pfizer.com (Man, Michael)
+Date: Fri, 18 Oct 2002 16:21:48 -0400
+Subject: [BioC] can't get summary.stat after "invariantset" normalizat
+ ion
+Message-ID: <4E2F83D5DEE32C41B4816FE9D6346242040D1CEC@anagrdexm01.research.aa.wl.com>
+
+Thanks for the help.  The problem is still there.  Here are the results ...
+-m
+
+> tmp
+Plob object
+CDF used=HG_U95A.CDF
+number of chips=8
+number of genes=12626
+number of probe pairs=201807
+annotation=
+description=
+notes=normalized by invariant set
+size of chip=640x640
+chip names=
+1532m99hpp_av04
+1532n99hpp_av04
+1532o99hpp_av04
+1532p99hpp_av04
+1532q99hpp_av04
+1532r99hpp_av04
+1532s99hpp_av04
+1532t99hpp_av04r
+
+
+> ##### patch suggested by Laurent Gautier 10/17/2002 #####
+> bg.parameters  <- function (pm, mm, n.pts = 2^14)
++ {
++     max.density <- function(x, n.pts) {
+  +         aux <- density(x, kernel = "epanechnikov", n = n.pts,
+na.rm=TRUE)
++         aux$x[order(-aux$y)[1]]
+  +     }
+  +     mmbg <- max.density(mm, n.pts)
+  +     pmbg <- max.density(pm, n.pts)
+  +     bg.data <- mm[mm < mmbg]
+  +     bg.data <- bg.data - mmbg
+  +     bgsd <- sqrt(sum(bg.data^2)/(length(bg.data) - 1)) * sqrt(2)/0.85
+  +     sig.data <- pm[pm > pmbg]
+    +     sig.data <- sig.data - pmbg
+   +     alpha <- 1/mean(sig.data)
+   +     mubg <- mmbg
+  +     list(alpha = alpha, mu = mubg, sigma = bgsd)
+}
+#+ }
+## end > ##### end of the patch #####
+
+
+> system.time(
++   latin.LiWong <- express(tmp, normalize=FALSE, summary.stat=li.wong) #
+didn't work
++ )
+Background correcting
+Preparing Data
+Computing expression. This may take a while.
+Error in while (change > delta & iter < maxit) { : 
+        missing value where logical needed
+Timing stopped at: 31.31 0.62 31.94 0 0 
+
+
+> system.time( latin.avdf <-
+express(tmp,normalize=FALSE,bg=subtractmm,summary.stat=avdiff) )
+Background correcting
+Preparing Data
+Computing expression. This may take a while.
+Error in var(x, na.rm = na.rm) : missing observations in cov/cor
+Timing stopped at: 13.78 0.55 14.33 0 0 
+
+
+> latin.avdf <- express(tmp,normalize=F,bg=subtractmm,
+summary.stat=function(x) apply(x,2,mean,trim=.2))
+Background correcting
+Preparing Data
+Computing expression. This may take a while.
+Error in psort(x, partial) : index 13 outside bounds
+> traceback()
+9: sort(x, partial = unique(c(lo, hi)))
+8: mean.default(newX[, i], ...)
+7: FUN(newX[, i], ...)
+6: apply(x, 2, mean, trim = 0.2)
+5: FUN(X[[1280]], ...)
+4: lapply(as.list(X), FUN, ...)
+3: sapply(data.lst, summary.stat, ...)
+2: t(sapply(data.lst, summary.stat, ...))
+1: express(tmp, normalize = F, bg = subtractmm, summary.stat = function(x)
+apply(x, 
+       2, mean, trim = 0.2))
+
+
+> library(help=affy)
+affy            Methods for Affymetrix Oligonucleotide Arrays
+
+Description:
+
+Package: affy
+Title: Methods for Affymetrix Oligonucleotide Arrays
+Version: 1.0
+Author: Rafael A. Irizarry <rafa@jhu.edu>, Laurent Gautier
+        <laurent@cbs.dtu.dk>, and Leslie M. Cope <cope@mts.jhu.edu>
+Description: The package contains functions for exploratory
+        oligonucleotide array analysis.
+Maintainer: Rafael A. Irizarry <rafa@jhu.edu>
+Depends: R (>= 1.5.0), modreg, Biobase, eda, tkWidgets
+Bundle: Bioconductor
+Date: 2002/5/1
+BundleDescription: Contains essential Bioconductor packages.
+URL: http://www.bioconductor.org/
+License: LGPL
+Built: R 1.6.0; i686-pc-linux-gnu; Wed Oct 16 17:03:17 EDT 2002
+
+
+
+-----Original Message-----
+From: Laurent Gautier [mailto:laurent@cbs.dtu.dk]
+Sent: Thursday, October 17, 2002 5:34 PM
+To: Man, Michael
+Cc: 'Laurent Gautier'; 'bioconductor@stat.math.ethz.ch'
+Subject: Re: [BioC] can't get summary.stat after "invariantset"
+normalizat ion
+
+
+Well... seems I've been boasting too much (and I was secretely hoping
+it was the devel version...). I do not have run affy-release on 1.6.0,
+I can only suggests reasons.
+
+> On Thu, Oct 17, 2002 at 11:24:24AM -0400, Man, Michael wrote:
+> > Any idea?  BTW, it works fine when I used unnormalized data.  -michael
+
+This is the funny part. I wonder why it does 
+> 
+> 
+> Several even... which version of R and of the package are you using ?
+> 
+> 
+> L.
+> 
+> 
+> > 
+> > ###############################
+> > > tmp <- normalize.Plob.invariantset(latin)  # use the first CHIP as
+> > reference
+
+The following do it too (preferred way):
+
+tmp <- normalize(latin, method="invariantset")
+
+
+> > > latin.LiWong <- express(tmp, normalize=F, bg=subtractmm,
+> > summary.stat=li.wong)
+> > Background correcting
+> > Preparing Data
+> > Computing expression. This may take a while.
+> > Error in while (change > delta & iter < maxit) { : 
+> >         missing value where logical needed
+
+Would you have variables called 'T' or 'F' around ?
+(the code relied (too much) on (T == TRUE) and (F == FALSE) but this
+was fixed about a week ago I believe). 
+
+> > In addition: Warning message: 
+> > No convergence in inner loop after 50 in outerler tieration 4 
+> >  in: fit.li.wong(t(data.matrix), remove.outliers, normal.array.quantile,
+
+> > 
+
+This only a warning.
+
+> > 
+> > > latin.LiWong <- express(tmp, normalize=F, summary.stat=li.wong)
+> > Background correcting
+> > Error in density(x, kernel = "epanechnikov", n = n.pts) : 
+> >         x contains missing values
+> >
+
+In this case the default 'bg' is rma. You might get 'masked' probes from
+your CEL files (to avoid taking them into consideration, try to set the
+flags related to masked and outlying probes to FALSE (see man related
+man page)). I thought it was fixed... but may be only in affy-devel.
+Try to patch bg.parameters with the following:
+
+bg.parameters <- function(pm, mm, n.pts=2^14){
+
+  max.density <- function(x,n.pts){
+    aux <- density(x, kernel="epanechnikov", n=n.pts, na.rm=TRUE) 
+    aux$x[order(-aux$y)[1]] 
+  }
+    mmbg <- max.density(mm,n.pts)
+    pmbg <- max.density(pm,n.pts)
+		   
+    bg.data <- mm[mm < mmbg]
+    bg.data <- bg.data-mmbg
+    bgsd <- sqrt(sum(bg.data^2)/(length(bg.data)-1))*sqrt(2)/.85
+			  
+    sig.data <- pm[pm > pmbg]
+    sig.data <- sig.data-pmbg
+			       
+    alpha <- 1/mean(sig.data)
+    mubg <- mmbg
+    list(alpha=alpha,mu=mubg,sigma=bgsd)  
+}
+				     
+
+> > 
+> > > latin.avdf <-
+express(tmp,normalize=F,bg=subtractmm,summary.stat=avdiff)
+> > Background correcting
+> > Preparing Data
+> > Computing expression. This may take a while.
+> > Error in var(x, na.rm = na.rm) : missing observations in cov/cor
+> > 
+
+A patch was contributed for that and I was convinced I applied it to
+both the released and devel version (I cannot find track of it in CVS ?!
+I am (much) confused now...)
+The reason is like above: presence of NAs.
+
+> > 
+> > > latin.avdf <- express(tmp,normalize=F,bg=subtractmm,
+> > +                       summary.stat=function(x)
+apply(x,2,mean,trim=.2))
+> > Background correcting
+> > Preparing Data
+> > Computing expression. This may take a while.
+> > Error in psort(x, partial) : index 13 outside bounds
+
+
+What does give 'traceback()' on this one ?
+
+
+
+
+L.
+
+From sandrine@stat.berkeley.edu  Sun Oct 20 04:46:03 2002
+From: sandrine@stat.berkeley.edu (Sandrine Dudoit)
+Date: Sat, 19 Oct 2002 20:46:03 -0700 (PDT)
+Subject: [BioC] Help with raw p-value
+In-Reply-To: <200210162254.g9GMsuA12877@itswm.ucsf.edu>
+Message-ID: <Pine.SOL.4.31.0210192042270.7765-100000@shelob.Berkeley.EDU>
+
+Hi,
+
+The p-values in rawp0 are calculated based on a standard normal
+distribution, while those in t.test are calculated based on a
+t-distribution with df = 11.049.
+
+Try
+2*(1-pt(abs(teststat[1]),df=11.049))
+and you will get the same p-value as with t.test.
+
+Sandrine
+
+-------------------------------------------------------------------------------
+Sandrine Dudoit, Ph.D.               E-mail: sandrine@stat.berkeley.edu
+Assistant Professor                  Tel: (510) 643-1108
+Division of Biostatistics            Fax: (510) 643-5163
+School of Public Health		     http://www.stat.berkeley.edu/~sandrine
+University of California, Berkeley
+140 Earl Warren Hall, #7360
+Berkeley, CA 94720-7360
+-------------------------------------------------------------------------------
+
+On Wed, 16 Oct 2002 donghu@itsa.ucsf.edu wrote:
+
+> I have played with multtest package using Golub data.  After loading the
+> dataset, I followed the steps descripted in the document to calculate t
+> stat and raw p-values.  Here are what I did:
+>
+> >teststat <- mt.teststat(golub, golub.cl)
+> >rawp0 <- 2*(1-pnorm(abs(teststat)))
+>
+> Then I took a look of the t stat and raw p-value of the first gene.  I got:
+>
+> >teststat[1]
+> [1] 1.759195
+> >rawp0[1]
+> [1] 0.07854436
+>
+> I also tried to calculate t stat and p-value of the first gene using
+> t.test.  I did the followings.
+>
+> > x <- golub[1,1:27]
+> > y <- golub[1,28:38]
+> > t.test(x,y)
+>
+> The result showed "t = -1.7592" and "p-value = 0.1062".  I don't
+> understand why the "p-value" I got here is different from "rawp0[1]"
+> although the t stat is same.  Can someone let me know why?  Thank you in
+> advance.
+>
+> Donglei Hu
+> Gene Array Core Lab
+> Diabetes Center
+> UCSF
+>
+>
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+>
+
+
+From laurent@cbs.dtu.dk  Sun Oct 20 18:35:42 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Sun, 20 Oct 2002 19:35:42 +0200
+Subject: [BioC] can't get summary.stat after "invariantset" normalizat ion
+In-Reply-To: <4E2F83D5DEE32C41B4816FE9D6346242040D1CEC@anagrdexm01.research.aa.wl.com>
+References: <4E2F83D5DEE32C41B4816FE9D6346242040D1CEC@anagrdexm01.research.aa.wl.com>
+Message-ID: <20021020173542.GB13503@giraffa.cbs.dtu.dk>
+
+Without having your particular dataset, one can only conjecture.
+
+
+L.
+
+
+
+On Fri, Oct 18, 2002 at 04:21:48PM -0400, Man, Michael wrote:
+> Thanks for the help.  The problem is still there.  Here are the results ...
+> -m
+> 
+> > tmp
+> Plob object
+> CDF used=HG_U95A.CDF
+> number of chips=8
+> number of genes=12626
+> number of probe pairs=201807
+> annotation=
+> description=
+> notes=normalized by invariant set
+> size of chip=640x640
+> chip names=
+> 1532m99hpp_av04
+> 1532n99hpp_av04
+> 1532o99hpp_av04
+> 1532p99hpp_av04
+> 1532q99hpp_av04
+> 1532r99hpp_av04
+> 1532s99hpp_av04
+> 1532t99hpp_av04r
+> 
+> 
+> > ##### patch suggested by Laurent Gautier 10/17/2002 #####
+> > bg.parameters  <- function (pm, mm, n.pts = 2^14)
+> + {
+> +     max.density <- function(x, n.pts) {
+>   +         aux <- density(x, kernel = "epanechnikov", n = n.pts,
+> na.rm=TRUE)
+> +         aux$x[order(-aux$y)[1]]
+>   +     }
+>   +     mmbg <- max.density(mm, n.pts)
+>   +     pmbg <- max.density(pm, n.pts)
+>   +     bg.data <- mm[mm < mmbg]
+>   +     bg.data <- bg.data - mmbg
+>   +     bgsd <- sqrt(sum(bg.data^2)/(length(bg.data) - 1)) * sqrt(2)/0.85
+>   +     sig.data <- pm[pm > pmbg]
+>     +     sig.data <- sig.data - pmbg
+>    +     alpha <- 1/mean(sig.data)
+>    +     mubg <- mmbg
+>   +     list(alpha = alpha, mu = mubg, sigma = bgsd)
+> }
+> #+ }
+> ## end > ##### end of the patch #####
+> 
+> 
+> > system.time(
+> +   latin.LiWong <- express(tmp, normalize=FALSE, summary.stat=li.wong) #
+> didn't work
+> + )
+> Background correcting
+> Preparing Data
+> Computing expression. This may take a while.
+> Error in while (change > delta & iter < maxit) { : 
+>         missing value where logical needed
+> Timing stopped at: 31.31 0.62 31.94 0 0 
+> 
+> 
+> > system.time( latin.avdf <-
+> express(tmp,normalize=FALSE,bg=subtractmm,summary.stat=avdiff) )
+> Background correcting
+> Preparing Data
+> Computing expression. This may take a while.
+> Error in var(x, na.rm = na.rm) : missing observations in cov/cor
+> Timing stopped at: 13.78 0.55 14.33 0 0 
+> 
+> 
+> > latin.avdf <- express(tmp,normalize=F,bg=subtractmm,
+> summary.stat=function(x) apply(x,2,mean,trim=.2))
+> Background correcting
+> Preparing Data
+> Computing expression. This may take a while.
+> Error in psort(x, partial) : index 13 outside bounds
+> > traceback()
+> 9: sort(x, partial = unique(c(lo, hi)))
+> 8: mean.default(newX[, i], ...)
+> 7: FUN(newX[, i], ...)
+> 6: apply(x, 2, mean, trim = 0.2)
+> 5: FUN(X[[1280]], ...)
+> 4: lapply(as.list(X), FUN, ...)
+> 3: sapply(data.lst, summary.stat, ...)
+> 2: t(sapply(data.lst, summary.stat, ...))
+> 1: express(tmp, normalize = F, bg = subtractmm, summary.stat = function(x)
+> apply(x, 
+>        2, mean, trim = 0.2))
+> 
+> 
+> > library(help=affy)
+> affy            Methods for Affymetrix Oligonucleotide Arrays
+> 
+> Description:
+> 
+> Package: affy
+> Title: Methods for Affymetrix Oligonucleotide Arrays
+> Version: 1.0
+> Author: Rafael A. Irizarry <rafa@jhu.edu>, Laurent Gautier
+>         <laurent@cbs.dtu.dk>, and Leslie M. Cope <cope@mts.jhu.edu>
+> Description: The package contains functions for exploratory
+>         oligonucleotide array analysis.
+> Maintainer: Rafael A. Irizarry <rafa@jhu.edu>
+> Depends: R (>= 1.5.0), modreg, Biobase, eda, tkWidgets
+> Bundle: Bioconductor
+> Date: 2002/5/1
+> BundleDescription: Contains essential Bioconductor packages.
+> URL: http://www.bioconductor.org/
+> License: LGPL
+> Built: R 1.6.0; i686-pc-linux-gnu; Wed Oct 16 17:03:17 EDT 2002
+> 
+> 
+> 
+> -----Original Message-----
+> From: Laurent Gautier [mailto:laurent@cbs.dtu.dk]
+> Sent: Thursday, October 17, 2002 5:34 PM
+> To: Man, Michael
+> Cc: 'Laurent Gautier'; 'bioconductor@stat.math.ethz.ch'
+> Subject: Re: [BioC] can't get summary.stat after "invariantset"
+> normalizat ion
+> 
+> 
+> Well... seems I've been boasting too much (and I was secretely hoping
+> it was the devel version...). I do not have run affy-release on 1.6.0,
+> I can only suggests reasons.
+> 
+> > On Thu, Oct 17, 2002 at 11:24:24AM -0400, Man, Michael wrote:
+> > > Any idea?  BTW, it works fine when I used unnormalized data.  -michael
+> 
+> This is the funny part. I wonder why it does 
+> > 
+> > 
+> > Several even... which version of R and of the package are you using ?
+> > 
+> > 
+> > L.
+> > 
+> > 
+> > > 
+> > > ###############################
+> > > > tmp <- normalize.Plob.invariantset(latin)  # use the first CHIP as
+> > > reference
+> 
+> The following do it too (preferred way):
+> 
+> tmp <- normalize(latin, method="invariantset")
+> 
+> 
+> > > > latin.LiWong <- express(tmp, normalize=F, bg=subtractmm,
+> > > summary.stat=li.wong)
+> > > Background correcting
+> > > Preparing Data
+> > > Computing expression. This may take a while.
+> > > Error in while (change > delta & iter < maxit) { : 
+> > >         missing value where logical needed
+> 
+> Would you have variables called 'T' or 'F' around ?
+> (the code relied (too much) on (T == TRUE) and (F == FALSE) but this
+> was fixed about a week ago I believe). 
+> 
+> > > In addition: Warning message: 
+> > > No convergence in inner loop after 50 in outerler tieration 4 
+> > >  in: fit.li.wong(t(data.matrix), remove.outliers, normal.array.quantile,
+> 
+> > > 
+> 
+> This only a warning.
+> 
+> > > 
+> > > > latin.LiWong <- express(tmp, normalize=F, summary.stat=li.wong)
+> > > Background correcting
+> > > Error in density(x, kernel = "epanechnikov", n = n.pts) : 
+> > >         x contains missing values
+> > >
+> 
+> In this case the default 'bg' is rma. You might get 'masked' probes from
+> your CEL files (to avoid taking them into consideration, try to set the
+> flags related to masked and outlying probes to FALSE (see man related
+> man page)). I thought it was fixed... but may be only in affy-devel.
+> Try to patch bg.parameters with the following:
+> 
+> bg.parameters <- function(pm, mm, n.pts=2^14){
+> 
+>   max.density <- function(x,n.pts){
+>     aux <- density(x, kernel="epanechnikov", n=n.pts, na.rm=TRUE) 
+>     aux$x[order(-aux$y)[1]] 
+>   }
+>     mmbg <- max.density(mm,n.pts)
+>     pmbg <- max.density(pm,n.pts)
+> 		   
+>     bg.data <- mm[mm < mmbg]
+>     bg.data <- bg.data-mmbg
+>     bgsd <- sqrt(sum(bg.data^2)/(length(bg.data)-1))*sqrt(2)/.85
+> 			  
+>     sig.data <- pm[pm > pmbg]
+>     sig.data <- sig.data-pmbg
+> 			       
+>     alpha <- 1/mean(sig.data)
+>     mubg <- mmbg
+>     list(alpha=alpha,mu=mubg,sigma=bgsd)  
+> }
+> 				     
+> 
+> > > 
+> > > > latin.avdf <-
+> express(tmp,normalize=F,bg=subtractmm,summary.stat=avdiff)
+> > > Background correcting
+> > > Preparing Data
+> > > Computing expression. This may take a while.
+> > > Error in var(x, na.rm = na.rm) : missing observations in cov/cor
+> > > 
+> 
+> A patch was contributed for that and I was convinced I applied it to
+> both the released and devel version (I cannot find track of it in CVS ?!
+> I am (much) confused now...)
+> The reason is like above: presence of NAs.
+> 
+> > > 
+> > > > latin.avdf <- express(tmp,normalize=F,bg=subtractmm,
+> > > +                       summary.stat=function(x)
+> apply(x,2,mean,trim=.2))
+> > > Background correcting
+> > > Preparing Data
+> > > Computing expression. This may take a while.
+> > > Error in psort(x, partial) : index 13 outside bounds
+> 
+> 
+> What does give 'traceback()' on this one ?
+> 
+> 
+> 
+> 
+> L.
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+From Tibor van Rooij" <tibor@cs.mcgill.ca  Mon Oct 21 14:23:16 2002
+From: Tibor van Rooij" <tibor@cs.mcgill.ca (Tibor van Rooij)
+Date: Mon, 21 Oct 2002 09:23:16 -0400
+Subject: [BioC] can't get summary.stat after "invariantset" normalization
+Message-ID: <06c901c27905$03b47270$09d1ce84@chiplab.mcgill.ca>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_06C6_01C278E3.7C9BA680
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+I have the exact same problem and I have used it on various data-sets =
+which normalize well with the quantile method.
+
+I get the same errors as well.
+
+My guess is that it breaks on the NA that gets put in the pm matrix =
+after the invariantset normalization.
+
+Tibor
+_______________________________=20
+Tibor van Rooij=20
+Bioinformatician=20
+Montreal Genome Centre
+McGill University, Duff Building=20
+Tel:  (514) 398-2497
+Fax: (514) 398-1838
+
+
+
+------=_NextPart_000_06C6_01C278E3.7C9BA680
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2719.2200" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>I have the exact same problem and I =
+have used it on=20
+various data-sets which normalize well with the&nbsp;quantile=20
+method.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>I get the same errors as =
+well.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>My guess is that it breaks on the NA =
+that gets put=20
+in the pm matrix after the invariantset normalization.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Tibor</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>_______________________________ =
+<BR>Tibor van Rooij=20
+<BR>Bioinformatician <BR>Montreal Genome Centre<BR>McGill University, =
+Duff=20
+Building <BR>Tel:&nbsp; (514) 398-2497<BR>Fax: (514) =
+398-1838</FONT></DIV>
+<DIV>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV></BODY></HTML>
+
+------=_NextPart_000_06C6_01C278E3.7C9BA680--
+
+
+From laurent@cbs.dtu.dk  Mon Oct 21 15:31:02 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Mon, 21 Oct 2002 16:31:02 +0200
+Subject: [BioC] can't get summary.stat after "invariantset" normalization
+In-Reply-To: <06c901c27905$03b47270$09d1ce84@chiplab.mcgill.ca>
+References: <06c901c27905$03b47270$09d1ce84@chiplab.mcgill.ca>
+Message-ID: <20021021143102.GH28014@giraffa.cbs.dtu.dk>
+
+On Mon, Oct 21, 2002 at 09:23:16AM -0400, Tibor van Rooij wrote:
+> I have the exact same problem and I have used it on various data-sets which normalize well with the quantile method.
+> 
+> I get the same errors as well.
+> 
+> My guess is that it breaks on the NA that gets put in the pm matrix after the invariantset normalization.
+> 
+> Tibor
+> _______________________________ 
+> Tibor van Rooij 
+> Bioinformatician 
+> Montreal Genome Centre
+> McGill University, Duff Building 
+> Tel:  (514) 398-2497
+> Fax: (514) 398-1838
+> 
+> 
+
+
+ok... but still, having a look at the data to check where things go wrong would help
+
+
+L.
+
+
+-- 
+--------------------------------------------------------------
+Laurent Gautier			CBS, Building 208, DTU
+PhD. Student			DK-2800 Lyngby,Denmark	
+tel: +45 45 25 24 89		http://www.cbs.dtu.dk/laurent
+
+From Michael.Man@pfizer.com  Mon Oct 21 14:56:00 2002
+From: Michael.Man@pfizer.com (Man, Michael)
+Date: Mon, 21 Oct 2002 09:56:00 -0400
+Subject: [BioC] can't get summary.stat after "invariantset" normalizat
+ ion
+Message-ID: <4E2F83D5DEE32C41B4816FE9D6346242040D1CF0@anagrdexm01.research.aa.wl.com>
+
+I got the same result when I tried the "Dilution" data.   -m
+
+> tmp <- normalize.Plob.invariantset(Dilution)  # use the first CHIP as
+reference
+> system.time(
++   latin.LiWong <- express(tmp, normalize=FALSE, summary.stat=li.wong) #
+didn't work
++ )
+Background correcting
+Preparing Data
+Computing expression. This may take a while.
+Error in while (change > delta & iter < maxit) { : 
+        missing value where logical needed
+Timing stopped at: 2.88 0.38 3.26 0 0 
+
+> system.time( latin.avdf <-
+express(tmp,normalize=FALSE,bg=subtractmm,summary.stat=avdiff) )
+latiBackground correcting
+n.avdf <- express(tmp,normalize=F,bg=subtractmm,
+                      summary.stat=function(x) apply(x,2,mean,trim=.2))
+
+Preparing Data
+Computing expression. This may take a while.
+Error in var(x, na.rm = na.rm) : missing observations in cov/cor
+Timing stopped at: 0.09 0 0.09 0 0 
+
+> latin.avdf <- express(tmp,normalize=F,bg=subtractmm,
++                       summary.stat=function(x) apply(x,2,mean,trim=.2))
+Background correcting
+Preparing Data
+Computing expression. This may take a while.
+Error in psort(x, partial) : index 13 outside bounds
+
+
+-----Original Message-----
+From: Laurent Gautier [mailto:laurent@cbs.dtu.dk]
+Sent: Sunday, October 20, 2002 1:36 PM
+To: Man, Michael
+Cc: 'Laurent Gautier'; 'bioconductor@stat.math.ethz.ch'
+Subject: Re: [BioC] can't get summary.stat after "invariantset"
+normalizat ion
+
+
+
+Without having your particular dataset, one can only conjecture.
+
+
+L.
+
+
+
+On Fri, Oct 18, 2002 at 04:21:48PM -0400, Man, Michael wrote:
+> Thanks for the help.  The problem is still there.  Here are the results
+...
+> -m
+> 
+> > tmp
+> Plob object
+> CDF used=HG_U95A.CDF
+> number of chips=8
+> number of genes=12626
+> number of probe pairs=201807
+> annotation=
+> description=
+> notes=normalized by invariant set
+> size of chip=640x640
+> chip names=
+> 1532m99hpp_av04
+> 1532n99hpp_av04
+> 1532o99hpp_av04
+> 1532p99hpp_av04
+> 1532q99hpp_av04
+> 1532r99hpp_av04
+> 1532s99hpp_av04
+> 1532t99hpp_av04r
+> 
+> 
+> > ##### patch suggested by Laurent Gautier 10/17/2002 #####
+> > bg.parameters  <- function (pm, mm, n.pts = 2^14)
+> + {
+> +     max.density <- function(x, n.pts) {
+>   +         aux <- density(x, kernel = "epanechnikov", n = n.pts,
+> na.rm=TRUE)
+> +         aux$x[order(-aux$y)[1]]
+>   +     }
+>   +     mmbg <- max.density(mm, n.pts)
+>   +     pmbg <- max.density(pm, n.pts)
+>   +     bg.data <- mm[mm < mmbg]
+>   +     bg.data <- bg.data - mmbg
+>   +     bgsd <- sqrt(sum(bg.data^2)/(length(bg.data) - 1)) * sqrt(2)/0.85
+>   +     sig.data <- pm[pm > pmbg]
+>     +     sig.data <- sig.data - pmbg
+>    +     alpha <- 1/mean(sig.data)
+>    +     mubg <- mmbg
+>   +     list(alpha = alpha, mu = mubg, sigma = bgsd)
+> }
+> #+ }
+> ## end > ##### end of the patch #####
+> 
+> 
+> > system.time(
+> +   latin.LiWong <- express(tmp, normalize=FALSE, summary.stat=li.wong) #
+> didn't work
+> + )
+> Background correcting
+> Preparing Data
+> Computing expression. This may take a while.
+> Error in while (change > delta & iter < maxit) { : 
+>         missing value where logical needed
+> Timing stopped at: 31.31 0.62 31.94 0 0 
+> 
+> 
+> > system.time( latin.avdf <-
+> express(tmp,normalize=FALSE,bg=subtractmm,summary.stat=avdiff) )
+> Background correcting
+> Preparing Data
+> Computing expression. This may take a while.
+> Error in var(x, na.rm = na.rm) : missing observations in cov/cor
+> Timing stopped at: 13.78 0.55 14.33 0 0 
+> 
+> 
+> > latin.avdf <- express(tmp,normalize=F,bg=subtractmm,
+> summary.stat=function(x) apply(x,2,mean,trim=.2))
+> Background correcting
+> Preparing Data
+> Computing expression. This may take a while.
+> Error in psort(x, partial) : index 13 outside bounds
+> > traceback()
+> 9: sort(x, partial = unique(c(lo, hi)))
+> 8: mean.default(newX[, i], ...)
+> 7: FUN(newX[, i], ...)
+> 6: apply(x, 2, mean, trim = 0.2)
+> 5: FUN(X[[1280]], ...)
+> 4: lapply(as.list(X), FUN, ...)
+> 3: sapply(data.lst, summary.stat, ...)
+> 2: t(sapply(data.lst, summary.stat, ...))
+> 1: express(tmp, normalize = F, bg = subtractmm, summary.stat = function(x)
+> apply(x, 
+>        2, mean, trim = 0.2))
+> 
+> 
+> > library(help=affy)
+> affy            Methods for Affymetrix Oligonucleotide Arrays
+> 
+> Description:
+> 
+> Package: affy
+> Title: Methods for Affymetrix Oligonucleotide Arrays
+> Version: 1.0
+> Author: Rafael A. Irizarry <rafa@jhu.edu>, Laurent Gautier
+>         <laurent@cbs.dtu.dk>, and Leslie M. Cope <cope@mts.jhu.edu>
+> Description: The package contains functions for exploratory
+>         oligonucleotide array analysis.
+> Maintainer: Rafael A. Irizarry <rafa@jhu.edu>
+> Depends: R (>= 1.5.0), modreg, Biobase, eda, tkWidgets
+> Bundle: Bioconductor
+> Date: 2002/5/1
+> BundleDescription: Contains essential Bioconductor packages.
+> URL: http://www.bioconductor.org/
+> License: LGPL
+> Built: R 1.6.0; i686-pc-linux-gnu; Wed Oct 16 17:03:17 EDT 2002
+> 
+> 
+> 
+> -----Original Message-----
+> From: Laurent Gautier [mailto:laurent@cbs.dtu.dk]
+> Sent: Thursday, October 17, 2002 5:34 PM
+> To: Man, Michael
+> Cc: 'Laurent Gautier'; 'bioconductor@stat.math.ethz.ch'
+> Subject: Re: [BioC] can't get summary.stat after "invariantset"
+> normalizat ion
+> 
+> 
+> Well... seems I've been boasting too much (and I was secretely hoping
+> it was the devel version...). I do not have run affy-release on 1.6.0,
+> I can only suggests reasons.
+> 
+> > On Thu, Oct 17, 2002 at 11:24:24AM -0400, Man, Michael wrote:
+> > > Any idea?  BTW, it works fine when I used unnormalized data.  -michael
+> 
+> This is the funny part. I wonder why it does 
+> > 
+> > 
+> > Several even... which version of R and of the package are you using ?
+> > 
+> > 
+> > L.
+> > 
+> > 
+> > > 
+> > > ###############################
+> > > > tmp <- normalize.Plob.invariantset(latin)  # use the first CHIP as
+> > > reference
+> 
+> The following do it too (preferred way):
+> 
+> tmp <- normalize(latin, method="invariantset")
+> 
+> 
+> > > > latin.LiWong <- express(tmp, normalize=F, bg=subtractmm,
+> > > summary.stat=li.wong)
+> > > Background correcting
+> > > Preparing Data
+> > > Computing expression. This may take a while.
+> > > Error in while (change > delta & iter < maxit) { : 
+> > >         missing value where logical needed
+> 
+> Would you have variables called 'T' or 'F' around ?
+> (the code relied (too much) on (T == TRUE) and (F == FALSE) but this
+> was fixed about a week ago I believe). 
+> 
+> > > In addition: Warning message: 
+> > > No convergence in inner loop after 50 in outerler tieration 4 
+> > >  in: fit.li.wong(t(data.matrix), remove.outliers,
+normal.array.quantile,
+> 
+> > > 
+> 
+> This only a warning.
+> 
+> > > 
+> > > > latin.LiWong <- express(tmp, normalize=F, summary.stat=li.wong)
+> > > Background correcting
+> > > Error in density(x, kernel = "epanechnikov", n = n.pts) : 
+> > >         x contains missing values
+> > >
+> 
+> In this case the default 'bg' is rma. You might get 'masked' probes from
+> your CEL files (to avoid taking them into consideration, try to set the
+> flags related to masked and outlying probes to FALSE (see man related
+> man page)). I thought it was fixed... but may be only in affy-devel.
+> Try to patch bg.parameters with the following:
+> 
+> bg.parameters <- function(pm, mm, n.pts=2^14){
+> 
+>   max.density <- function(x,n.pts){
+>     aux <- density(x, kernel="epanechnikov", n=n.pts, na.rm=TRUE) 
+>     aux$x[order(-aux$y)[1]] 
+>   }
+>     mmbg <- max.density(mm,n.pts)
+>     pmbg <- max.density(pm,n.pts)
+> 		   
+>     bg.data <- mm[mm < mmbg]
+>     bg.data <- bg.data-mmbg
+>     bgsd <- sqrt(sum(bg.data^2)/(length(bg.data)-1))*sqrt(2)/.85
+> 			  
+>     sig.data <- pm[pm > pmbg]
+>     sig.data <- sig.data-pmbg
+> 			       
+>     alpha <- 1/mean(sig.data)
+>     mubg <- mmbg
+>     list(alpha=alpha,mu=mubg,sigma=bgsd)  
+> }
+> 				     
+> 
+> > > 
+> > > > latin.avdf <-
+> express(tmp,normalize=F,bg=subtractmm,summary.stat=avdiff)
+> > > Background correcting
+> > > Preparing Data
+> > > Computing expression. This may take a while.
+> > > Error in var(x, na.rm = na.rm) : missing observations in cov/cor
+> > > 
+> 
+> A patch was contributed for that and I was convinced I applied it to
+> both the released and devel version (I cannot find track of it in CVS ?!
+> I am (much) confused now...)
+> The reason is like above: presence of NAs.
+> 
+> > > 
+> > > > latin.avdf <- express(tmp,normalize=F,bg=subtractmm,
+> > > +                       summary.stat=function(x)
+> apply(x,2,mean,trim=.2))
+> > > Background correcting
+> > > Preparing Data
+> > > Computing expression. This may take a while.
+> > > Error in psort(x, partial) : index 13 outside bounds
+> 
+> 
+> What does give 'traceback()' on this one ?
+> 
+> 
+> 
+> 
+> L.
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+From laurent@cbs.dtu.dk  Mon Oct 21 16:12:02 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Mon, 21 Oct 2002 17:12:02 +0200
+Subject: [BioC] can't get summary.stat after "invariantset" normalizat ion
+In-Reply-To: <4E2F83D5DEE32C41B4816FE9D6346242040D1CF0@anagrdexm01.research.aa.wl.com>
+References: <4E2F83D5DEE32C41B4816FE9D6346242040D1CF0@anagrdexm01.research.aa.wl.com>
+Message-ID: <20021021151202.GK28014@giraffa.cbs.dtu.dk>
+
+?! I remembered testing it on the sets we included... ??!
+
+The oldest version of devel I have installed here works fine with Dilution
+(Package: affy
+Version: 1.1.1
+Date: 2002-7-11
+)
+
+You may have to wait for the next forthcoming release so...
+
+
+L.
+
+
+From rafa@jhu.edu  Mon Oct 21 15:02:13 2002
+From: rafa@jhu.edu (Rafael A. Irizarry)
+Date: Mon, 21 Oct 2002 10:02:13 -0400 (EDT)
+Subject: [BioC] can't get summary.stat after "invariantset" normalizat ion
+In-Reply-To: <4E2F83D5DEE32C41B4816FE9D6346242040D1CF0@anagrdexm01.research.aa.wl.com>
+Message-ID: <Pine.LNX.4.33.0210210956530.17816-100000@localhost.localdomain>
+
+i have not looked very closely at the invarianteset code but here are
+two things to keep in mind:
+
+1- our implementation of li.wong is not that stable. 
+   its our best guess at dchip from the papers. its not clear from the 
+   papers what to do when one has  many outliers. 
+2- in their papers li and wong recommend that one should have at least 10 
+   arrays to use their method.
+
+rafael
+
+On Mon, 21 Oct 2002, Man, Michael wrote:
+
+> I got the same result when I tried the "Dilution" data.   -m
+> 
+> > tmp <- normalize.Plob.invariantset(Dilution)  # use the first CHIP as
+> reference
+> > system.time(
+> +   latin.LiWong <- express(tmp, normalize=FALSE, summary.stat=li.wong) #
+> didn't work
+> + )
+> Background correcting
+> Preparing Data
+> Computing expression. This may take a while.
+> Error in while (change > delta & iter < maxit) { : 
+>         missing value where logical needed
+> Timing stopped at: 2.88 0.38 3.26 0 0 
+> 
+> > system.time( latin.avdf <-
+> express(tmp,normalize=FALSE,bg=subtractmm,summary.stat=avdiff) )
+> latiBackground correcting
+> n.avdf <- express(tmp,normalize=F,bg=subtractmm,
+>                       summary.stat=function(x) apply(x,2,mean,trim=.2))
+> 
+> Preparing Data
+> Computing expression. This may take a while.
+> Error in var(x, na.rm = na.rm) : missing observations in cov/cor
+> Timing stopped at: 0.09 0 0.09 0 0 
+> 
+> > latin.avdf <- express(tmp,normalize=F,bg=subtractmm,
+> +                       summary.stat=function(x) apply(x,2,mean,trim=.2))
+> Background correcting
+> Preparing Data
+> Computing expression. This may take a while.
+> Error in psort(x, partial) : index 13 outside bounds
+> 
+> 
+> -----Original Message-----
+> From: Laurent Gautier [mailto:laurent@cbs.dtu.dk]
+> Sent: Sunday, October 20, 2002 1:36 PM
+> To: Man, Michael
+> Cc: 'Laurent Gautier'; 'bioconductor@stat.math.ethz.ch'
+> Subject: Re: [BioC] can't get summary.stat after "invariantset"
+> normalizat ion
+> 
+> 
+> 
+> Without having your particular dataset, one can only conjecture.
+> 
+> 
+> L.
+> 
+> 
+> 
+> On Fri, Oct 18, 2002 at 04:21:48PM -0400, Man, Michael wrote:
+> > Thanks for the help.  The problem is still there.  Here are the results
+> ...
+> > -m
+> > 
+> > > tmp
+> > Plob object
+> > CDF used=HG_U95A.CDF
+> > number of chips=8
+> > number of genes=12626
+> > number of probe pairs=201807
+> > annotation=
+> > description=
+> > notes=normalized by invariant set
+> > size of chip=640x640
+> > chip names=
+> > 1532m99hpp_av04
+> > 1532n99hpp_av04
+> > 1532o99hpp_av04
+> > 1532p99hpp_av04
+> > 1532q99hpp_av04
+> > 1532r99hpp_av04
+> > 1532s99hpp_av04
+> > 1532t99hpp_av04r
+> > 
+> > 
+> > > ##### patch suggested by Laurent Gautier 10/17/2002 #####
+> > > bg.parameters  <- function (pm, mm, n.pts = 2^14)
+> > + {
+> > +     max.density <- function(x, n.pts) {
+> >   +         aux <- density(x, kernel = "epanechnikov", n = n.pts,
+> > na.rm=TRUE)
+> > +         aux$x[order(-aux$y)[1]]
+> >   +     }
+> >   +     mmbg <- max.density(mm, n.pts)
+> >   +     pmbg <- max.density(pm, n.pts)
+> >   +     bg.data <- mm[mm < mmbg]
+> >   +     bg.data <- bg.data - mmbg
+> >   +     bgsd <- sqrt(sum(bg.data^2)/(length(bg.data) - 1)) * sqrt(2)/0.85
+> >   +     sig.data <- pm[pm > pmbg]
+> >     +     sig.data <- sig.data - pmbg
+> >    +     alpha <- 1/mean(sig.data)
+> >    +     mubg <- mmbg
+> >   +     list(alpha = alpha, mu = mubg, sigma = bgsd)
+> > }
+> > #+ }
+> > ## end > ##### end of the patch #####
+> > 
+> > 
+> > > system.time(
+> > +   latin.LiWong <- express(tmp, normalize=FALSE, summary.stat=li.wong) #
+> > didn't work
+> > + )
+> > Background correcting
+> > Preparing Data
+> > Computing expression. This may take a while.
+> > Error in while (change > delta & iter < maxit) { : 
+> >         missing value where logical needed
+> > Timing stopped at: 31.31 0.62 31.94 0 0 
+> > 
+> > 
+> > > system.time( latin.avdf <-
+> > express(tmp,normalize=FALSE,bg=subtractmm,summary.stat=avdiff) )
+> > Background correcting
+> > Preparing Data
+> > Computing expression. This may take a while.
+> > Error in var(x, na.rm = na.rm) : missing observations in cov/cor
+> > Timing stopped at: 13.78 0.55 14.33 0 0 
+> > 
+> > 
+> > > latin.avdf <- express(tmp,normalize=F,bg=subtractmm,
+> > summary.stat=function(x) apply(x,2,mean,trim=.2))
+> > Background correcting
+> > Preparing Data
+> > Computing expression. This may take a while.
+> > Error in psort(x, partial) : index 13 outside bounds
+> > > traceback()
+> > 9: sort(x, partial = unique(c(lo, hi)))
+> > 8: mean.default(newX[, i], ...)
+> > 7: FUN(newX[, i], ...)
+> > 6: apply(x, 2, mean, trim = 0.2)
+> > 5: FUN(X[[1280]], ...)
+> > 4: lapply(as.list(X), FUN, ...)
+> > 3: sapply(data.lst, summary.stat, ...)
+> > 2: t(sapply(data.lst, summary.stat, ...))
+> > 1: express(tmp, normalize = F, bg = subtractmm, summary.stat = function(x)
+> > apply(x, 
+> >        2, mean, trim = 0.2))
+> > 
+> > 
+> > > library(help=affy)
+> > affy            Methods for Affymetrix Oligonucleotide Arrays
+> > 
+> > Description:
+> > 
+> > Package: affy
+> > Title: Methods for Affymetrix Oligonucleotide Arrays
+> > Version: 1.0
+> > Author: Rafael A. Irizarry <rafa@jhu.edu>, Laurent Gautier
+> >         <laurent@cbs.dtu.dk>, and Leslie M. Cope <cope@mts.jhu.edu>
+> > Description: The package contains functions for exploratory
+> >         oligonucleotide array analysis.
+> > Maintainer: Rafael A. Irizarry <rafa@jhu.edu>
+> > Depends: R (>= 1.5.0), modreg, Biobase, eda, tkWidgets
+> > Bundle: Bioconductor
+> > Date: 2002/5/1
+> > BundleDescription: Contains essential Bioconductor packages.
+> > URL: http://www.bioconductor.org/
+> > License: LGPL
+> > Built: R 1.6.0; i686-pc-linux-gnu; Wed Oct 16 17:03:17 EDT 2002
+> > 
+> > 
+> > 
+> > -----Original Message-----
+> > From: Laurent Gautier [mailto:laurent@cbs.dtu.dk]
+> > Sent: Thursday, October 17, 2002 5:34 PM
+> > To: Man, Michael
+> > Cc: 'Laurent Gautier'; 'bioconductor@stat.math.ethz.ch'
+> > Subject: Re: [BioC] can't get summary.stat after "invariantset"
+> > normalizat ion
+> > 
+> > 
+> > Well... seems I've been boasting too much (and I was secretely hoping
+> > it was the devel version...). I do not have run affy-release on 1.6.0,
+> > I can only suggests reasons.
+> > 
+> > > On Thu, Oct 17, 2002 at 11:24:24AM -0400, Man, Michael wrote:
+> > > > Any idea?  BTW, it works fine when I used unnormalized data.  -michael
+> > 
+> > This is the funny part. I wonder why it does 
+> > > 
+> > > 
+> > > Several even... which version of R and of the package are you using ?
+> > > 
+> > > 
+> > > L.
+> > > 
+> > > 
+> > > > 
+> > > > ###############################
+> > > > > tmp <- normalize.Plob.invariantset(latin)  # use the first CHIP as
+> > > > reference
+> > 
+> > The following do it too (preferred way):
+> > 
+> > tmp <- normalize(latin, method="invariantset")
+> > 
+> > 
+> > > > > latin.LiWong <- express(tmp, normalize=F, bg=subtractmm,
+> > > > summary.stat=li.wong)
+> > > > Background correcting
+> > > > Preparing Data
+> > > > Computing expression. This may take a while.
+> > > > Error in while (change > delta & iter < maxit) { : 
+> > > >         missing value where logical needed
+> > 
+> > Would you have variables called 'T' or 'F' around ?
+> > (the code relied (too much) on (T == TRUE) and (F == FALSE) but this
+> > was fixed about a week ago I believe). 
+> > 
+> > > > In addition: Warning message: 
+> > > > No convergence in inner loop after 50 in outerler tieration 4 
+> > > >  in: fit.li.wong(t(data.matrix), remove.outliers,
+> normal.array.quantile,
+> > 
+> > > > 
+> > 
+> > This only a warning.
+> > 
+> > > > 
+> > > > > latin.LiWong <- express(tmp, normalize=F, summary.stat=li.wong)
+> > > > Background correcting
+> > > > Error in density(x, kernel = "epanechnikov", n = n.pts) : 
+> > > >         x contains missing values
+> > > >
+> > 
+> > In this case the default 'bg' is rma. You might get 'masked' probes from
+> > your CEL files (to avoid taking them into consideration, try to set the
+> > flags related to masked and outlying probes to FALSE (see man related
+> > man page)). I thought it was fixed... but may be only in affy-devel.
+> > Try to patch bg.parameters with the following:
+> > 
+> > bg.parameters <- function(pm, mm, n.pts=2^14){
+> > 
+> >   max.density <- function(x,n.pts){
+> >     aux <- density(x, kernel="epanechnikov", n=n.pts, na.rm=TRUE) 
+> >     aux$x[order(-aux$y)[1]] 
+> >   }
+> >     mmbg <- max.density(mm,n.pts)
+> >     pmbg <- max.density(pm,n.pts)
+> > 		   
+> >     bg.data <- mm[mm < mmbg]
+> >     bg.data <- bg.data-mmbg
+> >     bgsd <- sqrt(sum(bg.data^2)/(length(bg.data)-1))*sqrt(2)/.85
+> > 			  
+> >     sig.data <- pm[pm > pmbg]
+> >     sig.data <- sig.data-pmbg
+> > 			       
+> >     alpha <- 1/mean(sig.data)
+> >     mubg <- mmbg
+> >     list(alpha=alpha,mu=mubg,sigma=bgsd)  
+> > }
+> > 				     
+> > 
+> > > > 
+> > > > > latin.avdf <-
+> > express(tmp,normalize=F,bg=subtractmm,summary.stat=avdiff)
+> > > > Background correcting
+> > > > Preparing Data
+> > > > Computing expression. This may take a while.
+> > > > Error in var(x, na.rm = na.rm) : missing observations in cov/cor
+> > > > 
+> > 
+> > A patch was contributed for that and I was convinced I applied it to
+> > both the released and devel version (I cannot find track of it in CVS ?!
+> > I am (much) confused now...)
+> > The reason is like above: presence of NAs.
+> > 
+> > > > 
+> > > > > latin.avdf <- express(tmp,normalize=F,bg=subtractmm,
+> > > > +                       summary.stat=function(x)
+> > apply(x,2,mean,trim=.2))
+> > > > Background correcting
+> > > > Preparing Data
+> > > > Computing expression. This may take a while.
+> > > > Error in psort(x, partial) : index 13 outside bounds
+> > 
+> > 
+> > What does give 'traceback()' on this one ?
+> > 
+> > 
+> > 
+> > 
+> > L.
+> > _______________________________________________
+> > Bioconductor mailing list
+> > Bioconductor@stat.math.ethz.ch
+> > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> 
+
+
+From chunfa@microarray.jhmi.edu  Wed Oct 23 15:47:46 2002
+From: chunfa@microarray.jhmi.edu (Chunfa (Charles) Jie)
+Date: Wed, 23 Oct 2002 08:47:46 -0600
+Subject: [BioC] Mac versions of the data packages
+Message-ID: <011a01c27aa3$26f2a7d0$e89881a2@arraychunfa>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0117_01C27A70.DC345C20
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,=20
+
+Can anyone help create the Mac versions of the data packages?
+Thanks.
+
+
+Charles
+
+
+
+Chunfa (Charles) Jie
+Charles Jie, Ph.D./ M.S.=20
+JHMI Microarray Core
+School of Medicine
+Jefferson St. Building 2-121
+Phone: (410) 502-6659
+Email: chunfa@jhu.edu
+
+
+------=_NextPart_000_0117_01C27A70.DC345C20
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2713.1100" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>Hi, </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Can anyone help create the Mac versions =
+of the data=20
+packages?</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Thanks.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Charles</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Chunfa (Charles) Jie<BR>Charles Jie, =
+Ph.D./ M.S.=20
+<BR>JHMI Microarray Core<BR>School of Medicine<BR>Jefferson St. Building =
+
+2-121<BR>Phone: (410) 502-6659<BR>Email: <A=20
+href=3D"mailto:chunfa@jhu.edu">chunfa@jhu.edu</A><BR></FONT></DIV></BODY>=
+</HTML>
+
+------=_NextPart_000_0117_01C27A70.DC345C20--
+
+
+From kestickler@attbi.com  Fri Oct 25 17:27:53 2002
+From: kestickler@attbi.com (Ken Stickler)
+Date: Fri, 25 Oct 2002 12:27:53 -0400
+Subject: [BioC] missing GO identifier in hgu133a GO
+Message-ID: <URKFTRSNOMWQZT3XPJ1U31YS3WNKOLGC.3db97109@dfbis>
+
+Hi,
+
+there is a missing GO id in hgu133a GO.xml
+
+<AnnBuilder:Entry id="" describ = "Gene Ontology identifier">
+	<AnnBuilder:Item name="GO2AFFY" value="203787_at"/>
+	<AnnBuilder:Item name="GO2AFFY" value="210829_s_at"/>
+	<AnnBuilder:Item name="GO2AFFY" value="206134_at"/>
+	<AnnBuilder:Item name="GO2AFFY" value="208828_at"/>
+	<AnnBuilder:Item name="GO2AFFY" value="218527_at"/>
+	<AnnBuilder:Item name="GO2ALLAFFY" value="203787_at"/>
+	<AnnBuilder:Item name="GO2ALLAFFY" value="210829_s_at"/>
+	<AnnBuilder:Item name="GO2ALLAFFY" value="206134_at"/>
+	<AnnBuilder:Item name="GO2ALLAFFY" value="208828_at"/>
+	<AnnBuilder:Item name="GO2ALLAFFY" value="218527_at"/>
+	<AnnBuilder:Item name="AFFYCOUNTS" value="5"/>
+</AnnBuilder:Entry>
+
+
+Also, is the GO file available for the hgu133b chip?
+
+Thanks,
+
+ken
+
+
+
+From John Zhang <jzhang@jimmy.harvard.edu>  Fri Oct 25 18:08:59 2002
+From: John Zhang <jzhang@jimmy.harvard.edu> (John Zhang)
+Date: Fri, 25 Oct 2002 13:08:59 -0400 (EDT)
+Subject: [BioC] missing GO identifier in hgu133a GO
+Message-ID: <200210251708.NAA05746@blaise.dfci.harvard.edu>
+
+Thank you for reporting the error! I will have a look to find out what might 
+have been wrong. We do not have the annotation for hgu133b chip yet but will try 
+to includ it in the future.
+
+
+>From: Ken Stickler <kestickler@attbi.com>
+>To: bioconductor@stat.math.ethz.ch
+>X-Priority: 3 (Normal)
+>MIME-Version: 1.0
+>Subject: [BioC] missing GO identifier in hgu133a GO
+>X-BeenThere: bioconductor@stat.math.ethz.ch
+>X-Mailman-Version: 2.0.13
+>List-Help: <mailto:bioconductor-request@stat.math.ethz.ch?subject=help>
+>List-Post: <mailto:bioconductor@stat.math.ethz.ch>
+>List-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, 
+<mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe>
+>List-Id: The Bioconductor Project Mailing List <bioconductor.stat.math.ethz.ch>
+>List-Unsubscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, 
+<mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe>
+>List-Archive: <http://www.stat.math.ethz.ch/pipermail/bioconductor/>
+>Date: Fri, 25 Oct 2002 12:27:53 -0400
+>
+>Hi,
+>
+>there is a missing GO id in hgu133a GO.xml
+>
+><AnnBuilder:Entry id="" describ = "Gene Ontology identifier">
+>	<AnnBuilder:Item name="GO2AFFY" value="203787_at"/>
+>	<AnnBuilder:Item name="GO2AFFY" value="210829_s_at"/>
+>	<AnnBuilder:Item name="GO2AFFY" value="206134_at"/>
+>	<AnnBuilder:Item name="GO2AFFY" value="208828_at"/>
+>	<AnnBuilder:Item name="GO2AFFY" value="218527_at"/>
+>	<AnnBuilder:Item name="GO2ALLAFFY" value="203787_at"/>
+>	<AnnBuilder:Item name="GO2ALLAFFY" value="210829_s_at"/>
+>	<AnnBuilder:Item name="GO2ALLAFFY" value="206134_at"/>
+>	<AnnBuilder:Item name="GO2ALLAFFY" value="208828_at"/>
+>	<AnnBuilder:Item name="GO2ALLAFFY" value="218527_at"/>
+>	<AnnBuilder:Item name="AFFYCOUNTS" value="5"/>
+></AnnBuilder:Entry>
+>
+>
+>Also, is the GO file available for the hgu133b chip?
+>
+>Thanks,
+>
+>ken
+>
+>
+>_______________________________________________
+>Bioconductor mailing list
+>Bioconductor@stat.math.ethz.ch
+>http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+
+From pcboutro@engmail.uwaterloo.ca  Fri Oct 25 21:07:36 2002
+From: pcboutro@engmail.uwaterloo.ca (Paul Boutros)
+Date: Fri, 25 Oct 2002 16:07:36 -0400 (EDT)
+Subject: [BioC] Qspline (again)
+Message-ID: <Pine.GSO.4.05.10210251600560.26425-100000@engmail.uwaterloo.ca>
+
+Hi all,
+
+Perhaps these questions are the result of a profound misunderstanding of
+the object-model at use here, or even R itself.  I'm struggling to get the
+above method (normalize.qspline, in module Affy) to work.
+
+This is the procedure I have followed:
+> data <-read.table("data.txt");
+> data2 <- data.matrix(data);
+> targetav <- c(2335.958, 1932.225);
+> test <- normalize.qspline(data2, target=targetav, samples=100,
+verbose=TRUE);
+
+The error message I get is:
+Error in rep(data, t1) : invalid number of copies in "rep"
+
+I don't see the function rep() being called in normalize.qspline at all.
+Any ideas what's going on here?  A few records from data (the frame) look
+like:
+         qry1.S635 qry1.S532
+H3001A10     613.0     602.5
+H3001A12    1208.5    1019.0
+H3001B01     337.0     353.0
+H3001C02     495.0     497.5
+
+And a few records from data2 (the data.matrix) would look like:
+         qry1.S635 qry1.S532
+H3001A10     613.0     602.5
+H3001A12    1208.5    1019.0
+H3001B01     337.0     353.0
+H3001C02     495.0     497.5
+
+i.e. identical to my eyes.
+
+Any help or ideas or anything very much appreciated! :)
+Paul
+
+
+From aar@wadsworth.org  Sat Oct 26 16:35:52 2002
+From: aar@wadsworth.org (Andrew Reilly)
+Date: Sat, 26 Oct 2002 11:35:52 -0400 (EDT)
+Subject: [BioC] Package installtion perfect but for...
+Message-ID: <200210261535.g9QFZq018864@bioinfo.wadsworth.org>
+
+-- Installing on Mandrake 8.0 from http://www.bioconductor.org/packages/devel/distrib/Bioconductor_1.0.tar.gz
+using R CMD R CMD INSTALL Bioconductor_1.0.tar.gz.  Its only error was in
+
+rhdf5 which gave the error:
+
+
+
+Installing *source* package 'rhdf5' ...  problem with rhdf5
+          [... things that are fine]
+          checking hdf5 in /sw... failed
+          configure: error: please specify a valid hdf5 installation with --with-hdf5=DIR
+          ERROR: configuration failed for package 'rhdf5'
+
+downloading http://www.bioconductor.org/packages/devel/html/rhdf5.html
+gave same result.
+
+Is this just my system or a general problem?
+
+How to fix?
+
+Thanks!
+  		            Andrew A. Reilly
+
+  Internet: Andrew.Reilly@Wadsworth.Org Voice: 518-473-3493 FAX:518-474-2769
+     Beeper:518-498-9394.  Wadsworth Center for Labs and Research. Rm. C543
+            Empire State Plaza. P.O. Box 509.  Albany, NY 12201-0509
+
+
+
+From jgentry@jimmy.harvard.edu  Mon Oct 28 03:29:52 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Sun, 27 Oct 2002 22:29:52 -0500 (EST)
+Subject: [BioC] Package installtion perfect but for...
+In-Reply-To: <200210261535.g9QFZq018864@bioinfo.wadsworth.org>
+Message-ID: <Pine.SOL.4.20.0210272229190.7929-100000@santiam.dfci.harvard.edu>
+
+> -- Installing on Mandrake 8.0 from http://www.bioconductor.org/packages/devel/distrib/Bioconductor_1.0.tar.gz
+> using R CMD R CMD INSTALL Bioconductor_1.0.tar.gz.  Its only error was in
+> rhdf5 which gave the error:
+> Installing *source* package 'rhdf5' ...  problem with rhdf5
+>           [... things that are fine]
+>           checking hdf5 in /sw... failed
+>           configure: error: please specify a valid hdf5 installation with --with-hdf5=DIR
+>           ERROR: configuration failed for package 'rhdf5'
+> How to fix?
+
+You need the HDF library installed.
+
+See: http://hdf.ncsa.uiuc.edu/HDF5/
+
+
+From kestickler@attbi.com  Mon Oct 28 21:05:38 2002
+From: kestickler@attbi.com (Ken Stickler)
+Date: Mon, 28 Oct 2002 16:05:38 -0500
+Subject: [BioC] missing GO identifier in hgu133a GO
+Message-ID: <SPFCIGB7NXU1VHFGEMJ84XSD8IZTHE.3dbda6a2@dfbis>
+
+Hi John,
+
+are there notes somewhere on how the annotations were built? Maybe i could try repeating it for hgu133b. Also interested in the mouse chips.
+Thanks.
+
+John Zhang wrote:
+> 
+> Thank you for reporting the error! I will have a look to find out what might
+> have been wrong. We do not have the annotation for hgu133b chip yet but will try
+> to includ it in the future.
+> 
+> >From: Ken Stickler <kestickler@attbi.com>
+> >To: bioconductor@stat.math.ethz.ch
+> >X-Priority: 3 (Normal)
+> >MIME-Version: 1.0
+> >Subject: [BioC] missing GO identifier in hgu133a GO
+> >X-BeenThere: bioconductor@stat.math.ethz.ch
+> >X-Mailman-Version: 2.0.13
+> >List-Help: <mailto:bioconductor-request@stat.math.ethz.ch?subject=help>
+> >List-Post: <mailto:bioconductor@stat.math.ethz.ch>
+> >List-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>,
+> <mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe>
+> >List-Id: The Bioconductor Project Mailing List <bioconductor.stat.math.ethz.ch>
+> >List-Unsubscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>,
+> <mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe>
+> >List-Archive: <http://www.stat.math.ethz.ch/pipermail/bioconductor/>
+> >Date: Fri, 25 Oct 2002 12:27:53 -0400
+> >
+> >Hi,
+> >
+> >there is a missing GO id in hgu133a GO.xml
+> >
+> ><AnnBuilder:Entry id="" describ = "Gene Ontology identifier">
+> >       <AnnBuilder:Item name="GO2AFFY" value="203787_at"/>
+> >       <AnnBuilder:Item name="GO2AFFY" value="210829_s_at"/>
+> >       <AnnBuilder:Item name="GO2AFFY" value="206134_at"/>
+> >       <AnnBuilder:Item name="GO2AFFY" value="208828_at"/>
+> >       <AnnBuilder:Item name="GO2AFFY" value="218527_at"/>
+> >       <AnnBuilder:Item name="GO2ALLAFFY" value="203787_at"/>
+> >       <AnnBuilder:Item name="GO2ALLAFFY" value="210829_s_at"/>
+> >       <AnnBuilder:Item name="GO2ALLAFFY" value="206134_at"/>
+> >       <AnnBuilder:Item name="GO2ALLAFFY" value="208828_at"/>
+> >       <AnnBuilder:Item name="GO2ALLAFFY" value="218527_at"/>
+> >       <AnnBuilder:Item name="AFFYCOUNTS" value="5"/>
+> ></AnnBuilder:Entry>
+> >
+> >
+> >Also, is the GO file available for the hgu133b chip?
+> >
+> >Thanks,
+> >
+> >ken
+> >
+> >
+> >_______________________________________________
+> >Bioconductor mailing list
+> >Bioconductor@stat.math.ethz.ch
+> >http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+
+
+
+From rossini@u.washington.edu  Mon Oct 28 22:15:57 2002
+From: rossini@u.washington.edu (A.J. Rossini)
+Date: 28 Oct 2002 14:15:57 -0800
+Subject: [BioC] Agilent chips...
+Message-ID: <877kg2gqg2.fsf@jeeves.blindglobe.net>
+
+Has anyone used Agilent oligo chips (and better yet, analyzed them w/
+bioconductor?) 
+
+I've not yet gotten output examples of data, and a group I'm working
+with is thinking of using them.
+
+-- 
+A.J. Rossini				Rsrch. Asst. Prof. of Biostatistics
+U. of Washington Biostatistics		rossini@u.washington.edu	
+FHCRC/SCHARP/HIV Vaccine Trials Net	rossini@scharp.org
+-------------- http://software.biostat.washington.edu/ ----------------
+FHCRC: M: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email
+UW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX
+(my tuesday/wednesday/friday locations are completely unpredictable.)
+
+
+
+
+From rgentlem@jimmy.harvard.edu  Mon Oct 28 21:40:18 2002
+From: rgentlem@jimmy.harvard.edu (Robert Gentleman)
+Date: Mon, 28 Oct 2002 16:40:18 -0500
+Subject: [BioC] missing GO identifier in hgu133a GO
+In-Reply-To: <SPFCIGB7NXU1VHFGEMJ84XSD8IZTHE.3dbda6a2@dfbis>; from kestickler@attbi.com on Mon, Oct 28, 2002 at 04:05:38PM -0500
+References: <SPFCIGB7NXU1VHFGEMJ84XSD8IZTHE.3dbda6a2@dfbis>
+Message-ID: <20021028164018.S2632@jimmy.harvard.edu>
+
+Hi Ken,
+  All the data packages are built with AnnBuilder (available with
+  documentation from Bioconductor).
+   Robert
+
+On Mon, Oct 28, 2002 at 04:05:38PM -0500, Ken Stickler wrote:
+> Hi John,
+> 
+> are there notes somewhere on how the annotations were built? Maybe i could try repeating it for hgu133b. Also interested in the mouse chips.
+> Thanks.
+> 
+> John Zhang wrote:
+> > 
+> > Thank you for reporting the error! I will have a look to find out what might
+> > have been wrong. We do not have the annotation for hgu133b chip yet but will try
+> > to includ it in the future.
+> > 
+> > >From: Ken Stickler <kestickler@attbi.com>
+> > >To: bioconductor@stat.math.ethz.ch
+> > >X-Priority: 3 (Normal)
+> > >MIME-Version: 1.0
+> > >Subject: [BioC] missing GO identifier in hgu133a GO
+> > >X-BeenThere: bioconductor@stat.math.ethz.ch
+> > >X-Mailman-Version: 2.0.13
+> > >List-Help: <mailto:bioconductor-request@stat.math.ethz.ch?subject=help>
+> > >List-Post: <mailto:bioconductor@stat.math.ethz.ch>
+> > >List-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>,
+> > <mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe>
+> > >List-Id: The Bioconductor Project Mailing List <bioconductor.stat.math.ethz.ch>
+> > >List-Unsubscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>,
+> > <mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe>
+> > >List-Archive: <http://www.stat.math.ethz.ch/pipermail/bioconductor/>
+> > >Date: Fri, 25 Oct 2002 12:27:53 -0400
+> > >
+> > >Hi,
+> > >
+> > >there is a missing GO id in hgu133a GO.xml
+> > >
+> > ><AnnBuilder:Entry id="" describ = "Gene Ontology identifier">
+> > >       <AnnBuilder:Item name="GO2AFFY" value="203787_at"/>
+> > >       <AnnBuilder:Item name="GO2AFFY" value="210829_s_at"/>
+> > >       <AnnBuilder:Item name="GO2AFFY" value="206134_at"/>
+> > >       <AnnBuilder:Item name="GO2AFFY" value="208828_at"/>
+> > >       <AnnBuilder:Item name="GO2AFFY" value="218527_at"/>
+> > >       <AnnBuilder:Item name="GO2ALLAFFY" value="203787_at"/>
+> > >       <AnnBuilder:Item name="GO2ALLAFFY" value="210829_s_at"/>
+> > >       <AnnBuilder:Item name="GO2ALLAFFY" value="206134_at"/>
+> > >       <AnnBuilder:Item name="GO2ALLAFFY" value="208828_at"/>
+> > >       <AnnBuilder:Item name="GO2ALLAFFY" value="218527_at"/>
+> > >       <AnnBuilder:Item name="AFFYCOUNTS" value="5"/>
+> > ></AnnBuilder:Entry>
+> > >
+> > >
+> > >Also, is the GO file available for the hgu133b chip?
+> > >
+> > >Thanks,
+> > >
+> > >ken
+> > >
+> > >
+> > >_______________________________________________
+> > >Bioconductor mailing list
+> > >Bioconductor@stat.math.ethz.ch
+> > >http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> > 
+> > _______________________________________________
+> > Bioconductor mailing list
+> > Bioconductor@stat.math.ethz.ch
+> > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> 
+> 
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+-- 
++---------------------------------------------------------------------------+
+| Robert Gentleman                 phone : (617) 632-5250                   |
+| Associate Professor              fax:   (617)  632-2444                   |
+| Department of Biostatistics      office: M1B20
+| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |
++---------------------------------------------------------------------------+
+
+From gregory_r_warnes@groton.pfizer.com  Tue Oct 29 00:51:45 2002
+From: gregory_r_warnes@groton.pfizer.com (Warnes, Gregory R)
+Date: Mon, 28 Oct 2002 19:51:45 -0500
+Subject: [BioC] Qspline (again)
+Message-ID: <D7A3CFD7825BD6119B880002A58F06C20149D13B@groexmb02.pfizer.com>
+
+To find out where the error is occuring use 'traceback()' after the error
+occurs.
+
+-Greg
+
+
+> -----Original Message-----
+> From: Paul Boutros [mailto:pcboutro@engmail.uwaterloo.ca]
+> Sent: Friday, October 25, 2002 4:08 PM
+> To: BioConductor Mailing List
+> Subject: [BioC] Qspline (again)
+> 
+> 
+> Hi all,
+> 
+> Perhaps these questions are the result of a profound 
+> misunderstanding of
+> the object-model at use here, or even R itself.  I'm 
+> struggling to get the
+> above method (normalize.qspline, in module Affy) to work.
+> 
+> This is the procedure I have followed:
+> > data <-read.table("data.txt");
+> > data2 <- data.matrix(data);
+> > targetav <- c(2335.958, 1932.225);
+> > test <- normalize.qspline(data2, target=targetav, samples=100,
+> verbose=TRUE);
+> 
+> The error message I get is:
+> Error in rep(data, t1) : invalid number of copies in "rep"
+> 
+> I don't see the function rep() being called in 
+> normalize.qspline at all.
+> Any ideas what's going on here?  A few records from data (the 
+> frame) look
+> like:
+>          qry1.S635 qry1.S532
+> H3001A10     613.0     602.5
+> H3001A12    1208.5    1019.0
+> H3001B01     337.0     353.0
+> H3001C02     495.0     497.5
+> 
+> And a few records from data2 (the data.matrix) would look like:
+>          qry1.S635 qry1.S532
+> H3001A10     613.0     602.5
+> H3001A12    1208.5    1019.0
+> H3001B01     337.0     353.0
+> H3001C02     495.0     497.5
+> 
+> i.e. identical to my eyes.
+> 
+> Any help or ideas or anything very much appreciated! :)
+> Paul
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> 
+
+
+LEGAL NOTICE
+Unless expressly stated otherwise, this message is confidential and may be privileged. It is intended for the addressee(s) only. Access to this E-mail by anyone else is unauthorized. If you are not an addressee, any disclosure or copying of the contents of this E-mail or any action taken (or not taken) in reliance on it is unauthorized and may be unlawful. If you are not an addressee, please inform the sender immediately.
+
+From shyam@mail.nih.gov  Tue Oct 29 17:33:17 2002
+From: shyam@mail.nih.gov (Sundaram, Shyam (NIH/CIT))
+Date: Tue, 29 Oct 2002 12:33:17 -0500
+Subject: [BioC] Handling Missing Values
+Message-ID: <64BC9A2B18FC5843BA0DE93548F745F3041188DD@nihexchange3.nih.gov>
+
+Hi,
+Couple of  questions regarding the bioconductor packages and the handling of
+missing values.
+
+1. Is there a currently an impute function implementation( or likelihood of
+adding an impute function)?
+2. Does the exprSet object have a restriction of having missing values in
+the "exprs" slot ?
+
+Thanks
+Shyam
+
+
+From rgentlem@jimmy.harvard.edu  Tue Oct 29 20:56:29 2002
+From: rgentlem@jimmy.harvard.edu (Robert Gentleman)
+Date: Tue, 29 Oct 2002 15:56:29 -0500
+Subject: [BioC] Handling Missing Values
+In-Reply-To: <64BC9A2B18FC5843BA0DE93548F745F3041188DD@nihexchange3.nih.gov>; from shyam@mail.nih.gov on Tue, Oct 29, 2002 at 12:33:17PM -0500
+References: <64BC9A2B18FC5843BA0DE93548F745F3041188DD@nihexchange3.nih.gov>
+Message-ID: <20021029155629.B10191@jimmy.harvard.edu>
+
+On Tue, Oct 29, 2002 at 12:33:17PM -0500, Sundaram, Shyam (NIH/CIT) wrote:
+> Hi,
+> Couple of  questions regarding the bioconductor packages and the handling of
+> missing values.
+> 
+> 1. Is there a currently an impute function implementation( or likelihood of
+> adding an impute function)?
+
+  It is unclear what such a function would do. In most cases one is
+  going to have to use some reasonable amount of external information
+  to perform imputations. This is possible now.
+
+> 2. Does the exprSet object have a restriction of having missing values in
+> the "exprs" slot ?
+
+  Not intentionally (and not that I am aware of). If you have a
+  specific example please post it. If you are simply wondering then I
+  suggest that you actually try it and find out. There are lots of
+  runnable examples that can easily be adjusted to produce missing
+  values and without too much effort you can see the answer for
+  yourself.
+
+
+  Robert
+
+> 
+> Thanks
+> Shyam
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+-- 
++---------------------------------------------------------------------------+
+| Robert Gentleman                 phone : (617) 632-5250                   |
+| Associate Professor              fax:   (617)  632-2444                   |
+| Department of Biostatistics      office: M1B20
+| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |
++---------------------------------------------------------------------------+
+
+From s.henderson@ucl.ac.uk  Wed Oct 30 09:24:13 2002
+From: s.henderson@ucl.ac.uk (Stephen Henderson)
+Date: Wed, 30 Oct 2002 09:24:13 -0000
+Subject: [BioC] Handling Missing Values
+Message-ID: <0472DD9D88A8D61187540002B32BD85531C19D@exc.wibr.ucl.ac.uk>
+
+In the PAML package for R of Tibshirani (Shrunken Centroid Learning) they
+have used K-nearest neighbour imputation. Obviously you should not use this
+if there are too many missing values, but then most sensible people will
+choose to reject an experiment if it is too corrupted prior to this.
+
+Stephen Henderson
+Wolfson institute for Biomedical Research
+UCL, Gower Street, WC1E 6BT, UK
+44 (0)207 679 6827
+
+
+-----Original Message-----
+From: Robert Gentleman
+To: Sundaram, Shyam (NIH/CIT)
+Cc: 'bioconductor@stat.math.ethz.ch'
+Sent: 29/10/02 20:56
+Subject: Re: [BioC] Handling Missing Values
+
+On Tue, Oct 29, 2002 at 12:33:17PM -0500, Sundaram, Shyam (NIH/CIT)
+wrote:
+> Hi,
+> Couple of  questions regarding the bioconductor packages and the
+handling of
+> missing values.
+> 
+> 1. Is there a currently an impute function implementation( or
+likelihood of
+> adding an impute function)?
+
+  It is unclear what such a function would do. In most cases one is
+  going to have to use some reasonable amount of external information
+  to perform imputations. This is possible now.
+
+> 2. Does the exprSet object have a restriction of having missing values
+in
+> the "exprs" slot ?
+
+  Not intentionally (and not that I am aware of). If you have a
+  specific example please post it. If you are simply wondering then I
+  suggest that you actually try it and find out. There are lots of
+  runnable examples that can easily be adjusted to produce missing
+  values and without too much effort you can see the answer for
+  yourself.
+
+
+  Robert
+
+> 
+> Thanks
+> Shyam
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+-- 
++-----------------------------------------------------------------------
+----+
+| Robert Gentleman                 phone : (617) 632-5250
+|
+| Associate Professor              fax:   (617)  632-2444
+|
+| Department of Biostatistics      office: M1B20
+| Harvard School of Public Health  email:
+rgentlem@jimmy.dfci.harvard.edu   |
++-----------------------------------------------------------------------
+----+
+_______________________________________________
+Bioconductor mailing list
+Bioconductor@stat.math.ethz.ch
+http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+
+**********************************************************************
+This email and any files transmitted with it are confidential and
+intended solely for the use of the individual or entity to whom they
+are addressed. If you have received this email in error please notify
+the system manager (wibr.mail@ucl.ac.uk). All files are scanned for viruses.
+**********************************************************************
+
+
+From pcboutro@engmail.uwaterloo.ca  Wed Oct 30 20:49:11 2002
+From: pcboutro@engmail.uwaterloo.ca (Paul Boutros)
+Date: Wed, 30 Oct 2002 15:49:11 -0500 (EST)
+Subject: [BioC] read.marrayInfo error
+Message-ID: <Pine.GSO.4.05.10210301548510.21008-100000@engmail.uwaterloo.ca>
+
+Hi all,
+
+I'm having some difficulties using the read.marrayInfo method of the
+marrayInput package.
+
+Basically, I get an unusual error message after a few seconds of
+processing.
+
+=======================================================
+> rat.layout <- read.marrayLayout(fname = fname, ngr=4, ngc=12, nsr=25,
+nsc=26, skip=53, ctl.col=4, pl.col=5);
+> rat.layout;
+Array layout:    Object of class marrayLayout. 
+
+Total number of spots:                  31200
+Dimensions of grid matrix:              4 rows by 12 cols
+Dimensions of spot matrices:            25 rows by 26 cols
+
+Currently working with a subset of 31200 spots.
+
+Control spots: 
+There are   9935 types of controls : 
+   3x SSC      Arab     Mm.10 Mm.100049 Mm.100060  Mm.10009 Mm.100099
+Mm.100113 Mm.100117 Mm.100131 
+       98       480         2         2         2         2         2
+2         2         2 
+...
+
+Notes on layout: 
+c:/docume~1/paul/dev/input/GP_M15k1.gal
+> rat.names <- read.marrayInfo(fname=fname, info.id=5, labels=5, skip=53);
+Error in "maInfo<-"(*tmp*, value = dat[, info.id]) : 
+        No direct or inherited method for function "maInfo<-" for this
+call
+> traceback();
+2: "maInfo<-"(*tmp*, value = dat[, info.id])
+1: read.marrayInfo(fname = fname, info.id = 5, labels = 5, skip = 53)
+=======================================================
+
+
+I'm not too clear what's going on here.  In case it helps, here is the
+first bit of my GAL input file.
+
+ATF	1.0
+51	5
+Type=GenePix ArrayList V1.0
+BlockCount=48
+BlockType=0
+"Block1= 3000, 3000, 110, 26, 167, 25, 167" 
+"Block2= 7500, 3000, 110, 26, 167, 25, 167" 
+"Block3= 12000, 3000, 110, 26, 167, 25, 167" 
+"Block4= 16500, 3000, 110, 26, 167, 25, 167" 
+"Block5= 3000, 7500, 110, 26, 167, 25, 167" 
+"Block6= 7500, 7500, 110, 26, 167, 25, 167" 
+"Block7= 12000, 7500, 110, 26, 167, 25, 167" 
+"Block8= 16500, 7500, 110, 26, 167, 25, 167" 
+"Block9= 3000, 12000, 110, 26, 167, 25, 167" 
+"Block10= 7500, 12000, 110, 26, 167, 25, 167" 
+"Block11= 12000, 12000, 110, 26, 167, 25, 167" 
+"Block12= 16500, 12000, 110, 26, 167, 25, 167" 
+"Block13= 3000, 16500, 110, 26, 167, 25, 167" 
+"Block14= 7500, 16500, 110, 26, 167, 25, 167" 
+"Block15= 12000, 16500, 110, 26, 167, 25, 167" 
+"Block16= 16500, 16500, 110, 26, 167, 25, 167" 
+"Block17= 3000, 21000, 110, 26, 167, 25, 167" 
+"Block18= 7500, 21000, 110, 26, 167, 25, 167" 
+"Block19= 12000, 21000, 110, 26, 167, 25, 167" 
+"Block20= 16500, 21000, 110, 26, 167, 25, 167" 
+"Block21= 3000, 25500, 110, 26, 167, 25, 167" 
+"Block22= 7500, 25500, 110, 26, 167, 25, 167" 
+"Block23= 12000, 25500, 110, 26, 167, 25, 167" 
+"Block24= 16500, 25500, 110, 26, 167, 25, 167" 
+"Block25= 3000, 30000, 110, 26, 167, 25, 167" 
+"Block26= 7500, 30000, 110, 26, 167, 25, 167" 
+"Block27= 12000, 30000, 110, 26, 167, 25, 167" 
+"Block28= 16500, 30000, 110, 26, 167, 25, 167" 
+"Block29= 3000, 34500, 110, 26, 167, 25, 167" 
+"Block30= 7500, 34500, 110, 26, 167, 25, 167" 
+"Block31= 12000, 34500, 110, 26, 167, 25, 167" 
+"Block32= 16500, 34500, 110, 26, 167, 25, 167" 
+"Block33= 3000, 39000, 110, 26, 167, 25, 167" 
+"Block34= 7500, 39000, 110, 26, 167, 25, 167" 
+"Block35= 12000, 39000, 110, 26, 167, 25, 167" 
+"Block36= 16500, 39000, 110, 26, 167, 25, 167" 
+"Block37= 3000, 43500, 110, 26, 167, 25, 167" 
+"Block38= 7500, 43500, 110, 26, 167, 25, 167" 
+"Block39= 12000, 43500, 110, 26, 167, 25, 167" 
+"Block40= 16500, 43500, 110, 26, 167, 25, 167" 
+"Block41= 3000, 48000, 110, 26, 167, 25, 167" 
+"Block42= 7500, 48000, 110, 26, 167, 25, 167" 
+"Block43= 12000, 48000, 110, 26, 167, 25, 167" 
+"Block44= 16500, 48000, 110, 26, 167, 25, 167" 
+"Block45= 3000, 52500, 110, 26, 167, 25, 167" 
+"Block46= 7500, 52500, 110, 26, 167, 25, 167" 
+"Block47= 12000, 52500, 110, 26, 167, 25, 167" 
+"Block48= 16500, 52500, 110, 26, 167, 25, 167" 
+Block	Row	Column	Name	ID
+1	1	1	Mm.142830	H3005F02
+1	1	2	Mm.142830	H3005F02
+
+
+From pcboutro@engmail.uwaterloo.ca  Wed Oct 30 21:15:52 2002
+From: pcboutro@engmail.uwaterloo.ca (Paul Boutros)
+Date: Wed, 30 Oct 2002 16:15:52 -0500 (EST)
+Subject: [BioC] Qspline (again)
+Message-ID: <Pine.GSO.4.05.10210301615030.1449-100000@engmail.uwaterloo.ca>
+
+Hi again,
+
+> > > > The error message I get is:
+> > > > Error in rep(data, t1) : invalid number of copies in "rep"
+> > > > 
+> > > 
+> > > Try 'traceback()' just after the error message is fired. It may give
+> > > us a hint about where this happened.
+> > 
+> > I get:
+> > 3: rep(data, t1)
+> > 2: array(y.offset, (k - 1))
+> > 1: normalize.qspline(data2)
+> > 
+> > Does this help at all?
+
+> It does. I had a hard time with the 'k' thing (and no answer from the
+> corresponding author about my questions/remarks/suggestions). I suspect
+> that for some reason you do not have the check added.  Does the code
+> for the function look like follows ?
+> -------------------
+>   if (y.offset <= min.offset) { 
+>     y.offset <- min.offset;
+>     k <- round(py.inds[1]/min.offset)
+>   }
+> 
+>   ## here is the part I suspect missing ##
+>   if (k < 1) {
+>     warning("qspline cannot be performed (insufficient number of
+arrays)")
+>     return(x)
+>   }
+>   ## ---- ##
+> 
+>   y.offset <- c(0, array(y.offset, (k-1)))
+>   y.order <- order(target)
+> -------------------
+
+This is exactly how my code looks -- the check on array number is not
+present.
+However, I should note that I am doing this analysis with three arrays.
+The code I use looks like this:
+
+> data1 <- read.table("c:\\docume~1\\paul\\dev\\testvals.txt");
+> data2 <- data.matrix(data1);
+> data2;
+         qry1.S635 qry1.S532 qry2.S635 qry2.S532 qry3.S635 qry3.S532
+H3001A10     613.0     602.5     483.0     633.0      61.0      75.0
+H3001A12    1208.5    1019.0    1209.0    1187.0      91.0     153.5
+H3001B01     337.0     353.0     619.0     529.5     132.5     153.5
+H3001C02     495.0     497.5      64.5     117.5      10.5      59.0
+H3001C03     199.5     152.5     301.0     222.0      63.5      95.5
+H3001C04    1855.5    1447.0    1969.0    1721.0     286.0     349.0
+H3001C07    4765.5    3643.0    4889.0    4401.5    1064.0    1148.0
+H3001C09     720.5     894.5     347.0     602.0     188.0     326.5
+H3001C11     630.0     536.0     814.5     899.5      20.0      48.5
+> c <- normalize.qspline(data2);
+Error in rep(data, t1) : invalid number of copies in "rep"
+> c <- normalize.qspline(data1);
+Error in rep(data, t1) : invalid number of copies in "rep"
+
+I tried adding the code you indicated as missing into the affy.R file.
+I now get:
+
+         qry1.S635 qry1.S532 qry2.S635 qry2.S532 qry3.S635 qry3.S532
+H3001A10     613.0     602.5     483.0     633.0      61.0      75.0
+H3001A12    1208.5    1019.0    1209.0    1187.0      91.0     153.5
+H3001B01     337.0     353.0     619.0     529.5     132.5     153.5
+H3001C02     495.0     497.5      64.5     117.5      10.5      59.0
+H3001C03     199.5     152.5     301.0     222.0      63.5      95.5
+H3001C04    1855.5    1447.0    1969.0    1721.0     286.0     349.0
+H3001C07    4765.5    3643.0    4889.0    4401.5    1064.0    1148.0
+H3001C09     720.5     894.5     347.0     602.0     188.0     326.5
+H3001C11     630.0     536.0     814.5     899.5      20.0      48.5
+
+Warning message: 
+qspline cannot be performed (insufficient number of arrays) in:
+normalize.qspline(data2)
+
+This indicates to me that my input data is in an inappropriate format
+somehow?
+Any ideas where I go from here?
+
+Thanks for your help with this,
+Paul
+
+
+From jean@biostat.ucsf.edu  Wed Oct 30 21:36:10 2002
+From: jean@biostat.ucsf.edu (Jean Yee Hwa Yang)
+Date: Wed, 30 Oct 2002 13:36:10 -0800 (PST)
+Subject: [BioC] read.marrayInfo error
+In-Reply-To: <Pine.GSO.4.05.10210301548510.21008-100000@engmail.uwaterloo.ca>
+Message-ID: <Pine.GSO.4.21.0210301331300.5962-100000@yang>
+
+Hi Paul,
+
+This is a bug in "read.marrayInfo" which I will fix for the next release.
+
+The problem arrive when you select only one column for info.id.  For the
+moment, one fix is to select both column 4 and 5 of your gal file into the
+marray Info rat.names <- read.marrayInfo(fname=fname, info.id=4:5,
+labels=5, skip=53);
+
+Alternatively, you can edit the read.marrayLayout
+at the line
+
+maInfo(descript) <- dat[,info.id]
+
+to be
+maInfo(descript) <- as.data.frame(dat[,info.id])
+
+Cheers
+
+Jean
+
+
+From pcboutro@engmail.uwaterloo.ca  Thu Oct 31 18:42:41 2002
+From: pcboutro@engmail.uwaterloo.ca (Paul Boutros)
+Date: Thu, 31 Oct 2002 13:42:41 -0500 (EST)
+Subject: [BioC] read.marrayInfo error
+In-Reply-To: <Pine.GSO.4.21.0210301331300.5962-100000@yang>
+Message-ID: <Pine.GSO.4.05.10210311341330.6103-100000@engmail.uwaterloo.ca>
+
+Gotcha, thanks for the help!
+Where would the best place to look for info on known bugs or the like be?
+Is there a bug-tracker of some sort, or a site where I can check out
+things like this before e-mailing the list?
+
+Paul
+
+On Wed, 30 Oct 2002, Jean Yee Hwa Yang wrote:
+
+> Hi Paul,
+> 
+> This is a bug in "read.marrayInfo" which I will fix for the next release.
+> 
+> The problem arrive when you select only one column for info.id.  For the
+> moment, one fix is to select both column 4 and 5 of your gal file into the
+> marray Info rat.names <- read.marrayInfo(fname=fname, info.id=4:5,
+> labels=5, skip=53);
+> 
+> Alternatively, you can edit the read.marrayLayout
+> at the line
+> 
+> maInfo(descript) <- dat[,info.id]
+> 
+> to be
+> maInfo(descript) <- as.data.frame(dat[,info.id])
+> 
+> Cheers
+> 
+> Jean
+> 
+
+
+From jgentry@jimmy.harvard.edu  Thu Oct 31 18:50:52 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Thu, 31 Oct 2002 13:50:52 -0500 (EST)
+Subject: [BioC] read.marrayInfo error
+In-Reply-To: <Pine.GSO.4.05.10210311341330.6103-100000@engmail.uwaterloo.ca>
+Message-ID: <Pine.SOL.4.20.0210311349180.22753-100000@santiam.dfci.harvard.edu>
+
+> Where would the best place to look for info on known bugs or the like be?
+> Is there a bug-tracker of some sort, or a site where I can check out
+> things like this before e-mailing the list?
+
+Back when we pushed out release 1.0 we were looking at implementing a bug
+tracking system but decided that given the relatively low traffic at the
+time to just use the mailing list.  In fact, if you follow the 'bug
+tracking' link on the site it directs you here (not sure if you've seen
+this or not ... general 'you').
+
+So the current answer is 'no', although perhaps now as the userbase is
+increasing this might be something that we should take a look at.
+
+-J
+
+
+From Qi.Zhang@astrazeneca.com  Thu Oct 31 19:48:21 2002
+From: Qi.Zhang@astrazeneca.com (Qi.Zhang@astrazeneca.com)
+Date: Thu, 31 Oct 2002 20:48:21 +0100
+Subject: [BioC] new release date
+Message-ID: <FD111D9169DBD411AA7F0008C786519402CA8A50@USBODMSX01>
+
+Hi, 
+
+Could you please let me know the releasing date of version 2?  I couldn't
+find it on your web site.
+ Thanks.
+
+Qi Zhang Ph.D.
+
+From jgentry@jimmy.harvard.edu  Thu Oct 31 20:01:27 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Thu, 31 Oct 2002 15:01:27 -0500 (EST)
+Subject: [BioC] new release date
+In-Reply-To: <FD111D9169DBD411AA7F0008C786519402CA8A50@USBODMSX01>
+Message-ID: <Pine.SOL.4.20.0210311500580.23190-100000@santiam.dfci.harvard.edu>
+
+
+On Thu, 31 Oct 2002 Qi.Zhang@astrazeneca.com wrote:
+> Could you please let me know the releasing date of version 2?  I couldn't
+> find it on your web site.
+
+Hi ...
+
+This is my fault, I've been slow in putting together a notice.  I'll get
+one put up (and on this list) later this afternoon.
+
+The short answer for now though is Nov 18th.
+
+Thanks
+-J
+
+
+From jgentry@jimmy.harvard.edu  Thu Oct 31 21:09:20 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Thu, 31 Oct 2002 16:09:20 -0500 (EST)
+Subject: [BioC] Release 1.1
+Message-ID: <Pine.SOL.4.20.0210311607250.23451-100000@santiam.dfci.harvard.edu>
+
+Upcoming Bioconductor Release 1.1
+
+On November 18, 2002, there will be a release (version 1.1) of the
+Bioconductor software. Please check the URL
+http://www.bioconductor.org/relNotices/relNotice_1.1.html over the next
+few weeks as it will be updated as new information is available.  Release
+1.1 is intended to be operated with R version 1.6.1, which can be obtained
+at CRAN. A schedule of important dates in the release cycle is as follows:
+
+    * November 1, 2002: Feature freeze. Developers are to add no new
+functionality to their packages.
+    * November 8, 2002: Code freeze. Developers are NOT to add any new
+code to their work, except to fix bugs. Peer code review will take place
+at this point as well.
+    * November 18, 2002: Release.
+
+Any questions should be directed to either myself or the Bioconductor
+mailing list.
+
+-Jeff
+
+
+From jgentry@jimmy.harvard.edu  Thu Oct 31 22:11:28 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Thu, 31 Oct 2002 17:11:28 -0500 (EST)
+Subject: [BioC] Affymetrix CDF Packages
+Message-ID: <Pine.SOL.4.20.0210311709150.23451-100000@santiam.dfci.harvard.edu>
+
+R packages for Affymetrix CDF data is now available on the Bioconductor
+website at: http://www.bioconductor.org/data/cdfenvs/cdfenvs.html (as well
+as the 'Affymetrix CDF Packages' link from the normal data page.  Please
+contact Rafael Irizarry (rafa@jhu.edu) with questions regarding the
+packages themselves, and myself if you have questions or problems relating
+to downloading of these packages.
+
+-Jeff
+
+

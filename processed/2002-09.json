@@ -1,0 +1,957 @@
+{
+  "list": "bioconductor",
+  "description": "",
+  "month": "2002-09",
+  "messages": [
+    {
+      "id": "msg-c5f928975dfc",
+      "message_id": "<5.1.0.14.0.20020902133916.00af1f98@anumail.anu.edu.au>",
+      "from_name": "Russ turakulov",
+      "from_email_hash": "20f5838280b0cbf3e0d135be190c4e5cb368e70cb33a60f545d0862e8763fdd9",
+      "date": "2002-09-02T03:43:10Z",
+      "subject": "[BioC] BC install trouble under Windows",
+      "subject_clean": "[BioC] BC install trouble under Windows",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hello,\nCan you help me to install \"BioConductur\" under Windows2K\nWhen I'm trying to load Bioconductor package R tell next things:\n\n > library(Biobase)\nCreating a new generic function for \"[[<-\" on element\n2 of the search path\nMaking a generic for special function \"[[<-\"\nCreating a new generic function for \"[[\" on element 2\nof the search path\nMaking a generic for special function \"[[\"\nExpanding the signature to include omitted arguments\nin definition: j = \"missing\"\nCreating a new generic function for \"length\" on element\n2 of the search path\nMaking a generic for special function \"length\"\nCreating a new generic function for \"[\" on element 2\nof the search path\nMaking a generic for special function \"[\"\nError in conformMethod(signature, mnames, fnames) :\n         Method has formal arguments not in generic function: file, append, \nquote, sep, eol, na, dec, row.names, col.names, qmethod\nError in library(Biobase) : .First.lib failed\n\n\nThank you,\nRuss.\n\n\nRuss Turakulov <rust.turakulov@anu.edu.au>\nPhone: +61 2  6125-4128;  [(m) 0421163470]\nCBiS,  GPO   Box 334,    Canberra ACT 2601",
+      "body_snippet": "Hello,\nCan you help me to install \"BioConductur\" under Windows2K\nWhen I'm trying to load Bioconductor package R tell next things:\n\n > library(Biobase)\nCreating a new generic function for \"[[<-\" on ele",
+      "thread_id": "thread-c5f928975dfc",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-0810da958b8b",
+      "message_id": "<20020902183416.GA4930@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "46ea1fbf1dde6cd7ce00fc69b0ee2b1457b50e6b5c9e07bd3a465dc588db5dd1",
+      "date": "2002-09-02T18:34:16Z",
+      "subject": "[BioC] BC install trouble under Windows",
+      "subject_clean": "[BioC] BC install trouble under Windows",
+      "in_reply_to": "<5.1.0.14.0.20020902133916.00af1f98@anumail.anu.edu.au>",
+      "references": [
+        "<5.1.0.14.0.20020902133916.00af1f98@anumail.anu.edu.au>"
+      ],
+      "body_plain": "The version of R you are using (along with the version of the\npackage Biobase you are using) could be of help to help...\n\nBioconductor requires R > 1.5.0 in most of the cases I think.\n\n\nHopin' it helps,\n\n\nL.\n\n\n\n\nOn Mon, Sep 02, 2002 at 01:43:10PM +1000, Russ turakulov wrote:\n> Hello,\n> Can you help me to install \"BioConductur\" under Windows2K\n> When I'm trying to load Bioconductor package R tell next things:\n> \n> > library(Biobase)\n> Creating a new generic function for \"[[<-\" on element\n> 2 of the search path\n> Making a generic for special function \"[[<-\"\n> Creating a new generic function for \"[[\" on element 2\n> of the search path\n> Making a generic for special function \"[[\"\n> Expanding the signature to include omitted arguments\n> in definition: j = \"missing\"\n> Creating a new generic function for \"length\" on element\n> 2 of the search path\n> Making a generic for special function \"length\"\n> Creating a new generic function for \"[\" on element 2\n> of the search path\n> Making a generic for special function \"[\"\n> Error in conformMethod(signature, mnames, fnames) :\n>         Method has formal arguments not in generic function: file, append, \n> quote, sep, eol, na, dec, row.names, col.names, qmethod\n> Error in library(Biobase) : .First.lib failed\n> \n> \n> Thank you,\n> Russ.\n> \n> \n> Russ Turakulov <rust.turakulov@anu.edu.au>\n> Phone: +61 2  6125-4128;  [(m) 0421163470]\n> CBiS,  GPO   Box 334,    Canberra ACT 2601\n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n-- \n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tDK-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 89\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "The version of R you are using (along with the version of the\npackage Biobase you are using) could be of help to help...\n\nBioconductor requires R > 1.5.0 in most of the cases I think.\n\n\nHopin' it help",
+      "thread_id": "thread-c5f928975dfc",
+      "thread_depth": 1,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-c61db61b7045",
+      "message_id": "<Pine.GSO.4.33.0209031218170.4639-100000@runner.ucdavis.edu>",
+      "from_name": "Shinichiro Wachi",
+      "from_email_hash": "1d6980fd1938e9cf067f433023d339438cbd36417d624f4327524de326ad6684",
+      "date": "2002-09-03T23:26:25Z",
+      "subject": "[BioC] \"Infogram\" ?",
+      "subject_clean": "[BioC] \"Infogram\" ?",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi,\n\nI find that integration of the results from other packages (such as\nJ-Express) to R cumbersome.  Is there a way to create a customized\n\"Infogram\" (Combination of dendrogram and green/red matrix plot for\nhierarchical clustering) already, or is there a package planned in the\nnear future?  I would like to know this before I commit myself to rolling\nmy own package.\n\nThanks!\n\nShinichiro Wachi",
+      "body_snippet": "Hi,\n\nI find that integration of the results from other packages (such as\nJ-Express) to R cumbersome.  Is there a way to create a customized\n\"Infogram\" (Combination of dendrogram and green/red matrix p",
+      "thread_id": "thread-c61db61b7045",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-5ceb1e27d900",
+      "message_id": "<3D767872.9AD79875@bms.com>",
+      "from_name": "Isaac Neuhaus",
+      "from_email_hash": "2544e24ccabbfffe3a8c001b6b5f8fff8bae97516a7af89a4a7b7427c971bf36",
+      "date": "2002-09-04T21:17:38Z",
+      "subject": "[BioC] Trouble with affy version 1.2.1",
+      "subject_clean": "[BioC] Trouble with affy version 1.2.1",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "I am running R 1.5.1 and I have installed the affy package version\n1.2.1. When I start R and select library affy I get the following error.\nAny help?\n\nIsaac\n\nP.S. I have installed HDF5 and rhdf5.\n---------------------------------------------------------------------------------------------\n\n> library(affy)\nLoading required package: Biobase\nLoading required package: methods\nExpanding the signature to include omitted arguments\nin definition: j = \"missing\"\n\nAttaching package `Biobase':\n\n\n        The following object(s) are masked from package:base :\n\n         split\n\n*************\naffy: development version (...this is usable...)\n*************\ndemo(affy.tour) will eventually work and give an overview...\n*************\nIf you have tkWidgets and rhdf5 installed, try\nexpresso(widget=T, hdf5=T)\n for a real thrill...\nLoading required package: eda\n-->detecting normalization methods from naming convention\n-->detecting expression value methods from naming convention\n-->detecting background correction methods from naming convention\n-->initCdf\n-->initCel\n-->initCel.container\nLoading required package: rhdf5\n\nAttaching package `rhdf5':\n\n\n        The following object(s) are masked from package:base :\n\n         is.finite is.matrix\n\n-->initPPSet\n-->initPPSet.container\n-->initPlob\nError in setMethod(\"abstract\", \"Plob\", function(object)\nabstract(object@description),  :\n        No existing definition for function \"abstract\"\nError in library(affy) : .First.lib failed",
+      "body_snippet": "I am running R 1.5.1 and I have installed the affy package version\n1.2.1. When I start R and select library affy I get the following error.\nAny help?\n\nIsaac\n\nP.S. I have installed HDF5 and rhdf5.\n----",
+      "thread_id": "thread-5ceb1e27d900",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-4e8c4bc50b01",
+      "message_id": "<20020905064703.GA22019@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "46ea1fbf1dde6cd7ce00fc69b0ee2b1457b50e6b5c9e07bd3a465dc588db5dd1",
+      "date": "2002-09-05T06:47:03Z",
+      "subject": "[BioC] Trouble with affy version 1.2.1",
+      "subject_clean": "[BioC] Trouble with affy version 1.2.1",
+      "in_reply_to": "<3D767872.9AD79875@bms.com>",
+      "references": [
+        "<3D767872.9AD79875@bms.com>"
+      ],
+      "body_plain": "The use of the 'devel' version of the package Biobase should keep R\nhappy.\n\nLet us know if it not the case.\n\n\nHopin' it helps,\n\n\n\nLaurent\n\n\n\n\n\nOn Wed, Sep 04, 2002 at 05:17:38PM -0400, Isaac Neuhaus wrote:\n> I am running R 1.5.1 and I have installed the affy package version\n> 1.2.1. When I start R and select library affy I get the following error.\n> Any help?\n> \n> Isaac\n> \n> P.S. I have installed HDF5 and rhdf5.\n> ---------------------------------------------------------------------------------------------\n> \n> > library(affy)\n> Loading required package: Biobase\n> Loading required package: methods\n> Expanding the signature to include omitted arguments\n> in definition: j = \"missing\"\n> \n> Attaching package `Biobase':\n> \n> \n>         The following object(s) are masked from package:base :\n> \n>          split\n> \n> *************\n> affy: development version (...this is usable...)\n> *************\n> demo(affy.tour) will eventually work and give an overview...\n> *************\n> If you have tkWidgets and rhdf5 installed, try\n> expresso(widget=T, hdf5=T)\n>  for a real thrill...\n> Loading required package: eda\n> -->detecting normalization methods from naming convention\n> -->detecting expression value methods from naming convention\n> -->detecting background correction methods from naming convention\n> -->initCdf\n> -->initCel\n> -->initCel.container\n> Loading required package: rhdf5\n> \n> Attaching package `rhdf5':\n> \n> \n>         The following object(s) are masked from package:base :\n> \n>          is.finite is.matrix\n> \n> -->initPPSet\n> -->initPPSet.container\n> -->initPlob\n> Error in setMethod(\"abstract\", \"Plob\", function(object)\n> abstract(object@description),  :\n>         No existing definition for function \"abstract\"\n> Error in library(affy) : .First.lib failed\n> \n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n-- \n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tDK-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 89\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "The use of the 'devel' version of the package Biobase should keep R\nhappy.\n\nLet us know if it not the case.\n\n\nHopin' it helps,\n\n\n\nLaurent\n\n\n\n\n\nOn Wed, Sep 04, 2002 at 05:17:38PM -0400, Isaac Neuhaus w",
+      "thread_id": "thread-5ceb1e27d900",
+      "thread_depth": 1,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-09b06b19d4d5",
+      "message_id": "<3D774C2E.F2C91607@bms.com>",
+      "from_name": "Isaac Neuhaus",
+      "from_email_hash": "2544e24ccabbfffe3a8c001b6b5f8fff8bae97516a7af89a4a7b7427c971bf36",
+      "date": "2002-09-05T12:21:02Z",
+      "subject": "[BioC] Trouble with affy version 1.2.1",
+      "subject_clean": "[BioC] Trouble with affy version 1.2.1",
+      "in_reply_to": null,
+      "references": [
+        "<3D767872.9AD79875@bms.com>",
+        "<20020905064703.GA22019@giraffa.cbs.dtu.dk>"
+      ],
+      "body_plain": "Thanks.\n\nYes that fixed it.\n\nIsaac\n\nLaurent Gautier wrote:\n\n> The use of the 'devel' version of the package Biobase should keep R\n> happy.\n>\n> Let us know if it not the case.\n>\n> Hopin' it helps,\n>\n> Laurent\n>\n> On Wed, Sep 04, 2002 at 05:17:38PM -0400, Isaac Neuhaus wrote:\n> > I am running R 1.5.1 and I have installed the affy package version\n> > 1.2.1. When I start R and select library affy I get the following error.\n> > Any help?\n> >\n> > Isaac\n> >\n> > P.S. I have installed HDF5 and rhdf5.\n> > ---------------------------------------------------------------------------------------------\n> >\n> > > library(affy)\n> > Loading required package: Biobase\n> > Loading required package: methods\n> > Expanding the signature to include omitted arguments\n> > in definition: j = \"missing\"\n> >\n> > Attaching package `Biobase':\n> >\n> >\n> >         The following object(s) are masked from package:base :\n> >\n> >          split\n> >\n> > *************\n> > affy: development version (...this is usable...)\n> > *************\n> > demo(affy.tour) will eventually work and give an overview...\n> > *************\n> > If you have tkWidgets and rhdf5 installed, try\n> > expresso(widget=T, hdf5=T)\n> >  for a real thrill...\n> > Loading required package: eda\n> > -->detecting normalization methods from naming convention\n> > -->detecting expression value methods from naming convention\n> > -->detecting background correction methods from naming convention\n> > -->initCdf\n> > -->initCel\n> > -->initCel.container\n> > Loading required package: rhdf5\n> >\n> > Attaching package `rhdf5':\n> >\n> >\n> >         The following object(s) are masked from package:base :\n> >\n> >          is.finite is.matrix\n> >\n> > -->initPPSet\n> > -->initPPSet.container\n> > -->initPlob\n> > Error in setMethod(\"abstract\", \"Plob\", function(object)\n> > abstract(object@description),  :\n> >         No existing definition for function \"abstract\"\n> > Error in library(affy) : .First.lib failed\n> >\n> >\n> > _______________________________________________\n> > Bioconductor mailing list\n> > Bioconductor@stat.math.ethz.ch\n> > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>\n> --\n> --------------------------------------------------------------\n> Laurent Gautier                 CBS, Building 208, DTU\n> PhD. Student                    DK-2800 Lyngby,Denmark\n> tel: +45 45 25 24 89            http://www.cbs.dtu.dk/laurent\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor",
+      "body_snippet": "Thanks.\n\nYes that fixed it.\n\nIsaac\n\nLaurent Gautier wrote:\n\n> The use of the 'devel' version of the package Biobase should keep R\n> happy.\n>\n> Let us know if it not the case.\n>\n> Hopin' it helps,\n>\n> ",
+      "thread_id": "thread-5ceb1e27d900",
+      "thread_depth": 2,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-3cbe55a243b8",
+      "message_id": "<0472DD9D88A8D61187540002B32BD85531C0DA@exc.wibr.ucl.ac.uk>",
+      "from_name": "Stephen Henderson",
+      "from_email_hash": "0f997ef1b2504f6f8cce66e771b1443562859d0faf7b2b4ca695fdcbefca0be5",
+      "date": "2002-09-06T15:20:52Z",
+      "subject": "[BioC] memory to use affy package",
+      "subject_clean": "[BioC] memory to use affy package",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This message is in MIME format. Since your mail reader does not understand\nthis format, some or all of this message may not be legible.\n\n------_=_NextPart_001_01C255B8.FC98A200\nContent-Type: text/plain\n\nI have been trying to use the affy package. I am running the Win32 version\nbut I am finding that calculating expression values (HG133A X 6) crashes R.\nthat is I run out of memory. \n\ne.g\n> express(Data,normalize=T, normalize.method=\"quantiles\")\nNormalizing Data\nBackground correcting\nPreparing Data\nError: cannot allocate vector of size 32768 Kb\nIn addition: Warning message: \nReached total allocation of 500Mb: see help(memory.size)\n\nI have allocated the maximum for this computer \n\ne.g.\n> memory.limit(whatever)\n\nI have 3 questions that I would be grateful if anyone could help me with:-\n\n1. Do all expression calculation and normalisation methods use similar\namounts of memory (e.g loess?)?\n\n2. Does the memory requirement for some methods rise as the chip numbers\nrise?\n\n3. Reasonably how much memory do I need on a WIN32 to analyse HG133A chips?\n\nMany Thanks\nStephen Henderson\n\n\n\n**********************************************************************\nThis email and any files transmitted with it are confidential and\nintended solely for the use of the individual or entity to whom they\nare addressed. If you have received this email in error please notify\nthe system manager (rmgztem@ucl.ac.uk). All files are scanned for viruses.\n**********************************************************************\n\n\n------_=_NextPart_001_01C255B8.FC98A200\nContent-Type: text/html\nContent-Transfer-Encoding: quoted-printable\n\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2//EN\">\n<HTML>\n<HEAD>\n<META HTTP-EQUIV=3D\"Content-Type\" CONTENT=3D\"text/html; charset=3Dus-ascii\">\n<META NAME=3D\"Generator\" CONTENT=3D\"MS Exchange Server version 5.5.2653.12\">\n<TITLE>memory to use affy package</TITLE>\n</HEAD>\n<BODY>\n\n<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D\"Courier New\">I have been trying to u=\nse the affy package. I am running the Win32 version but I am finding that c=\nalculating expression values</FONT> <FONT SIZE=3D2 FACE=3D\"Courier New\">(HG=\n133A</FONT><FONT SIZE=3D2 FACE=3D\"Courier New\"> X 6)</FONT> <FONT SIZE=3D2 =\nFACE=3D\"Courier New\">crashes R.</FONT> <FONT SIZE=3D2 FACE=3D\"Courier New\">=\nthat is I run out of</FONT><FONT SIZE=3D2 FACE=3D\"Courier New\"> memory.</FO=\nNT><FONT SIZE=3D2 FACE=3D\"Courier New\"></FONT> </P>\n\n<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D\"Courier New\">e.g</FONT></P>\n\n<P ALIGN=3DLEFT><I><FONT SIZE=3D2 FACE=3D\"Courier New\">&gt; express(Data,no=\nrmalize=3DT, normalize.method=3D&quot;quantiles&quot;)</FONT></I></P>\n\n<P ALIGN=3DLEFT><I><FONT SIZE=3D2 FACE=3D\"Courier New\">Normalizing Data</FO=\nNT></I></P>\n\n<P ALIGN=3DLEFT><I><FONT SIZE=3D2 FACE=3D\"Courier New\">Background correctin=\ng</FONT></I></P>\n\n<P ALIGN=3DLEFT><I><FONT SIZE=3D2 FACE=3D\"Courier New\">Preparing Data</FONT=\n></I></P>\n\n<P ALIGN=3DLEFT><I><FONT SIZE=3D2 FACE=3D\"Courier New\">Error: cannot alloca=\nte vector of size 32768 Kb</FONT></I></P>\n\n<P ALIGN=3DLEFT><I><FONT SIZE=3D2 FACE=3D\"Courier New\">In addition: Warning=\n message: </FONT></I></P>\n\n<P ALIGN=3DLEFT><I><FONT SIZE=3D2 FACE=3D\"Courier New\">Reached total alloca=\ntion of 500Mb: see help(memory.size)</FONT></I><I></I></P>\n\n<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D\"Courier New\">I have allocated the ma=\nximum for this computer </FONT></P>\n\n<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D\"Courier New\">e.g.</FONT></P>\n\n<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D\"Courier New\">&gt;</FONT><I> <FONT SI=\nZE=3D2 FACE=3D\"Courier New\">memory.limit(</FONT></I><I><FONT SIZE=3D2 FACE=\n=3D\"Courier New\">whatever</FONT></I><I><FONT SIZE=3D2 FACE=3D\"Courier New\">=\n)</FONT></I></P>\n\n<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D\"Courier New\">I have</FONT> <FONT SIZ=\nE=3D2 FACE=3D\"Courier New\">3</FONT><FONT SIZE=3D2 FACE=3D\"Courier New\"> que=\nstions</FONT><FONT SIZE=3D2 FACE=3D\"Courier New\"> that I would be gr</FONT>=\n<FONT SIZE=3D2 FACE=3D\"Courier New\">a</FONT><FONT SIZE=3D2 FACE=3D\"Courier =\nNew\">teful if anyone could help me with</FONT><FONT SIZE=3D2 FACE=3D\"Courie=\nr New\">:-</FONT></P>\n\n<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D\"Courier New\">1. Do all expression ca=\nlculation and normalisation methods use similar</FONT> <FONT SIZE=3D2 FACE=\n=3D\"Courier New\">amounts of</FONT> <FONT SIZE=3D2 FACE=3D\"Courier New\">memo=\nry</FONT><FONT SIZE=3D2 FACE=3D\"Courier New\"> (e.g loess?)?</FONT></P>\n\n<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D\"Courier New\">2. Does the memory requ=\nirement</FONT> <FONT SIZE=3D2 FACE=3D\"Courier New\">for some methods</FONT> =\n<FONT SIZE=3D2 FACE=3D\"Courier New\">rise as the chip number</FONT><FONT SIZ=\nE=3D2 FACE=3D\"Courier New\">s</FONT><FONT SIZE=3D2 FACE=3D\"Courier New\"> ris=\ne?</FONT></P>\n\n<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D\"Courier New\">3. Reasonably h</FONT><=\nFONT SIZE=3D2 FACE=3D\"Courier New\">ow much memory do I need</FONT> <FONT SI=\nZE=3D2 FACE=3D\"Courier New\">on a WIN32</FONT> <FONT SIZE=3D2 FACE=3D\"Courie=\nr New\">to analyse HG133A chips?</FONT></P>\n\n<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D\"Courier New\">Many Thanks</FONT></P>\n\n<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D\"Courier New\">Stephen Henderson</FONT=\n></P>\n\n<CODE><FONT SIZE=3D3><BR>\n<BR>\n**********************************************************************<BR>\nThis email and any files transmitted with it are confidential and<BR>\nintended solely for the use of the individual or entity to whom they<BR>\nare addressed. If you have received this email in error please notify<BR>\nthe system manager (rmgztem@ucl.ac.uk). All files are scanned for viruses.<=\nBR>\n**********************************************************************<BR>\n</FONT></CODE>\n</BODY>\n</HTML>\n------_=_NextPart_001_01C255B8.FC98A200--",
+      "body_snippet": "This message is in MIME format. Since your mail reader does not understand\nthis format, some or all of this message may not be legible.\n\n------_=_NextPart_001_01C255B8.FC98A200\nContent-Type: text/plai",
+      "thread_id": "thread-3cbe55a243b8",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-efb87e9ec20b",
+      "message_id": "<Pine.LNX.4.33.0209061244260.2221-100000@localhost.localdomain>",
+      "from_name": "Rafael A. Irizarry",
+      "from_email_hash": "05a677c1148207b83eb8bc3532d7193bce333c0fe976f77ab582c8bfe9f05d4d",
+      "date": "2002-09-06T16:45:24Z",
+      "subject": "[BioC] memory to use affy package",
+      "subject_clean": "[BioC] memory to use affy package",
+      "in_reply_to": "<0472DD9D88A8D61187540002B32BD85531C0DA@exc.wibr.ucl.ac.uk>",
+      "references": [],
+      "body_plain": "did you increase the memory allocated to R. with 6 chips, 256M should be \nenough\n-rafael\n\nOn Fri, 6 Sep 2002, Stephen Henderson wrote:\n\n> I have been trying to use the affy package. I am running the Win32 version\n> but I am finding that calculating expression values (HG133A X 6) crashes R.\n> that is I run out of memory. \n> \n> e.g\n> > express(Data,normalize=T, normalize.method=\"quantiles\")\n> Normalizing Data\n> Background correcting\n> Preparing Data\n> Error: cannot allocate vector of size 32768 Kb\n> In addition: Warning message: \n> Reached total allocation of 500Mb: see help(memory.size)\n> \n> I have allocated the maximum for this computer \n> \n> e.g.\n> > memory.limit(whatever)\n> \n> I have 3 questions that I would be grateful if anyone could help me with:-\n> \n> 1. Do all expression calculation and normalisation methods use similar\n> amounts of memory (e.g loess?)?\n> \n> 2. Does the memory requirement for some methods rise as the chip numbers\n> rise?\n> \n> 3. Reasonably how much memory do I need on a WIN32 to analyse HG133A chips?\n> \n> Many Thanks\n> Stephen Henderson\n> \n> \n> \n> **********************************************************************\n> This email and any files transmitted with it are confidential and\n> intended solely for the use of the individual or entity to whom they\n> are addressed. If you have received this email in error please notify\n> the system manager (rmgztem@ucl.ac.uk). All files are scanned for viruses.\n> **********************************************************************\n> \n>",
+      "body_snippet": "did you increase the memory allocated to R. with 6 chips, 256M should be \nenough\n-rafael\n\nOn Fri, 6 Sep 2002, Stephen Henderson wrote:\n\n> I have been trying to use the affy package. I am running the W",
+      "thread_id": "thread-3cbe55a243b8",
+      "thread_depth": 1,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-f39eb6f531ad",
+      "message_id": "<20020906172905.GB4382@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "46ea1fbf1dde6cd7ce00fc69b0ee2b1457b50e6b5c9e07bd3a465dc588db5dd1",
+      "date": "2002-09-06T17:29:05Z",
+      "subject": "[BioC] memory to use affy package",
+      "subject_clean": "[BioC] memory to use affy package",
+      "in_reply_to": "<0472DD9D88A8D61187540002B32BD85531C0DA@exc.wibr.ucl.ac.uk>",
+      "references": [
+        "<0472DD9D88A8D61187540002B32BD85531C0DA@exc.wibr.ucl.ac.uk>"
+      ],
+      "body_plain": "On Fri, Sep 06, 2002 at 04:20:52PM +0100, Stephen Henderson wrote:\n> I have been trying to use the affy package. I am running the Win32 version\n> but I am finding that calculating expression values (HG133A X 6) crashes R.\n> that is I run out of memory. \n> \n> e.g\n> > express(Data,normalize=T, normalize.method=\"quantiles\")\n> Normalizing Data\n> Background correcting\n> Preparing Data\n> Error: cannot allocate vector of size 32768 Kb\n> In addition: Warning message: \n> Reached total allocation of 500Mb: see help(memory.size)\n> \n> I have allocated the maximum for this computer \n> \n> e.g.\n> > memory.limit(whatever)\n> \n> I have 3 questions that I would be grateful if anyone could help me with:-\n> \n> 1. Do all expression calculation and normalisation methods use similar\n> amounts of memory (e.g loess?)?\n\nNo.\n\n> \n> 2. Does the memory requirement for some methods rise as the chip numbers\n> rise?\n\nYes. (for all methods)\n\n> \n> 3. Reasonably how much memory do I need on a WIN32 to analyse HG133A chips?\n> \n\nIt depends on the number of chips. I am not very knowledgeable about \nthe behavior of R and the package under Windows. Could you tell more\nabout the number of chips you have loaded and the total amount of\nRAM your computer has ?\n\n> Many Thanks\n> Stephen Henderson\n> \n> \n> \n> **********************************************************************\n> This email and any files transmitted with it are confidential and\n> intended solely for the use of the individual or entity to whom they\n> are addressed. If you have received this email in error please notify\n> the system manager (rmgztem@ucl.ac.uk). All files are scanned for viruses.\n> **********************************************************************\n> \n\n-- \n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tDK-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 89\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "On Fri, Sep 06, 2002 at 04:20:52PM +0100, Stephen Henderson wrote:\n> I have been trying to use the affy package. I am running the Win32 version\n> but I am finding that calculating expression values (H",
+      "thread_id": "thread-3cbe55a243b8",
+      "thread_depth": 1,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-130e488e8ea6",
+      "message_id": "<0472DD9D88A8D61187540002B32BD85531C0DC@exc.wibr.ucl.ac.uk>",
+      "from_name": "Stephen Henderson",
+      "from_email_hash": "0f997ef1b2504f6f8cce66e771b1443562859d0faf7b2b4ca695fdcbefca0be5",
+      "date": "2002-09-07T15:58:59Z",
+      "subject": "[BioC] memory to use affy package",
+      "subject_clean": "[BioC] memory to use affy package",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "My computer has 384Mb\n\nI'm told 256 should be sufficient (if slow). I think I have a problem with\nthe memory allocation of my computer to R or my understanding of said\nprocess.\n\nI'll try reloading R--and see what happens.\n\n\n-----Original Message-----\nFrom: Laurent Gautier [mailto:laurent@cbs.dtu.dk] \nSent: Friday, September 06, 2002 6:29 PM\nTo: Stephen Henderson\nCc: 'bioconductor@stat.math.ethz.ch'\nSubject: Re: [BioC] memory to use affy package\n\nOn Fri, Sep 06, 2002 at 04:20:52PM +0100, Stephen Henderson wrote:\n> I have been trying to use the affy package. I am running the Win32 version\n> but I am finding that calculating expression values (HG133A X 6) crashes\nR.\n> that is I run out of memory. \n> \n> e.g\n> > express(Data,normalize=T, normalize.method=\"quantiles\")\n> Normalizing Data\n> Background correcting\n> Preparing Data\n> Error: cannot allocate vector of size 32768 Kb\n> In addition: Warning message: \n> Reached total allocation of 500Mb: see help(memory.size)\n> \n> I have allocated the maximum for this computer \n> \n> e.g.\n> > memory.limit(whatever)\n> \n> I have 3 questions that I would be grateful if anyone could help me with:-\n> \n> 1. Do all expression calculation and normalisation methods use similar\n> amounts of memory (e.g loess?)?\n\nNo.\n\n> \n> 2. Does the memory requirement for some methods rise as the chip numbers\n> rise?\n\nYes. (for all methods)\n\n> \n> 3. Reasonably how much memory do I need on a WIN32 to analyse HG133A\nchips?\n> \n\nIt depends on the number of chips. I am not very knowledgeable about \nthe behavior of R and the package under Windows. Could you tell more\nabout the number of chips you have loaded and the total amount of\nRAM your computer has ?\n\n> Many Thanks\n> Stephen Henderson\n> \n> \n> \n> **********************************************************************\n> This email and any files transmitted with it are confidential and\n> intended solely for the use of the individual or entity to whom they\n> are addressed. If you have received this email in error please notify\n> the system manager (rmgztem@ucl.ac.uk). All files are scanned for viruses.\n> **********************************************************************\n> \n\n-- \n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tDK-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 89\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "My computer has 384Mb\n\nI'm told 256 should be sufficient (if slow). I think I have a problem with\nthe memory allocation of my computer to R or my understanding of said\nprocess.\n\nI'll try reloading R--",
+      "thread_id": "thread-130e488e8ea6",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-3aa2672090ad",
+      "message_id": "<DF5498CC27A1D411856D00508BF9B098068E73AB@kenmsg31.schp.com>",
+      "from_name": "Ding, Wei",
+      "from_email_hash": "c02bb502f350567829fecaa3d73c74b223a46082143a3465fea06bab5902f183",
+      "date": "2002-09-10T15:57:11Z",
+      "subject": "[BioC] (no subject)",
+      "subject_clean": "[BioC] (no subject)",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This message is in MIME format. Since your mail reader does not understand\nthis format, some or all of this message may not be legible.\n\n------_=_NextPart_001_01C258E2.B949A620\nContent-Type: text/plain\n\nHi, my name is Wei Ding. I am very interested in the short course (workshop)\nyou provided. I wonder whether you will give any more similar course in U.S.\nIf you will, can I have your schedule? Thanks!\n\nWei Ding, Ph.D.\nSenior Scientist\nSchering-Plough Research Institute\n2015 Galloping Hill Road\nKenilworth, NJ 07033\nTel:  (908) 740-2592\nFax: (908) 740-7664\n\n\n***************************************************************\n This message and any attachments is solely for the intended recipient. If\nyou are not the intended recipient, disclosure, copying, use, or\ndistribution of the information included in this message is prohibited --\nplease immediately and permanently delete this message.\n\n------_=_NextPart_001_01C258E2.B949A620\nContent-Type: text/html\nContent-Transfer-Encoding: quoted-printable\n\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2//EN\">\n<HTML>\n<HEAD>\n<META HTTP-EQUIV=3D\"Content-Type\" CONTENT=3D\"text/html; =\ncharset=3Dus-ascii\">\n<META NAME=3D\"Generator\" CONTENT=3D\"MS Exchange Server version =\n5.5.2653.12\">\n<TITLE></TITLE>\n</HEAD>\n<BODY>\n\n<P><FONT SIZE=3D2 FACE=3D\"Arial\">Hi, my name is Wei Ding. I am very =\ninterested in the short course (workshop) you provided. I wonder =\nwhether you will give any more similar course in U.S. If you will, can =\nI have your schedule? Thanks!</FONT></P>\n\n<P><B><FONT SIZE=3D2 FACE=3D\"Arial\">Wei Ding, Ph.D.</FONT></B>\n<BR><FONT SIZE=3D2 FACE=3D\"Arial\">Senior Scientist</FONT>\n<BR><FONT SIZE=3D2 FACE=3D\"Arial\">Schering-Plough Research =\nInstitute</FONT>\n<BR><FONT SIZE=3D2 FACE=3D\"Arial\">2015 Galloping Hill Road</FONT>\n<BR><FONT SIZE=3D2 FACE=3D\"Arial\">Kenilworth, NJ 07033</FONT>\n<BR><FONT SIZE=3D2 FACE=3D\"Arial\">Tel:&nbsp; (908) 740-2592</FONT>\n<BR><FONT SIZE=3D2 FACE=3D\"Arial\">Fax: (908) 740-7664</FONT>\n</P>\n<BR>\n\n<P><FONT SIZE=3D2 =\nFACE=3D\"Arial\">*********************************************************=\n******</FONT>\n<BR><FONT SIZE=3D2 FACE=3D\"Arial\"> This message and any attachments is =\nsolely for the intended recipient. If you are not the intended =\nrecipient, disclosure, copying, use, or distribution of the information =\nincluded in this message is prohibited -- please immediately and =\npermanently delete this message.</FONT></P>\n\n</BODY>\n</HTML>\n------_=_NextPart_001_01C258E2.B949A620--",
+      "body_snippet": "This message is in MIME format. Since your mail reader does not understand\nthis format, some or all of this message may not be legible.\n\n------_=_NextPart_001_01C258E2.B949A620\nContent-Type: text/plai",
+      "thread_id": "thread-3aa2672090ad",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-69fca324d1d0",
+      "message_id": "<002d01c258f1$484a80c0$7a3ca48c@Remo>",
+      "from_name": "Remo Sanges",
+      "from_email_hash": "f0bb9d938072d05fb76b586ce81318be2b4d3de2cea1ab8d8c4d971d60c6367e",
+      "date": "2002-09-10T17:41:23Z",
+      "subject": "[BioC] Problem whit Affy",
+      "subject_clean": "[BioC] Problem whit Affy",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi all,\n\nI have this problem if I normalize with invariant set method and compute\nexpression whit li.wong method whit a plob and also whit a celcontainer:\n> p<-ReadAffy()\n\nreading CDF file\nprocessing information\nreading 6 CEL files......\npreparing probe level object\n\n> nor2<-normalize(p, method=\"invariantset\")\n\n> ex2<-express(nor2, normalize=F, summary.stat=li.wong)\nBackground correcting\nPreparing Data\nComputing expression. This may take a while.\nError in while (change > delta & iter < maxit) { :\n        missing value where logical needed\n\n> ex2<-express(nor2, normalize=F, summary.stat=li.wong, maxit=1)\nBackground correcting\nPreparing Data\nComputing expression. This may take a while.\nError in while (change > delta & iter < maxit) { :\n        missing value where logical needed\n\n\nor whit a celcontainer normalized whit liwong\n\nex1 <- generateExprSet(list.norm, cdf, \"liwong\")\n22283 ids to go process...\ninstancianting an exprSet...\n. Error in while (change > delta & iter < maxit) { :\nmissing value where logical needed\n\nI have this problem whit the stable release 1.0 on a win2k and on a redhat\n7.3 (1Gb ram) and whit the developmental version on a win2k and a redhat 7.2\n(1Gb ram).\nWhy?\nThanks\n\n\n__________________________________\nRemo Sanges\nBioGeM\nGene Expression Core Lab\nVia Pietro Castellino 111\n80131 Naples\nItaly\n+39 081 6132265\nsanges@biogem.it    sanges@iigb.na.cnr.it\n__________________________________",
+      "body_snippet": "Hi all,\n\nI have this problem if I normalize with invariant set method and compute\nexpression whit li.wong method whit a plob and also whit a celcontainer:\n> p<-ReadAffy()\n\nreading CDF file\nprocessing ",
+      "thread_id": "thread-69fca324d1d0",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-5162de098c1a",
+      "message_id": "<Pine.LNX.4.33.0209101514180.18018-100000@localhost.localdomain>",
+      "from_name": "Rafael A. Irizarry",
+      "from_email_hash": "05a677c1148207b83eb8bc3532d7193bce333c0fe976f77ab582c8bfe9f05d4d",
+      "date": "2002-09-10T19:42:14Z",
+      "subject": "[BioC] Problem whit Affy",
+      "subject_clean": "[BioC] Problem whit Affy",
+      "in_reply_to": "<002d01c258f1$484a80c0$7a3ca48c@Remo>",
+      "references": [],
+      "body_plain": "our implementation of the li and wong procedure is not stable. the most \ncommon problem is that the code assumes the number of outliers wont cause \ncertain variables to be NAs. \nthis is quite common when the number of arrays is small. notice li and \nwong suggest at least 10 arrays for their procedure to work properly.\n\nwhat happens if you run express with the \n\nremove.outliers=F ?\n\nif that works, the you might be able to get it to work by adding \na line like this \n\nif(length(change)==0) | is.na(change)) change <- 0\n\nin the function fit.li.wong after every definition of \"change\". \n\nrafael\n\n\n\nOn Tue, 10 Sep 2002, Remo Sanges wrote:\n\n> Hi all,\n> \n> I have this problem if I normalize with invariant set method and compute\n> expression whit li.wong method whit a plob and also whit a celcontainer:\n> > p<-ReadAffy()\n> \n> reading CDF file\n> processing information\n> reading 6 CEL files......\n> preparing probe level object\n> \n> > nor2<-normalize(p, method=\"invariantset\")\n> \n> > ex2<-express(nor2, normalize=F, summary.stat=li.wong)\n> Background correcting\n> Preparing Data\n> Computing expression. This may take a while.\n> Error in while (change > delta & iter < maxit) { :\n>         missing value where logical needed\n> \n> > ex2<-express(nor2, normalize=F, summary.stat=li.wong, maxit=1)\n> Background correcting\n> Preparing Data\n> Computing expression. This may take a while.\n> Error in while (change > delta & iter < maxit) { :\n>         missing value where logical needed\n> \n> \n> or whit a celcontainer normalized whit liwong\n> \n> ex1 <- generateExprSet(list.norm, cdf, \"liwong\")\n> 22283 ids to go process...\n> instancianting an exprSet...\n> . Error in while (change > delta & iter < maxit) { :\n> missing value where logical needed\n> \n> I have this problem whit the stable release 1.0 on a win2k and on a redhat\n> 7.3 (1Gb ram) and whit the developmental version on a win2k and a redhat 7.2\n> (1Gb ram).\n> Why?\n> Thanks\n> \n> \n> __________________________________\n> Remo Sanges\n> BioGeM\n> Gene Expression Core Lab\n> Via Pietro Castellino 111\n> 80131 Naples\n> Italy\n> +39 081 6132265\n> sanges@biogem.it    sanges@iigb.na.cnr.it\n> __________________________________\n> \n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>",
+      "body_snippet": "our implementation of the li and wong procedure is not stable. the most \ncommon problem is that the code assumes the number of outliers wont cause \ncertain variables to be NAs. \nthis is quite common w",
+      "thread_id": "thread-69fca324d1d0",
+      "thread_depth": 1,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-b919a5a32ada",
+      "message_id": "<0472DD9D88A8D61187540002B32BD85531C0FB@exc.wibr.ucl.ac.uk>",
+      "from_name": "Stephen Henderson",
+      "from_email_hash": "0f997ef1b2504f6f8cce66e771b1443562859d0faf7b2b4ca695fdcbefca0be5",
+      "date": "2002-09-11T10:56:26Z",
+      "subject": "[BioC] RE: memory problem in R",
+      "subject_clean": "[BioC] RE: memory problem in R",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This message is in MIME format. Since your mail reader does not understand\nthis format, some or all of this message may not be legible.\n\n------_=_NextPart_001_01C25981.E0294710\nContent-Type: text/plain\n\nThank you very much, that has remedied the problem I had actually given up\non. Odd as the memory options \"memory.size( ), memory.limit( )\"  in R-Win\nitself do not appear capable of extending the memory.\n\n \n\nThanks Again\n\nStephen\n\n \n\n-----Original Message-----\nFrom: Tibor van Rooij [mailto:tibor@cs.mcgill.ca] \nSent: Tuesday, September 10, 2002 6:29 PM\nTo: s.henderson\nSubject: memory problem in R\n\n \n\nHi Stephen,\n\n \n\nThis is to remedy the run out of memory problem in R assuming your in\nwindows.\n\n \n\nIf you have a shortcut on your desktop for R (or somewhere else), then if\nyou right click on the icon and bring up the Properties window, you will see\nan entry for \nTarget with the path to the executable filled in. After that path (and\noutside of the quotes) add this command-line argument on my PC, for example\nit would look like this: \n\n \n\n\"C:\\Program Files\\R\\rw1051\\bin\\Rgui.exe\" --max-mem-size=768M \n\n \n\nRestart R and you will be in business...\n\n \n\nTibor\n\n___________________________ \nTibor van Rooij \nBioinformatician \nMontreal Genome Centre\nMcGill University, Duff Building \nTel:  (514) 398-2497\nFax: (514) 398-1838\n \n\"Alle Menschen werden Bruder\"-- Friedrich von Schiller\n\n\n\n**********************************************************************\nThis email and any files transmitted with it are confidential and\nintended solely for the use of the individual or entity to whom they\nare addressed. If you have received this email in error please notify\nthe system manager (rmgztem@ucl.ac.uk). All files are scanned for viruses.\n**********************************************************************\n\n\n------_=_NextPart_001_01C25981.E0294710\nContent-Type: text/html\nContent-Transfer-Encoding: quoted-printable\n\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">\n<html>\n\n<head>\n<META HTTP-EQUIV=3D\"Content-Type\" CONTENT=3D\"text/html; charset=3Dus-ascii\">\n\n\n<meta name=3DGenerator content=3D\"Microsoft Word 10 (filtered)\">\n\n<style>\n<!--\n /* Font Definitions */\n @font-face\n\t{font-family:Tahoma;\n\tpanose-1:2 11 6 4 3 5 4 4 2 4;}\n /* Style Definitions */\n p.MsoNormal, li.MsoNormal, div.MsoNormal\n\t{margin:0in;\n\tmargin-bottom:.0001pt;\n\tfont-size:12.0pt;\n\tfont-family:\"Times New Roman\";}\na:link, span.MsoHyperlink\n\t{color:blue;\n\ttext-decoration:underline;}\na:visited, span.MsoHyperlinkFollowed\n\t{color:purple;\n\ttext-decoration:underline;}\nspan.EmailStyle17\n\t{font-family:Arial;\n\tcolor:navy;}\n@page Section1\n\t{size:8.5in 11.0in;\n\tmargin:1.0in 1.25in 1.0in 1.25in;}\ndiv.Section1\n\t{page:Section1;}\n-->\n</style>\n\n</head>\n\n<body bgcolor=3Dwhite lang=3DEN-US link=3Dblue vlink=3Dpurple>\n\n<div class=3DSection1>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 color=3Dnavy=\n face=3DArial><span\nstyle=3D'font-size:10.0pt;font-family:Arial;color:navy'>Thank you very much=\n, that\nhas remedied the problem I had actually given up on. Odd as the memory opti=\nons \"memory.size(\n), memory.limit( )\"&nbsp; in R-Win itself do not appear capable of\nextending the memory.</span></font></p>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 color=3Dnavy=\n face=3DArial><span\nstyle=3D'font-size:10.0pt;font-family:Arial;color:navy'>&nbsp;</span></font=\n></p>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 color=3Dnavy=\n face=3DArial><span\nstyle=3D'font-size:10.0pt;font-family:Arial;color:navy'>Thanks Again</span>=\n</font></p>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 color=3Dnavy=\n face=3DArial><span\nstyle=3D'font-size:10.0pt;font-family:Arial;color:navy'>Stephen</span></fon=\nt></p>\n\n<p class=3DMsoNormal><font size=3D2 color=3Dnavy face=3DArial><span style=\n=3D'font-size:\n10.0pt;font-family:Arial;color:navy'>&nbsp;</span></font></p>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 face=3DTahom=\na><span\nstyle=3D'font-size:10.0pt;font-family:Tahoma'>-----Original Message-----<br>\n<b><span style=3D'font-weight:bold'>From:</span></b> Tibor van Rooij\n[mailto:tibor@cs.mcgill.ca] <br>\n<b><span style=3D'font-weight:bold'>Sent:</span></b> </span></font><font si=\nze=3D2 face=3DTahoma><span style=3D'font-size:10.0pt;font-family:Tahoma'>Tu=\nesday,\n September 10, 2002</span></font><font size=3D2 face=3DTahoma><span\nstyle=3D'font-size:10.0pt;font-family:Tahoma'> </span></font><font\n size=3D2 face=3DTahoma><span style=3D'font-size:10.0pt;font-family:Tahoma'=\n>6:29 PM</span></font><font\nsize=3D2 face=3DTahoma><span style=3D'font-size:10.0pt;font-family:Tahoma'>=\n<br>\n<b><span style=3D'font-weight:bold'>To:</span></b> s.henderson<br>\n<b><span style=3D'font-weight:bold'>Subject:</span></b> memory problem in R=\n</span></font></p>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D3 face=3D\"Time=\ns New Roman\"><span\nstyle=3D'font-size:12.0pt'>&nbsp;</span></font></p>\n\n<div>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 face=3DArial=\n><span\nstyle=3D'font-size:10.0pt;font-family:Arial'>Hi Stephen,</span></font></p>\n\n</div>\n\n<div>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D3 face=3D\"Time=\ns New Roman\"><span\nstyle=3D'font-size:12.0pt'>&nbsp;</span></font></p>\n\n</div>\n\n<div>\n\n<div>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 face=3DArial=\n><span\nstyle=3D'font-size:10.0pt;font-family:Arial'>This is to remedy the run out =\nof\nmemory problem in R assuming your in windows.</span></font></p>\n\n</div>\n\n<div>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 face=3DArial=\n><span\nstyle=3D'font-size:10.0pt;font-family:Arial'>&nbsp;</span></font></p>\n\n</div>\n\n<div>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 face=3DArial=\n><span\nstyle=3D'font-size:10.0pt;font-family:Arial'>If you have a shortcut on your\ndesktop for R (or somewhere else), then if you right click on the icon and\nbring up the Properties window, you will see an entry for <br>\nTarget with the path to the executable filled in. After that path (and outs=\nide\nof the quotes) add this command-line argument on my PC, for example it would\nlook like this: </span></font></p>\n\n</div>\n\n<div>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 face=3DArial=\n><span\nstyle=3D'font-size:10.0pt;font-family:Arial'>&nbsp;</span></font></p>\n\n</div>\n\n<div>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 face=3DArial=\n><span\nstyle=3D'font-size:10.0pt;font-family:Arial'>&quot;C:\\Program\nFiles\\R\\rw1051\\bin\\Rgui.exe&quot; --max-mem-size=3D768M </span></font></p>\n\n</div>\n\n<div>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 face=3DArial=\n><span\nstyle=3D'font-size:10.0pt;font-family:Arial'>&nbsp;</span></font></p>\n\n</div>\n\n<div>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 face=3DArial=\n><span\nstyle=3D'font-size:10.0pt;font-family:Arial'>Restart R and you will be in\nbusiness...</span></font></p>\n\n</div>\n\n<div>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 face=3DArial=\n><span\nstyle=3D'font-size:10.0pt;font-family:Arial'>&nbsp;</span></font></p>\n\n</div>\n\n<div>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 face=3DArial=\n><span\nstyle=3D'font-size:10.0pt;font-family:Arial'>Tibor</span></font></p>\n\n</div>\n\n<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 face=3DArial=\n><span\nstyle=3D'font-size:10.0pt;font-family:Arial'>___________________________ <b=\nr>\nTibor van Rooij <br>\nBioinformatician <br>\nMontreal Genome Centre<br>\n</span></font><font size=3D2 face=3DArial><span style=3D'font-size:10.0pt;f=\nont-family:\n  Arial'>McGill</span></font><font size=3D2 face=3DArial><span style=3D'fon=\nt-size:\n 10.0pt;font-family:Arial'> </span></font><font size=3D2 face=3DArial><span\n  style=3D'font-size:10.0pt;font-family:Arial'>University</span></font><font\nsize=3D2 face=3DArial><span style=3D'font-size:10.0pt;font-family:Arial'>, =\n</span></font><font\n  size=3D2 face=3DArial><span style=3D'font-size:10.0pt;font-family:Arial'>=\nDuff</span></font><font\n size=3D2 face=3DArial><span style=3D'font-size:10.0pt;font-family:Arial'> =\n</span></font><font\n  size=3D2 face=3DArial><span style=3D'font-size:10.0pt;font-family:Arial'>=\nBuilding</span></font><font\nsize=3D2 face=3DArial><span style=3D'font-size:10.0pt;font-family:Arial'> <=\nbr>\nTel:&nbsp; (514) 398-2497<br>\nFax: (514) 398-1838<br>\n&nbsp;<br>\n&quot;Alle Menschen werden Bruder&quot;-- Friedrich von Schiller</span></fo=\nnt></p>\n\n</div>\n\n</div>\n\n<CODE><FONT SIZE=3D3><BR>\n<BR>\n**********************************************************************<BR>\nThis email and any files transmitted with it are confidential and<BR>\nintended solely for the use of the individual or entity to whom they<BR>\nare addressed. If you have received this email in error please notify<BR>\nthe system manager (rmgztem@ucl.ac.uk). All files are scanned for viruses.<=\nBR>\n**********************************************************************<BR>\n</FONT></CODE>\n</body>\n\n</html>\n\n------_=_NextPart_001_01C25981.E0294710--",
+      "body_snippet": "This message is in MIME format. Since your mail reader does not understand\nthis format, some or all of this message may not be legible.\n\n------_=_NextPart_001_01C25981.E0294710\nContent-Type: text/plai",
+      "thread_id": "thread-b919a5a32ada",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-5eb803b946b1",
+      "message_id": "<1031824106.3d8062ead1fe1@sbox.tugraz.at>",
+      "from_name": "roland1@sbox.tugraz.at",
+      "from_email_hash": "79e1582387703ac93442f5cc4041239b91b5be7b60fcc58b9ba22772ce2479f3",
+      "date": "2002-09-12T09:48:26Z",
+      "subject": "[BioC] R-packages",
+      "subject_clean": "[BioC] R-packages",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hello,\n\nI'm a student at Zlatko Trajanoski's Bioinformatics-Workgroup at the \nUniversity of Technology Graz, Austria.\n\nMy master thesis deals with normalisation methods for cDNA-microarrays and\nstatistical analysis.\nThe goal is to implement a free Java-library (and additionally a GUI) to do \nthese steps of processing.\n\nI've searched through many parts of R-code (marray* - packages) and that's \nexactly what i need (input, plotting, normalize,...).\n\nBut how can i translate/convert the R-code into Java-code without proper \nknowledge about the R-language?\nHave you got any experience with such problems?\n\nAny further information would help me!\n\nThanks a lot for reading my mail,\n\nbest regards,\nRoland Pieler",
+      "body_snippet": "Hello,\n\nI'm a student at Zlatko Trajanoski's Bioinformatics-Workgroup at the \nUniversity of Technology Graz, Austria.\n\nMy master thesis deals with normalisation methods for cDNA-microarrays and\nstatis",
+      "thread_id": "thread-5eb803b946b1",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-a40f12ca91ad",
+      "message_id": "<AGEOLPCFGCEABFJOOAAMOEHPCAAA.w.huber@dkfz-heidelberg.de>",
+      "from_name": "Wolfgang Huber",
+      "from_email_hash": "a5efa0eff140cbce4ff21aada212234bffbb0be5ae26598f3e6b0bee7164b13d",
+      "date": "2002-09-12T15:39:46Z",
+      "subject": "[BioC] R-packages",
+      "subject_clean": "[BioC] R-packages",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi,\n\n>The goal is to implement a free Java-library (and additionally a GUI) to do\n>these steps of processing.\n\n>But how can i translate/convert the R-code into Java-code without proper\n>knowledge about the R-language?\nWhy would anyone want to do that? Sounds like reinventing the wheel. A\nbetter approach seems to be to write your GUI and DB interface in Java, and\nthen call the R engine with the appropriate R-libraries to do the hard work.\nR offers infrastructure for that, see SJava\n(http://www.omegahat.org/download/R/packages/), although I have no\nsignificant experience with that.\n\nBest regards\nWolfgang\n\n\nDr. Wolfgang Huber\nhttp://www.dkfz.de/abt0840/whuber\nTel +49-6221-424709\nFax +49-6221-42524709\nDKFZ\nDivision of Molecular Genome Analysis\n69120 Heidelberg\nGermany",
+      "body_snippet": "Hi,\n\n>The goal is to implement a free Java-library (and additionally a GUI) to do\n>these steps of processing.\n\n>But how can i translate/convert the R-code into Java-code without proper\n>knowledge abou",
+      "thread_id": "thread-a40f12ca91ad",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-e2fee39a1b0c",
+      "message_id": "<15744.46950.621285.240993@celeborn.leisch.at>",
+      "from_name": "Friedrich.Leisch@ci.tuwien.ac.at",
+      "from_email_hash": "31129dffff3fc3dc4381b5047dab418f8aba21aee2586c237b775a9f30d3cc59",
+      "date": "2002-09-12T15:48:54Z",
+      "subject": "[BioC] R-packages",
+      "subject_clean": "[BioC] R-packages",
+      "in_reply_to": "<1031824106.3d8062ead1fe1@sbox.tugraz.at>",
+      "references": [
+        "<1031824106.3d8062ead1fe1@sbox.tugraz.at>"
+      ],
+      "body_plain": ">>>>> On Thu, 12 Sep 2002 11:48:26 +0200 (MEST),\n>>>>> roland1  (r) wrote:\n\n  > Hello,\n  > I'm a student at Zlatko Trajanoski's Bioinformatics-Workgroup at the \n  > University of Technology Graz, Austria.\n\n  > My master thesis deals with normalisation methods for cDNA-microarrays and\n  > statistical analysis.\n  > The goal is to implement a free Java-library (and additionally a GUI) to do \n  > these steps of processing.\n\n  > I've searched through many parts of R-code (marray* - packages) and that's \n  > exactly what i need (input, plotting, normalize,...).\n\n  > But how can i translate/convert the R-code into Java-code without proper \n  > knowledge about the R-language?\n\nHmm, don't think one can translate between two languages without\nknowing both ...\n\n  > Have you got any experience with such problems?\n\n  > Any further information would help me!\n\nWhy would you want to re-create the stuff that's already in R?\nWouldn't it be better to build on top of what we already have in R?\nIs a RJava interface that allows to got from R to Java and back, hence\nyou can embed R in Java, so building a Java GUI on top of R is\npossible.\n\nBest,\nFritz Leisch\n\n-- \n-------------------------------------------------------------------\n                        Friedrich  Leisch \nInstitut fÃ¼r Statistik                     Tel: (+43 1) 58801 10715\nTechnische UniversitÃ¤t Wien                Fax: (+43 1) 58801 10798\nWiedner HauptstraÃŸe 8-10/1071      Friedrich.Leisch@ci.tuwien.ac.at\nA-1040 Wien, Austria             http://www.ci.tuwien.ac.at/~leisch\n-------------------------------------------------------------------",
+      "body_snippet": ">>>>> On Thu, 12 Sep 2002 11:48:26 +0200 (MEST),\n>>>>> roland1  (r) wrote:\n\n  > Hello,\n  > I'm a student at Zlatko Trajanoski's Bioinformatics-Workgroup at the \n  > University of Technology Graz, Aust",
+      "thread_id": "thread-5eb803b946b1",
+      "thread_depth": 1,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-cffbf75a2721",
+      "message_id": "<20020913171356.V8450@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-09-13T21:13:56Z",
+      "subject": "[BioC] SJava installation under Window 2000",
+      "subject_clean": "[BioC] SJava installation under Window 2000",
+      "in_reply_to": "<000801c25b71$4f04c560$9ff2b784@mgh.harvard.edu>; from wzhang@rics.bwh.harvard.edu on Fri, Sep 13, 2002 at 03:02:51PM -0700",
+      "references": [
+        "<000801c25b71$4f04c560$9ff2b784@mgh.harvard.edu>"
+      ],
+      "body_plain": "A search on Google and a look at the download page from Omegahat\nsuggests that it does not run on Windows, so I'm not sure just what\nyou mean by \"load\"?\nDid you build a windows binary and install it?\n\n Robert\n\nOn Fri, Sep 13, 2002 at 03:02:51PM -0700, Weijia Zhang wrote:\n> Hi, Guys, Does any one has experience in installing SJava on R1.5.1 under window 2000? I can load the SJava package, but I have problems in running the library.\n> > .JavaInit()\n> Error in .JavaInit() : Couldn't start Java Virtual Machine: Can't create Java Virtual Machine\n> \n> Thanks for your help.\n> \n> Weijia \n> \n> \n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B20\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "A search on Google and a look at the download page from Omegahat\nsuggests that it does not run on Windows, so I'm not sure just what\nyou mean by \"load\"?\nDid you build a windows binary and install it?\n",
+      "thread_id": "thread-983bc31b609b",
+      "thread_depth": 1,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-610be4799827",
+      "message_id": "<20020913172119.W8450@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-09-13T21:21:19Z",
+      "subject": "[BioC] SJava installation under Window 2000",
+      "subject_clean": "[BioC] SJava installation under Window 2000",
+      "in_reply_to": "<20020913171356.V8450@jimmy.harvard.edu>; from rgentlem@jimmy.harvard.edu on Fri, Sep 13, 2002 at 05:13:56PM -0400",
+      "references": [
+        "<000801c25b71$4f04c560$9ff2b784@mgh.harvard.edu>",
+        "<20020913171356.V8450@jimmy.harvard.edu>"
+      ],
+      "body_plain": "Ok, so now I downloaded the package --\n seems to be \nPackage: SJava\nVersion: 0.65\nDate:    2002/07/17\n\n Did you follow (exactly the description in README.win or\n README.windows?)\n And, really, you need to report problems to the Maintainer:\n\n Maintainer:  Duncan Temple Lang <duncan@research.bell-labs.com>\n\n Robert\n\nOn Fri, Sep 13, 2002 at 05:13:56PM -0400, Robert Gentleman wrote:\n> A search on Google and a look at the download page from Omegahat\n> suggests that it does not run on Windows, so I'm not sure just what\n> you mean by \"load\"?\n> Did you build a windows binary and install it?\n> \n>  Robert\n> \n> On Fri, Sep 13, 2002 at 03:02:51PM -0700, Weijia Zhang wrote:\n> > Hi, Guys, Does any one has experience in installing SJava on R1.5.1 under window 2000? I can load the SJava package, but I have problems in running the library.\n> > > .JavaInit()\n> > Error in .JavaInit() : Couldn't start Java Virtual Machine: Can't create Java Virtual Machine\n> > \n> > Thanks for your help.\n> > \n> > Weijia \n> > \n> > \n> \n> -- \n> +---------------------------------------------------------------------------+\n> | Robert Gentleman                 phone : (617) 632-5250                   |\n> | Associate Professor              fax:   (617)  632-2444                   |\n> | Department of Biostatistics      office: M1B20\n> | Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n> +---------------------------------------------------------------------------+\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B20\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "Ok, so now I downloaded the package --\n seems to be \nPackage: SJava\nVersion: 0.65\nDate:    2002/07/17\n\n Did you follow (exactly the description in README.win or\n README.windows?)\n And, really, you nee",
+      "thread_id": "thread-983bc31b609b",
+      "thread_depth": 2,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-983bc31b609b",
+      "message_id": "<000801c25b71$4f04c560$9ff2b784@mgh.harvard.edu>",
+      "from_name": "Weijia Zhang",
+      "from_email_hash": "88b7ea0f5ff590f3ea99ea020a76384d9330ad7f503973eb8e6636da6a26ae8b",
+      "date": "2002-09-13T22:02:51Z",
+      "subject": "[BioC] SJava installation under Window 2000",
+      "subject_clean": "[BioC] SJava installation under Window 2000",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_0005_01C25B36.A1A3BFA0\nContent-Type: text/plain;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: quoted-printable\n\nHi, Guys, Does any one has experience in installing SJava on R1.5.1 =\nunder window 2000? I can load the SJava package, but I have problems in =\nrunning the library.\n> .JavaInit()\nError in .JavaInit() : Couldn't start Java Virtual Machine: Can't create =\nJava Virtual Machine\n\nThanks for your help.\n\nWeijia=20\n\n\n\n------=_NextPart_000_0005_01C25B36.A1A3BFA0\nContent-Type: text/html;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: quoted-printable\n\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">\n<HTML><HEAD>\n<META http-equiv=3DContent-Type content=3D\"text/html; =\ncharset=3Diso-8859-1\">\n<META content=3D\"MSHTML 6.00.2600.0\" name=3DGENERATOR>\n<STYLE></STYLE>\n</HEAD>\n<BODY bgColor=3D#ffffff>\n<DIV><FONT face=3DArial size=3D2>Hi, Guys, Does any one has experience =\nin installing=20\nSJava on R1.5.1&nbsp;under window 2000? I can load the SJava package, =\nbut I have=20\nproblems in running the library.</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2>&gt; .JavaInit()</FONT></DIV>\n<DIV>Error in .JavaInit() : Couldn't start Java Virtual Machine: Can't =\ncreate=20\nJava Virtual Machine</DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>Thanks for your help.</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>Weijia</FONT>&nbsp;</DIV>\n<DIV>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV></BODY></HTML>\n\n------=_NextPart_000_0005_01C25B36.A1A3BFA0--",
+      "body_snippet": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_0005_01C25B36.A1A3BFA0\nContent-Type: text/plain;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: quoted-printable\n\nHi, Guys, Does an",
+      "thread_id": "thread-983bc31b609b",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-78246e43b305",
+      "message_id": "<200209181604.g8IG4jt08479@hodges.stat.wmich.edu>",
+      "from_name": "Jason Parcon",
+      "from_email_hash": "548939ef1f08e31becc58e1831b7f5305f2e0bc2be130d42894365206d0b99fa",
+      "date": "2002-09-18T16:04:45Z",
+      "subject": "[BioC] Bioconductor Software",
+      "subject_clean": "[BioC] Bioconductor Software",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "To whom it may concern:\n\nI need help in downloading the Bioconductor software.  I tried to download the \nsoftware a couple of times in my PC using R 1.5.1 using the function \ngetBioC(\"all\") but I would always get this error message:\n\n\"Get affy failed\"\n\nI hope you can help me with this.\n\nThank you very much.\n\n\nJASON C. PARCON\nDepartment of Statistics\nWestern Michigan University\nKalamazoo, Michigan 49008\nhttp://www.stat.wmich.edu/parcon",
+      "body_snippet": "To whom it may concern:\n\nI need help in downloading the Bioconductor software.  I tried to download the \nsoftware a couple of times in my PC using R 1.5.1 using the function \ngetBioC(\"all\") but I woul",
+      "thread_id": "thread-78246e43b305",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-8ca530bd1415",
+      "message_id": "<3D8871DD.13953.6E4312@localhost>",
+      "from_name": "Andrew Boyd",
+      "from_email_hash": "8ca74935794cfaf2d07104ceee745a8f5caccb07e4a9ad4ac9d2070cb2904629",
+      "date": "2002-09-18T16:30:21Z",
+      "subject": "[BioC] golubEsets",
+      "subject_clean": "[BioC] golubEsets",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi,\n\tI have been installing Bioconductor on a PC machine.  I ran \nthe script and most of the libraries seem to have installed properly.  I \nhave some questions. I could not find the library golubEsets either on \nCpan or on your website.  I was wondering if you knew where I could \nget that data set.  \n\nSincerely,\n\nAndrew Boyd, MD\nMichigan Center for Biological Information\nThe University of Michigan\n3600 Green Court, Suite 700\nP.O. Box 1570\nAnn Arbor, MI 48105-1570\n734-998-9239\nwww.ctaalliance.org",
+      "body_snippet": "Hi,\n\tI have been installing Bioconductor on a PC machine.  I ran \nthe script and most of the libraries seem to have installed properly.  I \nhave some questions. I could not find the library golubEsets",
+      "thread_id": "thread-8ca530bd1415",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-63173a91fe39",
+      "message_id": "<1032370768.14335.2.camel@tioga.barnard-engineering.com>",
+      "from_name": "Bill Barnard",
+      "from_email_hash": "206f7d7addc6f3aa32a6d0c6a4eede3fd77bdbe97866227c3c726c9d60d8c4e0",
+      "date": "2002-09-18T17:39:26Z",
+      "subject": "[BioC] golubEsets",
+      "subject_clean": "[BioC] golubEsets",
+      "in_reply_to": "<3D8871DD.13953.6E4312@localhost>",
+      "references": [
+        "<3D8871DD.13953.6E4312@localhost>"
+      ],
+      "body_plain": "You can find links for Unix/Windows versions from the page at:\n\nhttp://www.bioconductor.org/workshops/ShortCourse012302/index.html\n\nwhich links to\nWindows:\nhttp://www.bioconductor.org/workshops/ShortCourse012302/downloads/golubEsets.zip\nUnix/Linux:\nhttp://www.bioconductor.org/workshops/ShortCourse012302/downloads/golubEsets_0.0-1.tar.gz\n\nCheers,\n\nBill\n-- \nBill Barnard\nbill@barnard-engineering.com\n\nOn Wed, 2002-09-18 at 09:30, Andrew Boyd wrote:\n> Hi,\n> \tI have been installing Bioconductor on a PC machine.  I ran \n> the script and most of the libraries seem to have installed properly.  I \n> have some questions. I could not find the library golubEsets either on \n> Cpan or on your website.  I was wondering if you knew where I could \n> get that data set.  \n> \n> Sincerely,\n> \n> Andrew Boyd, MD\n> Michigan Center for Biological Information\n> The University of Michigan\n> 3600 Green Court, Suite 700\n> P.O. Box 1570\n> Ann Arbor, MI 48105-1570\n> 734-998-9239\n> www.ctaalliance.org\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>",
+      "body_snippet": "You can find links for Unix/Windows versions from the page at:\n\nhttp://www.bioconductor.org/workshops/ShortCourse012302/index.html\n\nwhich links to\nWindows:\nhttp://www.bioconductor.org/workshops/ShortC",
+      "thread_id": "thread-8ca530bd1415",
+      "thread_depth": 1,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-6e45bb380e7c",
+      "message_id": "<200209181828.OAA06988@blaise.dfci.harvard.edu>",
+      "from_name": "John Zhang",
+      "from_email_hash": "a9b29fa5c7919bc7d02dec7bdc0c62c5f96a282f20bb4efd587867f549843181",
+      "date": "2002-09-18T18:28:24Z",
+      "subject": "[BioC] Bioconductor Software",
+      "subject_clean": "[BioC] Bioconductor Software",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": ">From: Jason Parcon <parcon@stat.wmich.edu>\n>To: bioconductor@stat.math.ethz.ch\n>MIME-Version: 1.0\n>Content-MD5: XrsN4jhABKzEPSVBZeiQbQ==\n>Subject: [BioC] Bioconductor Software\n>X-BeenThere: bioconductor@stat.math.ethz.ch\n>X-Mailman-Version: 2.0.13\n>List-Help: <mailto:bioconductor-request@stat.math.ethz.ch?subject=help>\n>List-Post: <mailto:bioconductor@stat.math.ethz.ch>\n>List-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n<mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe>\n>List-Id: The Bioconductor Project Mailing List <bioconductor.stat.math.ethz.ch>\n>List-Unsubscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n<mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe>\n>List-Archive: <http://www.stat.math.ethz.ch/pipermail/bioconductor/>\n>Date: Wed, 18 Sep 2002 12:04:45 -0400 (EDT)\n>\n>To whom it may concern:\n>\n>I need help in downloading the Bioconductor software.  I tried to download the \n>software a couple of times in my PC using R 1.5.1 using the function \n>getBioC(\"all\") but I would always get this error message:\n>\n>\"Get affy failed\"\n\nWe have put a new version of getBioC on our website that should correct the \nproblem. Thank you.  \n\n>\n>I hope you can help me with this.\n>\n>Thank you very much.\n>\n>\n>JASON C. PARCON\n>Department of Statistics\n>Western Michigan University\n>Kalamazoo, Michigan 49008\n>http://www.stat.wmich.edu/parcon\n>\n>\n>\n>\n>\n>_______________________________________________\n>Bioconductor mailing list\n>Bioconductor@stat.math.ethz.ch\n>http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor",
+      "body_snippet": ">From: Jason Parcon <parcon@stat.wmich.edu>\n>To: bioconductor@stat.math.ethz.ch\n>MIME-Version: 1.0\n>Content-MD5: XrsN4jhABKzEPSVBZeiQbQ==\n>Subject: [BioC] Bioconductor Software\n>X-BeenThere: bioconduc",
+      "thread_id": "thread-6e45bb380e7c",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-a2baa1df7a88",
+      "message_id": "<3D88FAD3.3000206@uky.edu>",
+      "from_name": "Eric Blalock",
+      "from_email_hash": "6c1163eb44c89bb7844dc343818f36a73bf1a780ecf216f990afe9d848341b44",
+      "date": "2002-09-18T22:14:43Z",
+      "subject": "[BioC] RWin crashes on normalization with >21 Cel files",
+      "subject_clean": "[BioC] RWin crashes on normalization with >21 Cel files",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi,\n\nRWin (1.5.1) crashes when I try to normalize more than 21 cel files. \nReadAffy() loads 29 cel files (that's the most I've tried) with no \nproblems, and I can make box plots and histograms etc., but any \nprocedure that involves normalization (default \"quantiles\") crashes me \nout of R (Windows says: \"R has generated errors and is being shut down \nby Windows\"). I reduced the number of cel files to 20 and the \nnormalization worked fine. It also worked with odd numbers of cel files \n(I tried 21, 19, 15, and 9) but 21 seems to be some sort of capacity, no \nnumber of cel files between 21 and 30 successfully normalized. I've also \ntried various cel files in the infamous \"22\" slot to see if there may \nhave been a problem with a particular cel file, but so far 7 different \nfiles all give the same result.\n\nI've hit the same limit with both an AMD Thunderbird and a PIII 1GHz \nprocessor- both with 512MB RAM running the same O/S (Win2K SP2).\n\nOther potentially useful info\naffy package d/l'd yesterday from CRAN\nAffymetrix rat arrays (RG-U34A)\n\nI'd appreciate any help with this- or hearing if anyone else has had \nsimilar problems or knows of a workaround. I'm a complete novice with R, \nand other than setting my command line memory and typing \"ReadAffy\" and \n\"normalize\" (my two word vocabulary) I fear I am rather hopeless.\n\nThanks,\nEric",
+      "body_snippet": "Hi,\n\nRWin (1.5.1) crashes when I try to normalize more than 21 cel files. \nReadAffy() loads 29 cel files (that's the most I've tried) with no \nproblems, and I can make box plots and histograms etc., b",
+      "thread_id": "thread-a2baa1df7a88",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-a36ed2c85266",
+      "message_id": "<5.1.0.14.2.20020918181546.00aacc70@mail.uky.edu>",
+      "from_name": "Eric",
+      "from_email_hash": "6c1163eb44c89bb7844dc343818f36a73bf1a780ecf216f990afe9d848341b44",
+      "date": "2002-09-18T22:17:35Z",
+      "subject": "[BioC] RWin crashes on normalization with >21 Cel files",
+      "subject_clean": "[BioC] RWin crashes on normalization with >21 Cel files",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi (pardon me if this is a resend- I was not sure if the first attempt made \nit through),\n\nRWin (1.5.1) crashes when I try to normalize more than 21 cel files. \nReadAffy() loads 29 cel files (that's the most I've tried) with no \nproblems, and I can make box plots and histograms etc., but any procedure \nthat involves normalization (default \"quantiles\") crashes me out of R \n(Windows says: \"R has generated errors and is being shut down by Windows\"). \nI reduced the number of cel files to 20 and the normalization worked fine. \nIt also worked with odd numbers of cel files (I tried 21, 19, 15, and 9) \nbut 21 seems to be some sort of capacity, no number of cel files between 21 \nand 30 successfully normalized. I've also tried various cel files in the \ninfamous \"22\" slot to see if there may have been a problem with a \nparticular cel file, but so far 7 different files all give the same result.\n\nI've hit the same limit with both an AMD Thunderbird and a PIII 1GHz \nprocessor- both with 512MB RAM running the same O/S (Win2K SP2).\n\nOther potentially useful info\naffy package d/l'd yesterday from CRAN\nAffymetrix rat arrays (RG-U34A)\n\nI'd appreciate any help with this- or hearing if anyone else has had \nsimilar problems or knows of a workaround. I'm a complete novice with R, \nand other than setting my command line memory and typing \"ReadAffy\" and \n\"normalize\" (my two word vocabulary) I fear I am rather hopeless.\n\nThanks,\nEric\n\nEric Blalock, PhD\nDept Pharmacology, UKMC\n859 323-8033",
+      "body_snippet": "Hi (pardon me if this is a resend- I was not sure if the first attempt made \nit through),\n\nRWin (1.5.1) crashes when I try to normalize more than 21 cel files. \nReadAffy() loads 29 cel files (that's t",
+      "thread_id": "thread-a36ed2c85266",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-4ce76910a2de",
+      "message_id": "<f05101001b9aecf1f78ea@[150.203.32.52]>",
+      "from_name": "John Maindonald",
+      "from_email_hash": "28243693d2a1394c26b2fcd0554a0eef261c6013fc5637e2c42f32fb14e60162",
+      "date": "2002-09-19T02:09:35Z",
+      "subject": "[BioC] Bug Report: mt.teststat with test=\"pairt\"",
+      "subject_clean": "[BioC] Bug Report: mt.teststat with test=\"pairt\"",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "I am using the function mt.teststat from the multtest package,\nversion 1.0, date 2002-04-16, as bundled with R1.5.1 for Mac\nOSX/X11.\n\nThe function mt.teststat(..., test=\"pairt\") insists that\nthe argument classlabel specify a sequence of (0,1) pairs,\nbut seems to assume a consistent 0,1 order within those\npairs, irrespective of the setting of classlabel.\n\n>  xy <- matrix(c(12,15,13,16,17,19,3,8,5,13,16,12),byrow=T,ncol=6)\n>  xy\n      [,1] [,2] [,3] [,4] [,5] [,6]\n[1,]   12   15   13   16   17   19\n[2,]    3    8    5   13   16   12\n>\n>  mt.teststat(xy, classlabel=rep(0:1,3), test=\"pairt\")\n[1] 8.0000000 0.8320503\n>  apply(xy, 1, function(x)t.test(x[c(1,3,5)], x[c(2,4,6)],paired=T)$statistic)\n[1] -8.0000000 -0.8320503\n>\n>  mt.teststat(xy, classlabel=c(0,1,1,0,0,1), test=\"pairt\")\n[1] 8.0000000 0.8320503\n>  apply(xy, 1, function(x)t.test(x[c(1,4,5)], x[c(2,3,6)],paired=T)$statistic)\n[1] -0.3592106  0.6069770\n\nBy contrast the setting test=\"blockf\" does take notice of\nclasslabel:\n\n>  mt.teststat(xy, classlabel=rep(0:1,3), test=\"blockf\")\n[1] 64.0000000  0.6923077\n>  apply(xy, 1, function(x)t.test(x[c(1,3,5)], \n>x[c(2,4,6)],paired=T)$statistic)^2\n[1] 64.0000000  0.6923077\n>\n>  mt.teststat(xy, classlabel=c(0,1,1,0,0,1), test=\"blockf\")\n[1] 0.1290323 0.3684211\n>  apply(xy, 1, function(x)t.test(x[c(1,4,5)], \n>x[c(2,3,6)],paired=T)$statistic)^2\n[1] 0.1290323 0.3684211\n\nThus, it seems possible to get the correct t-statistics\nby taking the square root of the block F-statistic, and\nattaching the correct sign to it!\n\nJohn Maindonald.\n\n-- \nJohn Maindonald             email: john.maindonald@anu.edu.au\nphone : +61 2 (6125)3473    fax  : +61 2(6125)5549\nCentre for Bioinformation Science, Room 1194,\nJohn Dedman Mathematical Sciences Building (Building 27)\nAustralian National University, Canberra ACT 0200.",
+      "body_snippet": "I am using the function mt.teststat from the multtest package,\nversion 1.0, date 2002-04-16, as bundled with R1.5.1 for Mac\nOSX/X11.\n\nThe function mt.teststat(..., test=\"pairt\") insists that\nthe argum",
+      "thread_id": "thread-4ce76910a2de",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-8ce44ca894cf",
+      "message_id": "<000601c25fb5$4c835570$2101a8c0@hb>",
+      "from_name": "Hinnerk Boriss",
+      "from_email_hash": "ae1eed3fd3cfe34d0011264d02ca5bc70fdc4ae89305bf6982b6c44bcab856ac",
+      "date": "2002-09-19T08:19:39Z",
+      "subject": "[BioC] [1] \"Get affy failed\"",
+      "subject_clean": "[BioC] [1] \"Get affy failed\"",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi, I was wondering if there is a problem with downloading the affy\npackage via the getBioC() function. I tried a number fo times always\nwith the same result, that the affy package fails. Could you please give\nme a hint what might be going wrong?\n\nBest regards,\nHinnerk Boriss\n\n> getBioC(libName=\"all\",destdir=\"c:\\\\TEMP\\\\Rpackages\")\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\n[1] \"Get affy failed\"\n>\n--------------------------------------------\nDr. Hinnerk Boriss\nInterdisziplinÃ¤res Zentrum fÃ¼r Bioinformatik\nUniversitÃ¤t Leipzig\nKreuzstr. 7b\n04103 Leipzig\n\nPh:  +49 (0)341 1495121\nFax: +49 (0)341 1495119\nEmail: boriss@izbi.uni-leipzig.de\n--------------------------------------------",
+      "body_snippet": "Hi, I was wondering if there is a problem with downloading the affy\npackage via the getBioC() function. I tried a number fo times always\nwith the same result, that the affy package fails. Could you pl",
+      "thread_id": "thread-8ce44ca894cf",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-75dca1260847",
+      "message_id": "<Pine.SOL.4.20.0209191033160.19375-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-09-19T14:34:11Z",
+      "subject": "[BioC] [1] \"Get affy failed\"",
+      "subject_clean": "[BioC] [1] \"Get affy failed\"",
+      "in_reply_to": "<000601c25fb5$4c835570$2101a8c0@hb>",
+      "references": [],
+      "body_plain": "> Hi, I was wondering if there is a problem with downloading the affy\n> package via the getBioC() function. I tried a number fo times always\n> with the same result, that the affy package fails. Could you please give\n> me a hint what might be going wrong?\n\nThis was fixed by Jianhua yesterday, and the current version on the site\nworks for me here.\n\nMake sure you're using the latest copy, if you cut & pasted directly from\nyour web browser, make sure that your browser isn't using an old cached\ncopy for instance.\n\n-J",
+      "body_snippet": "> Hi, I was wondering if there is a problem with downloading the affy\n> package via the getBioC() function. I tried a number fo times always\n> with the same result, that the affy package fails. Could ",
+      "thread_id": "thread-8ce44ca894cf",
+      "thread_depth": 1,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-9718d2a09913",
+      "message_id": "<00de01c2633f$b06eb510$43ad2080@fgl.pri>",
+      "from_name": "Karen Vranizan",
+      "from_email_hash": "b771ad27518b8b4a60bbbc7a6a707d1080da32257bc048dd40ef7ecb24eaf510",
+      "date": "2002-09-23T20:27:51Z",
+      "subject": "[BioC] rhdf5",
+      "subject_clean": "[BioC] rhdf5",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_00DB_01C26305.03E830D0\nContent-Type: text/plain;\n\tcharset=\"Windows-1252\"\nContent-Transfer-Encoding: quoted-printable\n\nThe rhdf5 package (binary) doesn't seem to be accessible from =\nBioconductor.  Will I need that to run the affy package?  kv\n\n\nKaren Vranizan\nFunctional Genomics Lab\n261A Life Sciences Addition\nMail Code #3200\nUC Berkeley, CA 94720-3200\n\nPhone: 510-642-7520\nFax:      510-642-5741\nemail: vranizan@uclink.berkeley.edu\n\n------=_NextPart_000_00DB_01C26305.03E830D0\nContent-Type: text/html;\n\tcharset=\"Windows-1252\"\nContent-Transfer-Encoding: quoted-printable\n\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">\n<HTML><HEAD>\n<META http-equiv=3DContent-Type content=3D\"text/html; =\ncharset=3Dwindows-1252\">\n<META content=3D\"MSHTML 6.00.2716.2200\" name=3DGENERATOR>\n<STYLE></STYLE>\n</HEAD>\n<BODY bgColor=3D#ffffff>\n<DIV>The rhdf5 package (binary) doesn't seem to be&nbsp;accessible from=20\nBioconductor.&nbsp; Will I need that to run the affy package?&nbsp; =\nkv</DIV>\n<DIV>&nbsp;</DIV>\n<DIV><BR>Karen Vranizan<BR>Functional Genomics Lab<BR>261A Life Sciences =\n\nAddition<BR>Mail Code #3200<BR>UC Berkeley, CA 94720-3200</DIV>\n<DIV>&nbsp;</DIV>\n<DIV>Phone: 510-642-7520<BR>Fax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20\n510-642-5741<BR>email: <A=20\nhref=3D\"mailto:vranizan@uclink.berkeley.edu\">vranizan@uclink.berkeley.edu=\n</A></DIV></BODY></HTML>\n\n------=_NextPart_000_00DB_01C26305.03E830D0--",
+      "body_snippet": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_00DB_01C26305.03E830D0\nContent-Type: text/plain;\n\tcharset=\"Windows-1252\"\nContent-Transfer-Encoding: quoted-printable\n\nThe rhdf5 packa",
+      "thread_id": "thread-9718d2a09913",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-593d6835405d",
+      "message_id": "<20020926133029.GB23657@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "46ea1fbf1dde6cd7ce00fc69b0ee2b1457b50e6b5c9e07bd3a465dc588db5dd1",
+      "date": "2002-09-26T13:30:29Z",
+      "subject": "[BioC] rhdf5",
+      "subject_clean": "[BioC] rhdf5",
+      "in_reply_to": "<00de01c2633f$b06eb510$43ad2080@fgl.pri>",
+      "references": [
+        "<00de01c2633f$b06eb510$43ad2080@fgl.pri>"
+      ],
+      "body_plain": "The affy package will run without rhdf5. The warning messages when\nloading the package should disappear soon.\n\n\nL.\n\n\nOn Mon, Sep 23, 2002 at 01:27:51PM -0700, Karen Vranizan wrote:\n> The rhdf5 package (binary) doesn't seem to be accessible from Bioconductor.  Will I need that to run the affy package?  kv\n> \n> \n> Karen Vranizan\n> Functional Genomics Lab\n> 261A Life Sciences Addition\n> Mail Code #3200\n> UC Berkeley, CA 94720-3200\n> \n> Phone: 510-642-7520\n> Fax:      510-642-5741\n> email: vranizan@uclink.berkeley.edu\n\n-- \n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tDK-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 89\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "The affy package will run without rhdf5. The warning messages when\nloading the package should disappear soon.\n\n\nL.\n\n\nOn Mon, Sep 23, 2002 at 01:27:51PM -0700, Karen Vranizan wrote:\n> The rhdf5 package",
+      "thread_id": "thread-9718d2a09913",
+      "thread_depth": 1,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-076bcf854fb4",
+      "message_id": "<3D931F83.8A5F3CAD@bioinfo.sickkids.on.ca>",
+      "from_name": "Len F. Zaifman",
+      "from_email_hash": "78340d66a1b5d5a791ed0c09a2588965049384cda53c8b1ca4722e827e00fbbe",
+      "date": "2002-09-26T14:53:55Z",
+      "subject": "[BioC] Bioconductor & tcltk",
+      "subject_clean": "[BioC] Bioconductor & tcltk",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This is a multi-part message in MIME format.\n--------------706AAF69B7644CD5AF81F506\nContent-Type: text/plain; charset=us-ascii\nContent-Transfer-Encoding: 7bit\n\nWe installed R1.5.1 under an application user id, and loaded\nBioconductor into it (while logged in as the application id)  as per the\ninstructions.\n\nThis is on an SGI multiuser system.\n\nThe application id can load the library marrayPlots without any\nproblems.\nWhen any onelse tries library(marrayPlots) we get:\n\n\nLoading required package: tcltk\nError in dyn.load(x, as.logical(local), as.logical(now)) :\n        unable to load shared library\n\"/tools/Rstat1.5.1/lib/R/library/tcltk/libs/tcltk.so\":\n  1203256:/tools/Rstat1.5.1/lib/R/bin/R.bin: rld: Fatal Error:\n.....\n\nThe file itself has the correct permissions to be world readable:\n\n\nls -l /tools/Rstat1.5.1/lib/R/library/tcltk/li\nbs/tcltk.so\n-rwxr-xr-x    1 applicat academic   48196 Sep 26 09:08\n/tools/Rstat1.5.1/lib/R/library/tcltk/libs/tcltk.so\n\nand so do the directories along the path.\n\nAs it loads properly for the application id, I am assuming that rld is\nsetup for the application user in the R script, but not for other users.\nBut I cannot see in $RHOME/lib/R/bin/R where that is.\n\nIs there an obvious answer to this question?\n-- \nLen Zaifman\nManager, Supercomputing Systems\nCentre for Computational Biology\nHospital for Sick Children\nToronto,Ont.\n(416)813-5513\nleonardz@bioinfo.sickkids.on.ca\n--------------706AAF69B7644CD5AF81F506\nContent-Type: text/x-vcard; charset=us-ascii;\n name=\"leonardz.vcf\"\nContent-Transfer-Encoding: 7bit\nContent-Description: Card for Len F. Zaifman\nContent-Disposition: attachment;\n filename=\"leonardz.vcf\"\n\nbegin:vcard \nn:Zaifman;Len\ntel;work:(416)813-5513\nx-mozilla-html:FALSE\norg:Hospital for Sick Children;Centre for Computational Biology\nadr:;;555 University Ave.\t\t;Toronto;Ont;M5G 1X8;Canada\nversion:2.1\nemail;internet:leonardz@bioinfo.sickkids.on.ca\ntitle:Manager, Supercomputing Systems\nx-mozilla-cpt:;8960\nfn:Len Zaifman\nend:vcard\n\n--------------706AAF69B7644CD5AF81F506--",
+      "body_snippet": "This is a multi-part message in MIME format.\n--------------706AAF69B7644CD5AF81F506\nContent-Type: text/plain; charset=us-ascii\nContent-Transfer-Encoding: 7bit\n\nWe installed R1.5.1 under an application",
+      "thread_id": "thread-076bcf854fb4",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-43506153cfbb",
+      "message_id": "<014701c2658d$76f691e0$09d1ce84@chiplab.mcgill.ca>",
+      "from_name": "Tibor van Rooij\"",
+      "from_email_hash": "fa51a85c0789cc9ce93954feae4d654af802630f219c2c3bf324090b9102624f",
+      "date": "2002-09-26T18:49:37Z",
+      "subject": "[BioC] li.wong vs fit.li.wong",
+      "subject_clean": "[BioC] li.wong vs fit.li.wong",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_0144_01C2656B.EFCD2420\nContent-Type: text/plain;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: quoted-printable\n\nHi! do li.wong( ) and fit.li.wong( ) have their matrix indeces reversed?\n\nwhen I use the example:\n\nx <- sweep(matrix(2^rnorm(600),30,20),1,seq(1,2,len=3D30),FUN=3D\"+\")\n\nand I use li.wong(x,verbose=3DT)\n\nit claims it has :\n\nchips used=3D 20 , probes used=3D 30\n\nhowever when I use fit.li.wong(x,verbose=3DT)\n\nit says it has:\n\nchips used=3D 30 , probes used=3D 20\n\nDoes anybody know why? What I really would like to do is give it a =\nmatrix and get a matrix with of the same dimension with the normalized =\nvalues back as I can with normalize.quantiles(x) for quantile =\nnormalization.\n\nHas anybody succeeded in doing this?\n\nTibor\n_______________________________=20\nTibor van Rooij=20\nBioinformatician=20\nMontreal Genome Centre\nMcGill University, Duff Building=20\nTel:  (514) 398-2497\nFax: (514) 398-1838\n\n\n------=_NextPart_000_0144_01C2656B.EFCD2420\nContent-Type: text/html;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: quoted-printable\n\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">\n<HTML><HEAD>\n<META http-equiv=3DContent-Type content=3D\"text/html; =\ncharset=3Diso-8859-1\">\n<META content=3D\"MSHTML 6.00.2719.2200\" name=3DGENERATOR>\n<STYLE></STYLE>\n</HEAD>\n<BODY bgColor=3D#ffffff>\n<DIV><FONT face=3DArial size=3D2>Hi! do li.wong( ) and fit.li.wong( ) =\nhave their=20\nmatrix indeces reversed?</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>when I use the example:</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>x &lt;-=20\nsweep(matrix(2^rnorm(600),30,20),1,seq(1,2,len=3D30),FUN=3D\"+\")</FONT></D=\nIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>and I use =\nli.wong(x,verbose=3DT)</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>it claims it has :</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>chips used=3D 20 , probes used=3D =\n30</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>however when I use=20\nfit.li.wong(x,verbose=3DT)</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>it says it has:</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>chips used=3D 30 , probes used=3D =\n20</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>Does anybody know why? What I really =\nwould like to=20\ndo is give it&nbsp;a matrix and get a matrix with&nbsp;of the same =\ndimension=20\nwith&nbsp;the normalized values back as I can with =\nnormalize.quantiles(x) for=20\nquantile normalization.</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>Has anybody succeeded in doing =\nthis?</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>Tibor</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2>_______________________________ =\n<BR>Tibor van Rooij=20\n<BR>Bioinformatician <BR>Montreal Genome Centre<BR>McGill University, =\nDuff=20\nBuilding <BR>Tel:&nbsp; (514) 398-2497<BR>Fax: (514) =\n398-1838</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV></BODY></HTML>\n\n------=_NextPart_000_0144_01C2656B.EFCD2420--",
+      "body_snippet": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_0144_01C2656B.EFCD2420\nContent-Type: text/plain;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: quoted-printable\n\nHi! do li.wong( )",
+      "thread_id": "thread-43506153cfbb",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-c967201aac5d",
+      "message_id": "<017301c2658f$19137730$09d1ce84@chiplab.mcgill.ca>",
+      "from_name": "Tibor van Rooij\"",
+      "from_email_hash": "fa51a85c0789cc9ce93954feae4d654af802630f219c2c3bf324090b9102624f",
+      "date": "2002-09-26T19:01:19Z",
+      "subject": "[BioC] li.wong( ) vs. fit.li.wong( )",
+      "subject_clean": "[BioC] li.wong( ) vs. fit.li.wong( )",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_0170_01C2656D.91F13560\nContent-Type: text/plain;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: quoted-printable\n\n=20\nHi!=20\n\nDo li.wong( ) and fit.li.wong( ) have their matrix indeces reversed?\n\nwhen I use the example:\n\nx <- sweep(matrix(2^rnorm(600),30,20),1,seq(1,2,len=3D30),FUN=3D\"+\")\n\nand I use li.wong(x,verbose=3DT)\n\nit claims it has :\n\nchips used=3D 20 , probes used=3D 30\n\nhowever when I use fit.li.wong(x,verbose=3DT)\n\nit says it has:\n\nchips used=3D 30 , probes used=3D 20\n\nDoes anybody know why? What I really would like to do is give it a =\nmatrix and get a matrix with of the same dimension with the normalized =\nvalues back as I can with normalize.quantiles(x) for quantile =\nnormalization.\n\nHas anybody succeeded in doing this?\n\nTibor\n_______________________________=20\nTibor van Rooij=20\nBioinformatician=20\nMontreal Genome Centre\nMcGill University, Duff Building=20\nTel:  (514) 398-2497\nFax: (514) 398-1838\n\nHigh trees catch a lot of wind--Dutch Proverb\n\n------=_NextPart_000_0170_01C2656D.91F13560\nContent-Type: text/html;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: quoted-printable\n\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">\n<HTML><HEAD>\n<META http-equiv=3DContent-Type content=3D\"text/html; =\ncharset=3Diso-8859-1\">\n<META content=3D\"MSHTML 6.00.2719.2200\" name=3DGENERATOR>\n<STYLE></STYLE>\n</HEAD>\n<BODY bgColor=3D#ffffff>\n<DIV><FONT face=3DArial size=3D2>&nbsp;\n<DIV><FONT face=3DArial size=3D2>Hi! </FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>Do li.wong( ) and fit.li.wong( ) have =\ntheir matrix=20\nindeces reversed?</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>when I use the example:</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>x &lt;-=20\nsweep(matrix(2^rnorm(600),30,20),1,seq(1,2,len=3D30),FUN=3D\"+\")</FONT></D=\nIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>and I use =\nli.wong(x,verbose=3DT)</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>it claims it has :</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>chips used=3D 20 , probes used=3D =\n30</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>however when I use=20\nfit.li.wong(x,verbose=3DT)</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>it says it has:</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>chips used=3D 30 , probes used=3D =\n20</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>Does anybody know why? What I really =\nwould like to=20\ndo is give it&nbsp;a matrix and get a matrix with&nbsp;of the same =\ndimension=20\nwith&nbsp;the normalized values back as I can with =\nnormalize.quantiles(x) for=20\nquantile normalization.</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>Has anybody succeeded in doing =\nthis?</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>Tibor</FONT></DIV></FONT></DIV>\n<DIV><FONT face=3DArial size=3D2>_______________________________ =\n<BR>Tibor van Rooij=20\n<BR>Bioinformatician <BR>Montreal Genome Centre<BR>McGill University, =\nDuff=20\nBuilding <BR>Tel:&nbsp; (514) 398-2497<BR>Fax: (514) =\n398-1838</FONT></DIV>\n<DIV>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>High trees catch a lot of wind--Dutch=20\nProverb</FONT></DIV></BODY></HTML>\n\n------=_NextPart_000_0170_01C2656D.91F13560--",
+      "body_snippet": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_0170_01C2656D.91F13560\nContent-Type: text/plain;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: quoted-printable\n\n=20\nHi!=20\n\nDo li",
+      "thread_id": "thread-c967201aac5d",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-d1025759ad35",
+      "message_id": "<Pine.LNX.4.33.0209261518510.15225-100000@localhost.localdomain>",
+      "from_name": "Rafael A. Irizarry",
+      "from_email_hash": "05a677c1148207b83eb8bc3532d7193bce333c0fe976f77ab582c8bfe9f05d4d",
+      "date": "2002-09-26T19:27:05Z",
+      "subject": "[BioC] li.wong vs fit.li.wong",
+      "subject_clean": "[BioC] li.wong vs fit.li.wong",
+      "in_reply_to": "<014701c2658d$76f691e0$09d1ce84@chiplab.mcgill.ca>",
+      "references": [],
+      "body_plain": "fit.li.wong\nis ment to follow li and wong's paper.\ntakes an I x J matrix containing the probe set data. Typically\nthe i,j entry will contain the PM-MM (or PM) value for probe pair j\nin chip i. \n\nli.wong is ment to work in the context of the express function. so its the \ntransponse as you have noticed.\n\nfit.li.wong takes in a matrix and returns the fitted phi's and thetas \n(among other things) of  the li and wong model. it doesnt normalize. the \n\"invariantset\" option in the \nnormalize function does something similar to what dChip does. \n\nhope this helps\nrafael\n\nOn Thu, 26 Sep 2002, Tibor van Rooij wrote:\n\n> Hi! do li.wong( ) and fit.li.wong( ) have their matrix indeces reversed?\n> \n> when I use the example:\n> \n> x <- sweep(matrix(2^rnorm(600),30,20),1,seq(1,2,len=30),FUN=\"+\")\n> \n> and I use li.wong(x,verbose=T)\n> \n> it claims it has :\n> \n> chips used= 20 , probes used= 30\n> \n> however when I use fit.li.wong(x,verbose=T)\n> \n> it says it has:\n> \n> chips used= 30 , probes used= 20\n> \n> Does anybody know why? What I really would like to do is give it a \nmatrix and get a matrix with of the same dimension with the normalized \nvalues back as I can with normalize.quantiles(x) for quantile \nnormalization.   > \n> Has anybody succeeded in doing this?\n> \n> Tibor\n> _______________________________ \n> Tibor van Rooij \n> Bioinformatician \n> Montreal Genome Centre\n> McGill University, Duff Building \n> Tel:  (514) 398-2497\n> Fax: (514) 398-1838\n> \n>",
+      "body_snippet": "fit.li.wong\nis ment to follow li and wong's paper.\ntakes an I x J matrix containing the probe set data. Typically\nthe i,j entry will contain the PM-MM (or PM) value for probe pair j\nin chip i. \n\nli.wo",
+      "thread_id": "thread-43506153cfbb",
+      "thread_depth": 1,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-591e96d2e1c3",
+      "message_id": "<00b601c26681$5ff68140$85a68780@bsd.uchicago.edu>",
+      "from_name": "jamie zhou",
+      "from_email_hash": "1483fee6b749c91f2c96de6f6f850be8a509a7144cf22e2a91d7faa671815ffb",
+      "date": "2002-09-27T23:55:35Z",
+      "subject": "[BioC] bioconductor",
+      "subject_clean": "[BioC] bioconductor",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_00B3_01C26646.B2E1C6C0\nContent-Type: text/plain;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: quoted-printable\n\nHi,\n\nThanks for the great work. I have been trying to install this software =\non my Win200 platform. I have downloaded the Install Script and =\ninstalled the R package, but cannot find any instruction on where to =\nplace the Install Script file and how to install the software and get it =\ngoing under R (I am brand new on R). Do you have any information on =\nthese? BTW, do you have a Linux version of the software?\n\nThank you,\n\nJamie Zhou\n\nUniversity of Chicago\n\n------=_NextPart_000_00B3_01C26646.B2E1C6C0\nContent-Type: text/html;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: quoted-printable\n\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">\n<HTML><HEAD>\n<META http-equiv=3DContent-Type content=3D\"text/html; =\ncharset=3Diso-8859-1\">\n<META content=3D\"MSHTML 6.00.2719.2200\" name=3DGENERATOR>\n<STYLE></STYLE>\n</HEAD>\n<BODY bgColor=3D#ffffff>\n<DIV><FONT face=3DArial size=3D2>Hi,</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>Thanks for the great work. I have been =\ntrying to=20\ninstall this software on my Win200 platform. I have downloaded the =\nInstall=20\nScript and installed the R package, but cannot find any instruction on =\nwhere to=20\nplace the Install Script file and how to install the software and =\nget&nbsp;it=20\ngoing under R (I am brand new on R). Do you have any information on =\nthese? BTW,=20\ndo you have a Linux version of the software?</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>Thank you,</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>Jamie Zhou</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>University of =\nChicago</FONT></DIV></BODY></HTML>\n\n------=_NextPart_000_00B3_01C26646.B2E1C6C0--",
+      "body_snippet": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_00B3_01C26646.B2E1C6C0\nContent-Type: text/plain;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: quoted-printable\n\nHi,\n\nThanks for t",
+      "thread_id": "thread-591e96d2e1c3",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-0bd17acf509e",
+      "message_id": "<AGEOLPCFGCEABFJOOAAMCEKFCAAA.w.huber@dkfz-heidelberg.de>",
+      "from_name": "Wolfgang Huber",
+      "from_email_hash": "a5efa0eff140cbce4ff21aada212234bffbb0be5ae26598f3e6b0bee7164b13d",
+      "date": "2002-09-28T16:08:08Z",
+      "subject": "[BioC] bioconductor",
+      "subject_clean": "[BioC] bioconductor",
+      "in_reply_to": "<00b601c26681$5ff68140$85a68780@bsd.uchicago.edu>",
+      "references": [],
+      "body_plain": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_0019_01C26719.FFD9EAB0\nContent-Type: text/plain;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: 7bit\n\nHi Jamie,\n\n> I have been trying to install this software on my Win200 platform. I have\ndownloaded the\n> Install Script and installed the R package...\n\nWhen you start R, you get a command line interface. Click \"File\", \"Source R\ncode\" and select the file with the install script. Then\nread the comments in the install script, and type\n\ngetBioC()\n\nor\n\ngetBioC(...)\n\nwith the appropriate options. You will not have much fun with Bioconductor\nunless you understand a little bit about R, so have a look at the\nIntroduction to R documents on www.r-project.org.\n\n> BTW, do you have a Linux version of the software?\nR and the Bioconductor packages run on Windows, Linux, other Unices, and\nMac.\n\nBest regards\nWolfgang\n\nDr. Wolfgang Huber\nhttp://www.dkfz.de/abt0840/whuber\nTel +49-6221-424709\nFax +49-6221-42524709\nDKFZ\nDivision of Molecular Genome Analysis\n69120 Heidelberg\nGermany\n\n\n-----Original Message-----\nFrom: bioconductor-admin@stat.math.ethz.ch\n[mailto:bioconductor-admin@stat.math.ethz.ch]On Behalf Of jamie zhou\nSent: Saturday, September 28, 2002 1:56 AM\nTo: bioconductor@stat.math.ethz.ch\nSubject: [BioC] bioconductor\n\n\n------=_NextPart_000_0019_01C26719.FFD9EAB0\nContent-Type: text/html;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: quoted-printable\n\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">\n<HTML><HEAD>\n<META http-equiv=3DContent-Type content=3D\"text/html; =\ncharset=3Diso-8859-1\">\n<META content=3D\"MSHTML 6.00.2712.300\" name=3DGENERATOR>\n<STYLE></STYLE>\n</HEAD>\n<BODY bgColor=3D#ffffff>\n<DIV><FONT face=3DArial size=3D2><SPAN class=3D915375715-28092002>Hi=20\nJamie,</SPAN></FONT></DIV>\n<DIV><FONT face=3DArial size=3D2><SPAN=20\nclass=3D915375715-28092002></SPAN></FONT>&nbsp;</DIV>\n<DIV><FONT size=3D2><FONT face=3DArial><SPAN =\nclass=3D915375715-28092002>&gt; </SPAN>I=20\nhave been trying to install this software on my Win200 platform. I have=20\ndownloaded the </FONT></FONT></DIV>\n<DIV><FONT size=3D2><FONT face=3DArial><SPAN =\nclass=3D915375715-28092002>&gt;=20\n</SPAN>Install Script and installed the R package<SPAN=20\nclass=3D915375715-28092002>...</SPAN></FONT></FONT></DIV>\n<DIV><FONT face=3DArial size=3D2><SPAN=20\nclass=3D915375715-28092002></SPAN></FONT>&nbsp;</DIV>\n<DIV><FONT size=3D2><SPAN class=3D915375715-28092002><FONT =\nface=3DArial>When you start=20\nR, you get a command line interface. Click \"File\",&nbsp;\"Source R code\" =\nand=20\nselect the file with the install script. Then </FONT></DIV>\n<DIV><FONT face=3DArial><FONT size=3D+0><FONT size=3D2><SPAN=20\nclass=3D915375715-28092002>read the comments in the install script,=20\nand&nbsp;ty</SPAN></FONT></FONT>pe </FONT></SPAN></FONT></DIV>\n<DIV><FONT face=3DArial size=3D2><SPAN=20\nclass=3D915375715-28092002></SPAN></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2><SPAN=20\nclass=3D915375715-28092002>getBioC()</SPAN></FONT></DIV>\n<DIV><FONT face=3DArial size=3D2><SPAN=20\nclass=3D915375715-28092002></SPAN></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2><SPAN class=3D915375715-28092002>or=20\n</SPAN></FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT size=3D2>\n<DIV><FONT size=3D+0><FONT face=3DArial size=3D2><SPAN=20\nclass=3D915375715-28092002>getBioC(...)</SPAN></FONT></FONT></DIV>\n<DIV><FONT size=3D+0><FONT face=3DArial size=3D2><SPAN=20\nclass=3D915375715-28092002></SPAN></FONT></FONT>&nbsp;</DIV>\n<DIV><FONT size=3D+0><FONT size=3D2><SPAN =\nclass=3D915375715-28092002><FONT=20\nface=3DArial>with the appropriate options. You will not have much fun =\nwith=20\nBioconductor unless you understand a little bit about R, so have a look =\nat the=20\nIntroduction to R documents on </FONT><A =\nhref=3D\"http://www.r-project.org\"><FONT=20\nface=3DArial color=3D#000000>www.r-project.org</FONT></A><FONT=20\nface=3DArial>.</FONT></SPAN></FONT></FONT></DIV>\n<DIV><FONT size=3D+0><FONT face=3DArial size=3D2><SPAN=20\nclass=3D915375715-28092002></SPAN></FONT></FONT></FONT><FONT =\nface=3DArial=20\nsize=3D2></FONT>&nbsp;</DIV></DIV>\n<DIV><FONT size=3D2><FONT face=3DArial><SPAN =\nclass=3D915375715-28092002>&gt;</SPAN>=20\nBTW, do you have a Linux version of the software?</FONT></FONT>\n<DIV><FONT face=3DArial size=3D2><SPAN class=3D915375715-28092002>R and =\nthe=20\nBioconductor packages run on Windows, Linux, other Unices, and=20\nMac.</SPAN></FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT size=3D2>\n<DIV><FONT size=3D+0><FONT face=3DArial size=3D2><SPAN =\nclass=3D915375715-28092002>Best=20\nregards</SPAN></FONT></FONT></DIV>\n<DIV><FONT size=3D+0><FONT face=3DArial size=3D2><SPAN=20\nclass=3D915375715-28092002>Wolfgang</SPAN></FONT></FONT></DIV>\n<DIV><FONT size=3D+0><FONT face=3DArial size=3D2><SPAN =\nclass=3D915375715-28092002><FONT=20\nsize=3D2></FONT></SPAN></FONT></FONT>&nbsp;</DIV>\n<DIV><FONT size=3D+0><FONT face=3DArial size=3D2><SPAN =\nclass=3D915375715-28092002><FONT=20\nsize=3D2>Dr. Wolfgang Huber<BR><A =\nhref=3D\"http://www.dkfz.de/abt0840/whuber\"=20\ntarget=3D_blank>http://www.dkfz.de/abt0840/whuber</A><BR>Tel=20\n+49-6221-424709<BR>Fax +49-6221-42524709<BR>DKFZ<BR>Division of =\nMolecular Genome=20\nAnalysis<BR>69120 Heidelberg<BR>Germany</FONT> =\n</DIV></SPAN></FONT></FONT>\n<DIV><FONT size=3D+0><FONT face=3DArial size=3D2><SPAN=20\nclass=3D915375715-28092002></SPAN></FONT></FONT>&nbsp;</DIV></FONT></DIV>=\n\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV></DIV>\n<DIV class=3DOutlookMessageHeader dir=3Dltr align=3Dleft><FONT =\nface=3DArial=20\nsize=3D2>-----Original Message-----<BR><B>From:</B>=20\nbioconductor-admin@stat.math.ethz.ch=20\n[mailto:bioconductor-admin@stat.math.ethz.ch]<B>On Behalf Of </B>jamie=20\nzhou<BR><B>Sent:</B> Saturday, September 28, 2002 1:56 AM<BR><B>To:</B>=20\nbioconductor@stat.math.ethz.ch<BR><B>Subject:</B> [BioC]=20\nbioconductor<BR></FONT></DIV></BODY></HTML>\n\n------=_NextPart_000_0019_01C26719.FFD9EAB0--",
+      "body_snippet": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_0019_01C26719.FFD9EAB0\nContent-Type: text/plain;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: 7bit\n\nHi Jamie,\n\n> I have been tryi",
+      "thread_id": "thread-591e96d2e1c3",
+      "thread_depth": 1,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-98828ff7eb62",
+      "message_id": "<000201c26895$5e46f6c0$57853d80@D75TMX11>",
+      "from_name": "Amin Momin",
+      "from_email_hash": "ec892468e47f6d944f20fd249a0ab594c3e36cd0ddeed010abb93b22f0a86d2d",
+      "date": "2002-09-30T15:23:45Z",
+      "subject": "[BioC] Bioconductor volunteer",
+      "subject_clean": "[BioC] Bioconductor volunteer",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_0003_01C26873.D73556C0\nContent-Type: text/plain;\n\tcharset=\"us-ascii\"\nContent-Transfer-Encoding: 7bit\n\nHi ,\n   I am Amin Momin, a graduate student doing my MS in Bioinformatics at\nGeorgia Institute of Technology, Atlanta. I would like to volunteer for\nthe Bioconductor project. My thesis is in the area of modeling of\nsphingolipid signaling pathway using gene expression and proteomics\ndata. \n \n   I would be pleased to volunteer in writing code and testing.\n \n   Thank you,\n   Amin Momin\n \n\n------=_NextPart_000_0003_01C26873.D73556C0\nContent-Type: text/html;\n\tcharset=\"us-ascii\"\nContent-Transfer-Encoding: quoted-printable\n\n<html xmlns:o=3D\"urn:schemas-microsoft-com:office:office\" xmlns:w=3D\"urn:sc=\nhemas-microsoft-com:office:word\" xmlns:st1=3D\"urn:schemas-microsoft-com:off=\nice:smarttags\" xmlns=3D\"http://www.w3.org/TR/REC-html40\">\n\n<head>\n<META HTTP-EQUIV=3D\"Content-Type\" CONTENT=3D\"text/html; charset=3Dus-ascii\">\n\n\n<meta name=3DProgId content=3DWord.Document>\n<meta name=3DGenerator content=3D\"Microsoft Word 10\">\n<meta name=3DOriginator content=3D\"Microsoft Word 10\">\n<link rel=3DFile-List href=3D\"cid:filelist.xml@01C26873.D718A700\">\n<o:SmartTagType namespaceuri=3D\"urn:schemas-microsoft-com:office:smarttags\"\n name=3D\"City\"/>\n<o:SmartTagType namespaceuri=3D\"urn:schemas-microsoft-com:office:smarttags\"\n name=3D\"place\"/>\n<!--[if gte mso 9]><xml>\n <o:OfficeDocumentSettings>\n  <o:DoNotRelyOnCSS/>\n </o:OfficeDocumentSettings>\n</xml><![endif]--><!--[if gte mso 9]><xml>\n <w:WordDocument>\n  <w:SpellingState>Clean</w:SpellingState>\n  <w:GrammarState>Clean</w:GrammarState>\n  <w:DocumentKind>DocumentEmail</w:DocumentKind>\n  <w:EnvelopeVis/>\n  <w:Compatibility>\n   <w:BreakWrappedTables/>\n   <w:SnapToGridInCell/>\n   <w:WrapTextWithPunct/>\n   <w:UseAsianBreakRules/>\n  </w:Compatibility>\n  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>\n </w:WordDocument>\n</xml><![endif]--><!--[if !mso]>\n<style>\nst1\\:*{behavior:url(#default#ieooui) }\n</style>\n<![endif]-->\n<style>\n<!--\n /* Style Definitions */\n p.MsoNormal, li.MsoNormal, div.MsoNormal\n\t{mso-style-parent:\"\";\n\tmargin:0in;\n\tmargin-bottom:.0001pt;\n\tmso-pagination:widow-orphan;\n\tfont-size:12.0pt;\n\tfont-family:\"Times New Roman\";\n\tmso-fareast-font-family:\"Times New Roman\";}\na:link, span.MsoHyperlink\n\t{color:blue;\n\ttext-decoration:underline;\n\ttext-underline:single;}\na:visited, span.MsoHyperlinkFollowed\n\t{color:purple;\n\ttext-decoration:underline;\n\ttext-underline:single;}\nspan.EmailStyle17\n\t{mso-style-type:personal-compose;\n\tmso-style-noshow:yes;\n\tmso-ansi-font-size:10.0pt;\n\tmso-bidi-font-size:10.0pt;\n\tfont-family:Arial;\n\tmso-ascii-font-family:Arial;\n\tmso-hansi-font-family:Arial;\n\tmso-bidi-font-family:Arial;\n\tcolor:windowtext;}\nspan.SpellE\n\t{mso-style-name:\"\";\n\tmso-spl-e:yes;}\nspan.GramE\n\t{mso-style-name:\"\";\n\tmso-gram-e:yes;}\n@page Section1\n\t{size:8.5in 11.0in;\n\tmargin:1.0in 1.25in 1.0in 1.25in;\n\tmso-header-margin:.5in;\n\tmso-footer-margin:.5in;\n\tmso-paper-source:0;}\ndiv.Section1\n\t{page:Section1;}\n-->\n</style>\n<!--[if gte mso 10]>\n<style>\n /* Style Definitions */=20\n table.MsoNormalTable\n\t{mso-style-name:\"Table Normal\";\n\tmso-tstyle-rowband-size:0;\n\tmso-tstyle-colband-size:0;\n\tmso-style-noshow:yes;\n\tmso-style-parent:\"\";\n\tmso-padding-alt:0in 5.4pt 0in 5.4pt;\n\tmso-para-margin:0in;\n\tmso-para-margin-bottom:.0001pt;\n\tmso-pagination:widow-orphan;\n\tfont-size:10.0pt;\n\tfont-family:\"Times New Roman\";}\n</style>\n<![endif]-->\n</head>\n\n<body lang=3DEN-US link=3Dblue vlink=3Dpurple style=3D'tab-interval:.5in'>\n\n<div class=3DSection1>\n\n<p class=3DMsoNormal><span class=3DGramE><font size=3D2 face=3DArial><span\nstyle=3D'font-size:10.0pt;font-family:Arial'>Hi ,</span></font></span><o:p>=\n</o:p></p>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span style=3D'font-size:1=\n0.0pt;\nfont-family:Arial'>&nbsp;&nbsp; I am <span class=3DSpellE>Amin</span> <span\nclass=3DSpellE>Momin</span>, a graduate student doing my MS in Bioinformati=\ncs at\nGeorgia Institute of Technology, </span></font><st1:City><st1:place><font\n  size=3D2 face=3DArial><span style=3D'font-size:10.0pt;font-family:Arial'>=\nAtlanta</span></font></st1:place></st1:City><font\nsize=3D2 face=3DArial><span style=3D'font-size:10.0pt;font-family:Arial'>. =\nI would\nlike to volunteer for the <span class=3DSpellE>Bioconductor</span> project.=\n My\nthesis is in the area of modeling of <span class=3DSpellE>sphingolipid</spa=\nn>\nsignaling pathway using gene expression and proteomics data. </span></font>=\n<o:p></o:p></p>\n\n<p class=3DMsoNormal><font size=3D3 face=3D\"Times New Roman\"><span style=3D=\n'font-size:\n12.0pt'>&nbsp;<o:p></o:p></span></font></p>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span style=3D'font-size:1=\n0.0pt;\nfont-family:Arial'>&nbsp;&nbsp; I would be pleased to volunteer in writing =\ncode\nand testing.</span></font><o:p></o:p></p>\n\n<p class=3DMsoNormal><font size=3D3 face=3D\"Times New Roman\"><span style=3D=\n'font-size:\n12.0pt'>&nbsp;<o:p></o:p></span></font></p>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span style=3D'font-size:1=\n0.0pt;\nfont-family:Arial'>&nbsp;&nbsp; Thank you,</span></font><o:p></o:p></p>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span style=3D'font-size:1=\n0.0pt;\nfont-family:Arial'>&nbsp;&nbsp; <span class=3DSpellE>Amin</span> <span\nclass=3DSpellE>Momin</span></span></font><o:p></o:p></p>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span style=3D'font-size:1=\n0.0pt;\nfont-family:Arial'><o:p>&nbsp;</o:p></span></font></p>\n\n</div>\n\n</body>\n\n</html>\n\n------=_NextPart_000_0003_01C26873.D73556C0--",
+      "body_snippet": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_0003_01C26873.D73556C0\nContent-Type: text/plain;\n\tcharset=\"us-ascii\"\nContent-Transfer-Encoding: 7bit\n\nHi ,\n   I am Amin Momin, a grad",
+      "thread_id": "thread-98828ff7eb62",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-fbaccd084cfa",
+      "message_id": "<B9BE23F4.14E8%aaltimim@gmu.edu>",
+      "from_name": "Ali Al-Timimi",
+      "from_email_hash": "6e1ec26992d924eb99eebae7203b93b7c614dcd0f45c0a6789559a543dfb85ef",
+      "date": "2002-09-30T19:53:24Z",
+      "subject": "[BioC] A couple of questions",
+      "subject_clean": "[BioC] A couple of questions",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hello everyone,\n\nI would like to first to thank you all for providing such a great service.\nI've download the code base and played around with it, but I have a couple\nof straightforward questions.\n\nI am trying to load my own data but I am unsure as to what format(s) I\nshould place it in. I have 2-colored cDNA and I have seen the swirl data you\nhave provided but I am not certain if I have to map my data to that format.\nHere at George Mason University, we use QuantArray so our data comes out\nwith the following format:\n\n>Number    Array Row    Array Column    Row    Column    Name    X Location    Y\n>Location    ch1 Intensity    ch1 Background    ch1 Intensity Std Dev    ch1\n>Background Std Dev    ch1 Diameter    ch1 Area    ch1 Footprint    ch1\n>Circularity    ch1 Spot Uniformity    ch1 Bkg. Uniformity    ch1 Signal Noise\n>Ratio    ch1 Confidence    ch2 Intensity    ch2 Background    ch2 Intensity Std\n>Dev    ch2 Background Std Dev    ch2 Diameter    ch2 Area    ch2 Footprint\n>ch2 Circularity    ch2 Spot Uniformity    ch2 Bkg. Uniformity    ch2 Signal\n>Noise Ratio    ch2 Confidence    Ignore Filter\n\nMy second question is I would like to have the classes you have created read\ndirectly from my database if possible. Do you have any suggestions as to how\nthat can be approached?\n\nSincerely,\n\nAli Al-Timimi\nGraduate Student\nCenter for Biomedical Genomics and Informatics\nGeorge Mason University",
+      "body_snippet": "Hello everyone,\n\nI would like to first to thank you all for providing such a great service.\nI've download the code base and played around with it, but I have a couple\nof straightforward questions.\n\nI ",
+      "thread_id": "thread-fbaccd084cfa",
+      "thread_depth": 0,
+      "month": "2002-09"
+    },
+    {
+      "id": "msg-3bcca8f0ab95",
+      "message_id": "<AGEOLPCFGCEABFJOOAAMEEKNCAAA.w.huber@dkfz-heidelberg.de>",
+      "from_name": "Wolfgang Huber",
+      "from_email_hash": "a5efa0eff140cbce4ff21aada212234bffbb0be5ae26598f3e6b0bee7164b13d",
+      "date": "2002-09-30T21:55:31Z",
+      "subject": "[BioC] A couple of questions",
+      "subject_clean": "[BioC] A couple of questions",
+      "in_reply_to": "<B9BE23F4.14E8%aaltimim@gmu.edu>",
+      "references": [],
+      "body_plain": "Hi Ali,\n\nwith regards to reading data from QuantArray, you can always use the R\nfunctions read.table or read.delim (type \"help(read.delim)\" at the R prompt)\nand then later call the constructors e.g. for marrayRaw with the appropriate\nmatrices. However, Sandrine Dudoit would know much better about this!\n\n>My second question is I would like to have the classes you have created\nread\n>directly from my database if possible. Do you have any suggestions as to\nhow\n>that can be approached?\nCheck out the DBI: R/Splus Database Interface\nat http://cran.r-project.org/ -> Package Sources.\nor the various DBMS-specific packages.\n\nBest regards\nWolfgang\n\nDr. Wolfgang Huber\nhttp://www.dkfz.de/abt0840/whuber\nTel +49-6221-424709\nFax +49-6221-42524709\nDKFZ\nDivision of Molecular Genome Analysis\n69120 Heidelberg\nGermany\n\n-----Original Message-----\nFrom: bioconductor-admin@stat.math.ethz.ch\n[mailto:bioconductor-admin@stat.math.ethz.ch]On Behalf Of Ali Al-Timimi\nSent: Monday, September 30, 2002 9:53 PM\nTo: bioconductor@stat.math.ethz.ch\nSubject: [BioC] A couple of questions\n\n\nHello everyone,\n\nI would like to first to thank you all for providing such a great service.\nI've download the code base and played around with it, but I have a couple\nof straightforward questions.\n\nI am trying to load my own data but I am unsure as to what format(s) I\nshould place it in. I have 2-colored cDNA and I have seen the swirl data you\nhave provided but I am not certain if I have to map my data to that format.\nHere at George Mason University, we use QuantArray so our data comes out\nwith the following format:\n\n>Number    Array Row    Array Column    Row    Column    Name    X Location\nY\n>Location    ch1 Intensity    ch1 Background    ch1 Intensity Std Dev    ch1\n>Background Std Dev    ch1 Diameter    ch1 Area    ch1 Footprint    ch1\n>Circularity    ch1 Spot Uniformity    ch1 Bkg. Uniformity    ch1 Signal\nNoise\n>Ratio    ch1 Confidence    ch2 Intensity    ch2 Background    ch2 Intensity\nStd\n>Dev    ch2 Background Std Dev    ch2 Diameter    ch2 Area    ch2 Footprint\n>ch2 Circularity    ch2 Spot Uniformity    ch2 Bkg. Uniformity    ch2 Signal\n>Noise Ratio    ch2 Confidence    Ignore Filter\n\nMy second question is I would like to have the classes you have created read\ndirectly from my database if possible. Do you have any suggestions as to how\nthat can be approached?\n\nSincerely,\n\nAli Al-Timimi\nGraduate Student\nCenter for Biomedical Genomics and Informatics\nGeorge Mason University\n\n\n_______________________________________________\nBioconductor mailing list\nBioconductor@stat.math.ethz.ch\nhttp://www.stat.math.ethz.ch/mailman/listinfo/bioconductor",
+      "body_snippet": "Hi Ali,\n\nwith regards to reading data from QuantArray, you can always use the R\nfunctions read.table or read.delim (type \"help(read.delim)\" at the R prompt)\nand then later call the constructors e.g. f",
+      "thread_id": "thread-fbaccd084cfa",
+      "thread_depth": 1,
+      "month": "2002-09"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-c5f928975dfc",
+      "subject": "[BioC] BC install trouble under Windows",
+      "message_count": 2,
+      "participants": [
+        "Laurent Gautier",
+        "Russ turakulov"
+      ],
+      "started": "2002-09-02T03:43:10Z",
+      "last_reply": "2002-09-02T18:34:16Z",
+      "root_message_id": "msg-c5f928975dfc"
+    },
+    {
+      "id": "thread-c61db61b7045",
+      "subject": "[BioC] \"Infogram\" ?",
+      "message_count": 1,
+      "participants": [
+        "Shinichiro Wachi"
+      ],
+      "started": "2002-09-03T23:26:25Z",
+      "last_reply": "2002-09-03T23:26:25Z",
+      "root_message_id": "msg-c61db61b7045"
+    },
+    {
+      "id": "thread-5ceb1e27d900",
+      "subject": "[BioC] Trouble with affy version 1.2.1",
+      "message_count": 3,
+      "participants": [
+        "Isaac Neuhaus",
+        "Laurent Gautier"
+      ],
+      "started": "2002-09-04T21:17:38Z",
+      "last_reply": "2002-09-05T12:21:02Z",
+      "root_message_id": "msg-5ceb1e27d900"
+    },
+    {
+      "id": "thread-3cbe55a243b8",
+      "subject": "[BioC] memory to use affy package",
+      "message_count": 3,
+      "participants": [
+        "Laurent Gautier",
+        "Rafael A. Irizarry",
+        "Stephen Henderson"
+      ],
+      "started": "2002-09-06T15:20:52Z",
+      "last_reply": "2002-09-06T17:29:05Z",
+      "root_message_id": "msg-3cbe55a243b8"
+    },
+    {
+      "id": "thread-130e488e8ea6",
+      "subject": "[BioC] memory to use affy package",
+      "message_count": 1,
+      "participants": [
+        "Stephen Henderson"
+      ],
+      "started": "2002-09-07T15:58:59Z",
+      "last_reply": "2002-09-07T15:58:59Z",
+      "root_message_id": "msg-130e488e8ea6"
+    },
+    {
+      "id": "thread-3aa2672090ad",
+      "subject": "[BioC] (no subject)",
+      "message_count": 1,
+      "participants": [
+        "Ding, Wei"
+      ],
+      "started": "2002-09-10T15:57:11Z",
+      "last_reply": "2002-09-10T15:57:11Z",
+      "root_message_id": "msg-3aa2672090ad"
+    },
+    {
+      "id": "thread-69fca324d1d0",
+      "subject": "[BioC] Problem whit Affy",
+      "message_count": 2,
+      "participants": [
+        "Rafael A. Irizarry",
+        "Remo Sanges"
+      ],
+      "started": "2002-09-10T17:41:23Z",
+      "last_reply": "2002-09-10T19:42:14Z",
+      "root_message_id": "msg-69fca324d1d0"
+    },
+    {
+      "id": "thread-b919a5a32ada",
+      "subject": "[BioC] RE: memory problem in R",
+      "message_count": 1,
+      "participants": [
+        "Stephen Henderson"
+      ],
+      "started": "2002-09-11T10:56:26Z",
+      "last_reply": "2002-09-11T10:56:26Z",
+      "root_message_id": "msg-b919a5a32ada"
+    },
+    {
+      "id": "thread-5eb803b946b1",
+      "subject": "[BioC] R-packages",
+      "message_count": 2,
+      "participants": [
+        "Friedrich.Leisch@ci.tuwien.ac.at",
+        "roland1@sbox.tugraz.at"
+      ],
+      "started": "2002-09-12T09:48:26Z",
+      "last_reply": "2002-09-12T15:48:54Z",
+      "root_message_id": "msg-5eb803b946b1"
+    },
+    {
+      "id": "thread-a40f12ca91ad",
+      "subject": "[BioC] R-packages",
+      "message_count": 1,
+      "participants": [
+        "Wolfgang Huber"
+      ],
+      "started": "2002-09-12T15:39:46Z",
+      "last_reply": "2002-09-12T15:39:46Z",
+      "root_message_id": "msg-a40f12ca91ad"
+    },
+    {
+      "id": "thread-983bc31b609b",
+      "subject": "[BioC] SJava installation under Window 2000",
+      "message_count": 3,
+      "participants": [
+        "Robert Gentleman",
+        "Weijia Zhang"
+      ],
+      "started": "2002-09-13T22:02:51Z",
+      "last_reply": "2002-09-13T22:02:51Z",
+      "root_message_id": "msg-983bc31b609b"
+    },
+    {
+      "id": "thread-78246e43b305",
+      "subject": "[BioC] Bioconductor Software",
+      "message_count": 1,
+      "participants": [
+        "Jason Parcon"
+      ],
+      "started": "2002-09-18T16:04:45Z",
+      "last_reply": "2002-09-18T16:04:45Z",
+      "root_message_id": "msg-78246e43b305"
+    },
+    {
+      "id": "thread-8ca530bd1415",
+      "subject": "[BioC] golubEsets",
+      "message_count": 2,
+      "participants": [
+        "Andrew Boyd",
+        "Bill Barnard"
+      ],
+      "started": "2002-09-18T16:30:21Z",
+      "last_reply": "2002-09-18T17:39:26Z",
+      "root_message_id": "msg-8ca530bd1415"
+    },
+    {
+      "id": "thread-6e45bb380e7c",
+      "subject": "[BioC] Bioconductor Software",
+      "message_count": 1,
+      "participants": [
+        "John Zhang"
+      ],
+      "started": "2002-09-18T18:28:24Z",
+      "last_reply": "2002-09-18T18:28:24Z",
+      "root_message_id": "msg-6e45bb380e7c"
+    },
+    {
+      "id": "thread-a2baa1df7a88",
+      "subject": "[BioC] RWin crashes on normalization with >21 Cel files",
+      "message_count": 1,
+      "participants": [
+        "Eric Blalock"
+      ],
+      "started": "2002-09-18T22:14:43Z",
+      "last_reply": "2002-09-18T22:14:43Z",
+      "root_message_id": "msg-a2baa1df7a88"
+    },
+    {
+      "id": "thread-a36ed2c85266",
+      "subject": "[BioC] RWin crashes on normalization with >21 Cel files",
+      "message_count": 1,
+      "participants": [
+        "Eric"
+      ],
+      "started": "2002-09-18T22:17:35Z",
+      "last_reply": "2002-09-18T22:17:35Z",
+      "root_message_id": "msg-a36ed2c85266"
+    },
+    {
+      "id": "thread-4ce76910a2de",
+      "subject": "[BioC] Bug Report: mt.teststat with test=\"pairt\"",
+      "message_count": 1,
+      "participants": [
+        "John Maindonald"
+      ],
+      "started": "2002-09-19T02:09:35Z",
+      "last_reply": "2002-09-19T02:09:35Z",
+      "root_message_id": "msg-4ce76910a2de"
+    },
+    {
+      "id": "thread-8ce44ca894cf",
+      "subject": "[BioC] [1] \"Get affy failed\"",
+      "message_count": 2,
+      "participants": [
+        "Hinnerk Boriss",
+        "Jeff Gentry"
+      ],
+      "started": "2002-09-19T08:19:39Z",
+      "last_reply": "2002-09-19T14:34:11Z",
+      "root_message_id": "msg-8ce44ca894cf"
+    },
+    {
+      "id": "thread-9718d2a09913",
+      "subject": "[BioC] rhdf5",
+      "message_count": 2,
+      "participants": [
+        "Karen Vranizan",
+        "Laurent Gautier"
+      ],
+      "started": "2002-09-23T20:27:51Z",
+      "last_reply": "2002-09-26T13:30:29Z",
+      "root_message_id": "msg-9718d2a09913"
+    },
+    {
+      "id": "thread-076bcf854fb4",
+      "subject": "[BioC] Bioconductor & tcltk",
+      "message_count": 1,
+      "participants": [
+        "Len F. Zaifman"
+      ],
+      "started": "2002-09-26T14:53:55Z",
+      "last_reply": "2002-09-26T14:53:55Z",
+      "root_message_id": "msg-076bcf854fb4"
+    },
+    {
+      "id": "thread-43506153cfbb",
+      "subject": "[BioC] li.wong vs fit.li.wong",
+      "message_count": 2,
+      "participants": [
+        "Rafael A. Irizarry",
+        "Tibor van Rooij\""
+      ],
+      "started": "2002-09-26T18:49:37Z",
+      "last_reply": "2002-09-26T19:27:05Z",
+      "root_message_id": "msg-43506153cfbb"
+    },
+    {
+      "id": "thread-c967201aac5d",
+      "subject": "[BioC] li.wong( ) vs. fit.li.wong( )",
+      "message_count": 1,
+      "participants": [
+        "Tibor van Rooij\""
+      ],
+      "started": "2002-09-26T19:01:19Z",
+      "last_reply": "2002-09-26T19:01:19Z",
+      "root_message_id": "msg-c967201aac5d"
+    },
+    {
+      "id": "thread-591e96d2e1c3",
+      "subject": "[BioC] bioconductor",
+      "message_count": 2,
+      "participants": [
+        "Wolfgang Huber",
+        "jamie zhou"
+      ],
+      "started": "2002-09-27T23:55:35Z",
+      "last_reply": "2002-09-28T16:08:08Z",
+      "root_message_id": "msg-591e96d2e1c3"
+    },
+    {
+      "id": "thread-98828ff7eb62",
+      "subject": "[BioC] Bioconductor volunteer",
+      "message_count": 1,
+      "participants": [
+        "Amin Momin"
+      ],
+      "started": "2002-09-30T15:23:45Z",
+      "last_reply": "2002-09-30T15:23:45Z",
+      "root_message_id": "msg-98828ff7eb62"
+    },
+    {
+      "id": "thread-fbaccd084cfa",
+      "subject": "[BioC] A couple of questions",
+      "message_count": 2,
+      "participants": [
+        "Ali Al-Timimi",
+        "Wolfgang Huber"
+      ],
+      "started": "2002-09-30T19:53:24Z",
+      "last_reply": "2002-09-30T21:55:31Z",
+      "root_message_id": "msg-fbaccd084cfa"
+    }
+  ]
+}

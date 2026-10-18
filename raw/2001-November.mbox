@@ -1,0 +1,592 @@
+From Martin Maechler <maechler@stat.math.ethz.ch>  Wed Nov 28 17:00:03 2001
+From: Martin Maechler <maechler@stat.math.ethz.ch> (Martin Maechler)
+Date: Wed, 28 Nov 2001 18:00:03 +0100
+Subject: [BioC] Two Mailing lists for the Bioconductor project
+In-Reply-To: <15365.1968.796071.538638@gargle.gargle.HOWL>
+References: <20011127092421.W9251@jimmy.harvard.edu>
+ <200111271601.LAA15555@falmouth.bwh.harvard.edu>
+ <15364.44577.12338.464487@gargle.gargle.HOWL>
+ <15365.1968.796071.538638@gargle.gargle.HOWL>
+Message-ID: <15365.6163.818537.417731@gargle.gargle.HOWL>
+
+We now have have two mailing lists for the bioconductor project
+(which is ``in construction'').
+The bioconductor project has been `opened' by two nice guys from Harvard,
+Robert Gentleman and Vincent Carey, and also runs under the heading
+
+       Bioconductor : R-based software for bioinformatics
+
+I currently am just the person who helped setting up the mailing lists.
+There's currently a very innofficial website with notes from
+Vincent at http://biowww.dfci.harvard.edu/~bioconductor/
+
+Whereas the mailing list for the  "BioC. core developer group" 
+was formed 2 days ago, we (I) only later realized that we should
+have created a public list for the same project simultaneously
+which I now have done.
+
+   Bioconductor := Public Mailing List for Discussion about the
+		   Bioconductor Project and its pieces of Software.
+
+   Biocore	:= "Bioconductor Core Development Group"
+
+However, since things are too much in a state of construction,
+please do not yet advertize any of these two groups but rather
+postpone this for a few weeks!
+
+Both Robert and I have full ``List Admin'' priviledges. 
+Note however that for the public "Bioconductor" List, users can do everything
+themselves (by the passwords that you all should have received in an
+automatic welcome message), and the archives are completely open to the
+world -- both of which is *not* the case for the `private-only' biocore list.
+
+Yours, list administrator,
+Martin Maechler <maechler@stat.math.ethz.ch>	http://stat.ethz.ch/~maechler/
+Seminar fuer Statistik, ETH-Zentrum  LEO C16	Leonhardstr. 27
+ETH (Federal Inst. Technology)	8092 Zurich	SWITZERLAND
+phone: x-41-1-632-3408		fax: ...-1228			<><
+
+From rgentlem@jimmy.harvard.edu  Mon Nov 26 18:13:46 2001
+From: rgentlem@jimmy.harvard.edu (Robert Gentleman)
+Date: Mon, 26 Nov 2001 13:13:46 -0500
+Subject: [BioC] Welcome
+Message-ID: <20011126131346.X9251@jimmy.harvard.edu>
+
+Howdy folks,
+  Welcome to the new bioconductor email list (mainly thanks to
+  Martin).
+  I would like to use this list in pretty much the same way that the
+  R-core mailing list is used. A way for us to communicate with each
+  other about developments and issues related to the Bioconductor
+  project.
+
+  A first request:
+    Please send Jianhua Zhang (jzhang@jimmy.harvard.edu) a URL for
+    your personal (professional) web page. He will be working on
+    fixing up our web page. It will be at www.bioconductor.org
+    shortly.
+
+  Second:
+     We are pretty close to having Biobase, annotate, hdf5 and genefilter in
+     good enough condition for a beta-release. Anyone with other
+     libraries that they want included let me know (and make sure that
+     they pass CMD check without warnings).
+
+     Fritz has developed some code for doing noweb style weaving and
+     tangling that looks like it may provide an answer to running and
+     testing the vignettes (or recipes) that need to be provided in 
+     inst/docs/xxx.tex. Once we can do this I think we should release
+     in beta form.
+
+   Third:
+      Duncan Murdoch has built R1.4 for windows and uploaded it to:
+        http://www.stats.uwo.ca/faculty/murdoch/software/r-devel/
+      this means we should be able to build and test all of our
+      libraries for windows. (This will probably have to move so don't
+      spread it around too widely -- they have a little server).
+
+      I have no ideas about a mac port yet but that should come along
+      in time.
+
+  Otherwise, welcome aboard and let's get some software out there
+  where people can use it.
+
+      Robert
+-- 
++---------------------------------------------------------------------------+
+| Robert Gentleman                 phone : (617) 632-5250                   |
+| Associate Professor              fax:   (617)  632-2444                   |
+| Department of Biostatistics      office: M1B28
+| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |
++---------------------------------------------------------------------------+
+
+From rgentlem@jimmy.harvard.edu  Tue Nov 27 14:24:21 2001
+From: rgentlem@jimmy.harvard.edu (Robert Gentleman)
+Date: Tue, 27 Nov 2001 09:24:21 -0500
+Subject: [BioC] First business
+In-Reply-To: <20011126131346.X9251@jimmy.harvard.edu>; from Robert Gentleman on Mon, Nov 26, 2001 at 01:13:46PM -0500
+References: <20011126131346.X9251@jimmy.harvard.edu>
+Message-ID: <20011127092421.W9251@jimmy.harvard.edu>
+
+Well that took less time than I thought.
+We have started to get subscription requests for the mailing list and 
+we need to deal with how to handle contributed libraries.
+
+My proposal is to set up a discussion mailing list (that we all
+subscribe to) for Bioconductor. I don't think that we have anything to
+discuss yet -- which is a problem. We have had four requests to join
+all with .de suffixes but there will be more.
+Any other ideas?
+
+Next, libraries. I am hoping to have our new programmer (starting in
+Jan) learn how to test libraries and to handle all submissions (by
+doing some simple testing and then add them to a site like CRAN).
+Do we want to develop and start to populate the site now with the
+proviso that we will put in more stringent tests later?
+The reason for this is to gain some momentum and hopefully to find
+some more people who might be willing to do some of the organizational
+work that will be needed.
+
+Fritz/Kurt: is it feasible to set up a web page for bioconductor off
+of CRAN using mainly the existing structure and to populate it with
+unvetted software. I expect that the new programmer will be able to
+take this over in late January. So it would be the initial setup and
+population that would be required.
+
+Organization:
+   - we need someone (volunteers please take a giant step forward) to
+   organize some mechanism for keeping track of what we are doing and
+   what other people are doing regarding building libraries. 
+   - it would be nice to have some place where one can see what sorts
+   of projects are being done so that collaboration etc can go on.
+   - perhaps a Wiki type interface?
+
+  thanks
+    robert
+
+
+-- 
++---------------------------------------------------------------------------+
+| Robert Gentleman                 phone : (617) 632-5250                   |
+| Associate Professor              fax:   (617)  632-2444                   |
+| Department of Biostatistics      office: M1B28
+| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |
++---------------------------------------------------------------------------+
+
+From stvjc@channing.harvard.edu  Tue Nov 27 16:01:58 2001
+From: stvjc@channing.harvard.edu (Vincent J. Carey, Jr.)
+Date: Tue, 27 Nov 2001 11:01:58 -0500 (EST)
+Subject: [BioC] First business
+In-Reply-To: <20011127092421.W9251@jimmy.harvard.edu> from "Robert Gentleman" at Nov 27, 2001 09:24:21 AM
+Message-ID: <200111271601.LAA15555@falmouth.bwh.harvard.edu>
+
+> 
+> My proposal is to set up a discussion mailing list (that we all
+> subscribe to) for Bioconductor. I don't think that we have anything to
+
+i take it that mailing to bioconductor@stat.math.ethz.ch
+constitutes even at this point a discussion mailing list
+
+an open question is how to structure the communications system.
+bioconductor-core is necessary for continuing threads like this
+one.  bioconductor-help, bioconductor-devel also seem to make sense.
+
+> discuss yet -- which is a problem. We have had four requests to join
+
+i think we have a fair amount to discuss as core, and those
+who are non-core may want to describe their concerns.  probably
+not too early to start, but a bit too early to publicize very widely
+
+> all with .de suffixes but there will be more.
+> Any other ideas?
+> 
+> Next, libraries. I am hoping to have our new programmer (starting in
+> Jan) learn how to test libraries and to handle all submissions (by
+> doing some simple testing and then add them to a site like CRAN).
+> Do we want to develop and start to populate the site now with the
+> proviso that we will put in more stringent tests later?
+> The reason for this is to gain some momentum and hopefully to find
+> some more people who might be willing to do some of the organizational
+> work that will be needed.
+
+i am in favor of deployment soon.  i will be working on getting
+test-functionality equivalent to Biobase.  pointers on how to get
+there would be worth writing down.
+
+> 
+> Fritz/Kurt: is it feasible to set up a web page for bioconductor off
+> of CRAN using mainly the existing structure and to populate it with
+> unvetted software. I expect that the new programmer will be able to
+> take this over in late January. So it would be the initial setup and
+> population that would be required.
+
+i hope this is possible, otherwise we need to get sourceforge
+or anoncvs running locally.  i would put some effort into that
+if i knew that ad hoc security considerations would not lay that effort
+to waste at some arbitrary future time
+
+> 
+> Organization:
+>    - we need someone (volunteers please take a giant step forward) to
+>    organize some mechanism for keeping track of what we are doing and
+>    what other people are doing regarding building libraries. 
+
+http://biowww.dfci.harvard.edu/~bioconductor/ already has a little
+bit in this regard.  we need to distinguish between internal
+core-level tracking that can be used for strategizing and
+evaluation and public tracking that is a public service and
+agenda publicity
+
+i am happy to put core-generated changes into the aforementioned
+web page on short notice.
+
+>    - it would be nice to have some place where one can see what sorts
+>    of projects are being done so that collaboration etc can go on.
+>    - perhaps a Wiki type interface?
+
+this depends upon security.  i will install zope if i can get
+a publicly accessible port 8080.  but perhaps that is overkill
+for a wiki if that is all we really want.
+
+robert's email is generated from bioconductor-admin, but i made
+the reply to bioconductor to reach the core.  please advise
+if changes to my mailing strategy are desired.
+
+vince
+
+From bates@stat.wisc.edu  Tue Nov 27 21:07:44 2001
+From: bates@stat.wisc.edu (Douglas Bates)
+Date: 27 Nov 2001 15:07:44 -0600
+Subject: [BioC] .forward and access to materials
+Message-ID: <6ritbvc47z.fsf@franz.stat.wisc.edu>
+
+Hi,
+
+Could those of you with logins on franz.stat.wisc.edu (aka
+cvs.r-project.org and, I presume, cvs.bioconductor.org) please ensure
+that you have a world-readable file called .forward in your home
+directory.  It should contain your preferred e-mail address.  For
+example, the file /home/rgentlem/.forward contains the single line
+
+rgentlem@hsph.harvard.edu
+
+Second question, is it ok for me to show Michael Newton the
+Bioconductor materials in the CVS archive.
+
+As some of you know, I don't have a lot of time this week and I will
+be out of town next week.  This is bad timing in that the release of
+R-1.4.0 and some Bioconductor packages will occur while I am
+travelling or catching up from travel.  Meanwhile, some ideas and
+projects involving our Statistics Department and our Biotechnology
+Center are developing rapidly and I would like to bring Michael up to
+date on what is planned for Bioconductor.  Can I give him a preview?
+
+By the way, I noticed that the CVS archive contains multtest at the
+top level and in madman/Rpacks.  I imagine it is the second version
+that should stay.
+
+Regards,
+Doug
+
+From John Zhang <jzhang@jimmy.harvard.edu>  Tue Nov 27 21:50:12 2001
+From: John Zhang <jzhang@jimmy.harvard.edu> (John Zhang)
+Date: Tue, 27 Nov 2001 16:50:12 -0500 (EST)
+Subject: [BioC] RE: Bioconductor web page
+Message-ID: <200111272150.QAA21923@blaise.dfci.harvard.edu>
+
+Conductors,
+
+I have checked in a few web pages just to solicit idears on what the 
+bioconductor web site should look like. Please check out the "webstuff" folder 
+in madman and type in netscape 
+file:/usr/local/homes/YourUserName/madman/webstuff/bioconductor.hml or whatelse 
+it should be to have a look. We need a logo to put in the top frame. I am 
+thinking of a background picture like the one I put in for now with 
+"bioconductor" imposed onto it. Frames are used assuming that people surfing our 
+site will not use those dinosaur browsers. 
+
+Thank you for those who have sent me the urls for personal pages. Please do so 
+if you have not done that yet. Otherwise, I will have to look for something from 
+the R site or the web page of your institution and stick the url I find under 
+your name. In that case, I can not quarantee that the url would be your favriate 
+one or even belongs to you.
+
+Let me know if you have any suggestions. Thanks.
+
+
+Jianhua
+
+  
+
+
+From Martin Maechler <maechler@stat.math.ethz.ch>  Wed Nov 28 09:16:02 2001
+From: Martin Maechler <maechler@stat.math.ethz.ch> (Martin Maechler)
+Date: Wed, 28 Nov 2001 10:16:02 +0100
+Subject: [BioC] (replying to postings)
+In-Reply-To: <200111271601.LAA15555@falmouth.bwh.harvard.edu>
+References: <20011127092421.W9251@jimmy.harvard.edu>
+ <200111271601.LAA15555@falmouth.bwh.harvard.edu>
+Message-ID: <15364.43858.257526.54817@gargle.gargle.HOWL>
+
+>>>>> "Vincent" == Vincent J Carey, <stvjc@channing.harvard.edu> writes:
+
+      ............
+
+    Vincent> robert's email is generated from
+    Vincent> bioconductor-admin, but i made the reply to
+    Vincent> bioconductor to reach the core.  please advise if
+    Vincent> changes to my mailing strategy are desired.
+
+The mails from both mailman (like this) or majordomo (like the
+usual R lists) come with a 
+
+ From:   <you, the poster>
+ Sender: <listname>-admin@....   {"-admin" for mailman / "-owner" for majordomo}
+ To:     <listname>      @....
+
+(and several other headers, in particular, mailman has half a
+ dozen of "List-*: <url>" headers.)
+
+A reply or followup of
+any decent MUA (mail user agent) should produce a
+  To:   <him, the poster> @ ..
+  CC:   <listname> @ ..
+
+where it may depend which is To and which (or if there) is CC.
+
+Yes, there are bad pieces of software who do reply to "admin"/"owner".  
+Yes, they are a real pain, particularly when I am the admin/owner  :-)
+
+Martin
+
+From Martin Maechler <maechler@stat.math.ethz.ch>  Wed Nov 28 09:28:01 2001
+From: Martin Maechler <maechler@stat.math.ethz.ch> (Martin Maechler)
+Date: Wed, 28 Nov 2001 10:28:01 +0100
+Subject: [BioC] First business
+In-Reply-To: <200111271601.LAA15555@falmouth.bwh.harvard.edu>
+References: <20011127092421.W9251@jimmy.harvard.edu>
+ <200111271601.LAA15555@falmouth.bwh.harvard.edu>
+Message-ID: <15364.44577.12338.464487@gargle.gargle.HOWL>
+
+>>>>> "Vincent" == Vincent J Carey, <stvjc@channing.harvard.edu> writes:
+
+    >>  My proposal is to set up a discussion mailing list (that
+    >> we all subscribe to) for Bioconductor. I don't think that
+    >> we have anything to
+
+    Vincent> i take it that mailing to
+    Vincent> bioconductor@stat.math.ethz.ch constitutes even at
+    Vincent> this point a discussion mailing list
+
+    Vincent> an open question is how to structure the
+    Vincent> communications system.  bioconductor-core is
+    Vincent> necessary for continuing threads like this one.
+    Vincent> bioconductor-help, bioconductor-devel also seem to
+    Vincent> make sense.
+
+I would propose to change this (current group) to "bioconductor-core"
+-- which I would propose to call "biocore" (the the other being
+too long for my taste).
+
+and make "bioconductor" a new (currently only) public list.
+
+    >> discuss yet -- which is a problem. We have had four
+    >> requests to join
+
+    Vincent> i think we have a fair amount to discuss as core,
+    Vincent> and those who are non-core may want to describe
+    Vincent> their concerns.  probably not too early to start,
+    Vincent> but a bit too early to publicize very widely
+
+    >> all with .de suffixes but there will be more.  Any other
+    >> ideas?
+
+    >> Next, libraries. I am hoping to have our new programmer
+             ^^^^^^^^^
+the word is really "packages"
+A library is either a *.so, *.dll, *.a (etc) file 
+or one of the [lib.loc] directories where packages are located
+
+    >> (starting in Jan) learn how to test libraries and to
+    >> handle all submissions (by doing some simple testing and
+    >> then add them to a site like CRAN).  Do we want to
+    >> develop and start to populate the site now with the
+    >> proviso that we will put in more stringent tests later?
+    >> The reason for this is to gain some momentum and
+    >> hopefully to find some more people who might be willing
+    >> to do some of the organizational work that will be
+    >> needed.
+
+    Vincent> i am in favor of deployment soon.  i will be
+    Vincent> working on getting test-functionality equivalent to
+    Vincent> Biobase.  pointers on how to get there would be
+    Vincent> worth writing down.
+
+    >>  Fritz/Kurt: is it feasible to set up a web page for
+    >> bioconductor off of CRAN using mainly the existing
+    >> structure and to populate it with unvetted software. I
+    >> expect that the new programmer will be able to take this
+    >> over in late January. So it would be the initial setup
+    >> and population that would be required.
+
+    Vincent> i hope this is possible, otherwise we need to get
+    Vincent> sourceforge or anoncvs running locally.  i would
+    Vincent> put some effort into that if i knew that ad hoc
+    Vincent> security considerations would not lay that effort
+    Vincent> to waste at some arbitrary future time
+
+    >>  Organization: - we need someone (volunteers please take
+    >> a giant step forward) to organize some mechanism for
+    >> keeping track of what we are doing and what other people
+    >> are doing regarding building 
+packages
+
+    Vincent> http://biowww.dfci.harvard.edu/~bioconductor/
+    Vincent> already has a little bit in this regard.  we need
+    Vincent> to distinguish between internal core-level tracking
+    Vincent> that can be used for strategizing and evaluation
+    Vincent> and public tracking that is a public service and
+    Vincent> agenda publicity
+
+    Vincent> i am happy to put core-generated changes into the
+    Vincent> aforementioned web page on short notice.
+
+thank you.  
+However, this should eventually move to www.bioconductor.org,  right?
+
+	 <....>
+
+Martin
+
+From Friedrich.Leisch@ci.tuwien.ac.at  Wed Nov 28 12:47:46 2001
+From: Friedrich.Leisch@ci.tuwien.ac.at (Friedrich.Leisch@ci.tuwien.ac.at)
+Date: Wed, 28 Nov 2001 13:47:46 +0100
+Subject: [BioC] First business
+In-Reply-To: <20011127092421.W9251@jimmy.harvard.edu>
+References: <20011126131346.X9251@jimmy.harvard.edu>
+ <20011127092421.W9251@jimmy.harvard.edu>
+Message-ID: <15364.56562.381402.787420@galadriel.ci.tuwien.ac.at>
+
+>>>>> On Tue, 27 Nov 2001 09:24:21 -0500,
+>>>>> Robert Gentleman (RG) wrote:
+
+  > Well that took less time than I thought.
+  > We have started to get subscription requests for the mailing list and 
+  > we need to deal with how to handle contributed libraries.
+
+  > My proposal is to set up a discussion mailing list (that we all
+  > subscribe to) for Bioconductor. I don't think that we have anything to
+  > discuss yet -- which is a problem. We have had four requests to join
+  > all with .de suffixes but there will be more.
+  > Any other ideas?
+
+  > Next, libraries. I am hoping to have our new programmer (starting in
+  > Jan) learn how to test libraries and to handle all submissions (by
+  > doing some simple testing and then add them to a site like CRAN).
+  > Do we want to develop and start to populate the site now with the
+  > proviso that we will put in more stringent tests later?
+  > The reason for this is to gain some momentum and hopefully to find
+  > some more people who might be willing to do some of the organizational
+  > work that will be needed.
+
+  > Fritz/Kurt: is it feasible to set up a web page for bioconductor off
+  > of CRAN using mainly the existing structure and to populate it with
+  > unvetted software. I expect that the new programmer will be able to
+  > take this over in late January. So it would be the initial setup and
+  > population that would be required.
+
+
+Is OK, but I'll probably not find time within the next 2 weeks for
+that. christmas break (for students) starts on dec. 17, then I'll have
+more time.
+
+best,
+fritz
+
+From Martin Maechler <maechler@stat.math.ethz.ch>  Wed Nov 28 15:50:08 2001
+From: Martin Maechler <maechler@stat.math.ethz.ch> (Martin Maechler)
+Date: Wed, 28 Nov 2001 16:50:08 +0100
+Subject: [BioC] Bioconductor: Two Mailing lists
+In-Reply-To: <15364.44577.12338.464487@gargle.gargle.HOWL>
+References: <20011127092421.W9251@jimmy.harvard.edu>
+ <200111271601.LAA15555@falmouth.bwh.harvard.edu>
+ <15364.44577.12338.464487@gargle.gargle.HOWL>
+Message-ID: <15365.1968.796071.538638@gargle.gargle.HOWL>
+
+>>>>> "MM" == Martin Maechler <maechler@stat.math.ethz.ch> writes:
+
+>>>>> "Vincent" == Vincent J Carey, <stvjc@channing.harvard.edu> writes:
+    >>> My proposal is to set up a discussion mailing list (that
+    >>> we all subscribe to) for Bioconductor. I don't think
+    >>> that we have anything to
+
+    Vincent> i take it that mailing to
+    Vincent> bioconductor@stat.math.ethz.ch constitutes even at
+    Vincent> this point a discussion mailing list
+
+    Vincent> an open question is how to structure the
+    Vincent> communications system.  bioconductor-core is
+    Vincent> necessary for continuing threads like this one.
+    Vincent> bioconductor-help, bioconductor-devel also seem to
+    Vincent> make sense.
+
+    MM> I would propose to change this (current group) to
+    MM> "bioconductor-core" -- which I would propose to call
+    MM> "biocore" (the the other being too long for my taste).
+
+    MM> and make "bioconductor" a new (currently only) public
+    MM> list.
+
+which -- after nodding from Robert -- I'm about to implement.
+
+Bioconductor := Public Mailing List for Discussion about the
+	     Bioconductor Project and its pieces of Software.
+
+Biocore	     := "Bioconductor Core Development Group"
+
+So, actually, I'd appreciate if you guys could stop posting for
+a while to both "bioconductor" and "biocore",
+and later post to "biocore" only for `internal discussion'.
+
+I'll have you all subscribed to both biocore and bioconductor
+and will add the other interested people to bioconductor only.
+I'll also move the archives which is a bit tricky, 
+and that's why I'd appreciate a two hour (or so) complete silence break.
+
+	(Next time think more in advance, Martin!)
+
+Martin
+
+Martin Maechler <maechler@stat.math.ethz.ch>	http://stat.ethz.ch/~maechler/
+Seminar fuer Statistik, ETH-Zentrum  LEO C16	Leonhardstr. 27
+ETH (Federal Inst. Technology)	8092 Zurich	SWITZERLAND
+phone: x-41-1-632-3408		fax: ...-1228			<><
+
+From Martin Maechler <maechler@stat.math.ethz.ch>  Wed Nov 28 17:00:03 2001
+From: Martin Maechler <maechler@stat.math.ethz.ch> (Martin Maechler)
+Date: Wed, 28 Nov 2001 18:00:03 +0100
+Subject: [BioC] Two Mailing lists for the Bioconductor project
+In-Reply-To: <15365.1968.796071.538638@gargle.gargle.HOWL>
+References: <20011127092421.W9251@jimmy.harvard.edu>
+ <200111271601.LAA15555@falmouth.bwh.harvard.edu>
+ <15364.44577.12338.464487@gargle.gargle.HOWL>
+ <15365.1968.796071.538638@gargle.gargle.HOWL>
+Message-ID: <15365.6163.818537.417731@gargle.gargle.HOWL>
+
+We now have have two mailing lists for the bioconductor project
+(which is ``in construction'').
+The bioconductor project has been `opened' by two nice guys from Harvard,
+Robert Gentleman and Vincent Carey, and also runs under the heading
+
+       Bioconductor : R-based software for bioinformatics
+
+I currently am just the person who helped setting up the mailing lists.
+There's currently a very innofficial website with notes from
+Vincent at http://biowww.dfci.harvard.edu/~bioconductor/
+
+Whereas the mailing list for the  "BioC. core developer group" 
+was formed 2 days ago, we (I) only later realized that we should
+have created a public list for the same project simultaneously
+which I now have done.
+
+   Bioconductor := Public Mailing List for Discussion about the
+		   Bioconductor Project and its pieces of Software.
+
+   Biocore	:= "Bioconductor Core Development Group"
+
+However, since things are too much in a state of construction,
+please do not yet advertize any of these two groups but rather
+postpone this for a few weeks!
+
+Both Robert and I have full ``List Admin'' priviledges. 
+Note however that for the public "Bioconductor" List, users can do everything
+themselves (by the passwords that you all should have received in an
+automatic welcome message), and the archives are completely open to the
+world -- both of which is *not* the case for the `private-only' biocore list.
+
+Yours, list administrator,
+Martin Maechler <maechler@stat.math.ethz.ch>	http://stat.ethz.ch/~maechler/
+Seminar fuer Statistik, ETH-Zentrum  LEO C16	Leonhardstr. 27
+ETH (Federal Inst. Technology)	8092 Zurich	SWITZERLAND
+phone: x-41-1-632-3408		fax: ...-1228			<><
+

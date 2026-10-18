@@ -1,0 +1,5183 @@
+From anna_tsykin@yahoo.com  Mon Jun  3 03:52:08 2002
+From: anna_tsykin@yahoo.com (=?iso-8859-1?q?Anna=20Tsykin?=)
+Date: Mon, 3 Jun 2002 12:52:08 +1000 (EST)
+Subject: [BioC] Re: Installing R with g77 fortran compiler
+Message-ID: <20020603025208.22732.qmail@web10108.mail.yahoo.com>
+
+>>>>> Mohan Parigi writes:
+
+> Hello,
+
+> I am trying to compile sources of R-1.5.0 on a Mandrake 8.1 linux
+box.
+> For Fortran compiler needs, I downloaded and installed a g77 rpm. But
+> the configure step fails with following output. I would like to know 
+> if any of you had similar problem and how you solved.
+
+
+I am using R-1.5.0 on a Mandrake 8.1 box and also had problems with a
+Fortran compiler several months ago.  I no longer remember the details
+but I needed to install an additional g77 module.  My software manager
+lists two installed packages: egcs-g77 and gcc3.0-g77 and I do seem to
+be running g77 version 3.0.1.  These packages are part of the
+distribution.  Anyhow, you may not need to compile the sources, CRAN
+has precompiled binaries for Mandrake 8.1 which work well.  I hope this
+helps.
+
+Anna Tsykin
+MAG, Adelaide, Australia
+http://mag.maths.adelaide.edu.au
+
+http://www.sold.com.au - The Sold.com.au Big Brand Sale
+- New PCs, notebooks, digital cameras, phones and more ... Sale ends June 12
+
+From jb7gv@virginia.edu  Mon Jun  3 14:09:04 2002
+From: jb7gv@virginia.edu (Joshua Betcher)
+Date: Mon, 3 Jun 2002 09:09:04 -0400
+Subject: [BioC] Multtest data problem....
+Message-ID: <002c01c20aff$d67698b0$2701a8c0@joshbtosh>
+
+I was loading the multtest package and came across two problems.  The first
+is that I have the same problem as Byron Elllis attaching the package when I
+downloaded the latest snapshot.  I bypassed this by using the version of
+Multtest I downloaded on May 3.  Is there a difference between the two?  The
+second problem I have is that within the examples you use the dataset golub;
+as with Marrayinput you get the following error when trying to load it:
+
+data(golub)
+Error: restore file may be from a newer version of R -- no data loaded
+
+If anyone has the dataset, could they please email it to me, .RData or .txt
+formats are fine by me.
+
+Thanks a lot for all the help
+Josh
+
+
+
+From jb7gv@virginia.edu  Mon Jun  3 17:14:45 2002
+From: jb7gv@virginia.edu (Joshua Betcher)
+Date: Mon, 3 Jun 2002 12:14:45 -0400
+Subject: [BioC] Multtest data problem....
+References: <002c01c20aff$d67698b0$2701a8c0@joshbtosh>
+Message-ID: <000b01c20b19$c72da320$2701a8c0@joshbtosh>
+
+I forgot to add that I have R 1.5.0 and are using windows.  Also, the same
+problem with the sample datasets occur with the affy package (only two of
+the datasets work) so if anyone has those and could pass them along or maybe
+post them on the bioconductor web site I would be eternally grateful.
+
+Josh
+
+----- Original Message -----
+From: "Joshua Betcher" <jb7gv@virginia.edu>
+To: <Bioconductor@stat.math.ethz.ch>
+Sent: Monday, June 03, 2002 9:09 AM
+Subject: [BioC] Multtest data problem....
+
+
+> I was loading the multtest package and came across two problems.  The
+first
+> is that I have the same problem as Byron Elllis attaching the package when
+I
+> downloaded the latest snapshot.  I bypassed this by using the version of
+> Multtest I downloaded on May 3.  Is there a difference between the two?
+The
+> second problem I have is that within the examples you use the dataset
+golub;
+> as with Marrayinput you get the following error when trying to load it:
+>
+> data(golub)
+> Error: restore file may be from a newer version of R -- no data loaded
+>
+> If anyone has the dataset, could they please email it to me, .RData or
+.txt
+> formats are fine by me.
+>
+> Thanks a lot for all the help
+> Josh
+>
+>
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+>
+
+
+
+From sandrine@stat.berkeley.edu  Tue Jun  4 08:33:26 2002
+From: sandrine@stat.berkeley.edu (Sandrine Dudoit)
+Date: Tue, 4 Jun 2002 00:33:26 -0700 (PDT)
+Subject: [BioC] Multtest data problem....
+In-Reply-To: <002c01c20aff$d67698b0$2701a8c0@joshbtosh>
+Message-ID: <Pine.SOL.4.31.0206040030460.2955-100000@shelob.Berkeley.EDU>
+
+Hi Joshua,
+
+There shouldn't be any differences between the two versions of multtest.
+As for data(golub), the same problem happens with windows versions of
+other packages and still needs for be fixed.
+
+I will send you .Rdata in another e-mail.
+
+Best,
+Sandrine
+
+On Mon, 3 Jun 2002, Joshua Betcher wrote:
+
+> I was loading the multtest package and came across two problems.  The first
+> is that I have the same problem as Byron Elllis attaching the package when I
+> downloaded the latest snapshot.  I bypassed this by using the version of
+> Multtest I downloaded on May 3.  Is there a difference between the two?  The
+> second problem I have is that within the examples you use the dataset golub;
+> as with Marrayinput you get the following error when trying to load it:
+>
+> data(golub)
+> Error: restore file may be from a newer version of R -- no data loaded
+>
+> If anyone has the dataset, could they please email it to me, .RData or .txt
+> formats are fine by me.
+>
+> Thanks a lot for all the help
+> Josh
+>
+>
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+>
+
+
+From niklas.nordquist@genpat.uu.se  Tue Jun  4 13:20:11 2002
+From: niklas.nordquist@genpat.uu.se (Niklas Nordquist)
+Date: Tue, 4 Jun 2002 14:20:11 +0200
+Subject: [BioC] widget.marrayRaw
+Message-ID: <000001c20bc2$2dacb750$05d4ee82@walker>
+
+I have a couple of questions concerning the marrayRaw widget. 
+First, when I create an marrayLayout object and specify a "*.gal" file
+containing info on spots and clones, and just type ">objectname", I get
+some summary information on the object. In this summary it is stated
+that I have a number of control spots, including 3xSSC, the Arab gene,
+and duplicates of each spot. Where does this information come from?
+
+Second, Is this information about control spots used in the
+normalization process? (I have used the maLormLoess() function).
+
+I'd be happy if someone could explain this to me.
+
+Regards,
+
+Niklas Nordquist 
+
+
+
+
+
+From jmacdon@umich.edu  Tue Jun  4 18:29:04 2002
+From: jmacdon@umich.edu (James W Mac Donald)
+Date: Tue, 4 Jun 2002 13:29:04 -0400 (EDT)
+Subject: [BioC] Loading affy library
+Message-ID: <Pine.SOL.4.44.0206041324540.20259-100000@millipede.gpcc.itd.umich.edu>
+
+Hi all,
+
+I am having a problem loading the affy library into R. Here is the message
+I get:
+
+library(affy)
+Loading required package: Biobase
+Loading required package: methods
+Expanding the signature to include omitted arguments
+in definition: j = "missing"
+Loading required package: eda
+Error in setGeneric("length", where = where) :
+        "length" is a primitive function; methods can be defined for some
+of these but setGeneric must not be called
+Error in library(affy) : .First.lib failed
+
+Any ideas?
+
+James W. MacDonald
+UMCCC Microarray Core Facility
+1500 E. Medical Center Drive
+7410 CCGC
+Ann Arbor MI 48109
+734-647-5623
+
+
+
+From rossini@u.washington.edu  Tue Jun  4 18:32:24 2002
+From: rossini@u.washington.edu (A.J. Rossini)
+Date: 04 Jun 2002 10:32:24 -0700
+Subject: [BioC] Loading affy library
+In-Reply-To: <Pine.SOL.4.44.0206041324540.20259-100000@millipede.gpcc.itd.umich.edu>
+References: <Pine.SOL.4.44.0206041324540.20259-100000@millipede.gpcc.itd.umich.edu>
+Message-ID: <87g003uezb.fsf@jeeves.blindglobe.net>
+
+>>>>> "james" == James W Mac Donald <James> writes:
+
+    james> Hi all,
+    james> I am having a problem loading the affy library into R. Here is the message
+    james> I get:
+
+    james> library(affy)
+    james> Loading required package: Biobase
+    james> Loading required package: methods
+    james> Expanding the signature to include omitted arguments
+    james> in definition: j = "missing"
+    james> Loading required package: eda
+    james> Error in setGeneric("length", where = where) :
+    james>         "length" is a primitive function; methods can be defined for some
+    james> of these but setGeneric must not be called
+    james> Error in library(affy) : .First.lib failed
+
+    james> Any ideas?
+
+You should be using R 1.5; are you?  (the "methods" error suggests not?)
+
+best,
+-tony
+
+-- 
+A.J. Rossini				Rsrch. Asst. Prof. of Biostatistics
+U. of Washington Biostatistics		rossini@u.washington.edu	
+FHCRC/SCHARP/HIV Vaccine Trials Net	rossini@scharp.org
+-------------- http://software.biostat.washington.edu/ ----------------
+FHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email
+UW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX
+(my friday location is usually completely unpredictable.)
+
+
+
+From rossini@u.washington.edu  Tue Jun  4 18:39:02 2002
+From: rossini@u.washington.edu (A.J. Rossini)
+Date: 04 Jun 2002 10:39:02 -0700
+Subject: [BioC] snarfing GEO datasets...
+Message-ID: <87bsarueo9.fsf@jeeves.blindglobe.net>
+
+On a related note to BLAST (which we've implemented an R interface
+for, hopefully we'll release it as part of a package by the summer's
+end), has anyone done any work with snarfing GEO datasets into R?  
+
+I know they look a bit free-form, but it looks like about 75% (or
+all) of the work could be automated with a bit of work?
+
+best,
+-tony
+
+-- 
+A.J. Rossini				Rsrch. Asst. Prof. of Biostatistics
+U. of Washington Biostatistics		rossini@u.washington.edu	
+FHCRC/SCHARP/HIV Vaccine Trials Net	rossini@scharp.org
+-------------- http://software.biostat.washington.edu/ ----------------
+FHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email
+UW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX
+(my friday location is usually completely unpredictable.)
+
+
+
+From jmacdon@umich.edu  Tue Jun  4 18:41:26 2002
+From: jmacdon@umich.edu (James W Mac Donald)
+Date: Tue, 4 Jun 2002 13:41:26 -0400 (EDT)
+Subject: [BioC] Loading affy library
+In-Reply-To: <87g003uezb.fsf@jeeves.blindglobe.net>
+Message-ID: <Pine.SOL.4.44.0206041335160.11262-100000@arkanoid.gpcc.itd.umich.edu>
+
+I am using R 1.5, and I updated all of the librarys to make sure it wasn't
+simply an outdated library. In addition I made sure that I have everything
+set up so tcltk will load correctly (I assume I need tcltk in order to use
+tkWidgets).
+
+Thanks,
+
+Jim
+
+James W. MacDonald
+UMCCC Microarray Core Facility
+1500 E. Medical Center Drive
+7410 CCGC
+Ann Arbor MI 48109
+734-647-5623
+
+
+On 4 Jun 2002, A.J. Rossini wrote:
+
+> >>>>> "james" == James W Mac Donald <James> writes:
+>
+>     james> Hi all,
+>     james> I am having a problem loading the affy library into R. Here is the message
+>     james> I get:
+>
+>     james> library(affy)
+>     james> Loading required package: Biobase
+>     james> Loading required package: methods
+>     james> Expanding the signature to include omitted arguments
+>     james> in definition: j = "missing"
+>     james> Loading required package: eda
+>     james> Error in setGeneric("length", where = where) :
+>     james>         "length" is a primitive function; methods can be defined for some
+>     james> of these but setGeneric must not be called
+>     james> Error in library(affy) : .First.lib failed
+>
+>     james> Any ideas?
+>
+> You should be using R 1.5; are you?  (the "methods" error suggests not?)
+>
+> best,
+> -tony
+>
+> --
+> A.J. Rossini				Rsrch. Asst. Prof. of Biostatistics
+> U. of Washington Biostatistics		rossini@u.washington.edu
+> FHCRC/SCHARP/HIV Vaccine Trials Net	rossini@scharp.org
+> -------------- http://software.biostat.washington.edu/ ----------------
+> FHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email
+> UW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX
+> (my friday location is usually completely unpredictable.)
+>
+>
+
+
+From stvjc@channing.harvard.edu  Tue Jun  4 18:47:00 2002
+From: stvjc@channing.harvard.edu (Vincent J. Carey, Jr.)
+Date: Tue, 4 Jun 2002 13:47:00 -0400 (EDT)
+Subject: [BioC] snarfing GEO datasets...
+Message-ID: <200206041747.NAA07566@falmouth.bwh.harvard.edu>
+
+in package annotate there is GEOAnno, a first pass
+at this application for GEO annotation of platforms
+
+arguments are
+
+platform (a string that identifies the platform in the
+GEO catalog)
+
+massageStruct (a list with elements keepIndsExpr,
+ncols, header, pad, stripCols -- self explanatory?
+the idea is that they give you a ragged table, you
+can find the regimented subtable (with common column
+number ncols) in rows given by keepIndsExpr), state
+the header titles you want, and do something with
+"," as last token and omit columns you don't need)
+
+inURL (where do you go to look at GEO datasets)
+
+the massage struct is the diciest part, but examples
+exist for GPL80 (HUGeneFL) and GPL91 (U95A) -- all
+in the annotate package under GEOAnno 
+-- 
+---
+Vince Carey, PhD
+Ass't Prof Med (Biostatistics)
+Harvard Medical School
+Channing Laboratory - ph 6175252265 fa 6177311541
+181 Longwood Ave Boston MA 02115 USA
+
+stvjc@channing.harvard.edu
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: PGP 6.5.8
+
+mQCNAzqIeGUAAAEEAMJXU941vIornTS52rl6z7eo+A7wwB0km/idLnkxzIhc1uLi
+Qtn19OyOfG6IDSucLrtmpvwagemAnQ9jL6TVDrmlrKnqsh+FFtvUuZ37eV85L70E
+BsS8RZCmMYHJKfrpCwegbTVZrEkd1ByquLIN/yUwxU4IcVuHxbNQk69riQ8tAAUR
+tBVWaW5jZW50IEouIENhcmV5LCBKci6JAJUDBRA6iHhls1CTr2uJDy0BAdsLA/wM
+cCzEDsP9MqodKZfDI1s/gXW6BcCuQ6n7MdEplLgmWvyqfbvRYx4upYZ3pNp8L0zU
+MrlR6eCTs/eDtMO/ZbGvkqqiQO6wS2fZb1T5L/DhhtT4mEAHt0E8dNBVCj+lKr3W
+vYS5GqO9gY4CiT3JXFH9N19pSbUQFiNDqpmG6EbWng==
+=DQNF
+-----END PGP PUBLIC KEY BLOCK-----
+
+
+From rossini@u.washington.edu  Tue Jun  4 18:51:47 2002
+From: rossini@u.washington.edu (A.J. Rossini)
+Date: 04 Jun 2002 10:51:47 -0700
+Subject: [BioC] Loading affy library
+In-Reply-To: <Pine.SOL.4.44.0206041335160.11262-100000@arkanoid.gpcc.itd.umich.edu>
+References: <Pine.SOL.4.44.0206041335160.11262-100000@arkanoid.gpcc.itd.umich.edu>
+Message-ID: <877klfue30.fsf@jeeves.blindglobe.net>
+
+>>>>> "james" == James W Mac Donald <James> writes:
+
+    james> I am using R 1.5, and I updated all of the librarys to make sure it wasn't
+    james> simply an outdated library. In addition I made sure that I have everything
+    james> set up so tcltk will load correctly (I assume I need tcltk in order to use
+    james> tkWidgets).
+
+That is correct.  Are you using Microsoft or a Unix-like OS?
+
+best,
+-tony
+
+-- 
+A.J. Rossini				Rsrch. Asst. Prof. of Biostatistics
+U. of Washington Biostatistics		rossini@u.washington.edu	
+FHCRC/SCHARP/HIV Vaccine Trials Net	rossini@scharp.org
+-------------- http://software.biostat.washington.edu/ ----------------
+FHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email
+UW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX
+(my friday location is usually completely unpredictable.)
+
+
+
+From jmacdon@umich.edu  Tue Jun  4 19:16:17 2002
+From: jmacdon@umich.edu (James W Mac Donald)
+Date: Tue, 4 Jun 2002 14:16:17 -0400 (EDT)
+Subject: [BioC] Loading affy library
+In-Reply-To: <877klfue30.fsf@jeeves.blindglobe.net>
+Message-ID: <Pine.SOL.4.44.0206041359100.16437-100000@asteroids.gpcc.itd.umich.edu>
+
+Yeah I suppose that might help. My OS is Windows XP Pro.
+
+Jim
+
+James W. MacDonald
+UMCCC Microarray Core Facility
+1500 E. Medical Center Drive
+7410 CCGC
+Ann Arbor MI 48109
+734-647-5623
+
+
+On 4 Jun 2002, A.J. Rossini wrote:
+
+> >>>>> "james" == James W Mac Donald <James> writes:
+>
+>     james> I am using R 1.5, and I updated all of the librarys to make sure it wasn't
+>     james> simply an outdated library. In addition I made sure that I have everything
+>     james> set up so tcltk will load correctly (I assume I need tcltk in order to use
+>     james> tkWidgets).
+>
+> That is correct.  Are you using Microsoft or a Unix-like OS?
+>
+> best,
+> -tony
+>
+> --
+> A.J. Rossini				Rsrch. Asst. Prof. of Biostatistics
+> U. of Washington Biostatistics		rossini@u.washington.edu
+> FHCRC/SCHARP/HIV Vaccine Trials Net	rossini@scharp.org
+> -------------- http://software.biostat.washington.edu/ ----------------
+> FHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email
+> UW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX
+> (my friday location is usually completely unpredictable.)
+>
+>
+
+
+From sylvain.foisy@bioneq.qc.ca  Wed Jun  5 21:23:32 2002
+From: sylvain.foisy@bioneq.qc.ca (Sylvain Foisy)
+Date: Wed, 5 Jun 2002 16:23:32 -0400
+Subject: [BioC] BioConductor install in Mac OS X
+Message-ID: <1ACBC872-78C2-11D6-A4C6-0003936297DA@bioneq.qc.ca>
+
+Hi,
+
+Has anybody try to install BioConductor in Mac OS X? If, yes, how? I am 
+running R 1.5 for X. I have starting using R and BioConductor is a very 
+interesting add-on in expression studies.
+
+Any help would be appreciated
+
+Sylvain
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sylvain Foisy, Ph. D.
+Directeur-Operations / Project Manager
+BIONEQ - Le Reseau quebecois de bioinformatique
+Genome-Quebec
+Tel.: (514) 343-6111 poste 5188
+E-mail: sylvain.foisy@bioneq.qc.ca
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+From rgentlem@jimmy.harvard.edu  Wed Jun  5 21:31:36 2002
+From: rgentlem@jimmy.harvard.edu (Robert Gentleman)
+Date: Wed, 5 Jun 2002 16:31:36 -0400
+Subject: [BioC] BioConductor install in Mac OS X
+In-Reply-To: <1ACBC872-78C2-11D6-A4C6-0003936297DA@bioneq.qc.ca>; from sylvain.foisy@bioneq.qc.ca on Wed, Jun 05, 2002 at 04:23:32PM -0400
+References: <1ACBC872-78C2-11D6-A4C6-0003936297DA@bioneq.qc.ca>
+Message-ID: <20020605163136.T51@jimmy.harvard.edu>
+
+On Wed, Jun 05, 2002 at 04:23:32PM -0400, Sylvain Foisy wrote:
+> Hi,
+> 
+> Has anybody try to install BioConductor in Mac OS X? If, yes, how? I am 
+> running R 1.5 for X. I have starting using R and BioConductor is a very 
+> interesting add-on in expression studies.
+> 
+> Any help would be appreciated
+
+  No, but if you tell us about the problems we might be able to help.
+   Thanks,
+    Robert
+
+
+> 
+> Sylvain
+> 
+> ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+> Sylvain Foisy, Ph. D.
+> Directeur-Operations / Project Manager
+> BIONEQ - Le Reseau quebecois de bioinformatique
+> Genome-Quebec
+> Tel.: (514) 343-6111 poste 5188
+> E-mail: sylvain.foisy@bioneq.qc.ca
+> ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+-- 
++---------------------------------------------------------------------------+
+| Robert Gentleman                 phone : (617) 632-5250                   |
+| Associate Professor              fax:   (617)  632-2444                   |
+| Department of Biostatistics      office: M1B28
+| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |
++---------------------------------------------------------------------------+
+
+From rossini@u.washington.edu  Wed Jun  5 21:34:46 2002
+From: rossini@u.washington.edu (A.J. Rossini)
+Date: 05 Jun 2002 13:34:46 -0700
+Subject: [BioC] BioConductor install in Mac OS X
+In-Reply-To: <1ACBC872-78C2-11D6-A4C6-0003936297DA@bioneq.qc.ca>
+References: <1ACBC872-78C2-11D6-A4C6-0003936297DA@bioneq.qc.ca>
+Message-ID: <874rghh3bt.fsf@jeeves.blindglobe.net>
+
+>>>>> "sylvain" == Sylvain Foisy <sylvain.foisy@bioneq.qc.ca> writes:
+
+    sylvain> Hi,
+    sylvain> Has anybody try to install BioConductor in Mac OS X? If, yes, how? I
+    sylvain> am running R 1.5 for X. I have starting using R and BioConductor is a
+    sylvain> very interesting add-on in expression studies.
+
+Bioconductor packages have been constructed by Jan de Leeuw.  I assume
+that they work; possibly AnnBuilder may not, however, that speculation
+rests only on the complex integration for that package with
+PostgreSQL, which should exist for OS X.
+
+I (and perhaps others) would be interested in hearing about
+experiences.  
+
+best,
+-tony
+
+-- 
+A.J. Rossini				Rsrch. Asst. Prof. of Biostatistics
+U. of Washington Biostatistics		rossini@u.washington.edu	
+FHCRC/SCHARP/HIV Vaccine Trials Net	rossini@scharp.org
+-------------- http://software.biostat.washington.edu/ ----------------
+FHCRC: M: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email
+UW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX
+(my tuesday/wednesday/friday locations are completely unpredictable.)
+
+
+
+
+From rafa@jhu.edu  Wed Jun  5 21:31:12 2002
+From: rafa@jhu.edu (Rafael A. Irizarry)
+Date: Wed, 05 Jun 2002 16:31:12 -0400 (EDT)
+Subject: [BioC] BioConductor install in Mac OS X
+In-Reply-To: <20020605163136.T51@jimmy.harvard.edu>
+Message-ID: <Pine.LNX.4.33.0206051629110.14523-100000@localhost.localdomain>
+
+i helped a friend install Biobase, annotate, and affy on Mac OS X. 
+ive cc-ed him. it worked with no problems. 
+
+On Wed, 5 Jun 2002, Robert Gentleman wrote:
+
+> On Wed, Jun 05, 2002 at 04:23:32PM -0400, Sylvain Foisy wrote:
+> > Hi,
+> > 
+> > Has anybody try to install BioConductor in Mac OS X? If, yes, how? I am 
+> > running R 1.5 for X. I have starting using R and BioConductor is a very 
+> > interesting add-on in expression studies.
+> > 
+> > Any help would be appreciated
+> 
+>   No, but if you tell us about the problems we might be able to help.
+>    Thanks,
+>     Robert
+> 
+> 
+> > 
+> > Sylvain
+> > 
+> > ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+> > Sylvain Foisy, Ph. D.
+> > Directeur-Operations / Project Manager
+> > BIONEQ - Le Reseau quebecois de bioinformatique
+> > Genome-Quebec
+> > Tel.: (514) 343-6111 poste 5188
+> > E-mail: sylvain.foisy@bioneq.qc.ca
+> > ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+> > 
+> > _______________________________________________
+> > Bioconductor mailing list
+> > Bioconductor@stat.math.ethz.ch
+> > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> 
+> 
+
+
+From sandrine@stat.berkeley.edu  Thu Jun  6 08:03:34 2002
+From: sandrine@stat.berkeley.edu (Sandrine Dudoit)
+Date: Thu, 6 Jun 2002 00:03:34 -0700 (PDT)
+Subject: [BioC] widget.marrayRaw
+In-Reply-To: <000001c20bc2$2dacb750$05d4ee82@walker>
+Message-ID: <Pine.SOL.4.31.0206052355320.7793-100000@shelob.Berkeley.EDU>
+
+Hi Niklas,
+
+
+On Tue, 4 Jun 2002, Niklas Nordquist wrote:
+
+> I have a couple of questions concerning the marrayRaw widget.
+> First, when I create an marrayLayout object and specify a "*.gal" file
+> containing info on spots and clones, and just type ">objectname", I get
+> some summary information on the object. In this summary it is stated
+> that I have a number of control spots, including 3xSSC, the Arab gene,
+> and duplicates of each spot. Where does this information come from?
+
+This information was stored in your .gal file.
+
+Once you select an Info file (say myfile.gal) in the marrayLayout widget
+and click on GetInfo, a new widget opens up asking you to select the
+column which holds the control information in myfile.gal. You must have
+selected one of the myfile.gal columns when reading the data into R.
+
+> Second, Is this information about control spots used in the
+> normalization process? (I have used the maLormLoess() function).
+
+It's used only if you tell the normalization function to do so. For
+example, when using maNorm, the argument "subset" can be used to specify
+which spots to use in the normalization.
+
+Best,
+Sandrine
+
+
+>
+>
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+>
+
+
+From wilmotb@ohsu.edu  Tue Jun 11 01:17:24 2002
+From: wilmotb@ohsu.edu (Beth Wilmot)
+Date: Mon, 10 Jun 2002 17:17:24 -0700
+Subject: [BioC] installation problems
+Message-ID: <sd04df31.093@gwsmtp.ohsu.edu>
+
+Hi,
+
+I'm trying to install the whole package and I'm getting an error:
+
+Creating a new generic function for "[[<-" on element 
+2 of the search path 
+Making a generic for special function "[[<-" 
+Creating a new generic function for "[[" on element 2 
+of the search path 
+Making a generic for special function "[[" 
+Expanding the signature to include omitted arguments 
+in definition: j = "missing" 
+Creating a new generic function for "length" on element 
+2 of the search path 
+Making a generic for special function "length" 
+Creating a new generic function for "[" on element 2 
+of the search path 
+Making a generic for special function "[" 
+Error in conformMethod(signature, mnames, fnames) : 
+        Method has formal arguments not in generic function: file, append, quote, sep, eol, na, dec, row.names, col.names, qmethod
+Error in library(pkg, character.only = TRUE) : 
+        .First.lib failed
+
+The Biobase shows up on the library list but will only get this far when I try to open it.
+
+Thanks, Beth
+
+
+From laurent@cbs.dtu.dk  Tue Jun 11 14:07:33 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Tue, 11 Jun 2002 15:07:33 +0200
+Subject: [BioC] installation problems
+In-Reply-To: <sd04df31.093@gwsmtp.ohsu.edu>; from wilmotb@ohsu.edu on Mon, Jun 10, 2002 at 05:17:24PM -0700
+References: <sd04df31.093@gwsmtp.ohsu.edu>
+Message-ID: <20020611150733.A32058@giraffa.cbs.dtu.dk>
+
+On Mon, Jun 10, 2002 at 05:17:24PM -0700, Beth Wilmot wrote:
+> Hi,
+> 
+> I'm trying to install the whole package and I'm getting an error:
+> 
+> Creating a new generic function for "[[<-" on element 
+> 2 of the search path 
+> Making a generic for special function "[[<-" 
+> Creating a new generic function for "[[" on element 2 
+> of the search path 
+> Making a generic for special function "[[" 
+> Expanding the signature to include omitted arguments 
+> in definition: j = "missing" 
+> Creating a new generic function for "length" on element 
+> 2 of the search path 
+> Making a generic for special function "length" 
+> Creating a new generic function for "[" on element 2 
+> of the search path 
+> Making a generic for special function "[" 
+> Error in conformMethod(signature, mnames, fnames) : 
+>         Method has formal arguments not in generic function: file, append, quote, sep, eol, na, dec, row.names, col.names, qmethod
+> Error in library(pkg, character.only = TRUE) : 
+>         .First.lib failed
+> 
+> The Biobase shows up on the library list but will only get this far when I try to open it.
+> 
+> Thanks, Beth
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+
+
+Dear Beth,
+
+Some of the bioconductor packages are known to require R-1.5.x.
+Could tell us what is the version of R you are using (and eventually your
+operating system) ?
+
+Best,
+
+
+
+Laurent
+
+
+
+From jb7gv@virginia.edu  Tue Jun 11 20:31:11 2002
+From: jb7gv@virginia.edu (Joshua Betcher)
+Date: Tue, 11 Jun 2002 15:31:11 -0400
+Subject: [BioC] Questions about the Affy package....
+Message-ID: <002601c2117e$8b3f2d00$2701a8c0@joshbtosh>
+
+I have been going through the code for this package and I have a few
+questions and comments:
+
+1) For normalize.Plob.loess, slot names that do not exist are used.
+
+2)  As I have looked through the help files there does not appear to be any
+examples of the use of the read.cdfile, read.affy, etc..  Does anyone happen
+to have example files that these functions could be used on?
+
+3)  Is there equivalent function to optim in splus?  It was mentioned in the
+code that maybe nlminb could be used; could someone explain this further?
+
+Thanks everyone for your help
+Josh
+
+
+
+From laurent@cbs.dtu.dk  Tue Jun 11 20:24:13 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Tue, 11 Jun 2002 21:24:13 +0200
+Subject: [BioC] Questions about the Affy package....
+In-Reply-To: <002601c2117e$8b3f2d00$2701a8c0@joshbtosh>; from jb7gv@virginia.edu on Tue, Jun 11, 2002 at 03:31:11PM -0400
+References: <002601c2117e$8b3f2d00$2701a8c0@joshbtosh>
+Message-ID: <20020611212413.A509@giraffa.cbs.dtu.dk>
+
+On Tue, Jun 11, 2002 at 03:31:11PM -0400, Joshua Betcher wrote:
+> I have been going through the code for this package and I have a few
+> questions and comments:
+> 
+> 1) For normalize.Plob.loess, slot names that do not exist are used.
+
+..ouch... this is a bug... should be fixed by tomorrow...
+
+> 
+> 2)  As I have looked through the help files there does not appear to be any
+> examples of the use of the read.cdfile, read.affy, etc..  Does anyone happen
+> to have example files that these functions could be used on?
+> 
+
+We will try to put examples as soon as possible. If you experience difficulties
+with using some the functions, do not hesitate to mail in this very same list.
+
+> 3)  Is there equivalent function to optim in splus?  It was mentioned in the
+> code that maybe nlminb could be used; could someone explain this further?
+> 
+
+As the comments say, S-plus code was adapted. One particular optimization
+function seemed to have no exact equivalent and I did my best to find a
+matching one. The comments state it in case somebody wants to noodle with
+it. 
+
+
+> Thanks everyone for your help
+
+
+Thanks for your report. Do not hesitate to mail again...
+
+> Josh
+> 
+
+
+Laurent
+
+--------------------------------------------------------------
+Laurent Gautier			CBS, Building 208, DTU
+PhD. Student			D-2800 Lyngby,Denmark	
+tel: +45 45 25 24 85		http://www.cbs.dtu.dk/laurent
+
+From dimitrov@gnf.org  Tue Jun 11 22:40:56 2002
+From: dimitrov@gnf.org (Peter Dimitrov)
+Date: 11 Jun 2002 14:40:56 -0700
+Subject: [BioC] Questions about the Affy package....
+In-Reply-To: <002601c2117e$8b3f2d00$2701a8c0@joshbtosh>
+References: <002601c2117e$8b3f2d00$2701a8c0@joshbtosh>
+Message-ID: <1023831656.15781.81.camel@cb3.gnf.org>
+
+On Tue, 2002-06-11 at 12:31, Joshua Betcher wrote:
+> I have been going through the code for this package and I have a few
+> questions and comments:
+> 
+> 1) For normalize.Plob.loess, slot names that do not exist are used.
+> 
+> 2)  As I have looked through the help files there does not appear to be any
+> examples of the use of the read.cdfile, read.affy, etc..  Does anyone happen
+> to have example files that these functions could be used on?
+> 
+> 3)  Is there equivalent function to optim in splus?  It was mentioned in the
+> code that maybe nlminb could be used; could someone explain this further?
+> 
+> Thanks everyone for your help
+> Josh
+> 
+
+Let me add 2 bugs for normalize.Plob.invariantset:
+
+1) When called from express(), it dumps the following error:
+Error in normalize.Plob.invariantset(object, ...) : 
+	unused argument(s) (span ...)
+
+Easy fix is to add the optional "three dots" argument. 
+
+2) Once 1 is fixed, normalize.Plob.invariantset has trouble with the
+result of approx() function, which by default returns NA, when trying to
+approximate outside of the initial range(rule=1). Easy fix is to set the
+value of parameter rule to 2. In this case approx will return
+min(y)/max(y) accordingly.
+
+I use affy_1.1.0.tar.gz, R-1.5.0 on RH 7.2 Linux P3 machine.
+
+Peter Dimitrov
+
+P.S. This is the code of normalize.Plob.invariantset that I currently
+use:
+
+"normalize.Plob.invariantset" <-
+    function (container, prd.td = c(0.003, 0.007), progress = FALSE,...)
+{
+    nc <- ncol(pm(container))
+    np <- nrow(pm(container))
+    refindex <- trunc(median(rank(apply(pm(container),2,mean))))
+    for (i in (1:nc)[-refindex]) {
+        if (progress) 
+            cat("normalizing array", attr(container[[i]], "name"), 
+                "...")
+        tmp <- normalize.invariantset(pm(container)[, i],
+		pm(container)[, refindex], prd.td)
+        pm(container)[, i] <- as.numeric(approx(tmp$n.curve$y, 
+                                                tmp$n.curve$x, xout =
+						container@pm[, i])$y,
+						rule=2)
+        mm(container)[, i] <- as.numeric(approx(tmp$n.curve$y, 
+                                                tmp$n.curve$x, xout =
+						mm(container)[, i])$y,
+						rule=2)
+        container@notes <- "normalized by invariant set"
+        if (progress) 
+            cat("done.\n")
+    }
+    return(container)
+}
+
+
+
+From stvjc@channing.harvard.edu  Tue Jun 11 23:38:30 2002
+From: stvjc@channing.harvard.edu (Vincent J. Carey, Jr.)
+Date: Tue, 11 Jun 2002 18:38:30 -0400 (EDT)
+Subject: [BioC] NIH image processing program
+Message-ID: <200206112238.SAA13712@capecod.bwh.harvard.edu>
+
+Is anyone doing anything with "NIH image" a MAC-based
+utility for dealing with tiff images of e.g., gels?
+I am getting some data from this system which translates
+darkness to numbers.  Investigators then use the numbers
+as density estimates.  There is a windows-based tool
+from Scion with similar functionality.
+
+I am preparing to write a library that segments data
+from gels by signal-to-noise criteria applied to the
+"NIH image" output, but need to learn more about
+the processing methods of this system.  Seems that hdf5
+methods could be relevant. 
+-- 
+---
+Vince Carey, PhD
+Ass't Prof Med (Biostatistics)
+Harvard Medical School
+Channing Laboratory - ph 6175252265 fa 6177311541
+181 Longwood Ave Boston MA 02115 USA
+
+stvjc@channing.harvard.edu
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: PGP 6.5.8
+
+mQCNAzqIeGUAAAEEAMJXU941vIornTS52rl6z7eo+A7wwB0km/idLnkxzIhc1uLi
+Qtn19OyOfG6IDSucLrtmpvwagemAnQ9jL6TVDrmlrKnqsh+FFtvUuZ37eV85L70E
+BsS8RZCmMYHJKfrpCwegbTVZrEkd1ByquLIN/yUwxU4IcVuHxbNQk69riQ8tAAUR
+tBVWaW5jZW50IEouIENhcmV5LCBKci6JAJUDBRA6iHhls1CTr2uJDy0BAdsLA/wM
+cCzEDsP9MqodKZfDI1s/gXW6BcCuQ6n7MdEplLgmWvyqfbvRYx4upYZ3pNp8L0zU
+MrlR6eCTs/eDtMO/ZbGvkqqiQO6wS2fZb1T5L/DhhtT4mEAHt0E8dNBVCj+lKr3W
+vYS5GqO9gY4CiT3JXFH9N19pSbUQFiNDqpmG6EbWng==
+=DQNF
+-----END PGP PUBLIC KEY BLOCK-----
+
+
+From rossini@u.washington.edu  Wed Jun 12 00:12:09 2002
+From: rossini@u.washington.edu (A.J. Rossini)
+Date: 11 Jun 2002 16:12:09 -0700
+Subject: [BioC] NIH image processing program
+In-Reply-To: <200206112238.SAA13712@capecod.bwh.harvard.edu>
+References: <200206112238.SAA13712@capecod.bwh.harvard.edu>
+Message-ID: <87ofehbeba.fsf@jeeves.blindglobe.net>
+
+>>>>> "vincent" == Vincent J Carey, <stvjc@channing.harvard.edu> writes:
+
+    vincent> Is anyone doing anything with "NIH image" a MAC-based
+    vincent> utility for dealing with tiff images of e.g., gels?
+    vincent> I am getting some data from this system which translates
+    vincent> darkness to numbers.  Investigators then use the numbers
+    vincent> as density estimates.  There is a windows-based tool
+    vincent> from Scion with similar functionality.
+
+Is this different from the NIH ImageJ java-based imaging
+software/toolkit (http://rsb.info.nih.gov/ij/)?  It looks like it.
+I've been meaning for years (2, actually) to integrate this with Orca.
+A student here evaluated it for image analysis of ELISPOT (ELISA
+spotting) assays.
+
+best,
+-tony
+
+-- 
+A.J. Rossini				Rsrch. Asst. Prof. of Biostatistics
+U. of Washington Biostatistics		rossini@u.washington.edu	
+FHCRC/SCHARP/HIV Vaccine Trials Net	rossini@scharp.org
+-------------- http://software.biostat.washington.edu/ ----------------
+FHCRC: M: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email
+UW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX
+(my tuesday/wednesday/friday locations are completely unpredictable.)
+
+
+
+
+From stvjc@channing.harvard.edu  Wed Jun 12 05:38:50 2002
+From: stvjc@channing.harvard.edu (Vincent Carey 525-2265)
+Date: Wed, 12 Jun 2002 00:38:50 -0400 (EDT)
+Subject: [BioC] NIH image processing program
+In-Reply-To: <87ofehbeba.fsf@jeeves.blindglobe.net>
+Message-ID: <Pine.GSO.4.40.0206120011310.1532-100000@capecod.bwh.harvard.edu>
+
+> >>>>> "vincent" == Vincent J Carey, <stvjc@channing.harvard.edu> writes:
+>
+>     vincent> Is anyone doing anything with "NIH image" a MAC-based
+>     vincent> utility for dealing with tiff images of e.g., gels?
+>     vincent> I am getting some data from this system which translates
+>     vincent> darkness to numbers.  Investigators then use the numbers
+>     vincent> as density estimates.  There is a windows-based tool
+>     vincent> from Scion with similar functionality.
+>
+> Is this different from the NIH ImageJ java-based imaging
+> software/toolkit (http://rsb.info.nih.gov/ij/)?  It looks like it.
+
+Thanks for the tip.
+I did not download the PC version of Image from "Scion".  ImageJ
+seems to run OK on windows and linux with jdk1.3.  There are plenty
+of sample images to work with.
+
+The problem I am facing is to assist in the determination of
+the composition of a sample of fragments that have lengths that
+are all multiples of a common number.  We want to estimate the
+distribution of lengths or to test for different length distributions
+in different experiments.  The image is a series
+of equispaced blobs of different intensities and
+of different sizes.  ImageJ doc seems to suggest manually segmenting
+the profile (profile = density sketch with heights proportional to darkness),
+and it provides a tool to calculate area under the curve in each
+segment.  There are no references in the top level doc to
+considerations of variability of the profile or to principles of
+determining extents of segments.
+
+The image processing interface could presumably be hooked into
+R handily via SJava.  Where we want to keep the image data is
+an open question.  The example tiff file for a 6 lane gel is only
+about 100K.
+
+But this interoperation is of minor concern at the moment.
+Low throughput is OK for now.  I can use ImageJ offline to obtain
+numerical profiles of the gel data.  I've done some work on
+an R package for automatic segmentation and area calculations
+based on local variability of image profile data produced by
+Image or ImageJ and will release that once I have a better
+understanding of where these profile numbers come from (if what
+I did turns out to make sense).  It would be nice to be able to
+precisely juxtapose gel image tiff data with the derived
+profile and segmenting results in an R graph.  Do I want to
+convert the tiff data to a matrix for plotting by image, or
+is there a more streamlined approach?
+
+> I've been meaning for years (2, actually) to integrate this with Orca.
+> A student here evaluated it for image analysis of ELISPOT (ELISA
+> spotting) assays.
+>
+> best,
+> -tony
+>
+> --
+> A.J. Rossini				Rsrch. Asst. Prof. of Biostatistics
+> U. of Washington Biostatistics		rossini@u.washington.edu
+> FHCRC/SCHARP/HIV Vaccine Trials Net	rossini@scharp.org
+> -------------- http://software.biostat.washington.edu/ ----------------
+> FHCRC: M: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email
+> UW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX
+> (my tuesday/wednesday/friday locations are completely unpredictable.)
+>
+>
+>
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+>
+
+
+From bart.spiessens@pharmadm.com  Thu Jun 13 09:03:50 2002
+From: bart.spiessens@pharmadm.com (Bart Spiessens)
+Date: Thu, 13 Jun 2002 10:03:50 +0200
+Subject: [BioC] hg_u95av2.cdf
+Message-ID: <3D0851E6.1040001@pharmadm.com>
+
+I have an experiment with 5 hg_u95av2 arrays and corresponding *.CEL 
+files, which I would like to analyse with Bioconductor. Unfortunately, I 
+do not have the *.CDF file.
+
+1) Does anyone know where I can get this CDF file ?
+if not:
+2) I did find the file 'hg_u95av2.cdf.forR.dat' which was pre-processed 
+for use with an older version of bioconductor. Can I still use this file 
+in the new version ?
+if not:
+3) Could we reproduce the original CDF file from this forR.dat file, or 
+is there information used from the CDF file that is not in the forR.dat 
+file ?
+
+Thanks for any suggestions !
+Bart.
+
+
+
+From jacobsen@contentsoft.de  Thu Jun 13 09:43:57 2002
+From: jacobsen@contentsoft.de (jacobsen)
+Date: Thu, 13 Jun 2002 10:43:57 +0200
+Subject: [BioC] hg_u95av2.cdf
+References: <3D0851E6.1040001@pharmadm.com>
+Message-ID: <003201c212b6$75965710$6508a8c0@winyobbo>
+
+Bart,
+
+> 1) Does anyone know where I can get this CDF file ?
+
+Just ask Affymetrix support in the UK or US by phone - they are usually
+happy to send out the cdf files. Make sure that they compress the file and
+that your email account can handle emails of approx. 6 MB size - otherwise
+your email admin might go nuts when their 30MB file hits your mailbox.
+
+
+Gerry Jacobsen
+Contentsoft AG
+http://www.contentsoft.de
+GeneViz - Free academic version downloadable now
+
+
+From laurent@cbs.dtu.dk  Thu Jun 13 09:43:43 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Thu, 13 Jun 2002 10:43:43 +0200
+Subject: [BioC] hg_u95av2.cdf
+In-Reply-To: <3D0851E6.1040001@pharmadm.com>
+References: <3D0851E6.1040001@pharmadm.com>
+Message-ID: <20020613084343.GA356534@genome.cbs.dtu.dk>
+
+On Thu, Jun 13, 2002 at 10:03:50AM +0200, Bart Spiessens wrote:
+> I have an experiment with 5 hg_u95av2 arrays and corresponding *.CEL 
+> files, which I would like to analyse with Bioconductor. Unfortunately, I 
+> do not have the *.CDF file.
+> 
+> 1) Does anyone know where I can get this CDF file ?
+
+AFAIK, the manufacturer of the oligonucleotide arrays you are using is
+shipping a CD-ROM along with the stuff it sold. CDF files can be found there.
+
+Since a recent time, one can download many data files for the manufacturer's
+website. This CDF file is one of them I think.
+
+We do not distribute CDF files since we are not sure we are allowed to do so.
+
+> if not:
+> 2) I did find the file 'hg_u95av2.cdf.forR.dat' which was pre-processed 
+> for use with an older version of bioconductor. Can I still use this file 
+> in the new version ?
+
+The file you mention is to be used with a package called affyR (prior to the
+Bioconductor time). It is possible to convert the data formats for CDF from
+affyR to affy. This is let as a (long) exercise to the reader.
+
+> if not:
+> 3) Could we reproduce the original CDF file from this forR.dat file, or 
+> is there information used from the CDF file that is not in the forR.dat 
+> file ?
+>
+
+No and yes (note: answer(first part) == not(answer(second part)), right ? ;)  )
+
+
+
+
+regards,
+
+
+
+
+Laurent
+
+
+
+ 
+> Thanks for any suggestions !
+> Bart.
+> 
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+-- 
+--------------------------------------------------------------
+other email: lgautier@altern.org
+--------------------------------------------------------------
+Laurent Gautier			CBS, Building 208, DTU
+PhD. Student			D-2800 Lyngby,Denmark	
+tel: +45 45 25 24 85		http://www.cbs.dtu.dk/laurent
+
+From rafa@jhu.edu  Thu Jun 13 14:09:37 2002
+From: rafa@jhu.edu (Rafael A. Irizarry)
+Date: Thu, 13 Jun 2002 09:09:37 -0400 (EDT)
+Subject: [BioC] hg_u95av2.cdf
+In-Reply-To: <3D0851E6.1040001@pharmadm.com>
+Message-ID: <Pine.LNX.4.33.0206130908520.2040-100000@localhost.localdomain>
+
+also, who ever gave you the cel files must have affymetrix's MAS. if you 
+use find on that computer you should be able to find the file.
+
+rafael
+On Thu, 13 
+Jun 2002, Bart Spiessens wrote:
+
+> I have an experiment with 5 hg_u95av2 arrays and corresponding *.CEL 
+> files, which I would like to analyse with Bioconductor. Unfortunately, I 
+> do not have the *.CDF file.
+> 
+> 1) Does anyone know where I can get this CDF file ?
+> if not:
+> 2) I did find the file 'hg_u95av2.cdf.forR.dat' which was pre-processed 
+> for use with an older version of bioconductor. Can I still use this file 
+> in the new version ?
+> if not:
+> 3) Could we reproduce the original CDF file from this forR.dat file, or 
+> is there information used from the CDF file that is not in the forR.dat 
+> file ?
+> 
+> Thanks for any suggestions !
+> Bart.
+> 
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> 
+
+
+From laurent@cbs.dtu.dk  Thu Jun 13 14:26:41 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Thu, 13 Jun 2002 15:26:41 +0200
+Subject: [BioC] Re: order in affy for R
+In-Reply-To: <3D075AEF.1390FE2E@nbi.dk>
+References: <3D075AEF.1390FE2E@nbi.dk>
+Message-ID: <20020613132641.GA639214@genome.cbs.dtu.dk>
+
+CCed to bioconductor....
+
+
+
+
+On Wed, Jun 12, 2002 at 04:30:07PM +0200, Jesper Ryge wrote:
+> Hi Laurent
+> 
+> I'm using the affy package for R in which it seems you have played a
+> role.  I'm greatfull that you have developed this tool, but I do have
+> one question I hope you can clarify.  When extracting information from a
+> "probe.level.object" there is the variables: id , numbers and names.  Is
+
+Do you mean objects of class "Plob" ?
+(if yes, what is 'id' ? if no, which class do you refer to ?)
+
+> it correct that probes with "id==1" has gene name==names[1] - in R
+> terms?  So that if I for one cell file have called my
+> 
+> > probe.level.object -> data
+> 
+> I will extract probes of PM of id ==1 by:
+> 
+> > PM<-data$pm[id==1]
+> 
+> the order of which will be given by
+> 
+> > numbers[data$id==1]
+> 
+> and all of which correspond to gene
+> 
+> > data$names[1]
+> 
+> Is this correct?  It's just to make sure that I do not assign the wrong
+> gene names to the  probes...
+>
+
+
+..can't say, the 'id' is mysterious to me...
+
+
+class?Plob says:
+
+     `name': Object of class "character"  containing the probe set
+          identification name (e.g. gene name) of each probe. The
+          `i'-th entry is the name for the `i'-th row of the matrices
+          in slots `pm' and `mm'.
+
+     `numbers': Object of class "numeric"  containing the probe number
+          of each probe. The `i'-th entry is the number for the `i'-th
+          row of the matrices in slots `pm' and `mm'.
+
+
+
+
+You may also want to have a look at the function get.PPSet
+(try help(get.PPSet)) to do what I suspect you want to do..
+
+
+Hopin' it helps,
+
+
+
+Laurent
+
+
+
+ 
+> Jesper
+> 
+
+-- 
+--------------------------------------------------------------
+Laurent Gautier			CBS, Building 208, DTU
+PhD. Student			DK-2800 Lyngby,Denmark	
+tel: +45 45 25 24 85		http://www.cbs.dtu.dk/laurent
+
+From rafa@jhu.edu  Thu Jun 13 14:40:20 2002
+From: rafa@jhu.edu (Rafael A. Irizarry)
+Date: Thu, 13 Jun 2002 09:40:20 -0400 (EDT)
+Subject: [BioC] Re: order in affy for R
+In-Reply-To: <20020613132641.GA639214@genome.cbs.dtu.dk>
+Message-ID: <Pine.LNX.4.33.0206130940020.2040-100000@localhost.localdomain>
+
+jesper, what version of the package are you using? the latest is 1.0.1
+
+rafael
+On Thu, 13 Jun 2002, 
+Laurent Gautier wrote:
+
+> CCed to bioconductor....
+> 
+> 
+> 
+> 
+> On Wed, Jun 12, 2002 at 04:30:07PM +0200, Jesper Ryge wrote:
+> > Hi Laurent
+> > 
+> > I'm using the affy package for R in which it seems you have played a
+> > role.  I'm greatfull that you have developed this tool, but I do have
+> > one question I hope you can clarify.  When extracting information from a
+> > "probe.level.object" there is the variables: id , numbers and names.  Is
+> 
+> Do you mean objects of class "Plob" ?
+> (if yes, what is 'id' ? if no, which class do you refer to ?)
+> 
+> > it correct that probes with "id==1" has gene name==names[1] - in R
+> > terms?  So that if I for one cell file have called my
+> > 
+> > > probe.level.object -> data
+> > 
+> > I will extract probes of PM of id ==1 by:
+> > 
+> > > PM<-data$pm[id==1]
+> > 
+> > the order of which will be given by
+> > 
+> > > numbers[data$id==1]
+> > 
+> > and all of which correspond to gene
+> > 
+> > > data$names[1]
+> > 
+> > Is this correct?  It's just to make sure that I do not assign the wrong
+> > gene names to the  probes...
+> >
+> 
+> 
+> ..can't say, the 'id' is mysterious to me...
+> 
+> 
+> class?Plob says:
+> 
+>      `name': Object of class "character"  containing the probe set
+>           identification name (e.g. gene name) of each probe. The
+>           `i'-th entry is the name for the `i'-th row of the matrices
+>           in slots `pm' and `mm'.
+> 
+>      `numbers': Object of class "numeric"  containing the probe number
+>           of each probe. The `i'-th entry is the number for the `i'-th
+>           row of the matrices in slots `pm' and `mm'.
+> 
+> 
+> 
+> 
+> You may also want to have a look at the function get.PPSet
+> (try help(get.PPSet)) to do what I suspect you want to do..
+> 
+> 
+> Hopin' it helps,
+> 
+> 
+> 
+> Laurent
+> 
+> 
+> 
+>  
+> > Jesper
+> > 
+> 
+> 
+
+
+From skong@caregroup.harvard.edu  Thu Jun 13 15:51:46 2002
+From: skong@caregroup.harvard.edu (Sek Won Kong, M.D.)
+Date: Thu, 13 Jun 2002 10:51:46 -0400
+Subject: [BioC] External expression data/ MAS5 Signal
+Message-ID: <009201c212e9$d74b9550$5332af0a@aion>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_008E_01C212C8.50292C70
+Content-Type: text/plain;
+	charset="ks_c_5601-1987"
+Content-Transfer-Encoding: 7bit
+
+Dear all
+
+two quick questions
+
+#1. how can I import the external expression value table to affy? If
+possible, in which format?
+#2. I saw AvgDiff, AvgDiff2, rma, and li.wong in express. Is it possible to
+calculate the Signal value which is implemented to Microarray Suite version
+5 in affy?
+
+Thank you very much for the helps in advance.
+
+SW
+
+------=_NextPart_000_008E_01C212C8.50292C70
+Content-Type: text/html;
+	charset="ks_c_5601-1987"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dks_c_5601-1987">
+<META content=3D"MSHTML 6.00.2716.2200" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>Dear all</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>two quick questions</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>#1. how can I import the external =
+expression value=20
+table to affy? If possible, in which format?</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>#2. I saw AvgDiff, AvgDiff2, rma, and =
+li.wong in=20
+express. Is it possible to calculate the Signal value which is =
+implemented to=20
+Microarray Suite version 5 in affy?</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Thank you very much for the helps in=20
+advance.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>SW</FONT></DIV></BODY></HTML>
+
+------=_NextPart_000_008E_01C212C8.50292C70--
+
+
+
+From rafa@jhu.edu  Thu Jun 13 17:59:44 2002
+From: rafa@jhu.edu (Rafael A. Irizarry)
+Date: Thu, 13 Jun 2002 12:59:44 -0400 (EDT)
+Subject: [BioC] External expression data/ MAS5 Signal
+In-Reply-To: <009201c212e9$d74b9550$5332af0a@aion>
+Message-ID: <Pine.LNX.4.33.0206131258410.2040-100000@localhost.localdomain>
+
+> #1. how can I import the external expression value table to affy? If
+> possible, in which format?
+what do you mean by external expression value table? if its just a flat 
+file you can use read.table (an R command)
+
+> #2. I saw AvgDiff, AvgDiff2, rma, and li.wong in express. Is it possible to
+> calculate the Signal value which is implemented to Microarray Suite version
+> 5 in affy?
+> 
+as far as i know the algorithm isnt public yet so we can't incorporate it.
+
+
+> Thank you very much for the helps in advance.
+> 
+> SW
+> 
+
+
+From laurent@cbs.dtu.dk  Thu Jun 13 18:42:59 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Thu, 13 Jun 2002 19:42:59 +0200
+Subject: [BioC] Re: reading affy table
+Message-ID: <20020613174259.GC813592@genome.cbs.dtu.dk>
+
+On Thu, Jun 13, 2002 at 10:51:46AM -0400, Sek Won Kong, M.D. wrote:
+> Dear all
+> 
+> two quick questions
+> 
+> #1. how can I import the external expression value table to affy? If
+> possible, in which format?
+
+?! Do you mean the output generated by the M.A.S. software ?
+If yes, one can import the table (eventually after cutting header/bottom
+of the generated document) the 'regular' way in R... but then you are
+beyond the juridiction of package (i.e. the job was done by MAS).
+
+Others goodies of Bioconductor (annotate, AnnBuilder, and many others...)
+might be what you want instead...
+
+> #2. I saw AvgDiff, AvgDiff2, rma, and li.wong in express. Is it possible to
+> calculate the Signal value which is implemented to Microarray Suite version
+> 5 in affy?
+
+
+I do not have access to manufacturer's doc at the moment. Could you remind
+me what is the 'Signal value' ? May be I can help.
+
+
+
+
+Hopin' it helps,
+
+
+L.
+
+> 
+> Thank you very much for the helps in advance.
+> 
+> SW
+
+-- 
+--------------------------------------------------------------
+Laurent Gautier			CBS, Building 208, DTU
+PhD. Student			DK-2800 Lyngby,Denmark	
+tel: +45 45 25 24 85		http://www.cbs.dtu.dk/laurent
+
+
+From dimitrov@gnf.org  Thu Jun 13 18:34:46 2002
+From: dimitrov@gnf.org (Peter Dimitrov)
+Date: 13 Jun 2002 10:34:46 -0700
+Subject: [BioC] External expression data/ MAS5 Signal
+In-Reply-To: <Pine.LNX.4.33.0206131258410.2040-100000@localhost.localdomain>
+References: <Pine.LNX.4.33.0206131258410.2040-100000@localhost.localdomain>
+Message-ID: <1023989686.20688.69.camel@cb3.gnf.org>
+
+On Thu, 2002-06-13 at 09:59, Rafael A. Irizarry wrote:
+> > #1. how can I import the external expression value table to affy? If
+> > possible, in which format?
+> what do you mean by external expression value table? if its just a flat 
+> file you can use read.table (an R command)
+> 
+> > #2. I saw AvgDiff, AvgDiff2, rma, and li.wong in express. Is it possible to
+> > calculate the Signal value which is implemented to Microarray Suite version
+> > 5 in affy?
+> > 
+> as far as i know the algorithm isnt public yet so we can't incorporate it.
+
+Can I propose a little change in express, that will accomodate
+background specific correction as in the case of MAS5. Specifically,
+parameter bg that is used to specify the background adjustment function,
+expects only functions that work on a chip or probe pair level, but not
+on a probeset level, such as MAS5. The thing is when the data comes to
+summary.stat, which is a function working on the probe level, the probe
+pairs are already reduced to single number and it is too late to apply
+MAS5. For more info look at
+http://www.stat.berkeley.edu/users/terry/zarray/Affy/affy_index.html
+
+So, one way to fix this is to have the factor levels used to split the
+(globally) adjusted pm's, to be passed as a parameter to bg()(and bgc()
+in version 1.1.0), and every other function that doesn't use them, to
+use "...".
+
+Thanks,
+
+Peter
+
+> 
+> 
+> > Thank you very much for the helps in advance.
+> > 
+> > SW
+> > 
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+
+
+From jb7gv@virginia.edu  Thu Jun 13 19:38:46 2002
+From: jb7gv@virginia.edu (Joshua Betcher)
+Date: Thu, 13 Jun 2002 14:38:46 -0400
+Subject: [BioC] CPlot problem in R (from package Genefilter)....
+Message-ID: <002b01c21309$8e224840$2701a8c0@joshbtosh>
+
+When I ran the CPlot function in R (geneplotter package) all I get is a
+graph with a y-axis and nothing else; the example in the html file produces
+this result also.  Is there a problem in the function or is it something on
+my end?
+
+Thanks
+Josh
+
+R 1.5.0
+Windows XP
+
+
+
+From laurent@cbs.dtu.dk  Thu Jun 13 20:45:09 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Thu, 13 Jun 2002 21:45:09 +0200
+Subject: [BioC] External expression data/ MAS5 Signal
+In-Reply-To: <1023989686.20688.69.camel@cb3.gnf.org>
+References: <Pine.LNX.4.33.0206131258410.2040-100000@localhost.localdomain> <1023989686.20688.69.camel@cb3.gnf.org>
+Message-ID: <20020613194509.GA840764@genome.cbs.dtu.dk>
+
+On Thu, Jun 13, 2002 at 10:34:46AM -0700, Peter Dimitrov wrote:
+> On Thu, 2002-06-13 at 09:59, Rafael A. Irizarry wrote:
+> > > #1. how can I import the external expression value table to affy? If
+> > > possible, in which format?
+> > what do you mean by external expression value table? if its just a flat 
+> > file you can use read.table (an R command)
+> > 
+> > > #2. I saw AvgDiff, AvgDiff2, rma, and li.wong in express. Is it possible to
+> > > calculate the Signal value which is implemented to Microarray Suite version
+> > > 5 in affy?
+> > > 
+> > as far as i know the algorithm isnt public yet so we can't incorporate it.
+> 
+> Can I propose a little change in express, that will accomodate
+> background specific correction as in the case of MAS5. Specifically,
+> parameter bg that is used to specify the background adjustment function,
+> expects only functions that work on a chip or probe pair level, but not
+> on a probeset level, such as MAS5. The thing is when the data comes to
+> summary.stat, which is a function working on the probe level, the probe
+> pairs are already reduced to single number and it is too late to apply
+> MAS5. For more info look at
+> http://www.stat.berkeley.edu/users/terry/zarray/Affy/affy_index.html
+
+
+Dear Peter,
+
+One can do what you describe using the method generateExprSet (for
+objects of class Cel.container) of the version 1.1.x of the package
+(in the devel section)... your comments are welcome if you have a
+chance to look at it...
+
+
+
+regards,
+
+
+L.
+
+
+
+
+-- 
+--------------------------------------------------------------
+Laurent Gautier			CBS, Building 208, DTU
+PhD. Student			DK-2800 Lyngby,Denmark	
+tel: +45 45 25 24 85		http://www.cbs.dtu.dk/laurent
+
+From laurent@cbs.dtu.dk  Mon Jun 17 09:02:17 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Mon, 17 Jun 2002 10:02:17 +0200
+Subject: [BioC] External expression data/ MAS5 Signal
+In-Reply-To: <00fc01c21304$cfffcd00$5332af0a@aion>
+References: <009201c212e9$d74b9550$5332af0a@aion> <20020613174028.GA813592@genome.cbs.dtu.dk> <00fc01c21304$cfffcd00$5332af0a@aion>
+Message-ID: <20020617080217.GA1418687@genome.cbs.dtu.dk>
+
+On Thu, Jun 13, 2002 at 02:04:50PM -0400, Sek Won Kong, M.D. wrote:
+(...)
+> 
+> I wondered there's quite a difference in calculated expression values from
+> AvgDiff, AvgDiff2, li.wong and rma. Previous I used invariant set normalized
+> MAS 5 signal values for analysis. However when I tried to implement the
+> quantile normalization and rma, there's big differences in reults ( I mean
+> the final results the list of genes ). So I wondered the why, and wanted to
+> compare 5 different kinds of expression algorithms.
+
+The 'because' that answers the 'why' is probably linked with the fact that
+the methods are fairly different (see their respective description in the
+help pages)...
+You may want to look at the individual probe sets for the genes for which
+the results are very different. (try the function get.PPset)... do not
+hesitate to give us feedback about the differences observed.
+
+> 
+> And could you let me know how to calculate the PM-only model of Li-Wong in
+> affy? li.wong seems like PM-MM model.
+>
+
+In the package, we consider that PMs and MMs probe intensities are used
+to compute 'adjusted' probe intensities. In the case of PMs-MMs,
+it can be thought of subtracting the noise to the signal.
+
+The parameter 'bg' for express or 'bg.correct' for generateExprSet
+(for Plob and Cel.container respectively) let you specify how to
+get the 'adjusted' values.
+The function 'bg.correct.pmonly' returns only the PMs and can be
+used...
+
+
+regards,
+
+
+Laurent
+
+ 
+
+-- 
+--------------------------------------------------------------
+Laurent Gautier			CBS, Building 208, DTU
+PhD. Student			DK-2800 Lyngby,Denmark	
+tel: +45 45 25 24 85		http://www.cbs.dtu.dk/laurent
+
+From laurent@cbs.dtu.dk  Mon Jun 17 10:10:57 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Mon, 17 Jun 2002 11:10:57 +0200
+Subject: [BioC] External expression data/ MAS5 Signal
+In-Reply-To: <1024088904.27127.1156.camel@cb3.gnf.org>
+References: <Pine.LNX.4.33.0206131258410.2040-100000@localhost.localdomain> <1023989686.20688.69.camel@cb3.gnf.org> <20020613194509.GA840764@genome.cbs.dtu.dk> <1024088904.27127.1156.camel@cb3.gnf.org>
+Message-ID: <20020617091057.GB1421173@genome.cbs.dtu.dk>
+
+On Fri, Jun 14, 2002 at 02:08:24PM -0700, Peter Dimitrov wrote:
+> Dear Laurant,
+> 
+> Thanks for the suggestion, it seems good place to plug MAS5. But before
+> that, all of my data has to be transfered from Plobs to Cel.containers.
+> What is the easiest way to convert Plob object to Cel.container? I've
+> looked in the documentation, but still can't find an example of that, if
+> there is any.
+
+...if you did not subset your Plob objects, it should be technically possible... feel free to contribute a converter Plob->Cel.container...
+(yep, it looks like there is no such converter in the package otherwise)
+
+The other way is to load your data (again) through function like
+'read.container.celfile' and do your data processing over these objects.
+
+> 
+> Regards,
+> 
+> Peter
+> 
+> P.S. There seems to be a bug in affy.subset(version 1.1.1).
+> Specifically, the assigment of pData slot of the phenotypic object ph
+> fails, because the subsetting operation of the data frame fails to
+> return a data.frame(is this an R bug?):
+
+'can't say, 'had no time to look at it...
+(Rafael, Ben, Leslie, any idea ?)
+
+
+> 
+> ...
+> ph <- phenoData(x)
+> if (!is.null(pData(ph)) || length(chips) < nchips(x))
+>     ph@pData <- pData(ph)[chips, ]
+> ...
+> 
+> is.data.frame(pData(ph)[chips, ]) returns False and ph@pData is a data
+> frame.
+> 
+> I choose to replace the asignment with this line:
+> 
+>     pData(ph) <- subset( pData(ph), rownames(pData(ph)) == chips )
+> 
+> assuming chips already is a list of chip names and not numeric indices.
+> There are other solutions also.
+> 
+> 
+
+
+Regards,
+
+
+
+Laurent
+
+
+
+-- 
+--------------------------------------------------------------
+Laurent Gautier			CBS, Building 208, DTU
+PhD. Student			DK-2800 Lyngby,Denmark	
+tel: +45 45 25 24 85		http://www.cbs.dtu.dk/laurent
+
+From rafa@jhu.edu  Mon Jun 17 14:31:03 2002
+From: rafa@jhu.edu (Rafael A. Irizarry)
+Date: Mon, 17 Jun 2002 09:31:03 -0400 (EDT)
+Subject: [BioC] External expression data/ MAS5 Signal
+In-Reply-To: <20020617080217.GA1418687@genome.cbs.dtu.dk>
+Message-ID: <Pine.LNX.4.33.0206170926480.9565-100000@localhost.localdomain>
+
+also keep in mind that rma return log2(expression). if you want to make 
+a direct comp you should look at 2^exprs(express(Plob))
+
+rma and li and dchip with no pm only give similar results. i think the 
+average correlation is about .9 (on the log scale). for mas 5.0 its around .8.
+
+On 
+Mon, 17 Jun 2002, Laurent Gautier wrote:
+
+> On Thu, Jun 13, 2002 at 02:04:50PM -0400, Sek Won Kong, M.D. wrote:
+> (...)
+> > 
+> > I wondered there's quite a difference in calculated expression values from
+> > AvgDiff, AvgDiff2, li.wong and rma. Previous I used invariant set normalized
+> > MAS 5 signal values for analysis. However when I tried to implement the
+> > quantile normalization and rma, there's big differences in reults ( I mean
+> > the final results the list of genes ). So I wondered the why, and wanted to
+> > compare 5 different kinds of expression algorithms.
+> 
+> The 'because' that answers the 'why' is probably linked with the fact that
+> the methods are fairly different (see their respective description in the
+> help pages)...
+> You may want to look at the individual probe sets for the genes for which
+> the results are very different. (try the function get.PPset)... do not
+> hesitate to give us feedback about the differences observed.
+> 
+> > 
+> > And could you let me know how to calculate the PM-only model of Li-Wong in
+> > affy? li.wong seems like PM-MM model.
+> >
+> 
+> In the package, we consider that PMs and MMs probe intensities are used
+> to compute 'adjusted' probe intensities. In the case of PMs-MMs,
+> it can be thought of subtracting the noise to the signal.
+> 
+> The parameter 'bg' for express or 'bg.correct' for generateExprSet
+> (for Plob and Cel.container respectively) let you specify how to
+> get the 'adjusted' values.
+> The function 'bg.correct.pmonly' returns only the PMs and can be
+> used...
+> 
+> 
+> regards,
+> 
+> 
+> Laurent
+> 
+>  
+> 
+> 
+
+
+From laurent@cbs.dtu.dk  Mon Jun 17 15:40:25 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Mon, 17 Jun 2002 16:40:25 +0200
+Subject: [BioC] fixes in affy-devel
+Message-ID: <20020617144025.GA1541606@genome.cbs.dtu.dk>
+
+Hi,
+
+Few problems were reported (and fixes kindly provided too -- thanks (you
+know who you are ;) )) for some of the normalization methods in the package.
+They are now in the development package to be donwloaded from the website.
+(well at least for the source... people with Windows can report if the
+compiled package disappeared in a dimensional warp...)
+
+
+
+L.
+
+From skong@caregroup.harvard.edu  Mon Jun 17 15:55:12 2002
+From: skong@caregroup.harvard.edu (Sek Won Kong, M.D.)
+Date: Mon, 17 Jun 2002 10:55:12 -0400
+Subject: [BioC] External expression data/ MAS5 Signal
+References: <Pine.LNX.4.33.0206170926480.9565-100000@localhost.localdomain>
+Message-ID: <009601c2160e$fb61a970$5332af0a@aion>
+
+Dear Laurent
+
+i used log transformed and untransformed for both algorithms. and you are
+right, the r square is good enough for those algorithms. however, the small
+difference made quite a diffrerence when trying sam, samroc procedure for
+choosing the significant genes. that's the problem. usually 50-60% genes
+were found significant in both rma, li.wong, and MAS 5 with given same
+threshold or highest 500 rank genes.
+
+thanks!
+SW
+
+
+----- Original Message -----
+From: "Rafael A. Irizarry" <ririzarr@jhsph.edu>
+To: "Laurent Gautier" <>
+Cc: "Sek Won Kong, M.D." <skong@caregroup.harvard.edu>; <>
+Sent: Monday, June 17, 2002 9:31 AM
+Subject: Re: [BioC] External expression data/ MAS5 Signal
+
+
+> also keep in mind that rma return log2(expression). if you want to make
+> a direct comp you should look at 2^exprs(express(Plob))
+>
+> rma and li and dchip with no pm only give similar results. i think the
+> average correlation is about .9 (on the log scale). for mas 5.0 its around
+.8.
+>
+> On
+> Mon, 17 Jun 2002, Laurent Gautier wrote:
+>
+> > On Thu, Jun 13, 2002 at 02:04:50PM -0400, Sek Won Kong, M.D. wrote:
+> > (...)
+> > >
+> > > I wondered there's quite a difference in calculated expression values
+from
+> > > AvgDiff, AvgDiff2, li.wong and rma. Previous I used invariant set
+normalized
+> > > MAS 5 signal values for analysis. However when I tried to implement
+the
+> > > quantile normalization and rma, there's big differences in reults ( I
+mean
+> > > the final results the list of genes ). So I wondered the why, and
+wanted to
+> > > compare 5 different kinds of expression algorithms.
+> >
+> > The 'because' that answers the 'why' is probably linked with the fact
+that
+> > the methods are fairly different (see their respective description in
+the
+> > help pages)...
+> > You may want to look at the individual probe sets for the genes for
+which
+> > the results are very different. (try the function get.PPset)... do not
+> > hesitate to give us feedback about the differences observed.
+> >
+> > >
+> > > And could you let me know how to calculate the PM-only model of
+Li-Wong in
+> > > affy? li.wong seems like PM-MM model.
+> > >
+> >
+> > In the package, we consider that PMs and MMs probe intensities are used
+> > to compute 'adjusted' probe intensities. In the case of PMs-MMs,
+> > it can be thought of subtracting the noise to the signal.
+> >
+> > The parameter 'bg' for express or 'bg.correct' for generateExprSet
+> > (for Plob and Cel.container respectively) let you specify how to
+> > get the 'adjusted' values.
+> > The function 'bg.correct.pmonly' returns only the PMs and can be
+> > used...
+> >
+> >
+> > regards,
+> >
+> >
+> > Laurent
+> >
+> >
+> >
+> >
+
+
+
+From gregory_r_warnes@groton.pfizer.com  Tue Jun 18 15:09:55 2002
+From: gregory_r_warnes@groton.pfizer.com (Warnes, Gregory R)
+Date: Tue, 18 Jun 2002 10:09:55 -0400
+Subject: [BioC] Web site suggestions
+Message-ID: <D7A3CFD7825BD6119B880002A58F06C227E63F@groexmb02.pfizer.com>
+
+(Please cc me on replies, as my mailing list subscription request doesn't
+seem to have been processed yet.)
+
+Hi All,
+
+Couple of web site comments:
+
+1) The current layout of the bioconductor.org doesn't provide much guidance
+to getting started with the bioconductor packages.  There is no clear links
+to documentation and no introduction to the tools.  Would it be possible to
+(at least) give links to the documentation of the individuals packages (not
+just the function list)?    As it is now, it is necessary to download and
+install the individual packages before having access to the documentation
+that can be used to see what might really be useful and how the packages
+interrelate...
+
+2) It is not clear from
+http://www.bioconductor.org/packages/release/html/index.html what packages
+are included in the 'Bioconductor Package Bundle'  (	Biobase, ROC,
+annotate, edd,  and genefilter), nor is it clear what package are 'required'
+or 'recommended'.   Please list the contents of the 'Bioconductor Package
+Bundle' as well as adding another column to the individual package listing
+giving the package 'category'.
+
+More complains, suggestions, complements, etc as I get (try to) things
+working and organized.
+
+-Greg
+
+
+
+
+
+
+LEGAL NOTICE
+Unless expressly stated otherwise, this message is confidential and may be privileged. It is intended for the addressee(s) only. Access to this E-mail by anyone else is unauthorized. If you are not an addressee, any disclosure or copying of the contents of this E-mail or any action taken (or not taken) in reliance on it is unauthorized and may be unlawful. If you are not an addressee, please inform the sender immediately.
+
+From jgentry@jimmy.harvard.edu  Tue Jun 18 15:46:38 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Tue, 18 Jun 2002 10:46:38 -0400 (EDT)
+Subject: [BioC] Web site suggestions
+In-Reply-To: <D7A3CFD7825BD6119B880002A58F06C227E63F@groexmb02.pfizer.com>
+Message-ID: <Pine.SOL.4.20.0206181044340.22528-100000@santiam.dfci.harvard.edu>
+
+> 1) The current layout of the bioconductor.org doesn't provide much guidance
+> to getting started with the bioconductor packages.  There is no clear links
+
+The current layout isn't going to last but a few more weeks, the issues
+you raise are all being taken into consideration. :)  For instance, there
+will be a full documentation link on the side - as well as links from
+individual package pages to its vignettes.
+
+> 2) It is not clear from
+> http://www.bioconductor.org/packages/release/html/index.html what packages
+> are included in the 'Bioconductor Package Bundle'  (	Biobase, ROC,
+> annotate, edd,  and genefilter), nor is it clear what package are 'required'
+> or 'recommended'.   Please list the contents of the 'Bioconductor Package
+
+Noted.  I'm not certain that the package bundle is going to stick around
+(now that Jianhua's 'getBioC.R' script is available on the site), but if
+so I'll note this as well.
+
+> More complains, suggestions, complements, etc as I get (try to) things
+> working and organized.
+
+Excellent.
+
+-Jeff
+
+
+From gregory_r_warnes@groton.pfizer.com  Tue Jun 18 16:01:51 2002
+From: gregory_r_warnes@groton.pfizer.com (Warnes, Gregory R)
+Date: Tue, 18 Jun 2002 11:01:51 -0400
+Subject: [BioC] Web site suggestions
+Message-ID: <D7A3CFD7825BD6119B880002A58F06C227E641@groexmb02.pfizer.com>
+
+
+> -----Original Message-----
+> From: Jeff Gentry [mailto:jgentry@jimmy.harvard.edu]
+> Sent: Tuesday, June 18, 2002 10:47 AM
+> To: Warnes, Gregory R
+> Cc: 'bioconductor@stat.math.ethz.ch'
+> Subject: Re: [BioC] Web site suggestions
+> 
+> 
+> > 1) The current layout of the bioconductor.org doesn't 
+> provide much guidance
+> > to getting started with the bioconductor packages.  There 
+> is no clear links
+> 
+> The current layout isn't going to last but a few more weeks, 
+> the issues
+> you raise are all being taken into consideration. :)  For 
+> instance, there
+> will be a full documentation link on the side - as well as links from
+> individual package pages to its vignettes.
+
+Great!  That should help a lot.
+
+> 
+> > 2) It is not clear from
+> > 
+> http://www.bioconductor.org/packages/release/html/index.html 
+> what packages
+> > are included in the 'Bioconductor Package Bundle'  (	
+> Biobase, ROC,
+> > annotate, edd,  and genefilter), nor is it clear what 
+> package are 'required'
+> > or 'recommended'.   Please list the contents of the 
+> 'Bioconductor Package
+> 
+> Noted.  I'm not certain that the package bundle is going to 
+> stick around
+> (now that Jianhua's 'getBioC.R' script is available on the 
+> site), but if
+> so I'll note this as well.
+
+Unfortunately, the getBioC.R script dies while trying to talk to my
+http_proxy... More on that in a moment.
+
+> 
+> > More complains, suggestions, complements, etc as I get (try 
+> to) things
+> > working and organized.
+> 
+> Excellent.
+> 
+> -Jeff
+> 
+
+
+LEGAL NOTICE
+Unless expressly stated otherwise, this message is confidential and may be privileged. It is intended for the addressee(s) only. Access to this E-mail by anyone else is unauthorized. If you are not an addressee, any disclosure or copying of the contents of this E-mail or any action taken (or not taken) in reliance on it is unauthorized and may be unlawful. If you are not an addressee, please inform the sender immediately.
+
+From gregory_r_warnes@groton.pfizer.com  Tue Jun 18 16:25:29 2002
+From: gregory_r_warnes@groton.pfizer.com (Warnes, Gregory R)
+Date: Tue, 18 Jun 2002 11:25:29 -0400
+Subject: [BioC] Problems with url/download and http_proxy
+Message-ID: <D7A3CFD7825BD6119B880002A58F06C227E643@groexmb02.pfizer.com>
+
+	
+I would like to use the getBioC.R script from
+http://www.bioconductor.org/getBioC.R to install the biobase packages.
+Unfortunately, url() and download.file() die when trying to talk to my
+proxy:
+
+	> getBioC("exprs")
+	connect: Cannot assign requested address
+	unable to connect to 'gproxy1.pfizer.com'.
+	connect: Cannot assign requested address
+	unable to connect to 'gproxy1.pfizer.com'.
+	connect: Cannot assign requested address
+	unable to connect to 'gproxy1.pfizer.com'.
+	connect: Cannot assign requested address
+	unable to connect to 'gproxy1.pfizer.com'.
+	connect: Cannot assign requested address
+	unable to connect to 'gproxy1.pfizer.com'.
+	connect: Cannot assign requested address
+	unable to connect to 'gproxy1.pfizer.com'.
+	connect: Cannot assign requested address
+	unable to connect to 'gproxy1.pfizer.com'.
+	[1] "Get Biobase failed"     "Get annotate failed"    "Get
+genefilter failed" 
+	[4] "Get geneplotter failed" "Get edd failed"         "Get ROC
+failed"        
+	[7] "Get tkWidgets failed"  
+
+Which is caused by:
+
+	> url(getUrl("unix","Biobase", F),'r')
+	connect: Cannot assign requested address
+	unable to connect to 'gproxy1.pfizer.com'.
+	Error in url(getUrl("unix", "Biobase", F), "r") : 
+	 cannot open URL
+`http://www.bioconductor.org/packages/release/distrib/Source/Biobase_1.0.tar
+.gz'
+
+and similarly:
+
+	> download.file(getUrl("unix","Biobase", F),dest="test.tgz")
+	trying URL
+`http://www.bioconductor.org/packages/release/distrib/Source/Biobase_1.0.tar
+.gz'
+	connect: Cannot assign requested address
+	unable to connect to 'gproxy1.pfizer.com'.
+	Error in download.file(getUrl("unix", "Biobase", F), dest =
+"test.tgz") : 
+	 cannot open URL
+`http://www.bioconductor.org/packages/release/distrib/Source/Biobase_1.0.tar
+.gz'
+
+So, it looks like R's internal http code can't handle my proxy settings:
+
+	> Sys.getenv("http_proxy")
+                 http_proxy 
+	"http://gproxy1.pfizer.com" 
+
+However, this proxy value works just fine for wget/lynx etc:
+
+	> download.file(getUrl("unix","Biobase", F),dest="test.gz",
+method="wget")
+	--11:12:07--
+http://www.bioconductor.org:80/packages/release/distrib/Source/Biobase_1.0.t
+ar.gz
+	           => `affy.tar.gz'
+	Connecting to gproxy1.pfizer.com:80... connected!
+	Proxy request sent, awaiting response... 200 OK
+	Length: 292,800 [application/x-tar]
+	
+	    0K -> .......... .......... .......... .......... .......... [
+17%]
+	   50K -> .......... .......... .......... .......... .......... [
+34%]
+	...
+
+
+So, does R need the proxy settings to be in a different format? Other ideas
+on what might be wrong?
+
+Obligatory version info:
+
+> version
+         _                   
+platform sparc-sun-solaris2.8
+arch     sparc               
+os       solaris2.8          
+system   sparc, solaris2.8   
+status   Patched             
+major    1                   
+minor    5.1                 
+year     2002                
+month    06                  
+day      18                  
+language R                   
+
+
+-Greg
+
+
+LEGAL NOTICE
+Unless expressly stated otherwise, this message is confidential and may be privileged. It is intended for the addressee(s) only. Access to this E-mail by anyone else is unauthorized. If you are not an addressee, any disclosure or copying of the contents of this E-mail or any action taken (or not taken) in reliance on it is unauthorized and may be unlawful. If you are not an addressee, please inform the sender immediately.
+
+From gregory_r_warnes@groton.pfizer.com  Tue Jun 18 16:33:41 2002
+From: gregory_r_warnes@groton.pfizer.com (Warnes, Gregory R)
+Date: Tue, 18 Jun 2002 11:33:41 -0400
+Subject: [BioC] affy package link inconsistency
+Message-ID: <D7A3CFD7825BD6119B880002A58F06C227E645@groexmb02.pfizer.com>
+
+The page  http://www.bioconductor.org/packages/release/html/affy.html  has
+links to two different affy package versions, with the same text label: 
+
+Source package download
+<http://www.bioconductor.org/packages/release/distrib//Source/affy_1.0.1.tar
+.gz>
+Source package download
+<http://www.bioconductor.org/packages/release/distrib//Source/affy_1.1.0.tar
+.gz>
+
+The web pages indicate that version 1.0.1 is current, so what is 1.1.0?  A
+typo or a 'unnannounced' new version or devel vision?
+
+The text labels for the links should probably be updated to reflect correct
+the status of the two files.
+
+-Greg
+
+
+LEGAL NOTICE
+Unless expressly stated otherwise, this message is confidential and may be privileged. It is intended for the addressee(s) only. Access to this E-mail by anyone else is unauthorized. If you are not an addressee, any disclosure or copying of the contents of this E-mail or any action taken (or not taken) in reliance on it is unauthorized and may be unlawful. If you are not an addressee, please inform the sender immediately.
+
+From gregory_r_warnes@groton.pfizer.com  Tue Jun 18 16:37:38 2002
+From: gregory_r_warnes@groton.pfizer.com (Warnes, Gregory R)
+Date: Tue, 18 Jun 2002 11:37:38 -0400
+Subject: [BioC] getBioC.R doesn't get current version of affi
+Message-ID: <D7A3CFD7825BD6119B880002A58F06C227E646@groexmb02.pfizer.com>
+
+getBioC wants to download version 1.0 of the affi package, but the current
+version is 1.0.1 according to the web page. (And version 1.1.0 has a link on
+the affi page.)
+
+-Greg
+
+
+LEGAL NOTICE
+Unless expressly stated otherwise, this message is confidential and may be privileged. It is intended for the addressee(s) only. Access to this E-mail by anyone else is unauthorized. If you are not an addressee, any disclosure or copying of the contents of this E-mail or any action taken (or not taken) in reliance on it is unauthorized and may be unlawful. If you are not an addressee, please inform the sender immediately.
+
+From jgentry@jimmy.harvard.edu  Tue Jun 18 16:44:54 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Tue, 18 Jun 2002 11:44:54 -0400 (EDT)
+Subject: [BioC] affy package link inconsistency
+In-Reply-To: <D7A3CFD7825BD6119B880002A58F06C227E645@groexmb02.pfizer.com>
+Message-ID: <Pine.SOL.4.20.0206181143390.22528-100000@santiam.dfci.harvard.edu>
+
+> The page  http://www.bioconductor.org/packages/release/html/affy.html  has
+> links to two different affy package versions, with the same text label: 
+> The text labels for the links should probably be updated to reflect correct
+> the status of the two files.
+
+The current system I had written which autogenerates all those pages is
+not smart enough to handle by itself version # changes.  I go thru it by
+hand every few days to clean that out.  This problem happens most
+frequently with Affy as they change their version numbers every 3 seconds.
+
+As with all the other issues, "this will disappear with the new setup"
+
+-J
+
+
+From ripley@stats.ox.ac.uk  Tue Jun 18 16:42:56 2002
+From: ripley@stats.ox.ac.uk (ripley@stats.ox.ac.uk)
+Date: Tue, 18 Jun 2002 16:42:56 +0100 (BST)
+Subject: [BioC] Re: [R] Problems with url/download and http_proxy
+In-Reply-To: <D7A3CFD7825BD6119B880002A58F06C227E643@groexmb02.pfizer.com>
+Message-ID: <Pine.LNX.4.31.0206181636080.17953-100000@gannet.stats>
+
+The code (which you do have available to you) says http_proxy
+
+ * Should be like http://myproxy/ or http://myproxy:3128/
+
+which yours is not, so please try that format.  The code suggests
+that the traling / can be omitted, but the words do not.
+
+-- 
+Brian D. Ripley,                  ripley@stats.ox.ac.uk
+Professor of Applied Statistics,  http://www.stats.ox.ac.uk/~ripley/
+University of Oxford,             Tel:  +44 1865 272861 (self)
+1 South Parks Road,                     +44 1865 272860 (secr)
+Oxford OX1 3TG, UK                Fax:  +44 1865 272595
+
+
+From John Zhang <jzhang@jimmy.harvard.edu>  Tue Jun 18 17:12:35 2002
+From: John Zhang <jzhang@jimmy.harvard.edu> (John Zhang)
+Date: Tue, 18 Jun 2002 12:12:35 -0400 (EDT)
+Subject: [BioC] getBioC.R doesn't get current version of affi
+Message-ID: <200206181612.MAA05599@blaise.dfci.harvard.edu>
+
+>From: "Warnes, Gregory R" <gregory_r_warnes@groton.pfizer.com>
+>To: "'Bioconductor Mail List'" <bioconductor@stat.math.ethz.ch>
+>MIME-Version: 1.0
+>Subject: [BioC] getBioC.R doesn't get current version of affi
+>X-BeenThere: bioconductor@stat.math.ethz.ch
+>X-Mailman-Version: 2.0.11
+>List-Help: <mailto:bioconductor-request@stat.math.ethz.ch?subject=help>
+>List-Post: <mailto:bioconductor@stat.math.ethz.ch>
+>List-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, 
+<mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe>
+>List-Id: The Bioconductor Project Mailing List <bioconductor.stat.math.ethz.ch>
+>List-Unsubscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, 
+<mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe>
+>List-Archive: <http://www.stat.math.ethz.ch/pipermail/bioconductor/>
+>Date: Tue, 18 Jun 2002 11:37:38 -0400
+>
+>
+>getBioC wants to download version 1.0 of the affi package, but the current
+>version is 1.0.1 according to the web page. (And version 1.1.0 has a link on
+>the affi page.)
+
+I will have a look at it. Thanks.
+
+JZ
+
+>
+>-Greg
+>
+>
+>LEGAL NOTICE
+>Unless expressly stated otherwise, this message is confidential and may be 
+privileged. It is intended for the addressee(s) only. Access to this E-mail by 
+anyone else is unauthorized. If you are not an addressee, any disclosure or 
+copying of the contents of this E-mail or any action taken (or not taken) in 
+reliance on it is unauthorized and may be unlawful. If you are not an addressee, 
+please inform the sender immediately.
+>_______________________________________________
+>Bioconductor mailing list
+>Bioconductor@stat.math.ethz.ch
+>http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+
+From gregory_r_warnes@groton.pfizer.com  Tue Jun 18 19:39:21 2002
+From: gregory_r_warnes@groton.pfizer.com (Warnes, Gregory R)
+Date: Tue, 18 Jun 2002 14:39:21 -0400
+Subject: [BioC] RE: [R] Problems with url/download and http_proxy
+Message-ID: <D7A3CFD7825BD6119B880002A58F06C227E64A@groexmb02.pfizer.com>
+
+Just adding the trailing slash doesn't seem to help:
+
+	> Sys.getenv('http_proxy')
+	                  http_proxy 
+	"http://gproxy1.pfizer.com/" 
+
+	> url("http://cran.r-project.org/src/contrib/PACKAGES",'r')
+	connect: Cannot assign requested address
+	unable to connect to 'gproxy1.pfizer.com'.
+	Error in url("http://cran.r-project.org/src/contrib/PACKAGES", "r")
+: 
+	        cannot open URL
+`http://cran.r-project.org/src/contrib/PACKAGES'
+
+But adding the port explicitly does:
+
+	> Sys.getenv("http_proxy")
+	                     http_proxy 
+	"http://gproxy1.pfizer.com:80/" 
+	>  url("http://cran.r-project.org/src/contrib/PACKAGES",'r')
+	                                     description 
+	"http://cran.r-project.org/src/contrib/PACKAGES" 
+	                                           class 
+	                                           "url" 
+	                                            mode 
+	                                             "r" 
+	                                            text 
+	                                          "text" 
+	                                          opened 
+	                                        "opened" 
+	                                        can read 
+	                                           "yes" 
+	                                       can write 
+	                                            "no" 
+
+
+
+even if the trailing slash is not present:
+
+> Sys.getenv("http_proxy")
+                    http_proxy 
+"http://gproxy1.pfizer.com:80" 
+
+> url("http://cran.r-project.org/src/contrib/PACKAGES",'r')
+                                     description 
+"http://cran.r-project.org/src/contrib/PACKAGES" 
+                                           class 
+                                           "url" 
+                                            mode 
+                                             "r" 
+                                            text 
+                                          "text" 
+                                          opened 
+                                        "opened" 
+                                        can read 
+                                           "yes" 
+                                       can write 
+                                            "no" 
+
+
+Perhaps the documentation for download.file should be changed to note the
+requirement of the port.  The paragraph on proxies could be changed from
+
+
+     Proxies can be specified via environment variables. Setting
+     `"no_proxy"' stops any proxy being tried. Otherwise the setting of
+     `"http_proxy"' or `"ftp_proxy"' (or failing that, the all
+     upper-case version) is consulted and if non-empty used as a proxy
+     site.  For FTP transfers, the username and password on the proxy
+     can be specified by `"ftp_proxy_user"' and `"ftp_proxy_password"'.
+
+
+to something like:
+
+     Proxies can be specified via the environment variables `"http_proxy"'
+     or `"HTTP_PROXY"' and `"ftp_proxy'" or `"FTP_PROXY"'.  These variables 
+     must be of the form `protocol://machine.domain.tld:port'.  For FTP 
+     transfers, the username and password on the proxy can be specified by
+    `"ftp_proxy_user"' and `"ftp_proxy_password"'.  Setting `"no_proxy"' 
+     prevents the use of any proxy.  
+
+
+-Greg
+
+> -----Original Message-----
+> From: ripley@stats.ox.ac.uk [mailto:ripley@stats.ox.ac.uk]
+> Sent: Tuesday, June 18, 2002 11:43 AM
+> To: Warnes, Gregory R
+> Cc: 'r-help@stat.math.ethz.ch'; 'bioconductor@stat.math.ethz.ch'
+> Subject: Re: [R] Problems with url/download and http_proxy
+> 
+> 
+> The code (which you do have available to you) says http_proxy
+> 
+>  * Should be like http://myproxy/ or http://myproxy:3128/
+> 
+> which yours is not, so please try that format.  The code suggests
+> that the traling / can be omitted, but the words do not.
+> 
+> -- 
+> Brian D. Ripley,                  ripley@stats.ox.ac.uk
+> Professor of Applied Statistics,  http://www.stats.ox.ac.uk/~ripley/
+> University of Oxford,             Tel:  +44 1865 272861 (self)
+> 1 South Parks Road,                     +44 1865 272860 (secr)
+> Oxford OX1 3TG, UK                Fax:  +44 1865 272595
+> 
+> -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+> -.-.-.-.-.-.-.-.-
+> r-help mailing list -- Read 
+> http://www.ci.tuwien.ac.at/~hornik/R/R-FAQ.html
+> Send "info", "help", or "[un]subscribe"
+> (in the "body", not the subject !)  To: 
+> r-help-request@stat.math.ethz.ch
+> _._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._.
+> _._._._._._._._._
+> 
+
+
+LEGAL NOTICE
+Unless expressly stated otherwise, this message is confidential and may be privileged. It is intended for the addressee(s) only. Access to this E-mail by anyone else is unauthorized. If you are not an addressee, any disclosure or copying of the contents of this E-mail or any action taken (or not taken) in reliance on it is unauthorized and may be unlawful. If you are not an addressee, please inform the sender immediately.
+
+From isaac.neuhaus@bms.com  Wed Jun 19 21:26:21 2002
+From: isaac.neuhaus@bms.com (Isaac Neuhaus)
+Date: Wed, 19 Jun 2002 16:26:21 -0400
+Subject: [BioC] Still not working masking of features
+Message-ID: <3D10E8ED.1E6A12F2@bms.com>
+
+The funtion read.celfile is still giving me grief in version 1.1.1 this
+is what I get. (Just a as a remainder some probe sets have all of their
+features masked).
+
+> cels<-list()
+> cels[1]<-"cw20001050101a.cel"
+> cels[2]<-"cw20001050102a.cel"
+> cels[3]<-"cw20001050103a.cel"
+> cels[4]<-"cw20001050104a.cel"
+> cels[5]<-"cw20001050105a.cel"
+> cels[6]<-"cw20001050106a.cel"
+> names<-list()
+> names[1]<-"CW20001050101A"
+> names[2]<-"CW20001050102A"
+> names[3]<-"CW20001050103A"
+> names[4]<-"CW20001050104A"
+> names[5]<-"CW20001050105A"
+> names[6]<-"CW20001050106A"
+> data <- ReadAffy(CDFfile="HG_U95Av2.CDF", CELfiles=cels,
+chip.names=names, rm.mask=T, verbose=F)
+Error in read.celfile(CELfiles[i], compress = compress.cel, sd = FALSE,
+:
+        subscript out of bounds
+Execution halted
+
+Isaac
+
+
+From laurent@cbs.dtu.dk  Thu Jun 20 08:16:53 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Thu, 20 Jun 2002 09:16:53 +0200
+Subject: [BioC] Still not working masking of features
+In-Reply-To: <3D10E8ED.1E6A12F2@bms.com>
+References: <3D10E8ED.1E6A12F2@bms.com>
+Message-ID: <20020620071653.GA2453766@genome.cbs.dtu.dk>
+
+Dear Isaac, the error you report seems to be more in the function
+ReadAffy than in 'readcelfile' (according to the dump you provide).
+Generally, do not hesitate to send us the version number of your R
+installation and the platform you use....
+
+The following is the output from an R session performed on a Linux box (Mandrake 8.2)
+a couple of minutes ago:
+
+> tagada <- list()
+> tagada[1] <- "/mnt/cdrom/LatinSquare/E_coli/000825_bgd_Ds11.CEL.gz"
+> tagada[2] <- "/mnt/cdrom/LatinSquare/E_coli/000825_bgd_Ds10.CEL.gz"
+> mynames <- c("a", "b")
+> p <- ReadAffy("/mnt/cdrom/LatinSquare/E_coli/1286_S01.CDF.gz", tagada, compress.cel=T, compress.cdf=T, chip.names=mynames, rm.mask=T)
+reading CDF file
+processing information
+reading 2 CEL files..
+preparing probe level object
+> p
+Plob object
+CDF used=/mnt/cdrom/LatinSquare/E_coli/1286_S01.CDF.gz
+number of chips=2
+number of genes=9842
+number of probe pairs=145443
+annotation=
+description=
+notes=
+size of chip=544x544
+chip names=
+a
+b
+
+
+>
+
+
+
+
+We will look at it as soon as possible.
+
+Are the fact that all probes get 'masked' and the error in ReadAffy
+two different problems ? 
+ 
+
+
+
+Regards,
+
+
+
+Laurent
+
+On Wed, Jun 19, 2002 at 04:26:21PM -0400, Isaac Neuhaus wrote:
+> The funtion read.celfile is still giving me grief in version 1.1.1 this
+> is what I get. (Just a as a remainder some probe sets have all of their
+> features masked).
+> 
+> > cels<-list()
+> > cels[1]<-"cw20001050101a.cel"
+> > cels[2]<-"cw20001050102a.cel"
+> > cels[3]<-"cw20001050103a.cel"
+> > cels[4]<-"cw20001050104a.cel"
+> > cels[5]<-"cw20001050105a.cel"
+> > cels[6]<-"cw20001050106a.cel"
+> > names<-list()
+> > names[1]<-"CW20001050101A"
+> > names[2]<-"CW20001050102A"
+> > names[3]<-"CW20001050103A"
+> > names[4]<-"CW20001050104A"
+> > names[5]<-"CW20001050105A"
+> > names[6]<-"CW20001050106A"
+> > data <- ReadAffy(CDFfile="HG_U95Av2.CDF", CELfiles=cels,
+> chip.names=names, rm.mask=T, verbose=F)
+> Error in read.celfile(CELfiles[i], compress = compress.cel, sd = FALSE,
+> :
+>         subscript out of bounds
+> Execution halted
+> 
+> Isaac
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+-- 
+--------------------------------------------------------------
+Laurent Gautier			CBS, Building 208, DTU
+PhD. Student			DK-2800 Lyngby,Denmark	
+tel: +45 45 25 24 85		http://www.cbs.dtu.dk/laurent
+
+From laurent@cbs.dtu.dk  Thu Jun 20 10:41:10 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Thu, 20 Jun 2002 11:41:10 +0200
+Subject: [BioC] Re: PDF files
+In-Reply-To: <000501c217d5$2b34d1f0$9b66ef84@Neuromancer>
+References: <000501c217d5$2b34d1f0$9b66ef84@Neuromancer>
+Message-ID: <20020620094110.GA2478866@genome.cbs.dtu.dk>
+
+Dear Robert,
+
+We experienced odd things with pdf and the Windows precompiled packages.
+These things should be solved in the near future (if not already by
+the time I write this).
+
+In the meanwhile, the doc for the affy package can be downloaded from 
+
+http://biosun01.biostat.jhsph.edu/~ririzarr/Raffy/
+(version 1.0.x)
+
+or
+
+http://www.cbs.dtu.dk/laurent/download/affyR/affy.pdf
+(version 1.1.x)
+
+
+
+
+L.
+
+
+
+On Wed, Jun 19, 2002 at 02:06:23PM -0700, Robert Stuart M.D. wrote:
+> The pdf files for the BioBase and Affy packages appear to be corrupt or
+> damaged in some way. Is there another distribution of these aside from that
+> in the zip installation files.
+> 
+> -ROS
+> 
+> ************************************************
+> Robert Stuart, M.D.
+> Asst Prof Medicine
+> University of California San Diego
+> VA San Diego Healthcare System
+> 
+> Director, VASDHS GeneChip Core
+> Co-leader UCSD Cancer Center Microarray Shared Resource
+> Office: 858-822-8585 x5404
+> rostuart@ucsd.edu
+> 
+> 
+> _______________________________________________
+> Biocore mailing list
+> Biocore@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/biocore
+
+-- 
+--------------------------------------------------------------
+Laurent Gautier			CBS, Building 208, DTU
+PhD. Student			DK-2800 Lyngby,Denmark	
+tel: +45 45 25 24 85		http://www.cbs.dtu.dk/laurent
+
+From w.huber@dkfz-heidelberg.de  Thu Jun 20 12:27:37 2002
+From: w.huber@dkfz-heidelberg.de (Wolfgang Huber)
+Date: Thu, 20 Jun 2002 13:27:37 +0200
+Subject: [BioC] affy - read.celfile
+Message-ID: <3D11BC29.538A658E@dkfz.de>
+
+
+read.celfile (from package affy version 1.1.0) keeps hanging with cel files exported from dChip version 1.2. I am not sure how standards-conform the dChip-export is, but in any case it would seem useful for read.celfile to produce an intelligible error message rather than just hanging.
+
+I managed to work around this by commenting the lines
+  ff@masks <- .Call("getIndexExtraFromCEL", ...
+  ff@outliers <- .Call("getIndexExtraFromCEL", ...
+
+
+Wolfgang.
+
+
+Dr. Wolfgang Huber
+http://www.dkfz.de/abt0840/whuber
+DKFZ 
+Dep. Molecular Genome Analysis 
+69120 Heidelberg 
+Germany
+
+From shitao@ucla.edu  Thu Jun 20 19:14:50 2002
+From: shitao@ucla.edu (Shi, Tao)
+Date: Thu, 20 Jun 2002 11:14:50 -0700 (PDT)
+Subject: [BioC] problems with tcltk library
+Message-ID: <20020620181450.14251.qmail@web13405.mail.yahoo.com>
+
+--0-1804860174-1024596890=:10982
+Content-Type: text/plain; charset=us-ascii
+
+
+I just downloaded the bioconductor package, but when I was trying to run it, I couldn't load the tcltk library.  The error messages as shown below.  I'm using R 1.50 and running it in Windows XP professional.
+
+Many thanks
+
+...Tao
+
+ 
+
+> library(tcltk)
+Error in firstlib(which.lib.loc, package) : 
+        TCL_LIBRARY is not set
+Error in library(tcltk) : .First.lib failed
+> ReadAffy(widget=T)
+Loading required package: tcltk 
+Error in firstlib(which.lib.loc, package) : 
+        TCL_LIBRARY is not set
+Error in fileBrowser(textToShow = "Choose one CDF file", nSelect = 1,  : 
+        tcl/tk library not available
+
+
+
+
+---------------------------------
+Do You Yahoo!?
+Sign-up for Video Highlights of 2002 FIFA World Cup
+--0-1804860174-1024596890=:10982
+Content-Type: text/html; charset=us-ascii
+
+<P>I just downloaded the bioconductor package, but when I was trying to run it, I couldn't load the tcltk library.&nbsp; The error messages as shown below.&nbsp; I'm using R 1.50 and running it in Windows XP professional.</P>
+<P>Many thanks</P>
+<P>...Tao</P>
+<P>&nbsp;</P>
+<P>&gt; library(tcltk)<BR>Error in firstlib(which.lib.loc, package) : <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TCL_LIBRARY is not set<BR>Error in library(tcltk) : .First.lib failed<BR>&gt; ReadAffy(widget=T)<BR>Loading required package: tcltk <BR>Error in firstlib(which.lib.loc, package) : <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TCL_LIBRARY is not set<BR>Error in fileBrowser(textToShow = "Choose one CDF file", nSelect = 1,&nbsp; : <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tcl/tk library not available<BR></P><p><br><hr size=1><b>Do You Yahoo!?</b><br>
+<a href="http://rd.yahoo.com/welcome/*http://fifaworldcup.yahoo.com/fc/en/spl">Sign-up for Video Highlights</a> of 2002 FIFA World Cup
+--0-1804860174-1024596890=:10982--
+
+From John Zhang <jzhang@jimmy.harvard.edu>  Thu Jun 20 19:30:23 2002
+From: John Zhang <jzhang@jimmy.harvard.edu> (John Zhang)
+Date: Thu, 20 Jun 2002 14:30:23 -0400 (EDT)
+Subject: [BioC] problems with tcltk library
+Message-ID: <200206201830.OAA20158@blaise.dfci.harvard.edu>
+
+>From: "Shi, Tao" <shidaxia@yahoo.com>
+>To: bioconductor@stat.math.ethz.ch
+>MIME-Version: 1.0
+>Subject: [BioC] problems with tcltk library
+>X-BeenThere: bioconductor@stat.math.ethz.ch
+>X-Mailman-Version: 2.0.11
+>List-Help: <mailto:bioconductor-request@stat.math.ethz.ch?subject=help>
+>List-Post: <mailto:bioconductor@stat.math.ethz.ch>
+>List-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, 
+<mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe>
+>List-Id: The Bioconductor Project Mailing List <bioconductor.stat.math.ethz.ch>
+>List-Unsubscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, 
+<mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe>
+>List-Archive: <http://www.stat.math.ethz.ch/pipermail/bioconductor/>
+>Date: Thu, 20 Jun 2002 11:14:50 -0700 (PDT)
+>
+>
+>I just downloaded the bioconductor package, but when I was trying to run it, I 
+couldn't load the tcltk library.  The error messages as shown below.  I'm using 
+R 1.50 and running it in Windows XP professional.
+
+Do you have the tcl/tk library (not R tcltk) installed? If not, get one from 
+www.tcl.tk/software/tcltk, install it, and try again.
+
+>
+>Many thanks
+>
+>...Tao
+>
+> 
+>
+>> library(tcltk)
+>Error in firstlib(which.lib.loc, package) : 
+>        TCL_LIBRARY is not set
+>Error in library(tcltk) : .First.lib failed
+>> ReadAffy(widget=T)
+>Loading required package: tcltk 
+>Error in firstlib(which.lib.loc, package) : 
+>        TCL_LIBRARY is not set
+>Error in fileBrowser(textToShow = "Choose one CDF file", nSelect = 1,  : 
+>        tcl/tk library not available
+>
+>
+>
+>
+>---------------------------------
+>Do You Yahoo!?
+>Sign-up for Video Highlights of 2002 FIFA World Cup
+
+
+From daven@llnl.gov  Thu Jun 20 20:47:13 2002
+From: daven@llnl.gov (David O. Nelson)
+Date: 20 Jun 2002 12:47:13 -0700
+Subject: [BioC] affy - read.celfile
+In-Reply-To: <3D11BC29.538A658E@dkfz.de>
+References: <3D11BC29.538A658E@dkfz.de>
+Message-ID: <1024602434.2260.22.camel@w124.z208176179.sjc-ca.dsl.cnc.net>
+
+In the past (six months ago?), I noticed this type of problem too. What
+I found was that the read routines had gotten confused by differences in
+the encoding for newlines on PCs and Unix. In my case, the .cdf files
+were first transferred to a PC and then copied over to a Unix system. I
+first encountered this back when things were done by perl scripts, where
+the errant behavior was more explicit and could be easily debugged.
+
+However, I recently made the same mistake *again* with the C-based code,
+and the result was the symptoms you describe (Fool me once, shame on
+you; fool me twice, shame on me :-). Running it on a PC produced the
+expected results.
+
+In your case, was the .cdf file (or maybe the .cel file) read onto a PC
+and then transferred to Unix (or vice versa)? 
+
+In the fine tradition of the R mailing list, I should now make a snide
+comment about you not giving us enough info, but I'll pass on that for
+now.
+
+cheers,
+
+dave
+
+Dr. David O. Nelson
+Lawrence Livermore National Laboratory
+Box 808, L-441
+Livermore CA 94551
+
+
+On Thu, 2002-06-20 at 04:27, Wolfgang Huber wrote:
+> 
+> 
+> read.celfile (from package affy version 1.1.0) keeps hanging with cel files exported from dChip version 1.2. I am not sure how standards-conform the dChip-export is, but in any case it would seem useful for read.celfile to produce an intelligible error message rather than just hanging.
+> 
+> I managed to work around this by commenting the lines
+>   ff@masks <- .Call("getIndexExtraFromCEL", ...
+>   ff@outliers <- .Call("getIndexExtraFromCEL", ...
+> 
+> 
+> Wolfgang.
+> 
+> 
+> Dr. Wolfgang Huber
+> http://www.dkfz.de/abt0840/whuber
+> DKFZ 
+> Dep. Molecular Genome Analysis 
+> 69120 Heidelberg 
+> Germany
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> 
+
+
+
+From laurent@cbs.dtu.dk  Thu Jun 20 20:37:11 2002
+From: laurent@cbs.dtu.dk (Laurent Gautier)
+Date: Thu, 20 Jun 2002 21:37:11 +0200
+Subject: [BioC] affy - read.celfile
+In-Reply-To: <1024602434.2260.22.camel@w124.z208176179.sjc-ca.dsl.cnc.net>; from daven@llnl.gov on Thu, Jun 20, 2002 at 12:47:13PM -0700
+References: <3D11BC29.538A658E@dkfz.de> <1024602434.2260.22.camel@w124.z208176179.sjc-ca.dsl.cnc.net>
+Message-ID: <20020620213711.A17197@giraffa.cbs.dtu.dk>
+
+
+On Thu, Jun 20, 2002 at 12:47:13PM -0700, David O. Nelson wrote:
+> In the past (six months ago?), I noticed this type of problem too. What
+> I found was that the read routines had gotten confused by differences in
+> the encoding for newlines on PCs and Unix. In my case, the .cdf files
+> were first transferred to a PC and then copied over to a Unix system. I
+> first encountered this back when things were done by perl scripts, where
+> the errant behavior was more explicit and could be easily debugged.
+
+thanks for the pointer... but what puzzles me is that the Affymetrix
+imaging software generating the CEL from the images only exists
+(to my humble knowledge) for Windows...
+
+...so technically all CEL files are coming from Windows...
+
+...my wild guess would be that a local Perl hero messed up something in
+the files... (and as advertised before in this very same list the parser
+is designed to parse *Affymetrix* files rather than Affymetrix flavored
+files)...
+
+> 
+> However, I recently made the same mistake *again* with the C-based code,
+> and the result was the symptoms you describe (Fool me once, shame on
+> you; fool me twice, shame on me :-). Running it on a PC produced the
+> expected results.
+> 
+> In your case, was the .cdf file (or maybe the .cel file) read onto a PC
+> and then transferred to Unix (or vice versa)? 
+> 
+> In the fine tradition of the R mailing list, I should now make a snide
+> comment about you not giving us enough info, but I'll pass on that for
+> now.
+> 
+
+...too bad... I missed a chance to reply that contributions to improve
+things are also welcome...
+
+
+
+
+L.
+
+
+
+
+> cheers,
+> 
+> dave
+> 
+> Dr. David O. Nelson
+> Lawrence Livermore National Laboratory
+> Box 808, L-441
+> Livermore CA 94551
+> 
+> 
+> On Thu, 2002-06-20 at 04:27, Wolfgang Huber wrote:
+> > 
+> > 
+> > read.celfile (from package affy version 1.1.0) keeps hanging with cel files exported from dChip version 1.2. I am not sure how standards-conform the dChip-export is, but in any case it would seem useful for read.celfile to produce an intelligible error message rather than just hanging.
+> > 
+> > I managed to work around this by commenting the lines
+> >   ff@masks <- .Call("getIndexExtraFromCEL", ...
+> >   ff@outliers <- .Call("getIndexExtraFromCEL", ...
+> > 
+> > 
+> > Wolfgang.
+> > 
+> > 
+> > Dr. Wolfgang Huber
+> > http://www.dkfz.de/abt0840/whuber
+> > DKFZ 
+> > Dep. Molecular Genome Analysis 
+> > 69120 Heidelberg 
+> > Germany
+> > _______________________________________________
+> > Bioconductor mailing list
+> > Bioconductor@stat.math.ethz.ch
+> > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> > 
+> 
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+From w.huber@dkfz-heidelberg.de  Thu Jun 20 22:03:15 2002
+From: w.huber@dkfz-heidelberg.de (Wolfgang Huber)
+Date: Thu, 20 Jun 2002 23:03:15 +0200
+Subject: [BioC] affy - read.celfile
+Message-ID: <3D124313.8B9A3999@dkfz.de>
+
+Hi David,
+
+thanks for your suggestion. As Laurent suggested, it's not the DOS/Unix 
+thing, but something else:
+
+Indeed, the CEL files I was having trouble with were written from dChip on 
+a Windos machine, while I read them into R on a Unix machine.
+
+And indeed, the CEL files do contain DOS-type newlines. However, that is
+not the problem:
+- I used other CEL files (e.g., http://www-genome.wi.mit.edu/mpr/lung/) that 
+  also have DOS-newlines, and with whom read.celfile works fine.
+- I did remove the extra ^M (LF) character, both with emacs and with 
+  dos2unix; that did not help.
+
+Taking a closer look at the problematic CEL files, they have no sections 
+headed [MASKS], [OUTLIERS]; while "normal" CEL files seem to have these
+sections. So may I guess that the problem lies in here - read.celfile 
+expects these keywords in the CEL files, and when it doesn't find them, 
+it hangs. I guess that could be easily fixed.
+
+> In the fine tradition of the R mailing list, I should now make a snide
+> comment about you not giving us enough info, but I'll pass on that for
+> now.
+
+Right. I wasn't sure whether this would be an acceptable message to this 
+mailing list at all, since the troubling CEL files weren't written by 
+Affy software and one cannot expect the parser to cope with all sorts of 
+other stuff. So, my message came out in a sort of half-hearted manner...
+Anyway, being rather unsophisticated with Affy and CEL files, I just 
+didn't know what more to supply, short of attaching the whole CEL file :)
+
+Best regards
+Wolfgang
+
+-----------------------------------
+Dr. Wolfgang Huber
+http://www.dkfz.de/abt0840/whuber
+DKFZ 
+Dep. Molecular Genome Analysis 
+69120 Heidelberg 
+Germany
+
+From jgentry@jimmy.harvard.edu  Fri Jun 21 03:05:01 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Thu, 20 Jun 2002 22:05:01 -0400 (EDT)
+Subject: [BioC] New annotation data available
+Message-ID: <Pine.SOL.4.20.0206202203460.1432-100000@santiam.dfci.harvard.edu>
+
+Hello ...
+
+Thanks to the efforts of Jianhua, there is a bunch of new annotation data
+(some in the form of R packages, others as XML files) available on the
+bioconductor web site (linked on the left hand side under the 'Data'
+heading).
+
+-J
+
+
+From shitao@ucla.edu  Fri Jun 21 00:47:21 2002
+From: shitao@ucla.edu (Shi, Tao)
+Date: Thu, 20 Jun 2002 16:47:21 -0700 (PDT)
+Subject: [BioC] problems with tcltk library
+In-Reply-To: <200206201830.OAA20158@blaise.dfci.harvard.edu>
+Message-ID: <20020620234721.61320.qmail@web13404.mail.yahoo.com>
+
+--0-1956038225-1024616841=:58064
+Content-Type: text/plain; charset=us-ascii
+
+
+I just downloaded and installed the ActiveTcl 8.3.4.2.  But, it's still not working.  When I was trying to include library(tcltk), I got the same error message.
+> library(tcltk)
+Error in firstlib(which.lib.loc, package) : 
+        TCL_LIBRARY is not set
+Error in library(tcltk) : .First.lib failed
+
+
+...Tao
+
+
+ John Zhang wrote:
+>From: "Shi, Tao" 
+>To: bioconductor@stat.math.ethz.ch
+>MIME-Version: 1.0
+>Subject: [BioC] problems with tcltk library
+>X-BeenThere: bioconductor@stat.math.ethz.ch
+>X-Mailman-Version: 2.0.11
+>List-Help: 
+>List-Post: 
+>List-Subscribe: , 
+
+>List-Id: The Bioconductor Project Mailing List 
+>List-Unsubscribe: , 
+
+>List-Archive: 
+>Date: Thu, 20 Jun 2002 11:14:50 -0700 (PDT)
+>
+>
+>I just downloaded the bioconductor package, but when I was trying to run it, I 
+couldn't load the tcltk library. The error messages as shown below. I'm using 
+R 1.50 and running it in Windows XP professional.
+
+Do you have the tcl/tk library (not R tcltk) installed? If not, get one from 
+www.tcl.tk/software/tcltk, install it, and try again.
+
+>
+>Many thanks
+>
+>...Tao
+>
+> 
+>
+>> library(tcltk)
+>Error in firstlib(which.lib.loc, package) : 
+> TCL_LIBRARY is not set
+>Error in library(tcltk) : .First.lib failed
+>> ReadAffy(widget=T)
+>Loading required package: tcltk 
+>Error in firstlib(which.lib.loc, package) : 
+> TCL_LIBRARY is not set
+>Error in fileBrowser(textToShow = "Choose one CDF file", nSelect = 1, : 
+> tcl/tk library not available
+>
+>
+>
+>
+>---------------------------------
+>Do You Yahoo!?
+>Sign-up for Video Highlights of 2002 FIFA World Cup
+
+
+
+---------------------------------
+Do You Yahoo!?
+Sign-up for Video Highlights of 2002 FIFA World Cup
+--0-1956038225-1024616841=:58064
+Content-Type: text/html; charset=us-ascii
+
+<P>I just downloaded and installed the <STRONG>ActiveTcl 8.3.4.2.&nbsp; But, it's still not working.&nbsp; When I was trying to include library(tcltk), I got the same error message.</STRONG>
+<P><STRONG>&gt; library(tcltk)<BR>Error in firstlib(which.lib.loc, package) : <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TCL_LIBRARY is not set<BR>Error in library(tcltk) : .First.lib failed<BR></STRONG></P>
+<P><STRONG>...Tao<BR></P></STRONG>
+<P>&nbsp;<B><I>John Zhang <JZHANG@JIMMY.HARVARD.EDU></I></B>wrote:
+<BLOCKQUOTE style="PADDING-LEFT: 5px; MARGIN-LEFT: 5px; BORDER-LEFT: #1010ff 2px solid"><BR>&gt;From: "Shi, Tao" <SHIDAXIA@YAHOO.COM><BR>&gt;To: bioconductor@stat.math.ethz.ch<BR>&gt;MIME-Version: 1.0<BR>&gt;Subject: [BioC] problems with tcltk library<BR>&gt;X-BeenThere: bioconductor@stat.math.ethz.ch<BR>&gt;X-Mailman-Version: 2.0.11<BR>&gt;List-Help: <mailto:bioconductor-request@stat.math.ethz.ch?subject=help><BR>&gt;List-Post: <mailto:bioconductor@stat.math.ethz.ch><BR>&gt;List-Subscribe: <HTTP: bioconductor listinfo mailman www.stat.math.ethz.ch>, <BR><mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe><BR>&gt;List-Id: The Bioconductor Project Mailing List <BIOCONDUCTOR.STAT.MATH.ETHZ.CH><BR>&gt;List-Unsubscribe: <HTTP: bioconductor listinfo mailman www.stat.math.ethz.ch>, <BR><mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe><BR>&gt;List-Archive: <HTTP: bioconductor www.stat.math.ethz.ch pipermail /><BR>&gt;Date: Thu, 20 Jun 2002 11:14:50 -0700 (PDT)<BR>&gt;<BR>&gt;<BR>&gt;I just downloaded the bioconductor package, but when I was trying to run it, I <BR>couldn't load the tcltk library. The error messages as shown below. I'm using <BR>R 1.50 and running it in Windows XP professional.<BR><BR>Do you have the tcl/tk library (not R tcltk) installed? If not, get one from <BR>www.tcl.tk/software/tcltk, install it, and try again.<BR><BR>&gt;<BR>&gt;Many thanks<BR>&gt;<BR>&gt;...Tao<BR>&gt;<BR>&gt; <BR>&gt;<BR>&gt;&gt; library(tcltk)<BR>&gt;Error in firstlib(which.lib.loc, package) : <BR>&gt; TCL_LIBRARY is not set<BR>&gt;Error in library(tcltk) : .First.lib failed<BR>&gt;&gt; ReadAffy(widget=T)<BR>&gt;Loading required package: tcltk <BR>&gt;Error in firstlib(which.lib.loc, package) : <BR>&gt; TCL_LIBRARY is not set<BR>&gt;Error in fileBrowser(textToShow = "Choose one CDF file", nSelect = 1, : <BR>&gt; tcl/tk library not available<BR>&gt;<BR>&gt;<BR>&gt;<BR>&gt;<BR>&gt;---------------------------------<BR>&gt;Do You Yahoo!?<BR>&gt;Sign-up for Video Highlights of 2002 FIFA World Cup<BR></BLOCKQUOTE></mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe></mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe></mailto:bioconductor@stat.math.ethz.ch></mailto:bioconductor-request@stat.math.ethz.ch?subject=help><p><br><hr size=1><b>Do You Yahoo!?</b><br>
+<a href="http://rd.yahoo.com/welcome/*http://fifaworldcup.yahoo.com/fc/en/spl">Sign-up for Video Highlights</a> of 2002 FIFA World Cup
+--0-1956038225-1024616841=:58064--
+
+From jgentry@jimmy.harvard.edu  Fri Jun 21 05:00:02 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Fri, 21 Jun 2002 00:00:02 -0400 (EDT)
+Subject: [BioC] problems with tcltk library
+In-Reply-To: <20020620234721.61320.qmail@web13404.mail.yahoo.com>
+Message-ID: <Pine.SOL.4.20.0206202358520.1432-100000@santiam.dfci.harvard.edu>
+
+> I just downloaded and installed the ActiveTcl 8.3.4.2.  But, it's still not working.  When I was trying to include library(tcltk), I got the same error message.
+> > library(tcltk)
+> Error in firstlib(which.lib.loc, package) : 
+>         TCL_LIBRARY is not set
+> Error in library(tcltk) : .First.lib failed
+
+Just a guess, but something that might help - it looks like it wants an
+environment variable TCL_LIBRARY.  I have no idea how to set environment
+variables in Windows, but you might want to try setting one named
+TCL_LIBRARY and pointing it to where your TCL is installed.
+
+-J
+
+
+From bellis@hsph.harvard.edu  Fri Jun 21 05:09:56 2002
+From: bellis@hsph.harvard.edu (Byron Ellis)
+Date: Fri, 21 Jun 2002 00:09:56 -0400 (EDT)
+Subject: [BioC] problems with tcltk library
+In-Reply-To: <Pine.SOL.4.20.0206202358520.1432-100000@santiam.dfci.harvard.edu>
+Message-ID: <Pine.GSO.4.10.10206210007460.26410-100000@hsph.harvard.edu>
+
+This is USUALLY set by ActiveTcl...However, if you have Ruby installed
+this will be all screwed up (I found this out the hard way). You can set
+the environment variable youself in under Win2K/XP by going to the System
+control panel and selecting the Advanced tab. There should be a button
+labeled 'Environment Variables' where you can either set or modify
+TCL_LIBRARY to the appropriate path.
+
+Byron Ellis (bellis@hsph.harvard.edu)
+"Oook" - The Librarian
+
+Please finger bellis@hsph.harvard.edu for PGP keys
+
+On Fri, 21 Jun 2002, Jeff Gentry wrote:
+
+> > I just downloaded and installed the ActiveTcl 8.3.4.2.  But, it's still not working.  When I was trying to include library(tcltk), I got the same error message.
+> > > library(tcltk)
+> > Error in firstlib(which.lib.loc, package) : 
+> >         TCL_LIBRARY is not set
+> > Error in library(tcltk) : .First.lib failed
+> 
+> Just a guess, but something that might help - it looks like it wants an
+> environment variable TCL_LIBRARY.  I have no idea how to set environment
+> variables in Windows, but you might want to try setting one named
+> TCL_LIBRARY and pointing it to where your TCL is installed.
+> 
+> -J
+> 
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+> 
+
+
+From cas277@nyu.edu  Fri Jun 21 21:16:47 2002
+From: cas277@nyu.edu (Colin A. Smith)
+Date: Fri, 21 Jun 2002 13:16:47 -0700
+Subject: [BioC] annotate Data Sources
+Message-ID: <p05111706b93939ed6d33@[192.168.1.226]>
+
+(sending again now that I'm a member of the list)
+
+There appears to be a broken link in the "Sources Of Data" section of 
+the Bioconductor web page. The "Unigene Annotation For Affy Chips" 
+link doesn't work. The most obvious error is the lack of ".edu" at 
+the end of the domain name. However, inserting that doesn't restore 
+the link either.
+
+Also, how is it decided which chips annotation data is provided. I'm 
+working with the Affymetrix rat genome U34A chip. Annotation for that 
+chip would be very useful for my work.
+
+Thanks.
+
+-Colin
+-- 
+
+Colin Alexander Smith
+cas277@nyu.edu
+
+PGP Public Key:
+  http://certserver.pgp.com/pks/lookup?op=get&search=0xD604005F
+
+From jgentry@jimmy.harvard.edu  Mon Jun 24 02:59:03 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Sun, 23 Jun 2002 21:59:03 -0400 (EDT)
+Subject: [BioC] annotate Data Sources
+In-Reply-To: <p05111706b93939ed6d33@[192.168.1.226]>
+Message-ID: <Pine.SOL.4.20.0206232156440.10611-100000@santiam.dfci.harvard.edu>
+
+> There appears to be a broken link in the "Sources Of Data" section of 
+> the Bioconductor web page. The "Unigene Annotation For Affy Chips" 
+> link doesn't work. The most obvious error is the lack of ".edu" at 
+> the end of the domain name. However, inserting that doesn't restore 
+> the link either.
+
+Try it again - it seems to be working for me (and a google search on
+'UniGene' turned up the same URL).  Perhaps their site was down at the
+time?
+
+> Also, how is it decided which chips annotation data is provided. I'm 
+> working with the Affymetrix rat genome U34A chip. Annotation for that 
+> chip would be very useful for my work.
+
+In case they miss it (one just left town and one is just coming back), you
+should talk to Jianhua Zhang (jzhang@jimmy.harvard.edu) or Robert
+(rgentlem@jimmy.harvard.edu) about this.
+
+-J
+
+
+From barry.henderson@ribonomics.com  Mon Jun 24 14:53:54 2002
+From: barry.henderson@ribonomics.com (Barry Henderson)
+Date: Mon, 24 Jun 2002 09:53:54 -0400
+Subject: [BioC] Anyone Working with Imagene Data Files
+Message-ID: <713F9300673ED544AB9DC98F6220DAC70EB65C@excrtp01.windows.ribonomics.com>
+
+This is a multi-part message in MIME format.
+
+------_=_NextPart_001_01C21B86.94045FB2
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_002_01C21B86.94045FB2"
+
+
+------_=_NextPart_002_01C21B86.94045FB2
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Hi
+=20
+Is anyone working with Imagene data files?  Imagene creates 2 data
+files, one for each laser making the data input somewhat more
+complicated than for Spot or Genepix. =20
+=20
+Thanks
+=20
+Barry
+=20
+Barry S. Henderson, Ph.D.
+Senior Scientist
+Ribonomics, Inc.
+barry.henderson@ribonomics.com
+ =20
+=20
+  <http://www.ribonomics.com/>=20
+=20
+=20
+=20
+
+------_=_NextPart_002_01C21B86.94045FB2
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns=3D"http://www.w3.org/TR/REC-html40">
+
+<head>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii">
+
+
+<meta name=3DProgId content=3DWord.Document>
+<meta name=3DGenerator content=3D"Microsoft Word 10">
+<meta name=3DOriginator content=3D"Microsoft Word 10">
+<link rel=3DFile-List href=3D"cid:filelist.xml@01C21B65.0C93B9D0">
+<link rel=3DEdit-Time-Data href=3D"cid:editdata.mso@01C21B65.0C93B9D0">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:RelyOnVML/>
+  <o:AllowPNG/>
+  <o:DoNotRelyOnCSS/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:DocumentKind>DocumentEmail</w:DocumentKind>
+  <w:EnvelopeVis/>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	mso-style-noshow:yes;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:windowtext;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */=20
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+</head>
+
+<body lang=3DEN-US link=3Dblue vlink=3Dpurple =
+style=3D'tab-interval:.5in'>
+
+<div class=3DSection1>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>Hi<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>Is anyone working with Imagene data files?<span
+style=3D'mso-spacerun:yes'>&nbsp; </span>Imagene creates 2 data files, =
+one for each
+laser making the data input somewhat more complicated than for Spot or =
+Genepix.<span
+style=3D'mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>Thanks<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>Barry<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<table class=3DMsoNormalTable border=3D0 cellspacing=3D0 cellpadding=3D0 =
+align=3Dleft
+ width=3D"100%" =
+style=3D'width:100.0%;mso-cellspacing:0in;mso-table-lspace:2.25pt;
+ =
+mso-table-rspace:2.25pt;mso-table-anchor-vertical:paragraph;mso-table-anc=
+hor-horizontal:
+ column;mso-table-left:left;mso-padding-alt:0in 0in 0in 0in'>
+ <tr style=3D'mso-yfti-irow:0'>
+  <td style=3D'padding:0in 0in 0in 0in'>
+  <p class=3DMsoNormal =
+style=3D'mso-element:frame;mso-element-frame-hspace:2.25pt;
+  =
+mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element=
+-anchor-horizontal:
+  column;mso-height-rule:exactly'><strong><b><font size=3D3 =
+face=3D"Times New Roman"><span
+  style=3D'font-size:12.0pt;mso-no-proof:yes'>Barry S. Henderson, =
+Ph.D.</span></font></b></strong><font
+  size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;font-family:Arial;mso-no-proof:
+  yes'><br>
+  <i><span style=3D'font-style:italic'>Senior Scientist<br>
+  Ribonomics, Inc.<br>
+  <a =
+href=3D"mailto:barry.henderson@ribonomics.com">barry.henderson@ribonomics=
+.com</a></span></i></span></font><span
+  style=3D'mso-no-proof:yes'><br>
+  &nbsp; <font color=3Dblack><span =
+style=3D'color:black'><o:p></o:p></span></font></span></p>
+  </td>
+  <td style=3D'padding:0in 0in 0in 0in'>
+  <p class=3DMsoNormal =
+style=3D'mso-element:frame;mso-element-frame-hspace:2.25pt;
+  =
+mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element=
+-anchor-horizontal:
+  column;mso-height-rule:exactly'><font size=3D3 face=3D"Times New =
+Roman"><span
+  style=3D'font-size:12.0pt;mso-no-proof:yes'>&nbsp;<font =
+color=3Dblack><span
+  style=3D'color:black'><o:p></o:p></span></font></span></font></p>
+  </td>
+ </tr>
+ <tr style=3D'mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td style=3D'padding:0in 0in 0in 0in'>
+  <p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  =
+mso-element:frame;mso-element-frame-hspace:2.25pt;mso-element-wrap:around=
+;
+  =
+mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:colum=
+n;
+  mso-height-rule:exactly'><font size=3D3 face=3D"Times New Roman"><span
+  style=3D'font-size:12.0pt;mso-no-proof:yes'><a =
+href=3D"http://www.ribonomics.com/"><span
+  style=3D'text-decoration:none;text-underline:none'><img border=3D0 =
+width=3D500
+  height=3D78 id=3D"_x0000_i1025" =
+src=3D"cid:image001.gif@01C21B65.0C93B9D0"
+  alt=3D"Ribonomics: Innovative Functional =
+Genomics"></span></a><o:p></o:p></span></font></p>
+  <p class=3DMsoNormal =
+style=3D'mso-element:frame;mso-element-frame-hspace:2.25pt;
+  =
+mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element=
+-anchor-horizontal:
+  column;mso-height-rule:exactly'><font size=3D3 color=3Dblack
+  face=3D"Times New Roman"><span =
+style=3D'font-size:12.0pt;color:black;mso-no-proof:
+  yes'><o:p>&nbsp;</o:p></span></font></p>
+  </td>
+  <td style=3D'padding:0in 0in 0in 0in'>
+  <p class=3DMsoNormal =
+style=3D'mso-element:frame;mso-element-frame-hspace:2.25pt;
+  =
+mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element=
+-anchor-horizontal:
+  column;mso-height-rule:exactly'><font size=3D3 face=3D"Times New =
+Roman"><span
+  style=3D'font-size:12.0pt;mso-no-proof:yes'>&nbsp;<font =
+color=3Dblack><span
+  style=3D'color:black'><o:p></o:p></span></font></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
+style=3D'font-size:
+12.0pt'><o:p>&nbsp;</o:p></span></font></p>
+
+</div>
+
+</body>
+
+</html>
+=00
+------_=_NextPart_002_01C21B86.94045FB2--
+
+------_=_NextPart_001_01C21B86.94045FB2
+Content-Type: image/gif;
+	name="image001.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <image001.gif@01C21B65.0C93B9D0>
+Content-Description: image001.gif
+Content-Location: image001.gif
+
+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
+3nMgEV/xFn/xiRcQADs=
+
+------_=_NextPart_001_01C21B86.94045FB2--
+
+From jcm@maths.uq.edu.au  Mon Jun 24 15:45:03 2002
+From: jcm@maths.uq.edu.au (Jess Mar)
+Date: Tue, 25 Jun 2002 00:45:03 +1000
+Subject: [BioC] Anyone Working with Imagene Data Files
+In-Reply-To: <713F9300673ED544AB9DC98F6220DAC70EB65C@excrtp01.windows.ribonomics.com>
+Message-ID: <NCBBINOMKKMHAIKIJJODGEGOCGAA.jcm@maths.uq.edu.au>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0004_01C21BE1.8B580BF0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_0005_01C21BE1.8B580BF0"
+
+
+------=_NextPart_001_0005_01C21BE1.8B580BF0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Sure, what do you want to do with them?
+
+  -----Original Message-----
+  From: bioconductor-admin@stat.math.ethz.ch
+[mailto:bioconductor-admin@stat.math.ethz.ch]On Behalf Of Barry Henderson
+  Sent: Monday, 24 June 2002 11:54 PM
+  To: bioconductor@stat.math.ethz.ch
+  Subject: [BioC] Anyone Working with Imagene Data Files
+
+
+  Hi
+
+
+
+  Is anyone working with Imagene data files?  Imagene creates 2 data files,
+one for each laser making the data input somewhat more complicated than for
+Spot or Genepix.
+
+
+
+  Thanks
+
+
+
+  Barry
+
+
+
+        Barry S. Henderson, Ph.D.
+        Senior Scientist
+        Ribonomics, Inc.
+        barry.henderson@ribonomics.com
+
+
+
+
+
+
+
+
+
+
+
+------=_NextPart_001_0005_01C21BE1.8B580BF0
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns=3D"http://www.w3.org/TR/REC-html40" xmlns:v =3D=20
+"urn:schemas-microsoft-com:vml" xmlns:o =3D=20
+"urn:schemas-microsoft-com:office:office" xmlns:w =3D=20
+"urn:schemas-microsoft-com:office:word"><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dus-ascii">
+<META content=3DWord.Document name=3DProgId>
+<META content=3D"MSHTML 6.00.2716.2200" name=3DGENERATOR>
+<META content=3D"Microsoft Word 10" name=3DOriginator><LINK=20
+href=3D"cid:filelist.xml@01C21B65.0C93B9D0" rel=3DFile-List><LINK=20
+href=3D"cid:editdata.mso@01C21B65.0C93B9D0" rel=3DEdit-Time-Data><!--[if =
+!mso]>
+<STYLE>v\:* {
+	BEHAVIOR: url(#default#VML)
+}
+o\:* {
+	BEHAVIOR: url(#default#VML)
+}
+w\:* {
+	BEHAVIOR: url(#default#VML)
+}
+.shape {
+	BEHAVIOR: url(#default#VML)
+}
+</STYLE>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:RelyOnVML/>
+  <o:AllowPNG/>
+  <o:DoNotRelyOnCSS/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:DocumentKind>DocumentEmail</w:DocumentKind>
+  <w:EnvelopeVis/>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<STYLE>@page Section1 {size: 8.5in 11.0in; margin: 1.0in 1.25in 1.0in =
+1.25in; mso-header-margin: .5in; mso-footer-margin: .5in; =
+mso-paper-source: 0; }
+P.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; =
+mso-style-parent: ""; mso-pagination: widow-orphan; =
+mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; =
+mso-style-parent: ""; mso-pagination: widow-orphan; =
+mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; =
+mso-style-parent: ""; mso-pagination: widow-orphan; =
+mso-fareast-font-family: "Times New Roman"
+}
+A:link {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlink {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+A:visited {
+	COLOR: purple; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: purple; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.EmailStyle17 {
+	COLOR: windowtext; FONT-FAMILY: Arial; mso-style-type: =
+personal-compose; mso-style-noshow: yes; mso-ansi-font-size: 10.0pt; =
+mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Arial; =
+mso-hansi-font-family: Arial; mso-bidi-font-family: Arial
+}
+DIV.Section1 {
+	page: Section1
+}
+</STYLE>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */=20
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]--></HEAD>
+<BODY lang=3DEN-US style=3D"tab-interval: .5in" vLink=3Dpurple =
+link=3Dblue>
+<DIV><FONT face=3DArial color=3D#0000ff size=3D2><SPAN =
+class=3D516244314-24062002>Sure,=20
+what do you want to do with them?</SPAN></FONT></DIV>
+<DIV><FONT face=3DArial color=3D#0000ff size=3D2><SPAN=20
+class=3D516244314-24062002></SPAN></FONT>&nbsp;</DIV>
+<BLOCKQUOTE dir=3Dltr style=3D"MARGIN-RIGHT: 0px">
+  <DIV class=3DOutlookMessageHeader dir=3Dltr align=3Dleft><FONT =
+face=3DTahoma=20
+  size=3D2>-----Original Message-----<BR><B>From:</B>=20
+  bioconductor-admin@stat.math.ethz.ch=20
+  [mailto:bioconductor-admin@stat.math.ethz.ch]<B>On Behalf Of </B>Barry =
+
+  Henderson<BR><B>Sent:</B> Monday, 24 June 2002 11:54 PM<BR><B>To:</B>=20
+  bioconductor@stat.math.ethz.ch<BR><B>Subject:</B> [BioC] Anyone =
+Working with=20
+  Imagene Data Files<BR><BR></FONT></DIV>
+  <DIV class=3DSection1>
+  <P class=3DMsoNormal><FONT face=3DArial size=3D2><SPAN=20
+  style=3D"FONT-SIZE: 10pt; FONT-FAMILY: =
+Arial">Hi<o:p></o:p></SPAN></FONT></P>
+  <P class=3DMsoNormal><FONT face=3DArial size=3D2><SPAN=20
+  style=3D"FONT-SIZE: 10pt; FONT-FAMILY: =
+Arial"><o:p>&nbsp;</o:p></SPAN></FONT></P>
+  <P class=3DMsoNormal><FONT face=3DArial size=3D2><SPAN=20
+  style=3D"FONT-SIZE: 10pt; FONT-FAMILY: Arial">Is anyone working with =
+Imagene=20
+  data files?<SPAN style=3D"mso-spacerun: yes">&nbsp; </SPAN>Imagene =
+creates 2=20
+  data files, one for each laser making the data input somewhat more =
+complicated=20
+  than for Spot or Genepix.<SPAN style=3D"mso-spacerun: yes">&nbsp;=20
+  </SPAN><o:p></o:p></SPAN></FONT></P>
+  <P class=3DMsoNormal><FONT face=3DArial size=3D2><SPAN=20
+  style=3D"FONT-SIZE: 10pt; FONT-FAMILY: =
+Arial"><o:p>&nbsp;</o:p></SPAN></FONT></P>
+  <P class=3DMsoNormal><FONT face=3DArial size=3D2><SPAN=20
+  style=3D"FONT-SIZE: 10pt; FONT-FAMILY: =
+Arial">Thanks<o:p></o:p></SPAN></FONT></P>
+  <P class=3DMsoNormal><FONT face=3DArial size=3D2><SPAN=20
+  style=3D"FONT-SIZE: 10pt; FONT-FAMILY: =
+Arial"><o:p>&nbsp;</o:p></SPAN></FONT></P>
+  <P class=3DMsoNormal><FONT face=3DArial size=3D2><SPAN=20
+  style=3D"FONT-SIZE: 10pt; FONT-FAMILY: =
+Arial">Barry<o:p></o:p></SPAN></FONT></P>
+  <P class=3DMsoNormal><FONT face=3DArial size=3D2><SPAN=20
+  style=3D"FONT-SIZE: 10pt; FONT-FAMILY: =
+Arial"><o:p>&nbsp;</o:p></SPAN></FONT></P>
+  <TABLE class=3DMsoNormalTable=20
+  style=3D"WIDTH: 100%; mso-cellspacing: 0in; mso-table-lspace: 2.25pt; =
+mso-table-rspace: 2.25pt; mso-table-anchor-vertical: paragraph; =
+mso-table-anchor-horizontal: column; mso-table-left: left; =
+mso-padding-alt: 0in 0in 0in 0in"=20
+  cellSpacing=3D0 cellPadding=3D0 width=3D"100%" align=3Dleft =
+border=3D0>
+    <TBODY>
+    <TR style=3D"mso-yfti-irow: 0">
+      <TD=20
+      style=3D"PADDING-RIGHT: 0in; PADDING-LEFT: 0in; PADDING-BOTTOM: =
+0in; PADDING-TOP: 0in">
+        <P class=3DMsoNormal=20
+        style=3D"mso-element: frame; mso-element-frame-hspace: 2.25pt; =
+mso-element-wrap: around; mso-element-anchor-vertical: paragraph; =
+mso-element-anchor-horizontal: column; mso-height-rule: =
+exactly"><STRONG><B><FONT=20
+        face=3D"Times New Roman" size=3D3><SPAN=20
+        style=3D"FONT-SIZE: 12pt; mso-no-proof: yes">Barry S. Henderson, =
+
+        Ph.D.</SPAN></FONT></B></STRONG><FONT face=3DArial =
+size=3D2><SPAN=20
+        style=3D"FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-no-proof: =
+yes"><BR><I><SPAN=20
+        style=3D"FONT-STYLE: italic">Senior Scientist<BR>Ribonomics, =
+Inc.<BR><A=20
+        =
+href=3D"mailto:barry.henderson@ribonomics.com">barry.henderson@ribonomics=
+.com</A></SPAN></I></SPAN></FONT><SPAN=20
+        style=3D"mso-no-proof: yes"><BR>&nbsp; <FONT color=3Dblack><SPAN =
+
+        style=3D"COLOR: black"><o:p></o:p></SPAN></FONT></SPAN></P></TD>
+      <TD=20
+      style=3D"PADDING-RIGHT: 0in; PADDING-LEFT: 0in; PADDING-BOTTOM: =
+0in; PADDING-TOP: 0in">
+        <P class=3DMsoNormal=20
+        style=3D"mso-element: frame; mso-element-frame-hspace: 2.25pt; =
+mso-element-wrap: around; mso-element-anchor-vertical: paragraph; =
+mso-element-anchor-horizontal: column; mso-height-rule: exactly"><FONT=20
+        face=3D"Times New Roman" size=3D3><SPAN=20
+        style=3D"FONT-SIZE: 12pt; mso-no-proof: yes">&nbsp;<FONT =
+color=3Dblack><SPAN=20
+        style=3D"COLOR: =
+black"><o:p></o:p></SPAN></FONT></SPAN></FONT></P></TD></TR>
+    <TR style=3D"mso-yfti-irow: 1; mso-yfti-lastrow: yes">
+      <TD=20
+      style=3D"PADDING-RIGHT: 0in; PADDING-LEFT: 0in; PADDING-BOTTOM: =
+0in; PADDING-TOP: 0in">
+        <P class=3DMsoNormal=20
+        style=3D"mso-element: frame; mso-element-frame-hspace: 2.25pt; =
+mso-element-wrap: around; mso-element-anchor-vertical: paragraph; =
+mso-element-anchor-horizontal: column; mso-height-rule: exactly; =
+mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT=20
+        face=3D"Times New Roman" size=3D3><SPAN=20
+        style=3D"FONT-SIZE: 12pt; mso-no-proof: yes"><A=20
+        href=3D"http://www.ribonomics.com/"><SPAN=20
+        style=3D"TEXT-DECORATION: none; text-underline: none"><IMG =
+id=3D_x0000_i1025=20
+        height=3D78 alt=3D"Ribonomics: Innovative Functional Genomics"=20
+        src=3D"cid:516244314@24062002-319d" width=3D500=20
+        border=3D0></SPAN></A><o:p></o:p></SPAN></FONT></P>
+        <P class=3DMsoNormal=20
+        style=3D"mso-element: frame; mso-element-frame-hspace: 2.25pt; =
+mso-element-wrap: around; mso-element-anchor-vertical: paragraph; =
+mso-element-anchor-horizontal: column; mso-height-rule: exactly"><FONT=20
+        face=3D"Times New Roman" color=3Dblack size=3D3><SPAN=20
+        style=3D"FONT-SIZE: 12pt; COLOR: black; mso-no-proof: =
+yes"><o:p>&nbsp;</o:p></SPAN></FONT></P></TD>
+      <TD=20
+      style=3D"PADDING-RIGHT: 0in; PADDING-LEFT: 0in; PADDING-BOTTOM: =
+0in; PADDING-TOP: 0in">
+        <P class=3DMsoNormal=20
+        style=3D"mso-element: frame; mso-element-frame-hspace: 2.25pt; =
+mso-element-wrap: around; mso-element-anchor-vertical: paragraph; =
+mso-element-anchor-horizontal: column; mso-height-rule: exactly"><FONT=20
+        face=3D"Times New Roman" size=3D3><SPAN=20
+        style=3D"FONT-SIZE: 12pt; mso-no-proof: yes">&nbsp;<FONT =
+color=3Dblack><SPAN=20
+        style=3D"COLOR: =
+black"><o:p></o:p></SPAN></FONT></SPAN></FONT></P></TD></TR></TBODY></TAB=
+LE>
+  <P class=3DMsoNormal><FONT face=3D"Times New Roman" size=3D3><SPAN=20
+  style=3D"FONT-SIZE: =
+12pt"><o:p>&nbsp;</o:p></SPAN></FONT></P></DIV></BLOCKQUOTE></BODY></HTML=
+>
+
+------=_NextPart_001_0005_01C21BE1.8B580BF0--
+
+------=_NextPart_000_0004_01C21BE1.8B580BF0
+Content-Type: image/gif;
+	name="image001.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <516244314@24062002-319d>
+
+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
+3nMgEV/xFn/xiRcQADs=
+
+------=_NextPart_000_0004_01C21BE1.8B580BF0--
+
+
+
+From barry.henderson@ribonomics.com  Tue Jun 25 14:21:09 2002
+From: barry.henderson@ribonomics.com (Barry Henderson)
+Date: Tue, 25 Jun 2002 09:21:09 -0400
+Subject: [BioC] Anyone Working with Imagene Data Files
+Message-ID: <713F9300673ED544AB9DC98F6220DAC70EB65D@excrtp01.windows.ribonomics.com>
+
+This is a multi-part message in MIME format.
+
+------_=_NextPart_001_01C21C4B.2B4CC061
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_002_01C21C4B.2B4CC061"
+
+
+------_=_NextPart_002_01C21C4B.2B4CC061
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+I was hoping for a method for importing into BioConductor akin to how
+marrayInput deals with GenPix and Spot data.  From there I hope to
+explore the general functionality of BioConductor for normalization and
+ID of differentially expressed genes.
+=20
+Barry
+=20
+-----Original Message-----
+From: Jess Mar [mailto:jcm@maths.uq.edu.au]=20
+Sent: Monday, June 24, 2002 10:45 AM
+To: Barry Henderson
+Cc: bioconductor@stat.math.ethz.ch
+Subject: RE: [BioC] Anyone Working with Imagene Data Files
+=20
+Sure, what do you want to do with them?
+=20
+	-----Original Message-----
+	From: bioconductor-admin@stat.math.ethz.ch
+[mailto:bioconductor-admin@stat.math.ethz.ch]On Behalf Of Barry
+Henderson
+	Sent: Monday, 24 June 2002 11:54 PM
+	To: bioconductor@stat.math.ethz.ch
+	Subject: [BioC] Anyone Working with Imagene Data Files
+	Hi
+	=20
+	Is anyone working with Imagene data files?  Imagene creates 2
+data files, one for each laser making the data input somewhat more
+complicated than for Spot or Genepix. =20
+	=20
+	Thanks
+	=20
+	Barry
+	=20
+Barry S. Henderson, Ph.D.
+Senior Scientist
+Ribonomics, Inc.
+barry.henderson@ribonomics.com
+ =20
+=20
+  <http://www.ribonomics.com/>=20
+=20
+=20
+	=20
+
+------_=_NextPart_002_01C21C4B.2B4CC061
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:st1=3D"urn:schemas-microsoft-com:office:smarttags" =
+xmlns=3D"http://www.w3.org/TR/REC-html40">
+
+<head>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii">
+
+
+<meta name=3DProgId content=3DWord.Document>
+<meta name=3DGenerator content=3D"Microsoft Word 10">
+<meta name=3DOriginator content=3D"Microsoft Word 10">
+<link rel=3DFile-List href=3D"cid:filelist.xml@01C21C29.A3EE5E60">
+<link rel=3DEdit-Time-Data href=3D"cid:editdata.mso@01C21C29.A3EE5E60">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><o:SmartTagType
+ namespaceuri=3D"urn:schemas-microsoft-com:office:smarttags" =
+name=3D"time"/>
+<o:SmartTagType =
+namespaceuri=3D"urn:schemas-microsoft-com:office:smarttags"
+ name=3D"date"/>
+<!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:RelyOnVML/>
+  <o:AllowPNG/>
+  <o:DoNotRelyOnCSS/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:DocumentKind>DocumentEmail</w:DocumentKind>
+  <w:EnvelopeVis/>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if !mso]>
+<style>
+st1\:*{behavior:url(#default#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.EmailStyle17
+	{mso-style-type:personal;
+	mso-style-noshow:yes;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:windowtext;}
+span.EmailStyle19
+	{mso-style-type:personal-reply;
+	mso-style-noshow:yes;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:navy;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */=20
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+</head>
+
+<body lang=3DEN-US link=3Dblue vlink=3Dpurple =
+style=3D'tab-interval:.5in'>
+
+<div class=3DSection1>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dnavy face=3DArial><span =
+style=3D'font-size:
+10.0pt;font-family:Arial;color:navy'>I was hoping for a method for =
+importing
+into <span class=3DSpellE>BioConductor</span> akin to how <span =
+class=3DSpellE>marrayInput</span>
+deals with <span class=3DSpellE>GenPix</span> and Spot data. <span
+style=3D'mso-spacerun:yes'>&nbsp;</span>From there I hope to explore the =
+general
+functionality of <span class=3DSpellE>BioConductor</span> for =
+normalization and ID
+of differentially expressed genes.<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dnavy face=3DArial><span =
+style=3D'font-size:
+10.0pt;font-family:Arial;color:navy'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dnavy face=3DArial><span =
+style=3D'font-size:
+10.0pt;font-family:Arial;color:navy'>Barry<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dnavy face=3DArial><span =
+style=3D'font-size:
+10.0pt;font-family:Arial;color:navy'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 =
+face=3DTahoma><span
+style=3D'font-size:10.0pt;font-family:Tahoma'>-----Original =
+Message-----<br>
+<b><span style=3D'font-weight:bold'>From:</span></b> Jess Mar
+[mailto:jcm@maths.uq.edu.au] <br>
+<b><span style=3D'font-weight:bold'>Sent:</span></b> =
+</span></font><st1:date
+Month=3D"6" Day=3D"24" Year=3D"2002"><font size=3D2 face=3DTahoma><span =
+style=3D'font-size:
+ 10.0pt;font-family:Tahoma'>Monday, June 24, =
+2002</span></font></st1:date><font
+size=3D2 face=3DTahoma><span =
+style=3D'font-size:10.0pt;font-family:Tahoma'> </span></font><st1:time
+Hour=3D"10" Minute=3D"45"><font size=3D2 face=3DTahoma><span =
+style=3D'font-size:10.0pt;
+ font-family:Tahoma'>10:45 AM</span></font></st1:time><font size=3D2 =
+face=3DTahoma><span
+style=3D'font-size:10.0pt;font-family:Tahoma'><br>
+<b><span style=3D'font-weight:bold'>To:</span></b> Barry Henderson<br>
+<b><span style=3D'font-weight:bold'>Cc:</span></b> =
+bioconductor@stat.math.ethz.ch<br>
+<b><span style=3D'font-weight:bold'>Subject:</span></b> RE: [BioC] =
+Anyone Working
+with Imagene Data Files</span></font></p>
+
+<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D3 =
+face=3D"Times New Roman"><span
+style=3D'font-size:12.0pt'><o:p>&nbsp;</o:p></span></font></p>
+
+<div>
+
+<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 =
+color=3Dblue face=3DArial><span
+style=3D'font-size:10.0pt;font-family:Arial;color:blue'>Sure, what do =
+you want to
+do with them?</span></font><o:p></o:p></p>
+
+</div>
+
+<div>
+
+<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D3 =
+face=3D"Times New Roman"><span
+style=3D'font-size:12.0pt'>&nbsp;<o:p></o:p></span></font></p>
+
+</div>
+
+<blockquote =
+style=3D'margin-top:5.0pt;margin-right:0in;margin-bottom:5.0pt'>
+
+<p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:0in;margin-right:0in;margin-bottom:
+12.0pt;margin-left:.5in'><font size=3D2 face=3DTahoma><span =
+style=3D'font-size:10.0pt;
+font-family:Tahoma'>-----Original Message-----<br>
+<b><span style=3D'font-weight:bold'>From:</span></b>
+bioconductor-admin@stat.math.ethz.ch
+[mailto:bioconductor-admin@stat.math.ethz.ch]<b><span =
+style=3D'font-weight:bold'>On
+Behalf Of </span></b>Barry Henderson<br>
+<b><span style=3D'font-weight:bold'>Sent:</span></b> Monday, 24 June =
+2002 11:54
+PM<br>
+<b><span style=3D'font-weight:bold'>To:</span></b> =
+bioconductor@stat.math.ethz.ch<br>
+<b><span style=3D'font-weight:bold'>Subject:</span></b> [BioC] Anyone =
+Working
+with Imagene Data Files</span></font><o:p></o:p></p>
+
+<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 =
+face=3DArial><span
+style=3D'font-size:10.0pt;font-family:Arial'>Hi<o:p></o:p></span></font><=
+/p>
+
+<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 =
+face=3DArial><span
+style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></fo=
+nt></p>
+
+<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 =
+face=3DArial><span
+style=3D'font-size:10.0pt;font-family:Arial'>Is anyone working with =
+Imagene data
+files?<span style=3D'mso-spacerun:yes'>&nbsp; </span>Imagene creates 2 =
+data files, one
+for each laser making the data input somewhat more complicated than for =
+Spot or
+Genepix.<span style=3D'mso-spacerun:yes'>&nbsp; =
+</span><o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 =
+face=3DArial><span
+style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></fo=
+nt></p>
+
+<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 =
+face=3DArial><span
+style=3D'font-size:10.0pt;font-family:Arial'>Thanks<o:p></o:p></span></fo=
+nt></p>
+
+<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 =
+face=3DArial><span
+style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></fo=
+nt></p>
+
+<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 =
+face=3DArial><span
+style=3D'font-size:10.0pt;font-family:Arial'>Barry<o:p></o:p></span></fon=
+t></p>
+
+<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D2 =
+face=3DArial><span
+style=3D'font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></fo=
+nt></p>
+
+<table class=3DMsoNormalTable border=3D0 cellspacing=3D0 cellpadding=3D0 =
+align=3Dleft
+ width=3D"100%" =
+style=3D'width:100.0%;mso-cellspacing:0in;margin-left:.5in;
+ =
+mso-table-lspace:2.25pt;mso-table-rspace:2.25pt;mso-table-anchor-vertical=
+:
+ =
+paragraph;mso-table-anchor-horizontal:column;mso-table-left:left;mso-padd=
+ing-alt:
+ 0in 0in 0in 0in'>
+ <tr style=3D'mso-yfti-irow:0'>
+  <td style=3D'padding:0in 0in 0in 0in'>
+  <p class=3DMsoNormal =
+style=3D'mso-element:frame;mso-element-frame-hspace:2.25pt;
+  =
+mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element=
+-anchor-horizontal:
+  column;mso-height-rule:exactly'><strong><b><font size=3D3 =
+face=3D"Times New Roman"><span
+  style=3D'font-size:12.0pt;mso-no-proof:yes'>Barry S. Henderson, =
+Ph.D.</span></font></b></strong><font
+  size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;font-family:Arial;mso-no-proof:
+  yes'><br>
+  <i><span style=3D'font-style:italic'>Senior Scientist<br>
+  Ribonomics, Inc.<br>
+  <a =
+href=3D"mailto:barry.henderson@ribonomics.com">barry.henderson@ribonomics=
+.com</a></span></i></span></font><span
+  style=3D'mso-no-proof:yes'><br>
+  &nbsp; <font color=3Dblack><span =
+style=3D'color:black'><o:p></o:p></span></font></span></p>
+  </td>
+  <td style=3D'padding:0in 0in 0in 0in'>
+  <p class=3DMsoNormal =
+style=3D'mso-element:frame;mso-element-frame-hspace:2.25pt;
+  =
+mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element=
+-anchor-horizontal:
+  column;mso-height-rule:exactly'><font size=3D3 face=3D"Times New =
+Roman"><span
+  style=3D'font-size:12.0pt;mso-no-proof:yes'>&nbsp;<font =
+color=3Dblack><span
+  style=3D'color:black'><o:p></o:p></span></font></span></font></p>
+  </td>
+ </tr>
+ <tr style=3D'mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td style=3D'padding:0in 0in 0in 0in'>
+  <p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  =
+mso-element:frame;mso-element-frame-hspace:2.25pt;mso-element-wrap:around=
+;
+  =
+mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:colum=
+n;
+  mso-height-rule:exactly'><font size=3D3 face=3D"Times New Roman"><span
+  style=3D'font-size:12.0pt;mso-no-proof:yes'><a =
+href=3D"http://www.ribonomics.com/"><span
+  style=3D'text-decoration:none;text-underline:none'><img border=3D0 =
+width=3D500
+  height=3D78 id=3D"_x0000_i1025" =
+src=3D"cid:image001.gif@01C21C29.A3EE5E60"
+  alt=3D"Ribonomics: Innovative Functional =
+Genomics"></span></a><o:p></o:p></span></font></p>
+  <p class=3DMsoNormal =
+style=3D'mso-element:frame;mso-element-frame-hspace:2.25pt;
+  =
+mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element=
+-anchor-horizontal:
+  column;mso-height-rule:exactly'><font size=3D3 color=3Dblack
+  face=3D"Times New Roman"><span =
+style=3D'font-size:12.0pt;color:black;mso-no-proof:
+  yes'><o:p>&nbsp;</o:p></span></font></p>
+  </td>
+  <td style=3D'padding:0in 0in 0in 0in'>
+  <p class=3DMsoNormal =
+style=3D'mso-element:frame;mso-element-frame-hspace:2.25pt;
+  =
+mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element=
+-anchor-horizontal:
+  column;mso-height-rule:exactly'><font size=3D3 face=3D"Times New =
+Roman"><span
+  style=3D'font-size:12.0pt;mso-no-proof:yes'>&nbsp;<font =
+color=3Dblack><span
+  style=3D'color:black'><o:p></o:p></span></font></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=3DMsoNormal style=3D'margin-left:.5in'><font size=3D3 =
+face=3D"Times New Roman"><span
+style=3D'font-size:12.0pt'><o:p>&nbsp;</o:p></span></font></p>
+
+</blockquote>
+
+</div>
+
+</body>
+
+</html>
+=00
+------_=_NextPart_002_01C21C4B.2B4CC061--
+
+------_=_NextPart_001_01C21C4B.2B4CC061
+Content-Type: image/gif;
+	name="image001.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <image001.gif@01C21C29.A3EE5E60>
+Content-Description: image001.gif
+Content-Location: image001.gif
+
+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
+3nMgEV/xFn/xiRcQADs=
+
+------_=_NextPart_001_01C21C4B.2B4CC061--
+
+From jzx2002@med.cornell.edu  Tue Jun 25 22:00:26 2002
+From: jzx2002@med.cornell.edu (Jenny Z. Xiang)
+Date: Tue, 25 Jun 2002 17:00:26 -0400
+Subject: [BioC] Manual for affy package
+Message-ID: <5.1.0.14.2.20020625165619.00a58e20@127.0.0.1>
+
+Dear Bioconductor,
+I have downloaded affy package from your website, I couldn't find the 
+manual in this package. I will appreciate if you can tell me where is the 
+user guide.
+Thanks in advance.
+
+Jenny
+
+
+
+
+
+
+From jgentry@jimmy.harvard.edu  Tue Jun 25 21:29:30 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Tue, 25 Jun 2002 16:29:30 -0400 (EDT)
+Subject: [BioC] Manual for affy package
+In-Reply-To: <5.1.0.14.2.20020625165619.00a58e20@127.0.0.1>
+Message-ID: <Pine.SOL.4.20.0206251628190.16361-100000@santiam.dfci.harvard.edu>
+
+> I have downloaded affy package from your website, I couldn't find the 
+> manual in this package. I will appreciate if you can tell me where is the 
+> user guide.
+> Thanks in advance.
+
+Look in affy/doc/ where your R libraries are stored.  Specifically
+affy.pdf and loadData.pdf.
+
+In the not too distant future, these documentation files will be
+accessible directly on the webpage.
+
+-J
+
+
+From barry.henderson@ribonomics.com  Wed Jun 26 18:03:48 2002
+From: barry.henderson@ribonomics.com (Barry Henderson)
+Date: Wed, 26 Jun 2002 13:03:48 -0400
+Subject: [BioC] Normalization on subsets
+Message-ID: <713F9300673ED544AB9DC98F6220DAC7F945@excrtp01.windows.ribonomics.com>
+
+This is a multi-part message in MIME format.
+
+------_=_NextPart_001_01C21D33.7018BAF3
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+How does one go about normalizing on a subset of data points as opposed
+to global normalization within BioConductor?  I have noted the subset
+parameter for maNorm but I am not sure how to address a subset range. =20
+=20
+Thanks
+=20
+Barry
+
+------_=_NextPart_001_01C21D33.7018BAF3
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns=3D"http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dus-ascii">
+<meta name=3DProgId content=3DWord.Document>
+<meta name=3DGenerator content=3D"Microsoft Word 10">
+<meta name=3DOriginator content=3D"Microsoft Word 10">
+<link rel=3DFile-List href=3D"cid:filelist.xml@01C21D11.E8D8D850">
+<!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:RelyOnVML/>
+  <o:AllowPNG/>
+  <o:DoNotRelyOnCSS/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:DocumentKind>DocumentEmail</w:DocumentKind>
+  <w:EnvelopeVis/>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.EmailStyle17
+	{mso-style-type:personal;
+	mso-style-noshow:yes;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:windowtext;}
+span.EmailStyle19
+	{mso-style-type:personal-reply;
+	mso-style-noshow:yes;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:navy;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */=20
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+</head>
+
+<body lang=3DEN-US link=3Dblue vlink=3Dpurple =
+style=3D'tab-interval:.5in'>
+
+<div class=3DSection1>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dnavy face=3D"Times New =
+Roman"><span
+style=3D'font-size:12.0pt;mso-bidi-font-size:10.0pt;color:navy'>How does =
+one go
+about normalizing on a subset of data points as opposed to global =
+normalization
+within <span class=3DSpellE>BioConductor</span>?<span
+style=3D'mso-spacerun:yes'>&nbsp; </span>I have noted the subset =
+parameter for <span
+class=3DSpellE>maNorm</span> but I am not sure how to address a subset
+range.<span style=3D'mso-spacerun:yes'>&nbsp; =
+</span><o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dnavy face=3DArial><span =
+style=3D'font-size:
+10.0pt;font-family:Arial;color:navy'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dnavy face=3DArial><span =
+style=3D'font-size:
+10.0pt;font-family:Arial;color:navy'>Thanks<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dnavy face=3DArial><span =
+style=3D'font-size:
+10.0pt;font-family:Arial;color:navy'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dnavy face=3DArial><span =
+style=3D'font-size:
+10.0pt;font-family:Arial;color:navy'>Barry<o:p></o:p></span></font></p>
+
+</div>
+
+</body>
+
+</html>
+=00
+------_=_NextPart_001_01C21D33.7018BAF3--
+
+From jgentry@jimmy.harvard.edu  Wed Jun 26 22:02:41 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Wed, 26 Jun 2002 17:02:41 -0400 (EDT)
+Subject: [BioC] Manual for affy package
+In-Reply-To: <20020626174149.17187.qmail@web13405.mail.yahoo.com>
+Message-ID: <Pine.SOL.4.20.0206261702070.19676-100000@santiam.dfci.harvard.edu>
+
+
+On Wed, 26 Jun 2002, Shi, Tao wrote:
+> I can't never open those manuals or if I open it there is nothing
+> inside (for loadData.pdf).  Could somebody just post these pdf files on
+
+What system are you using, Windows?
+
+When did you download your packages? 
+
+Is this just for affy, or any package?
+
+-J
+
+
+From jgentry@jimmy.harvard.edu  Wed Jun 26 22:30:46 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Wed, 26 Jun 2002 17:30:46 -0400 (EDT)
+Subject: [BioC] Manual for affy package
+In-Reply-To: <20020626212548.85628.qmail@web13401.mail.yahoo.com>
+Message-ID: <Pine.SOL.4.20.0206261729560.19676-100000@santiam.dfci.harvard.edu>
+
+
+> I'm using Windows XP and have installed the all the packages.  
+
+But when did you download them?  There were some problems with the binary
+files included with Windows packages up until recently.  The problem might
+be solvable just by getting a fresh set of packages.
+
+-J
+
+
+From shitao@ucla.edu  Wed Jun 26 18:34:46 2002
+From: shitao@ucla.edu (Tao Shi)
+Date: Wed, 26 Jun 2002 10:34:46 -0700
+Subject: [BioC] Manual for affy package
+Message-ID: <000001c21d65$99fd4550$b3a38e95@HG4545TAO>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0005_01C21CFD.174B2720
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+I can't never open those manuals or if I open it there is nothing inside =
+(for loadData.pdf).  Could somebody just post these pdf files on the web =
+before the web-based manual is created.  Thanks,
+
+...Tao
+
+------=_NextPart_000_0005_01C21CFD.174B2720
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2716.2200" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>I can't never open those manuals or if =
+I open it=20
+there is nothing inside (for loadData.pdf).&nbsp; Could somebody just =
+post these=20
+pdf files on the web before the web-based manual is created.&nbsp;=20
+Thanks,</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>...Tao</FONT></DIV></BODY></HTML>
+
+------=_NextPart_000_0005_01C21CFD.174B2720--
+
+
+From jzx2002@med.cornell.edu  Thu Jun 27 16:22:57 2002
+From: jzx2002@med.cornell.edu (Jenny Z. Xiang)
+Date: Thu, 27 Jun 2002 11:22:57 -0400
+Subject: [BioC] Warning message
+Message-ID: <5.1.0.14.2.20020627111528.00a68780@127.0.0.1>
+
+Dear List,
+I have downloaded affy, and I did unzip affy into R / library, then I 
+entered the following code and I got the warning message. Would you please 
+help me with the problem? thanks.      -Jenny
+
+ > library(affy)
+Warning message:
+Package  `affy' contains no R code in: library(affy)
+
+
+
+
+
+
+From jgentry@jimmy.harvard.edu  Thu Jun 27 15:34:21 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Thu, 27 Jun 2002 10:34:21 -0400 (EDT)
+Subject: [BioC] Warning message
+In-Reply-To: <5.1.0.14.2.20020627111528.00a68780@127.0.0.1>
+Message-ID: <Pine.SOL.4.20.0206271033550.22830-100000@santiam.dfci.harvard.edu>
+
+> I have downloaded affy, and I did unzip affy into R / library, then I 
+> entered the following code and I got the warning message. Would you please 
+> help me with the problem? thanks.      -Jenny
+
+Did you download this today?  There was a new version of the affy package
+on the website as of this morning.
+
+-J
+
+
+From shitao@ucla.edu  Thu Jun 27 18:24:48 2002
+From: shitao@ucla.edu (Tao Shi)
+Date: Thu, 27 Jun 2002 10:24:48 -0700
+Subject: [BioC] problems with tcltk library
+Message-ID: <000801c21dff$8a4e52d0$b3a38e95@HG4545TAO>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0005_01C21DC4.DD3E2C30
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hi, Byron:
+
+Thank you for pointing this out for me!
+
+I have checked the Enviroment Variables on my computer following your =
+instruction and I found there is one variable called "Path" and its =
+value is "C:\Tcl\bin;C:\Program Files\Microsoft Visual =
+Studio\Common\Tools;C:\Program Files\Microsoft Visual =
+Studio\Common\Msdev98\BIN;C:\Program Files\Microsoft Visual =
+Studio\DF98\BIN;C:\Prog........... ".    I cheked the first one =
+"C:\Tcl\bin;" is the correct path for TCL.  So, should I set another =
+variable called "TCL_LIBRARY" pointing to the same path?  I'm kind of =
+reluctant to change the default system setting..........
+
+...Tao
+
+
+
+This is USUALLY set by ActiveTcl...However, if you have Ruby installed
+this will be all screwed up (I found this out the hard way). You can set
+the environment variable youself in under Win2K/XP by going to the =
+System
+control panel and selecting the Advanced tab. There should be a button
+labeled 'Environment Variables' where you can either set or modify
+TCL_LIBRARY to the appropriate path.
+
+Byron Ellis (bellis@hsph.harvard.edu)
+"Oook" - The Librarian
+
+Please finger bellis@hsph.harvard.edu for PGP keys
+
+On Fri, 21 Jun 2002, Jeff Gentry wrote:
+
+> > I just downloaded and installed the ActiveTcl 8.3.4.2.  But, it's =
+still not working.  When I was trying to include library(tcltk), I got =
+the same error message.
+> > > library(tcltk)
+> > Error in firstlib(which.lib.loc, package) :=20
+> >         TCL_LIBRARY is not set
+> > Error in library(tcltk) : .First.lib failed
+>=20
+> Just a guess, but something that might help - it looks like it wants =
+an
+> environment variable TCL_LIBRARY.  I have no idea how to set =
+environment
+> variables in Windows, but you might want to try setting one named
+> TCL_LIBRARY and pointing it to where your TCL is installed.
+>=20
+> -J
+>=20
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+>=20
+
+
+------=_NextPart_000_0005_01C21DC4.DD3E2C30
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2716.2200" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial>Hi, Byron:</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Thank you for pointing this out for=20
+me!</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>I have checked the Enviroment Variables =
+on my=20
+computer following your instruction and I found there is one variable =
+called=20
+"Path" and its value is "C:\Tcl\bin;C:\Program Files\Microsoft Visual=20
+Studio\Common\Tools;C:\Program Files\Microsoft Visual=20
+Studio\Common\Msdev98\BIN;C:\Program Files\Microsoft Visual=20
+Studio\DF98\BIN;C:\Prog........... ".&nbsp;&nbsp;&nbsp; =
+I&nbsp;cheked&nbsp;the=20
+first one "C:\Tcl\bin;" is the correct path&nbsp;for TCL.&nbsp; =
+So,&nbsp;should=20
+I set another variable&nbsp;called "TCL_LIBRARY" pointing to the same=20
+path?&nbsp; I'm kind of reluctant to change the default system=20
+setting..........</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>...Tao</FONT></DIV>
+<DIV><FONT face=3DArial></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial>This is USUALLY set by ActiveTcl...However, if =
+you have=20
+Ruby installed<BR>this will be all screwed up (I found this out the hard =
+way).=20
+You can set<BR>the environment variable youself in under Win2K/XP by =
+going to=20
+the System<BR>control panel and selecting the Advanced tab. There should =
+be a=20
+button<BR>labeled 'Environment Variables' where you can either set or=20
+modify<BR>TCL_LIBRARY to the appropriate path.<BR><BR>Byron Ellis (<A=20
+href=3D"mailto:bellis@hsph.harvard.edu">bellis@hsph.harvard.edu</A>)<BR>"=
+Oook" -=20
+The Librarian<BR><BR>Please finger <A=20
+href=3D"mailto:bellis@hsph.harvard.edu">bellis@hsph.harvard.edu</A> for =
+PGP=20
+keys<BR><BR>On Fri, 21 Jun 2002, Jeff Gentry wrote:<BR><BR>&gt;<I> &gt; =
+I just=20
+downloaded and installed the ActiveTcl 8.3.4.2.&nbsp; But, it's still =
+not=20
+working.&nbsp; When I was trying to include library(tcltk), I got the =
+same error=20
+message.<BR></I>&gt;<I> &gt; &gt; library(tcltk)<BR></I>&gt;<I> &gt; =
+Error in=20
+firstlib(which.lib.loc, package) : <BR></I>&gt;<I>=20
+&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TCL_LIBRARY is not=20
+set<BR></I>&gt;<I> &gt; Error in library(tcltk) : .First.lib=20
+failed<BR></I>&gt;<I> <BR></I>&gt;<I> Just a guess, but something that =
+might=20
+help - it looks like it wants an<BR></I>&gt;<I> environment variable=20
+TCL_LIBRARY.&nbsp; I have no idea how to set environment<BR></I>&gt;<I>=20
+variables in Windows, but you might want to try setting one =
+named<BR></I>&gt;<I>=20
+TCL_LIBRARY and pointing it to where your TCL is =
+installed.<BR></I>&gt;<I>=20
+<BR></I>&gt;<I> -J<BR></I>&gt;<I> <BR></I>&gt;<I>=20
+_______________________________________________<BR></I>&gt;<I> =
+Bioconductor=20
+mailing list<BR></I>&gt;<I> <A=20
+href=3D"mailto:Bioconductor@stat.math.ethz.ch">Bioconductor@stat.math.eth=
+z.ch</A><BR></I>&gt;<I>=20
+<A=20
+href=3D"http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor">http:=
+//www.stat.math.ethz.ch/mailman/listinfo/bioconductor</A><BR></I>&gt;<I> =
+
+<BR></DIV></I></FONT></BODY></HTML>
+
+------=_NextPart_000_0005_01C21DC4.DD3E2C30--
+
+
+From jgentry@jimmy.harvard.edu  Fri Jun 28 06:01:02 2002
+From: jgentry@jimmy.harvard.edu (Jeff Gentry)
+Date: Fri, 28 Jun 2002 01:01:02 -0400 (EDT)
+Subject: [BioC] Affy Package
+Message-ID: <Pine.SOL.4.20.0206280058090.24378-100000@santiam.dfci.harvard.edu>
+
+For those of you using the affy package and experiencing difficulties
+with the windows version, Rafael has provided a new zip file with the
+latest bug fixes.  It is available on the website under the released
+packages section
+(http://www.bioconductor.org/packages/release/distrib/Win32/affy.zip).  If
+you've been using the Windows version, you should probably update with
+this version.
+
+-Jeff
+
+
+From isaac.neuhaus@bms.com  Fri Jun 28 14:56:09 2002
+From: isaac.neuhaus@bms.com (Isaac Neuhaus)
+Date: Fri, 28 Jun 2002 09:56:09 -0400
+Subject: [BioC] External expression data/ MAS5 Signal
+References: <Pine.LNX.4.33.0206131258410.2040-100000@localhost.localdomain>
+Message-ID: <3D1C6AF9.4072E100@bms.com>
+
+Affymetrix has fully described the MAS5.0 algorithm and they put it on the web.
+Here is the url:
+
+http://www.affymetrix.com/support/technical/whitepapers.affx
+
+Go to the bottom of the page and look for:
+
+Statistical Algorithms Description Document (pdf, 660 KB)
+
+Isaac
+
+"Rafael A. Irizarry" wrote:
+
+> > #1. how can I import the external expression value table to affy? If
+> > possible, in which format?
+> what do you mean by external expression value table? if its just a flat
+> file you can use read.table (an R command)
+>
+> > #2. I saw AvgDiff, AvgDiff2, rma, and li.wong in express. Is it possible to
+> > calculate the Signal value which is implemented to Microarray Suite version
+> > 5 in affy?
+> >
+> as far as i know the algorithm isnt public yet so we can't incorporate it.
+>
+> > Thank you very much for the helps in advance.
+> >
+> > SW
+> >
+>
+> _______________________________________________
+> Bioconductor mailing list
+> Bioconductor@stat.math.ethz.ch
+> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor
+
+
+From julien.sylvestre@wotan.ens.fr  Fri Jun 28 07:23:07 2002
+From: julien.sylvestre@wotan.ens.fr (julien.sylvestre@wotan.ens.fr)
+Date: Fri, 28 Jun 2002 08:23:07 +0200
+Subject: [BioC] affy cel + cdf files content
+Message-ID: <IC51IGV4WA5NKJFIE7521C03V76NKHF.3d1c00cb@lgmpc13>
+
+This message is not directly related to Bioconductor yet I hope it might be of general interest for users...
+
+The first line of an Affymetrix Yg_s98 yeast chip .cel file looks like this
+X	Y	MEAN	STDV	NPIXELS
+0	0	232	45	36
+I read about 100 pixels were used whereas it seems that no more than 36 are used here. 
+How is the svd calculated ?
+
+The first line of the corresponding .cdf file reads : 
+X	Y	PROBE	PLEN	ATOM	INDEX	MATCH	BG
+167	80	N	20	1	42887	0	0
+Can anyone tell me the meaning of the last 6 columns.
+
+Thanks in advance.
+
+JS.
+
+
+
+
+

@@ -1,0 +1,1527 @@
+{
+  "list": "bioconductor",
+  "description": "",
+  "month": "2002-05",
+  "messages": [
+    {
+      "id": "msg-fd2199a3f65d",
+      "message_id": "<877kmn855p.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-05-02T05:55:46Z",
+      "subject": "[BioC] Bioconductor 1.0",
+      "subject_clean": "[BioC] Bioconductor 1.0",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "The Bioconductor development team would like to announce the first release of\nBioconductor packages for the analysis of genomic data. Bioconductor is an \nopen source bioinformatics software project based on R.\n\nTOOLS:\n======\n\nThe released packages include tools which facilitate:\n1. annotation (AnnBuilder, annotate).\n2. data management and organization through the use of the S4 class\n   structure (Biobase, marrayClasses).   \n3. identification of differentially expressed genes and clustering \n   (edd, genefilter, geneplotter, multtest, ROC)\n4. analysis of Affymetrix expression array data (affy)\n5. diagnostic plots and normalization for cDNA array data (marrayInput,\n    marrayNorm, marrayPlots)\n6. storage and retrieval of large datasets (rhdf5).\n7. facilitate user interaction (tkWidgets)\n\nPACKAGES:\n=========\n\nBiobase       : Base functions for Bioconductor\nannotate      : Annotation for microarrays \nAnnBuilder    : Bioconductor annotation data builder\ngenefilter    : Genefilter: filter genes \ngeneplotter   : Geneplotter: plot microarray data\nedd           : expression density diagnostics\nROC           : ROC analysis for differential expression in expression\n\t\tarrays\naffy          : Methods for Affymetrix Oligonucleotide Arrays\nmarrayClasses : Classes and methods for cDNA microarray data\nmarrayInput   : Data input for cDNA microarrays \nmarrayNorm    : Location and scale normalization for cDNA microarray data\nmarrayPlots   : Diagnostic plots for cDNA microarray data\nmulttest      : Multiple hypothesis testing\nrhdf5         : An HDF5 interface for R\ntkWidgets     : Useful tools for building graphical input widgets\n\nThe packages and more details may be found on the Bioconductor WWW\nsite: \n\n      http://www.bioconductor.org/\n\nHELP AND RESOURCES:\n===================\n\nInformation on subscribing to the mailing list and viewing its archives\ncan be found at:\n\n      http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\nPlease use that list to discuss Bioconductor specific issues, bugs,\nand problems.  Note that every package has a vignette (a literate\nprogram which provides an annotated example of the package's use) as\nwell as possibly some \"HOWTO\"s.  These document the tool's usage, and\nare provided in the \"doc\" subdirectory of each package library.\n\n\nWHO:\n====\n\nFor the Bioconductor development team:\n\nDouglas Bates, University of Wisconsin, USA.\nVince Carey, Harvard Medical School, USA.\nMarcel Dettling, Federal Inst. Technology, Switzerland.\nSandrine Dudoit, UC Berkeley, USA.\nByron Ellis, Harvard Department of Statistics, USA.\nLaurent Gautier, Technial University of Denmark, Denmark.\nRobert Gentleman, Harvard Medical School, USA.\nJeff Gentry, Dana-Farber Cancer Institute, USA.\nKurt Hornik, Technische Universitat Wien, Austria.\nTorsten Hothorn, Institut fuer Medizininformatik, Biometrie und Epidemiologie, Germany.\nRafael Irizarry, Department of Biostatistics, Johns Hopkins University, USA.\nFriedrich Leisch, Technische Universitat Wien, Austria.\nCheng Li, Harvard Medical School, USA.\nMartin Maechler, Federal Inst. Technology, Switzerland.\nA.J. Rossini, Biostatistics, Univ. of Washington and Fred Hutchinson Cancer Research Center, USA.\nGunther Sawitzki, Institute fur Angewandte Mathematik, Germany.\nLuke Tierney, University of Minnesota, USA.\nJean Yee Hwa Yang, UC Berkeley, USA.\nJianhua (John) Zhang, Dana-Farber Cancer Institute, USA.\n\n\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my friday location is usually completely unpredictable.)",
+      "body_snippet": "The Bioconductor development team would like to announce the first release of\nBioconductor packages for the analysis of genomic data. Bioconductor is an \nopen source bioinformatics software project ba",
+      "thread_id": "thread-fd2199a3f65d",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-2c9f0fd6e84f",
+      "message_id": "<20020502101754.GA17336@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "705d8edac5ac54e7a46a96bc0a17ff702f94febca76adcf0760433ab56a07f0d",
+      "date": "2002-05-02T10:17:54Z",
+      "subject": "[BioC] package affy, functions read.celfile and read.cdffile",
+      "subject_clean": "[BioC] package affy, functions read.celfile and read.cdffile",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi,\n\n\nThe functions read.celfile and read.cdffile in the package affy are\nreading Affymetrix '.CEL' and '.CDF' files respectively. \n\nTrying to load corrupted files (i.e. with lines missing, or with\naunt Annie's chocolate cake receipe inserted in the middle) will\npuzzle so much the parser that it will precipitate R in its fall\n(crash, segmentation fault). \n\nA more robust parser will come with the next version (and will be\nwithin few days in the 'development' version of the package).\n\n\nRegards,\n\n\n\nLaurent\n\n\n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tD-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "Hi,\n\n\nThe functions read.celfile and read.cdffile in the package affy are\nreading Affymetrix '.CEL' and '.CDF' files respectively. \n\nTrying to load corrupted files (i.e. with lines missing, or with\nau",
+      "thread_id": "thread-2c9f0fd6e84f",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-7d053455e552",
+      "message_id": "<001601c1f216$7a1e6860$15380cd8@toshibauser>",
+      "from_name": "Joshua Betcher",
+      "from_email_hash": "accece4a6dbd1352fadc2ef313f6af32c46b72d6d6fc3331724b618356a06fd5",
+      "date": "2002-05-02T20:18:07Z",
+      "subject": "[BioC] Biobase version 1.0 on windows XP...",
+      "subject_clean": "[BioC] Biobase version 1.0 on windows XP...",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_0013_01C1F1F4.F21B3C70\nContent-Type: text/plain;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: quoted-printable\n\nHello all, today I downloaded the lastest release of biobase for win32.  =\nI have R version 1.4.1.\n\nWhen I went to the window option to install the package from zip it =\ninstalled the file in the correct place. Then when I went to the window =\noption to load the package I recieved the following error:\n\nLoading required package: methods=20\nCreating a new generic function for \"[[<-\" on element=20\n2 of the search path=20\nMaking a generic for special function \"[[<-\"=20\nCreating a new generic function for \"[[\" on element 2=20\nof the search path=20\nMaking a generic for special function \"[[\"=20\nExpanding the signature to include omitted arguments=20\nin definition: j =3D \"missing\"=20\nCreating a new generic function for \"length\" on element=20\n2 of the search path=20\nMaking a generic for special function \"length\"=20\nCreating a new generic function for \"[\" on element 2=20\nof the search path=20\nMaking a generic for special function \"[\"=20\nError in conformMethod(signature, mnames, fnames) :=20\n        Method has formal arguments not in generic function: file, =\nappend, quote, sep, eol, na, dec, row.names, col.names, qmethod\nError in library(pkg, character.only =3D TRUE) :=20\n        .First.lib failed\n\nbecause of this error the package could never attach itself.  Does =\nanyone know what the problem could be and how to fix it?\n\nThanks\nJoshua Betcher\n\n\n------=_NextPart_000_0013_01C1F1F4.F21B3C70\nContent-Type: text/html;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: quoted-printable\n\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">\n<HTML><HEAD>\n<META http-equiv=3DContent-Type content=3D\"text/html; =\ncharset=3Diso-8859-1\">\n<META content=3D\"MSHTML 6.00.2715.400\" name=3DGENERATOR>\n<STYLE></STYLE>\n</HEAD>\n<BODY bgColor=3D#ffffff>\n<DIV><FONT face=3DArial size=3D2>Hello all, today I downloaded the =\nlastest release=20\nof biobase for win32.&nbsp; I have R version 1.4.1.</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>When I went to the window option to =\ninstall the=20\npackage from zip it installed the file in the correct place. Then when I =\nwent to=20\nthe window option to load the package I recieved the following=20\nerror:</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>Loading required package: methods =\n<BR>Creating a=20\nnew generic function for \"[[&lt;-\" on element <BR>2 of the search path=20\n<BR>Making a generic for special function \"[[&lt;-\" <BR>Creating a new =\ngeneric=20\nfunction for \"[[\" on element 2 <BR>of the search path <BR>Making a =\ngeneric for=20\nspecial function \"[[\" <BR>Expanding the signature to include omitted =\narguments=20\n<BR>in definition: j =3D \"missing\" <BR>Creating a new generic function =\nfor=20\n\"length\" on element <BR>2 of the search path <BR>Making a generic for =\nspecial=20\nfunction \"length\" <BR>Creating a new generic function for \"[\" on element =\n2=20\n<BR>of the search path <BR>Making a generic for special function \"[\" =\n<BR>Error=20\nin conformMethod(signature, mnames, fnames) :=20\n<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Method has formal =\narguments not=20\nin generic function: file, append, quote, sep, eol, na, dec, row.names,=20\ncol.names, qmethod<BR>Error in library(pkg, character.only =3D TRUE) :=20\n<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .First.lib=20\nfailed<BR></FONT></DIV>\n<DIV><FONT face=3DArial size=3D2>because of this error the package could =\nnever=20\nattach itself.&nbsp; Does anyone know what the problem could be and how =\nto fix=20\nit?</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>\n<DIV><FONT face=3DArial size=3D2>Thanks</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2>Joshua Betcher</FONT></DIV>\n<DIV><FONT face=3DArial size=3D2>&nbsp;</DIV></FONT></BODY></HTML>\n\n------=_NextPart_000_0013_01C1F1F4.F21B3C70--",
+      "body_snippet": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_0013_01C1F1F4.F21B3C70\nContent-Type: text/plain;\n\tcharset=\"iso-8859-1\"\nContent-Transfer-Encoding: quoted-printable\n\nHello all, today ",
+      "thread_id": "thread-7d053455e552",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-aefd4aa1908a",
+      "message_id": "<87adrifg8r.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-05-02T20:26:44Z",
+      "subject": "[BioC] Biobase version 1.0 on windows XP...",
+      "subject_clean": "[BioC] Biobase version 1.0 on windows XP...",
+      "in_reply_to": "<001601c1f216$7a1e6860$15380cd8@toshibauser>",
+      "references": [
+        "<001601c1f216$7a1e6860$15380cd8@toshibauser>"
+      ],
+      "body_plain": "You need to either install RSMethods (from www.omegahat.org) or\nupgrade to 1.5.  (I forgot to mention that affy will require 1.5).\n\nbest,\n-tony\n\n\n>>>>> \"joshua\" == Joshua Betcher <jb7gv@virginia.edu> writes:\n\n    joshua> Hello all, today I downloaded the lastest release of biobase for win32.Â  I have R version 1.4.1.\n\n    joshua> Â \n\n    joshua> When I went to the window option to install the package from zip it installed the file in the correct\n    joshua> place. Then when I went to the window option to load the package I recieved the following error:\n\n    joshua> Â \n\n    joshua> Loading required package: methods\n    joshua> Creating a new generic function for \"[[<-\" on element\n    joshua> 2 of the search path\n    joshua> Making a generic for special function \"[[<-\"\n    joshua> Creating a new generic function for \"[[\" on element 2\n    joshua> of the search path\n    joshua> Making a generic for special function \"[[\"\n    joshua> Expanding the signature to include omitted arguments\n    joshua> in definition: j = \"missing\"\n    joshua> Creating a new generic function for \"length\" on element\n    joshua> 2 of the search path\n    joshua> Making a generic for special function \"length\"\n    joshua> Creating a new generic function for \"[\" on element 2\n    joshua> of the search path\n    joshua> Making a generic for special function \"[\"\n    joshua> Error in conformMethod(signature, mnames, fnames) :\n    joshua> Â Â Â Â Â Â Â  Method has formal arguments not in generic function: file, append, quote, sep, eol, na, dec,\n    joshua> row.names, col.names, qmethod\n    joshua> Error in library(pkg, character.only = TRUE) :\n    joshua> Â Â Â Â Â Â Â  .First.lib failed\n\n\n    joshua> because of this error the package could never attach itself.Â  Does anyone know what the problem could be and\n    joshua> how to fix it?\n\n    joshua> Â \n\n    joshua> Thanks\n\n    joshua> Joshua Betcher\n\n    joshua> Â \n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my friday location is usually completely unpredictable.)",
+      "body_snippet": "You need to either install RSMethods (from www.omegahat.org) or\nupgrade to 1.5.  (I forgot to mention that affy will require 1.5).\n\nbest,\n-tony\n\n\n>>>>> \"joshua\" == Joshua Betcher <jb7gv@virginia.edu> ",
+      "thread_id": "thread-7d053455e552",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-f8ab04be8b2b",
+      "message_id": "<OJ1XA5NH53VQJFLHCSN3GCLFICIC9.3cd28f08@lgmpc13>",
+      "from_name": "julien.sylvestre@wotan.ens.fr",
+      "from_email_hash": "9627dad04996df01dfea3044e7bcf3d730a4ee09ec81dfe52fe64ee6f22b6f6d",
+      "date": "2002-05-03T13:22:16Z",
+      "subject": "[BioC] pb using affy // Anova with R",
+      "subject_clean": "[BioC] pb using affy // Anova with R",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "* I've been using the affy package for a few days, and found it very well made, and really useful. By the way, thanks to all of yours for  building a well documented and coherent software collection, which \nremains somewhat rare in the microarray domain, everyone tending to write it's own little program...\n\n* Yesterday, after switching to the 1.0 version (on Win2K / R1.5.0) , I experienced the following problem  while fitting  the  Li & Wong Model :\n//  liw2 = express(pl1, normalize = F, summary.stat = li.wong)\n// Background correcting\n// Preparing Data\n// Computing expression. This may take a while.\n// Error in data.matrix[, !phi.outliers] %*% phi[!phi.outliers] : \n//  non-conformable arguments\n\nWhat does this error mean ? \nI had no problem when applying the default summary.stat with affy 1.0 and the same plobe level object. \nI had no problem either with the former version, the same plob and Li.Wong .\n\nThank you in advance.\n\nJS,\n\n* PS. One minor thing maybe somebody can help me with :\nI have 12 yeast chips to analyse and the experimental design is quite well suited for ANOVA (1 factor A with 2 levels, 1 factor B with 3 levels, 2 reps C for each).\nI tried 'lm' and 'aov' on R but encountered serious memory problems despite setting memory.limit(size = 4000) and having 1GoRam plus a lot of free hard drive.\nI tried 'anovan' from Matlab Stat Toolbox, which of course resulted in a complete failure.\nIn fact I'm not necesserally interested in fitting a whole model, with thousands of gene effects, but just in calculating the average A, B , C , A*B , A*C , B*C   effects. I know it can be done with proc anova on \nSAS but if it were possible, would prefer to do the whole thing under R. Does anyone know any package or function I could use ?",
+      "body_snippet": "* I've been using the affy package for a few days, and found it very well made, and really useful. By the way, thanks to all of yours for  building a well documented and coherent software collection, ",
+      "thread_id": "thread-f8ab04be8b2b",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-a3eaac179e81",
+      "message_id": "<20020504140039.GA5613@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "705d8edac5ac54e7a46a96bc0a17ff702f94febca76adcf0760433ab56a07f0d",
+      "date": "2002-05-04T14:00:39Z",
+      "subject": "[julien.sylvestre@wotan.ens.fr: Re: [BioC] pb using affy // Anova with R]",
+      "subject_clean": "[julien.sylvestre@wotan.ens.fr: Re: [BioC] pb using affy // Anova with R]",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Forget to CC to the list (and could be relevant to others)\n\n\n\nL.\n\n\n\n03/05/2002 14:55:35, Laurent Gautier <laurent@genome.cbs.dtu.dk> a ?crit:\n\n>On Fri, May 03, 2002 at 03:22:16PM +0200, julien.sylvestre@wotan.ens.fr wrote:\n>> * I've been using the affy package for a few days, and found it very well made, and really useful. By the way, thanks to all of yours for  building a well documented and coherent software collection, which \n>> remains somewhat rare in the microarray domain, everyone tending to write it's own little program...\n>> \n>> * Yesterday, after switching to the 1.0 version (on Win2K / R1.5.0) , I experienced the following problem  while fitting  the  Li & Wong Model :\n>> //  liw2 = express(pl1, normalize = F, summary.stat = li.wong)\n>> // Background correcting\n>> // Preparing Data\n>> // Computing expression. This may take a while.\n>> // Error in data.matrix[, !phi.outliers] %*% phi[!phi.outliers] : \n>> //  non-conformable arguments\n>\n>\n>\n>In does not seem the code used/called by 'express' was modified recently. Could you specify with\n>which version it was working ?\n>\n>What gives 'traceback()' ? (type that right after you had the error) \n>\n>> \n>> What does this error mean ? \n>\n>that we have an... <embarassed cough>... undocumented feature... ;-)\n>\n>\n>> I had no problem when applying the default summary.stat with affy 1.0 and the same plobe level object. \n>> I had no problem either with the former version, the same plob and Li.Wong .\n>> \n>\n>Do you get the same when going through the Cel.container mecanism ?\n>\n>\n>\n>\n>\n>> Thank you in advance.\n>> \n>> JS,\n>> \n>> * PS. One minor thing maybe somebody can help me with :\n>> I have 12 yeast chips to analyse and the experimental design is quite well suited for ANOVA (1 factor A with 2 levels, 1 factor B with 3 levels, 2 reps C for each).\n>> I tried 'lm' and 'aov' on R but encountered serious memory problems despite setting memory.limit(size = 4000) and having 1GoRam plus a lot of free hard drive.\n>> I tried 'anovan' from Matlab Stat Toolbox, which of course resulted in a complete failure.\n>> In fact I'm not necesserally interested in fitting a whole model, with thousands of gene effects, but just in calculating the average A, B , C , A*B , A*C , B*C   effects. I know it can be done with proc anova on \n>> SAS but if it were possible, would prefer to do the whole thing under R. Does anyone know any package or function I could use ?\n>> \n>\n>?!\n>Could you give us more details about the way you proceed ?\n>(note: the code of the function 'Anova' in the package 'genefilter' could be helpful)\n>\n>\n>\n>\n>Cheers,\n>\n>\n>\n>Laurent\n>\n>\n>\n>\n>--------------------------------------------------------------\n>Laurent Gautier\t\t\tCBS, Building 208, DTU\n>PhD. Student\t\t\tD-2800 Lyngby,Denmark\t\n>tel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent\n>\n**************\n\n* Je n'ai pas essay? le 'Cel.container mecanism' ; ce qui me para?t ?trange c'est que cel? fonctionnait avant (version 0.8) et que ?a fonctionne avec d'autres m?thodes. \nPour information, j'obtiens ?a en tapant 'traceback()':\n6: fit.li.wong(t(data.matrix), remove.outliers, normal.array.quantile, \n       normal.resid.quantile, large.threshold, large.variation, \n       outlier.fraction, delta, maxit, outer.maxit, verbose)\n5: FUN(X[[3]], ...)\n4: lapply(as.list(X), FUN, ...)\n3: sapply(data.lst, summary.stat, ...)\n2: t(sapply(data.lst, summary.stat, ...))\n1: express(pl1, normalize = F, summary.stat = li.wong)\n\n* Je vais regarder genefilter, en fait je pensais que c'?tait tr?s orient? puces cDNA . Effectivement, l'id?al serait davoir une ANOVA g?ne par g?ne.",
+      "body_snippet": "Forget to CC to the list (and could be relevant to others)\n\n\n\nL.\n\n\n\n03/05/2002 14:55:35, Laurent Gautier <laurent@genome.cbs.dtu.dk> a ?crit:\n\n>On Fri, May 03, 2002 at 03:22:16PM +0200, julien.sylvest",
+      "thread_id": "thread-a3eaac179e81",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-6552b561984e",
+      "message_id": "<20020505092651.GC8430@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "705d8edac5ac54e7a46a96bc0a17ff702f94febca76adcf0760433ab56a07f0d",
+      "date": "2002-05-05T09:26:51Z",
+      "subject": "[BioC] follow-up about 'express' in affy / ANOVA question:wq",
+      "subject_clean": "[BioC] follow-up about 'express' in affy / ANOVA question:wq",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Oooops... the last part of the follow-up was in french (just realized it)..\n\nAs what is discussed could (still) be on general interest, I added a translation...\n\n\n> \n> * Je n'ai pas essay? le 'Cel.container mecanism' ; ce qui me para?t ?trange c'est que cel? fonctionnait avant (version 0.8) et que ?a fonctionne avec d'autres m?thodes. \n<Translation: I did not try with Cel.container. It looks strange since it was working in version 0.8 and that it functions with other methods...>\n\nIt could be caused by the nature of your data (Rafael could correct me/ add details about that... could the late addition about 'background correction' be involved ?).\n\nThe Cel.container mecanism is described in the vignette ('affy.pdf'). To use it,\nyou will have to call the step you want to use manually. In your example\n(note: you do not normalize. I assume you do that with good reasons):\n\nfilenames <- c(\"path/to/file1.CEL\", \"path/to/file2:CEL\",  <and so on>)\nlcel <- read.container.celfile(filenames=myfiles)\ncdf <- read.cdffile(\"path/to/my/cdf.file.CDF\")\neset <- generateExprSet(lcel, cdf, method=\"liwong\")\n\n\n\n> Pour information, j'obtiens ?a en tapant 'traceback()':\n> 6: fit.li.wong(t(data.matrix), remove.outliers, normal.array.quantile, \n>        normal.resid.quantile, large.threshold, large.variation, \n>        outlier.fraction, delta, maxit, outer.maxit, verbose)\n> 5: FUN(X[[3]], ...)\n> 4: lapply(as.list(X), FUN, ...)\n> 3: sapply(data.lst, summary.stat, ...)\n> 2: t(sapply(data.lst, summary.stat, ...))\n> 1: express(pl1, normalize = F, summary.stat = li.wong)\n<Translation: result of the traceback()>\n\n> \n> * Je vais regarder genefilter, en fait je pensais que c'?tait tr?s orient? puces cDNA . Effectivement, l'id?al serait davoir une ANOVA g?ne par g?ne. \n<Translation: I'll look at genefilter, I thought it was mainly meant for cDNA arrays. It would be nice to have one ANOVA per gene.>\n\n\ngenefilter is not exactly what you want, thought learning how it work\nwill help you to achieve your goal. The function 'filtertheniter' could\nalso prove informative. If you do not succeed, just ask, I can come up with an\n'out-of-the-box' working solution (sorry, busy today).\n\n\n\n\n\nHopin' it helps,\n\n\n\nLaurent\n\n\n\n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tD-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "Oooops... the last part of the follow-up was in french (just realized it)..\n\nAs what is discussed could (still) be on general interest, I added a translation...\n\n\n> \n> * Je n'ai pas essay? le 'Cel.con",
+      "thread_id": "thread-6552b561984e",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-2090a84c677e",
+      "message_id": "<4WFCRN06XRFCXW765ZUXW75QPXRXSC.3cd53218@lgmpc13>",
+      "from_name": "julien.sylvestre@wotan.ens.fr",
+      "from_email_hash": "9627dad04996df01dfea3044e7bcf3d730a4ee09ec81dfe52fe64ee6f22b6f6d",
+      "date": "2002-05-05T13:22:32Z",
+      "subject": "[BioC] (1) Anova for 12 Affy yeast chips (Yg98) // (2) Problem fitting Li&Wong model with Affy 1.0 :",
+      "subject_clean": "[BioC] (1) Anova for 12 Affy yeast chips (Yg98) // (2) Problem fitting Li&Wong model with Affy 1.0 :",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "(1) Anova for 12 Affy yeast chips (Yg98)\n\nI'm going to try to explain the problem in a better way. I have the following experimental design :\n\nFraction 1\nFraction 2  \t\tMedium A\nFraction 3 \t*\tMedium B\t\t*\t2 Reps\n\n- Fractions 1, 2 and 3 are three distinct subcellular mRNA populations ;\n- Medium A and B are two distinct culture medium ;\n- By Rep is meant a 'biological repetition'. That is cells harvested independantly from which the 3 Fractions are extracted. I have  two sets of three Fractions in Medium A and  two sets of three Fractions in\nMedium B.\nI am interested in finding - in a given medium - the distribution of each mRNA among the 3 Fractions.\n\nI thougth the data quite suited for ANOVA, at least as a first analytic step.\nThe model would explain the log expression value by the sum of  :\n- a constant term (maybe null actually)\n- a gene effect : approximately 6000 levels\n- a fraction effect : 3 levels\n- a medium effect : 2 levels\n- a rep effect : 2 levels for each medium\n- and possibly all two-order interactions.\n\nAs wrote before, I couldn't apply directly 'lm' or 'aov' in R due to memory problems (the matrix to inverse being too large). Nor  could I use Matlab Stat toolbox 'anovan' function which resulted in a disaster or\nthe 'MANOVA' free matlab toolbox which is clearly specialised in cDNA array data. I am to try SAS 'proc anova' soon which should at  least provide me average effects (that  I admit are not so interesting by\nthemselves). Before I calculate the whole thing myself, as a last solution, I wanted to make sure nobody had the idea of a  particular tool to use directly or adapt easily. I looked rapidly at the 'Anova' function\nin the Genefilter package but it seems to use lm and to be limited to a one-way analysis hence I didn't find how to take advantage  of it.\n\n(2) Problem fitting Li&Wong model with Affy 1.0 :\n\nI get almost the same problem wusing the cel.container mechanism (actually I didn't try it before because I thought I was to use a  command called read.cel.container which in fact does not seem to exist) :\n> myfiles = c(\"xxx1.cel\", \"xxx2.cel\",...)\n> lcel = read.container.celfile(filenames = myfiles\n> cdf = read.cdffile(\"Yg_s98.CDF\")\n> eset = generateExprSet(lcel, cdf, method = \"liwong\", normalize = F)\n> eset = generateExprSet(lcel, cdf, method = \"liwong\")\n\n\t9335 ids to go process...\n\tinstancianting an exprSet...\n\tError in data.matrix[, !phi.outliers] %*% phi[!phi.outliers] :\n       \t\t non-conformable arguments\n\n> traceback()\n\t4: which(cdf@name == i, arr.ind = TRUE)\n\t3: locate.name(ids[id], cdf, type = \"pm\")\n\t2: .local(x, cdf, method, ...)\n\t1: generateExprSet(lcel, cdf, method = \"liwong\")\n\nThank you.\n\nJS.",
+      "body_snippet": "(1) Anova for 12 Affy yeast chips (Yg98)\n\nI'm going to try to explain the problem in a better way. I have the following experimental design :\n\nFraction 1\nFraction 2  \t\tMedium A\nFraction 3 \t*\tMedium B\t",
+      "thread_id": "thread-2090a84c677e",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-dc95d0dddccf",
+      "message_id": "<20020506080208.GC11791@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "705d8edac5ac54e7a46a96bc0a17ff702f94febca76adcf0760433ab56a07f0d",
+      "date": "2002-05-06T08:02:08Z",
+      "subject": "[BioC] follow-up: How to \"merge\" cel.containers ?",
+      "subject_clean": "[BioC] follow-up: How to \"merge\" cel.containers ?",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "On Mon, May 06, 2002 at 10:28:41AM +0200, julien.sylvestre@wotan.ens.fr wrote:\n> OK. Thanks to your explanations and tips that really helped me.\n> \n> I still have a minor problem when working with cel containers, which I agree appear more flexible.\n> \n> How can i merge cel.containers (like 2 cel.containers, with each one containing 2 chips normalized in a pairwise fashion) ?\n> Is there a convenient function like 'union' for plobs that allows one to do that easily ?\n\n\nNo... (not yet ?)...\n\nI admit it can appear cumbersome for novice users.\n(try class?container and class?Cel.container).\n\nThe function below should do the job.\n\n\n\nunion.container.Cel <- function(...) {\n  n <- sum(unlist(lapply(list(...), length)))\n  union <- new(\"Cel.container\", x=vector(\"list\", length=n), content=\"Cel\", locked=FALSE)\n  offset <- 0\n  for (i in 1:length(list(...))) {\n    if (i>1)\n      offset <- offset + length(list(...)[[i-1]])\n    for (j in 1:length(list(...)[[i]]))\n      #show(list(...)[[i]])\n      union[[offset+j]] <- list(...)[[i]][[j]]    \n  }\n  return(union)\n}\n\n\nExample:\n\ndata(listcel)\nlistcel2 <- listcel\n\nu <- union.container.Cel(listcel, listcel2)\n\n\n\n\n\n\nHopin' it helps,\n\n\n\n\nLaurent\n\n\n\n\n\n\n\n> \n> Thanks.\n> \n> JS.\n> \n\n\n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tD-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "On Mon, May 06, 2002 at 10:28:41AM +0200, julien.sylvestre@wotan.ens.fr wrote:\n> OK. Thanks to your explanations and tips that really helped me.\n> \n> I still have a minor problem when working with cel",
+      "thread_id": "thread-dc95d0dddccf",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-d5829a59311e",
+      "message_id": "<20020506095415.GA12163@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "705d8edac5ac54e7a46a96bc0a17ff702f94febca76adcf0760433ab56a07f0d",
+      "date": "2002-05-06T09:54:15Z",
+      "subject": "[BioC] Re: follow-up: How to \"merge\" cel.containers ?",
+      "subject_clean": "[BioC] Re: follow-up: How to \"merge\" cel.containers ?",
+      "in_reply_to": "<MI14WOL2XJE86C7RMB91TJENMY4YBA.3cd65496@lgmpc13>",
+      "references": [
+        "<20020506080208.GC11791@giraffa.cbs.dtu.dk>",
+        "<MI14WOL2XJE86C7RMB91TJENMY4YBA.3cd65496@lgmpc13>"
+      ],
+      "body_plain": "On Mon, May 06, 2002 at 12:01:58PM +0200, julien.sylvestre@wotan.ens.fr wrote:\n> - The union.container.cel function works quite well\n> - Sorry but I still have a small problem and can't find info in your help pages or pdf doc : \n> It seems that generateExprSet has no default method and needs the user to specify one.\n\nYep... it has none.\n(and the 'generateExprSet.methods' described in the documentation needs a fix)\ncurrently they are:\n\"avgdiff\", \"playerout\", \"liwong\"\n\n\n> As previously told, liwong doesn't work for a matrix dimension incompatibility reason.\n\n\nYep... sorry but I did not have time to investigate it (especially since it seems data specific\nand I do not have your data (and you are probably not ready to give all of them away)).\n\nOtherwise, Rafael told me that Cheng Li advices to have at least 25 arrays to use the method.\n\n(I'll send you a snippet of code to run and identify more precisely where the problem comes from). \n\n\n> What is the name short name for R. Izarry et al. method ? I don't like avgdiff too much so I would like to use this one or LiWong's.\n\n\nUnlike for 'normalize' the two approaches (via Plob and via Cel.container) are not completely merged (yet)\nfor expression value computation from the probe level data.\nSlight difference remain between them. The next version of affy will offer a better integrated system for that.\n\nUsing the default set by Rafael for express consists in using the approach of background correction\nby Ben Bostad ( bg.adjust() ) to get a value for each probe from the pm and mm values, \nthen applying Li and Wong model fitting to it. By looking at how works bg.adjust() and\ngenerateExprVal.method.liwong() you can come up with the same through the Cel\n(I am missing time to write the code now).\n\n\n\nL.",
+      "body_snippet": "On Mon, May 06, 2002 at 12:01:58PM +0200, julien.sylvestre@wotan.ens.fr wrote:\n> - The union.container.cel function works quite well\n> - Sorry but I still have a small problem and can't find info in y",
+      "thread_id": "thread-d5829a59311e",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-82c76a4b1108",
+      "message_id": "<200205070238.TAA26188@mail.au.tsinghua.edu.cn>",
+      "from_name": "HYing",
+      "from_email_hash": "67ceaafeec0124136509d7df35c4e9d7e8a084b60db33af5f06b36cfc0ed2e25",
+      "date": "2002-05-06T11:07:45Z",
+      "subject": "[BioC] A question",
+      "subject_clean": "[BioC] A question",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "1.When I use fileBrowser() in tkWidgets package, It cannot move to the parent directory.\n2.When I want to attach the Dilution data using data(Dilution) command, it print out \n\"Error: restore file may be from a newer version of R -- no data loaded\"\nbut I have updated my R version to 1.5.0, the same is plob.example and SpikeIn data.\nbut I can load the listcel and CDF.example data, are there any differences between these data?",
+      "body_snippet": "1.When I use fileBrowser() in tkWidgets package, It cannot move to the parent directory.\n2.When I want to attach the Dilution data using data(Dilution) command, it print out \n\"Error: restore file may ",
+      "thread_id": "thread-82c76a4b1108",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-d3f87802883f",
+      "message_id": "<20020506114250.GC12163@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "705d8edac5ac54e7a46a96bc0a17ff702f94febca76adcf0760433ab56a07f0d",
+      "date": "2002-05-06T11:42:50Z",
+      "subject": "[BioC] A question",
+      "subject_clean": "[BioC] A question",
+      "in_reply_to": "<200205061224.IAA13485@blaise.dfci.harvard.edu>",
+      "references": [
+        "<200205061224.IAA13485@blaise.dfci.harvard.edu>"
+      ],
+      "body_plain": "On Mon, May 06, 2002 at 08:24:42AM -0400, John Zhang wrote:\n> \n> ------------- Begin Forwarded Message -------------\n> \n> From: HYing <hying99@mails.tsinghua.edu.cn>\n> To: \"bioconductor@stat.math.ethz.ch\" <bioconductor@stat.math.ethz.ch>\n> Mime-Version: 1.0\n> Content-Transfer-Encoding: 8bit\n> X-MIME-Autoconverted: from base64 to 8bit by stat.math.ethz.ch id NAA02291\n> Subject: [BioC] A question\n> X-BeenThere: bioconductor@stat.math.ethz.ch\n> X-Mailman-Version: 2.0.2\n> List-Help: <mailto:bioconductor-request@stat.math.ethz.ch?subject=help>\n> List-Post: <mailto:bioconductor@stat.math.ethz.ch>\n> List-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n> <mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe>\n> List-Id: The Bioconductor Project Mailing List <bioconductor.stat.math.ethz.ch>\n> List-Unsubscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n> <mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe>\n> List-Archive: <http://www.stat.math.ethz.ch/pipermail/bioconductor/>\n> Date: Mon, 6 May 2002 19:7:45 +0800\n> \n> >1.When I use fileBrowser() in tkWidgets package, It cannot move to the parent \n> >directory.\n> \n> Click the \"Up\" button below the list box entitled \"Files in directory\" will let \n> you go up one level along the parent diractory path. Double click a directory \n> name in the list box will let you go into that directory.\n> \n\n...but one cannot reach the 'root' (I remember observing that recently too)...\nThe button 'Up' becomes 'ghost' one node before the root...\n\n(In the meanwhile there is still the possibility to specify the root as a starting point (then it works))\n\n\nL.",
+      "body_snippet": "On Mon, May 06, 2002 at 08:24:42AM -0400, John Zhang wrote:\n> \n> ------------- Begin Forwarded Message -------------\n> \n> From: HYing <hying99@mails.tsinghua.edu.cn>\n> To: \"bioconductor@stat.math.ethz",
+      "thread_id": "thread-c675f62b418f",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-c675f62b418f",
+      "message_id": "<200205061224.IAA13485@blaise.dfci.harvard.edu>",
+      "from_name": "John Zhang",
+      "from_email_hash": "a9b29fa5c7919bc7d02dec7bdc0c62c5f96a282f20bb4efd587867f549843181",
+      "date": "2002-05-06T12:24:42Z",
+      "subject": "[BioC] A question",
+      "subject_clean": "[BioC] A question",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "------------- Begin Forwarded Message -------------\n\nFrom: HYing <hying99@mails.tsinghua.edu.cn>\nTo: \"bioconductor@stat.math.ethz.ch\" <bioconductor@stat.math.ethz.ch>\nMime-Version: 1.0\nContent-Transfer-Encoding: 8bit\nX-MIME-Autoconverted: from base64 to 8bit by stat.math.ethz.ch id NAA02291\nSubject: [BioC] A question\nX-BeenThere: bioconductor@stat.math.ethz.ch\nX-Mailman-Version: 2.0.2\nList-Help: <mailto:bioconductor-request@stat.math.ethz.ch?subject=help>\nList-Post: <mailto:bioconductor@stat.math.ethz.ch>\nList-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n<mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe>\nList-Id: The Bioconductor Project Mailing List <bioconductor.stat.math.ethz.ch>\nList-Unsubscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n<mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe>\nList-Archive: <http://www.stat.math.ethz.ch/pipermail/bioconductor/>\nDate: Mon, 6 May 2002 19:7:45 +0800\n\n>1.When I use fileBrowser() in tkWidgets package, It cannot move to the parent \n>directory.\n\nClick the \"Up\" button below the list box entitled \"Files in directory\" will let \nyou go up one level along the parent diractory path. Double click a directory \nname in the list box will let you go into that directory.\n\n\n>_______________________________________________\n>Bioconductor mailing list\n>Bioconductor@stat.math.ethz.ch\n>http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n>------------- End Forwarded Message -------------",
+      "body_snippet": "------------- Begin Forwarded Message -------------\n\nFrom: HYing <hying99@mails.tsinghua.edu.cn>\nTo: \"bioconductor@stat.math.ethz.ch\" <bioconductor@stat.math.ethz.ch>\nMime-Version: 1.0\nContent-Transfe",
+      "thread_id": "thread-c675f62b418f",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-2ce1a111236b",
+      "message_id": "<200205061325.JAA21267@blaise.dfci.harvard.edu>",
+      "from_name": "John Zhang",
+      "from_email_hash": "a9b29fa5c7919bc7d02dec7bdc0c62c5f96a282f20bb4efd587867f549843181",
+      "date": "2002-05-06T13:25:17Z",
+      "subject": "[BioC] A question",
+      "subject_clean": "[BioC] A question",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": ">X-Authentication-Warning: giraffa.cbs.dtu.dk: laurent set sender to \nlaurent@genome.cbs.dtu.dk using -f\n>Date: Mon, 6 May 2002 13:42:50 +0200\n>From: Laurent Gautier <laurent@genome.cbs.dtu.dk>\n>To: John Zhang <jzhang@jimmy.harvard.edu>\n>Cc: bioconductor@stat.math.ethz.ch\n>Subject: Re: [BioC] A question\n>Mime-Version: 1.0\n>Content-Disposition: inline\n>User-Agent: Mutt/1.3.27i\n>\n>On Mon, May 06, 2002 at 08:24:42AM -0400, John Zhang wrote:\n>> \n>> ------------- Begin Forwarded Message -------------\n>> \n>> From: HYing <hying99@mails.tsinghua.edu.cn>\n>> To: \"bioconductor@stat.math.ethz.ch\" <bioconductor@stat.math.ethz.ch>\n>> Mime-Version: 1.0\n>> Content-Transfer-Encoding: 8bit\n>> X-MIME-Autoconverted: from base64 to 8bit by stat.math.ethz.ch id NAA02291\n>> Subject: [BioC] A question\n>> X-BeenThere: bioconductor@stat.math.ethz.ch\n>> X-Mailman-Version: 2.0.2\n>> List-Help: <mailto:bioconductor-request@stat.math.ethz.ch?subject=help>\n>> List-Post: <mailto:bioconductor@stat.math.ethz.ch>\n>> List-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n>> <mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe>\n>> List-Id: The Bioconductor Project Mailing List \n<bioconductor.stat.math.ethz.ch>\n>> List-Unsubscribe: \n<http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n>> <mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe>\n>> List-Archive: <http://www.stat.math.ethz.ch/pipermail/bioconductor/>\n>> Date: Mon, 6 May 2002 19:7:45 +0800\n>> \n>> >1.When I use fileBrowser() in tkWidgets package, It cannot move to the \nparent \n>> >directory.\n>> \n>> Click the \"Up\" button below the list box entitled \"Files in directory\" will \nlet \n>> you go up one level along the parent diractory path. Double click a directory \n>> name in the list box will let you go into that directory.\n>> \n>\n>...but one cannot reach the 'root' (I remember observing that recently too)...\n>The button 'Up' becomes 'ghost' one node before the root...\n\nfileBrowser uses getwd() to determine the path nodes if no default is given and \nyou can only travel within that path. You will have to specify a path if you \nlike it to be done differently.\n\n>\n>(In the meanwhile there is still the possibility to specify the root as a \nstarting point (then it works))\n>\n>\n>L.",
+      "body_snippet": ">X-Authentication-Warning: giraffa.cbs.dtu.dk: laurent set sender to \nlaurent@genome.cbs.dtu.dk using -f\n>Date: Mon, 6 May 2002 13:42:50 +0200\n>From: Laurent Gautier <laurent@genome.cbs.dtu.dk>\n>To: J",
+      "thread_id": "thread-2ce1a111236b",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-ab9d26fa2f80",
+      "message_id": "<3CD69133.6467D8AE@bms.com>",
+      "from_name": "Isaac Neuhaus",
+      "from_email_hash": "2544e24ccabbfffe3a8c001b6b5f8fff8bae97516a7af89a4a7b7427c971bf36",
+      "date": "2002-05-06T14:20:35Z",
+      "subject": "[BioC] Max Cel Files",
+      "subject_clean": "[BioC] Max Cel Files",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Have anybody processed more than 64 cel files. I have an experiment with\n66 cel files and when it start processing file number 65 the function\nReadAffy dies. Apparently is dying in this line:\n\naux <-\nas.vector(read.celfile(CELfiles[i],compress=compress.cel,sd=FALSE)$intensity)\n\nI have tried some combinations of the 64 files just to make sure that\nthere is no corruption in one of the cel files and it works just fine...\nup to to 64.\n\nAny suggestions?\n\nIsaac",
+      "body_snippet": "Have anybody processed more than 64 cel files. I have an experiment with\n66 cel files and when it start processing file number 65 the function\nReadAffy dies. Apparently is dying in this line:\n\naux <-\n",
+      "thread_id": "thread-ab9d26fa2f80",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-cde7ef49808d",
+      "message_id": "<Pine.LNX.4.33.0205061025070.27828-200000@localhost.localdomain>",
+      "from_name": "Rafael A. Irizarry",
+      "from_email_hash": "05a677c1148207b83eb8bc3532d7193bce333c0fe976f77ab582c8bfe9f05d4d",
+      "date": "2002-05-06T14:28:39Z",
+      "subject": "[BioC] Max Cel Files",
+      "subject_clean": "[BioC] Max Cel Files",
+      "in_reply_to": "<3CD69133.6467D8AE@bms.com>",
+      "references": [],
+      "body_plain": "This message is in MIME format.  The first part should be readable text,\n  while the remaining parts are likely unreadable without MIME-aware tools.\n  Send mail to mime@docserver.cac.washington.edu for more info.\n\n--Boundary_(ID_a6VjjKAmfoOJ3ucipeawFg)\nContent-type: TEXT/PLAIN; charset=US-ASCII\nContent-transfer-encoding: 7BIT\n\nive done 184. it used a lot of RAM though. how much RAM do you have? for \nthe next version there will be a method that only uses PMs. this reduces \nthe data by 50%. im attaching a function that might help you with a  work \naround... if you can get more RAM you can try\n\n1-reading in using read.celfile\n2-keeping only the pms using 'pmormm'\n3-using a version of the attached function to get expression.\n\nhope this helps,\nrafael\nOn Mon, 6 May 2002, Isaac Neuhaus wrote:\n\n> Have anybody processed more than 64 cel files. I have an experiment with\n> 66 cel files and when it start processing file number 65 the function\n> ReadAffy dies. Apparently is dying in this line:\n> \n> aux <-\n> as.vector(read.celfile(CELfiles[i],compress=compress.cel,sd=FALSE)$intensity)\n> \n> I have tried some combinations of the 64 files just to make sure that\n> there is no corruption in one of the cel files and it works just fine...\n> up to to 64.\n> \n> Any suggestions?\n> \n> Isaac\n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n> \n\n--Boundary_(ID_a6VjjKAmfoOJ3ucipeawFg)\nContent-id: <Pine.LNX.4.33.0205061028390.27828@localhost.localdomain>\nContent-type: TEXT/PLAIN; charset=US-ASCII; name=rma.R\nContent-transfer-encoding: 7BIT\nContent-disposition: attachment; filename=rma.R\nContent-description:\n\n##this function does the expression for our method: RMA. not flexible\nrma <- function(object,subset=NULL, phenodata=NULL, annotation=NULL,\n                description=NULL, notes=NULL, verbose=TRUE, ...){\n\n  \n  bg.parameters2 <-  function(pm,n.pts=2^14){\n    max.density <- function(x,n.pts){\n      aux <- density(x,kernel=\"epanechnikov\",n=n.pts)\n      aux$x[order(-aux$y)[1]] \n    }\n    pmbg <- max.density(pm,n.pts) ##Log helps detect mode\n    \n    bg.data <- pm[pm < pmbg]\n    ##do it again to really get the mode\n    pmbg <- max.density(bg.data,n.pts) \n    bg.data <- pm[pm < pmbg]\n    bg.data <- bg.data - pmbg\n  \n    bgsd <- sqrt(sum(bg.data^2)/(length(bg.data)-1))*sqrt(2)#/.85\n    \n    sig.data <- pm[pm > pmbg]\n    sig.data <- sig.data-pmbg\n    \n    expmean <- max.density(sig.data,n.pts)\n    alpha <- 1/expmean\n    mubg <- pmbg\n    list(alpha=alpha,mu=mubg,sigma=bgsd)  \n  }\n  \n  bg.adjust2 <- function(pm,n.pts=2^14){\n    param <- bg.parameters2(pm,n.pts)\n    b <- param$sigma\n    a <- pm - param$mu - param$alpha*b^2\n    a + b*((1./sqrt(2*pi))*exp((-1./2.)*((a/b)^2)))/pnorm(a/b)\n  }\n  \n  if(verbose) cat(\"Background correcting\\n\")\n  x <- apply(pm(object),2,bg.adjust2)\n  if(verbose) cat(\"Normalizing Data\\n\")\n  x <- normalize.quantiles(x)\n  \n  if(verbose) cat(\"Preparing Data\\n\")\n  if(is.null(subset)){\n    data.lst <-split(as.vector(x),factor(rep(probeNames(object),nprobes(object)/dim(x)[1]*dim(x)[2])))\n  }\n  else{\n    if(is.numeric(subset)) subset <- geneNames(object)[subset]\n    Index <- which(probeNames(object)%in%subset)\n    x <- x[Index,]\n    Names <- probeNames(object)[Index]\n    data.lst <- split(as.vector(x), factor(rep(Names,length(Names)/dim(x)[1]*dim(x)[2] )))\n  }\n  data.lst<-lapply(data.lst,matrix,ncol=nchips(object))\n  if(verbose) cat(\"Computing expression. This may take a while.\\n\")\n  e <- t(sapply(data.lst,medianpolish,...))\n\n  if(is.null(phenodata)) phenodata <- phenoData(object)\n  if(is.null(annotation)) annotation <- annotation(object)\n  if(is.null(description)) description <- description(object)\n  if(is.null(notes)) notes <- notes(object)\n\n  exprs <- e[,1:nchips(object)]\n  colnames(exprs) <- sampleNames(object)\n  se.exprs <- e[,(nchips(object)+1):(2*nchips(object))] \n  colnames(se.exprs) <- sampleNames(object)\n\n  new(\"exprSet\",\n      exprs=exprs,\n      se.exprs=se.exprs,\n      phenoData=phenodata,\n      annotation=annotation,\n      description=description,\n      notes=notes)\n}\n\n  \n\n\n\n--Boundary_(ID_a6VjjKAmfoOJ3ucipeawFg)--",
+      "body_snippet": "This message is in MIME format.  The first part should be readable text,\n  while the remaining parts are likely unreadable without MIME-aware tools.\n  Send mail to mime@docserver.cac.washington.edu fo",
+      "thread_id": "thread-ab9d26fa2f80",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-08677717d4af",
+      "message_id": "<3CD6967C.49477173@bms.com>",
+      "from_name": "Isaac Neuhaus",
+      "from_email_hash": "2544e24ccabbfffe3a8c001b6b5f8fff8bae97516a7af89a4a7b7427c971bf36",
+      "date": "2002-05-06T14:43:08Z",
+      "subject": "[BioC] Max Cel Files",
+      "subject_clean": "[BioC] Max Cel Files",
+      "in_reply_to": null,
+      "references": [
+        "<Pine.LNX.4.33.0205061025070.27828-200000@localhost.localdomain>"
+      ],
+      "body_plain": "Rafa: Now I am puzzled because I built 64-bit R and I have over 50 gigs of RAM so\nI am sure I am not running out of memory. Is there a way to run R under debugger\nso I can find what is the problem with my files.\nThankx.\nIsaac\n\n\n\"Rafael A. Irizarry\" wrote:\n\n> ive done 184. it used a lot of RAM though. how much RAM do you have? for\n> the next version there will be a method that only uses PMs. this reduces\n> the data by 50%. im attaching a function that might help you with a  work\n> around... if you can get more RAM you can try\n>\n> 1-reading in using read.celfile\n> 2-keeping only the pms using 'pmormm'\n> 3-using a version of the attached function to get expression.\n>\n> hope this helps,\n> rafael\n> On Mon, 6 May 2002, Isaac Neuhaus wrote:\n>\n> > Have anybody processed more than 64 cel files. I have an experiment with\n> > 66 cel files and when it start processing file number 65 the function\n> > ReadAffy dies. Apparently is dying in this line:\n> >\n> > aux <-\n> > as.vector(read.celfile(CELfiles[i],compress=compress.cel,sd=FALSE)$intensity)\n> >\n> > I have tried some combinations of the 64 files just to make sure that\n> > there is no corruption in one of the cel files and it works just fine...\n> > up to to 64.\n> >\n> > Any suggestions?\n> >\n> > Isaac\n> >\n> > _______________________________________________\n> > Bioconductor mailing list\n> > Bioconductor@stat.math.ethz.ch\n> > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n> >\n>\n>   ------------------------------------------------------------------------\n>             Name: rma.R\n>    rma.R    Type: Plain Text (TEXT/PLAIN)\n>         Encoding: 7BIT",
+      "body_snippet": "Rafa: Now I am puzzled because I built 64-bit R and I have over 50 gigs of RAM so\nI am sure I am not running out of memory. Is there a way to run R under debugger\nso I can find what is the problem wit",
+      "thread_id": "thread-ab9d26fa2f80",
+      "thread_depth": 2,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-1890c65a4c42",
+      "message_id": "<20020506160320.GI12163@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "705d8edac5ac54e7a46a96bc0a17ff702f94febca76adcf0760433ab56a07f0d",
+      "date": "2002-05-06T16:03:20Z",
+      "subject": "[BioC] biobase",
+      "subject_clean": "[BioC] biobase",
+      "in_reply_to": "<E0D79A58A8D5BA4C830BA4B6BA666E7A71C7DF@msx.hsis.uci.edu>",
+      "references": [
+        "<E0D79A58A8D5BA4C830BA4B6BA666E7A71C7DF@msx.hsis.uci.edu>"
+      ],
+      "body_plain": "On Mon, May 06, 2002 at 09:44:31AM -0700, Vawter, Marquis wrote:\n> Hi--I d/l the biobase package today and could not get the affy.pdf file to\n> open up.  \n> \n> C:\\Program Files\\R\\rw1050\\library\\affy\\doc\\affy.pdf\n> \n> Also, there seems to be some problem with using the new Bioconductor package\n> to work with biobase and affy.\n> Best, Mark\n> \n> Marquis P. Vawter, Ph.D.\n> Department of Psychiatry & HB\n> Medical Science - D433, Zot Code 1675\n> University of California, College of Medicine \n> Irvine CA 92697-1675\n> \n> Email mvawter@uci.edu <mailto:mvawter@uci.edu>\n> Phone 949-824-9014\n> Fax 949-824-7012\n> \n> Lab: Gillespie Neuroscience Bldg., Room 3226\n> Zot code 4260B.\n> Lab: 949-824-9170\n> \n> \n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n\n\nOk... One time here rather that individual replies.\n\n\nThis is a Windows specific things caused a teeny weeny switch to set for binary files with CVS.\nThis will be solved soon.\n\nIn the meanwhile, affy.pdf can be downloaded from:\n\nhttp://www.cbs.dtu.dk/laurent/download/affyR/affy.pdf\n\n\n\n\n\nL.",
+      "body_snippet": "On Mon, May 06, 2002 at 09:44:31AM -0700, Vawter, Marquis wrote:\n> Hi--I d/l the biobase package today and could not get the affy.pdf file to\n> open up.  \n> \n> C:\\Program Files\\R\\rw1050\\library\\affy\\d",
+      "thread_id": "thread-3bb3d35c576f",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-3bb3d35c576f",
+      "message_id": "<E0D79A58A8D5BA4C830BA4B6BA666E7A71C7DF@msx.hsis.uci.edu>",
+      "from_name": "Vawter, Marquis",
+      "from_email_hash": "4996e1fc89721e39a344970d714ed4868e1c4bebdede28a4afeb81dc427b630b",
+      "date": "2002-05-06T16:44:31Z",
+      "subject": "[BioC] biobase",
+      "subject_clean": "[BioC] biobase",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi--I d/l the biobase package today and could not get the affy.pdf file to\nopen up.  \n\nC:\\Program Files\\R\\rw1050\\library\\affy\\doc\\affy.pdf\n\nAlso, there seems to be some problem with using the new Bioconductor package\nto work with biobase and affy.\nBest, Mark\n\nMarquis P. Vawter, Ph.D.\nDepartment of Psychiatry & HB\nMedical Science - D433, Zot Code 1675\nUniversity of California, College of Medicine \nIrvine CA 92697-1675\n\nEmail mvawter@uci.edu <mailto:mvawter@uci.edu>\nPhone 949-824-9014\nFax 949-824-7012\n\nLab: Gillespie Neuroscience Bldg., Room 3226\nZot code 4260B.\nLab: 949-824-9170",
+      "body_snippet": "Hi--I d/l the biobase package today and could not get the affy.pdf file to\nopen up.  \n\nC:\\Program Files\\R\\rw1050\\library\\affy\\doc\\affy.pdf\n\nAlso, there seems to be some problem with using the new Bioc",
+      "thread_id": "thread-3bb3d35c576f",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-c4ef578a8c06",
+      "message_id": "<20020507074255.GE19333@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "705d8edac5ac54e7a46a96bc0a17ff702f94febca76adcf0760433ab56a07f0d",
+      "date": "2002-05-07T07:42:55Z",
+      "subject": "[BioC] A question",
+      "subject_clean": "[BioC] A question",
+      "in_reply_to": "<200205070238.TAA26188@mail.au.tsinghua.edu.cn>",
+      "references": [
+        "<200205070238.TAA26188@mail.au.tsinghua.edu.cn>"
+      ],
+      "body_plain": "On Mon, May 06, 2002 at 07:07:45PM +0800, HYing wrote:\n> 1.When I use fileBrowser() in tkWidgets package, It cannot move to the parent directory.\n> 2.When I want to attach the Dilution data using data(Dilution) command, it print out \n> \"Error: restore file may be from a newer version of R -- no data loaded\"\n> but I have updated my R version to 1.5.0, the same is plob.example and SpikeIn data.\n> but I can load the listcel and CDF.example data, are there any differences between these data?\n\nWe had entanglements with CVS, binary files and Windows. This will be (hopefully) solved today,\nas soon as the automated build runs over the changes.\n\n\nRegards,\n\n\nLaurent\n\n\n \n\n\n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tD-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "On Mon, May 06, 2002 at 07:07:45PM +0800, HYing wrote:\n> 1.When I use fileBrowser() in tkWidgets package, It cannot move to the parent directory.\n> 2.When I want to attach the Dilution data using data",
+      "thread_id": "thread-82c76a4b1108",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-0d522f28e553",
+      "message_id": "<20020507092156.GG19333@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "705d8edac5ac54e7a46a96bc0a17ff702f94febca76adcf0760433ab56a07f0d",
+      "date": "2002-05-07T09:21:56Z",
+      "subject": "[BioC] Probe pairs location on chips // ANOVA",
+      "subject_clean": "[BioC] Probe pairs location on chips // ANOVA",
+      "in_reply_to": "<OJZYOGFB8MWUHEWUWQ84MKHBPJ973X.3cd7a3e0@lgmpc13>",
+      "references": [
+        "<200205061001.MAA19016@stat.math.ethz.ch>",
+        "<OJZYOGFB8MWUHEWUWQ84MKHBPJ973X.3cd7a3e0@lgmpc13>"
+      ],
+      "body_plain": "On Tue, May 07, 2002 at 11:52:32AM +0200, julien.sylvestre@wotan.ens.fr wrote:\n> Hi,\n> \n> * Does anyone knows whether the probe pairs for a single probe set are distributed around the array on HgU95 human chips and on YgS98 yeast chips ? \n\nTry help(plotLocation) to see how location of PPSet can be displayed over the 'image' of a chip. \n\n\n> I heard affy recently decided to separate them in order to \"average\" spacial effects but in the case of yeast chips looking at the images makes me thinks that it has not yet been done. Affy package Image \n> methods for watching a definite probe set would probably haveto be adapted to take into account that new randomized chip design.\n>\n\nThe package is suited for wherever the probes for PPSet are located.\n\n\n \n> * As for the ANOVA problem I mentionned earlier, I had good results on calculating gene per gene effects and pairwise interactions using SAS and proc glm, which proved quite quickly and had no memory \n> problems while R lm (and matlab anovan) both had. A solution could however certainly have been written in R.\n> i\n\nFitting model per gene can be done at no memory cost in R\n(look again at filtertheniter in genefilter... if you still cannot see I can give hints (after my lunch break))\n\n\nHopin' it helps,\n\nLaurent\n\n\n\n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tD-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "On Tue, May 07, 2002 at 11:52:32AM +0200, julien.sylvestre@wotan.ens.fr wrote:\n> Hi,\n> \n> * Does anyone knows whether the probe pairs for a single probe set are distributed around the array on HgU95 h",
+      "thread_id": "thread-101665645414",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-101665645414",
+      "message_id": "<OJZYOGFB8MWUHEWUWQ84MKHBPJ973X.3cd7a3e0@lgmpc13>",
+      "from_name": "julien.sylvestre@wotan.ens.fr",
+      "from_email_hash": "9627dad04996df01dfea3044e7bcf3d730a4ee09ec81dfe52fe64ee6f22b6f6d",
+      "date": "2002-05-07T09:52:32Z",
+      "subject": "[BioC] Probe pairs location on chips // ANOVA",
+      "subject_clean": "[BioC] Probe pairs location on chips // ANOVA",
+      "in_reply_to": "<200205061001.MAA19016@stat.math.ethz.ch>",
+      "references": [],
+      "body_plain": "Hi,\n\n* Does anyone knows whether the probe pairs for a single probe set are distributed around the array on HgU95 human chips and on YgS98 yeast chips ? \nI heard affy recently decided to separate them in order to \"average\" spacial effects but in the case of yeast chips looking at the images makes me thinks that it has not yet been done. Affy package Image \nmethods for watching a definite probe set would probably haveto be adapted to take into account that new randomized chip design.\n\n* As for the ANOVA problem I mentionned earlier, I had good results on calculating gene per gene effects and pairwise interactions using SAS and proc glm, which proved quite quickly and had no memory \nproblems while R lm (and matlab anovan) both had. A solution could however certainly have been written in R.\n\nThanks.\n\nJS.",
+      "body_snippet": "Hi,\n\n* Does anyone knows whether the probe pairs for a single probe set are distributed around the array on HgU95 human chips and on YgS98 yeast chips ? \nI heard affy recently decided to separate them",
+      "thread_id": "thread-101665645414",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-36c9a549a5d7",
+      "message_id": "<Pine.SOL.4.20.0205070930390.22562-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-05-07T13:31:49Z",
+      "subject": "[BioC] A question",
+      "subject_clean": "[BioC] A question",
+      "in_reply_to": "<20020507074255.GE19333@giraffa.cbs.dtu.dk>",
+      "references": [],
+      "body_plain": "On Tue, 7 May 2002, Laurent Gautier wrote:\n> We had entanglements with CVS, binary files and Windows. This will be (hopefully) solved today,\n> as soon as the automated build runs over the changes.\n\nActually, currently the automated process isn't running - sooooo ....\n\nI'm working on fixing a few problems with it related to the changes from\nthe release, as soon as I get that up & running fine (hopefully by\ntonight, if not then by tommorow night) this will start moving again.\n\n-Jeff",
+      "body_snippet": "On Tue, 7 May 2002, Laurent Gautier wrote:\n> We had entanglements with CVS, binary files and Windows. This will be (hopefully) solved today,\n> as soon as the automated build runs over the changes.\n\nAc",
+      "thread_id": "thread-82c76a4b1108",
+      "thread_depth": 2,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-230f8ad6d179",
+      "message_id": "<Pine.GSO.4.10.10205071108170.11721-100000@hsph.harvard.edu>",
+      "from_name": "Byron Ellis",
+      "from_email_hash": "9ab40472e1e849b90f771886956aec2b3b32280760d7f49df959005b2a72cffb",
+      "date": "2002-05-07T15:09:35Z",
+      "subject": "[BioC] Probe pairs location on chips // ANOVA",
+      "subject_clean": "[BioC] Probe pairs location on chips // ANOVA",
+      "in_reply_to": "<OJZYOGFB8MWUHEWUWQ84MKHBPJ973X.3cd7a3e0@lgmpc13>",
+      "references": [],
+      "body_plain": "On Tue, 7 May 2002 julien.sylvestre@wotan.ens.fr wrote:\n\n> Hi,\n> \n> * Does anyone knows whether the probe pairs for a single probe set are distributed around the array on HgU95 human chips and on YgS98 yeast chips ? \n> I heard affy recently decided to separate them in order to \"average\" spacial effects but in the case of yeast chips looking at the images makes me thinks that it has not yet been done. Affy package Image \n> methods for watching a definite probe set would probably haveto be adapted to take into account that new randomized chip design.\n\nI'm fairly certain the HgU95 are, don't know about the yeast chips (the\ndrosophilia chips are randomly distributed).\n\n> \n> * As for the ANOVA problem I mentionned earlier, I had good results on calculating gene per gene effects and pairwise interactions using SAS and proc glm, which proved quite quickly and had no memory \n> problems while R lm (and matlab anovan) both had. A solution could however certainly have been written in R.\n> \n> Thanks.\n> \n> JS.\n> \n> \n\n\n\nByron Ellis (bellis@hsph.harvard.edu)\n\"Oook\" - The Librarian\n\nPlease finger bellis@hsph.harvard.edu for PGP keys\n\n\n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>",
+      "body_snippet": "On Tue, 7 May 2002 julien.sylvestre@wotan.ens.fr wrote:\n\n> Hi,\n> \n> * Does anyone knows whether the probe pairs for a single probe set are distributed around the array on HgU95 human chips and on YgS9",
+      "thread_id": "thread-101665645414",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-2844342e299d",
+      "message_id": "<Pine.GSO.4.10.10205071110220.11721-100000@hsph.harvard.edu>",
+      "from_name": "Byron Ellis",
+      "from_email_hash": "9ab40472e1e849b90f771886956aec2b3b32280760d7f49df959005b2a72cffb",
+      "date": "2002-05-07T15:10:58Z",
+      "subject": "[BioC] A question",
+      "subject_clean": "[BioC] A question",
+      "in_reply_to": "<Pine.SOL.4.20.0205070930390.22562-100000@santiam.dfci.harvard.edu>",
+      "references": [],
+      "body_plain": "really? it should be.... if its not it may be a while before I get to it\n(quals)\n\nByron Ellis (bellis@hsph.harvard.edu)\n\"Oook\" - The Librarian\n\nPlease finger bellis@hsph.harvard.edu for PGP keys\n\nOn Tue, 7 May 2002, Jeff Gentry wrote:\n\n> \n> On Tue, 7 May 2002, Laurent Gautier wrote:\n> > We had entanglements with CVS, binary files and Windows. This will be (hopefully) solved today,\n> > as soon as the automated build runs over the changes.\n> \n> Actually, currently the automated process isn't running - sooooo ....\n> \n> I'm working on fixing a few problems with it related to the changes from\n> the release, as soon as I get that up & running fine (hopefully by\n> tonight, if not then by tommorow night) this will start moving again.\n> \n> -Jeff\n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>",
+      "body_snippet": "really? it should be.... if its not it may be a while before I get to it\n(quals)\n\nByron Ellis (bellis@hsph.harvard.edu)\n\"Oook\" - The Librarian\n\nPlease finger bellis@hsph.harvard.edu for PGP keys\n\nOn T",
+      "thread_id": "thread-82c76a4b1108",
+      "thread_depth": 3,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-5e371977c5aa",
+      "message_id": "<Pine.SOL.4.20.0205071114320.22562-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-05-07T15:15:35Z",
+      "subject": "[BioC] A question",
+      "subject_clean": "[BioC] A question",
+      "in_reply_to": "<Pine.GSO.4.10.10205071110220.11721-100000@hsph.harvard.edu>",
+      "references": [],
+      "body_plain": "> really? it should be.... if its not it may be a while before I get to it\n\nNo no, your windows builds are fine.  However, all the cron jobs from the\naccount that builds the source packages and then shoves the whole\nenchilada over to the web site are temporarily disabled. (as I said,\nprobably by tonight, maybe by tommorow)\n\n-J",
+      "body_snippet": "> really? it should be.... if its not it may be a while before I get to it\n\nNo no, your windows builds are fine.  However, all the cron jobs from the\naccount that builds the source packages and then s",
+      "thread_id": "thread-82c76a4b1108",
+      "thread_depth": 4,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-1835341ddb15",
+      "message_id": "<E175poJ-0000HY-00@bernie.ethz.ch>",
+      "from_name": "rose@china.com",
+      "from_email_hash": "b44667f7d259dc2b8f0bec178439554d173f4f9b4495e0ad6e4d67f28e1820fe",
+      "date": "2002-05-09T15:26:09Z",
+      "subject": "[BioC] ADV:  Harvest lots of Target Email addresses quickly !",
+      "subject_clean": "[BioC] ADV:  Harvest lots of Target Email addresses quickly !",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "=3CHTML=3E=3CHEAD=3E\n=3CBODY bgColor=3D#ffccff=3E\n=3CTABLE border=3D0 cellPadding=3D0 cellSpacing=3D0 width=3D475=3E\n  =3CTBODY=3E\n  =3CTR=3E\n    =3CTD align=3Dmiddle vAlign=3Dtop=3E=3C=2FTD=3E=3C=2FTR=3E=3C=2FTBODY=3E=3C=2FTABLE=3E=3CBR=3E\n=3CTABLE=3E\n  =3CTBODY=3E\n  =3CTR=3E\n    =3CTD width=3D=225%=22=3E=3C=2FTD=3E\n    =3CTD bgColor=3D#b8ecff borderColor=3D#0000ff width=3D=2290%=22=3E=3CFONT color=3D#ff0000 \n      face=3D=22Arial Black=22 \n      size=3D6=3E&nbsp=3B&nbsp=3B&nbsp=3B&nbsp=3B&nbsp=3B&nbsp=3B&nbsp=3B&nbsp=3B&nbsp=3B&nbsp=3B Want \n      To Harvest A Lot Of =3CFONT color=3D#0000ff=3ETarget =3C=2FFONT=3EEmail&nbsp=3B&nbsp=3B \n      Addresses In A Very Short Time=3F=3C=2FFONT=3E \n      =3CP=3E=3CB=3E=3CFONT face=3DArial size=3D4=3E=3C=2FFONT=3E=3CFONT color=3D#ff00ff face=3DArial \n      size=3D4=3E=3CFONT color=3D#0000ff=3ETarget Email Extractor =3C=2FFONT=3Eis&nbsp=3B a&nbsp=3B \n      powerful&nbsp=3B Email&nbsp=3B Software that&nbsp=3B harvests Target Email \n      Addresses from search engines=2C any specified starting URLs =2C including cgi \n      =2C asp pages etc=2E=3C=2FFONT=3E=3C=2FB=3E=3C=2FP=3E\n      =3CP=3E=3CFONT color=3D#000000 face=3D=CB=CE=CC=E5 size=3D2=3E&nbsp=3B It Quickly and automatically \n      search and spider from search engine=2C any specified starting URLs to find \n      and extract e-mail addresses=3CBR=3E=3C=2FP=3E\n      =3CLI=3EPowerful targeting ability=2E Only extract the specific email addresses \n      that directly related to your business=2E=3CBR=3E\n      =3CLI=3EIntegrated with 18 top popular search engines=3A Yahoo=2C Google=2C MSN=2C \n      AOL=3CBR=3E\n      =3CLI=3EFast Search Ability=2E Nearly can find thousands of e-mail addresses in \n      an hour=2C allowing up to 500 simultaneous search threads!=3CBR=3E\n      =3CLI=3EHelpful for anyone for internet Email marketing purposes=2E=3CBR=3E\n      =3CLI=3EFree version updates=2E=3CBR=3E=3CBR=3E=3C=2FFONT=3E=3CFONT color=3D#ff0000 face=3DArial \n      size=3D4=3E=3CI=3E=3CSTRONG=3EClick The Following Link To Download This \n      Program=3A=3C=2FSTRONG=3E=3C=2FI=3E=3C=2FFONT=3E=3C=2FLI=3E\n      =3CP=3E=3CB=3E=3CFONT color=3D#ff0000 face=3DArial size=3D4=3E=3CA \n      href=3D=22http=3A=2F=2Fwww=2Ewldinfo=2Ecom=2Fdownload=2Femail=2FESE=2Ezip=22=3EDownload Site \n      1=3C=2FA=3E=3C=2FFONT=3E=3C=2FB=3E=3C=2FP=3E\n      =3CP=3E=3CB=3E=3CFONT color=3D#ff0000 face=3DArial size=3D4=3E=3CA \n      href=3D=22http=3A=2F=2Fbestsoft=2E3322=2Eorg=2Fonlinedown=2FESE=2Ezip=22=3EDownload Site \n      2=3C=2FA=3E&nbsp=3B&nbsp=3B&nbsp=3B&nbsp=3B&nbsp=3B&nbsp=3B&nbsp=3B&nbsp=3B&nbsp=3B&nbsp=3B&nbsp=3B \n      =3C=2FFONT=3E=3C=2FB=3E=A1=A1=3CFONT size=3D2=3E=3CFONT color=3D#0000a0 face=3DArial \n      size=3D3=3E=3CSTRONG=3EIf&nbsp=3B you can not download this program =2C&nbsp=3B please \n      copy the following link into your URL =2C and then click =22 Enter=22 on your \n      Computer Keyboard=2E=3C=2FSTRONG=3E=3C=2FFONT=3E=3C=2FFONT=3E=3C=2FP=3E\n      =3CP=3E=3CFONT size=3D2=3E=3CFONT color=3D#0000a0 face=3DArial size=3D3=3E=3CSTRONG=3EHere is the \n      download links=3A=3C=2FSTRONG=3E=3C=2FFONT=3E=3C=2FP=3E\n      =3CDIV=3E\n      =3CP=3Ehttp=3A=2F=2Fwww=2Ewldinfo=2Ecom=2Fdownload=2Femail=2FESE=2Ezip=3C=2FP=3E\n      =3CP=3Ehttp=3A=2F=2Fbestsoft=2E3322=2Eorg=2Fonlinedown=2FESE=2Ezip=3C=2FP=3E=3C=2FFONT=3E=3C=2FDIV=3E\n      =3CP=3E=3C=2FP=3E=3C=2FTD=3E\n    =3CTD width=3D=225%=22=3E=3C=2FTD=3E=3C=2FTR=3E\n  =3CTR=3E\n    =3CTD width=3D=225%=22=3E=3C=2FTD=3E\n    =3CTD bgColor=3D#0f95de width=3D=2290%=22=3E=3CFONT color=3D#ffffff \n      face=3D=22Verdana=2C Tahoma=2C Helvetica=2C SansSerif=22 \n      size=3D1=3E=3CB=3EDisclaimer=3A=3C=2FB=3E=3CBR=3EWe are strongly against continuously sending \n      unsolicited emails to those who do not wish to receive our special \n      mailings=2E We have attained the services of an independent 3rd party to \n      overlook list management and removal services=2E This is not unsolicited \n      email=2E If you do not wish to receive further mailings=2C please click this \n      link =3CA href=3D=22 http=3A=2F=2Fwww=2Eautoemailremoval=2Ecom=2Fcgi-bin=2Fremove=2Epl =22 \n      target=3D=5Fblank=3E=3CFONT \n      color=3D#fdd32a=3E=3CB=3Ehttp=3A=2F=2Fwww=2Eautoemailremoval=2Ecom=2Fcgi-bin=2Fremove=2Epl \n      =3C=2FB=3E=3C=2FFONT=3E=3C=2FA=3E=2E Auto Email Removal Company=2E Ref# \n      01222263545=3C=2FFONT=3E=3CB=3E=3CFONT class=3Ddisclaimer color=3D#000080 \n      face=3DArial=3E=3CBR=3EThis message is a commercial advertisement=2E It is compliant \n      with all federal and state laws regarding email messages including the \n      California Business and Professions Code=2E We have provided the subject \n      line =22ADV=22 to provide you notification that this is a commercial \n      advertisement for persons over 18yrs old=2E=3C=2FFONT=3E=3C=2FB=3E=3C=2FTD=3E\n    =3CTD width=3D=225%=22=3E=3C=2FTD=3E=3C=2FTR=3E=3C=2FTBODY=3E=3C=2FTABLE=3E\n=3CSTYLE=3E=3C=2FSTYLE=3E\n=3CBR=3E=3CBR=3E=3CBR=3E=3CBR=3E=3CA href=3D=22=22=3E=3C=2FA=3E=3CBR=3E=3CBR=3E=3CBR=3E=3CBR=3E=3CBR=3E=3CA \nhref=3D=22=22=3E=3C=2FA=3E=3CBR=3E=3C=2FBODY=3E=3C=2FHTML=3E",
+      "body_snippet": "=3CHTML=3E=3CHEAD=3E\n=3CBODY bgColor=3D#ffccff=3E\n=3CTABLE border=3D0 cellPadding=3D0 cellSpacing=3D0 width=3D475=3E\n  =3CTBODY=3E\n  =3CTR=3E\n    =3CTD align=3Dmiddle vAlign=3Dtop=3E=3C=2FTD=3E=3C=2FT",
+      "thread_id": "thread-1835341ddb15",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-6b56b8914e21",
+      "message_id": "<Pine.SOL.4.20.0205091132590.27826-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-05-09T15:35:49Z",
+      "subject": "[BioC] Members only posting on bioconductor list",
+      "subject_clean": "[BioC] Members only posting on bioconductor list",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "For the time being, I've set the Bioconductor mailing list to only allow\nposting from members as a measure to prevent spam mail being sent in.  If\npeople have specific problems (such as posting from an address that\nthey're not registered under) or more general (such as saying \"You\nBum! Don't do that!\"), please let me know.\n\n-J",
+      "body_snippet": "For the time being, I've set the Bioconductor mailing list to only allow\nposting from members as a measure to prevent spam mail being sent in.  If\npeople have specific problems (such as posting from a",
+      "thread_id": "thread-6b56b8914e21",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-2ca95890004b",
+      "message_id": "<000401c1f852$9f2d08e0$d03b0cd8@toshibauser>",
+      "from_name": "Joshua Betcher",
+      "from_email_hash": "accece4a6dbd1352fadc2ef313f6af32c46b72d6d6fc3331724b618356a06fd5",
+      "date": "2002-05-10T18:43:16Z",
+      "subject": "[BioC] Genefilter internal function...",
+      "subject_clean": "[BioC] Genefilter internal function...",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "I have been trying to import genefilter into S-Plus version 6.0 and within\nthe initiallization of the genefinder class a .C function is called to an\ninternal function. (in this case \"mm_distance\").  I thought that all I would\nhave to do was import the genefilter.dll file into Splus and it would work\nbut that is not the case.  Does anyone have the code to this .C internal\nfunction so that I could recompile and use it on Splus 6.0?  If not, does\nanyone know a way to get the same results with R programming?\n\nThanks a lot\nJosh",
+      "body_snippet": "I have been trying to import genefilter into S-Plus version 6.0 and within\nthe initiallization of the genefinder class a .C function is called to an\ninternal function. (in this case \"mm_distance\").  I",
+      "thread_id": "thread-2ca95890004b",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-f650d1d4645a",
+      "message_id": "<Pine.SOL.4.20.0205101458130.1693-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-05-10T18:59:05Z",
+      "subject": "[BioC] Genefilter internal function...",
+      "subject_clean": "[BioC] Genefilter internal function...",
+      "in_reply_to": "<000401c1f852$9f2d08e0$d03b0cd8@toshibauser>",
+      "references": [],
+      "body_plain": "> I have been trying to import genefilter into S-Plus version 6.0 and within\n> the initiallization of the genefinder class a .C function is called to an\n> internal function. (in this case \"mm_distance\").  I thought that all I would\n> have to do was import the genefilter.dll file into Splus and it would work\n> but that is not the case.  Does anyone have the code to this .C internal\n> function so that I could recompile and use it on Splus 6.0?  If not, does\n> anyone know a way to get the same results with R programming?\n\nmm_distance() can be found in the source package of genefilter, inside the\nfile genedist.c from the src/ directory.\n\n-Jeff",
+      "body_snippet": "> I have been trying to import genefilter into S-Plus version 6.0 and within\n> the initiallization of the genefinder class a .C function is called to an\n> internal function. (in this case \"mm_distance",
+      "thread_id": "thread-2ca95890004b",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-548055830b08",
+      "message_id": "<874rhap9hr.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-05-15T00:04:10Z",
+      "subject": "[BioC] R/blast",
+      "subject_clean": "[BioC] R/blast",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Has anyone implemented a connection between R and either a local or\nremote based BLAST?  It looks reasonably easy, if a rather large\ncompile (basing it on the NCBI toolkit).  I'll (actually, with an\ninformatics grad student) be doing such soon-ish if no one else has...\n\nbest,\n-tony\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my friday location is usually completely unpredictable.)",
+      "body_snippet": "Has anyone implemented a connection between R and either a local or\nremote based BLAST?  It looks reasonably easy, if a rather large\ncompile (basing it on the NCBI toolkit).  I'll (actually, with an\ni",
+      "thread_id": "thread-548055830b08",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-96192798c349",
+      "message_id": "<20020515142338.49590.qmail@web13903.mail.yahoo.com>",
+      "from_name": "Deepayan Sarkar",
+      "from_email_hash": "020e17c245cd36adafe1b38bf8b2d966df21273089c8563116946ee62e4652bf",
+      "date": "2002-05-15T14:23:38Z",
+      "subject": "[BioC] Question about affy",
+      "subject_clean": "[BioC] Question about affy",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi,\n\nI'm using the affy package to read in data from 6 MG_U74A chips. \nThis is my first time, so I'm trying to replicate the steps in \naffy.pdf. The data seems to be read in properly, and pm, mm, \nboxplot, normalize all seem to work on the whole object. \n\nHowever, any attempt to take subsets of the object itself fails:\n\n> Data <- ReadAffy()\n> Data[1,]\nError in checkSlotAssignment(object, name, value) : \n\tValue supplied is not valid for slot \"pData\", is(value, \"data.frame\") is not\nTRUE\n> Data[,1]\nError in checkSlotAssignment(object, name, value) : \n\tValue supplied is not valid for slot \"pData\", is(value, \"data.frame\") is not\nTRUE\n\nAny pointers on what might be causing this ?\n\nDeepayan\n\n----------------------------------------------------\nP.S.: In case it helps, here's some more output:\n\n\n> Data <- ReadAffy()\nreading CDF file\nprocessing information\nreading 6 CEL files......\npreparing probe level object\n\n\n> Data\nPlob object\nCDF used=MG_U74A.cdf\nnumber of chips=6\nnumber of genes=12654\nnumber of probe pairs=201964\nannotation=\ndescription=\nnotes=\nsize of chip=640x640\nchip names=\naged0-1\naged0-2\naged0-3\nyoung0-1\nyoung0-2\nyoung0-3\n\n\n> pm(Data)[1:5,]\n             aged0-1 aged0-2 aged0-3 young0-1 young0-2 young0-3\n97180_f_at12 15687.0 14791.0 17047.0  15903.8  16362.0  13671.0\n97368_at10   18634.0 14839.3 19023.0  18568.0  20432.0  16068.0\n97579_f_at8   5508.8  5069.8  5572.8   6346.0   7474.5   5642.5\n95664_at5     6101.0  4624.3  6912.0   7200.0   7652.0   6821.0\n101287_s_at5  1526.0  1336.3  1505.0   1993.0   1835.0   1774.0\n\n\n> mm(Data)[1:5,]\n             aged0-1 aged0-2 aged0-3 young0-1 young0-2 young0-3\n97180_f_at12 10309.8 10016.0 10891.0  13610.3  13646.0  11988.0\n97368_at10    6745.3  5097.0  6346.3   9579.0   7937.0   6944.0\n97579_f_at8   3165.5  2809.0  3509.8   4360.0   4396.3   3580.8\n95664_at5     3557.0  2729.0  3972.5   5056.5   4385.0   4197.0\n101287_s_at5   962.8   836.8  1059.5   1294.0   1160.0   1492.0\n\n\n\n\n\n__________________________________________________\nDo You Yahoo!?\nLAUNCH - Your Yahoo! Music Experience\nhttp://launch.yahoo.com",
+      "body_snippet": "Hi,\n\nI'm using the affy package to read in data from 6 MG_U74A chips. \nThis is my first time, so I'm trying to replicate the steps in \naffy.pdf. The data seems to be read in properly, and pm, mm, \nbox",
+      "thread_id": "thread-96192798c349",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-5fdf89c7fc3f",
+      "message_id": "<Pine.LNX.4.33.0205151029410.16900-100000@localhost.localdomain>",
+      "from_name": "Rafael A. Irizarry",
+      "from_email_hash": "05a677c1148207b83eb8bc3532d7193bce333c0fe976f77ab582c8bfe9f05d4d",
+      "date": "2002-05-15T15:00:33Z",
+      "subject": "[BioC] Question about affy",
+      "subject_clean": "[BioC] Question about affy",
+      "in_reply_to": "<20020515142338.49590.qmail@web13903.mail.yahoo.com>",
+      "references": [],
+      "body_plain": "this is a bug. we assume that you will provide phenoData (look at the help \nfile or the Biobase description).\nif you have phenotypic data and it has more than 2 covariantes add it. \nthat will solve your problem.\notherwise, while we fix it, here is a work around\n\nn <- 6 ## number of samples\npdata <- data.frame(tmp1=1:n,tmp2=1:n)\nvarlabels <- list(\"tmp1: so it works\",\"tmp2: so it works\")\nphenodata <- new(\"phenoData\",pData=pdata,varLabels=varlabels)\n\nData <- ReadAffy(phenodata=phenodata)\n\nthen continue...\n\nthanks for finding the bug. also for making us relize we need to say we \nrecommend usinge phenoData in the documentation.\nRafael\n\nthanks for finding this.On Wed, 15 May 2002, Deepayan \nSarkar wrote:\n\n> \n> Hi,\n> \n> I'm using the affy package to read in data from 6 MG_U74A chips. \n> This is my first time, so I'm trying to replicate the steps in \n> affy.pdf. The data seems to be read in properly, and pm, mm, \n> boxplot, normalize all seem to work on the whole object. \n> \n> However, any attempt to take subsets of the object itself fails:\n> \n> > Data <- ReadAffy()\n> > Data[1,]\n> Error in checkSlotAssignment(object, name, value) : \n> \tValue supplied is not valid for slot \"pData\", is(value, \"data.frame\") is not\n> TRUE\n> > Data[,1]\n> Error in checkSlotAssignment(object, name, value) : \n> \tValue supplied is not valid for slot \"pData\", is(value, \"data.frame\") is not\n> TRUE\n> \n> Any pointers on what might be causing this ?\n> \n> Deepayan\n> \n> ----------------------------------------------------\n> P.S.: In case it helps, here's some more output:\n> \n> \n> > Data <- ReadAffy()\n> reading CDF file\n> processing information\n> reading 6 CEL files......\n> preparing probe level object\n> \n> \n> > Data\n> Plob object\n> CDF used=MG_U74A.cdf\n> number of chips=6\n> number of genes=12654\n> number of probe pairs=201964\n> annotation=\n> description=\n> notes=\n> size of chip=640x640\n> chip names=\n> aged0-1\n> aged0-2\n> aged0-3\n> young0-1\n> young0-2\n> young0-3\n> \n> \n> > pm(Data)[1:5,]\n>              aged0-1 aged0-2 aged0-3 young0-1 young0-2 young0-3\n> 97180_f_at12 15687.0 14791.0 17047.0  15903.8  16362.0  13671.0\n> 97368_at10   18634.0 14839.3 19023.0  18568.0  20432.0  16068.0\n> 97579_f_at8   5508.8  5069.8  5572.8   6346.0   7474.5   5642.5\n> 95664_at5     6101.0  4624.3  6912.0   7200.0   7652.0   6821.0\n> 101287_s_at5  1526.0  1336.3  1505.0   1993.0   1835.0   1774.0\n> \n> \n> > mm(Data)[1:5,]\n>              aged0-1 aged0-2 aged0-3 young0-1 young0-2 young0-3\n> 97180_f_at12 10309.8 10016.0 10891.0  13610.3  13646.0  11988.0\n> 97368_at10    6745.3  5097.0  6346.3   9579.0   7937.0   6944.0\n> 97579_f_at8   3165.5  2809.0  3509.8   4360.0   4396.3   3580.8\n> 95664_at5     3557.0  2729.0  3972.5   5056.5   4385.0   4197.0\n> 101287_s_at5   962.8   836.8  1059.5   1294.0   1160.0   1492.0\n> \n> \n> \n> \n> \n> __________________________________________________\n> Do You Yahoo!?\n> LAUNCH - Your Yahoo! Music Experience\n> http://launch.yahoo.com\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>",
+      "body_snippet": "this is a bug. we assume that you will provide phenoData (look at the help \nfile or the Biobase description).\nif you have phenotypic data and it has more than 2 covariantes add it. \nthat will solve yo",
+      "thread_id": "thread-96192798c349",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-45b8fd372636",
+      "message_id": "<Pine.LNX.4.43.0205161118570.24361@hymn09.u.washington.edu>",
+      "from_name": "Dick Beyer",
+      "from_email_hash": "df170f6cb80adb5ae25fba85eed878fd3d2fca54b9bae1a5f6d76cb4a52bd695",
+      "date": "2002-05-16T18:18:57Z",
+      "subject": "[BioC] bug in getBioC.R",
+      "subject_clean": "[BioC] bug in getBioC.R",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "FYI,\n\nI had to remove all occrrances of the string \"-snapshot\" in the getBioC.R script to make it work.\n\nOnce I did that and used getBioC(libName=\"all\"), then things seemed more successful but with some warnings:\n\n> getBioC(libName=\"all\")\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\nupdating HTML package descriptions\n[1] \"Successful\"\nWarning messages: \n1: DESCRIPTION file of package annotate missing or broken in: package.description(i, field = \"Title\") \n2: DESCRIPTION file of package genefilter missing or broken in: package.description(i, field = \"Title\") \n3: DESCRIPTION file of package genefilter missing or broken in: package.description(i, field = \"Title\") \n\nCheers,\nDick\n\n*******************************************************************************\nRichard P. Beyer, Ph.D.\tUniversity of Washington\nTel.:(206) 616 7378\tEnvironmental Health, Box 354695\nFax: (206) 685 4696\t4225 Roosevelt Way NE, # 100\n\t\t\tSeattle, WA 98105-6099\n*******************************************************************************",
+      "body_snippet": "FYI,\n\nI had to remove all occrrances of the string \"-snapshot\" in the getBioC.R script to make it work.\n\nOnce I did that and used getBioC(libName=\"all\"), then things seemed more successful but with so",
+      "thread_id": "thread-45b8fd372636",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-9c58a8257825",
+      "message_id": "<87u1p8aqjl.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-05-16T18:36:14Z",
+      "subject": "[BioC] bug in getBioC.R",
+      "subject_clean": "[BioC] bug in getBioC.R",
+      "in_reply_to": "<Pine.LNX.4.43.0205161118570.24361@hymn09.u.washington.edu>",
+      "references": [
+        "<Pine.LNX.4.43.0205161118570.24361@hymn09.u.washington.edu>"
+      ],
+      "body_plain": ">>>>> \"dick\" == Dick Beyer <dbeyer@u.washington.edu> writes:\n\n    dick> FYI,\n    dick> I had to remove all occrrances of the string \"-snapshot\" in the getBioC.R script to make it work.\n\nActually, you should have only needed to do that once (for the\nstable versions).  We'll have to follow up a bit more on that...\n\nbest,\n-tony\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my friday location is usually completely unpredictable.)",
+      "body_snippet": ">>>>> \"dick\" == Dick Beyer <dbeyer@u.washington.edu> writes:\n\n    dick> FYI,\n    dick> I had to remove all occrrances of the string \"-snapshot\" in the getBioC.R script to make it work.\n\nActually, you ",
+      "thread_id": "thread-45b8fd372636",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-7054f83381e5",
+      "message_id": "<87d6vwaq9m.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-05-16T18:42:13Z",
+      "subject": "[BioC] bug in getBioC.R",
+      "subject_clean": "[BioC] bug in getBioC.R",
+      "in_reply_to": "<87u1p8aqjl.fsf@jeeves.blindglobe.net>",
+      "references": [
+        "<Pine.LNX.4.43.0205161118570.24361@hymn09.u.washington.edu>",
+        "<87u1p8aqjl.fsf@jeeves.blindglobe.net>"
+      ],
+      "body_plain": ">>>>> \"a\" == A J Rossini <rossini@blindglobe.net> writes:\n\n    a> Actually, you should have only needed to do that once (for the\n    a> stable versions).  We'll have to follow up a bit more on that...\n\nOkay, the right fix is commited for the next release.  \n\nbest,\n-tony\n\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my friday location is usually completely unpredictable.)",
+      "body_snippet": ">>>>> \"a\" == A J Rossini <rossini@blindglobe.net> writes:\n\n    a> Actually, you should have only needed to do that once (for the\n    a> stable versions).  We'll have to follow up a bit more on that...",
+      "thread_id": "thread-45b8fd372636",
+      "thread_depth": 2,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-4a3b3e145f19",
+      "message_id": "<Pine.SOL.4.20.0205170439200.25246-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-05-17T08:39:51Z",
+      "subject": "[BioC] Re: getBioC() problem",
+      "subject_clean": "[BioC] Re: getBioC() problem",
+      "in_reply_to": "<5.1.0.14.0.20020516232737.02dbf3c8@pop.theworld.com>",
+      "references": [],
+      "body_plain": "> getBioC() in the form downloaded this evening doesn't work correctly in a \n> Windows installation of R 1.5.0.  The \"-snapshot.zip\" URLs don't seem to \n> exist -- editing the function so that the package names are just \".zip\" \n> (Biobase.zip, etc) solves the problem.\n\nHi David ...\n\nIf I've been following the chatter on the bioconductor mail list (cc:'d in\non this) correctly, this problem should now be fixed.\n\n-J",
+      "body_snippet": "> getBioC() in the form downloaded this evening doesn't work correctly in a \n> Windows installation of R 1.5.0.  The \"-snapshot.zip\" URLs don't seem to \n> exist -- editing the function so that the pac",
+      "thread_id": "thread-4a3b3e145f19",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-ca0c33c83ae0",
+      "message_id": "<Pine.LNX.4.33.0205170827210.3145-100000@localhost.localdomain>",
+      "from_name": "Rafael A. Irizarry",
+      "from_email_hash": "05a677c1148207b83eb8bc3532d7193bce333c0fe976f77ab582c8bfe9f05d4d",
+      "date": "2002-05-17T12:31:09Z",
+      "subject": "[BioC] bug fix",
+      "subject_clean": "[BioC] bug fix",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "hi! i fixed a bug in the function read.affy (which is called by the subset \nmethod \"[\"). FYI, the problem arose because \n\nclass(data.frame(x=1:10,y=1:10)[,1])\n\nis NULL. i assumed it would be data.frame. as a consequence i was creating \na phenoData object with a non data.frame object in the pData slot.\n\nto fix it i just did:\n\ndata.frame(class(data.frame(x=1:10,y=1:10)[,1]) )\n\ni hope this doesn't offend the real programmers.\n\nRafael",
+      "body_snippet": "hi! i fixed a bug in the function read.affy (which is called by the subset \nmethod \"[\"). FYI, the problem arose because \n\nclass(data.frame(x=1:10,y=1:10)[,1])\n\nis NULL. i assumed it would be data.fram",
+      "thread_id": "thread-ca0c33c83ae0",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-7e5e5bb3c9ec",
+      "message_id": "<NCBBINOMKKMHAIKIJJODCEABCGAA.jcm@maths.uq.edu.au>",
+      "from_name": "Jess Mar",
+      "from_email_hash": "fcd60b1896579d15b7ea4537e9598b50f467c779fba9e69a45d06ce14d305e53",
+      "date": "2002-05-20T09:47:08Z",
+      "subject": "[BioC] R and GeneSpring",
+      "subject_clean": "[BioC] R and GeneSpring",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi everyone,\n\nI'm wondering if anyone has made any attempts at interfacing R and\nGeneSpring? If you're familiar with GeneSpring, you'll know it can be done\nvia the External Program Interface. I've made a start, but was curious to\nknow if anyone has already got this working.\n\nBest wishes, Jess\n\n\n\n______________________________________________________________\n\nJess Mar\nDepartment of Mathematics &\nInstitute for Molecular Bioscience\tPhone: +617 3371 6493\nUniversity of Queensland \t\tEmail: j.mar@imb.uq.edu.au\nBrisbane Q  4072\t\t   \t\t\t jcm@maths.uq.edu.au\nAUSTRALIA\n______________________________________________________________",
+      "body_snippet": "Hi everyone,\n\nI'm wondering if anyone has made any attempts at interfacing R and\nGeneSpring? If you're familiar with GeneSpring, you'll know it can be done\nvia the External Program Interface. I've mad",
+      "thread_id": "thread-7e5e5bb3c9ec",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-dfb85d4ca714",
+      "message_id": "<20020520082114.I11651@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-05-20T12:21:14Z",
+      "subject": "[BioC] R and GeneSpring",
+      "subject_clean": "[BioC] R and GeneSpring",
+      "in_reply_to": "<NCBBINOMKKMHAIKIJJODCEABCGAA.jcm@maths.uq.edu.au>; from jcm@maths.uq.edu.au on Mon, May 20, 2002 at 07:47:08PM +1000",
+      "references": [
+        "<NCBBINOMKKMHAIKIJJODCEABCGAA.jcm@maths.uq.edu.au>"
+      ],
+      "body_plain": "On Mon, May 20, 2002 at 07:47:08PM +1000, Jess Mar wrote:\n> Hi everyone,\n> \n> I'm wondering if anyone has made any attempts at interfacing R and\n> GeneSpring? If you're familiar with GeneSpring, you'll know it can be done\n> via the External Program Interface. I've made a start, but was curious to\n> know if anyone has already got this working.\n\n  Not that I know of. I'm not sure what it would do though. Are you\n  thinking of accessing R functionality from within GeneSpring?\n\n  The most important part will probably be mapping between the different\n  data structures used (those in GeneSpring and those in R).\n\n  Good luck,\n    Robert\n\n\n> \n> Best wishes, Jess\n> \n> \n> \n> ______________________________________________________________\n> \n> Jess Mar\n> Department of Mathematics &\n> Institute for Molecular Bioscience\tPhone: +617 3371 6493\n> University of Queensland \t\tEmail: j.mar@imb.uq.edu.au\n> Brisbane Q  4072\t\t   \t\t\t jcm@maths.uq.edu.au\n> AUSTRALIA\n> ______________________________________________________________\n> \n> \n> \n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B28\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "On Mon, May 20, 2002 at 07:47:08PM +1000, Jess Mar wrote:\n> Hi everyone,\n> \n> I'm wondering if anyone has made any attempts at interfacing R and\n> GeneSpring? If you're familiar with GeneSpring, you'l",
+      "thread_id": "thread-7e5e5bb3c9ec",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-634966c3742f",
+      "message_id": "<87y9eeq4kv.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-05-20T14:25:20Z",
+      "subject": "[BioC] R and GeneSpring",
+      "subject_clean": "[BioC] R and GeneSpring",
+      "in_reply_to": "<NCBBINOMKKMHAIKIJJODCEABCGAA.jcm@maths.uq.edu.au>",
+      "references": [
+        "<NCBBINOMKKMHAIKIJJODCEABCGAA.jcm@maths.uq.edu.au>"
+      ],
+      "body_plain": ">>>>> \"jess\" == Jess Mar <jcm@maths.uq.edu.au> writes:\n\n\n    jess> I'm wondering if anyone has made any attempts at interfacing\n    jess> R and GeneSpring? If you're familiar with GeneSpring, you'll\n    jess> know it can be done via the External Program Interface. I've\n    jess> made a start, but was curious to know if anyone has already\n    jess> got this working.\n\nOther than the slick interface for annotation, what do you want from\nGeneSpring? \n\nbest,\n-tony\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my friday location is usually completely unpredictable.)",
+      "body_snippet": ">>>>> \"jess\" == Jess Mar <jcm@maths.uq.edu.au> writes:\n\n\n    jess> I'm wondering if anyone has made any attempts at interfacing\n    jess> R and GeneSpring? If you're familiar with GeneSpring, you'll\n ",
+      "thread_id": "thread-7e5e5bb3c9ec",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-68c39dce13e2",
+      "message_id": "<f05101003b90f3deb96ab@[150.203.199.52]>",
+      "from_name": "John Maindonald",
+      "from_email_hash": "28243693d2a1394c26b2fcd0554a0eef261c6013fc5637e2c42f32fb14e60162",
+      "date": "2002-05-21T00:12:29Z",
+      "subject": "[BioC] R and GeneSpring",
+      "subject_clean": "[BioC] R and GeneSpring",
+      "in_reply_to": "<20020520082114.I11651@jimmy.harvard.edu>",
+      "references": [
+        "<NCBBINOMKKMHAIKIJJODCEABCGAA.jcm@maths.uq.edu.au>",
+        "<20020520082114.I11651@jimmy.harvard.edu>"
+      ],
+      "body_plain": "A priority may be to move data easily between R and packages such\nas GeneSpring.\n\nIt would be useful to know how much of GeneSpring's functionality\nwill in due course be available in the Bioconductor bundle - most\nof it?\n\n>On Mon, May 20, 2002 at 07:47:08PM +1000, Jess Mar wrote:\n>>  Hi everyone,\n>>\n>>  I'm wondering if anyone has made any attempts at interfacing R and\n>>  GeneSpring? If you're familiar with GeneSpring, you'll know it can be done\n>>  via the External Program Interface. I've made a start, but was curious to\n>>  know if anyone has already got this working.\n>\n>   Not that I know of. I'm not sure what it would do though. Are you\n>   thinking of accessing R functionality from within GeneSpring?\n>\n>   The most important part will probably be mapping between the different\n>   data structures used (those in GeneSpring and those in R).\n>\n>   Good luck,\n>     Robert\n>\n>\n>>\n>>  Best wishes, Jess\n>>\n>>\n>>\n>>  ______________________________________________________________\n>>\n>>  Jess Mar\n>>  Department of Mathematics &\n>>  Institute for Molecular Bioscience\tPhone: +617 3371 6493\n>>  University of Queensland\t\tEmail: j.mar@imb.uq.edu.au\n>>  Brisbane Q  4072\t\t  \t\t\t jcm@maths.uq.edu.au\n>>  AUSTRALIA\n>>  ______________________________________________________________\n>>\n>>\n>>\n>>\n>>  _______________________________________________\n>>  Bioconductor mailing list\n>>  Bioconductor@stat.math.ethz.ch\n>>  http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>\n>--\n>+---------------------------------------------------------------------------+\n>| Robert Gentleman                 phone : (617) 632-5250                   |\n>| Associate Professor              fax:   (617)  632-2444                   |\n>| Department of Biostatistics      office: M1B28\n>| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n>+---------------------------------------------------------------------------+\n>_______________________________________________\n>Bioconductor mailing list\n>Bioconductor@stat.math.ethz.ch\n>http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n-- \nJohn Maindonald             email: john.maindonald@anu.edu.au\nphone : +61 2 (6125)3473    fax  : +61 2(6125)5549\nCentre for Bioinformation Science, Room 1194,\nJohn Dedman Mathematical Sciences Building (Building 27)\nAustralian National University, Canberra ACT 0200.",
+      "body_snippet": "A priority may be to move data easily between R and packages such\nas GeneSpring.\n\nIt would be useful to know how much of GeneSpring's functionality\nwill in due course be available in the Bioconductor ",
+      "thread_id": "thread-7e5e5bb3c9ec",
+      "thread_depth": 2,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-77da3282388e",
+      "message_id": "<87vg9iw8wh.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-05-21T02:07:42Z",
+      "subject": "[BioC] R and GeneSpring",
+      "subject_clean": "[BioC] R and GeneSpring",
+      "in_reply_to": "<f05101003b90f3deb96ab@[150.203.199.52]>",
+      "references": [
+        "<NCBBINOMKKMHAIKIJJODCEABCGAA.jcm@maths.uq.edu.au>",
+        "<20020520082114.I11651@jimmy.harvard.edu>",
+        "<f05101003b90f3deb96ab@[150.203.199.52]>"
+      ],
+      "body_plain": ">>>>> \"john\" == John Maindonald <john.maindonald@anu.edu.au> writes:\n\n    john> A priority may be to move data easily between R and packages such\n    john> as GeneSpring.\n\nsome of that currently exists, in various states in bioconductor or in\ncode snippets I'd like to add the next time I have time (written, not\nbioconductor-ready, so not really vapor).\n\n\n    john> It would be useful to know how much of GeneSpring's functionality\n    john> will in due course be available in the Bioconductor bundle - most\n    john> of it?\n\nI think that nearly all but some of the more interesting visual\ndisplays and annotation exist.\n\nbest,\n-tony\n\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my friday location is usually completely unpredictable.)",
+      "body_snippet": ">>>>> \"john\" == John Maindonald <john.maindonald@anu.edu.au> writes:\n\n    john> A priority may be to move data easily between R and packages such\n    john> as GeneSpring.\n\nsome of that currently exist",
+      "thread_id": "thread-7e5e5bb3c9ec",
+      "thread_depth": 3,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-61327fbec18b",
+      "message_id": "<000f01c20149$ea59cfb0$483d0cd8@toshibauser>",
+      "from_name": "Joshua Betcher",
+      "from_email_hash": "accece4a6dbd1352fadc2ef313f6af32c46b72d6d6fc3331724b618356a06fd5",
+      "date": "2002-05-22T04:34:07Z",
+      "subject": "[BioC] data swirl and the  tcltk  library...",
+      "subject_clean": "[BioC] data swirl and the  tcltk  library...",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "I have two questions, one which is very simple and the other which is\nprobably also.\n\n1)  When I attach marrayinput I get the following error when I attach tcltk:\n\n    Loading required package: tcltk\n    Error in firstlib(which.lib.loc, package) :\n        TCL_LIBRARY is not set\n\n>From what I know I need to set this variable.  Is there another package I\nneed?  If so what do I do once I get it?  If not, how would I overcome this\nerror?\n\n2)   Eventhough this error occurs I can still attach marryInput.  From here\nI ran the code data(swirl) and got the following error message:\n\nError: restore file may be from a newer version of R -- no data loaded\n\nCan anyone tell me how to fix this?\n\nThanks a lot everyone\nJosh",
+      "body_snippet": "I have two questions, one which is very simple and the other which is\nprobably also.\n\n1)  When I attach marrayinput I get the following error when I attach tcltk:\n\n    Loading required package: tcltk\n",
+      "thread_id": "thread-61327fbec18b",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-821ba7c2ccad",
+      "message_id": "<87adqshiub.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-05-22T05:06:36Z",
+      "subject": "[BioC] data swirl and the  tcltk  library...",
+      "subject_clean": "[BioC] data swirl and the  tcltk  library...",
+      "in_reply_to": "<000f01c20149$ea59cfb0$483d0cd8@toshibauser>",
+      "references": [
+        "<000f01c20149$ea59cfb0$483d0cd8@toshibauser>"
+      ],
+      "body_plain": ">>>>> \"joshua\" == Joshua Betcher <jb7gv@virginia.edu> writes:\n\n    joshua> I have two questions, one which is very simple and the other which is\n    joshua> probably also.\n\n    joshua> 1)  When I attach marrayinput I get the following error when I attach tcltk:\n\n    joshua>     Loading required package: tcltk\n    joshua>     Error in firstlib(which.lib.loc, package) :\n    joshua>         TCL_LIBRARY is not set\n\n    >> From what I know I need to set this variable.  Is there another package I\n    joshua> need?  If so what do I do once I get it?  If not, how would I overcome this\n    joshua> error?\n\nAre you running under MS Windows?  If not, does R have TCL/TK\nincorporated?\n\n    joshua> 2)   Eventhough this error occurs I can still attach marryInput.  From here\n    joshua> I ran the code data(swirl) and got the following error message:\n\n    joshua> Error: restore file may be from a newer version of R -- no data loaded\n\n    joshua> Can anyone tell me how to fix this?\n\nI think you might be using a version of R < 1.5.0?  (I messed up the\ninitial announcement, but it should be clear on the WWW site that\n1.4.1 and earlier won't quite work).\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my friday location is usually completely unpredictable.)",
+      "body_snippet": ">>>>> \"joshua\" == Joshua Betcher <jb7gv@virginia.edu> writes:\n\n    joshua> I have two questions, one which is very simple and the other which is\n    joshua> probably also.\n\n    joshua> 1)  When I atta",
+      "thread_id": "thread-61327fbec18b",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-f594ca7db9bf",
+      "message_id": "<20020522085111.A17611@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "46ea1fbf1dde6cd7ce00fc69b0ee2b1457b50e6b5c9e07bd3a465dc588db5dd1",
+      "date": "2002-05-22T06:51:11Z",
+      "subject": "[BioC] data swirl and the  tcltk  library...",
+      "subject_clean": "[BioC] data swirl and the  tcltk  library...",
+      "in_reply_to": "<000f01c20149$ea59cfb0$483d0cd8@toshibauser>; from jb7gv@virginia.edu on Wed, May 22, 2002 at 12:34:07AM -0400",
+      "references": [
+        "<000f01c20149$ea59cfb0$483d0cd8@toshibauser>"
+      ],
+      "body_plain": "On Wed, May 22, 2002 at 12:34:07AM -0400, Joshua Betcher wrote:\n> I have two questions, one which is very simple and the other which is\n> probably also.\n> \n> 1)  When I attach marrayinput I get the following error when I attach tcltk:\n> \n>     Loading required package: tcltk\n>     Error in firstlib(which.lib.loc, package) :\n>         TCL_LIBRARY is not set\n> \n> >From what I know I need to set this variable.  Is there another package I\n> need?  If so what do I do once I get it?  If not, how would I overcome this\n> error?\n\n\nI suspect this comes from the fact you do not have the package 'tcltk' installed...\nand from the fact you use Outlook as a mailer, I suspect you are reporting this\nfor the Windows version...\n\n\n\n\n\n> \n> 2)   Eventhough this error occurs I can still attach marryInput.  From here\n> I ran the code data(swirl) and got the following error message:\n> \n> Error: restore file may be from a newer version of R -- no data loaded\n\n\nraahhhh... again....\n\n\n> \n> Can anyone tell me how to fix this?\n> \n\n\nWe know what happens (sigh):this is a binary file and the CVS \nfor Bioconductor seems to be in 'gotcha mode' (i.e. screws up the binary files\non windows...)... we are working on it to get this fixed\n(if urgent need, I can send you the file).\n\n\n\nHopin' it helps,\n\n\n\nL.\n\n\n\n\t\n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tD-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "On Wed, May 22, 2002 at 12:34:07AM -0400, Joshua Betcher wrote:\n> I have two questions, one which is very simple and the other which is\n> probably also.\n> \n> 1)  When I attach marrayinput I get the fo",
+      "thread_id": "thread-61327fbec18b",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-580f2824ac60",
+      "message_id": "<Pine.SOL.4.20.0205220511360.11393-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-05-22T09:12:00Z",
+      "subject": "[BioC] data swirl and the  tcltk  library...",
+      "subject_clean": "[BioC] data swirl and the  tcltk  library...",
+      "in_reply_to": "<20020522085111.A17611@giraffa.cbs.dtu.dk>",
+      "references": [],
+      "body_plain": "> We know what happens (sigh):this is a binary file and the CVS \n> for Bioconductor seems to be in 'gotcha mode' (i.e. screws up the binary files\n> on windows...)... we are working on it to get this fixed\n> (if urgent need, I can send you the file).\n\nIt is no longer a CVS problem - the code is fixed in CVS.  The windows\nbuilds need to be redone.",
+      "body_snippet": "> We know what happens (sigh):this is a binary file and the CVS \n> for Bioconductor seems to be in 'gotcha mode' (i.e. screws up the binary files\n> on windows...)... we are working on it to get this f",
+      "thread_id": "thread-61327fbec18b",
+      "thread_depth": 2,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-6afb6231dd34",
+      "message_id": "<87vg9ehopv.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-05-23T15:24:12Z",
+      "subject": "[BioC] marrayPlot",
+      "subject_clean": "[BioC] marrayPlot",
+      "in_reply_to": "<000001c202b8$79957070$05d4ee82@walker>",
+      "references": [
+        "<000001c202b8$79957070$05d4ee82@walker>"
+      ],
+      "body_plain": "Is HTML mail really understandable?  Parse the following.  You might\ntry turning it off, else someone else can help you.\n\n>>>>> \"niklas\" == Niklas Nordquist <niklas.nordquist@genpat.uu.se> writes:\n\n    niklas> <html xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" xmlns=\"http://www.w3.org/TR/REC-html40\">\n    niklas> <head>\n    niklas> <META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=us-ascii\">\n\n\n    niklas> <meta name=ProgId content=Word.Document>\n    niklas> <meta name=Generator content=\"Microsoft Word 10\">\n    niklas> <meta name=Originator content=\"Microsoft Word 10\">\n    niklas> <link rel=File-List href=\"cid:filelist.xml@01C202C9.3D0190B0\">\n    niklas> <!--[if gte mso 9]><xml>\n    niklas>  <o:OfficeDocumentSettings>\n    niklas>   <o:DoNotRelyOnCSS/>\n    niklas>  </o:OfficeDocumentSettings>\n    niklas> </xml><![endif]--><!--[if gte mso 9]><xml>\n    niklas>  <w:WordDocument>\n    niklas>   <w:SpellingState>Clean</w:SpellingState>\n    niklas>   <w:GrammarState>Clean</w:GrammarState>\n    niklas>   <w:DocumentKind>DocumentEmail</w:DocumentKind>\n    niklas>   <w:EnvelopeVis/>\n    niklas>   <w:Compatibility>\n    niklas>    <w:BreakWrappedTables/>\n    niklas>    <w:SnapToGridInCell/>\n    niklas>    <w:WrapTextWithPunct/>\n    niklas>    <w:UseAsianBreakRules/>\n    niklas>   </w:Compatibility>\n    niklas>   <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>\n    niklas>  </w:WordDocument>\n    niklas> </xml><![endif]-->\n    niklas> <style>\n    niklas> <!--\n    niklas>  /* Style Definitions */\n    niklas>  p.MsoNormal, li.MsoNormal, div.MsoNormal\n    niklas> \t{mso-style-parent:\"\";\n    niklas> \tmargin:0in;\n    niklas> \tmargin-bottom:.0001pt;\n    niklas> \tmso-pagination:widow-orphan;\n    niklas> \tfont-size:12.0pt;\n    niklas> \tfont-family:\"Times New Roman\";\n    niklas> \tmso-fareast-font-family:\"Times New Roman\";}\n    niklas> a:link, span.MsoHyperlink\n    niklas> \t{color:blue;\n    niklas> \ttext-decoration:underline;\n    niklas> \ttext-underline:single;}\n    niklas> a:visited, span.MsoHyperlinkFollowed\n    niklas> \t{color:purple;\n    niklas> \ttext-decoration:underline;\n    niklas> \ttext-underline:single;}\n    niklas> span.EmailStyle17\n    niklas> \t{mso-style-type:personal-compose;\n    niklas> \tmso-style-noshow:yes;\n    niklas> \tmso-ansi-font-size:10.0pt;\n    niklas> \tmso-bidi-font-size:10.0pt;\n    niklas> \tfont-family:Arial;\n    niklas> \tmso-ascii-font-family:Arial;\n    niklas> \tmso-hansi-font-family:Arial;\n    niklas> \tmso-bidi-font-family:Arial;\n    niklas> \tcolor:windowtext;}\n    niklas> span.SpellE\n    niklas> \t{mso-style-name:\"\";\n    niklas> \tmso-spl-e:yes;}\n    niklas> span.GramE\n    niklas> \t{mso-style-name:\"\";\n    niklas> \tmso-gram-e:yes;}\n    niklas> @page Section1\n    niklas> \t{size:8.5in 11.0in;\n    niklas> \tmargin:1.0in 1.25in 1.0in 1.25in;\n    niklas> \tmso-header-margin:.5in;\n    niklas> \tmso-footer-margin:.5in;\n    niklas> \tmso-paper-source:0;}\n    niklas> div.Section1\n    niklas> \t{page:Section1;}\n    --> \n    niklas> </style>\n    niklas> <!--[if gte mso 10]>\n    niklas> <style>\n    niklas>  /* Style Definitions */ \n    niklas>  table.MsoNormalTable\n    niklas> \t{mso-style-name:\"Table Normal\";\n    niklas> \tmso-tstyle-rowband-size:0;\n    niklas> \tmso-tstyle-colband-size:0;\n    niklas> \tmso-style-noshow:yes;\n    niklas> \tmso-style-parent:\"\";\n    niklas> \tmso-padding-alt:0in 5.4pt 0in 5.4pt;\n    niklas> \tmso-para-margin:0in;\n    niklas> \tmso-para-margin-bottom:.0001pt;\n    niklas> \tmso-pagination:widow-orphan;\n    niklas> \tfont-size:10.0pt;\n    niklas> \tfont-family:\"Times New Roman\";}\n    niklas> </style>\n    niklas> <![endif]-->\n    niklas> </head>\n\n    niklas> <body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>\n\n    niklas> <div class=Section1>\n\n    niklas> <p class=MsoNormal><font size=2 face=Arial><span lang=SV style='font-size:10.0pt;\n    niklas> font-family:Arial;mso-ansi-language:SV'>Hi,<o:p></o:p></span></font></p>\n\n    niklas> <p class=MsoNormal><font size=2 face=Arial><span lang=SV style='font-size:10.0pt;\n    niklas> font-family:Arial;mso-ansi-language:SV'><o:p>&nbsp;</o:p></span></font></p>\n\n    niklas> <p class=MsoNormal><font size=2 face=Arial><span style='font-size:10.0pt;\n    niklas> font-family:Arial'>I&#8217;ve just started <span class=GramE>using &#8221;</span>R&#8221;\n    niklas> with the <span class=SpellE>bioconductor</span>-packages. I&#8217;m now trying\n    niklas> to <span class=SpellE>analyse</span> our <span class=SpellE>cDNA</span>-array\n    niklas> data.<o:p></o:p></span></font></p>\n\n    niklas> <p class=MsoNormal><font size=2 face=Arial><span style='font-size:10.0pt;\n    niklas> font-family:Arial'>Using the function &#8220;<span class=SpellE>read.Spot</span>&#8221;\n    niklas> I&#8217;ve managed to import my data from a tab separated file. After this,\n    niklas> I&#8217;ve used the normalization function &#8220;<span class=SpellE><span\n    niklas> class=GramE>maNormMain</span></span><span class=GramE>(</span><span\n    niklas> class=SpellE>mbatch</span>=TOR493, <span class=SpellE>f.loc</span>=list(<span\n    niklas> class=SpellE>maNormLoess</span>(x=&quot;<span class=SpellE>maA</span>&quot;,\n    niklas> y=&quot;maM&quot;, z=NULL, w=NULL, subset=TRUE, span=0.4)), <span class=SpellE>f.scale</span>=NULL,\n    niklas> <span class=SpellE>a.loc</span>=<span class=SpellE>maCompNormEq</span>(), <span\n    niklas> class=SpellE>a.scale</span>=<span class=SpellE>maCompNormEq</span>(),\n    niklas> echo=FALSE)&#8221;.<o:p></o:p></span></font></p>\n\n    niklas> <p class=MsoNormal><font size=2 face=Arial><span style='font-size:10.0pt;\n    niklas> font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>\n\n    niklas> <p class=MsoNormal><font size=2 face=Arial><span style='font-size:10.0pt;\n    niklas> font-family:Arial'>So far everything seems to be fine, but when I try to\n    niklas> visualize my results with &#8220;<span class=GramE>maDiagnPlots1(</span><span\n    niklas> class=SpellE>mraw</span>=TOR493, title=NULL, save=FALSE)&#8221;,<o:p></o:p></span></font></p>\n\n    niklas> <p class=MsoNormal><font size=2 face=Arial><span style='font-size:10.0pt;\n    niklas> font-family:Arial'>I get an error message &#8220;Error in <span class=GramE>rep(</span>NA,\n    niklas> <span class=SpellE>maNspots</span>(L)) : invalid number of copies in\n    niklas> &quot;rep&quot;&#8221;. I don&#8217;t understand this error message. What could\n    niklas> be wrong?<o:p></o:p></span></font></p>\n\n    niklas> <p class=MsoNormal><font size=2 face=Arial><span style='font-size:10.0pt;\n    niklas> font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>\n\n    niklas> <p class=MsoNormal><font size=2 face=Arial><span style='font-size:10.0pt;\n    niklas> font-family:Arial'>I&#8217;d appreciate if someone who has more experience than\n    niklas> me could give me any suggestions.<o:p></o:p></span></font></p>\n\n    niklas> <p class=MsoNormal><font size=2 face=Arial><span style='font-size:10.0pt;\n    niklas> font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>\n\n    niklas> <p class=MsoNormal><font size=2 face=Arial><span style='font-size:10.0pt;\n    niklas> font-family:Arial'>Regards,<o:p></o:p></span></font></p>\n\n    niklas> <p class=MsoNormal><font size=2 face=Arial><span style='font-size:10.0pt;\n    niklas> font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>\n\n    niklas> <p class=MsoNormal><font size=2 face=Arial><span style='font-size:10.0pt;\n    niklas> font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>\n\n    niklas> </div>\n\n    niklas> </body>\n\n    niklas> </html>\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my friday location is usually completely unpredictable.)",
+      "body_snippet": "Is HTML mail really understandable?  Parse the following.  You might\ntry turning it off, else someone else can help you.\n\n>>>>> \"niklas\" == Niklas Nordquist <niklas.nordquist@genpat.uu.se> writes:\n\n  ",
+      "thread_id": "thread-08086d08415d",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-556861eaba7c",
+      "message_id": "<Pine.SOL.4.31.0205231255280.18257-100000@shelob.Berkeley.EDU>",
+      "from_name": "Sandrine Dudoit",
+      "from_email_hash": "ae24e16d9b77568c82aebe9ec46f28ffe28989a4eb18e68fa9273758b0117d09",
+      "date": "2002-05-23T19:56:53Z",
+      "subject": "[BioC] marrayPlot",
+      "subject_clean": "[BioC] marrayPlot",
+      "in_reply_to": "<000001c202b8$79957070$05d4ee82@walker>",
+      "references": [],
+      "body_plain": "Hi Niklas,\n\nI've noticed some problems with  maDiagnPlots1 in windows, but not the\none you are referring to. I'll look into it.\n\nBest,\nSandrine\n\nOn Fri, 24 May 2002, Niklas Nordquist wrote:\n\n> Hi,\n>\n> I've just started using \"R\" with the bioconductor-packages. I'm now\n> trying to analyse our cDNA-array data.\n> Using the function \"read.Spot\" I've managed to import my data from a tab\n> separated file. After this, I've used the normalization function\n> \"maNormMain(mbatch=TOR493, f.loc=list(maNormLoess(x=\"maA\", y=\"maM\",\n> z=NULL, w=NULL, subset=TRUE, span=0.4)), f.scale=NULL,\n> a.loc=maCompNormEq(), a.scale=maCompNormEq(), echo=FALSE)\".\n>\n> So far everything seems to be fine, but when I try to visualize my\n> results with \"maDiagnPlots1(mraw=TOR493, title=NULL, save=FALSE)\",\n> I get an error message \"Error in rep(NA, maNspots(L)) : invalid number\n> of copies in \"rep\"\". I don't understand this error message. What could\n> be wrong?\n>\n> I'd appreciate if someone who has more experience than me could give me\n> any suggestions.\n>\n> Regards,\n>\n>\n>",
+      "body_snippet": "Hi Niklas,\n\nI've noticed some problems with  maDiagnPlots1 in windows, but not the\none you are referring to. I'll look into it.\n\nBest,\nSandrine\n\nOn Fri, 24 May 2002, Niklas Nordquist wrote:\n\n> Hi,\n>\n>",
+      "thread_id": "thread-08086d08415d",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-08086d08415d",
+      "message_id": "<000001c202b8$79957070$05d4ee82@walker>",
+      "from_name": "Niklas Nordquist",
+      "from_email_hash": "7f8dd21578e754b71b17fcce0a9166391ff38e6dfc50ada8423a0e60e284e67e",
+      "date": "2002-05-24T00:18:05Z",
+      "subject": "[BioC] marrayPlot",
+      "subject_clean": "[BioC] marrayPlot",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_0001_01C202C9.3D1E4070\nContent-Type: text/plain;\n\tcharset=\"us-ascii\"\nContent-Transfer-Encoding: 7bit\n\nHi,\n \nI've just started using \"R\" with the bioconductor-packages. I'm now\ntrying to analyse our cDNA-array data.\nUsing the function \"read.Spot\" I've managed to import my data from a tab\nseparated file. After this, I've used the normalization function\n\"maNormMain(mbatch=TOR493, f.loc=list(maNormLoess(x=\"maA\", y=\"maM\",\nz=NULL, w=NULL, subset=TRUE, span=0.4)), f.scale=NULL,\na.loc=maCompNormEq(), a.scale=maCompNormEq(), echo=FALSE)\".\n \nSo far everything seems to be fine, but when I try to visualize my\nresults with \"maDiagnPlots1(mraw=TOR493, title=NULL, save=FALSE)\",\nI get an error message \"Error in rep(NA, maNspots(L)) : invalid number\nof copies in \"rep\"\". I don't understand this error message. What could\nbe wrong?\n \nI'd appreciate if someone who has more experience than me could give me\nany suggestions.\n \nRegards,\n \n \n\n------=_NextPart_000_0001_01C202C9.3D1E4070\nContent-Type: text/html;\n\tcharset=\"us-ascii\"\nContent-Transfer-Encoding: quoted-printable\n\n<html xmlns:o=3D\"urn:schemas-microsoft-com:office:office\" =\nxmlns:w=3D\"urn:schemas-microsoft-com:office:word\" =\nxmlns=3D\"http://www.w3.org/TR/REC-html40\">\n\n<head>\n<META HTTP-EQUIV=3D\"Content-Type\" CONTENT=3D\"text/html; =\ncharset=3Dus-ascii\">\n\n\n<meta name=3DProgId content=3DWord.Document>\n<meta name=3DGenerator content=3D\"Microsoft Word 10\">\n<meta name=3DOriginator content=3D\"Microsoft Word 10\">\n<link rel=3DFile-List href=3D\"cid:filelist.xml@01C202C9.3D0190B0\">\n<!--[if gte mso 9]><xml>\n <o:OfficeDocumentSettings>\n  <o:DoNotRelyOnCSS/>\n </o:OfficeDocumentSettings>\n</xml><![endif]--><!--[if gte mso 9]><xml>\n <w:WordDocument>\n  <w:SpellingState>Clean</w:SpellingState>\n  <w:GrammarState>Clean</w:GrammarState>\n  <w:DocumentKind>DocumentEmail</w:DocumentKind>\n  <w:EnvelopeVis/>\n  <w:Compatibility>\n   <w:BreakWrappedTables/>\n   <w:SnapToGridInCell/>\n   <w:WrapTextWithPunct/>\n   <w:UseAsianBreakRules/>\n  </w:Compatibility>\n  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>\n </w:WordDocument>\n</xml><![endif]-->\n<style>\n<!--\n /* Style Definitions */\n p.MsoNormal, li.MsoNormal, div.MsoNormal\n\t{mso-style-parent:\"\";\n\tmargin:0in;\n\tmargin-bottom:.0001pt;\n\tmso-pagination:widow-orphan;\n\tfont-size:12.0pt;\n\tfont-family:\"Times New Roman\";\n\tmso-fareast-font-family:\"Times New Roman\";}\na:link, span.MsoHyperlink\n\t{color:blue;\n\ttext-decoration:underline;\n\ttext-underline:single;}\na:visited, span.MsoHyperlinkFollowed\n\t{color:purple;\n\ttext-decoration:underline;\n\ttext-underline:single;}\nspan.EmailStyle17\n\t{mso-style-type:personal-compose;\n\tmso-style-noshow:yes;\n\tmso-ansi-font-size:10.0pt;\n\tmso-bidi-font-size:10.0pt;\n\tfont-family:Arial;\n\tmso-ascii-font-family:Arial;\n\tmso-hansi-font-family:Arial;\n\tmso-bidi-font-family:Arial;\n\tcolor:windowtext;}\nspan.SpellE\n\t{mso-style-name:\"\";\n\tmso-spl-e:yes;}\nspan.GramE\n\t{mso-style-name:\"\";\n\tmso-gram-e:yes;}\n@page Section1\n\t{size:8.5in 11.0in;\n\tmargin:1.0in 1.25in 1.0in 1.25in;\n\tmso-header-margin:.5in;\n\tmso-footer-margin:.5in;\n\tmso-paper-source:0;}\ndiv.Section1\n\t{page:Section1;}\n-->\n</style>\n<!--[if gte mso 10]>\n<style>\n /* Style Definitions */=20\n table.MsoNormalTable\n\t{mso-style-name:\"Table Normal\";\n\tmso-tstyle-rowband-size:0;\n\tmso-tstyle-colband-size:0;\n\tmso-style-noshow:yes;\n\tmso-style-parent:\"\";\n\tmso-padding-alt:0in 5.4pt 0in 5.4pt;\n\tmso-para-margin:0in;\n\tmso-para-margin-bottom:.0001pt;\n\tmso-pagination:widow-orphan;\n\tfont-size:10.0pt;\n\tfont-family:\"Times New Roman\";}\n</style>\n<![endif]-->\n</head>\n\n<body lang=3DEN-US link=3Dblue vlink=3Dpurple =\nstyle=3D'tab-interval:.5in'>\n\n<div class=3DSection1>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span lang=3DSV =\nstyle=3D'font-size:10.0pt;\nfont-family:Arial;mso-ansi-language:SV'>Hi,<o:p></o:p></span></font></p>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span lang=3DSV =\nstyle=3D'font-size:10.0pt;\nfont-family:Arial;mso-ansi-language:SV'><o:p>&nbsp;</o:p></span></font></=\np>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span =\nstyle=3D'font-size:10.0pt;\nfont-family:Arial'>I&#8217;ve just started <span class=3DGramE>using =\n&#8221;</span>R&#8221;\nwith the <span class=3DSpellE>bioconductor</span>-packages. I&#8217;m =\nnow trying\nto <span class=3DSpellE>analyse</span> our <span =\nclass=3DSpellE>cDNA</span>-array\ndata.<o:p></o:p></span></font></p>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span =\nstyle=3D'font-size:10.0pt;\nfont-family:Arial'>Using the function &#8220;<span =\nclass=3DSpellE>read.Spot</span>&#8221;\nI&#8217;ve managed to import my data from a tab separated file. After =\nthis,\nI&#8217;ve used the normalization function &#8220;<span =\nclass=3DSpellE><span\nclass=3DGramE>maNormMain</span></span><span class=3DGramE>(</span><span\nclass=3DSpellE>mbatch</span>=3DTOR493, <span =\nclass=3DSpellE>f.loc</span>=3Dlist(<span\nclass=3DSpellE>maNormLoess</span>(x=3D&quot;<span =\nclass=3DSpellE>maA</span>&quot;,\ny=3D&quot;maM&quot;, z=3DNULL, w=3DNULL, subset=3DTRUE, span=3D0.4)), =\n<span class=3DSpellE>f.scale</span>=3DNULL,\n<span class=3DSpellE>a.loc</span>=3D<span =\nclass=3DSpellE>maCompNormEq</span>(), <span\nclass=3DSpellE>a.scale</span>=3D<span =\nclass=3DSpellE>maCompNormEq</span>(),\necho=3DFALSE)&#8221;.<o:p></o:p></span></font></p>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span =\nstyle=3D'font-size:10.0pt;\nfont-family:Arial'><o:p>&nbsp;</o:p></span></font></p>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span =\nstyle=3D'font-size:10.0pt;\nfont-family:Arial'>So far everything seems to be fine, but when I try to\nvisualize my results with &#8220;<span =\nclass=3DGramE>maDiagnPlots1(</span><span\nclass=3DSpellE>mraw</span>=3DTOR493, title=3DNULL, =\nsave=3DFALSE)&#8221;,<o:p></o:p></span></font></p>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span =\nstyle=3D'font-size:10.0pt;\nfont-family:Arial'>I get an error message &#8220;Error in <span =\nclass=3DGramE>rep(</span>NA,\n<span class=3DSpellE>maNspots</span>(L)) : invalid number of copies in\n&quot;rep&quot;&#8221;. I don&#8217;t understand this error message. =\nWhat could\nbe wrong?<o:p></o:p></span></font></p>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span =\nstyle=3D'font-size:10.0pt;\nfont-family:Arial'><o:p>&nbsp;</o:p></span></font></p>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span =\nstyle=3D'font-size:10.0pt;\nfont-family:Arial'>I&#8217;d appreciate if someone who has more =\nexperience than\nme could give me any suggestions.<o:p></o:p></span></font></p>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span =\nstyle=3D'font-size:10.0pt;\nfont-family:Arial'><o:p>&nbsp;</o:p></span></font></p>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span =\nstyle=3D'font-size:10.0pt;\nfont-family:Arial'>Regards,<o:p></o:p></span></font></p>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span =\nstyle=3D'font-size:10.0pt;\nfont-family:Arial'><o:p>&nbsp;</o:p></span></font></p>\n\n<p class=3DMsoNormal><font size=3D2 face=3DArial><span =\nstyle=3D'font-size:10.0pt;\nfont-family:Arial'><o:p>&nbsp;</o:p></span></font></p>\n\n</div>\n\n</body>\n\n</html>\n\n------=_NextPart_000_0001_01C202C9.3D1E4070--",
+      "body_snippet": "This is a multi-part message in MIME format.\n\n------=_NextPart_000_0001_01C202C9.3D1E4070\nContent-Type: text/plain;\n\tcharset=\"us-ascii\"\nContent-Transfer-Encoding: 7bit\n\nHi,\n \nI've just started using \"",
+      "thread_id": "thread-08086d08415d",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-fbc8c9b7b6d3",
+      "message_id": "<Pine.SOL.4.20.0205241216000.16538-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-05-24T16:17:09Z",
+      "subject": "[BioC] Re: Bioconductor and Spot question",
+      "subject_clean": "[BioC] Re: Bioconductor and Spot question",
+      "in_reply_to": "<Pine.LNX.4.43.0205240911030.9777@hymn09.u.washington.edu>",
+      "references": [],
+      "body_plain": "(pardon the top posting here)\nDick ...\n\nI'm forwarding this to the Bioconductor mailing list as I honestly don't\nknow the answer to this question, but am sure someone here will. :)\n\n-Jeff\n\nOn Fri, 24 May 2002, Dick Beyer wrote:\n\n> I am trying out Spot and the Bioconductor package.  I like it very much.  However, I am worried about the processing of the tiff files by Spot.  Do you know if Spot can handle the GEL files that are output by the Molecular Dynamics scanner?  These are special format tiff images with the following characteristics:\n> \n> Gel files are special format 16 bit TIFF files. Each color is saved as a\n> separate 16 bit grey scale image.  In addition, due to the large dynamic\n> range of the scanner (about 6-7 logs) and the limited dynamic range of a 16\n> bit image (0-65,000), the intensity data is saved as the square root of the\n> intensity divided by a scaling factor.  The single color images can be\n> viewed in some imaging software (not all image display software allows the\n> display of 16 bit TIFF images) as grey scale images.  However, unless the\n> software was written to understand the MD format (e.g. Was written for\n> scientific applications) it is unlikely that the relative intensity values\n> displayed by the software will be the correct values.\n> \n> If you have any information about these tiff files and Spot, I would greatly appreciate your sharing that with me.\n> \n> Thanks,\n> Dick\n> \n> *******************************************************************************\n> Richard P. Beyer, Ph.D.\tUniversity of Washington\n> Tel.:(206) 616 7378\tEnvironmental Health, Box 354695\n> Fax: (206) 685 4696\t4225 Roosevelt Way NE, # 100\n> \t\t\tSeattle, WA 98105-6099\n> *******************************************************************************\n> \n> \n> \n> \n> \n> \n> \n> \n> \n> \n> \n> \n>",
+      "body_snippet": "(pardon the top posting here)\nDick ...\n\nI'm forwarding this to the Bioconductor mailing list as I honestly don't\nknow the answer to this question, but am sure someone here will. :)\n\n-Jeff\n\nOn Fri, 24 ",
+      "thread_id": "thread-fbc8c9b7b6d3",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-3cfb716d3533",
+      "message_id": "<EDENKBODIJCJBGABHJIPKELECDAA.nbirkett@rogers.com>",
+      "from_name": "Nicholas Birkett (@rogers account)",
+      "from_email_hash": "68eb5d4ce18109817c498880dcb5e013314363cdeaedc0808774744166276063",
+      "date": "2002-05-26T14:32:35Z",
+      "subject": "[BioC] Tex files",
+      "subject_clean": "[BioC] Tex files",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "After a very interesting workshop from Terry Speed's group, I have\ndownloaded the Bioconductor suite of programmes.  They installed fine and I\ncan run the seminar examples with no problem.  HOwever, I am trying to print\nout the manual information to learn more about the various utilities.  I\nwould like to print out the LaTex versions.  HOwever, I am not a LaTex user.\nI have installed the latest Tex and LaTex programmes on my SUN computer\n(following the CTAN installation instructions).  They work fine with my\nsimple sample files.  However, every time I try to run it on the Tex files\nwith your distribution, it blows up on the first line with an error:\n'!Undefined Control Sequence'.\n\nI suspect that, in my ignorance of LaTex, I am probably doing something\ndumb.  Any advice would be appreciated.  Alternatively, do you have the Tex\nfiles in another format (eg. pdf or ps)?  Or, do you have a consolidated\nmanual describing the programmes and how the relate to each other?\n\nMany thanks for your help.\n\n========================================================================\nNicholas Birkett, M.D., M.Sc.\nEpidemiology and Community Medicine\nUniversity of Ottawa                        nbirkett@zeus.med.uottawa.ca\n451 Smyth Rd.,                              (613)-562-5800 x 8289 (voice)\nOttawa, Ontario,                            (613)-562-5465          (fax)\nCanada.   K1H 8M5\n=========================================================================",
+      "body_snippet": "After a very interesting workshop from Terry Speed's group, I have\ndownloaded the Bioconductor suite of programmes.  They installed fine and I\ncan run the seminar examples with no problem.  HOwever, I",
+      "thread_id": "thread-3cfb716d3533",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-61311061b982",
+      "message_id": "<GF1ZJGJIJIIHWV53OM878631QOKEMKCB.3cf1bb8f@cyto0012>",
+      "from_name": "holki659@student.otago.ac.nz",
+      "from_email_hash": "55470d838f141c755c791808a5958ecd097f86736cf05ff7c7d3ae572493bd44",
+      "date": "2002-05-27T04:52:31Z",
+      "subject": "[BioC] multtest library load problem",
+      "subject_clean": "[BioC] multtest library load problem",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi all,\n\nI am running the Windows version of Bioconductor under R 1.50.  Most packages work OK but I and am having trouble \nwith the \"multtest\" package.\n\nI have downloaded the Win32 zip file for \"multtest\" and installed it from the R menu.  This zip is intact and the files and \ndirectories seem to be in order under the R library directory.\n\nHowever when I attempt to load the library I get the following error:\n\n>library(multtest)\nError in library.dynam(\"multtest\", packname, libname) : \n        dynamic library `multtest' not found\nError in library(multtest) : .First.lib failed\n\nAny ideas? \n\n\nKieran Holland\nChristhchurch Cancer Genetics Research Group",
+      "body_snippet": "Hi all,\n\nI am running the Windows version of Bioconductor under R 1.50.  Most packages work OK but I and am having trouble \nwith the \"multtest\" package.\n\nI have downloaded the Win32 zip file for \"mult",
+      "thread_id": "thread-61311061b982",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-1b2efedccb04",
+      "message_id": "<200205272331.QAA28669@mail.au.tsinghua.edu.cn>",
+      "from_name": "HYing",
+      "from_email_hash": "67ceaafeec0124136509d7df35c4e9d7e8a084b60db33af5f06b36cfc0ed2e25",
+      "date": "2002-05-27T08:03:09Z",
+      "subject": "[BioC] Re: Bioconductor digest, Vol 1 #41 - 4 msgs",
+      "subject_clean": "[BioC] Re: Bioconductor digest, Vol 1 #41 - 4 msgs",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This is a multi-part message in MIME format.\n\n--=====000_Dragon111552026365_=====\nContent-Type: text/plain;\n      charset=\"GB2312\"\nContent-Transfer-Encoding: 7bit\n\nbioconductor-request\n\n\n\n>Send Bioconductor mailing list submissions to\n>\tbioconductor@stat.math.ethz.ch\n>\n>To subscribe or unsubscribe via the World Wide Web, visit\n>\thttp://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>or, via email, send a message with subject or body 'help' to\n>\tbioconductor-request@stat.math.ethz.ch\n>\n>You can reach the person managing the list at\n>\tbioconductor-admin@stat.math.ethz.ch\n>\n>When replying, please edit your Subject line so it is more specific\n>than \"Re: Contents of Bioconductor digest...\"\n>\n>\n>Today's Topics:\n>\n>   1. data swirl and the  tcltk  library... (Joshua Betcher)\n>   2. Re: data swirl and the  tcltk  library... (A.J. Rossini)\n>   3. Re: data swirl and the  tcltk  library... (Laurent Gautier)\n>   4. Re: data swirl and the  tcltk  library... (Jeff Gentry)\n>\n>--__--__--\n>\n>Message: 1\n>From: \"Joshua Betcher\" <jb7gv@virginia.edu>\n>To: <bioconductor@stat.math.ethz.ch>\n>Date: Wed, 22 May 2002 00:34:07 -0400\n>Subject: [BioC] data swirl and the  tcltk  library...\n>\n>I have two questions, one which is very simple and the other which is\n>probably also.\n>\n>1)  When I attach marrayinput I get the following error when I attach tcltk:\n>\n>    Loading required package: tcltk\n>    Error in firstlib(which.lib.loc, package) :\n>        TCL_LIBRARY is not set\n>\n>From what I know I need to set this variable.  Is there another package I\n>need?  If so what do I do once I get it?  If not, how would I overcome this\n>error?\n>\n>2)   Eventhough this error occurs I can still attach marryInput.  From here\n>I ran the code data(swirl) and got the following error message:\n>\n>Error: restore file may be from a newer version of R -- no data loaded\n>\n>Can anyone tell me how to fix this?\n>\n>Thanks a lot everyone\n>Josh\n>\n>\n>\n>\n>\n>--__--__--\n>\n>Message: 2\n>To: \"Joshua Betcher\" <jb7gv@virginia.edu>\n>Cc: <bioconductor@stat.math.ethz.ch>\n>Subject: Re: [BioC] data swirl and the  tcltk  library...\n>Reply-To: rossini@u.washington.edu\n>From: rossini@blindglobe.net (A.J. Rossini)\n>Date: 21 May 2002 22:06:36 -0700\n>\n>>>>>> \"joshua\" == Joshua Betcher <jb7gv@virginia.edu> writes:\n>\n>    joshua> I have two questions, one which is very simple and the other which is\n>    joshua> probably also.\n>\n>    joshua> 1)  When I attach marrayinput I get the following error when I attach tcltk:\n>\n>    joshua>     Loading required package: tcltk\n>    joshua>     Error in firstlib(which.lib.loc, package) :\n>    joshua>         TCL_LIBRARY is not set\n>\n>    >> From what I know I need to set this variable.  Is there another package I\n>    joshua> need?  If so what do I do once I get it?  If not, how would I overcome this\n>    joshua> error?\n>\n>Are you running under MS Windows?  If not, does R have TCL/TK\n>incorporated?\n>\n>    joshua> 2)   Eventhough this error occurs I can still attach marryInput.  From here\n>    joshua> I ran the code data(swirl) and got the following error message:\n>\n>    joshua> Error: restore file may be from a newer version of R -- no data loaded\n>\n>    joshua> Can anyone tell me how to fix this?\n>\n>I think you might be using a version of R < 1.5.0?  (I messed up the\n>initial announcement, but it should be clear on the WWW site that\n>1.4.1 and earlier won't quite work).\n>\n>-- \n>A.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\n>U. of Washington Biostatistics\t\trossini@u.washington.edu\t\n>FHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n>-------------- http://software.biostat.washington.edu/ ----------------\n>FHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\n>UW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n>(my friday location is usually completely unpredictable.)\n>\n>\n>\n>--__--__--\n>\n>Message: 3\n>Date: Wed, 22 May 2002 08:51:11 +0200\n>From: Laurent Gautier <laurent@cbs.dtu.dk>\n>To: Joshua Betcher <jb7gv@virginia.edu>\n>Cc: bioconductor@stat.math.ethz.ch\n>Subject: Re: [BioC] data swirl and the  tcltk  library...\n>\n>On Wed, May 22, 2002 at 12:34:07AM -0400, Joshua Betcher wrote:\n>> I have two questions, one which is very simple and the other which is\n>> probably also.\n>> \n>> 1)  When I attach marrayinput I get the following error when I attach tcltk:\n>> \n>>     Loading required package: tcltk\n>>     Error in firstlib(which.lib.loc, package) :\n>>         TCL_LIBRARY is not set\n>> \n>> >From what I know I need to set this variable.  Is there another package I\n>> need?  If so what do I do once I get it?  If not, how would I overcome this\n>> error?\n>\n>\n>I suspect this comes from the fact you do not have the package 'tcltk' installed...\n>and from the fact you use Outlook as a mailer, I suspect you are reporting this\n>for the Windows version...\n>\n>\n>\n>\n>\n>> \n>> 2)   Eventhough this error occurs I can still attach marryInput.  From here\n>> I ran the code data(swirl) and got the following error message:\n>> \n>> Error: restore file may be from a newer version of R -- no data loaded\n>\n>\n>raahhhh... again....\n>\n>\n>> \n>> Can anyone tell me how to fix this?\n>> \n>\n>\n>We know what happens (sigh):this is a binary file and the CVS \n>for Bioconductor seems to be in 'gotcha mode' (i.e. screws up the binary files\n>on windows...)... we are working on it to get this fixed\n>(if urgent need, I can send you the file).\n>\n>\n>\n>Hopin' it helps,\n>\n>\n>\n>L.\n>\n>\n>\n>\t\n>--------------------------------------------------------------\n>Laurent Gautier\t\t\tCBS, Building 208, DTU\n>PhD. Student\t\t\tD-2800 Lyngby,Denmark\t\n>tel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent\n>\n>--__--__--\n>\n>Message: 4\n>Date: Wed, 22 May 2002 05:12:00 -0400 (EDT)\n>From: Jeff Gentry <jgentry@jimmy.harvard.edu>\n>To: Laurent Gautier <laurent@cbs.dtu.dk>\n>cc: Joshua Betcher <jb7gv@virginia.edu>, bioconductor@stat.math.ethz.ch\n>Subject: Re: [BioC] data swirl and the  tcltk  library...\n>\n>> We know what happens (sigh):this is a binary file and the CVS \n>> for Bioconductor seems to be in 'gotcha mode' (i.e. screws up the binary files\n>> on windows...)... we are working on it to get this fixed\n>> (if urgent need, I can send you the file).\n>\n>It is no longer a CVS problem - the code is fixed in CVS.  The windows\n>builds need to be redone.\n>\n>\n>\n>--__--__--\n>\n>_______________________________________________\n>Bioconductor mailing list\n>Bioconductor@stat.math.ethz.ch\n>http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>\n>\n>End of Bioconductor Digest\n\n= = = = = = = = = = = = = = = = = = = =\n\t\t\t\nBefore you require library tcltk, you need type Sys.putenv(\"TCL_LIBRARY\"=\"D:\\\\Tcl\\\\lib\\\\tcl8.3\") (If you have installed tcl software in PATH d:\\\\tcl) . \nIt seems there are lots of data cannot be loaded, such as golub.Rdata in multtest package. I have installed R version 1.5.0 in my Windows Platform, but it still told me \"Error: restore file may be from a newer version of R -- no data loaded\".\nThere seems some problems about geneplotter package, cPlot and cColor function cannot be executed correctly. And I found these functions both need \"plotData\" function, but there is not such function in R functions.\n\n\n\n\t\t\t\t \n               HYing\n               hying99@mails.tsinghua.edu.cn\n\t\t\t\t\t2002-05-27 \n\n--=====000_Dragon111552026365_=====\nContent-Type: image/gif;\n      name=\"PIKAQU.GIF\"\nContent-Transfer-Encoding: base64\nContent-Disposition: FoxmailIcon;\n      filename=\"PIKAQU.GIF\"\n\nR0lGODlhIAAgAKIAAFUAACoAAP9fAP+/AP+fAP//AAAAAACAgCH/C05FVFNDQVBFMi4wAwEAAAAh\n/g5CdWlsdCBieSBaaXBweQAh+QQBZAAHACwAAAAAIAAgAAAD/ni63P4wykmrveSYS7P5m/MdmWUQ\nwPiARkBkKAiU51AMbgCIgD0YqV5hOAgSfLHhrlG7BWzD6E1ATA4DK8EPKiUOtASBIRpaGQbH7m3A\nFggCUWwEQC8Quqgo/V6QR84fXFcfRGcFAH4QAIdjcFEaB3YCM3xLWYJqkmFAfIkMBm59OEKLQ25u\nYycBZUxubE84T1FhqDNiJQ89bLu8UJuULhIoaC/FL1o3qagTZ8bOAnypiBRj0M5hUkUfnitHLsZw\nX7vbFS1Fu8MEsGgtFy1Hu5MubJu4E6vWL/QEQNCTJi8AuCnGzobAEwA3DQwj8AgobhJATZKRwk0K\niBNSOODXCY6Dx48gQ35MAAAh+QQBZAAHACwAAAAAIAAgAAAD/ni63P4wykmrveSYS7P5m/MdmWUQ\nwPiARkBkKAiU51AMbgCIgD0YqV5hOAgSfLHhrlG7BWzD6E1ATA4DK8EPKiUOtASBIRpaGQbH7m3A\nFggCUWwEAFAPCVI6viCPnEFSLR9EZwUAfRB1cXYFYTN7S1lcjGFhQHuIDAZufDhCigVubmMnAWVM\nbmxPOE9RYaMzYiUPPWy2t1CWjy4SKGgvwC9aN6SjE2fByQJ7pIcUY8vJYVJFH5krRy7BcF+21hUt\nRba+BKtoLRctR7YCh+uWsxOm0S9sL0DL7SYvAG7A5zb6ndhnyZ+jZT/ecNjUTkYKNymuUUjhgMA3\nDhgzatyYAjEBADs=\n\n--=====000_Dragon111552026365_=====--",
+      "body_snippet": "This is a multi-part message in MIME format.\n\n--=====000_Dragon111552026365_=====\nContent-Type: text/plain;\n      charset=\"GB2312\"\nContent-Transfer-Encoding: 7bit\n\nbioconductor-request\n\n\n\n>Send Biocon",
+      "thread_id": "thread-1b2efedccb04",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-9d800b1fdcac",
+      "message_id": "<20020527111219.A10141@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "46ea1fbf1dde6cd7ce00fc69b0ee2b1457b50e6b5c9e07bd3a465dc588db5dd1",
+      "date": "2002-05-27T09:12:19Z",
+      "subject": "Problem with datasets (was: [BioC] Re: Bioconductor digest, Vol 1 #41 - 4 msgs)",
+      "subject_clean": "Problem with datasets (was: [BioC] Re: Bioconductor digest, Vol 1 #41 - 4 msgs)",
+      "in_reply_to": "<200205272331.QAA28669@mail.au.tsinghua.edu.cn>; from hying99@mails.tsinghua.edu.cn on Mon, May 27, 2002 at 04:03:09PM +0800",
+      "references": [
+        "<200205272331.QAA28669@mail.au.tsinghua.edu.cn>"
+      ],
+      "body_plain": "On Mon, May 27, 2002 at 04:03:09PM +0800, HYing wrote:\n> bioconductor-request\n> \n(cut)\n> \n> \n> \t\t\t\n> Before you require library tcltk, you need type Sys.putenv(\"TCL_LIBRARY\"=\"D:\\\\Tcl\\\\lib\\\\tcl8.3\") (If you have installed tcl software in PATH d:\\\\tcl) . \n> It seems there are lots of data cannot be loaded, such as golub.Rdata in multtest package. I have installed R version 1.5.0 in my Windows Platform, but it still told me \"Error: restore file may be from a newer version of R -- no data loaded\".\n\n\nYou may have to download and install the packages again (this can be done\nvery easily by using the script available on the download page). The\nWindows built had to be done again (and it was done in the second half of\nlast week).\n\nPlease let us know if you still experience problems witht the datasets.\n\n\n> There seems some problems about geneplotter package, cPlot and cColor function cannot be executed correctly. And I found these functions both need \"plotData\" function, but there is not such function in R functions.\n\nI might be wrong, but it seems that cPlot and cColor call a function called\n\".plotData\" (rather than \"plotData\"). Could you describe what are the problems\nwith these functions ?\n\n\n\n\nThanks for reporting,\n\n\n\nLaurent\n\n\n\n> \n> \n> \n> \t\t\t\t \n>                HYing\n>                hying99@mails.tsinghua.edu.cn\n> \t\t\t\t\t2002-05-27 \n\n\n\n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tD-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "On Mon, May 27, 2002 at 04:03:09PM +0800, HYing wrote:\n> bioconductor-request\n> \n(cut)\n> \n> \n> \t\t\t\n> Before you require library tcltk, you need type Sys.putenv(\"TCL_LIBRARY\"=\"D:\\\\Tcl\\\\lib\\\\tcl8.3\") (I",
+      "thread_id": "thread-1b2efedccb04",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-ead527399ac2",
+      "message_id": "<20020528094700.Z51@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-05-28T13:47:00Z",
+      "subject": "[BioC] Tex files",
+      "subject_clean": "[BioC] Tex files",
+      "in_reply_to": "<EDENKBODIJCJBGABHJIPKELECDAA.nbirkett@rogers.com>; from nbirkett@rogers.com on Sun, May 26, 2002 at 10:32:35AM -0400",
+      "references": [
+        "<EDENKBODIJCJBGABHJIPKELECDAA.nbirkett@rogers.com>"
+      ],
+      "body_plain": "On Sun, May 26, 2002 at 10:32:35AM -0400, Nicholas Birkett (@rogers account) wrote:\n> After a very interesting workshop from Terry Speed's group, I have\n> downloaded the Bioconductor suite of programmes.  They installed fine and I\n> can run the seminar examples with no problem.  HOwever, I am trying to print\n> out the manual information to learn more about the various utilities.  I\n> would like to print out the LaTex versions.  HOwever, I am not a LaTex user.\n> I have installed the latest Tex and LaTex programmes on my SUN computer\n> (following the CTAN installation instructions).  They work fine with my\n> simple sample files.  However, every time I try to run it on the Tex files\n> with your distribution, it blows up on the first line with an error:\n> '!Undefined Control Sequence'.\n\n\n  I don't think that you want to do that.\n  I'm not quite sure what you want to do (or what platform you are on,\n  Unix, Windows, Macintosh?).\n  Finally, this is a question about R not about Bioconductor, since\n  all R packages have documentation. There is information available in\n  the R FAQ and in the Writing R Extensions manual.\n\n  On Unix, if I wanted to have pdf output for a particular package.\n  I would go to the directory just above it and\n  go:\n\n    R CMD Rd2dvi --pdf annotate\n\n  this would create a nice pdf version of all the man pages.\n\n  On Windows the procedure is a bit different.\n\n  Robert\n\n\n> \n> I suspect that, in my ignorance of LaTex, I am probably doing something\n> dumb.  Any advice would be appreciated.  Alternatively, do you have the Tex\n> files in another format (eg. pdf or ps)?  Or, do you have a consolidated\n> manual describing the programmes and how the relate to each other?\n> \n> Many thanks for your help.\n> \n> ========================================================================\n> Nicholas Birkett, M.D., M.Sc.\n> Epidemiology and Community Medicine\n> University of Ottawa                        nbirkett@zeus.med.uottawa.ca\n> 451 Smyth Rd.,                              (613)-562-5800 x 8289 (voice)\n> Ottawa, Ontario,                            (613)-562-5465          (fax)\n> Canada.   K1H 8M5\n> =========================================================================\n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B28\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "On Sun, May 26, 2002 at 10:32:35AM -0400, Nicholas Birkett (@rogers account) wrote:\n> After a very interesting workshop from Terry Speed's group, I have\n> downloaded the Bioconductor suite of programm",
+      "thread_id": "thread-3cfb716d3533",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-0d4355d5d607",
+      "message_id": "<F191WjehwpwiTv2IWke0000c78c@hotmail.com>",
+      "from_name": "david brennan",
+      "from_email_hash": "903b19da5740804f76a395eee8ec765269d59b0d0876bd4078cb3f00daf54d40",
+      "date": "2002-05-29T13:52:13Z",
+      "subject": "[BioC] package : multtest",
+      "subject_clean": "[BioC] package : multtest",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "hello,\n\nI tried installing multtest package but is seems to be defective.  The PDF \ncannot be opened and the multtest.dll is not included in the download.  If \nthere is an alternative method of obtaining this package  or these \ndifficulties are being resolved could you please inform me.\n\nthanks for your time\n\nregards\n\nDavid Brennan\n\n\n\n\n_________________________________________________________________\nGet your FREE download of MSN Explorer at http://explorer.msn.com/intl.asp.",
+      "body_snippet": "hello,\n\nI tried installing multtest package but is seems to be defective.  The PDF \ncannot be opened and the multtest.dll is not included in the download.  If \nthere is an alternative method of obtain",
+      "thread_id": "thread-0d4355d5d607",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-87e53a9d8e15",
+      "message_id": "<20020529105243.D51@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-05-29T14:52:43Z",
+      "subject": "[BioC] package : multtest",
+      "subject_clean": "[BioC] package : multtest",
+      "in_reply_to": "<F191WjehwpwiTv2IWke0000c78c@hotmail.com>; from davidbrennan76@hotmail.com on Wed, May 29, 2002 at 01:52:13PM +0000",
+      "references": [
+        "<F191WjehwpwiTv2IWke0000c78c@hotmail.com>"
+      ],
+      "body_plain": "On Wed, May 29, 2002 at 01:52:13PM +0000, david brennan wrote:\n> hello,\n> \n> I tried installing multtest package but is seems to be defective.  The PDF \n> cannot be opened and the multtest.dll is not included in the download.  If \n> there is an alternative method of obtaining this package  or these \n> difficulties are being resolved could you please inform me.\n> \n> thanks for your time\n\n\n  Yes that does seem to be a problem (with both versions).\n  I'll look into it.\n\n    Robert\n\n\n> \n> regards\n> \n> David Brennan\n> \n> \n> \n> \n> _________________________________________________________________\n> Get your FREE download of MSN Explorer at http://explorer.msn.com/intl.asp.\n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B28\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "On Wed, May 29, 2002 at 01:52:13PM +0000, david brennan wrote:\n> hello,\n> \n> I tried installing multtest package but is seems to be defective.  The PDF \n> cannot be opened and the multtest.dll is not ",
+      "thread_id": "thread-0d4355d5d607",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-073b088c22c4",
+      "message_id": "<Pine.GSO.4.10.10205300052560.7273-100000@hsph.harvard.edu>",
+      "from_name": "Byron Ellis",
+      "from_email_hash": "9ab40472e1e849b90f771886956aec2b3b32280760d7f49df959005b2a72cffb",
+      "date": "2002-05-30T04:54:35Z",
+      "subject": "[BioC] multtest library load problem",
+      "subject_clean": "[BioC] multtest library load problem",
+      "in_reply_to": "<GF1ZJGJIJIIHWV53OM878631QOKEMKCB.3cf1bb8f@cyto0012>",
+      "references": [],
+      "body_plain": "There was an...issue... with the multtest Makevars.win (there were some\ngarbage characters that make chose to interpret in an interesting, but not\nuseful, manner). The latest snapshot should be fixed and I don't think the\npackage has changed other than that since the release so go ahead and use\nthe snapshot version.\n\nByron Ellis (bellis@hsph.harvard.edu)\n\"Oook\" - The Librarian\n\nPlease finger bellis@hsph.harvard.edu for PGP keys\n\nOn Mon, 27 May 2002 holki659@student.otago.ac.nz wrote:\n\n> \n> Hi all,\n> \n> I am running the Windows version of Bioconductor under R 1.50.  Most packages work OK but I and am having trouble \n> with the \"multtest\" package.\n> \n> I have downloaded the Win32 zip file for \"multtest\" and installed it from the R menu.  This zip is intact and the files and \n> directories seem to be in order under the R library directory.\n> \n> However when I attempt to load the library I get the following error:\n> \n> >library(multtest)\n> Error in library.dynam(\"multtest\", packname, libname) : \n>         dynamic library `multtest' not found\n> Error in library(multtest) : .First.lib failed\n> \n> Any ideas? \n> \n> \n> Kieran Holland\n> Christhchurch Cancer Genetics Research Group\n> \n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>",
+      "body_snippet": "There was an...issue... with the multtest Makevars.win (there were some\ngarbage characters that make chose to interpret in an interesting, but not\nuseful, manner). The latest snapshot should be fixed ",
+      "thread_id": "thread-61311061b982",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-f9bea8215f1d",
+      "message_id": "<Pine.GSO.4.10.10205300054550.7273-100000@hsph.harvard.edu>",
+      "from_name": "Byron Ellis",
+      "from_email_hash": "9ab40472e1e849b90f771886956aec2b3b32280760d7f49df959005b2a72cffb",
+      "date": "2002-05-30T04:55:21Z",
+      "subject": "[BioC] multtest library load problem",
+      "subject_clean": "[BioC] multtest library load problem",
+      "in_reply_to": "<GF1ZJGJIJIIHWV53OM878631QOKEMKCB.3cf1bb8f@cyto0012>",
+      "references": [],
+      "body_plain": "Er, the snapshot should be built tonight (3am EST, so about 2 hours from\nnow)\n\nByron Ellis (bellis@hsph.harvard.edu)\n\"Oook\" - The Librarian\n\nPlease finger bellis@hsph.harvard.edu for PGP keys\n\nOn Mon, 27 May 2002 holki659@student.otago.ac.nz wrote:\n\n> \n> Hi all,\n> \n> I am running the Windows version of Bioconductor under R 1.50.  Most packages work OK but I and am having trouble \n> with the \"multtest\" package.\n> \n> I have downloaded the Win32 zip file for \"multtest\" and installed it from the R menu.  This zip is intact and the files and \n> directories seem to be in order under the R library directory.\n> \n> However when I attempt to load the library I get the following error:\n> \n> >library(multtest)\n> Error in library.dynam(\"multtest\", packname, libname) : \n>         dynamic library `multtest' not found\n> Error in library(multtest) : .First.lib failed\n> \n> Any ideas? \n> \n> \n> Kieran Holland\n> Christhchurch Cancer Genetics Research Group\n> \n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>",
+      "body_snippet": "Er, the snapshot should be built tonight (3am EST, so about 2 hours from\nnow)\n\nByron Ellis (bellis@hsph.harvard.edu)\n\"Oook\" - The Librarian\n\nPlease finger bellis@hsph.harvard.edu for PGP keys\n\nOn Mon,",
+      "thread_id": "thread-61311061b982",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-7de8b2e06d78",
+      "message_id": "<87znyhbekv.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-05-30T19:50:08Z",
+      "subject": "[BioC] R-BLAST",
+      "subject_clean": "[BioC] R-BLAST",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Thanks to all who responded.  We've got working code\n(works on Microsoft OSs and Unices; not tested yet on Macs, but I\nshould be getting an iBook soon out of curiousity).  \n\nIt should be available by the end of summer in a general molecular\nsequence analysis package (actually, long before then, but one never\nknows...).  If you \"really\" need it, we can provide a preliminary\nversion in the next few weeks.\n\nThanks again!\n\nbest,\n-tony\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my friday location is usually completely unpredictable.)",
+      "body_snippet": "Thanks to all who responded.  We've got working code\n(works on Microsoft OSs and Unices; not tested yet on Macs, but I\nshould be getting an iBook soon out of curiousity).  \n\nIt should be available by ",
+      "thread_id": "thread-7de8b2e06d78",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-931f6196c4c8",
+      "message_id": "<Pine.SOL.4.31.0205301722320.4967-100000@shelob.Berkeley.EDU>",
+      "from_name": "Sandrine Dudoit",
+      "from_email_hash": "ae24e16d9b77568c82aebe9ec46f28ffe28989a4eb18e68fa9273758b0117d09",
+      "date": "2002-05-31T00:24:16Z",
+      "subject": "[BioC] Keywords",
+      "subject_clean": "[BioC] Keywords",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi All,\n\nWe will be updating the Bioconductor website to allow searching and downloading\nof packages and documents (e.g. package vignettes) based on keywords.\n\nKeywords might reflect the type of biological data (e.g. cDNA array data,\nAffy data, sequence data), the type of analysis (e.g. normalization), etc.\n\nHere is an initial and unstructured list of keywords to start/continue\ndiscussion. Please e-mail your suggestions regarding keywords and how to structure\nthe list.\n\nBest,\nSandrine\n\ncDNA arrays\noligonucleotide arrays/Affymetrix\ndatasets\n\nnovice/basics\ninfrastructure/base\ndata management\ninput & output\npreprocessing/normalization\ngraphics/plotting\nannotation\ndifferential gene expression/gene screening/gene filtering\nclustering\nclassification\nresampling\n\n-------------------------------------------------------------------------------\nSandrine Dudoit, Ph.D.               E-mail: sandrine@stat.berkeley.edu\nAssistant Professor                  Tel: (510) 643-1108\nDivision of Biostatistics            Fax: (510) 643-5163\nSchool of Public Health\t\t     http://www.stat.berkeley.edu/~sandrine\nUniversity of California, Berkeley\n140 Earl Warren Hall, #7360\nBerkeley, CA 94720-7360\n-------------------------------------------------------------------------------",
+      "body_snippet": "Hi All,\n\nWe will be updating the Bioconductor website to allow searching and downloading\nof packages and documents (e.g. package vignettes) based on keywords.\n\nKeywords might reflect the type of biolo",
+      "thread_id": "thread-931f6196c4c8",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-d5ad96f16b6e",
+      "message_id": "<3CF789B0.5F2DD33C@jhmi.edu>",
+      "from_name": "Mohan Parigi",
+      "from_email_hash": "7856ae8bc6056e19ad5b99f48b9f542e972100ab831b92d9e054a8298562c467",
+      "date": "2002-05-31T14:33:20Z",
+      "subject": "[BioC] Installing R with g77 fortran compiler",
+      "subject_clean": "[BioC] Installing R with g77 fortran compiler",
+      "in_reply_to": null,
+      "references": [
+        "<200205311000.MAA15369@stat.math.ethz.ch>"
+      ],
+      "body_plain": "Hello,\n\nI am trying to compile sources of R-1.5.0 on a Mandrake 8.1 linux box.\nFor Fortran compiler needs, I downloaded and installed a g77 rpm. But\nthe configure step fails with following output. I would like to know if\nany of you had similar problem and how you solved.\n\nThanks in advance.\nMohan\n------------------- configure output ------\nchecking for g77... g77\nchecking whether we are using the GNU Fortran 77 compiler... no\nchecking whether g77 accepts -g... yes\n....\n[ skip ]\n...\nchecking how to get verbose linking output from g77... -v\nchecking for Fortran 77 libraries...  -L/usr/local/lib\n-L/usr/lib/gcc-lib/i686-redhat-linux/3.0.4\n-L/usr/lib/gcc-lib/i686-redhat-linux/3.0.4/../../.. -ldl -lncurses -lg2c\n-lm\nchecking for dummy main to link with Fortran 77 libraries... none\nchecking for Fortran 77 name-mangling scheme... lower case, underscore,\nextra underscore\nchecking whether g77 and gcc agree on int and double... yes\nchecking whether g77 and gcc agree on double complex... yes\nchecking whether g77 supports -c -o FILE.lo... yes\nchecking whether g++ accepts -M for generating dependencies... yes\nchecking whether g++ supports -c -o FILE.lo... yes\nchecking whether gcc accepts -mieee-fp... yes\nchecking whether g++ accepts -mieee-fp... yes\nchecking for xmkmf... /usr/X11R6/bin/xmkmf\nconfigure: WARNING: I could not determine FPICFLAGS.\nconfigure: error: See the file INSTALL for more information.\n-----------------------------------------------------------------",
+      "body_snippet": "Hello,\n\nI am trying to compile sources of R-1.5.0 on a Mandrake 8.1 linux box.\nFor Fortran compiler needs, I downloaded and installed a g77 rpm. But\nthe configure step fails with following output. I w",
+      "thread_id": "thread-d5ad96f16b6e",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-b96b8e7fb327",
+      "message_id": "<15607.52721.360626.138694@mithrandir.hornik.net>",
+      "from_name": "Kurt Hornik",
+      "from_email_hash": "dfc03d436af227183dcbabe36b829a44be2a91bd9e2296453b21196256824acc",
+      "date": "2002-05-31T19:24:33Z",
+      "subject": "[BioC] Installing R with g77 fortran compiler",
+      "subject_clean": "[BioC] Installing R with g77 fortran compiler",
+      "in_reply_to": "<3CF789B0.5F2DD33C@jhmi.edu>",
+      "references": [
+        "<200205311000.MAA15369@stat.math.ethz.ch>",
+        "<3CF789B0.5F2DD33C@jhmi.edu>"
+      ],
+      "body_plain": ">>>>> Mohan Parigi writes:\n\n> Hello,\n\n> I am trying to compile sources of R-1.5.0 on a Mandrake 8.1 linux box.\n> For Fortran compiler needs, I downloaded and installed a g77 rpm. But\n> the configure step fails with following output. I would like to know if\n> any of you had similar problem and how you solved.\n\n> Thanks in advance.\n> Mohan\n> ------------------- configure output ------\n> checking for g77... g77\n> checking whether we are using the GNU Fortran 77 compiler... no\n> checking whether g77 accepts -g... yes\n> ....\n> [ skip ]\n> ...\n> checking how to get verbose linking output from g77... -v\n> checking for Fortran 77 libraries...  -L/usr/local/lib\n> -L/usr/lib/gcc-lib/i686-redhat-linux/3.0.4\n> -L/usr/lib/gcc-lib/i686-redhat-linux/3.0.4/../../.. -ldl -lncurses -lg2c\n> -lm\n> checking for dummy main to link with Fortran 77 libraries... none\n> checking for Fortran 77 name-mangling scheme... lower case, underscore,\n> extra underscore\n> checking whether g77 and gcc agree on int and double... yes\n> checking whether g77 and gcc agree on double complex... yes\n> checking whether g77 supports -c -o FILE.lo... yes\n> checking whether g++ accepts -M for generating dependencies... yes\n> checking whether g++ supports -c -o FILE.lo... yes\n> checking whether gcc accepts -mieee-fp... yes\n> checking whether g++ accepts -mieee-fp... yes\n> checking for xmkmf... /usr/X11R6/bin/xmkmf\n> configure: WARNING: I could not determine FPICFLAGS.\n> configure: error: See the file INSTALL for more information.\n> -----------------------------------------------------------------\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\nThe problem is with the above\n\n  checking whether we are using the GNU Fortran 77 compiler... no\n\nwhich means that your g77 is not recognized as GNU Fortran 77.  I have\nno idea why ... have a look at g77 -v.\n\n-k",
+      "body_snippet": ">>>>> Mohan Parigi writes:\n\n> Hello,\n\n> I am trying to compile sources of R-1.5.0 on a Mandrake 8.1 linux box.\n> For Fortran compiler needs, I downloaded and installed a g77 rpm. But\n> the configure s",
+      "thread_id": "thread-d5ad96f16b6e",
+      "thread_depth": 1,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-06f2891a1ae1",
+      "message_id": "<3CF7EB9B.FDEF57E7@bms.com>",
+      "from_name": "Isaac Neuhaus",
+      "from_email_hash": "2544e24ccabbfffe3a8c001b6b5f8fff8bae97516a7af89a4a7b7427c971bf36",
+      "date": "2002-05-31T21:31:07Z",
+      "subject": "[BioC] Masking Features",
+      "subject_clean": "[BioC] Masking Features",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "I tried to use the affy package (version 0.7) to analyze a set of hybs\nfor which I masked all the features in the cel file for a few genes.\nWhen I normalize the data using the normalize method I get the following\nerror:\n\n> data <- ReadAffy(CDFfile=\"HG_U95Av2.CDF\", CELfiles=cels,\nchip.names=names, rm.mask=T, verbose=F)\n> ndata <- normalize(data, method=\"quantile\", verbose=F)\nError in as.vector(data) : NA/NaN/Inf in foreign function call (arg 1)\nExecution halted\n\nCan anybody help me?\n\nIsaac",
+      "body_snippet": "I tried to use the affy package (version 0.7) to analyze a set of hybs\nfor which I masked all the features in the cel file for a few genes.\nWhen I normalize the data using the normalize method I get t",
+      "thread_id": "thread-06f2891a1ae1",
+      "thread_depth": 0,
+      "month": "2002-05"
+    },
+    {
+      "id": "msg-3c2d2b29e646",
+      "message_id": "<87ptzc6ld2.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-05-31T21:47:05Z",
+      "subject": "[BioC] Keywords",
+      "subject_clean": "[BioC] Keywords",
+      "in_reply_to": "<Pine.SOL.4.31.0205301722320.4967-100000@shelob.Berkeley.EDU>",
+      "references": [
+        "<Pine.SOL.4.31.0205301722320.4967-100000@shelob.Berkeley.EDU>"
+      ],
+      "body_plain": ">>>>> \"sandrine\" == Sandrine Dudoit <sandrine@stat.berkeley.edu> writes:\n\n    sandrine> Hi All,\n    sandrine> We will be updating the Bioconductor website to allow searching and downloading\n    sandrine> of packages and documents (e.g. package vignettes) based on keywords.\n\n    sandrine> Keywords might reflect the type of biological data (e.g. cDNA array data,\n    sandrine> Affy data, sequence data), the type of analysis (e.g. normalization), etc.\n\n    sandrine> Here is an initial and unstructured list of keywords to start/continue\n    sandrine> discussion. Please e-mail your suggestions regarding keywords and how to structure\n    sandrine> the list.\n\n    sandrine> Best,\n    sandrine> Sandrine\n\n    sandrine> cDNA arrays\n    sandrine> oligonucleotide arrays/Affymetrix\nfor completeness:\nradioactive filters (i.e. research genetics membrane arrays).\n\nHas anyone worked with output from an Agilent system?\n\n    sandrine> datasets\n\n    sandrine> novice/basics\n    sandrine> infrastructure/base\n    sandrine> data management\n    sandrine> input & output\n    sandrine> preprocessing/normalization\n    sandrine> graphics/plotting\n\nreplace with visualization?\n\n    sandrine> annotation\n    sandrine> differential gene expression/gene screening/gene filtering\n    sandrine> clustering\n    sandrine> classification\n    sandrine> resampling\n\n\"inference\", i.e. Mark vdL's work, if it ever gets integrated (not\nsimple to fix up a good elicitation UI, but...).\n\n\"bayesian\"  (and empirical bayes, which isn't, for some of the\nnormalization methods?) \n\n\n\nbest,\n-tony\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M-W: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my friday location is usually completely unpredictable.)",
+      "body_snippet": ">>>>> \"sandrine\" == Sandrine Dudoit <sandrine@stat.berkeley.edu> writes:\n\n    sandrine> Hi All,\n    sandrine> We will be updating the Bioconductor website to allow searching and downloading\n    sandri",
+      "thread_id": "thread-931f6196c4c8",
+      "thread_depth": 1,
+      "month": "2002-05"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-fd2199a3f65d",
+      "subject": "[BioC] Bioconductor 1.0",
+      "message_count": 1,
+      "participants": [
+        "A.J. Rossini"
+      ],
+      "started": "2002-05-02T05:55:46Z",
+      "last_reply": "2002-05-02T05:55:46Z",
+      "root_message_id": "msg-fd2199a3f65d"
+    },
+    {
+      "id": "thread-2c9f0fd6e84f",
+      "subject": "[BioC] package affy, functions read.celfile and read.cdffile",
+      "message_count": 1,
+      "participants": [
+        "Laurent Gautier"
+      ],
+      "started": "2002-05-02T10:17:54Z",
+      "last_reply": "2002-05-02T10:17:54Z",
+      "root_message_id": "msg-2c9f0fd6e84f"
+    },
+    {
+      "id": "thread-7d053455e552",
+      "subject": "[BioC] Biobase version 1.0 on windows XP...",
+      "message_count": 2,
+      "participants": [
+        "A.J. Rossini",
+        "Joshua Betcher"
+      ],
+      "started": "2002-05-02T20:18:07Z",
+      "last_reply": "2002-05-02T20:26:44Z",
+      "root_message_id": "msg-7d053455e552"
+    },
+    {
+      "id": "thread-f8ab04be8b2b",
+      "subject": "[BioC] pb using affy // Anova with R",
+      "message_count": 1,
+      "participants": [
+        "julien.sylvestre@wotan.ens.fr"
+      ],
+      "started": "2002-05-03T13:22:16Z",
+      "last_reply": "2002-05-03T13:22:16Z",
+      "root_message_id": "msg-f8ab04be8b2b"
+    },
+    {
+      "id": "thread-a3eaac179e81",
+      "subject": "[julien.sylvestre@wotan.ens.fr: Re: [BioC] pb using affy // Anova with R]",
+      "message_count": 1,
+      "participants": [
+        "Laurent Gautier"
+      ],
+      "started": "2002-05-04T14:00:39Z",
+      "last_reply": "2002-05-04T14:00:39Z",
+      "root_message_id": "msg-a3eaac179e81"
+    },
+    {
+      "id": "thread-6552b561984e",
+      "subject": "[BioC] follow-up about 'express' in affy / ANOVA question:wq",
+      "message_count": 1,
+      "participants": [
+        "Laurent Gautier"
+      ],
+      "started": "2002-05-05T09:26:51Z",
+      "last_reply": "2002-05-05T09:26:51Z",
+      "root_message_id": "msg-6552b561984e"
+    },
+    {
+      "id": "thread-2090a84c677e",
+      "subject": "[BioC] (1) Anova for 12 Affy yeast chips (Yg98) // (2) Problem fitting Li&Wong model with Affy 1.0 :",
+      "message_count": 1,
+      "participants": [
+        "julien.sylvestre@wotan.ens.fr"
+      ],
+      "started": "2002-05-05T13:22:32Z",
+      "last_reply": "2002-05-05T13:22:32Z",
+      "root_message_id": "msg-2090a84c677e"
+    },
+    {
+      "id": "thread-dc95d0dddccf",
+      "subject": "[BioC] follow-up: How to \"merge\" cel.containers ?",
+      "message_count": 1,
+      "participants": [
+        "Laurent Gautier"
+      ],
+      "started": "2002-05-06T08:02:08Z",
+      "last_reply": "2002-05-06T08:02:08Z",
+      "root_message_id": "msg-dc95d0dddccf"
+    },
+    {
+      "id": "thread-d5829a59311e",
+      "subject": "[BioC] Re: follow-up: How to \"merge\" cel.containers ?",
+      "message_count": 1,
+      "participants": [
+        "Laurent Gautier"
+      ],
+      "started": "2002-05-06T09:54:15Z",
+      "last_reply": "2002-05-06T09:54:15Z",
+      "root_message_id": "msg-d5829a59311e"
+    },
+    {
+      "id": "thread-82c76a4b1108",
+      "subject": "[BioC] A question",
+      "message_count": 5,
+      "participants": [
+        "Byron Ellis",
+        "HYing",
+        "Jeff Gentry",
+        "Laurent Gautier"
+      ],
+      "started": "2002-05-06T11:07:45Z",
+      "last_reply": "2002-05-07T15:15:35Z",
+      "root_message_id": "msg-82c76a4b1108"
+    },
+    {
+      "id": "thread-c675f62b418f",
+      "subject": "[BioC] A question",
+      "message_count": 2,
+      "participants": [
+        "John Zhang",
+        "Laurent Gautier"
+      ],
+      "started": "2002-05-06T12:24:42Z",
+      "last_reply": "2002-05-06T12:24:42Z",
+      "root_message_id": "msg-c675f62b418f"
+    },
+    {
+      "id": "thread-2ce1a111236b",
+      "subject": "[BioC] A question",
+      "message_count": 1,
+      "participants": [
+        "John Zhang"
+      ],
+      "started": "2002-05-06T13:25:17Z",
+      "last_reply": "2002-05-06T13:25:17Z",
+      "root_message_id": "msg-2ce1a111236b"
+    },
+    {
+      "id": "thread-ab9d26fa2f80",
+      "subject": "[BioC] Max Cel Files",
+      "message_count": 3,
+      "participants": [
+        "Isaac Neuhaus",
+        "Rafael A. Irizarry"
+      ],
+      "started": "2002-05-06T14:20:35Z",
+      "last_reply": "2002-05-06T14:43:08Z",
+      "root_message_id": "msg-ab9d26fa2f80"
+    },
+    {
+      "id": "thread-3bb3d35c576f",
+      "subject": "[BioC] biobase",
+      "message_count": 2,
+      "participants": [
+        "Laurent Gautier",
+        "Vawter, Marquis"
+      ],
+      "started": "2002-05-06T16:44:31Z",
+      "last_reply": "2002-05-06T16:44:31Z",
+      "root_message_id": "msg-3bb3d35c576f"
+    },
+    {
+      "id": "thread-101665645414",
+      "subject": "[BioC] Probe pairs location on chips // ANOVA",
+      "message_count": 3,
+      "participants": [
+        "Byron Ellis",
+        "Laurent Gautier",
+        "julien.sylvestre@wotan.ens.fr"
+      ],
+      "started": "2002-05-07T09:52:32Z",
+      "last_reply": "2002-05-07T15:09:35Z",
+      "root_message_id": "msg-101665645414"
+    },
+    {
+      "id": "thread-1835341ddb15",
+      "subject": "[BioC] ADV:  Harvest lots of Target Email addresses quickly !",
+      "message_count": 1,
+      "participants": [
+        "rose@china.com"
+      ],
+      "started": "2002-05-09T15:26:09Z",
+      "last_reply": "2002-05-09T15:26:09Z",
+      "root_message_id": "msg-1835341ddb15"
+    },
+    {
+      "id": "thread-6b56b8914e21",
+      "subject": "[BioC] Members only posting on bioconductor list",
+      "message_count": 1,
+      "participants": [
+        "Jeff Gentry"
+      ],
+      "started": "2002-05-09T15:35:49Z",
+      "last_reply": "2002-05-09T15:35:49Z",
+      "root_message_id": "msg-6b56b8914e21"
+    },
+    {
+      "id": "thread-2ca95890004b",
+      "subject": "[BioC] Genefilter internal function...",
+      "message_count": 2,
+      "participants": [
+        "Jeff Gentry",
+        "Joshua Betcher"
+      ],
+      "started": "2002-05-10T18:43:16Z",
+      "last_reply": "2002-05-10T18:59:05Z",
+      "root_message_id": "msg-2ca95890004b"
+    },
+    {
+      "id": "thread-548055830b08",
+      "subject": "[BioC] R/blast",
+      "message_count": 1,
+      "participants": [
+        "A.J. Rossini"
+      ],
+      "started": "2002-05-15T00:04:10Z",
+      "last_reply": "2002-05-15T00:04:10Z",
+      "root_message_id": "msg-548055830b08"
+    },
+    {
+      "id": "thread-96192798c349",
+      "subject": "[BioC] Question about affy",
+      "message_count": 2,
+      "participants": [
+        "Deepayan Sarkar",
+        "Rafael A. Irizarry"
+      ],
+      "started": "2002-05-15T14:23:38Z",
+      "last_reply": "2002-05-15T15:00:33Z",
+      "root_message_id": "msg-96192798c349"
+    },
+    {
+      "id": "thread-45b8fd372636",
+      "subject": "[BioC] bug in getBioC.R",
+      "message_count": 3,
+      "participants": [
+        "A.J. Rossini",
+        "Dick Beyer"
+      ],
+      "started": "2002-05-16T18:18:57Z",
+      "last_reply": "2002-05-16T18:42:13Z",
+      "root_message_id": "msg-45b8fd372636"
+    },
+    {
+      "id": "thread-4a3b3e145f19",
+      "subject": "[BioC] Re: getBioC() problem",
+      "message_count": 1,
+      "participants": [
+        "Jeff Gentry"
+      ],
+      "started": "2002-05-17T08:39:51Z",
+      "last_reply": "2002-05-17T08:39:51Z",
+      "root_message_id": "msg-4a3b3e145f19"
+    },
+    {
+      "id": "thread-ca0c33c83ae0",
+      "subject": "[BioC] bug fix",
+      "message_count": 1,
+      "participants": [
+        "Rafael A. Irizarry"
+      ],
+      "started": "2002-05-17T12:31:09Z",
+      "last_reply": "2002-05-17T12:31:09Z",
+      "root_message_id": "msg-ca0c33c83ae0"
+    },
+    {
+      "id": "thread-7e5e5bb3c9ec",
+      "subject": "[BioC] R and GeneSpring",
+      "message_count": 5,
+      "participants": [
+        "A.J. Rossini",
+        "Jess Mar",
+        "John Maindonald",
+        "Robert Gentleman"
+      ],
+      "started": "2002-05-20T09:47:08Z",
+      "last_reply": "2002-05-21T02:07:42Z",
+      "root_message_id": "msg-7e5e5bb3c9ec"
+    },
+    {
+      "id": "thread-61327fbec18b",
+      "subject": "[BioC] data swirl and the  tcltk  library...",
+      "message_count": 4,
+      "participants": [
+        "A.J. Rossini",
+        "Jeff Gentry",
+        "Joshua Betcher",
+        "Laurent Gautier"
+      ],
+      "started": "2002-05-22T04:34:07Z",
+      "last_reply": "2002-05-22T09:12:00Z",
+      "root_message_id": "msg-61327fbec18b"
+    },
+    {
+      "id": "thread-08086d08415d",
+      "subject": "[BioC] marrayPlot",
+      "message_count": 3,
+      "participants": [
+        "A.J. Rossini",
+        "Niklas Nordquist",
+        "Sandrine Dudoit"
+      ],
+      "started": "2002-05-24T00:18:05Z",
+      "last_reply": "2002-05-24T00:18:05Z",
+      "root_message_id": "msg-08086d08415d"
+    },
+    {
+      "id": "thread-fbc8c9b7b6d3",
+      "subject": "[BioC] Re: Bioconductor and Spot question",
+      "message_count": 1,
+      "participants": [
+        "Jeff Gentry"
+      ],
+      "started": "2002-05-24T16:17:09Z",
+      "last_reply": "2002-05-24T16:17:09Z",
+      "root_message_id": "msg-fbc8c9b7b6d3"
+    },
+    {
+      "id": "thread-3cfb716d3533",
+      "subject": "[BioC] Tex files",
+      "message_count": 2,
+      "participants": [
+        "Nicholas Birkett (@rogers account)",
+        "Robert Gentleman"
+      ],
+      "started": "2002-05-26T14:32:35Z",
+      "last_reply": "2002-05-28T13:47:00Z",
+      "root_message_id": "msg-3cfb716d3533"
+    },
+    {
+      "id": "thread-61311061b982",
+      "subject": "[BioC] multtest library load problem",
+      "message_count": 3,
+      "participants": [
+        "Byron Ellis",
+        "holki659@student.otago.ac.nz"
+      ],
+      "started": "2002-05-27T04:52:31Z",
+      "last_reply": "2002-05-30T04:55:21Z",
+      "root_message_id": "msg-61311061b982"
+    },
+    {
+      "id": "thread-1b2efedccb04",
+      "subject": "[BioC] Re: Bioconductor digest, Vol 1 #41 - 4 msgs",
+      "message_count": 2,
+      "participants": [
+        "HYing",
+        "Laurent Gautier"
+      ],
+      "started": "2002-05-27T08:03:09Z",
+      "last_reply": "2002-05-27T09:12:19Z",
+      "root_message_id": "msg-1b2efedccb04"
+    },
+    {
+      "id": "thread-0d4355d5d607",
+      "subject": "[BioC] package : multtest",
+      "message_count": 2,
+      "participants": [
+        "Robert Gentleman",
+        "david brennan"
+      ],
+      "started": "2002-05-29T13:52:13Z",
+      "last_reply": "2002-05-29T14:52:43Z",
+      "root_message_id": "msg-0d4355d5d607"
+    },
+    {
+      "id": "thread-7de8b2e06d78",
+      "subject": "[BioC] R-BLAST",
+      "message_count": 1,
+      "participants": [
+        "A.J. Rossini"
+      ],
+      "started": "2002-05-30T19:50:08Z",
+      "last_reply": "2002-05-30T19:50:08Z",
+      "root_message_id": "msg-7de8b2e06d78"
+    },
+    {
+      "id": "thread-931f6196c4c8",
+      "subject": "[BioC] Keywords",
+      "message_count": 2,
+      "participants": [
+        "A.J. Rossini",
+        "Sandrine Dudoit"
+      ],
+      "started": "2002-05-31T00:24:16Z",
+      "last_reply": "2002-05-31T21:47:05Z",
+      "root_message_id": "msg-931f6196c4c8"
+    },
+    {
+      "id": "thread-d5ad96f16b6e",
+      "subject": "[BioC] Installing R with g77 fortran compiler",
+      "message_count": 2,
+      "participants": [
+        "Kurt Hornik",
+        "Mohan Parigi"
+      ],
+      "started": "2002-05-31T14:33:20Z",
+      "last_reply": "2002-05-31T19:24:33Z",
+      "root_message_id": "msg-d5ad96f16b6e"
+    },
+    {
+      "id": "thread-06f2891a1ae1",
+      "subject": "[BioC] Masking Features",
+      "message_count": 1,
+      "participants": [
+        "Isaac Neuhaus"
+      ],
+      "started": "2002-05-31T21:31:07Z",
+      "last_reply": "2002-05-31T21:31:07Z",
+      "root_message_id": "msg-06f2891a1ae1"
+    }
+  ]
+}

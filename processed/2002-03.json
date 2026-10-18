@@ -1,0 +1,777 @@
+{
+  "list": "bioconductor",
+  "description": "",
+  "month": "2002-03",
+  "messages": [
+    {
+      "id": "msg-f134976ae583",
+      "message_id": "<20020312125857.GA18439@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "705d8edac5ac54e7a46a96bc0a17ff702f94febca76adcf0760433ab56a07f0d",
+      "date": "2002-03-12T12:58:57Z",
+      "subject": "[BioC] using write.table on exprSet objects",
+      "subject_clean": "[BioC] using write.table on exprSet objects",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi,\n\n\n  Here is a question I have been asked by email, but I tought it could be of help to others.\n\n  The question was 'write.table(my.exprset) gives an error message. How can I save the expression\nvalues I generated with the function express() in a tab separated file ?'. \n\n  The answer was:\n- exprSet objects contain different attributes. Try class?exprSet  to know more.\n- Assuming you are interested in the expression values, try\nwrite.table(exprs(my.exprset), file=\"mydata.txt\", sep=\"\\t\")\n\n\n\n  Hopin' it helps,\n\n\n\n  Laurent\n\n\n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tD-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "Hi,\n\n\n  Here is a question I have been asked by email, but I tought it could be of help to others.\n\n  The question was 'write.table(my.exprset) gives an error message. How can I save the expression\nva",
+      "thread_id": "thread-f134976ae583",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-b85d1dcb0dc9",
+      "message_id": "<20020312095104.G8906@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-03-12T14:51:04Z",
+      "subject": "[BioC] tkctk widgets",
+      "subject_clean": "[BioC] tkctk widgets",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Below is a request from Rafael regarding some work that Jianhua has\nbeen doing with tcl/tk widgets.\nI am hoping that this might be of more general interest to\nbioconductor participants (and hence have forwarded it).\n\nThe idea is very simple, we are going to develop a handful of widgets\nto provide some simple functionality. (I don't believe that menus are\nan option, but all sorts of popups are). Initial work will be in tcltk\nbut if Gtk stabalizes it may well be worth moving over to it (since it\nis much richer).\n\nThere are some examples there now,\n fileBrowser  -- browse and select files, optional suffix, prefix, and\n          arbitrary R functions to control display\n objectBrowser -- soon to allow arbitrary R functions to control\n display (so for example we will show only exprSets).\n\nWe are hoping to work, in conjunction with Rafael and Laurent to\ndevelop tools needed to allow a researcher to load up their Affymetrix\ndata into the affy package and normalize etc using only a point and\nclick interface.\n\nSome other interesting developments:\n  - annotate will (very shortly) have some better tools for grabbing\n  things from NCBI (eg pubmed abstracts etc).\n\nComments and suggestions, such as those below can be sent to the\npackage developer/maintainer. Especially welcome would be new tools\nfunctions (with documentation, sorry but it has to be that way).\n\n  Regards\n    Robert\n\n\n----- Forwarded message from \"Rafael A. Irizarry\" <ririzarr@jhsph.edu> -----\n\n\nYesterday I tried the tcltk package. I tried the function fileBrowser.\nmy understadnig is that it only lets you pick one file. a useful function\nfor affy would let you select various files and return a vector of\nfilenames. i suggest we start the trial run with this task.\n\nhere is some further functionality that would be nice. the list is in\nwhat i suspect is increasing order of dificulty (apologies in advance if\nsome of these are impossible):\n\n1 -  a click selects a file thats\nnot selected and deselect a file that is selected. \n\n2 -  drag select\n\n3 - two selection boxes: one showing all with suffix \"[cC][eE][lL]\" in\nthe path another with all with suffix \"[cC][dD][fF]\". \n\n4 - areas for writing in information needed. for example, comments,\nannotation, names for columns, file to read phenodata from, etc.. \n\n\ndon't hesitate to ask me to be more specific. \n\nrafael\n\n\nOn Thu, 7 Mar 2002, Robert Gentleman wrote:\n\n> Hi Laurent, Raphael and Jianhua,\n> \n>   I would like to use affy as the test bed for a GUI. We have some\n>   tools in place and I think now is the time to try and get enough in\n>   place to do some simple things with the affy package. \n> \n>   I would like to get Jianhua to look at what it will take to get\n>   widgets for the common tasks.\n>   - read in CEL files,\n>   - display CEL files as images\n>   - normalize, \n>   - compute expression values\n> \n>   From Laurent and Raphael we will need some help. I see some code in\n>   demos\n>   but nothing in the \"standard\" spot, inst/doc/whaterver.Rnw.\n>   It will be important for Jianhua to have a good road map to work\n>   from so if you could supply a simple example, working from CEL\n>   through to expression (no bells or whistles at this point -- maybe\n>   some pointers to where things need to be more adaptable).\n> \n>   There is some test data in my account on taniwha that I think can\n>   provide a good basis for working from. It is in\n>   ~Genetics/Sabain/CLL\n>  (Please, this is not for distribution and cannot be copied off of\n>   taniwha -- it is an active experiment/analysis).\n> \n> \n>    Let me know if you think this is ok (or not).\n>     Thanks,\n>       Robert\n> \n> -- \n> +---------------------------------------------------------------------------+\n> | Robert Gentleman                 phone : (617) 632-5250                   |\n> | Associate Professor              fax:   (617)  632-2444                   |\n> | Department of Biostatistics      office: M1B28\n> | Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n> +---------------------------------------------------------------------------+\n> \n\n\n----- End forwarded message -----\n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B28\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "Below is a request from Rafael regarding some work that Jianhua has\nbeen doing with tcl/tk widgets.\nI am hoping that this might be of more general interest to\nbioconductor participants (and hence have",
+      "thread_id": "thread-b85d1dcb0dc9",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-651dad2d46cc",
+      "message_id": "<Pine.GSO.4.40.0203191156510.7928-100000@falmouth.bwh.harvard.edu>",
+      "from_name": "Vincent Carey 525-2265",
+      "from_email_hash": "381a0cc24e3b8c000e48897854dc66548b429ce8fc8f23a93430f715efbf37a0",
+      "date": "2002-03-19T16:58:35Z",
+      "subject": "[BioC] Re: show for phenoData",
+      "subject_clean": "[BioC] Re: show for phenoData",
+      "in_reply_to": "<Pine.GSO.4.10.10203191040540.12246-100000@biosun08>",
+      "references": [],
+      "body_plain": "On Tue, 19 Mar 2002, Rafael A. Irizarry wrote:\n\n> show for \"empty\" phenoData gives errors:\n>\n> > new(\"phenoData\")\n>          phenoData object with  variables and  cases\n>          varLabels\n> Error in vL[[i]] : subscript out of bounds\n\nok, but a better approach is to introduce a validity\nchecking method to prevent such phenoData objects\nfrom ever being created\n\nsee setValidity under methods\n\nwe need to get into this habit.\n\n\n>\n>\n> here is an easy fix adding a if-else\n>\n>  setMethod(\"show\", \"phenoData\",\n>        function(object) {\n>                 dm <- dim(object@pData)\n> \t\tif(is.null(dm)) cat(\"Empty\\n\")\n> \t\telse{\n>                 cat(\"\\t phenoData object with \", dm[2], \" variables\",\n>             sep=\"\")\n>                 cat(\" and \", dm[1], \" cases\\n\", sep=\"\")\n>                 vL <- object@varLabels\n>                 cat(\"\\t varLabels\\n\")\n>                 nm <- names(vL)\n>                   for(i in 1:length(vL) )\n>                     cat(\"\\t\\t\", nm[[i]], \": \", vL[[i]], \"\\n\", sep=\"\")\n> \t\t}\n>             }, where=where)\n>\n>\n>\n> _______________________________________________\n> Biocore mailing list\n> Biocore@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n>",
+      "body_snippet": "On Tue, 19 Mar 2002, Rafael A. Irizarry wrote:\n\n> show for \"empty\" phenoData gives errors:\n>\n> > new(\"phenoData\")\n>          phenoData object with  variables and  cases\n>          varLabels\n> Error in",
+      "thread_id": "thread-651dad2d46cc",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-7e616b8df39d",
+      "message_id": "<15511.31608.56432.297345@galadriel.ci.tuwien.ac.at>",
+      "from_name": "Friedrich.Leisch@ci.tuwien.ac.at",
+      "from_email_hash": "31129dffff3fc3dc4381b5047dab418f8aba21aee2586c237b775a9f30d3cc59",
+      "date": "2002-03-19T17:55:04Z",
+      "subject": "[BioC] Sweave update",
+      "subject_clean": "[BioC] Sweave update",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "I have committed an Sweave update to the devel version of R (also\navaliable form the usual place at\nhttp://www.ci.tuwien.ac.at/~leisch/Sweave) which should fulfill all\npending feature requests:\n\n*) The major change is that the syntax is no longer hard-wirded, but\n can be specified by the user (OK, there is almost no docu for that,\n but the code is in place). I provide (in addition to noweb) a\n latex-style syntax which looks like\n\n  \\begin{Scode}{fig=TRUE}\n  plot(1:10)\n  \\end{Scode}\n\n and is used if the input file has extension .[RS]tex, or if\n\n  \\SweaveSyntax{SweaveSyntaxLatex} \n\n appears in the document (one can also use the command line or an\n option() to specify the default syntax). There is an example .Stex on\n the web page.\n\n*) Code chunks can be reused, i.e.\n\n <<a>>=\n ...\n @\n\n <<c>>=\n ...\n <<a>>\n ...\n @\n\n works.\n\n*) Hooks are now more compatible with the load hooks used by library() in\n the sense that they now should be stored in option(\"SweaveHooks\"),\n which is a list of functions. A more general framework for handling\n hooks in R would of course help.\n\n*) The user can define arbitrary options with the sole purpose of\n running the hooks associated with them. E.g., cleaning the workspace\n before running each code chunk could be done by defining a hook for\n option `clean' and having \\SweaveOpts{clean=TRUE}. Probably we should\n start collecting useful hooks and include them in the standard\n distribution.\n\nThe only thing that is really missing is proper testing (due to lack\nof time)... so please don't kill me if I have introduced a number of\nserious bugs. Bioconductor has the largest collection of .Rnw files\nnot written by me ... so package checking there will probably soon\nput the code under test :-)\n\nBest,\nFritz",
+      "body_snippet": "I have committed an Sweave update to the devel version of R (also\navaliable form the usual place at\nhttp://www.ci.tuwien.ac.at/~leisch/Sweave) which should fulfill all\npending feature requests:\n\n*) Th",
+      "thread_id": "thread-7e616b8df39d",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-0baed59e3722",
+      "message_id": "<Pine.LNX.4.43.0203201358280.31049@hymn04.u.washington.edu>",
+      "from_name": "Anthony Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-03-20T21:58:28Z",
+      "subject": "[BioC] placement of DTD files in a package?",
+      "subject_clean": "[BioC] placement of DTD files in a package?",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "So, do DTD files get placed under data or in a completely separate location, for installation purposes?  (i.e. ../package/data, ../package/inst/xml,  or ../package/inst/dtd, or other??)\n\nbest,\n-tony",
+      "body_snippet": "So, do DTD files get placed under data or in a completely separate location, for installation purposes?  (i.e. ../package/data, ../package/inst/xml,  or ../package/inst/dtd, or other??)\n\nbest,\n-tony",
+      "thread_id": "thread-0baed59e3722",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-79202a8d993d",
+      "message_id": "<Pine.GSO.4.40.0203201702550.14311-100000@falmouth.bwh.harvard.edu>",
+      "from_name": "Vincent Carey 525-2265",
+      "from_email_hash": "381a0cc24e3b8c000e48897854dc66548b429ce8fc8f23a93430f715efbf37a0",
+      "date": "2002-03-20T22:11:01Z",
+      "subject": "[BioC] placement of DTD files in a package?",
+      "subject_clean": "[BioC] placement of DTD files in a package?",
+      "in_reply_to": "<Pine.LNX.4.43.0203201358280.31049@hymn04.u.washington.edu>",
+      "references": [],
+      "body_plain": "> So, do DTD files get placed under data or in a completely separate location, for installation purposes?  (i.e. ../package/data, ../package/inst/xml,  or ../package/inst/dtd, or other??)\n>\n\ni know of no convention on this.  we may not need one.\npackage code that uses the DTD will have to be explicit\nabout its location.  any of the choices you list may\nbe appropriate depending on the visibility and separateness\nof resources desired by the package designer.\n\ndoes this lead to cacophony in package structure?\ni don't think so.",
+      "body_snippet": "> So, do DTD files get placed under data or in a completely separate location, for installation purposes?  (i.e. ../package/data, ../package/inst/xml,  or ../package/inst/dtd, or other??)\n>\n\ni know of",
+      "thread_id": "thread-0baed59e3722",
+      "thread_depth": 1,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-2b7cf1a9a1ca",
+      "message_id": "<Pine.LNX.4.43.0203201419560.31049@hymn04.u.washington.edu>",
+      "from_name": "Anthony Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-03-20T22:19:56Z",
+      "subject": "[BioC] placement of DTD files in a package?",
+      "subject_clean": "[BioC] placement of DTD files in a package?",
+      "in_reply_to": "<pine.gso.4.40.0203201702550.14311_100000@falmouth.bwh.harvard.edu>",
+      "references": [],
+      "body_plain": "On Wed, 20 Mar 2002, Vincent Carey 525-2265 wrote:\n\n> \n> > So, do DTD files get placed under data or in a completely separate location, for installation purposes?  (i.e. ../package/data, ../package/inst/xml,  or ../package/inst/dtd, or other??)\n> >\n> \n> i know of no convention on this.  we may not need one.\n> package code that uses the DTD will have to be explicit\n> about its location.  any of the choices you list may\n> be appropriate depending on the visibility and separateness\n> of resources desired by the package designer.\n>\n> does this lead to cacophony in package structure?\n> i don't think so.\n\nI think I agree with you.  I don't have strong feelings on the matter, other than if a standard workflow for determination exists, that I might as well use it.  The context is the DTD describing the XML format for a dataset.  I'm tempted to stick it in ../package/inst/dtd, but was wondering how others have dealt with it.  I sent the question here, since the number of package developers using R XML outside of this particular mailing list seems small.\n\nbest,\n-tony",
+      "body_snippet": "On Wed, 20 Mar 2002, Vincent Carey 525-2265 wrote:\n\n> \n> > So, do DTD files get placed under data or in a completely separate location, for installation purposes?  (i.e. ../package/data, ../package/in",
+      "thread_id": "thread-2b7cf1a9a1ca",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-645007b40a45",
+      "message_id": "<20020320174057.N19461@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-03-20T22:40:57Z",
+      "subject": "[BioC] placement of DTD files in a package?",
+      "subject_clean": "[BioC] placement of DTD files in a package?",
+      "in_reply_to": "<Pine.LNX.4.43.0203201419560.31049@hymn04.u.washington.edu>; from rossini@u.washington.edu on Wed, Mar 20, 2002 at 02:19:56PM -0800",
+      "references": [
+        "<pine.gso.4.40.0203201702550.14311_100000@falmouth.bwh.harvard.edu>",
+        "<Pine.LNX.4.43.0203201419560.31049@hymn04.u.washington.edu>"
+      ],
+      "body_plain": "On Wed, Mar 20, 2002 at 02:19:56PM -0800, Anthony Rossini wrote:\n> On Wed, 20 Mar 2002, Vincent Carey 525-2265 wrote:\n> \n> > \n> > > So, do DTD files get placed under data or in a completely separate location, for installation purposes?  (i.e. ../package/data, ../package/inst/xml,  or ../package/inst/dtd, or other??)\n> > >\n> > \n> > i know of no convention on this.  we may not need one.\n> > package code that uses the DTD will have to be explicit\n> > about its location.  any of the choices you list may\n> > be appropriate depending on the visibility and separateness\n> > of resources desired by the package designer.\n> >\n> > does this lead to cacophony in package structure?\n> > i don't think so.\n> \n> I think I agree with you.  I don't have strong feelings on the matter, other than if a standard workflow for determination exists, that I might as well use it.  The context is the DTD describing the XML format for a dataset.  I'm tempted to stick it in ../package/inst/dtd, but was wondering how others have dealt with it.  I sent the question here, since the number of package developers using R XML outside of this particular mailing list seems small.\n> \n  Me either, somehow I think of it (at least a bit) as data so I like\n package/inst/data\n  but almost anything is fine\n  we just need to ensure it gets copied over to the installation\n  directory so it can get found automatically.\n\n\n\n\n> best,\n> -tony\n> \n> \n> \n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B28\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "On Wed, Mar 20, 2002 at 02:19:56PM -0800, Anthony Rossini wrote:\n> On Wed, 20 Mar 2002, Vincent Carey 525-2265 wrote:\n> \n> > \n> > > So, do DTD files get placed under data or in a completely separate l",
+      "thread_id": "thread-2b7cf1a9a1ca",
+      "thread_depth": 1,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-5e1c6372625f",
+      "message_id": "<6rd6xyg5gj.fsf@franz.stat.wisc.edu>",
+      "from_name": "Douglas Bates",
+      "from_email_hash": "eafb799445732379f93380a9fc5a798476cd0dce794128a4614ac58355a0b842",
+      "date": "2002-03-20T23:55:08Z",
+      "subject": "[BioC] placement of DTD files in a package?",
+      "subject_clean": "[BioC] placement of DTD files in a package?",
+      "in_reply_to": "<20020320174057.N19461@jimmy.harvard.edu>",
+      "references": [
+        "<pine.gso.4.40.0203201702550.14311_100000@falmouth.bwh.harvard.edu>",
+        "<Pine.LNX.4.43.0203201419560.31049@hymn04.u.washington.edu>",
+        "<20020320174057.N19461@jimmy.harvard.edu>"
+      ],
+      "body_plain": "Robert Gentleman <rgentlem@jimmy.harvard.edu> writes:\n\n> On Wed, Mar 20, 2002 at 02:19:56PM -0800, Anthony Rossini wrote:\n> > On Wed, 20 Mar 2002, Vincent Carey 525-2265 wrote:\n> > \n> > > \n> > > > So, do DTD files get placed under data or in a completely separate location, for installation purposes?  (i.e. ../package/data, ../package/inst/xml,  or ../package/inst/dtd, or other??)\n> > > >\n> > > \n> > > i know of no convention on this.  we may not need one.\n> > > package code that uses the DTD will have to be explicit\n> > > about its location.  any of the choices you list may\n> > > be appropriate depending on the visibility and separateness\n> > > of resources desired by the package designer.\n> > >\n> > > does this lead to cacophony in package structure?\n> > > i don't think so.\n> > \n> > I think I agree with you.  I don't have strong feelings on the matter, other than if a standard workflow for determination exists, that I might as well use it.  The context is the DTD describing the XML format for a dataset.  I'm tempted to stick it in ../package/inst/dtd, but was wondering how others have dealt with it.  I sent the question here, since the number of package developers using R XML outside of this particular mailing list seems small.\n> > \n>   Me either, somehow I think of it (at least a bit) as data so I like\n>  package/inst/data\n>   but almost anything is fine\n>   we just need to ensure it gets copied over to the installation\n>   directory so it can get found automatically.\n\nI think eventually you would find that it is better to separate the\ndtd from the data -- i.e. use Tony's original idea of a\n../package/inst/dtd directory.\n\nOne reason for not mixing the DTD and the data is because the DTD\ntends to be more permanent than the data.  You can be adding or\nmodifying the data sets but the DTD, because it describes a data\nformat, is a more stable description.\n\nAlso, once you have a established and more-or-less finalized the DTD\nit is handy to make it available from an http server so you can\nbegin the XML file with\n\n<?xml version='1.0' encoding='UTF-8'?>\n<!DOCTYPE foo SYSTEM \"http://www.bioconductor.org/dtd/foo.dtd\">\n<foo>\n ...\n</foo>\n\nand a validating parser will have access to the DTD independently of\nthe file's location.  If you are going to create a collection of DTD's\nunder, say, www.bioconductor.org/dtd/, it would be handy to have the\nDTD's within packages separately accessible and identifiable.",
+      "body_snippet": "Robert Gentleman <rgentlem@jimmy.harvard.edu> writes:\n\n> On Wed, Mar 20, 2002 at 02:19:56PM -0800, Anthony Rossini wrote:\n> > On Wed, 20 Mar 2002, Vincent Carey 525-2265 wrote:\n> > \n> > > \n> > > > So,",
+      "thread_id": "thread-2b7cf1a9a1ca",
+      "thread_depth": 2,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-610eee793d93",
+      "message_id": "<Pine.LNX.4.43.0203201559080.31049@hymn04.u.washington.edu>",
+      "from_name": "Anthony Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-03-20T23:59:08Z",
+      "subject": "[BioC] placement of DTD files in a package?",
+      "subject_clean": "[BioC] placement of DTD files in a package?",
+      "in_reply_to": "<6rd6xyg5gj.fsf@franz.stat.wisc.edu>",
+      "references": [],
+      "body_plain": "Okay, I like this argument.  Unless anyone argues against it, I'll be using .../package/inst/dtd  at least for DTDs which describe data or data structures.\n\nbest,\n-tony\n\n\nOn 20 Mar 2002, Douglas Bates wrote:\n\n> Robert Gentleman <rgentlem@jimmy.harvard.edu> writes:\n> \n> > On Wed, Mar 20, 2002 at 02:19:56PM -0800, Anthony Rossini wrote:\n> > > On Wed, 20 Mar 2002, Vincent Carey 525-2265 wrote:\n> > > \n> > > > \n> > > > > So, do DTD files get placed under data or in a completely separate location, for installation purposes?  (i.e. ../package/data, ../package/inst/xml,  or ../package/inst/dtd, or other??)\n> > > > >\n> > > > \n> > > > i know of no convention on this.  we may not need one.\n> > > > package code that uses the DTD will have to be explicit\n> > > > about its location.  any of the choices you list may\n> > > > be appropriate depending on the visibility and separateness\n> > > > of resources desired by the package designer.\n> > > >\n> > > > does this lead to cacophony in package structure?\n> > > > i don't think so.\n> > > \n> > > I think I agree with you.  I don't have strong feelings on the matter, other than if a standard workflow for determination exists, that I might as well use it.  The context is the DTD describing the XML format for a dataset.  I'm tempted to stick it in ../package/inst/dtd, but was wondering how others have dealt with it.  I sent the question here, since the number of package developers using R XML outside of this particular mailing list seems small.\n> > > \n> >   Me either, somehow I think of it (at least a bit) as data so I like\n> >  package/inst/data\n> >   but almost anything is fine\n> >   we just need to ensure it gets copied over to the installation\n> >   directory so it can get found automatically.\n> \n> I think eventually you would find that it is better to separate the\n> dtd from the data -- i.e. use Tony's original idea of a\n> ../package/inst/dtd directory.\n> \n> One reason for not mixing the DTD and the data is because the DTD\n> tends to be more permanent than the data.  You can be adding or\n> modifying the data sets but the DTD, because it describes a data\n> format, is a more stable description.\n> \n> Also, once you have a established and more-or-less finalized the DTD\n> it is handy to make it available from an http server so you can\n> begin the XML file with\n> \n> <?xml version='1.0' encoding='UTF-8'?>\n> <!DOCTYPE foo SYSTEM \"http://www.bioconductor.org/dtd/foo.dtd\">\n> <foo>\n>  ...\n> </foo>\n> \n> and a validating parser will have access to the DTD independently of\n> the file's location.  If you are going to create a collection of DTD's\n> under, say, www.bioconductor.org/dtd/, it would be handy to have the\n> DTD's within packages separately accessible and identifiable.\n>",
+      "body_snippet": "Okay, I like this argument.  Unless anyone argues against it, I'll be using .../package/inst/dtd  at least for DTDs which describe data or data structures.\n\nbest,\n-tony\n\n\nOn 20 Mar 2002, Douglas Bates",
+      "thread_id": "thread-2b7cf1a9a1ca",
+      "thread_depth": 3,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-afadeeb92213",
+      "message_id": "<200203211624.LAA10090@blaise.dfci.harvard.edu>",
+      "from_name": "John Zhang",
+      "from_email_hash": "a9b29fa5c7919bc7d02dec7bdc0c62c5f96a282f20bb4efd587867f549843181",
+      "date": "2002-03-21T16:24:32Z",
+      "subject": "[BioC] tkctk widgets",
+      "subject_clean": "[BioC] tkctk widgets",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "I finally had the chance to work on the tkWidgets a little bit and the following \nare what I did in reaponse to Rafael's comments:\n\n>here is some further functionality that would be nice. the list is in\n>what i suspect is increasing order of dificulty (apologies in advance if\n>some of these are impossible):\n\n>1 -  a click selects a file thats\n>not selected and deselect a file that is selected.\n\nYes, has been done. \n\n>2 -  drag select\n\nYes, has been done.\n\n>3 - two selection boxes: one showing all with suffix \"[cC][eE][lL]\" in\n>the path another with all with suffix \"[cC][dD][fF]\". \n\nI put two boxes in but with one showing the files in a given directory based on \npredefined prefix or suffix and the other showing the files that are selected. I \nwill put something there to allow users to change the prefix/suffix on the fly \nso that one box can be used to disply e. g. the [cC][eE][lL] and [cC][dD][fF] \nfiles.\n\n>4 - areas for writing in information needed. for example, comments,\n>annotation, names for columns, file to read phenodata from, etc.. \n\nNot yet.\n\n\nJianhua",
+      "body_snippet": "I finally had the chance to work on the tkWidgets a little bit and the following \nare what I did in reaponse to Rafael's comments:\n\n>here is some further functionality that would be nice. the list is ",
+      "thread_id": "thread-afadeeb92213",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-7c16cfe21ebd",
+      "message_id": "<Pine.LNX.4.43.0203220644120.31209@hymn09.u.washington.edu>",
+      "from_name": "Anthony Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-03-22T14:44:12Z",
+      "subject": "[BioC] difference between biobase and biobase2?",
+      "subject_clean": "[BioC] difference between biobase and biobase2?",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "What's the difference between biobase and biobase2?\n\nbest,\n-tony",
+      "body_snippet": "What's the difference between biobase and biobase2?\n\nbest,\n-tony",
+      "thread_id": "thread-7c16cfe21ebd",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-35d939a880f3",
+      "message_id": "<20020322095447.F19461@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-03-22T14:54:47Z",
+      "subject": "[BioC] difference between biobase and biobase2?",
+      "subject_clean": "[BioC] difference between biobase and biobase2?",
+      "in_reply_to": "<Pine.LNX.4.43.0203220644120.31209@hymn09.u.washington.edu>; from rossini@u.washington.edu on Fri, Mar 22, 2002 at 06:44:12AM -0800",
+      "references": [
+        "<Pine.LNX.4.43.0203220644120.31209@hymn09.u.washington.edu>"
+      ],
+      "body_plain": "Biobase2 doesn't use methods. There is a long standing bug, that\nwhenever I run a big simulation using S4 methods I get a segfault. \nGenerally hours into the calc., the problem goes away with Biobase2\ncause I don't rely on methods (but I have not updated it in ages and\nkeep hoping a simpler example of the segfault will appear so we can\ntrack down the bug).\n  r\n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B28\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "Biobase2 doesn't use methods. There is a long standing bug, that\nwhenever I run a big simulation using S4 methods I get a segfault. \nGenerally hours into the calc., the problem goes away with Biobase2",
+      "thread_id": "thread-7c16cfe21ebd",
+      "thread_depth": 1,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-b130af3654ca",
+      "message_id": "<Pine.GSO.4.40.0203220955380.21778-100000@capecod.bwh.harvard.edu>",
+      "from_name": "Vincent Carey 525-2265",
+      "from_email_hash": "381a0cc24e3b8c000e48897854dc66548b429ce8fc8f23a93430f715efbf37a0",
+      "date": "2002-03-22T14:56:02Z",
+      "subject": "[BioC] difference between biobase and biobase2?",
+      "subject_clean": "[BioC] difference between biobase and biobase2?",
+      "in_reply_to": "<Pine.LNX.4.43.0203220644120.31209@hymn09.u.washington.edu>",
+      "references": [],
+      "body_plain": "> What's the difference between biobase and biobase2?\n\nbiobase2 eschews S4 constructions.  it has not been\nkept up to date",
+      "body_snippet": "> What's the difference between biobase and biobase2?\n\nbiobase2 eschews S4 constructions.  it has not been\nkept up to date",
+      "thread_id": "thread-7c16cfe21ebd",
+      "thread_depth": 1,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-2b7b218d532a",
+      "message_id": "<Pine.GSO.4.40.0203270700040.12186-100000@capecod.bwh.harvard.edu>",
+      "from_name": "Vincent Carey 525-2265",
+      "from_email_hash": "381a0cc24e3b8c000e48897854dc66548b429ce8fc8f23a93430f715efbf37a0",
+      "date": "2002-03-27T12:03:20Z",
+      "subject": "[BioC] Re: documenting S4 classes/accessors/encapsulation",
+      "subject_clean": "[BioC] Re: documenting S4 classes/accessors/encapsulation",
+      "in_reply_to": "<20020327095720.GB17467@giraffa.cbs.dtu.dk>",
+      "references": [],
+      "body_plain": "one more point about accessors.  when autogenerated in the\nOOP package, last time I looked, the accessor functions\nhad a prefix\n\nfor slot foo, you would get an accessor function \"getFoo\"\n\nyou might also get an assignment helper  \"setFoo\"\n\nwe MAY want to start distinguishing our accessors in this manner.\nthis can be done in a backwards compatible way, by simply\nadding compliantly named slots.  we then deprecate the\nold style accessors and after a certain time, eliminate them\nfrom the class definition.",
+      "body_snippet": "one more point about accessors.  when autogenerated in the\nOOP package, last time I looked, the accessor functions\nhad a prefix\n\nfor slot foo, you would get an accessor function \"getFoo\"\n\nyou might al",
+      "thread_id": "thread-2b7b218d532a",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-353cc0d887ae",
+      "message_id": "<Pine.GSO.4.40.0203270704120.12186-100000@capecod.bwh.harvard.edu>",
+      "from_name": "Vincent Carey 525-2265",
+      "from_email_hash": "381a0cc24e3b8c000e48897854dc66548b429ce8fc8f23a93430f715efbf37a0",
+      "date": "2002-03-27T12:05:23Z",
+      "subject": "[BioC] Re: documenting S4 classes/accessors (fwd)",
+      "subject_clean": "[BioC] Re: documenting S4 classes/accessors (fwd)",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "i am forwarding this exchange from core as it is potentially\nof general interest\n\n---------- Forwarded message ----------\nDate: Wed, 27 Mar 2002 06:48:22 -0500 (EST)\nFrom: Vincent Carey 525-2265 <stvjc@channing.harvard.edu>\nTo: Laurent Gautier <laurent@genome.cbs.dtu.dk>\nCc: biocore@stat.math.ethz.ch\nSubject: Re: documenting S4 classes\n\n>\n> I am currently cleaning up/updating the documentation for the package 'affy'.\n> I am facing a rather annoying issue: the documentation of the methods.\n>\n> My first question is:\n> Are accessor methods really needed for every slot ? I understand that\n> for 'nested slots' they can provide a convenient way to access the data, but\n> when the slot is a known and documented object... isn't the '@' operator enough ?\n\nthis is a somewhat obscure topic for me and i may not get\nit right, but RG will surely chime in if i get it wrong.\n\nuse of the @-sign should be limited to 'internal' computations.\n\nwhen coding in R nothing is really 'private', but we want\nto simulate encapsulation as much as we can without changing\nthe basic features of the language.  we do not want user-level\ncode to be reliant upon details of the internal representation\nof objects, and the @-sign is such a detail.  we want to be\nable to modify the internal details without breaking\nuser-level code.  this can be accomplished if we use functions\nto broker access to the representation.\n\nexample -- X is an exprSet X@exprs and X@se.exprs are current\nways of referring to the expression data matrix and associated\nstandard errors.  Some wonderful thing may occur so that\nthe expression data and standard errors are provided in a\ndifferent sort of container that makes it easier to work with\nthem -- say an eCont, which has slots exprs and se.exprs.\nso internally we need Z@eCont@exprs to get the exprs associated\nwith Z in the new exprSet design.\n\nany user level code that refers to Z@exprs  will fail unless\nwe do some fancy footwork.  but the accessor method could\nsimply be recoded to get its argument's eCont@exprs data\nand user level code using exprs(Z) would work fine in both\nsetups.\n\nno consolation at this point, but eventually accessors will\nbe autogenerated.\n\n>\n> My second question is:\n> In the case my slots have names like 'sd' or 'history', I am really annoyed to\n> have accessor functions and document them by having '\\alias{sd}' or\n> '\\alias{history} in the '.Rd' file for the class since 'sd' and 'history' are\n> functions from 'base'. What should I do (in case the the answer to first\n> question was 'yes, we want accessor functions') ?\n\ni don't share your annoyance, but the problem of collisions\namong document references is real.  sd-methods.Rd can be\ngenerated via promptMethods.\n\nwe need some protracted thought about this -- many people are\nworking on documentation concepts but at this time you just\nhave to strike a balance between thoroughness and annoyance-reduction\n\nsorry!\n\n>\n>\n> ???\n>\n>\n>\n> L.\n>\n>\n>\n>\n> --------------------------------------------------------------\n> Laurent Gautier\t\t\tCBS, Building 208, DTU\n> PhD. Student\t\t\tD-2800 Lyngby,Denmark\n> tel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent\n> _______________________________________________\n> Biocore mailing list\n> Biocore@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n>\n\n_______________________________________________\nBiocore mailing list\nBiocore@stat.math.ethz.ch\nhttp://www.stat.math.ethz.ch/mailman/listinfo/biocore",
+      "body_snippet": "i am forwarding this exchange from core as it is potentially\nof general interest\n\n---------- Forwarded message ----------\nDate: Wed, 27 Mar 2002 06:48:22 -0500 (EST)\nFrom: Vincent Carey 525-2265 <stvj",
+      "thread_id": "thread-353cc0d887ae",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-c6bb7aa09ad5",
+      "message_id": "<20020327123813.GH17467@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "705d8edac5ac54e7a46a96bc0a17ff702f94febca76adcf0760433ab56a07f0d",
+      "date": "2002-03-27T12:38:13Z",
+      "subject": "[BioC] Re: documenting S4 classes/accessors",
+      "subject_clean": "[BioC] Re: documenting S4 classes/accessors",
+      "in_reply_to": "<Pine.GSO.4.40.0203270704120.12186-100000@capecod.bwh.harvard.edu>",
+      "references": [
+        "<Pine.GSO.4.40.0203270704120.12186-100000@capecod.bwh.harvard.edu>"
+      ],
+      "body_plain": "Thanks for the precise answer.\n\nThe use of get<whatever> as a convention circumvents probably\nmost of the function names collisions.\n(I am always thinking in 'naming conventions' because it helps\na lot... especially when function names multiplicate faster\nthan my memory can keep up the pace...).\n\n\n\nL.\n\n\n\n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tD-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "Thanks for the precise answer.\n\nThe use of get<whatever> as a convention circumvents probably\nmost of the function names collisions.\n(I am always thinking in 'naming conventions' because it helps\na lo",
+      "thread_id": "thread-353cc0d887ae",
+      "thread_depth": 1,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-8e8dc6ceb15b",
+      "message_id": "<20020327074034.C19461@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-03-27T12:40:34Z",
+      "subject": "[BioC] Re: documenting S4 classes/accessors (fwd)",
+      "subject_clean": "[BioC] Re: documenting S4 classes/accessors (fwd)",
+      "in_reply_to": "<Pine.GSO.4.40.0203270704120.12186-100000@capecod.bwh.harvard.edu>; from stvjc@channing.harvard.edu on Wed, Mar 27, 2002 at 07:05:23AM -0500",
+      "references": [
+        "<Pine.GSO.4.40.0203270704120.12186-100000@capecod.bwh.harvard.edu>"
+      ],
+      "body_plain": "On Wed, Mar 27, 2002 at 07:05:23AM -0500, Vincent Carey 525-2265 wrote:\n> i am forwarding this exchange from core as it is potentially\n> of general interest\n> \n> ---------- Forwarded message ----------\n> Date: Wed, 27 Mar 2002 06:48:22 -0500 (EST)\n> From: Vincent Carey 525-2265 <stvjc@channing.harvard.edu>\n> To: Laurent Gautier <laurent@genome.cbs.dtu.dk>\n> Cc: biocore@stat.math.ethz.ch\n> Subject: Re: documenting S4 classes\n> \n> >\n> > I am currently cleaning up/updating the documentation for the package 'affy'.\n> > I am facing a rather annoying issue: the documentation of the methods.\n> >\n> > My first question is:\n> > Are accessor methods really needed for every slot ? I understand that\n> > for 'nested slots' they can provide a convenient way to access the data, but\n> > when the slot is a known and documented object... isn't the '@' operator enough ?\n> \n> this is a somewhat obscure topic for me and i may not get\n> it right, but RG will surely chime in if i get it wrong.\n> \n> use of the @-sign should be limited to 'internal' computations.\n> \n> when coding in R nothing is really 'private', but we want\n> to simulate encapsulation as much as we can without changing\n> the basic features of the language.  we do not want user-level\n> code to be reliant upon details of the internal representation\n> of objects, and the @-sign is such a detail.  we want to be\n> able to modify the internal details without breaking\n> user-level code.  this can be accomplished if we use functions\n> to broker access to the representation.\n> \n> example -- X is an exprSet X@exprs and X@se.exprs are current\n> ways of referring to the expression data matrix and associated\n> standard errors.  Some wonderful thing may occur so that\n> the expression data and standard errors are provided in a\n> different sort of container that makes it easier to work with\n> them -- say an eCont, which has slots exprs and se.exprs.\n> so internally we need Z@eCont@exprs to get the exprs associated\n> with Z in the new exprSet design.\n> \n> any user level code that refers to Z@exprs  will fail unless\n> we do some fancy footwork.  but the accessor method could\n> simply be recoded to get its argument's eCont@exprs data\n> and user level code using exprs(Z) would work fine in both\n> setups.\n> \n> no consolation at this point, but eventually accessors will\n> be autogenerated.\n\n  I am a fan of accessors. Object oriented is one thing but usually\n  you get a lot from abstract data types (ADT's). When using @ there\n  is a presumption about the actual implementation of the object. This\n  is often not good style nor good code.\n\n  using getExprs(x) and setExprs(x) can be made to work when x has an\n  exprs slot, when that value is computed rather than stored etc.\n  I use the name of the slot (and hence get collisions). But the\n  get/set prefixes are fine.  I would like\n  to see these autogenerated and I hope that things are going in that\n  direction. \n\n\n> \n> >\n> > My second question is:\n> > In the case my slots have names like 'sd' or 'history', I am really annoyed to\n> > have accessor functions and document them by having '\\alias{sd}' or\n> > '\\alias{history} in the '.Rd' file for the class since 'sd' and 'history' are\n> > functions from 'base'. What should I do (in case the the answer to first\n> > question was 'yes, we want accessor functions') ?\n> \n> i don't share your annoyance, but the problem of collisions\n> among document references is real.  sd-methods.Rd can be\n> generated via promptMethods.\n> \n> we need some protracted thought about this -- many people are\n> working on documentation concepts but at this time you just\n> have to strike a balance between thoroughness and annoyance-reduction\n> \n> sorry!\n> \n> >\n> >\n> > ???\n> >\n> >\n> >\n> > L.\n> >\n> >\n> >\n> >\n> > --------------------------------------------------------------\n> > Laurent Gautier\t\t\tCBS, Building 208, DTU\n> > PhD. Student\t\t\tD-2800 Lyngby,Denmark\n> > tel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent\n> > _______________________________________________\n> > Biocore mailing list\n> > Biocore@stat.math.ethz.ch\n> > http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n> >\n> \n> _______________________________________________\n> Biocore mailing list\n> Biocore@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B28\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "On Wed, Mar 27, 2002 at 07:05:23AM -0500, Vincent Carey 525-2265 wrote:\n> i am forwarding this exchange from core as it is potentially\n> of general interest\n> \n> ---------- Forwarded message ---------",
+      "thread_id": "thread-353cc0d887ae",
+      "thread_depth": 1,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-89b8ef7e39bc",
+      "message_id": "<Pine.GSO.4.10.10203271353410.28763-100000@hsph.harvard.edu>",
+      "from_name": "Byron Ellis",
+      "from_email_hash": "9ab40472e1e849b90f771886956aec2b3b32280760d7f49df959005b2a72cffb",
+      "date": "2002-03-27T18:57:13Z",
+      "subject": "[BioC] Re: documenting S4 classes/accessors/encapsulation",
+      "subject_clean": "[BioC] Re: documenting S4 classes/accessors/encapsulation",
+      "in_reply_to": "<Pine.GSO.4.40.0203270700040.12186-100000@capecod.bwh.harvard.edu>",
+      "references": [],
+      "body_plain": "This always seemed sort of strange to me--we've already got foo() and\nfoo()<- as a perfectly good get/set mechanism. I would even argue that\nthis has a better visual representation than set and get since you are\nforced to look for a lowercase 'set' or 'get' in commands that are\notherwise identical. There *is* a problem of complex set commands, but\nI've come to think that small objects might be the solution (instead of\ntaking a single object type the ()<- takes some particular object type--a\ncoercion of sorts)\n\n\nByron Ellis (bellis@hsph.harvard.edu)\n\"Oook\" - The Librarian\n\nPlease finger bellis@hsph.harvard.edu for PGP keys\n\nOn Wed, 27 Mar 2002, Vincent Carey 525-2265 wrote:\n\n> one more point about accessors.  when autogenerated in the\n> OOP package, last time I looked, the accessor functions\n> had a prefix\n> \n> for slot foo, you would get an accessor function \"getFoo\"\n> \n> you might also get an assignment helper  \"setFoo\"\n> \n> we MAY want to start distinguishing our accessors in this manner.\n> this can be done in a backwards compatible way, by simply\n> adding compliantly named slots.  we then deprecate the\n> old style accessors and after a certain time, eliminate them\n> from the class definition.\n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>",
+      "body_snippet": "This always seemed sort of strange to me--we've already got foo() and\nfoo()<- as a perfectly good get/set mechanism. I would even argue that\nthis has a better visual representation than set and get si",
+      "thread_id": "thread-2b7b218d532a",
+      "thread_depth": 1,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-a0a816edb4d4",
+      "message_id": "<20020327140752.V19461@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-03-27T19:07:52Z",
+      "subject": "[BioC] Re: documenting S4 classes/accessors/encapsulation",
+      "subject_clean": "[BioC] Re: documenting S4 classes/accessors/encapsulation",
+      "in_reply_to": "<Pine.GSO.4.10.10203271353410.28763-100000@hsph.harvard.edu>; from bellis@hsph.harvard.edu on Wed, Mar 27, 2002 at 01:57:13PM -0500",
+      "references": [
+        "<Pine.GSO.4.40.0203270700040.12186-100000@capecod.bwh.harvard.edu>",
+        "<Pine.GSO.4.10.10203271353410.28763-100000@hsph.harvard.edu>"
+      ],
+      "body_plain": "On Wed, Mar 27, 2002 at 01:57:13PM -0500, Byron Ellis wrote:\n> This always seemed sort of strange to me--we've already got foo() and\n> foo()<- as a perfectly good get/set mechanism. I would even argue that\n> this has a better visual representation than set and get since you are\n> forced to look for a lowercase 'set' or 'get' in commands that are\n> otherwise identical. There *is* a problem of complex set commands, but\n> I've come to think that small objects might be the solution (instead of\n> taking a single object type the ()<- takes some particular object type--a\n> coercion of sorts)\n\n\n I wasn't proposing that we have to use setXYZ and getXYZ,\n  but folks from the Java community\n kinda like it that way. If it makes it easier for them then that is\n fine. There is a syntactic issue in the new regime since one uses a\n call to setReplaceMethod(\"foo\"...), and gets back a foo<- object.\n This is a bit of a\n disconnect but probably not that important.\n\n r\n\n\n> \n> \n> Byron Ellis (bellis@hsph.harvard.edu)\n> \"Oook\" - The Librarian\n> \n> Please finger bellis@hsph.harvard.edu for PGP keys\n> \n> On Wed, 27 Mar 2002, Vincent Carey 525-2265 wrote:\n> \n> > one more point about accessors.  when autogenerated in the\n> > OOP package, last time I looked, the accessor functions\n> > had a prefix\n> > \n> > for slot foo, you would get an accessor function \"getFoo\"\n> > \n> > you might also get an assignment helper  \"setFoo\"\n> > \n> > we MAY want to start distinguishing our accessors in this manner.\n> > this can be done in a backwards compatible way, by simply\n> > adding compliantly named slots.  we then deprecate the\n> > old style accessors and after a certain time, eliminate them\n> > from the class definition.\n> > \n> > _______________________________________________\n> > Bioconductor mailing list\n> > Bioconductor@stat.math.ethz.ch\n> > http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n> > \n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B28\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "On Wed, Mar 27, 2002 at 01:57:13PM -0500, Byron Ellis wrote:\n> This always seemed sort of strange to me--we've already got foo() and\n> foo()<- as a perfectly good get/set mechanism. I would even argue",
+      "thread_id": "thread-2b7b218d532a",
+      "thread_depth": 2,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-8d6af89c7eaf",
+      "message_id": "<Pine.SOL.4.20.0203271411160.10695-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-03-27T19:14:18Z",
+      "subject": "[BioC] Re: documenting S4 classes/accessors/encapsulation",
+      "subject_clean": "[BioC] Re: documenting S4 classes/accessors/encapsulation",
+      "in_reply_to": "<20020327140752.V19461@jimmy.harvard.edu>",
+      "references": [],
+      "body_plain": "On Wed, 27 Mar 2002, Robert Gentleman wrote:\n>  I wasn't proposing that we have to use setXYZ and getXYZ,\n>   but folks from the Java community\n\nI've always personally liked the setX/getX syntax - it makes it obvious\nwhat's being done even to someone who might not be completely boned up on\nthe details of the particular language.  It does seem a bit verbose, as\nwell as (along Byron's point) looking at page after page of code sometimes\nthe eyes blur the s's and the g's - but for understandability's sake, the\nset/get syntax has always appealed to me.\n\n-J",
+      "body_snippet": "On Wed, 27 Mar 2002, Robert Gentleman wrote:\n>  I wasn't proposing that we have to use setXYZ and getXYZ,\n>   but folks from the Java community\n\nI've always personally liked the setX/getX syntax - it ",
+      "thread_id": "thread-2b7b218d532a",
+      "thread_depth": 3,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-934d6cee933c",
+      "message_id": "<20020327152801.E21869@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-03-27T20:28:01Z",
+      "subject": "[BioC] Re: NA's",
+      "subject_clean": "[BioC] Re: NA's",
+      "in_reply_to": "<Pine.LNX.4.43.0203271222390.24841@hymn03.u.washington.edu>; from rossini@u.washington.edu on Wed, Mar 27, 2002 at 12:22:39PM -0800",
+      "references": [
+        "<pine.gso.4.10.10203271511460.15119_100000@biosun08>",
+        "<Pine.LNX.4.43.0203271222390.24841@hymn03.u.washington.edu>"
+      ],
+      "body_plain": "And please, let's move these to bioconductor, they are of general\ninterest rather than specific to the management of the project\n\n\nOn Wed, Mar 27, 2002 at 12:22:39PM -0800, Anthony Rossini wrote:\n> Raf - it might be worth documenting your opinions on the matter, to start thinking of how the various approaches compare under different situations.  Or is there already a paper on the topic?  (I'm sure in the substantive literature, but as to quality...?).\n> \n> best,\n> -tony\n> \n> ---\n> A.J. Rossini                            Rsrch Asst Professor of Biostatistics\n> rossini@u.washington.edu                http://software.biostat.washington.edu/\n> Biostatistics/Univ. of Washington       206-543-1044 (3286=fax) (Thursdays)\n> HIV Vaccine Trials Network/FHCRC        206-667-7025 (4812=fax) (M/Tu/W)\n> (Friday location is generally unknown).\n> \n> \n> On Wed, 27 Mar 2002, Rafael A. Irizarry wrote:\n> \n> > i have many.. but too complicated for email. call me if you want. a simple\n> > one (that i dont like much) is to use a hybrid log. checkout hlog in\n> > madman/Rpacks/affy/R/hlog.R\n> > \n> > On Wed, 27 Mar 2002, Yee Hwa Yang wrote:\n> > \n> > > Hi All,\n> > > \n> > > Sandrine and I are working on some cDNA data where we find there are lot's\n> > > of negative values which in turn produce NA's after log transform.  These\n> > > negative values arise because foreground intensities are smaller than the\n> > > background intensities (from image analysis output).\n> > > \n> > > For sma, we had created a series of functions (log.na, sum.na, mean.na,\n> > > ...) to handle NA values. For example, we have\n> > > \n> > >  log.na\n> > > function (x, ...)\n> > > {\n> > >     log(ifelse(x > 0, x, NA), ...)\n> > > }\n> > > \n> > > Does anyone have any suggestions about dealing with NA issues in\n> > > general for cDNA array data?\n> > > \n> > > Thank you,\n> > > Jean & Sandrine\n> > > \n> > > \n> > > ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n> > >   Jean Yee Hwa Yang\n> > >   Department of Statistics, 367 Evans Hall\n> > >   University of California, Berkeley, CA 94720\n> > >   Email:  yeehwa@stat.berkeley.edu\n> > > ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n> > > \n> > > \n> > > _______________________________________________\n> > > Biocore mailing list\n> > > Biocore@stat.math.ethz.ch\n> > > http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n> > > \n> > \n> > _______________________________________________\n> > Biocore mailing list\n> > Biocore@stat.math.ethz.ch\n> > http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n> > \n> \n> \n> _______________________________________________\n> Biocore mailing list\n> Biocore@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B28\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "And please, let's move these to bioconductor, they are of general\ninterest rather than specific to the management of the project\n\n\nOn Wed, Mar 27, 2002 at 12:22:39PM -0800, Anthony Rossini wrote:\n> Ra",
+      "thread_id": "thread-934d6cee933c",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-94625962f241",
+      "message_id": "<Pine.LNX.4.43.0203271254020.24841@hymn03.u.washington.edu>",
+      "from_name": "Anthony Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-03-27T20:54:02Z",
+      "subject": "[BioC] AnnBuilder package",
+      "subject_clean": "[BioC] AnnBuilder package",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "I've taken a quick look, but is there a description for building/constructing the PostgreSQL schema in the package?  (I understand the R part, and could probably reverse-engineer w/o too much problems, but are there plans to provide a creation script for constructing the database?).\n\nAlso, does the annotation builder have an \"audit trail\", i.e. a means of tracking changes in annotation records over time?   \n\nPointers to places in the directory structure/functions to look at are welcome.\n\n\nbest,\n-tony\n\n----\nA.J. Rossini                            Rsrch Asst Professor of Biostatistics\nrossini@u.washington.edu                http://software.biostat.washington.edu/\nBiostatistics/Univ. of Washington       206-543-1044 (3286=fax) (Thursdays)\nHIV Vaccine Trials Network/FHCRC        206-667-7025 (4812=fax) (M/Tu/W)\n(Friday location is generally unknown).",
+      "body_snippet": "I've taken a quick look, but is there a description for building/constructing the PostgreSQL schema in the package?  (I understand the R part, and could probably reverse-engineer w/o too much problems",
+      "thread_id": "thread-94625962f241",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-74102d685da6",
+      "message_id": "<Pine.LNX.4.43.0203271257110.24841@hymn03.u.washington.edu>",
+      "from_name": "Anthony Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-03-27T20:57:11Z",
+      "subject": "[BioC] email is the best way to find things...",
+      "subject_clean": "[BioC] email is the best way to find things...",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Nothing like sending off a message to find what you are looking for when you look at the screen again.\n\nI've found the db table constructors, sigh...\n\nbest,\n-tony\n\n----\nA.J. Rossini                            Rsrch Asst Professor of Biostatistics\nrossini@u.washington.edu                http://software.biostat.washington.edu/\nBiostatistics/Univ. of Washington       206-543-1044 (3286=fax) (Thursdays)\nHIV Vaccine Trials Network/FHCRC        206-667-7025 (4812=fax) (M/Tu/W)\n(Friday location is generally unknown).",
+      "body_snippet": "Nothing like sending off a message to find what you are looking for when you look at the screen again.\n\nI've found the db table constructors, sigh...\n\nbest,\n-tony\n\n----\nA.J. Rossini                   ",
+      "thread_id": "thread-74102d685da6",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-57dba706bcf7",
+      "message_id": "<20020327151752.F18598@nokomis.stat.umn.edu>",
+      "from_name": "Luke Tierney",
+      "from_email_hash": "122e02a593d41fa62b6dab459eafee83b77d39d4cd3661f0f888f99aadb07b10",
+      "date": "2002-03-27T21:17:52Z",
+      "subject": "[BioC] Re: documenting S4 classes/accessors/encapsulation",
+      "subject_clean": "[BioC] Re: documenting S4 classes/accessors/encapsulation",
+      "in_reply_to": "<Pine.SOL.4.20.0203271411160.10695-100000@santiam.dfci.harvard.edu>; from jgentry@jimmy.harvard.edu on Wed, Mar 27, 2002 at 02:14:18PM -0500",
+      "references": [
+        "<20020327140752.V19461@jimmy.harvard.edu>",
+        "<Pine.SOL.4.20.0203271411160.10695-100000@santiam.dfci.harvard.edu>"
+      ],
+      "body_plain": "On Wed, Mar 27, 2002 at 02:14:18PM -0500, Jeff Gentry wrote:\n> \n> \n> On Wed, 27 Mar 2002, Robert Gentleman wrote:\n> >  I wasn't proposing that we have to use setXYZ and getXYZ,\n> >   but folks from the Java community\n> \n> I've always personally liked the setX/getX syntax - it makes it obvious\n> what's being done even to someone who might not be completely boned up on\n> the details of the particular language.  It does seem a bit verbose, as\n> well as (along Byron's point) looking at page after page of code sometimes\n> the eyes blur the s's and the g's - but for understandability's sake, the\n> set/get syntax has always appealed to me.\n> \n\nI would prefer to avoid using setFoo(x, y) in R. One reason is that it\nobscures what is really happening even more than <- assignment already\ndoes.  Compound assignment in R is quite different from assignment\nin Java: In Java\n\n\tx.foo = bar\n\nmeans \"take the object referenced by x and destructively change it's\nfoo field to contain bar.\"  In R\n\n\tx$foo <- bar\n\nmeans: \"create a copy of the object in x that has it's foo component\nreplaced by bar and assign this copy to x in the local frame (which\nmay not be where the original x lived)\".  In other words, except for\nefficiency hacks x$foo <- bar means\n\n\tx <- \"$<-\"(\"foo\", value = bar)\n\nAnother issue with setFoo is that to write it requires using\nnon-standard evaluation tricks--eval/substitute sorts of stuff.  That\nsort of code is horrendously hard to get right, and I think we should\ntry to do less of it rather than more.\n\nA final issue is that hiding assignments inside function calls further\ncomplicates identifying what the variables in a function are and this\nin turn compicates attempts at building a compiler.\n\nOne other historical point on automatically generated accessors:\nCommon Lisp did this for structures: every slot got a reader and a\nwriter.  The names for structure FOO with slot A would be FOO-A.  I\nthink they decided this was not such a great idea, and when CLOS came\naround they decided to do it differently: when you declare a slot you\ncan specify whether you want a reader, a writer, or both, and you can\nspecify the names you want.  This allows you to indicate that certain\nslots are indented to be read-only or private (doesn't enforce this\nbut suggests it if you adapt the approach that clients of the code\nshould only use a functional ADT).  On the other hand, Dylan went back\nto generating readers and writers for everything, so who knows.  Name\nspaces should help reduce conflicts if we do go down that road.\n\nluke\n\n-- \nLuke Tierney\nUniversity of Minnesota                      Phone:           612-625-7843\nSchool of Statistics                         Fax:             612-624-8868\n313 Ford Hall, 224 Church St. S.E.           email:      luke@stat.umn.edu\nMinneapolis, MN 55455 USA                    WWW:  http://www.stat.umn.edu",
+      "body_snippet": "On Wed, Mar 27, 2002 at 02:14:18PM -0500, Jeff Gentry wrote:\n> \n> \n> On Wed, 27 Mar 2002, Robert Gentleman wrote:\n> >  I wasn't proposing that we have to use setXYZ and getXYZ,\n> >   but folks from th",
+      "thread_id": "thread-2b7b218d532a",
+      "thread_depth": 4,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-dcedafac6d05",
+      "message_id": "<20020327212908.GB22256@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "705d8edac5ac54e7a46a96bc0a17ff702f94febca76adcf0760433ab56a07f0d",
+      "date": "2002-03-27T21:29:08Z",
+      "subject": "[BioC] Re: NA's",
+      "subject_clean": "[BioC] Re: NA's",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "The use of something like the 'na.action' mentioned before now would let us\n(or others) plug-in easily their way to treat the NA's.. \n\n\nwhat  about  something  like\n\n  log.na  <- function(x, na.action=<eventually put a default action here>) {\n    x <- na.action(x)\n    log(x)                                                                                      \n  }\n\n\n\nnote: the handling of negative intensity values could be of general interest...\nwould it make sense to have the collection of function suggested by Yee and\nSandrine in a specific package (or in Biobase) ?\n\n\n\nL.\n                                                                                                                         \n                                                                                                                         \n                                                                                                                         \n                                                                                                                         \n--------------------------------------------------------------\nLaurent Gautier                  CBS, Building 208, DTU\nPhD. Student                     D-2800 Lyngby,Denmark\ntel: +45 45 25 24 85             http://www.cbs.dtu.dk/laurent\n~                                                                              \n\n\nOn Wed, Mar 27, 2002 at 12:02:53PM -0800, Yee Hwa Yang wrote:\n> Hi All,\n> \n> Sandrine and I are working on some cDNA data where we find there are lot's\n> of negative values which in turn produce NA's after log transform.  These\n> negative values arise because foreground intensities are smaller than the\n> background intensities (from image analysis output).\n> \n> For sma, we had created a series of functions (log.na, sum.na, mean.na,\n> ...) to handle NA values. For example, we have\n> \n>  log.na\n> function (x, ...)\n> {\n>     log(ifelse(x > 0, x, NA), ...)\n> }\n> \n> Does anyone have any suggestions about dealing with NA issues in\n> general for cDNA array data?\n> \n> Thank you,\n> Jean & Sandrine\n> \n> \n> ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n>   Jean Yee Hwa Yang\n>   Department of Statistics, 367 Evans Hall\n>   University of California, Berkeley, CA 94720\n>   Email:  yeehwa@stat.berkeley.edu\n> ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n> \n> \n> _______________________________________________\n> Biocore mailing list\n> Biocore@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n\n-- \n--------------------------------------------------------------\nother email: lgautier@altern.org\n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tD-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent\n\n\n----- End forwarded message -----\n\n-- \n--------------------------------------------------------------\nother email: lgautier@altern.org\n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tD-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "The use of something like the 'na.action' mentioned before now would let us\n(or others) plug-in easily their way to treat the NA's.. \n\n\nwhat  about  something  like\n\n  log.na  <- function(x, na.action",
+      "thread_id": "thread-dcedafac6d05",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-605794de02c2",
+      "message_id": "<20020327195903.J21869@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-03-28T00:59:03Z",
+      "subject": "[BioC] Re: NA's",
+      "subject_clean": "[BioC] Re: NA's",
+      "in_reply_to": "<5.1.0.14.1.20020328095126.00ada230@wehiz.wehi.edu.au>; from smyth@wehi.edu.au on Thu, Mar 28, 2002 at 11:41:28AM +1100",
+      "references": [
+        "<Pine.SOL.4.31.0203271156520.21070-100000@shelob.Berkeley.E DU>",
+        "<5.1.0.14.1.20020328095126.00ada230@wehiz.wehi.edu.au>"
+      ],
+      "body_plain": "On Thu, Mar 28, 2002 at 11:41:28AM +1100, Gordon Smyth wrote:\n> Dear Jean and Sandrine,\n> \n> I've never liked the idea of setting log-ratios to NA when one of the \n> foregrounds is less than the corresponding background, because this throws \n> away the information that that channel is very low for that spot.\n> \n> One long-term solution would be to treat such values as left censored, \n> i.e., to mark them as being \"below threshold of measurement\". All \n> subsequent analysis of the values would have to accept a censored data format.\n> \n> A shorter term solution would be to subtract only a fraction of the \n> background estimates, to keep the background corrected measurements all \n> positive. I am hoping to get a chance to look into ways of doing this \n> without being too ad hoc.\n> \n> I haven't seen anything useful in the literature on this topic yet.\n> \n> Best wishes\n> Gordon\n\n  Those are good points (I've moved this to bioconductor as well).\n  I believe that one might want to do that with values that are\n  positive in some cases as well. For example with oligo arrays (and I\n  expect cDNA) most people don't seem to believe that low values are\n  reliable, hence the left censoring (or Windsorising) point could be\n  set to 20, or 50 (notice that there are no units attached).\n\n  One of the main problems with this approach is that the analytic\n  tools used to filter genes/ESTs must then account for the censoring\n  and I believe that there are few such devices around. \n\n  However, I agree that this may be a more attractive solution in the\n  long term.\n\n   r\n\n\n> \n> At 12:02 PM 27/03/2002 -0800, Yee Hwa Yang wrote:\n> >Hi All,\n> >\n> >Sandrine and I are working on some cDNA data where we find there are lot's\n> >of negative values which in turn produce NA's after log transform.  These\n> >negative values arise because foreground intensities are smaller than the\n> >background intensities (from image analysis output).\n> >\n> >For sma, we had created a series of functions (log.na, sum.na, mean.na,\n> >...) to handle NA values. For example, we have\n> >\n> >  log.na\n> >function (x, ...)\n> >{\n> >     log(ifelse(x > 0, x, NA), ...)\n> >}\n> >\n> >Does anyone have any suggestions about dealing with NA issues in\n> >general for cDNA array data?\n> >\n> >Thank you,\n> >Jean & Sandrine\n> \n> ---------------------------------------------------------------------------------------\n> Dr Gordon K Smyth, Senior Research Scientist, Bioinformatics,\n> Walter and Eliza Hall Institute of Medical Research,\n> Post Office, Royal Melbourne Hospital, Vic 3050\n> Tel: (03) 9345 2326, Fax (03) 9347 0852,\n> Email: smyth@wehi.edu.au, www: http://www.statsci.org\n> \n> _______________________________________________\n> Biocore mailing list\n> Biocore@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/biocore\n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B28\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "On Thu, Mar 28, 2002 at 11:41:28AM +1100, Gordon Smyth wrote:\n> Dear Jean and Sandrine,\n> \n> I've never liked the idea of setting log-ratios to NA when one of the \n> foregrounds is less than the corre",
+      "thread_id": "thread-605794de02c2",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-30c6fd7bd030",
+      "message_id": "<200203281327.IAA17664@blaise.dfci.harvard.edu>",
+      "from_name": "John Zhang",
+      "from_email_hash": "a9b29fa5c7919bc7d02dec7bdc0c62c5f96a282f20bb4efd587867f549843181",
+      "date": "2002-03-28T13:27:44Z",
+      "subject": "[BioC] AnnBuilder package",
+      "subject_clean": "[BioC] AnnBuilder package",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": ">From: Anthony Rossini <rossini@u.washington.edu>\n>To: bioconductor@stat.math.ethz.ch\n>MIME-Version: 1.0\n>Subject: [BioC] AnnBuilder package\n>X-BeenThere: bioconductor@stat.math.ethz.ch\n>X-Mailman-Version: 2.0.2\n>List-Help: <mailto:bioconductor-request@stat.math.ethz.ch?subject=help>\n>List-Post: <mailto:bioconductor@stat.math.ethz.ch>\n>List-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n<mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe>\n>List-Id: The Bioconductor Project Mailing List <bioconductor.stat.math.ethz.ch>\n>List-Unsubscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n<mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe>\n>List-Archive: <http://www.stat.math.ethz.ch/pipermail/bioconductor/>\n>Date: Wed, 27 Mar 2002 12:54:02 -0800 (PST)\n>\n>I've taken a quick look, but is there a description for building/constructing \nthe PostgreSQL schema in the package?  (I understand the R part, and could \nprobably reverse-engineer w/o too much problems, but are there plans to provide \na creation script for constructing the database?).\n\nAnnBuilder.Rnw in AnnBuilder/inst/docs contains step by step instructions on how \nto build the annotation files. \n\n>Also, does the annotation builder have an \"audit trail\", i.e. a means of \ntracking changes in annotation records over time? \n\nNo. But this is a very useful function to have. I will try to do something.\n  \n>\n>Pointers to places in the directory structure/functions to look at are welcome.\n>\n>\n>best,\n>-tony\n>\n>----\n>A.J. Rossini                            Rsrch Asst Professor of Biostatistics\n>rossini@u.washington.edu                http://software.biostat.washington.edu/\n>Biostatistics/Univ. of Washington       206-543-1044 (3286=fax) (Thursdays)\n>HIV Vaccine Trials Network/FHCRC        206-667-7025 (4812=fax) (M/Tu/W)\n>(Friday location is generally unknown).\n>\n>\n>\n>\n>_______________________________________________\n>Bioconductor mailing list\n>Bioconductor@stat.math.ethz.ch\n>http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor",
+      "body_snippet": ">From: Anthony Rossini <rossini@u.washington.edu>\n>To: bioconductor@stat.math.ethz.ch\n>MIME-Version: 1.0\n>Subject: [BioC] AnnBuilder package\n>X-BeenThere: bioconductor@stat.math.ethz.ch\n>X-Mailman-Ver",
+      "thread_id": "thread-30c6fd7bd030",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-7e5172e4fd5e",
+      "message_id": "<200203281424.JAA20323@blaise.dfci.harvard.edu>",
+      "from_name": "John Zhang",
+      "from_email_hash": "a9b29fa5c7919bc7d02dec7bdc0c62c5f96a282f20bb4efd587867f549843181",
+      "date": "2002-03-28T14:24:41Z",
+      "subject": "[BioC] AnnBuilder package",
+      "subject_clean": "[BioC] AnnBuilder package",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": ">X-Authentication-Warning: giraffa.cbs.dtu.dk: laurent set sender to \nlaurent@genome.cbs.dtu.dk using -f\n>Date: Thu, 28 Mar 2002 15:15:10 +0100\n>From: Laurent Gautier <laurent@genome.cbs.dtu.dk>\n>To: John Zhang <jzhang@jimmy.harvard.edu>\n>Subject: Re: [BioC] AnnBuilder package\n>Mime-Version: 1.0\n>Content-Disposition: inline\n>User-Agent: Mutt/1.3.27i\n>\n>Hello John,\n>\n>\n>I tried to build the doc but get an error... I must do something dumb somewhere \nbut cannot figure out where....\n>\n>\n>\n>\n>\n>\n>giraffa[laurent]:/tmp/transfer/AnnBuilder/inst/docs> echo \"library(tools); \nSweave('AnnBuilder.Rnw')\" | /usr/local/packages/bin/R --vanilla --no-save\n>\n>R : Copyright 2002, The R Development Core Team\n>Version 1.5.0 Under development (unstable) (2002-03-20)\n>\n>R is free software and comes with ABSOLUTELY NO WARRANTY.\n>You are welcome to redistribute it under certain conditions.\n>Type `license()' or `licence()' for distribution details.\n>\n>R is a collaborative project with many contributors.\n>Type `contributors()' for more information.\n>\n>Type `demo()' for some demos, `help()' for on-line help, or\n>`help.start()' for a HTML browser interface to help.\n>Type `q()' to quit R.\n>\n>> library(tools); Sweave('AnnBuilder.Rnw')\n>Writing to file AnnBuilder.tex\n>Processing code chunks ...\n> 1 : echo term verbatim (label=R)\n> 2 : echo term verbatim (label=R)\n> 3 : echo term verbatim (label=R)\n> 4 : echo term verbatim (label=R)\n>Error in download.file(srcURL, fileName, method = \"internal\", quiet = TRUE) : \n>\tcannot open destfile \n`/usr/local/packages//lib/R/library/AnnBuilder/wwwfiles/Tll_tmpl.gz'\n>Error in driver$runcode(drobj, chunk, chunkopts) : \n>\tError while evaluating chunk\n>Execution halted\n\nYou may need to install AnnBuilder before running AnnBuilder.Rnw so that there \nis a wwwfiles folder under Annbuilder. Let me know if that still does work.\n\n\n>\n>\n>I checked. There is no directory 'wwwfiles'. \n>(note: I use R-devel)\n>\n>\n>\n>Thanks,\n>\n>\n>\n>\n>Laurent\n>\n>\n>\n>\n>\n>\n>\n>On Thu, Mar 28, 2002 at 08:27:44AM -0500, John Zhang wrote:\n>> \n>> >From: Anthony Rossini <rossini@u.washington.edu>\n>> >To: bioconductor@stat.math.ethz.ch\n>> >MIME-Version: 1.0\n>> >Subject: [BioC] AnnBuilder package\n>> >X-BeenThere: bioconductor@stat.math.ethz.ch\n>> >X-Mailman-Version: 2.0.2\n>> >List-Help: <mailto:bioconductor-request@stat.math.ethz.ch?subject=help>\n>> >List-Post: <mailto:bioconductor@stat.math.ethz.ch>\n>> >List-Subscribe: \n<http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n>> <mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe>\n>> >List-Id: The Bioconductor Project Mailing List \n<bioconductor.stat.math.ethz.ch>\n>> >List-Unsubscribe: \n<http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n>> <mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe>\n>> >List-Archive: <http://www.stat.math.ethz.ch/pipermail/bioconductor/>\n>> >Date: Wed, 27 Mar 2002 12:54:02 -0800 (PST)\n>> >\n>> >I've taken a quick look, but is there a description for \nbuilding/constructing \n>> the PostgreSQL schema in the package?  (I understand the R part, and could \n>> probably reverse-engineer w/o too much problems, but are there plans to \nprovide \n>> a creation script for constructing the database?).\n>> \n>> AnnBuilder.Rnw in AnnBuilder/inst/docs contains step by step instructions on \nhow \n>> to build the annotation files. \n>> \n>> >Also, does the annotation builder have an \"audit trail\", i.e. a means of \n>> tracking changes in annotation records over time? \n>> \n>> No. But this is a very useful function to have. I will try to do something.\n>>   \n>> >\n>> >Pointers to places in the directory structure/functions to look at are \nwelcome.\n>> >\n>> >\n>> >best,\n>> >-tony\n>> >\n>> >----\n>> >A.J. Rossini                            Rsrch Asst Professor of \nBiostatistics\n>> >rossini@u.washington.edu                \nhttp://software.biostat.washington.edu/\n>> >Biostatistics/Univ. of Washington       206-543-1044 (3286=fax) (Thursdays)\n>> >HIV Vaccine Trials Network/FHCRC        206-667-7025 (4812=fax) (M/Tu/W)\n>> >(Friday location is generally unknown).\n>> >\n>> >\n>> >\n>> >\n>> >_______________________________________________\n>> >Bioconductor mailing list\n>> >Bioconductor@stat.math.ethz.ch\n>> >http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>> \n>> _______________________________________________\n>> Bioconductor mailing list\n>> Bioconductor@stat.math.ethz.ch\n>> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>\n>-- \n>--------------------------------------------------------------\n>other email: lgautier@altern.org\n>--------------------------------------------------------------\n>Laurent Gautier\t\t\tCBS, Building 208, DTU\n>PhD. Student\t\t\tD-2800 Lyngby,Denmark\t\n>tel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": ">X-Authentication-Warning: giraffa.cbs.dtu.dk: laurent set sender to \nlaurent@genome.cbs.dtu.dk using -f\n>Date: Thu, 28 Mar 2002 15:15:10 +0100\n>From: Laurent Gautier <laurent@genome.cbs.dtu.dk>\n>To: ",
+      "thread_id": "thread-7e5172e4fd5e",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-1d69390908ff",
+      "message_id": "<200203281455.JAA23668@blaise.dfci.harvard.edu>",
+      "from_name": "John Zhang",
+      "from_email_hash": "a9b29fa5c7919bc7d02dec7bdc0c62c5f96a282f20bb4efd587867f549843181",
+      "date": "2002-03-28T14:55:43Z",
+      "subject": "[BioC] AnnBuilder package",
+      "subject_clean": "[BioC] AnnBuilder package",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": ">X-Authentication-Warning: giraffa.cbs.dtu.dk: laurent set sender to \nlaurent@genome.cbs.dtu.dk using -f\n>Date: Thu, 28 Mar 2002 15:54:03 +0100\n>From: Laurent Gautier <laurent@genome.cbs.dtu.dk>\n>To: John Zhang <jzhang@jimmy.harvard.edu>\n>Subject: Re: [BioC] AnnBuilder package\n>Mime-Version: 1.0\n>Content-Disposition: inline\n>User-Agent: Mutt/1.3.27i\n>\n>\n>\n>\n>I just tried a 'R CMD check' to see if the doc could be built but could not go \nthrough the check of examples....\n\nThe wwwfiles and temp folders were empty so that they do not get installed after \ninstallation. I have put a dummy file in each to keep them alive. If you get the \nlatest versin of AnnBuilder, it should work.\n\n>\n>On Thu, Mar 28, 2002 at 09:24:41AM -0500, John Zhang wrote:\n>> \n>> >X-Authentication-Warning: giraffa.cbs.dtu.dk: laurent set sender to \n>> laurent@genome.cbs.dtu.dk using -f\n>> >Date: Thu, 28 Mar 2002 15:15:10 +0100\n>> >From: Laurent Gautier <laurent@genome.cbs.dtu.dk>\n>> >To: John Zhang <jzhang@jimmy.harvard.edu>\n>> >Subject: Re: [BioC] AnnBuilder package\n>> >Mime-Version: 1.0\n>> >Content-Disposition: inline\n>> >User-Agent: Mutt/1.3.27i\n>> >\n>> >Hello John,\n>> >\n>> >\n>> >I tried to build the doc but get an error... I must do something dumb \nsomewhere \n>> but cannot figure out where....\n>> >\n>> >\n>> >\n>> >\n>> >\n>> >\n>> >giraffa[laurent]:/tmp/transfer/AnnBuilder/inst/docs> echo \"library(tools); \n>> Sweave('AnnBuilder.Rnw')\" | /usr/local/packages/bin/R --vanilla --no-save\n>> >\n>> >R : Copyright 2002, The R Development Core Team\n>> >Version 1.5.0 Under development (unstable) (2002-03-20)\n>> >\n>> >R is free software and comes with ABSOLUTELY NO WARRANTY.\n>> >You are welcome to redistribute it under certain conditions.\n>> >Type `license()' or `licence()' for distribution details.\n>> >\n>> >R is a collaborative project with many contributors.\n>> >Type `contributors()' for more information.\n>> >\n>> >Type `demo()' for some demos, `help()' for on-line help, or\n>> >`help.start()' for a HTML browser interface to help.\n>> >Type `q()' to quit R.\n>> >\n>> >> library(tools); Sweave('AnnBuilder.Rnw')\n>> >Writing to file AnnBuilder.tex\n>> >Processing code chunks ...\n>> > 1 : echo term verbatim (label=R)\n>> > 2 : echo term verbatim (label=R)\n>> > 3 : echo term verbatim (label=R)\n>> > 4 : echo term verbatim (label=R)\n>> >Error in download.file(srcURL, fileName, method = \"internal\", quiet = TRUE) \n: \n>> >\tcannot open destfile \n>> `/usr/local/packages//lib/R/library/AnnBuilder/wwwfiles/Tll_tmpl.gz'\n>> >Error in driver$runcode(drobj, chunk, chunkopts) : \n>> >\tError while evaluating chunk\n>> >Execution halted\n>> \n>> You may need to install AnnBuilder before running AnnBuilder.Rnw so that \nthere \n>> is a wwwfiles folder under Annbuilder. Let me know if that still does work.\n>> \n>> \n>> >\n>> >\n>> >I checked. There is no directory 'wwwfiles'. \n>> >(note: I use R-devel)\n>> >\n>> >\n>> >\n>> >Thanks,\n>> >\n>> >\n>> >\n>> >\n>> >Laurent\n>> >\n>> >\n>> >\n>> >\n>> >\n>> >\n>> >\n>> >On Thu, Mar 28, 2002 at 08:27:44AM -0500, John Zhang wrote:\n>> >> \n>> >> >From: Anthony Rossini <rossini@u.washington.edu>\n>> >> >To: bioconductor@stat.math.ethz.ch\n>> >> >MIME-Version: 1.0\n>> >> >Subject: [BioC] AnnBuilder package\n>> >> >X-BeenThere: bioconductor@stat.math.ethz.ch\n>> >> >X-Mailman-Version: 2.0.2\n>> >> >List-Help: <mailto:bioconductor-request@stat.math.ethz.ch?subject=help>\n>> >> >List-Post: <mailto:bioconductor@stat.math.ethz.ch>\n>> >> >List-Subscribe: \n>> <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n>> >> <mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe>\n>> >> >List-Id: The Bioconductor Project Mailing List \n>> <bioconductor.stat.math.ethz.ch>\n>> >> >List-Unsubscribe: \n>> <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n>> >> <mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe>\n>> >> >List-Archive: <http://www.stat.math.ethz.ch/pipermail/bioconductor/>\n>> >> >Date: Wed, 27 Mar 2002 12:54:02 -0800 (PST)\n>> >> >\n>> >> >I've taken a quick look, but is there a description for \n>> building/constructing \n>> >> the PostgreSQL schema in the package?  (I understand the R part, and could \n>> >> probably reverse-engineer w/o too much problems, but are there plans to \n>> provide \n>> >> a creation script for constructing the database?).\n>> >> \n>> >> AnnBuilder.Rnw in AnnBuilder/inst/docs contains step by step instructions \non \n>> how \n>> >> to build the annotation files. \n>> >> \n>> >> >Also, does the annotation builder have an \"audit trail\", i.e. a means of \n>> >> tracking changes in annotation records over time? \n>> >> \n>> >> No. But this is a very useful function to have. I will try to do \nsomething.\n>> >>   \n>> >> >\n>> >> >Pointers to places in the directory structure/functions to look at are \n>> welcome.\n>> >> >\n>> >> >\n>> >> >best,\n>> >> >-tony\n>> >> >\n>> >> >----\n>> >> >A.J. Rossini                            Rsrch Asst Professor of \n>> Biostatistics\n>> >> >rossini@u.washington.edu                \n>> http://software.biostat.washington.edu/\n>> >> >Biostatistics/Univ. of Washington       206-543-1044 (3286=fax) \n(Thursdays)\n>> >> >HIV Vaccine Trials Network/FHCRC        206-667-7025 (4812=fax) (M/Tu/W)\n>> >> >(Friday location is generally unknown).\n>> >> >\n>> >> >\n>> >> >\n>> >> >\n>> >> >_______________________________________________\n>> >> >Bioconductor mailing list\n>> >> >Bioconductor@stat.math.ethz.ch\n>> >> >http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>> >> \n>> >> _______________________________________________\n>> >> Bioconductor mailing list\n>> >> Bioconductor@stat.math.ethz.ch\n>> >> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>> >\n>> >-- \n>> >--------------------------------------------------------------\n>> >other email: lgautier@altern.org\n>> >--------------------------------------------------------------\n>> >Laurent Gautier\t\t\tCBS, Building 208, DTU\n>> >PhD. Student\t\t\tD-2800 Lyngby,Denmark\t\n>> >tel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent\n>\n>-- \n>--------------------------------------------------------------\n>other email: lgautier@altern.org\n>--------------------------------------------------------------\n>Laurent Gautier\t\t\tCBS, Building 208, DTU\n>PhD. Student\t\t\tD-2800 Lyngby,Denmark\t\n>tel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": ">X-Authentication-Warning: giraffa.cbs.dtu.dk: laurent set sender to \nlaurent@genome.cbs.dtu.dk using -f\n>Date: Thu, 28 Mar 2002 15:54:03 +0100\n>From: Laurent Gautier <laurent@genome.cbs.dtu.dk>\n>To: ",
+      "thread_id": "thread-1d69390908ff",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-43a8f439a0d1",
+      "message_id": "<200203281535.KAA27528@blaise.dfci.harvard.edu>",
+      "from_name": "John Zhang",
+      "from_email_hash": "a9b29fa5c7919bc7d02dec7bdc0c62c5f96a282f20bb4efd587867f549843181",
+      "date": "2002-03-28T15:35:38Z",
+      "subject": "[BioC] AnnBuilder package",
+      "subject_clean": "[BioC] AnnBuilder package",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": ">X-Authentication-Warning: giraffa.cbs.dtu.dk: laurent set sender to \nlaurent@genome.cbs.dtu.dk using -f\n>Date: Thu, 28 Mar 2002 16:12:43 +0100\n>From: Laurent Gautier <laurent@genome.cbs.dtu.dk>\n>To: John Zhang <jzhang@jimmy.harvard.edu>\n>Subject: Re: [BioC] AnnBuilder package\n>Mime-Version: 1.0\n>Content-Disposition: inline\n>User-Agent: Mutt/1.3.27i\n>\n>ok, I have to go now... we'll see tomorrow (or later)...\n\nI am going to have to move the folders around to make sure they get installed \neven when they are empty.  I will let you know about the status.\n\n>\n>\n>Laurent",
+      "body_snippet": ">X-Authentication-Warning: giraffa.cbs.dtu.dk: laurent set sender to \nlaurent@genome.cbs.dtu.dk using -f\n>Date: Thu, 28 Mar 2002 16:12:43 +0100\n>From: Laurent Gautier <laurent@genome.cbs.dtu.dk>\n>To: ",
+      "thread_id": "thread-43a8f439a0d1",
+      "thread_depth": 0,
+      "month": "2002-03"
+    },
+    {
+      "id": "msg-369ff118cd19",
+      "message_id": "<200203291341.IAA27303@blaise.dfci.harvard.edu>",
+      "from_name": "John Zhang",
+      "from_email_hash": "a9b29fa5c7919bc7d02dec7bdc0c62c5f96a282f20bb4efd587867f549843181",
+      "date": "2002-03-29T13:41:29Z",
+      "subject": "[BioC] AnnBuilder package",
+      "subject_clean": "[BioC] AnnBuilder package",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": ">X-Authentication-Warning: giraffa.cbs.dtu.dk: laurent set sender to \nlaurent@genome.cbs.dtu.dk using -f\n>Date: Fri, 29 Mar 2002 10:49:51 +0100\n>From: Laurent Gautier <laurent@genome.cbs.dtu.dk>\n>To: John Zhang <jzhang@jimmy.harvard.edu>\n>Subject: Re: [BioC] AnnBuilder package\n>Mime-Version: 1.0\n>Content-Disposition: inline\n>User-Agent: Mutt/1.3.27i\n>\n>On Thu, Mar 28, 2002 at 10:35:38AM -0500, John Zhang wrote:\n>> \n>> >X-Authentication-Warning: giraffa.cbs.dtu.dk: laurent set sender to \n>> laurent@genome.cbs.dtu.dk using -f\n>> >Date: Thu, 28 Mar 2002 16:12:43 +0100\n>> >From: Laurent Gautier <laurent@genome.cbs.dtu.dk>\n>> >To: John Zhang <jzhang@jimmy.harvard.edu>\n>> >Subject: Re: [BioC] AnnBuilder package\n>> >Mime-Version: 1.0\n>> >Content-Disposition: inline\n>> >User-Agent: Mutt/1.3.27i\n>> >\n>> >ok, I have to go now... we'll see tomorrow (or later)...\n>> \n>> I am going to have to move the folders around to make sure they get installed \n>> even when they are empty.  I will let you know about the status.\n>\n>\n>Ok. I just updated and noticed that the doc flew away. I'll try to figure out \nthings without the '.Rnw' files.\n>If you allow me, I'll annoy you with questions if I get stuck.\n\nI have moved the folders around a little bit yesterday.  AnnBuilder.Rnw is in \nAnnBuilder/inst/doc now. I have just got a fresh cvs version of AnnBuilder, \ninstalled the package, and was able to have the Rnw file in doc (after \ninstallation it is in doc instead of inst/doc) run without any problem. The \npackage in bioconductor site has not been rebuilt yet. I will try the download \nversion as well when it gets rebuilt.\n\nYes, please feel free to email me any time. Sorry for the confusion yesterday.\n\nJianhua \n\n\n>\n>\n>\n>Cheers,\n>\n>\n>\n>Laurent\n>\n>\n>\n>\n>\n>\n>> \n>> >\n>> >\n>> >Laurent\n>\n>--------------------------------------------------------------\n>Laurent Gautier\t\t\tCBS, Building 208, DTU\n>PhD. Student\t\t\tD-2800 Lyngby,Denmark\t\n>tel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": ">X-Authentication-Warning: giraffa.cbs.dtu.dk: laurent set sender to \nlaurent@genome.cbs.dtu.dk using -f\n>Date: Fri, 29 Mar 2002 10:49:51 +0100\n>From: Laurent Gautier <laurent@genome.cbs.dtu.dk>\n>To: ",
+      "thread_id": "thread-369ff118cd19",
+      "thread_depth": 0,
+      "month": "2002-03"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-f134976ae583",
+      "subject": "[BioC] using write.table on exprSet objects",
+      "message_count": 1,
+      "participants": [
+        "Laurent Gautier"
+      ],
+      "started": "2002-03-12T12:58:57Z",
+      "last_reply": "2002-03-12T12:58:57Z",
+      "root_message_id": "msg-f134976ae583"
+    },
+    {
+      "id": "thread-b85d1dcb0dc9",
+      "subject": "[BioC] tkctk widgets",
+      "message_count": 1,
+      "participants": [
+        "Robert Gentleman"
+      ],
+      "started": "2002-03-12T14:51:04Z",
+      "last_reply": "2002-03-12T14:51:04Z",
+      "root_message_id": "msg-b85d1dcb0dc9"
+    },
+    {
+      "id": "thread-651dad2d46cc",
+      "subject": "[BioC] Re: show for phenoData",
+      "message_count": 1,
+      "participants": [
+        "Vincent Carey 525-2265"
+      ],
+      "started": "2002-03-19T16:58:35Z",
+      "last_reply": "2002-03-19T16:58:35Z",
+      "root_message_id": "msg-651dad2d46cc"
+    },
+    {
+      "id": "thread-7e616b8df39d",
+      "subject": "[BioC] Sweave update",
+      "message_count": 1,
+      "participants": [
+        "Friedrich.Leisch@ci.tuwien.ac.at"
+      ],
+      "started": "2002-03-19T17:55:04Z",
+      "last_reply": "2002-03-19T17:55:04Z",
+      "root_message_id": "msg-7e616b8df39d"
+    },
+    {
+      "id": "thread-0baed59e3722",
+      "subject": "[BioC] placement of DTD files in a package?",
+      "message_count": 2,
+      "participants": [
+        "Anthony Rossini",
+        "Vincent Carey 525-2265"
+      ],
+      "started": "2002-03-20T21:58:28Z",
+      "last_reply": "2002-03-20T22:11:01Z",
+      "root_message_id": "msg-0baed59e3722"
+    },
+    {
+      "id": "thread-2b7cf1a9a1ca",
+      "subject": "[BioC] placement of DTD files in a package?",
+      "message_count": 4,
+      "participants": [
+        "Anthony Rossini",
+        "Douglas Bates",
+        "Robert Gentleman"
+      ],
+      "started": "2002-03-20T22:19:56Z",
+      "last_reply": "2002-03-20T23:59:08Z",
+      "root_message_id": "msg-2b7cf1a9a1ca"
+    },
+    {
+      "id": "thread-afadeeb92213",
+      "subject": "[BioC] tkctk widgets",
+      "message_count": 1,
+      "participants": [
+        "John Zhang"
+      ],
+      "started": "2002-03-21T16:24:32Z",
+      "last_reply": "2002-03-21T16:24:32Z",
+      "root_message_id": "msg-afadeeb92213"
+    },
+    {
+      "id": "thread-7c16cfe21ebd",
+      "subject": "[BioC] difference between biobase and biobase2?",
+      "message_count": 3,
+      "participants": [
+        "Anthony Rossini",
+        "Robert Gentleman",
+        "Vincent Carey 525-2265"
+      ],
+      "started": "2002-03-22T14:44:12Z",
+      "last_reply": "2002-03-22T14:56:02Z",
+      "root_message_id": "msg-7c16cfe21ebd"
+    },
+    {
+      "id": "thread-2b7b218d532a",
+      "subject": "[BioC] Re: documenting S4 classes/accessors/encapsulation",
+      "message_count": 5,
+      "participants": [
+        "Byron Ellis",
+        "Jeff Gentry",
+        "Luke Tierney",
+        "Robert Gentleman",
+        "Vincent Carey 525-2265"
+      ],
+      "started": "2002-03-27T12:03:20Z",
+      "last_reply": "2002-03-27T21:17:52Z",
+      "root_message_id": "msg-2b7b218d532a"
+    },
+    {
+      "id": "thread-353cc0d887ae",
+      "subject": "[BioC] Re: documenting S4 classes/accessors (fwd)",
+      "message_count": 3,
+      "participants": [
+        "Laurent Gautier",
+        "Robert Gentleman",
+        "Vincent Carey 525-2265"
+      ],
+      "started": "2002-03-27T12:05:23Z",
+      "last_reply": "2002-03-27T12:40:34Z",
+      "root_message_id": "msg-353cc0d887ae"
+    },
+    {
+      "id": "thread-934d6cee933c",
+      "subject": "[BioC] Re: NA's",
+      "message_count": 1,
+      "participants": [
+        "Robert Gentleman"
+      ],
+      "started": "2002-03-27T20:28:01Z",
+      "last_reply": "2002-03-27T20:28:01Z",
+      "root_message_id": "msg-934d6cee933c"
+    },
+    {
+      "id": "thread-94625962f241",
+      "subject": "[BioC] AnnBuilder package",
+      "message_count": 1,
+      "participants": [
+        "Anthony Rossini"
+      ],
+      "started": "2002-03-27T20:54:02Z",
+      "last_reply": "2002-03-27T20:54:02Z",
+      "root_message_id": "msg-94625962f241"
+    },
+    {
+      "id": "thread-74102d685da6",
+      "subject": "[BioC] email is the best way to find things...",
+      "message_count": 1,
+      "participants": [
+        "Anthony Rossini"
+      ],
+      "started": "2002-03-27T20:57:11Z",
+      "last_reply": "2002-03-27T20:57:11Z",
+      "root_message_id": "msg-74102d685da6"
+    },
+    {
+      "id": "thread-dcedafac6d05",
+      "subject": "[BioC] Re: NA's",
+      "message_count": 1,
+      "participants": [
+        "Laurent Gautier"
+      ],
+      "started": "2002-03-27T21:29:08Z",
+      "last_reply": "2002-03-27T21:29:08Z",
+      "root_message_id": "msg-dcedafac6d05"
+    },
+    {
+      "id": "thread-605794de02c2",
+      "subject": "[BioC] Re: NA's",
+      "message_count": 1,
+      "participants": [
+        "Robert Gentleman"
+      ],
+      "started": "2002-03-28T00:59:03Z",
+      "last_reply": "2002-03-28T00:59:03Z",
+      "root_message_id": "msg-605794de02c2"
+    },
+    {
+      "id": "thread-30c6fd7bd030",
+      "subject": "[BioC] AnnBuilder package",
+      "message_count": 1,
+      "participants": [
+        "John Zhang"
+      ],
+      "started": "2002-03-28T13:27:44Z",
+      "last_reply": "2002-03-28T13:27:44Z",
+      "root_message_id": "msg-30c6fd7bd030"
+    },
+    {
+      "id": "thread-7e5172e4fd5e",
+      "subject": "[BioC] AnnBuilder package",
+      "message_count": 1,
+      "participants": [
+        "John Zhang"
+      ],
+      "started": "2002-03-28T14:24:41Z",
+      "last_reply": "2002-03-28T14:24:41Z",
+      "root_message_id": "msg-7e5172e4fd5e"
+    },
+    {
+      "id": "thread-1d69390908ff",
+      "subject": "[BioC] AnnBuilder package",
+      "message_count": 1,
+      "participants": [
+        "John Zhang"
+      ],
+      "started": "2002-03-28T14:55:43Z",
+      "last_reply": "2002-03-28T14:55:43Z",
+      "root_message_id": "msg-1d69390908ff"
+    },
+    {
+      "id": "thread-43a8f439a0d1",
+      "subject": "[BioC] AnnBuilder package",
+      "message_count": 1,
+      "participants": [
+        "John Zhang"
+      ],
+      "started": "2002-03-28T15:35:38Z",
+      "last_reply": "2002-03-28T15:35:38Z",
+      "root_message_id": "msg-43a8f439a0d1"
+    },
+    {
+      "id": "thread-369ff118cd19",
+      "subject": "[BioC] AnnBuilder package",
+      "message_count": 1,
+      "participants": [
+        "John Zhang"
+      ],
+      "started": "2002-03-29T13:41:29Z",
+      "last_reply": "2002-03-29T13:41:29Z",
+      "root_message_id": "msg-369ff118cd19"
+    }
+  ]
+}

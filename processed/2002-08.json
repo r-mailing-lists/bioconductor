@@ -1,0 +1,1044 @@
+{
+  "list": "bioconductor",
+  "description": "",
+  "month": "2002-08",
+  "messages": [
+    {
+      "id": "msg-9a1ae9ba2a23",
+      "message_id": "<p05111702b96f328e7237@[192.168.1.226]>",
+      "from_name": "Colin A. Smith",
+      "from_email_hash": "66464d3e62f4ea44d66e9b0fe5284290827d25f20e1e7e19c42d696bd31cb224",
+      "date": "2002-08-02T00:29:15Z",
+      "subject": "[BioC] New Package: annaffy",
+      "subject_clean": "[BioC] New Package: annaffy",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This summer I've written a new package that makes extensive use of \nthe Bioconductor data packages to create annotated HTML and text \nfiles. It will take a vector or Affymetrix probe ids and generate a \ntable with quite a bit of useful annotation data. It was mostly \ninspired by Robert Gentlemen's challenge found in the \"ll.htmlpage\" \ndocumentation:\n\n\"Details: A simple markup is used to provide clickable entries. \nAnyone that is energetic could greatly improve this.\"\n\nThe usefulness of the package essentially boils down to the function \n\"aaf.summary\". For an overview of what the package does, see the \ndocumentation for that function. For a quick example, run \nexample(aaf.summary). There may be novel uses for the other functions \nin the package but they're mainly just slaves to the master function. \nIn this version I haven't officially declared any of the functions \nprivate but I think I'll do that at some point soon.\n\nannaffy depends on three Bioconductor packages: Biobase (only for the \nmultiget function), GO, and KEGG (for second level annotation). Also, \nto really be useful for anything, it needs one of the other full \nannotation data packages available on the Bioconductor web site. I've \ntested it with the rgu34a package but I haven't gotten around to the \nother data packages yet.\n\nTo my knowledge, annaffy is Bioconductor compliant with the exception \nthat I haven't written a vignette yet. It does pass R CMD check. \nThere are most certainly still bugs, typos, and misspellings in the \ncode/documentation. There is one big optimization I know of that \nstill needs to be done. I would greatly appreciate any \ncomments/suggestions/complaints. I haven't implemented functions that \nhandle all the annotation data provided with the annotation packages. \nI am especially interested in finding out which of the other data \nsources would be useful and worth implementing.\n\n-Colin\n\nSource package:\n\nhttp://homepages.nyu.edu/~cas277/annaffy_0.5.tar.gz\n\nHTML page produced by example(aaf.summary):\n\nhttp://homepages.nyu.edu/~cas277/affy.html\n-- \n\nColin Alexander Smith\ncas277@nyu.edu\n\nPGP Public Key:\n  http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x0B159DFF",
+      "body_snippet": "This summer I've written a new package that makes extensive use of \nthe Bioconductor data packages to create annotated HTML and text \nfiles. It will take a vector or Affymetrix probe ids and generate ",
+      "thread_id": "thread-9a1ae9ba2a23",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-5008a1044a1b",
+      "message_id": "<20020802101846.GA27824@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "46ea1fbf1dde6cd7ce00fc69b0ee2b1457b50e6b5c9e07bd3a465dc588db5dd1",
+      "date": "2002-08-02T10:18:46Z",
+      "subject": "[BioC] New Package: annaffy",
+      "subject_clean": "[BioC] New Package: annaffy",
+      "in_reply_to": "<p05111702b96f328e7237@[192.168.1.226]>",
+      "references": [
+        "<p05111702b96f328e7237@[192.168.1.226]>"
+      ],
+      "body_plain": "--Q68bSM7Ycu6FN28Q\nContent-Type: text/plain; charset=us-ascii\nContent-Disposition: inline\n\nOn Thu, Aug 01, 2002 at 05:29:15PM -0700, Colin A. Smith wrote:\n> This summer I've written a new package that makes extensive use of \n> the Bioconductor data packages to create annotated HTML and text \n> files. It will take a vector or Affymetrix probe ids and generate a \n> table with quite a bit of useful annotation data. It was mostly \n> inspired by Robert Gentlemen's challenge found in the \"ll.htmlpage\" \n> documentation:\n\n\nIt looks very nice... thanks...\n\n\n> \n> \"Details: A simple markup is used to provide clickable entries. \n> Anyone that is energetic could greatly improve this.\"\n> \n> The usefulness of the package essentially boils down to the function \n> \"aaf.summary\". For an overview of what the package does, see the \n> documentation for that function. For a quick example, run \n> example(aaf.summary). There may be novel uses for the other functions \n> in the package but they're mainly just slaves to the master function. \n> In this version I haven't officially declared any of the functions \n> private but I think I'll do that at some point soon.\n> \n> annaffy depends on three Bioconductor packages: Biobase (only for the \n> multiget function), GO, and KEGG (for second level annotation). Also, \n> to really be useful for anything, it needs one of the other full \n> annotation data packages available on the Bioconductor web site. I've \n> tested it with the rgu34a package but I haven't gotten around to the \n> other data packages yet.\n> \n> To my knowledge, annaffy is Bioconductor compliant with the exception \n> that I haven't written a vignette yet. It does pass R CMD check. \n> There are most certainly still bugs, typos, and misspellings in the \n> code/documentation. There is one big optimization I know of that \n> still needs to be done. I would greatly appreciate any \n> comments/suggestions/complaints. I haven't implemented functions that \n> handle all the annotation data provided with the annotation packages. \n> I am especially interested in finding out which of the other data \n> sources would be useful and worth implementing.\n> \n\n\nI thought of a tiny option to aaf.summary\n(displays the output produced in a browser...).\nand I couldn't help adding it...\nYou'll find the code and the doc attached...\n(if one has any use for it).\n\n\n\nL.\n\n> -Colin\n> \n> Source package:\n> \n> http://homepages.nyu.edu/~cas277/annaffy_0.5.tar.gz\n> \n> HTML page produced by example(aaf.summary):\n> \n> http://homepages.nyu.edu/~cas277/affy.html\n> -- \n> \n> Colin Alexander Smith\n> cas277@nyu.edu\n> \n> PGP Public Key:\n>  http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x0B159DFF\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n--Q68bSM7Ycu6FN28Q\nContent-Type: text/plain; charset=us-ascii\nContent-Disposition: attachment; filename=\"aaf.summary.R\"\n\naaf.summary <- function (probeids, chip, filename, userdata, columns, sort, \n                         decreasing = FALSE, format = \"html\", \n                         title = \"BioConductor Affymetrix Probe Listing\",\n                         browser = getOption(\"browser\"),\n                         display = FALSE) {\n  \n  anncols <- aaf.handler()\n  if (missing(userdata))\n    usercols <- NULL\n  else {\n    userdata <- aaf.checkTable(userdata, length(probeids))\n    usercols <- names(userdata)\n  }\n  \n  if (missing(columns))\n    columns <- c(anncols, usercols)\n  else\n    for(item in columns)\n      if (is.null(indexTo(c(anncols, usercols), item)))\n        stop(paste(\"Column \\\"\", item, \"\\\" does not exist\", sep = \"\"))\n  \n  if (! missing(sort))\n    for(item in sort)\n      if (is.null(indexTo(c(anncols, usercols), item)))\n        stop(paste(\"Sort column \\\"\", item, \"\\\" does not exist\", \n                   sep = \"\"))\n  \n  table <- aaf.table(probeids, chip, columns)\n  if (! missing(userdata))\n    table <- c(table, userdata)\n  if (! missing(sort))\n    table <- sortTable(table, sort, decreasing)\n  \n  switch(format,\n         html = aaf.HTML(table, columns, filename, title),\n         text = aaf.text(table, columns, filename),\n         \"Error: Unsupported format\")\n\n  \n  if (display) {\n    url <- paste(\"file://\", getwd(),  Platform()$file.sep, filename, sep=\"\")\n    o.browser <- options()$browser\n    on.exit(options(browser=o.browser))\n    \n    ## wild copy/paste from the function 'help.search'\n    ## DEBUG: not quite sure about \"/dev/null\" and windows or Mac ports...\n    if (browser != getOption(\"browser\")) {\n      msg <- paste(\"Changing the default browser\", \"(as specified by the `browser' option)\", \n                   \"to the given browser.\")\n      writeLines(strwrap(msg, exdent = 4))\n      options(browser = browser)\n    }\n    system(paste(browser, \" -remote \\\"openURL(\", url, \")\\\" 2>/dev/null || \", \n                 browser, \" \", url, \" &\", sep = \"\"))\n  }\n}\n\n--Q68bSM7Ycu6FN28Q\nContent-Type: text/plain; charset=us-ascii\nContent-Disposition: attachment; filename=\"aaf.summary.Rd\"\n\n\\name{aaf.summary}\n\\alias{aaf.summary}\n\\title{Summarize annotation for Affymetrix probes}\n\\description{\n  Given a set of Affymetrix probe ids and a standard BioConductor\n  Affymetrix annotation package, output a summary file.\n}\n\n\\usage{\naaf.summary(probeids, chip, filename, userdata, columns, sort, \n            decreasing = FALSE, format = \"html\", \n            title = \"BioConductor Affymetrix Probe Listing\")\n}\n\\arguments{\n  \\item{probeids}{character vector containing probe ids}\n  \\item{chip}{name of chip, see details}\n  \\item{filename}{filename for output file}\n  \\item{userdata}{named list of vectors the same length as \\code{probeids}}\n  \\item{columns}{character vector with column names to be output}\n  \\item{sort}{character vector with order of columns used for sorting}\n  \\item{decreasing}{sort by decreasing value (\\code{TRUE}) or increasing value (\\code{FALSE})}\n  \\item{format}{\\code{html} or \\code{text}, format of output file, either HTML \n    or tab-delimited text (excluding any hypertext links)}\n  \\item{title}{title of HTML page}\n  \\item{browser}{the browser to use to disply the results (See\n    \\code{display} below).}\n  \\item{display}{a logical to indicate whether display in a browser is\n    wished or not.}\n}\n\\details{\n  The core workings of this function depend on an (informal) protocol\n  used in creating the BioConductor Affymetrix annotation data\n  packages. Based on currently published (and unpublished) data packages,\n  the current protocol includes the following features:\n\n  The package is named after the chip, \\code{<chip name>} \\cr\n  The package contains datasets named \\code{<chip name><data type>}\n\n  This function will map the following datasets into the corresponding\n  column names:\n\n  \\code{Probe} - a column containing the contents of \\code{probeids} \\cr\n  \\code{<chip name>SYMBOL} - \\code{Symbol} - Gene symbol \\cr\n  \\code{<chip name>GENENAME} - \\code{Description} - Gene description \\cr\n  \\code{<chip name>ACCNUM} - \\code{GenBank} - GenBank accession number\n  including a hypertext link \\cr\n  \\code{<chip name>LOCUSID} - \\code{LocusLink} - LocusLink ID including a\n  hypertext link \\cr\n  \\code{<chip name>UNIGENE} - \\code{UniGene} - UniGene cluster ID including a\n  hypertext link \\cr\n  \\code{<chip name>PMID} - \\code{PubMed} - Number of PubMed abstracts\n  including a hypertext link to the corresponding abstracts \\cr\n  \\code{<chip name>GO} - \\code{Gene Ontology} - Gene Ontology classes including\n  hypertext link and descriptive JavaScript rollover \\cr\n  \\code{<chip name>PATH} - \\code{Pathway} - KEGG Pathway names including\n  hypertext link \\cr\n\n  \\code{userdata} allows users to provide their own data to be\n  displayed in the table. For clarity, the vectors in the list should\n  be named. However, generic names will be generated if they are omitted.\n\n  \\code{columns} changes the order in which the columns are\n  displayed. Additionally, columns may be omitted in the same way. User\n  columns must be included in this vector for their display. If\n  \\code{columns} is omitted, all of the above columns will be displayed\n  followed by the user columns.\n}\n\n\\value{\n  No value is returned. The function is evaluated solely for the side\n  effect of producing the file \\code{filename}.\n}\n\\note{\n  Written at the NASA Center for Computational Astrobiology \\cr\n  \\url{http://cca.arc.nasa.gov/}\n}\n\\author{Colin A. Smith, \\email{cas277@nyu.edu}}\n\n\\examples{\nprobes <- ls(annaffySYMBOL)\naaf.summary(probes, \"annaffy\", \"affy.html\")\n}\n\\keyword{ file }\n\n--Q68bSM7Ycu6FN28Q--",
+      "body_snippet": "--Q68bSM7Ycu6FN28Q\nContent-Type: text/plain; charset=us-ascii\nContent-Disposition: inline\n\nOn Thu, Aug 01, 2002 at 05:29:15PM -0700, Colin A. Smith wrote:\n> This summer I've written a new package that",
+      "thread_id": "thread-9a1ae9ba2a23",
+      "thread_depth": 1,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-7dfe673d6851",
+      "message_id": "<200208021337.JAA29655@blaise.dfci.harvard.edu>",
+      "from_name": "John Zhang",
+      "from_email_hash": "a9b29fa5c7919bc7d02dec7bdc0c62c5f96a282f20bb4efd587867f549843181",
+      "date": "2002-08-02T13:37:25Z",
+      "subject": "[BioC] Re: Data in annotate",
+      "subject_clean": "[BioC] Re: Data in annotate",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "The hu6800, hgu95, and mgu74 data files in annotate/data have been removed as \nplanned. More reliable and easier to use versions of these files can be \ndownloaded from the Bioconductor web site.",
+      "body_snippet": "The hu6800, hgu95, and mgu74 data files in annotate/data have been removed as \nplanned. More reliable and easier to use versions of these files can be \ndownloaded from the Bioconductor web site.",
+      "thread_id": "thread-7dfe673d6851",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-fbf5d111a1d7",
+      "message_id": "<3D4AE36E.7C81D514@sickkids.ca>",
+      "from_name": "Mohamed Abdolell",
+      "from_email_hash": "63e8ed4d45a286190ac9fcd5c5ccb08a1397b3e1b06c28134d31b066bb18372b",
+      "date": "2002-08-02T19:54:22Z",
+      "subject": "[BioC] does the UNIX package bundle install on Linux RedHat 7.3?",
+      "subject_clean": "[BioC] does the UNIX package bundle install on Linux RedHat 7.3?",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "i have just installed R on my linux 7.3 platform ...\n\nwill your Unix package bundle install on Linux RedHat 7.3 also?\n\n- thanks",
+      "body_snippet": "i have just installed R on my linux 7.3 platform ...\n\nwill your Unix package bundle install on Linux RedHat 7.3 also?\n\n- thanks",
+      "thread_id": "thread-fbf5d111a1d7",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-8b55d246979a",
+      "message_id": "<Pine.SOL.4.20.0208021604160.7793-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-08-02T20:04:25Z",
+      "subject": "[BioC] does the UNIX package bundle install on Linux RedHat 7.3?",
+      "subject_clean": "[BioC] does the UNIX package bundle install on Linux RedHat 7.3?",
+      "in_reply_to": "<3D4AE36E.7C81D514@sickkids.ca>",
+      "references": [],
+      "body_plain": "> i have just installed R on my linux 7.3 platform ...\n> will your Unix package bundle install on Linux RedHat 7.3 also?\n\nYup.\n\n-J",
+      "body_snippet": "> i have just installed R on my linux 7.3 platform ...\n> will your Unix package bundle install on Linux RedHat 7.3 also?\n\nYup.\n\n-J",
+      "thread_id": "thread-fbf5d111a1d7",
+      "thread_depth": 1,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-ca7a122257ba",
+      "message_id": "<Pine.SOL.4.20.0208051243500.16280-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-08-05T16:45:45Z",
+      "subject": "[BioC] Contributed packages",
+      "subject_clean": "[BioC] Contributed packages",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hello ...\n\nI've added a 'contributed packages' link to the left frame of the\nBioconductor web site.  Currently it contains two packages (ctc: Cluster &\nTree Conversion, and Annaffy: Annotation for Affymetrix probes).\n\n-Jeff",
+      "body_snippet": "Hello ...\n\nI've added a 'contributed packages' link to the left frame of the\nBioconductor web site.  Currently it contains two packages (ctc: Cluster &\nTree Conversion, and Annaffy: Annotation for Aff",
+      "thread_id": "thread-ca7a122257ba",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-ff7fd556f47e",
+      "message_id": "<PDEPKIBPHEFEDEDCJKEGEEKCCAAA.jsorenson@bellsouth.net>",
+      "from_name": "Jeff Sorenson",
+      "from_email_hash": "48a95d29e5a96984d5b8e2cc5a678fe2fbaabecf340676d8d46e4bcc4545b774",
+      "date": "2002-08-05T16:49:45Z",
+      "subject": "[BioC] Annotation for Nonspecificity of Affymetrix Probes?",
+      "subject_clean": "[BioC] Annotation for Nonspecificity of Affymetrix Probes?",
+      "in_reply_to": "<20020803100008.2405.61959.Mailman@stat.math.ethz.ch>",
+      "references": [],
+      "body_plain": "I would like to thank all of the contributors to the bioconductor project\nfor putting their tools into the public domain.  I'm embarking on a project\nusing Affymetrix U133A/B chips and have been in the process of setting up a\ndatabase of probe/sequence information and other annotation information\n(mysql), and learning to use the various R packages.  Looking over the probe\nsequences and putative gene sequences that affymetrix provides on their\nwebsite, it is clear that many of the probes are nonspecific - e.g, they\nperfectly match portions of gene sequences that are differenct than the one\nthey were derived from.  In some cases, it appears that affymetrix has\nsimply generated multiple probe sets for transcriptional variants of the\nsame gene.  In other cases, it appears that some probes are simply\nnonspecific.  Affymetrix does warn us that some probe sets are less specific\nthan others, and this is indeed incorporated into their probe set\nnomenclature, but I have found no downloadable file that lists the\nspecifics.  My computer should be done testing the half million probes for\nperfect matches against the ~45000 sequences some time later this week.\nAfter that, I will probably test the mismatch probes.\n\nMy question to this community is this:  is there already an annotation file\nor package that takes this consideration into account?  If so, can this\ninformation be readily adapted into the R packages for probe level analysis\nand gene expression estimation?\n\nIn a related question, can anyone point me to an algorithm for accurately\nestimating the hybridization probability of an arbitrary probe against an\narbitrary mRNA.  Would it correlate closely to the BLAST score?  Has anyone\ndone theoretical studies on the nature of the mismatch probes and their\nusefulness in measuring \"nonspecific\" binding?  It would be nice to be able\nto predict how strongly a particular mRNA should bind to each of the probes\non a chip (both PM and MM).  If this is feasable, has anyone done in computo\nchip hybridization experiments to see how closely the estimated expression\nlevels are to the actual input?\n\n\nThanks,\n\nJeff Sorenson",
+      "body_snippet": "I would like to thank all of the contributors to the bioconductor project\nfor putting their tools into the public domain.  I'm embarking on a project\nusing Affymetrix U133A/B chips and have been in th",
+      "thread_id": "thread-ff7fd556f47e",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-e3877f02181b",
+      "message_id": "<20020805132327.U5720@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-08-05T17:23:27Z",
+      "subject": "[BioC] Annotation for Nonspecificity of Affymetrix Probes?",
+      "subject_clean": "[BioC] Annotation for Nonspecificity of Affymetrix Probes?",
+      "in_reply_to": "<PDEPKIBPHEFEDEDCJKEGEEKCCAAA.jsorenson@bellsouth.net>; from jsorenson@bellsouth.net on Mon, Aug 05, 2002 at 11:49:45AM -0500",
+      "references": [
+        "<20020803100008.2405.61959.Mailman@stat.math.ethz.ch>",
+        "<PDEPKIBPHEFEDEDCJKEGEEKCCAAA.jsorenson@bellsouth.net>"
+      ],
+      "body_plain": "Hi,\n We are doing some research that is probably not completely\n dissimilar. I don't know of research regarding the affinity of\n particular probes. However, G and C bind more tightly than A and T so\n the CG content is undoubtedly important. The former have 3 H-bonds,\n the latter only 2.\n\n Probably more important are the cross-hybridization issues. I do have\n some ideas on how you deal with them. \n \n Stated quite simply, one completely ignores the mappings that\n Affymetrix has provided. The only ones that are appropriate are the\n ones that you (and lots of others) have developed by mapping the\n 25mers to the transcriptome (I'm not at all sure that there is a\n reliable estimate of the transcriptome, but that's another issue).\n Note also, that in this mapping there is no such thing as PM or MM,\n there are just 25mers and they map into particular genes (or not).\n\n This allows you to do some interesting things. Say, you have a\n favorite gene but Affy has not indicated that it is on the chip. All\n you need is its sequence and if you can find a handful of 25mers that\n match then you can estimate its abundance.\n You might want to look at \"Gene Expression Analysis with Universal\n n-mer Arrays\", by van Dam and Quake in Genome Research.\n\n Going back one paragraph, these mappings are many to one (in both\n directions). Some genes contain multiple probe sets, and some probe\n sets are found in multiple genes. (If this sounds a lot like SAGE\n data, it should. You can think of SAGE as digital and Affy as\n analog and it sort of works).\n\n Things are a bit simpler with SAGE -- I don't want to say much about\n Affy because we are in the midst of figuring it out.\n\n Regards,\n    Robert\n\n ps I encourage you to look at all resources used to construct our\n data packages. There are a lot of people doing similar things.\n\n\nOn Mon, Aug 05, 2002 at 11:49:45AM -0500, Jeff Sorenson wrote:\n> I would like to thank all of the contributors to the bioconductor project\n> for putting their tools into the public domain.  I'm embarking on a project\n> using Affymetrix U133A/B chips and have been in the process of setting up a\n> database of probe/sequence information and other annotation information\n> (mysql), and learning to use the various R packages.  Looking over the probe\n> sequences and putative gene sequences that affymetrix provides on their\n> website, it is clear that many of the probes are nonspecific - e.g, they\n> perfectly match portions of gene sequences that are differenct than the one\n> they were derived from.  In some cases, it appears that affymetrix has\n> simply generated multiple probe sets for transcriptional variants of the\n> same gene.  In other cases, it appears that some probes are simply\n> nonspecific.  Affymetrix does warn us that some probe sets are less specific\n> than others, and this is indeed incorporated into their probe set\n> nomenclature, but I have found no downloadable file that lists the\n> specifics.  My computer should be done testing the half million probes for\n> perfect matches against the ~45000 sequences some time later this week.\n> After that, I will probably test the mismatch probes.\n> \n> My question to this community is this:  is there already an annotation file\n> or package that takes this consideration into account?  If so, can this\n> information be readily adapted into the R packages for probe level analysis\n> and gene expression estimation?\n> \n> In a related question, can anyone point me to an algorithm for accurately\n> estimating the hybridization probability of an arbitrary probe against an\n> arbitrary mRNA.  Would it correlate closely to the BLAST score?  Has anyone\n> done theoretical studies on the nature of the mismatch probes and their\n> usefulness in measuring \"nonspecific\" binding?  It would be nice to be able\n> to predict how strongly a particular mRNA should bind to each of the probes\n> on a chip (both PM and MM).  If this is feasable, has anyone done in computo\n> chip hybridization experiments to see how closely the estimated expression\n> levels are to the actual input?\n> \n> \n> Thanks,\n> \n> Jeff Sorenson\n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B20\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "Hi,\n We are doing some research that is probably not completely\n dissimilar. I don't know of research regarding the affinity of\n particular probes. However, G and C bind more tightly than A and T so\n ",
+      "thread_id": "thread-ff7fd556f47e",
+      "thread_depth": 1,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-b7814c8dc5f6",
+      "message_id": "<Pine.LNX.4.44.0208081843590.2029-100000@cmis-stlucia-nd.tag.csiro.au>",
+      "from_name": "Peter Baker (CMIS, Indooroopilly)",
+      "from_email_hash": "7d9f1cd10df5d3006a0f5c8dde2b61ec04dd77efdc4631e3da3a9aad0eeca849",
+      "date": "2002-08-08T08:45:15Z",
+      "subject": "[BioC] More plot woes (maRawPlots)",
+      "subject_clean": "[BioC] More plot woes (maRawPlots)",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Re: \n> > > maDiagnPlots1(test[,2])\n> > Error in plot.new() : Figure margins too large\n\nThanks to Robert Gentleman, Joshua Betcher and Sandrine Dudoit for\nresponding. \n\nI changed graphics window sizes and output the graphs to files to work\naround the problem. I also tried to debug the functions to track down\nexactly where the error is but no luck really - sorry.\n\nNext I tried an overall loess normalisation on housekeeping genes\nexp48.norm<-maNorm(exp48, norm=\"loess\", subset=(housekeep ==1))  \n\nand while maPlot(), maDiagnPlots1(), maNormPlots(), work fine (if I'm\ncareful about graphics window sizes), maRawPlots() doesn't\n\n> maDiagnPlots1(exp48[,1],fname=\"test1.ps\",dev=\"postscript\",save=T)\npostscript \n         2 \n> maNormPlots(exp48.norm[,1],fname=\"test2.ps\",dev=\"postscript\",save=T)\npostscript \n         2 \n> maRawPlots(exp48[,1],fname=\"test3.ps\",dev=\"postscript\",save=T)\nError in factor(z, levels = 1:nlevels(x), labels = levels(x)) : \n\tinvalid labels; length 0 should be 1 or 2\n> \n\nIs this a similar error? It sort of looks like it because the boxplot\nwhere it stops has no margins\n\nThanks a lot\n\nRegards\nPeter\n\n-- \nDr Peter Baker, Statistician (Bioinformatics/Genetics),\nCSIRO Mathematical & Information Sciences,\n120 Meiers Rd, INDOOROOPILLY, QLD 4068.  Australia. \nEmail: <Peter.Baker@csiro.au>\nWWW: http://www.cmis.csiro.au/Peter.Baker/\nPhone:+61 7 3214 2210   Fax:+61 7 3214 2881",
+      "body_snippet": "Re: \n> > > maDiagnPlots1(test[,2])\n> > Error in plot.new() : Figure margins too large\n\nThanks to Robert Gentleman, Joshua Betcher and Sandrine Dudoit for\nresponding. \n\nI changed graphics window sizes ",
+      "thread_id": "thread-b7814c8dc5f6",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-012a44228aeb",
+      "message_id": "<Pine.SOL.4.20.0208121751190.9859-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-08-12T21:52:25Z",
+      "subject": "[BioC] New Windows builds",
+      "subject_clean": "[BioC] New Windows builds",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hello ...\n\nI've built a new set of packages for Win32 on both the release &\ndevelopment branches.\n\nI've not yet tested these extensively but they seem to work, not to\nmention clearing up a host of old problems (wrong files in the packages,\ncorrupted data, no PDFs in them, etc).\n\nTry them out and let me know if you find problems.\n\nWin32 Data Packages to come in the not too distant future.\n\n-J",
+      "body_snippet": "Hello ...\n\nI've built a new set of packages for Win32 on both the release &\ndevelopment branches.\n\nI've not yet tested these extensively but they seem to work, not to\nmention clearing up a host of old",
+      "thread_id": "thread-012a44228aeb",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-56323aecb684",
+      "message_id": "<003901c242dc$b3586bf0$2701a8c0@joshbtosh>",
+      "from_name": "Joshua Betcher",
+      "from_email_hash": "accece4a6dbd1352fadc2ef313f6af32c46b72d6d6fc3331724b618356a06fd5",
+      "date": "2002-08-13T15:18:38Z",
+      "subject": "[BioC] Multtest question...",
+      "subject_clean": "[BioC] Multtest question...",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Here is a very contrived example:\n\nx.temp <- rbind(c(4,4,4,4),\n                        c(1,1,4,4),\n                        c(1,0,3,4),\n                        c(1,.99999,.99998,.99997),\n                        c(1,.99999,.99998,.99998))\nclasslabels <- c(0,0,1,1)\n\nt.test <- mt.teststat(x.temp, classlabel = classlabels, test= \"t\")\nrawp0 <- 2 * (1 - pnorm(abs(t.test)))\n\nmt.rawp2adjp(rawp0, \"Bonderroni\")\n\n\nOutput:\n\n$adjp\n             rawp Bonderroni\n[1,] 0.000000e+00          0\n[2,] 0.000000e+00          0\n[3,] 2.209050e-05          0\n[4,] 2.699796e-03          0\n[5,] 4.677735e-03          0\n\n$index\n[1] 1 2 3 5 4\n\n\nI am not too troubled by the results of the last two rows but the first two\nseem to be concerning, the method does not seem to take into account zero\ndifferences.  Am I correct in this account?  If so, how would one fix this.\n\nThanks\nJosh\n\nSoftware: WinXP R 1.5.0, Latest version of Multtest",
+      "body_snippet": "Here is a very contrived example:\n\nx.temp <- rbind(c(4,4,4,4),\n                        c(1,1,4,4),\n                        c(1,0,3,4),\n                        c(1,.99999,.99998,.99997),\n              ",
+      "thread_id": "thread-56323aecb684",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-004dcc391ec0",
+      "message_id": "<Pine.SOL.4.20.0208141302060.16248-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-08-14T17:03:41Z",
+      "subject": "[BioC] Win32 data packages",
+      "subject_clean": "[BioC] Win32 data packages",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hello ...\n\nTo compliment the new Win32 builds of the Bioconductor packages, I've\nbuilt Win32 versions of the data packages (available via the 'data' link\non the sidebar).\n\nI don't believe there is any real difference (I'm pretty sure they are all\njust data files, Jianhua can correct me if I'm wrong), but you can suck\nthese into your Rgui session via the 'install package from local zip file'\noption.\n\n-J",
+      "body_snippet": "Hello ...\n\nTo compliment the new Win32 builds of the Bioconductor packages, I've\nbuilt Win32 versions of the data packages (available via the 'data' link\non the sidebar).\n\nI don't believe there is any",
+      "thread_id": "thread-004dcc391ec0",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-9ed09c2ba86f",
+      "message_id": "<Pine.SOL.4.20.0208141430320.16248-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-08-14T18:31:28Z",
+      "subject": "[BioC] More web changes/Win32 downloads",
+      "subject_clean": "[BioC] More web changes/Win32 downloads",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "To match the data packages and the Bioconductor packages ..\n\nI've built the contriubted packages under Win32 as well.  Furthermore, the\nlinks that previously went to a download for the .tar.gz file (under the\n'contributed' link on the left now go to a package description page just\nlike the normal BioC packages.\n\n-J",
+      "body_snippet": "To match the data packages and the Bioconductor packages ..\n\nI've built the contriubted packages under Win32 as well.  Furthermore, the\nlinks that previously went to a download for the .tar.gz file (u",
+      "thread_id": "thread-9ed09c2ba86f",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-4e7eee1e133e",
+      "message_id": "<3D5D0116.9288FA85@ircm.qc.ca>",
+      "from_name": "Johanne Duhaime",
+      "from_email_hash": "61490dd1c3989b349e60f47b035489e8df48245e2862c1cec7bd329c210fb7b1",
+      "date": "2002-08-16T13:41:42Z",
+      "subject": "[BioC] Data Sources",
+      "subject_clean": "[BioC] Data Sources",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This is a multi-part message in MIME format.\n--------------DA909F94944B95C88B5F2103\nContent-Type: text/plain; charset=us-ascii\nContent-Transfer-Encoding: 7bit\n\nHi\n\nI am trying the link Unigene Annotation For Affy Chips  but it does not\nwork.\nhttp://www.bioconductor.org/data/dataLinks.html\n\nThank you in advance\n--\nJohanne Duhaime\nIRCM\n110 Ave des Pins O\nMontreal, Quebec\n987-5556 (tel) 987-5644 (fax)\nJohanne_Duhaime@ircm.qc.ca\nhttp://www.ircm.qc.ca\n\n\n--------------DA909F94944B95C88B5F2103\nContent-Type: text/html; charset=us-ascii;\n name=\"dataLinks.html\"\nContent-Transfer-Encoding: 7bit\nContent-Disposition: inline;\n filename=\"dataLinks.html\"\nContent-Base: \"http://www.bioconductor.org/data/dataL\n\tinks.html\"\nContent-Location: \"http://www.bioconductor.org/data/dataL\n\tinks.html\"\n\n<html><head>\n<title>Data Sources</title>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"../R.css\">\n<base target=\"main\">\n</head>\n<body>\n\n<h3>Sources For Our Data Packages</h3>\n<UL>\n<LI><a href=\"http://www.ncbi.nih.gov/LocusLink/\">LocusLink</a></LI>\n<LI><a href=\"http://www.ncbi.nlm.nih.gov/UniGene\">UniGene</a></LI>\n<LI><a href=\"http://dot.ped.med.umich:2000/ourimage/microarrays/Affy-annot/Unigene/index.html\">Unigene Annotation For Affy Chips</a></LI>\n<LI><a href=\"http://www.geneontology.org\">Gene Ontology Consortium</a></LI>\n<LI><a href=\"http://genome.cse.ucsc.edu/\">Human Genome Project</a></LI>\n<LI><a href=\"http://www.biostat.harvard.edu/complab/dchip/\">dChip</a></LI>\n<LI><a href=\"http://www.genome.ad.jp/kegg/\">KEGG</a></LI>\n</UL>\n</body>\n</html>\n\n--------------DA909F94944B95C88B5F2103--",
+      "body_snippet": "This is a multi-part message in MIME format.\n--------------DA909F94944B95C88B5F2103\nContent-Type: text/plain; charset=us-ascii\nContent-Transfer-Encoding: 7bit\n\nHi\n\nI am trying the link Unigene Annotat",
+      "thread_id": "thread-4e7eee1e133e",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-7f01df2f0d66",
+      "message_id": "<Pine.SOL.4.20.0208161302130.22787-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-08-16T17:02:39Z",
+      "subject": "[BioC] Data packages",
+      "subject_clean": "[BioC] Data packages",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "I found a problem with the windows Zip files of the data packages.  This\nshould be fixed now.  \n\n-J",
+      "body_snippet": "I found a problem with the windows Zip files of the data packages.  This\nshould be fixed now.  \n\n-J",
+      "thread_id": "thread-7f01df2f0d66",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-9072137ad8a3",
+      "message_id": "<Pine.SOL.4.20.0208161446090.22787-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-08-16T18:46:30Z",
+      "subject": "[BioC] Data Sources",
+      "subject_clean": "[BioC] Data Sources",
+      "in_reply_to": "<3D5D0116.9288FA85@ircm.qc.ca>",
+      "references": [],
+      "body_plain": "> I am trying the link Unigene Annotation For Affy Chips  but it does not\n> work.\n> http://www.bioconductor.org/data/dataLinks.html\n\nAh.  Yeah.\n\nI'll have Jianhua look at it when he's back after the weekend.\n\n-J",
+      "body_snippet": "> I am trying the link Unigene Annotation For Affy Chips  but it does not\n> work.\n> http://www.bioconductor.org/data/dataLinks.html\n\nAh.  Yeah.\n\nI'll have Jianhua look at it when he's back after the w",
+      "thread_id": "thread-4e7eee1e133e",
+      "thread_depth": 1,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-f40ff6f83f9b",
+      "message_id": "<200208191242.IAA11448@blaise.dfci.harvard.edu>",
+      "from_name": "John Zhang",
+      "from_email_hash": "a9b29fa5c7919bc7d02dec7bdc0c62c5f96a282f20bb4efd587867f549843181",
+      "date": "2002-08-19T12:42:19Z",
+      "subject": "[BioC] Data Sources",
+      "subject_clean": "[BioC] Data Sources",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": ">From: Johanne Duhaime <duhaimj@ircm.qc.ca>\n>X-Accept-Language: fr-CA,en\n>MIME-Version: 1.0\n>To: bioconductor@stat.math.ethz.ch\n>Subject: [BioC] Data Sources\n>X-BeenThere: bioconductor@stat.math.ethz.ch\n>X-Mailman-Version: 2.0.13\n>List-Help: <mailto:bioconductor-request@stat.math.ethz.ch?subject=help>\n>List-Post: <mailto:bioconductor@stat.math.ethz.ch>\n>List-Subscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n<mailto:bioconductor-request@stat.math.ethz.ch?subject=subscribe>\n>List-Id: The Bioconductor Project Mailing List <bioconductor.stat.math.ethz.ch>\n>List-Unsubscribe: <http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor>, \n<mailto:bioconductor-request@stat.math.ethz.ch?subject=unsubscribe>\n>List-Archive: <http://www.stat.math.ethz.ch/pipermail/bioconductor/>\n>Date: Fri, 16 Aug 2002 09:41:42 -0400\n>\n>Hi\n>\n>I am trying the link Unigene Annotation For Affy Chips  but it does not\n>work.\n>http://www.bioconductor.org/data/dataLinks.html\n\nSorry for the delay in response as I was away for two days. Could you please \nfeed me a little more on what you did and what happened so taht I could locate \nthe problem. Thanks.\n\nJianhua\n\n\n\n\n>Thank you in advance\n>--\n>Johanne Duhaime\n>IRCM\n>110 Ave des Pins O\n>Montreal, Quebec\n>987-5556 (tel) 987-5644 (fax)\n>Johanne_Duhaime@ircm.qc.ca\n>http://www.ircm.qc.ca\n>",
+      "body_snippet": ">From: Johanne Duhaime <duhaimj@ircm.qc.ca>\n>X-Accept-Language: fr-CA,en\n>MIME-Version: 1.0\n>To: bioconductor@stat.math.ethz.ch\n>Subject: [BioC] Data Sources\n>X-BeenThere: bioconductor@stat.math.ethz.",
+      "thread_id": "thread-f40ff6f83f9b",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-f07c22439c65",
+      "message_id": "<Pine.SOL.4.20.0208191044290.1547-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-08-19T14:44:51Z",
+      "subject": "[BioC] Data Sources",
+      "subject_clean": "[BioC] Data Sources",
+      "in_reply_to": "<Pine.SOL.4.20.0208161446090.22787-100000@santiam.dfci.harvard.edu>",
+      "references": [],
+      "body_plain": "On Fri, 16 Aug 2002, Jeff Gentry wrote:\n> > I am trying the link Unigene Annotation For Affy Chips  but it does not\n> > work.\n> > http://www.bioconductor.org/data/dataLinks.html\n\nJianhua provided me the correct link and this is now fixed on the website.\n\nThanks!\n\n-J",
+      "body_snippet": "On Fri, 16 Aug 2002, Jeff Gentry wrote:\n> > I am trying the link Unigene Annotation For Affy Chips  but it does not\n> > work.\n> > http://www.bioconductor.org/data/dataLinks.html\n\nJianhua provided me t",
+      "thread_id": "thread-4e7eee1e133e",
+      "thread_depth": 2,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-e11ee97092dc",
+      "message_id": "<B9880BDF.34E%dbickel@mail.mcg.edu>",
+      "from_name": "David R. Bickel",
+      "from_email_hash": "3db0c48525665afe15e44ee73c167e1da9c3a7f4d615150a1c4a66ad38c5dfa6",
+      "date": "2002-08-20T19:08:15Z",
+      "subject": "[BioC] contributing packages",
+      "subject_clean": "[BioC] contributing packages",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "What is the mechanism for contributing an R package to Bioconductor? I would\nlike information on license agreements, an email address to send the source\ncode to, and any other guidelines. I could not find that information on the\nweb site. Thank you for your assistance.\n\nSincerely,\nDavid Bickel\n \nhttp://www.mcg.edu/research/biostat/bickel.html\n\nDavid R. Bickel, Assistant Professor\nMedical College of Georgia\nOffice of Biostatistics and Bioinformatics\n\nTel.: 706-721-4697; Fax: 706-721-6294\ndbickel@mail.mcg.edu or bickel@prueba.info",
+      "body_snippet": "What is the mechanism for contributing an R package to Bioconductor? I would\nlike information on license agreements, an email address to send the source\ncode to, and any other guidelines. I could not ",
+      "thread_id": "thread-e11ee97092dc",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-8d4560bb7cdb",
+      "message_id": "<Pine.SOL.4.20.0208201518020.5308-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-08-20T19:24:42Z",
+      "subject": "[BioC] contributing packages",
+      "subject_clean": "[BioC] contributing packages",
+      "in_reply_to": "<B9880BDF.34E%dbickel@mail.mcg.edu>",
+      "references": [],
+      "body_plain": "Hi David ....\n\n> What is the mechanism for contributing an R package to Bioconductor? I would\n> like information on license agreements, an email address to send the source\n> code to, and any other guidelines. I could not find that information on the\n> web site. Thank you for your assistance.\n\nWell, I was going to give the quick answer to see the FAQ, especially\nhttp://www.bioconductor.org/what.html#R%20and%20Bioconductor.  However,\nthis seems to be incomplete, especially to answer some of your questions.\nI could have sworn most of this was *somewhere*, but I guess this shows\nthat I need to do some page updating :)\n\nAnyhow, to answer your questions:\n- Licenses:  Contributed packages are expected to be licensed under an\nopen source license.  We heavily encourage the use of the LGPL for any\nsort of \"infrastructure\" packages (ie: non-leaf, packages that are\nintended to be used by other packages), although \"leaf\" type packages are\nmore up to you.\n\n- Email:  Send either a description/link to the Bioconductor list or you\ncan email me directly either the same information or the package itself.\n\n- Other guidelines:  See that link I put above, specifically the \"How can\nI create an Bioconductor compliant package?\" subsection.\n\nIf you have any other questions, feel free to shout.  \n\nThanks for your interest!\n\n-Jeff",
+      "body_snippet": "Hi David ....\n\n> What is the mechanism for contributing an R package to Bioconductor? I would\n> like information on license agreements, an email address to send the source\n> code to, and any other gui",
+      "thread_id": "thread-e11ee97092dc",
+      "thread_depth": 1,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-382924a5f099",
+      "message_id": "<873ct9cowf.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-08-20T19:26:40Z",
+      "subject": "[BioC] contributing packages",
+      "subject_clean": "[BioC] contributing packages",
+      "in_reply_to": "<B9880BDF.34E%dbickel@mail.mcg.edu>",
+      "references": [
+        "<B9880BDF.34E%dbickel@mail.mcg.edu>"
+      ],
+      "body_plain": ">>>>> \"david\" == David R Bickel <dbickel@mail.mcg.edu> writes:\n\n    david> What is the mechanism for contributing an R package to Bioconductor? I would\n    david> like information on license agreements, an email address to send the source\n    david> code to, and any other guidelines. I could not find that information on the\n    david> web site. Thank you for your assistance.\n\nI think it depends on what you intend to do.  Contribution of a single\npackage, to be put on the can be done provided that it passes\n\"muster\":\n\n1. an open source license must be used \n2. contains a vignette written in SWeave describing usage.\n3. should be using the Biobase tools or other S4 classes when\n   appropriate. \n\n-------------- from the FAQ ---------------\nHow can I create a Bioconductor compliant package?\n\nThis is very simple. Your package must pass R's CMD check process\nwithout warnings or errors. It must work with the current version of R\n(this will be a number no less than R 1.5). It must contain a\ndirectory inst/docs that contains LaTeX documentation of your\npackage. The documentation here is intended to describe the over all\nfunctionality of your package. This is separate and in addition to\ndocumenting the functions in your package in the standard way.\n\nIt would be nice if you used some of the Bioconductor classes and\nmethods. Especially those in the Biobase and annotate packages. \n------------------------------------------\n\nFeel free to post more questions, if any remain.\n\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my tuesday/wednesday/friday locations are completely unpredictable.)",
+      "body_snippet": ">>>>> \"david\" == David R Bickel <dbickel@mail.mcg.edu> writes:\n\n    david> What is the mechanism for contributing an R package to Bioconductor? I would\n    david> like information on license agreement",
+      "thread_id": "thread-e11ee97092dc",
+      "thread_depth": 1,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-424ac60e6316",
+      "message_id": "<1029897104.23744.7.camel@sta123.stat.nus.edu.sg>",
+      "from_name": "Nicholas Lewin-Koh",
+      "from_email_hash": "57788e64f8372f96ceec8320151b267f869d178849b61fb981a9d86a00c77035",
+      "date": "2002-08-21T02:31:36Z",
+      "subject": "[BioC] anon cvs?",
+      "subject_clean": "[BioC] anon cvs?",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi,\nI can't find any instructions for anonymous cvs access to the bio\nconductor cvs repository. The faq say to use rsync which does not seem\nto be set up yet.\n\nThanks\nNicholas",
+      "body_snippet": "Hi,\nI can't find any instructions for anonymous cvs access to the bio\nconductor cvs repository. The faq say to use rsync which does not seem\nto be set up yet.\n\nThanks\nNicholas",
+      "thread_id": "thread-424ac60e6316",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-4bf4e610fecb",
+      "message_id": "<Pine.SOL.4.20.0208202244580.6077-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-08-21T02:47:38Z",
+      "subject": "[BioC] anon cvs?",
+      "subject_clean": "[BioC] anon cvs?",
+      "in_reply_to": "<1029897104.23744.7.camel@sta123.stat.nus.edu.sg>",
+      "references": [],
+      "body_plain": "> I can't find any instructions for anonymous cvs access to the bio\n> conductor cvs repository. The faq say to use rsync which does not seem\n> to be set up yet.\n\nIts not, and as far as anon cvs I don't think that such a beast is set up\neither right now.\n\nHowever, what does exist is a web-cvs interface.  See the 'Browsable CVS'\nlink under the Project heading on the left bar of the bioconductor\nsite.  From any level you can click \"download tarball\" (at the bottom of\nthe page).\n\n-J",
+      "body_snippet": "> I can't find any instructions for anonymous cvs access to the bio\n> conductor cvs repository. The faq say to use rsync which does not seem\n> to be set up yet.\n\nIts not, and as far as anon cvs I don'",
+      "thread_id": "thread-424ac60e6316",
+      "thread_depth": 1,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-3c54d03b6213",
+      "message_id": "<20020821064027.A17521@jimmy.harvard.edu>",
+      "from_name": "Robert Gentleman",
+      "from_email_hash": "6b7075420d54fe87793227ccb07ae7010765c952db1c318cfab9a8d079337292",
+      "date": "2002-08-21T10:40:27Z",
+      "subject": "[BioC] anon cvs?",
+      "subject_clean": "[BioC] anon cvs?",
+      "in_reply_to": "<Pine.SOL.4.20.0208202244580.6077-100000@santiam.dfci.harvard.edu>; from jgentry@jimmy.harvard.edu on Tue, Aug 20, 2002 at 10:47:38PM -0400",
+      "references": [
+        "<1029897104.23744.7.camel@sta123.stat.nus.edu.sg>",
+        "<Pine.SOL.4.20.0208202244580.6077-100000@santiam.dfci.harvard.edu>"
+      ],
+      "body_plain": "hi,\n Either the web cvs down load or rsync are possible. anonymous cvs is\n not generally viewed as a good idea. R has now dropped it (I\n beleive).\n\n\n-- \n+---------------------------------------------------------------------------+\n| Robert Gentleman                 phone : (617) 632-5250                   |\n| Associate Professor              fax:   (617)  632-2444                   |\n| Department of Biostatistics      office: M1B20\n| Harvard School of Public Health  email: rgentlem@jimmy.dfci.harvard.edu   |\n+---------------------------------------------------------------------------+",
+      "body_snippet": "hi,\n Either the web cvs down load or rsync are possible. anonymous cvs is\n not generally viewed as a good idea. R has now dropped it (I\n beleive).\n\n\n-- \n+----------------------------------------------",
+      "thread_id": "thread-424ac60e6316",
+      "thread_depth": 2,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-355a1ac34b3b",
+      "message_id": "<878z30uyih.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-08-21T13:33:58Z",
+      "subject": "[BioC] anon cvs?",
+      "subject_clean": "[BioC] anon cvs?",
+      "in_reply_to": "<20020821064027.A17521@jimmy.harvard.edu>",
+      "references": [
+        "<1029897104.23744.7.camel@sta123.stat.nus.edu.sg>",
+        "<Pine.SOL.4.20.0208202244580.6077-100000@santiam.dfci.harvard.edu>",
+        "<20020821064027.A17521@jimmy.harvard.edu>"
+      ],
+      "body_plain": ">>>>> \"robert\" == Robert Gentleman <rgentlem@jimmy.harvard.edu> writes:\n\n\n    robert>  Either the web cvs down load or rsync are\n    robert>  possible. anonymous cvs is not generally viewed as a good\n    robert>  idea. R has now dropped it (I beleive).\n\nI would disagree partially.  anon cvs is an excellent idea, far easier\nthan rsync for maintaining local versions of code; it's just a\npotential security hole (hence a headache).  Never the less,\nBioconductor will NOT be running one on franz (we could set one up at\nUW, using the existing facilities there, but that is another\ndiscussion).\n\nIt does look like R's (and hence, franz's) anoncvs server is dead,\nthough.  It wasn't, a few (many? time goes by fast these days) weeks\nago.\n\nbest,\n-tony\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my tuesday/wednesday/friday locations are completely unpredictable.)",
+      "body_snippet": ">>>>> \"robert\" == Robert Gentleman <rgentlem@jimmy.harvard.edu> writes:\n\n\n    robert>  Either the web cvs down load or rsync are\n    robert>  possible. anonymous cvs is not generally viewed as a good\n",
+      "thread_id": "thread-424ac60e6316",
+      "thread_depth": 3,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-ffb6ee1604c3",
+      "message_id": "<6rptwcthie.fsf@franz.stat.wisc.edu>",
+      "from_name": "Douglas Bates",
+      "from_email_hash": "eafb799445732379f93380a9fc5a798476cd0dce794128a4614ac58355a0b842",
+      "date": "2002-08-21T14:26:33Z",
+      "subject": "[BioC] anon cvs?",
+      "subject_clean": "[BioC] anon cvs?",
+      "in_reply_to": "<Pine.SOL.4.20.0208202244580.6077-100000@santiam.dfci.harvard.edu>",
+      "references": [
+        "<Pine.SOL.4.20.0208202244580.6077-100000@santiam.dfci.harvard.edu>"
+      ],
+      "body_plain": "Jeff Gentry <jgentry@jimmy.harvard.edu> writes:\n\n> > I can't find any instructions for anonymous cvs access to the bio\n> > conductor cvs repository. The faq say to use rsync which does not seem\n> > to be set up yet.\n> \n> Its not, and as far as anon cvs I don't think that such a beast is set up\n> either right now.\n\nrsync is now set up on rsync.r-project.org (a.k.a. franz.stat.wisc.edu) \n\n$ cd /var/tmp\nbates@bates3:/var/tmp$ rsync rsync.r-project.org::\nr-release      \tR-1.5.1 sources (current released version - approx 25 MB)\nr-patched      \tR sources (patched released version - approx 25 MB)\nr-devel        \tR sources (devel version, less stable - approx 25 MB)\nr-manuals      \tDevelopment sources for manuals for R\nr-recommended  \tSources for recommended R packages\nxlispstat      \txlispstat sources (development version) CVS tree (approx 12 MB)\nCRAN           \tComplete CRAN ftp area\nBioc-release   \tBioconductor sources (current release version)\nBioc-devel     \tBioconductor sources (devel version, less stable)\nomega-cvs      \tOmega Project for Statistical Computing CVS tree\nr-project-web  \tWeb pages for www.r-project.org and mirrors\nOmegahat       \tComplete ftp archive for Omegahat\n\nI created these views by\n cvs -d /home/madman/CVS-ARCHIVE co -P -r RELEASE_1_0 madman\nand\n cvs -d /home/madman/CVS-ARCHIVE co -P madman\n\nPlease check it and tell me if that is the view of the CVS tree that\nwas intended.\n\nIf you want to add rsync.bioconductor.org as a CNAME, the machine that\nruns the rsync server is franz.stat.wisc.edu (128.105.174.95).  AFAIK\nrsync doesn't have an idea of a virtual server so connection to the\nrsync server under any CNAME will give access to all the modules.",
+      "body_snippet": "Jeff Gentry <jgentry@jimmy.harvard.edu> writes:\n\n> > I can't find any instructions for anonymous cvs access to the bio\n> > conductor cvs repository. The faq say to use rsync which does not seem\n> > to",
+      "thread_id": "thread-424ac60e6316",
+      "thread_depth": 2,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-8ae1db909690",
+      "message_id": "<6rk7mkthda.fsf@franz.stat.wisc.edu>",
+      "from_name": "Douglas Bates",
+      "from_email_hash": "eafb799445732379f93380a9fc5a798476cd0dce794128a4614ac58355a0b842",
+      "date": "2002-08-21T14:29:37Z",
+      "subject": "[BioC] anon cvs?",
+      "subject_clean": "[BioC] anon cvs?",
+      "in_reply_to": "<20020821064027.A17521@jimmy.harvard.edu>",
+      "references": [
+        "<1029897104.23744.7.camel@sta123.stat.nus.edu.sg>",
+        "<Pine.SOL.4.20.0208202244580.6077-100000@santiam.dfci.harvard.edu>",
+        "<20020821064027.A17521@jimmy.harvard.edu>"
+      ],
+      "body_plain": "Robert Gentleman <rgentlem@jimmy.harvard.edu> writes:\n\n>  Either the web cvs down load or rsync are possible. anonymous cvs is\n>  not generally viewed as a good idea. R has now dropped it (I\n>  believe).\n\nAs Tony remarked anoncvs it has been shut down although not\nintentionally.  (Franz's /var filesystem filled up a few days ago\nbecause mailman log files for one list were gargantuan.)  I am going\nto take this opportunity to kill anoncvs.\n\nWe now have rsync as I said in my other message.",
+      "body_snippet": "Robert Gentleman <rgentlem@jimmy.harvard.edu> writes:\n\n>  Either the web cvs down load or rsync are possible. anonymous cvs is\n>  not generally viewed as a good idea. R has now dropped it (I\n>  believ",
+      "thread_id": "thread-424ac60e6316",
+      "thread_depth": 3,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-a12de48be373",
+      "message_id": "<Pine.SOL.4.20.0208211231210.7958-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-08-21T16:32:02Z",
+      "subject": "[BioC] anon cvs?",
+      "subject_clean": "[BioC] anon cvs?",
+      "in_reply_to": "<6rptwcthie.fsf@franz.stat.wisc.edu>",
+      "references": [],
+      "body_plain": "> I created these views by\n>  cvs -d /home/madman/CVS-ARCHIVE co -P -r RELEASE_1_0 madman\n\nThat should be RELEASE_1_branch.\n\n-J",
+      "body_snippet": "> I created these views by\n>  cvs -d /home/madman/CVS-ARCHIVE co -P -r RELEASE_1_0 madman\n\nThat should be RELEASE_1_branch.\n\n-J",
+      "thread_id": "thread-424ac60e6316",
+      "thread_depth": 3,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-7cfb07c6d673",
+      "message_id": "<24E9CB46-B54C-11D6-BC8F-000393937AC2@hsph.harvard.edu>",
+      "from_name": "Byron Ellis",
+      "from_email_hash": "9ab40472e1e849b90f771886956aec2b3b32280760d7f49df959005b2a72cffb",
+      "date": "2002-08-21T21:22:49Z",
+      "subject": "[BioC] anon cvs?",
+      "subject_clean": "[BioC] anon cvs?",
+      "in_reply_to": "<878z30uyih.fsf@jeeves.blindglobe.net>",
+      "references": [],
+      "body_plain": "Anoncvs on franz has been dead for a couple of months. I would also note \nthat rsync is generally less available for Windows users than CVS (I \nfound a copy but I had to hunt for it).\n\nOn Wednesday, August 21, 2002, at 09:33 AM, A.J. Rossini wrote:\n\n>>>>>> \"robert\" == Robert Gentleman <rgentlem@jimmy.harvard.edu> writes:\n>\n>\n>     robert>  Either the web cvs down load or rsync are\n>     robert>  possible. anonymous cvs is not generally viewed as a good\n>     robert>  idea. R has now dropped it (I beleive).\n>\n> I would disagree partially.  anon cvs is an excellent idea, far easier\n> than rsync for maintaining local versions of code; it's just a\n> potential security hole (hence a headache).  Never the less,\n> Bioconductor will NOT be running one on franz (we could set one up at\n> UW, using the existing facilities there, but that is another\n> discussion).\n>\n> It does look like R's (and hence, franz's) anoncvs server is dead,\n> though.  It wasn't, a few (many? time goes by fast these days) weeks\n> ago.\n>\n> best,\n> -tony\n>\n> --\n> A.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\n> U. of Washington Biostatistics\t\trossini@u.washington.edu\t\n> FHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n> -------------- http://software.biostat.washington.edu/ ----------------\n> FHCRC: M: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\n> UW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n> (my tuesday/wednesday/friday locations are completely unpredictable.)\n>\n>\n>\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>\nByron Ellis (bellis@hsph.harvard.edu)\n\"Oook\" - The Librarian",
+      "body_snippet": "Anoncvs on franz has been dead for a couple of months. I would also note \nthat rsync is generally less available for Windows users than CVS (I \nfound a copy but I had to hunt for it).\n\nOn Wednesday, A",
+      "thread_id": "thread-424ac60e6316",
+      "thread_depth": 4,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-cf29df82c3de",
+      "message_id": "<87znvflwdd.fsf@jeeves.blindglobe.net>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "e38e01ad6ef7554feaf1446fbf732417739f2726ef60f5377d3a8dfe80e4b2ad",
+      "date": "2002-08-21T21:45:02Z",
+      "subject": "[BioC] anon cvs?",
+      "subject_clean": "[BioC] anon cvs?",
+      "in_reply_to": "<24E9CB46-B54C-11D6-BC8F-000393937AC2@hsph.harvard.edu>",
+      "references": [
+        "<24E9CB46-B54C-11D6-BC8F-000393937AC2@hsph.harvard.edu>"
+      ],
+      "body_plain": ">>>>> \"byron\" == Byron Ellis <bellis@hsph.harvard.edu> writes:\n\n    byron> Anoncvs on franz has been dead for a couple of months. I would also\n    byron> note that rsync is generally less available for Windows users than CVS\n    byron> (I found a copy but I had to hunt for it).\n\nIf you don't mind cygwin, that does it as well.\n\nbest,\n-tony\n\n-- \nA.J. Rossini\t\t\t\tRsrch. Asst. Prof. of Biostatistics\nU. of Washington Biostatistics\t\trossini@u.washington.edu\t\nFHCRC/SCHARP/HIV Vaccine Trials Net\trossini@scharp.org\n-------------- http://software.biostat.washington.edu/ ----------------\nFHCRC: M: 206-667-7025 (fax=4812)|Voicemail is pretty sketchy/use Email\nUW:   Th: 206-543-1044 (fax=3286)|Change last 4 digits of phone to FAX\n(my tuesday/wednesday/friday locations are completely unpredictable.)",
+      "body_snippet": ">>>>> \"byron\" == Byron Ellis <bellis@hsph.harvard.edu> writes:\n\n    byron> Anoncvs on franz has been dead for a couple of months. I would also\n    byron> note that rsync is generally less available fo",
+      "thread_id": "thread-424ac60e6316",
+      "thread_depth": 5,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-4ca6876a07fc",
+      "message_id": "<B3A80C9C13928B45B2FCE4C43656363A2C973E@mail-srv02.master.medizin.uni-essen.de>",
+      "from_name": "\"Hölter, Tanja\"",
+      "from_email_hash": "f0aebf1b16e6861099e4ab68bb7783bea3b0d3eecac35ca8601a7e3a4645f06c",
+      "date": "2002-08-22T11:54:38Z",
+      "subject": "[BioC] expresso and rhdf5",
+      "subject_clean": "[BioC] expresso and rhdf5",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hello I've three stupid questions. I work with Microarrays and use the\naffy package to analyse cel Files. I'm not very familiar with R. Here\nare my questions:\n\n1. If I use the expresso(w=T) ,there is a error:\nError in normalize(listcel.n,cdf,method=normalize.method,...):\nobject \"listcel.n\" not found\nWhat is the reason that there is the error?\n\n2. I don't know how I can install the rhdf5 package, respectively how to\ninstall the hdf5, which I  have downloaded. Must I set a path or so in\nR?\n\n3. If I want to summary my expression with the normalisation method from\nli and wong there is a error:\nError in density (x, kernel=\"epanechnikov\", n=n.pts):\nx contains missing values\n\nI don't know how to work with the invariantset method because I can't\nwork with this normalized data.\n\n\n\nWith best regards\nTanja HÃ¶lter\n\n\nDipl. Statistikerin Tanja HÃ¶lter\nInstitut fÃ¼r Medizinische Informatik,\nBiometrie und Epidemiologie\nUniversitÃ¤tsklinikum Essen\nD-45122 Essen\nTel:(49)201-723-4654\nFAX: (49)201-723-5933",
+      "body_snippet": "Hello I've three stupid questions. I work with Microarrays and use the\naffy package to analyse cel Files. I'm not very familiar with R. Here\nare my questions:\n\n1. If I use the expresso(w=T) ,there is ",
+      "thread_id": "thread-4ca6876a07fc",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-a056d47f10a2",
+      "message_id": "<Pine.SOL.4.20.0208220934190.9709-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-08-22T13:34:54Z",
+      "subject": "[BioC] expresso and rhdf5",
+      "subject_clean": "[BioC] expresso and rhdf5",
+      "in_reply_to": "<B3A80C9C13928B45B2FCE4C43656363A2C973E@mail-srv02.master.medizin.uni-essen.de>",
+      "references": [],
+      "body_plain": "> 2. I don't know how I can install the rhdf5 package, respectively how to\n> install the hdf5, which I  have downloaded. Must I set a path or so in\n> R?\n\nYou most likely need to install the HDF5\nlibrary.  See: http://hdf.ncsa.uiuc.edu/HDF5/\n\n-J",
+      "body_snippet": "> 2. I don't know how I can install the rhdf5 package, respectively how to\n> install the hdf5, which I  have downloaded. Must I set a path or so in\n> R?\n\nYou most likely need to install the HDF5\nlibra",
+      "thread_id": "thread-4ca6876a07fc",
+      "thread_depth": 1,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-a177e611b941",
+      "message_id": "<Pine.SOL.4.20.0208230035560.12531-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-08-23T04:36:45Z",
+      "subject": "[BioC] affy 2.0 (fwd)",
+      "subject_clean": "[BioC] affy 2.0 (fwd)",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Forwarded on request of Rafael ....\n\nGiven the heavy usage of affy by members of this list, it might be of\ninterest.\n\n---------- Forwarded message ----------\nDate: Fri, 23 Aug 2002 00:07:09 -0400 (EDT)\nFrom: Rafael A. Irizarry <ririzarr@jhsph.edu>\nReply-To: rafa@jhu.edu\nTo: biocore@stat.math.ethz.ch\nSubject: affy 2.0\n\nhi! for the next version of affy i would like to have just one main class. \nbecause the pkg is a merge of two, we have redundancy, there are two \napproaches for storing probe level data. this is extra work because we \nhave to make sure methods work for both.\nregardless of the \napproach we decide on, we will have the same methods so the user should \nnot see the difference. i need help deciding which approach is more \nconvenient.\n\nill use chips instead of arrays so that we dont get confused with what R \ncalls arrays.\n\napproach 1: for each chip we keep a matrix (Cel) where the row 10 ,column \n12 entry represents the probe intensity read from the physical row 10, \ncolumn 12 position on the chip. we then keep three dimensional arrays to \nrepresent multiple chip experiments. to know what position goes with what \ngene a separate class (Cdf) is defined that contains a matrix with the \ngene names for each entry in the probe intensity matrix. so the row 10, \ncolumn 12 entry in the Cdf matrix gives the  genename for the probe in \nthe row 10, column 12 entry in the Cel matrix.the Cdf class contains the \nnecesary info to know whats PM and whats MM\n\napproach 2: keeps the pm data in a matrix with rows representing probes \nand columns representing chips. similarly for mm. to know what row goes \nwith what gene we keep a vector with the genenames. to know what gene is \nin column, say, 10 we simply look to the 10th entry in the name vector. \nsimilarly we have vectors with the probe numbers, x positions, and y \npositions,\n\nan advantage of approach 1 is that we dont need to keep the x,y (physical \nposition on the chip) \ninformation. a disadvantage is that subsetting by genes and creating \n\"fake\" instances can be confusing because we need to control 2 classes \n(cel,cdf).\n\nan advantage of approach 2 is that the pms and mms are readily available \nand subsetting by genes is easy. as a consequence creating \"fake\" \ninstances is easy. a disadvantage is that we need extra slots to keep the  \nphysical position information and that the we are a bit farther away from \nthe raw data.\n\nat first i was leaning toward approach 1 because its closer to the \nraw data... now im a bit worried \nabout difficulties with subsetting by genes, and how it affects \"genes \nfor hire\". \n\nany opinions? suggestions?\n\nrafael\n\n_______________________________________________\nBiocore mailing list\nBiocore@stat.math.ethz.ch\nhttp://www.stat.math.ethz.ch/mailman/listinfo/biocore",
+      "body_snippet": "Forwarded on request of Rafael ....\n\nGiven the heavy usage of affy by members of this list, it might be of\ninterest.\n\n---------- Forwarded message ----------\nDate: Fri, 23 Aug 2002 00:07:09 -0400 (EDT",
+      "thread_id": "thread-a177e611b941",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-546bfeafe167",
+      "message_id": "<20020825113614.GC31690@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "46ea1fbf1dde6cd7ce00fc69b0ee2b1457b50e6b5c9e07bd3a465dc588db5dd1",
+      "date": "2002-08-25T11:36:14Z",
+      "subject": "[BioC] expresso and rhdf5",
+      "subject_clean": "[BioC] expresso and rhdf5",
+      "in_reply_to": "<B3A80C9C13928B45B2FCE4C43656363A2C973E@mail-srv02.master.medizin.uni-essen.de>",
+      "references": [
+        "<B3A80C9C13928B45B2FCE4C43656363A2C973E@mail-srv02.master.medizin.uni-essen.de>"
+      ],
+      "body_plain": "On Thu, Aug 22, 2002 at 01:54:38PM +0200, \"HÃ¶lter, Tanja\" wrote:\n> Hello I've three stupid questions. I work with Microarrays and use the\n> affy package to analyse cel Files. I'm not very familiar with R. Here\n> are my questions:\n\nAll of your questions are sensible.\n\n\n> \n> 1. If I use the expresso(w=T) ,there is a error:\n> Error in normalize(listcel.n,cdf,method=normalize.method,...):\n> object \"listcel.n\" not found\n> What is the reason that there is the error?\n\nUh, uh... this question is not stupid... it means that something is\nwrong (my settings here are a bit complex, and it happens more than\nit should that a file that should be transfered to the bioconductor\nserver slips out of the net)... \n\n(it should be on the website on Monday...  (I can mail you the package\nif urgent needs))...\n\n(note: you are using the 'devel' version of the package... the stability\ngoes through various stages. sorry for the inconvenience)\n\n> \n> 2. I don't know how I can install the rhdf5 package, respectively how to\n> install the hdf5, which I  have downloaded. Must I set a path or so in\n> R?\n\nIf you use linux, you may prefer a package made for your distribution\n(like rpm)...\n\n\n> \n> 3. If I want to summary my expression with the normalisation method from\n> li and wong there is a error:\n> Error in density (x, kernel=\"epanechnikov\", n=n.pts):\n> x contains missing values\n> \n\n(?!) I do not remember kernel density estimation being used in\nli-wong... I think kernel density estimation is used for background\ncorrection (method \"rma\" or \"bg.correct.rma\")...\n\n\n> I don't know how to work with the invariantset method because I can't\n> work with this normalized data.\n> \n\n...could you detail what happens ?\n\n\n\n\nRegards,\n\n\n\nLaurent\n\n\n\n> \n> \n> With best regards\n> Tanja HÃ¶lter\n> \n> \n> Dipl. Statistikerin Tanja HÃ¶lter\n> Institut fÃ¼r Medizinische Informatik,\n> Biometrie und Epidemiologie\n> UniversitÃ¤tsklinikum Essen\n> D-45122 Essen\n> Tel:(49)201-723-4654\n> FAX: (49)201-723-5933\n> \n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n\n-- \n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tDK-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 89\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "On Thu, Aug 22, 2002 at 01:54:38PM +0200, \"HÃ¶lter, Tanja\" wrote:\n> Hello I've three stupid questions. I work with Microarrays and use the\n> affy package to analyse cel Files. I'm not very familiar wi",
+      "thread_id": "thread-4ca6876a07fc",
+      "thread_depth": 1,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-0d36a06f44e5",
+      "message_id": "<20020826104757.GC11399@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "46ea1fbf1dde6cd7ce00fc69b0ee2b1457b50e6b5c9e07bd3a465dc588db5dd1",
+      "date": "2002-08-26T10:47:57Z",
+      "subject": "[BioC] affy-devel",
+      "subject_clean": "[BioC] affy-devel",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Dear all,\n\n\nUsers of the affy packages will have certainly noticed that the\n'development' version has been through various stages of stability.\nIn some case I even advertised for functions, but in many cases\nby the time people download the package some work has been done and\nthe function of interest does not work any longer. This was particularly\ntrue with high-level functions.\n\nMajor changes(*) are likely to happen in the future, which could make\nthis even more frequent.\n\nTo try to avoid this, a extensive(**) collection of tests have been put in the\ndirectory 'tests/' of the package (we wished we would have done it earlier,\nbut time... time...). Starting with the version number 1.2.1(***), the\npackage you will find on the web passed these tests.\nPlease report non-working functions so we can fix\nthem/add new tests... but remember that some things will not be solved\ninstantly. The 'released' version remains the 'stable' version.\n\n\nRegards,\n\n\n\nLaurent\n\n\n\n(*)  : Some speed/memory improvements are already done... but there is more to\ncome (see previous post from Rafael).\n(**) : But not comprehensive... more tests will be added. Currently\nall the normalization methods, all the background correction method,\nall the expression values computation method (or 'summary method'), the\nparsing of CEL files, and the function expresso are tested.\n(***): Should appear today \n\n\n-- \n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tDK-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 89\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "Dear all,\n\n\nUsers of the affy packages will have certainly noticed that the\n'development' version has been through various stages of stability.\nIn some case I even advertised for functions, but in man",
+      "thread_id": "thread-0d36a06f44e5",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-ba087f1c2708",
+      "message_id": "<20020827125530.GF1358@giraffa.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "46ea1fbf1dde6cd7ce00fc69b0ee2b1457b50e6b5c9e07bd3a465dc588db5dd1",
+      "date": "2002-08-27T12:55:30Z",
+      "subject": "[BioC] bug in pacakge affy when applying avdiff on Plob",
+      "subject_clean": "[BioC] bug in pacakge affy when applying avdiff on Plob",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Dear all,\n\nThe use of the function avdiff to compute expression values from \nprobe intensities was problematic with some arrays (some probe\npair sets are too small). The computing of the trimmed average\nwas then failing.\n\nThe bug was reported, along with a fix for it (Thanks to Steen\nKnudsen): if the set is too small, the plain average is taken\n(no trim). This has been included in both the released and\ndevelopment versions of the package.\nThe changes should be reflected on the website tomorrow.\n\n\nLaurent\n\n\n\n-- \n--------------------------------------------------------------\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tDK-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 89\t\thttp://www.cbs.dtu.dk/laurent",
+      "body_snippet": "Dear all,\n\nThe use of the function avdiff to compute expression values from \nprobe intensities was problematic with some arrays (some probe\npair sets are too small). The computing of the trimmed avera",
+      "thread_id": "thread-ba087f1c2708",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-d3ecea466daa",
+      "message_id": "<020a01c24e7c$234faa90$0cc73dc1@fordpc>",
+      "from_name": "Ashley Ford",
+      "from_email_hash": "476ad9141fc8c33422ef6ab56f3680c8be61c44cb3148b67b2644f91adb6e302",
+      "date": "2002-08-28T10:17:39Z",
+      "subject": "[BioC] Bioconductor Win32 download failure",
+      "subject_clean": "[BioC] Bioconductor Win32 download failure",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "The download script/function getBioC()  is failing for windows.\n\nit either needs altering so that  version numbers are included\neg doing this by hand works\nBrowse[1]> sourceUrl\n[1] \"http://www.bioconductor.org/packages/release/distrib/Win32/Biobase.zip\"\nBrowse[1]> sourceUrl <-\n\"http://www.bioconductor.org/packages/release/distrib/Win32/Biobase_1.0.zip\"\nBrowse[1]>\n\nor on the website soft links created from Biobase.zip to Biobase_1.0.zip",
+      "body_snippet": "The download script/function getBioC()  is failing for windows.\n\nit either needs altering so that  version numbers are included\neg doing this by hand works\nBrowse[1]> sourceUrl\n[1] \"http://www.biocond",
+      "thread_id": "thread-d3ecea466daa",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-e56545f58af8",
+      "message_id": "<Pine.SOL.4.20.0208281152240.21520-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-08-28T15:52:50Z",
+      "subject": "[BioC] Bioconductor Win32 download failure",
+      "subject_clean": "[BioC] Bioconductor Win32 download failure",
+      "in_reply_to": "<020a01c24e7c$234faa90$0cc73dc1@fordpc>",
+      "references": [],
+      "body_plain": "> The download script/function getBioC()  is failing for windows.\n> it either needs altering so that  version numbers are included\n> eg doing this by hand works\n\nI thought that Jianhua had fixed this when I changed the Win32\nbuilds.  he's away this week but I'll look into it.\n\n-J",
+      "body_snippet": "> The download script/function getBioC()  is failing for windows.\n> it either needs altering so that  version numbers are included\n> eg doing this by hand works\n\nI thought that Jianhua had fixed this ",
+      "thread_id": "thread-d3ecea466daa",
+      "thread_depth": 1,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-c7eb2ca7dcf3",
+      "message_id": "<Pine.SOL.4.20.0208281336050.21520-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-08-28T17:37:05Z",
+      "subject": "[BioC] Problem w/ last night's builds",
+      "subject_clean": "[BioC] Problem w/ last night's builds",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "This only affects people using the Source packages, not the Win32\npackages.\n\nI made a minor change yesterday to the build scripts and realized I missed\na minor change that needs to go with it.\n\nTHus, the 'development' builds are using release level code and vice\nversa.\n\nI'm currently rebuilding as we speak.\n\n-J",
+      "body_snippet": "This only affects people using the Source packages, not the Win32\npackages.\n\nI made a minor change yesterday to the build scripts and realized I missed\na minor change that needs to go with it.\n\nTHus, ",
+      "thread_id": "thread-c7eb2ca7dcf3",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-140cde87489f",
+      "message_id": "<20020828202222.77043.qmail@web11704.mail.yahoo.com>",
+      "from_name": "lilly lilly",
+      "from_email_hash": "cae7a78bf5716195779c1b06e3554d627a6164c30b6895440cdf4193421acecb",
+      "date": "2002-08-28T20:22:22Z",
+      "subject": "[BioC] Affy package with S-PLus",
+      "subject_clean": "[BioC] Affy package with S-PLus",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "HI, I have a question about AFFY, I can load it to R package, and it works very well. My\nquestion is \" Can I load it to window S-plus?\" So that I can use affy in s-plus\nenvironment, thank you very much!\n\nJack \n\n\n\n__________________________________________________\nDo You Yahoo!?\nYahoo! Finance - Get real-time stock quotes\nhttp://finance.yahoo.com",
+      "body_snippet": "HI, I have a question about AFFY, I can load it to R package, and it works very well. My\nquestion is \" Can I load it to window S-plus?\" So that I can use affy in s-plus\nenvironment, thank you very muc",
+      "thread_id": "thread-140cde87489f",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-11c37df25325",
+      "message_id": "<Pine.LNX.4.33.0208281636230.15741-100000@localhost.localdomain>",
+      "from_name": "Rafael A. Irizarry",
+      "from_email_hash": "05a677c1148207b83eb8bc3532d7193bce333c0fe976f77ab582c8bfe9f05d4d",
+      "date": "2002-08-28T20:55:56Z",
+      "subject": "[BioC] Affy package with S-PLus",
+      "subject_clean": "[BioC] Affy package with S-PLus",
+      "in_reply_to": "<20020828202222.77043.qmail@web11704.mail.yahoo.com>",
+      "references": [],
+      "body_plain": "probably not. but a group at insightful has  ported \nsome of the bioconductor packages to Splus. \n\nhttp://www.insightful.com/genomics/\n\nrafael\n\nOn \nWed, 28 Aug 2002, lilly lilly wrote:\n\n> HI, I have a question about AFFY, I can load it to R package, and it works very well. My\n> question is \" Can I load it to window S-plus?\" So that I can use affy in s-plus\n> environment, thank you very much!\n> \n> Jack \n> \n> \n> \n> __________________________________________________\n> Do You Yahoo!?\n> Yahoo! Finance - Get real-time stock quotes\n> http://finance.yahoo.com\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor@stat.math.ethz.ch\n> http://www.stat.math.ethz.ch/mailman/listinfo/bioconductor\n>",
+      "body_snippet": "probably not. but a group at insightful has  ported \nsome of the bioconductor packages to Splus. \n\nhttp://www.insightful.com/genomics/\n\nrafael\n\nOn \nWed, 28 Aug 2002, lilly lilly wrote:\n\n> HI, I have a",
+      "thread_id": "thread-140cde87489f",
+      "thread_depth": 1,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-b47ccb522cd8",
+      "message_id": "<877CB986CDC7D5118C6000805FA7C709EF751D@uhnmail307.torhosp.toronto.on.ca>",
+      "from_name": "Pintilie, Melania",
+      "from_email_hash": "cbeccb85e20cb838676b4594a19432aa6cf2dfa633de563f14cdb220c334796e",
+      "date": "2002-08-30T13:12:44Z",
+      "subject": "[BioC] R and Bioconductor packages",
+      "subject_clean": "[BioC] R and Bioconductor packages",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi,\nI am a statistician at the Princess Margaret Hospital and I will need to do\nsome analysis on data from microarray. I have taken some courses, among\nthem, being the course given by Terry Speed in which, the Bioconductor\npackages were introduced. \n\nOur UNIX administrator have downloaded R and the Bioconductor packages and\ninstalled them on our UNIX machine. However I have several problems when I\ntry to use them. I would appreciate if you could shed some light and give me\na hint on what should be done.\nHere are the problems which I encountered:\n1)\twhen I try to load the library marrayNorm: among the notes which\ncome up on the screen there is:\n\n\tError in dyn.load(x, as.logical(local), as.logical(now)) :\n\t        unable to load shared library\n\"/usr/local/R-1.5.1/library/tcltk/libs/tcltk.so\":\n\t  ld.so.1: /usr/local/R-1.5.1/bin/R.bin: fatal: relocation error:\nfile /usr/local/R-1.5.1/\n\tlibrary/tcltk/libs/tcltk.so: symbol Tcl_GetString: referenced symbol\nnot found\n\tError in .C(\"delTcl\", PACKAGE = \"tcltk\") :\n\t        C/Fortran function name not in load table\n\t     \n\tand also:\n\n\tWarning message:\n\tThere is no package called `marrayPlots' in: library(package, char =\nTRUE, logical = TRUE,\n\t warn.conflicts = warn.conflicts,\n\n2)\tafter quitting R with the option to save the work space image and\nre-starting R, I cannot use the functions in the libraries which were\npreviously loaded (for example the function maNorm, which was  for sure\nloaded with its help file).\nDo I have to load the libraries every time I am starting R?\n\n3) The library sma doesn't seem to be in the package bundle either.\n\nThank you.\n\nMelania\n\nMelania Pintilie\nDepartment of Biostatistics, Rm. 15-433\nOntario Cancer Institute\nPrincess Margaret Hospital\n610 University Ave.\nToronto, ON, M5G 2M9\nTel: (416) 946-4501 ext. 4886\nFax: (416) 946-2048",
+      "body_snippet": "Hi,\nI am a statistician at the Princess Margaret Hospital and I will need to do\nsome analysis on data from microarray. I have taken some courses, among\nthem, being the course given by Terry Speed in w",
+      "thread_id": "thread-b47ccb522cd8",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-305a8516e318",
+      "message_id": "<Pine.SOL.4.20.0208301149040.24388-100000@santiam.dfci.harvard.edu>",
+      "from_name": "Jeff Gentry",
+      "from_email_hash": "d7765830e2fe3e585b2464d72b933e05eef31999f590aebed256f25db1b9af30",
+      "date": "2002-08-30T15:50:10Z",
+      "subject": "[BioC] R and Bioconductor packages",
+      "subject_clean": "[BioC] R and Bioconductor packages",
+      "in_reply_to": "<877CB986CDC7D5118C6000805FA7C709EF751D@uhnmail307.torhosp.toronto.on.ca>",
+      "references": [],
+      "body_plain": "> \tError in dyn.load(x, as.logical(local), as.logical(now)) :\n> \t        unable to load shared library\n> \"/usr/local/R-1.5.1/library/tcltk/libs/tcltk.so\":\n> \t  ld.so.1: /usr/local/R-1.5.1/bin/R.bin: fatal: relocation error:\n> file /usr/local/R-1.5.1/\n> \tlibrary/tcltk/libs/tcltk.so: symbol Tcl_GetString: referenced symbol\n> not found\n\nDo you have package 'tcltk' installed?\n\nIf not, that needs to be installed.\n\nIf so, is Tcl/TK (the libraries, not the R package) installed on the\nsystem?\n\n> 3) The library sma doesn't seem to be in the package bundle either.\n\nIts not, as it isn't a Bioconductor package.\n\n-J",
+      "body_snippet": "> \tError in dyn.load(x, as.logical(local), as.logical(now)) :\n> \t        unable to load shared library\n> \"/usr/local/R-1.5.1/library/tcltk/libs/tcltk.so\":\n> \t  ld.so.1: /usr/local/R-1.5.1/bin/R.bin: f",
+      "thread_id": "thread-b47ccb522cd8",
+      "thread_depth": 1,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-cb09f0981f74",
+      "message_id": "<D7A3CFD7825BD6119B880002A58F06C20149CEDC@groexmb02.pfizer.com>",
+      "from_name": "Warnes, Gregory R",
+      "from_email_hash": "bb923458363950bddeb93c9d60c3a40a12e008496c426d4940cb09cf735d0c6e",
+      "date": "2002-08-30T15:53:39Z",
+      "subject": "[BioC] R and Bioconductor packages",
+      "subject_clean": "[BioC] R and Bioconductor packages",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "> 2)\tafter quitting R with the option to save the work space \n> image and\n> re-starting R, I cannot use the functions in the libraries which were\n> previously loaded (for example the function maNorm, which was \n>  for sure\n> loaded with its help file).\n> Do I have to load the libraries every time I am starting R?\n> \n\nYes, you do have to reload the libraries each time.\n\n-Greg\n\n\nLEGAL NOTICE\nUnless expressly stated otherwise, this message is confidential and may be privileged. It is intended for the addressee(s) only. Access to this E-mail by anyone else is unauthorized. If you are not an addressee, any disclosure or copying of the contents of this E-mail or any action taken (or not taken) in reliance on it is unauthorized and may be unlawful. If you are not an addressee, please inform the sender immediately.",
+      "body_snippet": "> 2)\tafter quitting R with the option to save the work space \n> image and\n> re-starting R, I cannot use the functions in the libraries which were\n> previously loaded (for example the function maNorm, ",
+      "thread_id": "thread-cb09f0981f74",
+      "thread_depth": 0,
+      "month": "2002-08"
+    },
+    {
+      "id": "msg-c28ac1e5784e",
+      "message_id": "<1030753763.5337.10.camel@tioga.barnard-engineering.com>",
+      "from_name": "Bill Barnard",
+      "from_email_hash": "206f7d7addc6f3aa32a6d0c6a4eede3fd77bdbe97866227c3c726c9d60d8c4e0",
+      "date": "2002-08-31T00:29:22Z",
+      "subject": "[BioC] Bad links on summer 2002 short course page",
+      "subject_clean": "[BioC] Bad links on summer 2002 short course page",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "http://www.bioconductor.org/workshops/Summer02Course/index.html has a\ncouple bad links on it:\n\nhttp://www.bioconductor.org/workshops/Summer02Course/MultTest/multtest.pdf\nhttp://www.bioconductor.org/workshops/Summer02Course/Labs/basicsAll.R\n\ncheers,\n\nBill\n\np.s. Thanks for making this all available. I'm using it for a course\nproject in a bioinformatics program at UCSC Extension, and it's\ntremendously helpful.",
+      "body_snippet": "http://www.bioconductor.org/workshops/Summer02Course/index.html has a\ncouple bad links on it:\n\nhttp://www.bioconductor.org/workshops/Summer02Course/MultTest/multtest.pdf\nhttp://www.bioconductor.org/wo",
+      "thread_id": "thread-c28ac1e5784e",
+      "thread_depth": 0,
+      "month": "2002-08"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-9a1ae9ba2a23",
+      "subject": "[BioC] New Package: annaffy",
+      "message_count": 2,
+      "participants": [
+        "Colin A. Smith",
+        "Laurent Gautier"
+      ],
+      "started": "2002-08-02T00:29:15Z",
+      "last_reply": "2002-08-02T10:18:46Z",
+      "root_message_id": "msg-9a1ae9ba2a23"
+    },
+    {
+      "id": "thread-7dfe673d6851",
+      "subject": "[BioC] Re: Data in annotate",
+      "message_count": 1,
+      "participants": [
+        "John Zhang"
+      ],
+      "started": "2002-08-02T13:37:25Z",
+      "last_reply": "2002-08-02T13:37:25Z",
+      "root_message_id": "msg-7dfe673d6851"
+    },
+    {
+      "id": "thread-fbf5d111a1d7",
+      "subject": "[BioC] does the UNIX package bundle install on Linux RedHat 7.3?",
+      "message_count": 2,
+      "participants": [
+        "Jeff Gentry",
+        "Mohamed Abdolell"
+      ],
+      "started": "2002-08-02T19:54:22Z",
+      "last_reply": "2002-08-02T20:04:25Z",
+      "root_message_id": "msg-fbf5d111a1d7"
+    },
+    {
+      "id": "thread-ca7a122257ba",
+      "subject": "[BioC] Contributed packages",
+      "message_count": 1,
+      "participants": [
+        "Jeff Gentry"
+      ],
+      "started": "2002-08-05T16:45:45Z",
+      "last_reply": "2002-08-05T16:45:45Z",
+      "root_message_id": "msg-ca7a122257ba"
+    },
+    {
+      "id": "thread-ff7fd556f47e",
+      "subject": "[BioC] Annotation for Nonspecificity of Affymetrix Probes?",
+      "message_count": 2,
+      "participants": [
+        "Jeff Sorenson",
+        "Robert Gentleman"
+      ],
+      "started": "2002-08-05T16:49:45Z",
+      "last_reply": "2002-08-05T17:23:27Z",
+      "root_message_id": "msg-ff7fd556f47e"
+    },
+    {
+      "id": "thread-b7814c8dc5f6",
+      "subject": "[BioC] More plot woes (maRawPlots)",
+      "message_count": 1,
+      "participants": [
+        "Peter Baker (CMIS, Indooroopilly)"
+      ],
+      "started": "2002-08-08T08:45:15Z",
+      "last_reply": "2002-08-08T08:45:15Z",
+      "root_message_id": "msg-b7814c8dc5f6"
+    },
+    {
+      "id": "thread-012a44228aeb",
+      "subject": "[BioC] New Windows builds",
+      "message_count": 1,
+      "participants": [
+        "Jeff Gentry"
+      ],
+      "started": "2002-08-12T21:52:25Z",
+      "last_reply": "2002-08-12T21:52:25Z",
+      "root_message_id": "msg-012a44228aeb"
+    },
+    {
+      "id": "thread-56323aecb684",
+      "subject": "[BioC] Multtest question...",
+      "message_count": 1,
+      "participants": [
+        "Joshua Betcher"
+      ],
+      "started": "2002-08-13T15:18:38Z",
+      "last_reply": "2002-08-13T15:18:38Z",
+      "root_message_id": "msg-56323aecb684"
+    },
+    {
+      "id": "thread-004dcc391ec0",
+      "subject": "[BioC] Win32 data packages",
+      "message_count": 1,
+      "participants": [
+        "Jeff Gentry"
+      ],
+      "started": "2002-08-14T17:03:41Z",
+      "last_reply": "2002-08-14T17:03:41Z",
+      "root_message_id": "msg-004dcc391ec0"
+    },
+    {
+      "id": "thread-9ed09c2ba86f",
+      "subject": "[BioC] More web changes/Win32 downloads",
+      "message_count": 1,
+      "participants": [
+        "Jeff Gentry"
+      ],
+      "started": "2002-08-14T18:31:28Z",
+      "last_reply": "2002-08-14T18:31:28Z",
+      "root_message_id": "msg-9ed09c2ba86f"
+    },
+    {
+      "id": "thread-4e7eee1e133e",
+      "subject": "[BioC] Data Sources",
+      "message_count": 3,
+      "participants": [
+        "Jeff Gentry",
+        "Johanne Duhaime"
+      ],
+      "started": "2002-08-16T13:41:42Z",
+      "last_reply": "2002-08-19T14:44:51Z",
+      "root_message_id": "msg-4e7eee1e133e"
+    },
+    {
+      "id": "thread-7f01df2f0d66",
+      "subject": "[BioC] Data packages",
+      "message_count": 1,
+      "participants": [
+        "Jeff Gentry"
+      ],
+      "started": "2002-08-16T17:02:39Z",
+      "last_reply": "2002-08-16T17:02:39Z",
+      "root_message_id": "msg-7f01df2f0d66"
+    },
+    {
+      "id": "thread-f40ff6f83f9b",
+      "subject": "[BioC] Data Sources",
+      "message_count": 1,
+      "participants": [
+        "John Zhang"
+      ],
+      "started": "2002-08-19T12:42:19Z",
+      "last_reply": "2002-08-19T12:42:19Z",
+      "root_message_id": "msg-f40ff6f83f9b"
+    },
+    {
+      "id": "thread-e11ee97092dc",
+      "subject": "[BioC] contributing packages",
+      "message_count": 3,
+      "participants": [
+        "A.J. Rossini",
+        "David R. Bickel",
+        "Jeff Gentry"
+      ],
+      "started": "2002-08-20T19:08:15Z",
+      "last_reply": "2002-08-20T19:26:40Z",
+      "root_message_id": "msg-e11ee97092dc"
+    },
+    {
+      "id": "thread-424ac60e6316",
+      "subject": "[BioC] anon cvs?",
+      "message_count": 9,
+      "participants": [
+        "A.J. Rossini",
+        "Byron Ellis",
+        "Douglas Bates",
+        "Jeff Gentry",
+        "Nicholas Lewin-Koh",
+        "Robert Gentleman"
+      ],
+      "started": "2002-08-21T02:31:36Z",
+      "last_reply": "2002-08-21T21:45:02Z",
+      "root_message_id": "msg-424ac60e6316"
+    },
+    {
+      "id": "thread-4ca6876a07fc",
+      "subject": "[BioC] expresso and rhdf5",
+      "message_count": 3,
+      "participants": [
+        "\"Hölter, Tanja\"",
+        "Jeff Gentry",
+        "Laurent Gautier"
+      ],
+      "started": "2002-08-22T11:54:38Z",
+      "last_reply": "2002-08-25T11:36:14Z",
+      "root_message_id": "msg-4ca6876a07fc"
+    },
+    {
+      "id": "thread-a177e611b941",
+      "subject": "[BioC] affy 2.0 (fwd)",
+      "message_count": 1,
+      "participants": [
+        "Jeff Gentry"
+      ],
+      "started": "2002-08-23T04:36:45Z",
+      "last_reply": "2002-08-23T04:36:45Z",
+      "root_message_id": "msg-a177e611b941"
+    },
+    {
+      "id": "thread-0d36a06f44e5",
+      "subject": "[BioC] affy-devel",
+      "message_count": 1,
+      "participants": [
+        "Laurent Gautier"
+      ],
+      "started": "2002-08-26T10:47:57Z",
+      "last_reply": "2002-08-26T10:47:57Z",
+      "root_message_id": "msg-0d36a06f44e5"
+    },
+    {
+      "id": "thread-ba087f1c2708",
+      "subject": "[BioC] bug in pacakge affy when applying avdiff on Plob",
+      "message_count": 1,
+      "participants": [
+        "Laurent Gautier"
+      ],
+      "started": "2002-08-27T12:55:30Z",
+      "last_reply": "2002-08-27T12:55:30Z",
+      "root_message_id": "msg-ba087f1c2708"
+    },
+    {
+      "id": "thread-d3ecea466daa",
+      "subject": "[BioC] Bioconductor Win32 download failure",
+      "message_count": 2,
+      "participants": [
+        "Ashley Ford",
+        "Jeff Gentry"
+      ],
+      "started": "2002-08-28T10:17:39Z",
+      "last_reply": "2002-08-28T15:52:50Z",
+      "root_message_id": "msg-d3ecea466daa"
+    },
+    {
+      "id": "thread-c7eb2ca7dcf3",
+      "subject": "[BioC] Problem w/ last night's builds",
+      "message_count": 1,
+      "participants": [
+        "Jeff Gentry"
+      ],
+      "started": "2002-08-28T17:37:05Z",
+      "last_reply": "2002-08-28T17:37:05Z",
+      "root_message_id": "msg-c7eb2ca7dcf3"
+    },
+    {
+      "id": "thread-140cde87489f",
+      "subject": "[BioC] Affy package with S-PLus",
+      "message_count": 2,
+      "participants": [
+        "Rafael A. Irizarry",
+        "lilly lilly"
+      ],
+      "started": "2002-08-28T20:22:22Z",
+      "last_reply": "2002-08-28T20:55:56Z",
+      "root_message_id": "msg-140cde87489f"
+    },
+    {
+      "id": "thread-b47ccb522cd8",
+      "subject": "[BioC] R and Bioconductor packages",
+      "message_count": 2,
+      "participants": [
+        "Jeff Gentry",
+        "Pintilie, Melania"
+      ],
+      "started": "2002-08-30T13:12:44Z",
+      "last_reply": "2002-08-30T15:50:10Z",
+      "root_message_id": "msg-b47ccb522cd8"
+    },
+    {
+      "id": "thread-cb09f0981f74",
+      "subject": "[BioC] R and Bioconductor packages",
+      "message_count": 1,
+      "participants": [
+        "Warnes, Gregory R"
+      ],
+      "started": "2002-08-30T15:53:39Z",
+      "last_reply": "2002-08-30T15:53:39Z",
+      "root_message_id": "msg-cb09f0981f74"
+    },
+    {
+      "id": "thread-c28ac1e5784e",
+      "subject": "[BioC] Bad links on summer 2002 short course page",
+      "message_count": 1,
+      "participants": [
+        "Bill Barnard"
+      ],
+      "started": "2002-08-31T00:29:22Z",
+      "last_reply": "2002-08-31T00:29:22Z",
+      "root_message_id": "msg-c28ac1e5784e"
+    }
+  ]
+}

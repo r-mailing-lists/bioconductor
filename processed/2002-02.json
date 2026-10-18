@@ -1,0 +1,97 @@
+{
+  "list": "bioconductor",
+  "description": "",
+  "month": "2002-02",
+  "messages": [
+    {
+      "id": "msg-a52c49e66490",
+      "message_id": "<200202141747.MAA04321@blaise.dfci.harvard.edu>",
+      "from_name": "John Zhang",
+      "from_email_hash": "a9b29fa5c7919bc7d02dec7bdc0c62c5f96a282f20bb4efd587867f549843181",
+      "date": "2002-02-14T17:47:15Z",
+      "subject": "[BioC] help with  library(NBIR)",
+      "subject_clean": "[BioC] help with  library(NBIR)",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Oliver,\n\nIt failed because /usr/lib/R/library/annotate/data/hgu95v2fgroup is an old file \nwe used before but does not exist in annotate/data any more. I will let the \nmaintainer of the package know about the change and have the bug fixed. Thanks.\n\nJianhua",
+      "body_snippet": "Oliver,\n\nIt failed because /usr/lib/R/library/annotate/data/hgu95v2fgroup is an old file \nwe used before but does not exist in annotate/data any more. I will let the \nmaintainer of the package know ab",
+      "thread_id": "thread-a52c49e66490",
+      "thread_depth": 0,
+      "month": "2002-02"
+    },
+    {
+      "id": "msg-1077fef552dc",
+      "message_id": "<Pine.GSO.4.40.0202141307140.22962-100000@falmouth.bwh.harvard.edu>",
+      "from_name": "Vincent Carey 525-2265",
+      "from_email_hash": "381a0cc24e3b8c000e48897854dc66548b429ce8fc8f23a93430f715efbf37a0",
+      "date": "2002-02-14T18:08:51Z",
+      "subject": "[BioC] help with  library(NBIR)",
+      "subject_clean": "[BioC] help with  library(NBIR)",
+      "in_reply_to": "<3C6C016E.D58777EA@inrialpes.fr>",
+      "references": [],
+      "body_plain": "hi -- my experience with NBIR under R 1.5 is that\nit fails because SNetscape and the methods library\nare incompatible.  NBIR has not been touched for\nsome time owing to that.\n\nIf you have evidence to the contrary let me know\nand I will try to rebuild and correct the\ncurrent bugs.\n\nLet me know what version of R you are running and\non what platform please.\n\n---\nVince Carey, PhD\nAss't Prof Med (Biostatistics)\nHarvard Medical School\nChanning Laboratory - ph 6175252265 fa 6177311541\n181 Longwood Ave Boston MA 02115 USA\nstvjc@channing.harvard.edu\n\n-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: PGP 6.5.8\n\nmQCNAzqIeGUAAAEEAMJXU941vIornTS52rl6z7eo+A7wwB0km/idLnkxzIhc1uLi\nQtn19OyOfG6IDSucLrtmpvwagemAnQ9jL6TVDrmlrKnqsh+FFtvUuZ37eV85L70E\nBsS8RZCmMYHJKfrpCwegbTVZrEkd1ByquLIN/yUwxU4IcVuHxbNQk69riQ8tAAUR\ntBVWaW5jZW50IEouIENhcmV5LCBKci6JAJUDBRA6iHhls1CTr2uJDy0BAdsLA/wM\ncCzEDsP9MqodKZfDI1s/gXW6BcCuQ6n7MdEplLgmWvyqfbvRYx4upYZ3pNp8L0zU\nMrlR6eCTs/eDtMO/ZbGvkqqiQO6wS2fZb1T5L/DhhtT4mEAHt0E8dNBVCj+lKr3W\nvYS5GqO9gY4CiT3JXFH9N19pSbUQFiNDqpmG6EbWng==\n=DQNF\n-----END PGP PUBLIC KEY BLOCK-----\n\n\nOn Thu, 14 Feb 2002, Olivier Martin wrote:\n\n> Hi all,\n>\n> I have installed the NBIR library.\n> I try to load it in a R session but it fails. I have the error message :\n>\n> Error in readLines(con) : cannot open file\n> `/usr/lib/R/library/annotate/data/hgu95v2fgroup'\n>\n> Could you help me ??\n> Thanks,\n> Olivier\n>\n> --\n> -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n> Olivier MARTIN\n> PhD student                  phone: (33) 04 76 61 53 55\n> Projet IS2                               06 08 67 93 42\n> INRIA Rhone-Alpes            fax  : (33) 04 76 61 54 77\n> 655, Av. de l'Europe\n> Montbonnot                   e-mail:olivier.martin@inrialpes.fr\n> 38334 Saint Ismier cedex\n> -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n>\n>\n>",
+      "body_snippet": "hi -- my experience with NBIR under R 1.5 is that\nit fails because SNetscape and the methods library\nare incompatible.  NBIR has not been touched for\nsome time owing to that.\n\nIf you have evidence to ",
+      "thread_id": "thread-5322fc41f260",
+      "thread_depth": 1,
+      "month": "2002-02"
+    },
+    {
+      "id": "msg-5322fc41f260",
+      "message_id": "<3C6C016E.D58777EA@inrialpes.fr>",
+      "from_name": "Olivier Martin",
+      "from_email_hash": "f3544195b90fad1a2d42043f1118d1ae87f06e7f60c7e00d5ab3ba03ce3da883",
+      "date": "2002-02-14T18:26:54Z",
+      "subject": "[BioC] help with  library(NBIR)",
+      "subject_clean": "[BioC] help with  library(NBIR)",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "--------------EC7355746203A2B4FADEEE3D\nContent-Type: text/plain; charset=us-ascii\nContent-Transfer-Encoding: 7bit\n\nHi all,\n\nI have installed the NBIR library.\nI try to load it in a R session but it fails. I have the error message :\n\nError in readLines(con) : cannot open file\n`/usr/lib/R/library/annotate/data/hgu95v2fgroup'\n\nCould you help me ??\nThanks,\nOlivier\n\n--\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nOlivier MARTIN\nPhD student                  phone: (33) 04 76 61 53 55\nProjet IS2                               06 08 67 93 42\nINRIA Rhone-Alpes            fax  : (33) 04 76 61 54 77\n655, Av. de l'Europe\nMontbonnot                   e-mail:olivier.martin@inrialpes.fr\n38334 Saint Ismier cedex\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n\n\n\n--------------EC7355746203A2B4FADEEE3D\nContent-Type: text/html; charset=us-ascii\nContent-Transfer-Encoding: 7bit\n\n<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">\n<html>\nHi all,\n<p>I have installed the NBIR library.\n<br>I try to load it in a R session but it fails. I have the error message\n:\n<p>Error in readLines(con) : cannot open file `/usr/lib/R/library/annotate/data/hgu95v2fgroup'\n<p>Could you help me ??\n<br>Thanks,\n<br>Olivier\n<pre>--&nbsp;\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\nOlivier MARTIN\nPhD student&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; phone: (33) 04 76 61 53 55\nProjet IS2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 06 08 67 93 42&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\nINRIA Rhone-Alpes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fax&nbsp; : (33) 04 76 61 54 77\n655, Av. de l'Europe\nMontbonnot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e-mail:olivier.martin@inrialpes.fr\n38334 Saint Ismier cedex\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-</pre>\n&nbsp;</html>\n\n--------------EC7355746203A2B4FADEEE3D--",
+      "body_snippet": "--------------EC7355746203A2B4FADEEE3D\nContent-Type: text/plain; charset=us-ascii\nContent-Transfer-Encoding: 7bit\n\nHi all,\n\nI have installed the NBIR library.\nI try to load it in a R session but it fa",
+      "thread_id": "thread-5322fc41f260",
+      "thread_depth": 0,
+      "month": "2002-02"
+    },
+    {
+      "id": "msg-a2df749c46ed",
+      "message_id": "<Pine.SGI.3.95.1020214223446.4130271B-100000@genome.cbs.dtu.dk>",
+      "from_name": "Laurent Gautier",
+      "from_email_hash": "705d8edac5ac54e7a46a96bc0a17ff702f94febca76adcf0760433ab56a07f0d",
+      "date": "2002-02-14T21:37:53Z",
+      "subject": "[BioC] help with  library(NBIR)",
+      "subject_clean": "[BioC] help with  library(NBIR)",
+      "in_reply_to": "<3C6C016E.D58777EA@inrialpes.fr>",
+      "references": [],
+      "body_plain": "Salut Olivier,\n\n\nJe ne suis pas certain de mon coup, mais il pourrait que ce soit du au\nfait qu'il faille egalement avoir la bibliotheque 'annotate'...\n\n..est-ce le cas ?\n\n\n\n\n.....oups, sorry...\n\nsummary of above: it might be cause by the package 'annotate' not\ninstalled (but I am not sure)\n\n\n\n\nLaurent Gautier\t\t\tCBS, Building 208, DTU\nPhD. Student\t\t\tD-2800 Lyngby,Denmark\t\ntel: +45 45 25 24 85\t\thttp://www.cbs.dtu.dk/laurent\n\nOn Thu, 14 Feb 2002, Olivier Martin wrote:\n\n> Hi all,\n> \n> I have installed the NBIR library.\n> I try to load it in a R session but it fails. I have the error message :\n> \n> Error in readLines(con) : cannot open file\n> `/usr/lib/R/library/annotate/data/hgu95v2fgroup'\n> \n> Could you help me ??\n> Thanks,\n> Olivier\n> \n> --\n> -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n> Olivier MARTIN\n> PhD student                  phone: (33) 04 76 61 53 55\n> Projet IS2                               06 08 67 93 42\n> INRIA Rhone-Alpes            fax  : (33) 04 76 61 54 77\n> 655, Av. de l'Europe\n> Montbonnot                   e-mail:olivier.martin@inrialpes.fr\n> 38334 Saint Ismier cedex\n> -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n> \n> \n>",
+      "body_snippet": "Salut Olivier,\n\n\nJe ne suis pas certain de mon coup, mais il pourrait que ce soit du au\nfait qu'il faille egalement avoir la bibliotheque 'annotate'...\n\n..est-ce le cas ?\n\n\n\n\n.....oups, sorry...\n\nsumm",
+      "thread_id": "thread-5322fc41f260",
+      "thread_depth": 1,
+      "month": "2002-02"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-a52c49e66490",
+      "subject": "[BioC] help with  library(NBIR)",
+      "message_count": 1,
+      "participants": [
+        "John Zhang"
+      ],
+      "started": "2002-02-14T17:47:15Z",
+      "last_reply": "2002-02-14T17:47:15Z",
+      "root_message_id": "msg-a52c49e66490"
+    },
+    {
+      "id": "thread-5322fc41f260",
+      "subject": "[BioC] help with  library(NBIR)",
+      "message_count": 3,
+      "participants": [
+        "Laurent Gautier",
+        "Olivier Martin",
+        "Vincent Carey 525-2265"
+      ],
+      "started": "2002-02-14T18:26:54Z",
+      "last_reply": "2002-02-14T21:37:53Z",
+      "root_message_id": "msg-5322fc41f260"
+    }
+  ]
+}
