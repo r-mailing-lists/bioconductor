@@ -130,11 +130,14 @@
       "subject_clean": "[BioC] motif searching with variable length gaps",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071101/c220565e/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071101/c220565e/attachment.pl",
+      "body_plain": "Dear Bioconductor mailing list:\n\nI've been using cosmo to look for motifs.  I'd like to search for motifs that have a variable length of gaps in the middle. If I specify a range of motif widths with the cosmo function, it uses the width with the lowest BIC value and searches for motifs of only that width.  My dilemma is that the motifs I'm looking for are of variable width.\n\nThanks in advance for any help!\n\nHeather\n\nThis email message, including any attachments, is for th...{{dropped:9}}",
+      "body_snippet": "Dear Bioconductor mailing list:\n\nI've been using cosmo to look for motifs.  I'd like to search for motifs that have a variable length of gaps in the middle. If I specify a range of motif widths with t",
       "thread_id": "thread-4da6e384a9b7",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071101/c220565e/attachment.pl"
+      ]
     },
     {
       "id": "msg-715367dac727",
@@ -224,11 +227,14 @@
         "<F1A68B7B-0492-4547-A0C6-90FC7A97F66D@watson.wustl.edu>",
         "<6349520B733445314F81752C@gromit2.pmbb.med.unc.edu>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071101/4335ad2a/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071101/4335ad2a/attachment.pl",
+      "body_plain": "Dear list,\n\nI think I need to simplify my question.\n\nI have two samples, each from a time point of its embryogenesis. They  \nare applied on a two-color Agilent array to compare between each other.\n\nThe raw data has a MA-plot like this:\n\nftp://genome.wustl.edu/private/272205387781472/yong_data.071031/ \nMA_RGLW1.pdf\n\nAfter \"normexp\" and global loess, the MA-plot does change it's shape  \nas seen here:\n\nftp://genome.wustl.edu/private/272205387781472/yong_data.071031/ \nMA_MALWC1.pdf\n\nMy 1st question:\n\nDoes my data have too much differential expression, according to your  \nexperience?\n\nApparently, Jianping thinks so.\n\nThen my 2nd question:\n\nIs it still ok to use global loess for normalization?\n\nThanks so much, I need your opinions.\n\nI am running the latest R and all packages. Commands I used are:\n\n > RGLWC <- backgroundCorrect(RGLW, method=\"normexp\", offset=50)\n > MALWC <- normalizeWithinArrays(RGLWC, method=\"loess\")\n\n\nBest,\n\nYong\n\nOn Nov 1, 2007, at 8:47 AM, Jianping Jin wrote:\n\n> Yong,\n>\n> What is your reference sample(s) for this test run? Looks like the  \n> experiment and reference samples are quite different.\n>\n> JJ-\n>\n> --On Wednesday, October 31, 2007 4:40 PM -0500 Yong Yin  \n> <yyin at watson.wustl.edu> wrote:\n>\n>> Dear list,\n>>\n>> I am new to BioConductor, so please forgive me if my questions are\n>> naive to you.\n>>\n>> We designed an Agilent 4x44k array, with the same 44K probes printed\n>> 4 times in the 4 blocks. These 44K probes are designed based on a  \n>> low-\n>> coverage genome sequencing project for a parasitic nematode. Our\n>> purpose is to investigate gene expression during early embryogenesis\n>> of the nematode.\n>>\n>> We have received results from a test run to evaluate the array\n>> quality. Samples applied on the chip were from two time points during\n>> the nematode embryogenesis. As a experiment, I have been following\n>> the LIMMA manual step-by-step, treating the results as a simple two-\n>> sample comparison with both technical and biological replication. I\n>> have uploaded 3 images in the following location and would love to\n>> hear what you folks think:\n>>\n>> ftp://genome.wustl.edu/private/272205387781472/yong_data.071031/\n>>\n>> The general quality of the array is very good, I can't find any\n>> indication of quality problem. The file \"MA_RGLW1.pdf\" is a MA plot\n>> of raw RG data for one of the 4 blocks. After background correction\n>> with \"normexp\" and within-array normalization with global loess, its\n>> MA plot is shown as in \"MA_MALWC1.pdf\".\n>>\n>> Given that we are studying early embryogenesis, we should expect that\n>> a lot of genes are differentially expressed at these two time points.\n>> In the MA plots, I think we indeed see lots of DE.  However,\n>> according to what I read, the underline assumption for such\n>> normalization is that the majority of the genes under investigation\n>> should not be differentially expressed. I also read from other\n>> people's posts that I should keep the normalization as simple as\n>> possible and the \"good\" data will always be good.\n>>\n>>  From my MA plots, do you think my normalization is reasonable with\n>> this data? If not, are there suggestions what to do? a different\n>> normalization method? or even change the design of the array with a\n>> set of spike-in control probes to use for normalization?\n>>\n>> The two time points in this test run are actually the beginning and\n>> the ending points of the developmental stages that we are planning to\n>> investigate. We are considering to use a pooled-sample as a common\n>> reference. We hope a pooled reference like this will decrease the\n>> degrees of differential expression between any two samples of our\n>> study. Does this sound like a good idea?\n>>\n>> After normalization with loess, I went ahead to the step of linear\n>> modeling with eBayes and got the following QQ plot:\n>> \"QQPlot_fitLWC2eBayes.pdf'.\n>>\n>> Does the modeling look reasonable, according to your experience?\n>>\n>> Any opinions and advices are greatly appreciated.\n>>\n>> Best,\n>>\n>> Yong Yin, Ph.D.\n>>\n>> Senior Scientist\n>> Genome Sequencing Center\n>> Washington University School of Medicine, Campus box 8501\n>> 4444 Forest Park\n>> Saint Louis, MO 63108\n>>\n>> Tel: (314) 286-1415\n>>\n>>\n>>\n>> \t[[alternative HTML version deleted]]\n>>\n>> _______________________________________________\n>> Bioconductor mailing list\n>> Bioconductor at stat.math.ethz.ch\n>> https://stat.ethz.ch/mailman/listinfo/bioconductor\n>> Search the archives:\n>> http://news.gmane.org/gmane.science.biology.informatics.conductor\n>\n>\n>\n> ##################################\n> Jianping Jin Ph.D.\n> Bioinformatics scientist\n> Center for Bioinformatics\n> Room 3133 Bioinformatics building\n> CB# 7104\n> University of Chapel Hill\n> Chapel Hill, NC 27599\n> Phone: (919)843-6105\n> FAX:   (919)843-3103\n> E-Mail: jjin at email.unc.edu\n>\n\nYong Yin, Ph.D.\n\nSenior Scientist\nGenome Sequencing Center\nWashington University School of Medicine, Campus box 8501\n4444 Forest Park\nSaint Louis, MO 63108\n\nTel: (314) 286-1415\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear list,\n\nI think I need to simplify my question.\n\nI have two samples, each from a time point of its embryogenesis. They  \nare applied on a two-color Agilent array to compare between each other.\n\nTh",
       "thread_id": "thread-9bf8007f533e",
       "thread_depth": 1,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071101/4335ad2a/attachment.pl"
+      ]
     },
     {
       "id": "msg-455bc892e81a",
@@ -440,11 +446,14 @@
         "<3386.129.240.47.68.1193912144.squirrel@webmail.uio.no>",
         "<472A130F.9000505@fhcrc.org>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071101/e66b8aaf/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071101/e66b8aaf/attachment.pl",
+      "body_plain": "Hello,\nThe package limma fas this function. Dorthe may be getting NA's or \nnegative numbers which she is taking square root of. Please check if \nthis is the case.\nregards,\nShripad\n\nHerve Pages wrote:\n> Hi Dorthe,\n>\n> There are more than 200 packages in Bioconductor. None of them has a\n> dulicateCorrelation function. Maybe you are referring to the\n> duplicateCorrelation function from the limma package?\n> Hopefully, a limma expert will be able to help you.\n>\n> Note that it would help a lot if you could provide the output of sessionInfo(),\n> and if possible, a few lines of code that show how to reproduce the problem.\n>\n> Thanks!\n> H.\n>\n> dorthe.belgardt at medisin.uio.no wrote:\n>   \n>> Hi,\n>>\n>> when using the dulicateCorrelation function I get the following warning\n>> message: \"NaNs produced in: sqrt(dfitted.values)\"\n>> I have used the function before and usually got the \"too much damping\"\n>> warning message, which I know can be ignored. But now I get the warning\n>> message metioned above and don't know whether to ignore it or not.\n>>\n>> Thanks for any help in advance,\n>> Dorthe\n>>\n>>     \n>\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor at stat.math.ethz.ch\n> https://stat.ethz.ch/mailman/listinfo/bioconductor\n> Search the archives: http://news.gmane.org/gmane.science.biology.informatics.conductor\n>\n>\n>   \n\n-- \nShripad Sinari\nComputer Database Specialist\nBioinformatics Shared Service\nArizona Cancer Center\nTucson, Arizona, 85725-5024\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello,\nThe package limma fas this function. Dorthe may be getting NA's or \nnegative numbers which she is taking square root of. Please check if \nthis is the case.\nregards,\nShripad\n\nHerve Pages wrote:\n",
       "thread_id": "thread-4d46f4642799",
       "thread_depth": 2,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071101/e66b8aaf/attachment.pl"
+      ]
     },
     {
       "id": "msg-b71d50f7c627",
@@ -702,11 +711,14 @@
         "<4721D751.3040207@cipf.es>",
         "<010a01c81af4$cfce8620$456e10ac@MJN>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071102/30f8575d/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071102/30f8575d/attachment.pl",
+      "body_plain": "Hi\n\nThis I already have gotten an answer for by Ana, the last thing I asked about is this:\n\n\nI am plotting the profiles using the PlotGroups method. I have two groups: control and treated. If a gene is in both groups there are drawn two profile in two different colors (red(controll) and green(treatment)). If the gene is only in the control group only one profile is drawn and it is red. But if the gene is in the treatment group but not in the control group, only one profile is drawn. This profile is also red and the box that tells which color is which group does not change (red = control, green = treatment). Is it something wrong with the way colors are set in the method? It looks to me that the first profile to be drawn are to be red, the next green and so on not considering which group the profile belongs too?\n\nAny comments?\n\n\nRegards,\nIngrid\n\n\n \nHello,\n\nThe 0 profile is a flat profile: no changes.\n\nRegards.\n\nMaría.\n\n----- Original Message ----- \nFrom: \"Ana Conesa\" <aconesa at cipf.es>\nTo: \"Maria José Nueda Roldán\" <MJ.Nueda at ua.es>; \"Ingrid H. G. Østensen\"\n<Ingrid.H.G.Ostensen at rr-research.no>\nSent: Friday, October 26, 2007 1:02 PM\nSubject: Re: [BioC] maSigPro questions\n\n\n> Ingrid,\n>\n> I am terribly busy this week, so I am forwarding this request to Maria\n> Jose Nueda to answer your question.\n>\n> My apologizes for this delay\n>\n> Ana\n>\n>\n> Ingrid H. G. Østensen wrote:\n> >\n> > Hi\n> >\n> > It work now. :-)\n> >\n> > I have one more question: In the user guide the following is written:\n> > \"groups\": This will generate a list of significant genes for each\n> > experimental group. The list\n> > corresponding to the reference group will contain genes whose\n> > expression profile is significantly\n> > different from a 0 profile. The lists corresponding to the remaining\n> > experimental groups will\n> > contain genes whose profiles are different from the reference group.\n> >\n> > What is this 0 profile?\n> >\n> > Regards,\n> > Ingrid\n> >\n> >\n> >\n> > Ingrid\n> >\n> > Which command did you use to generate sigs?\n> > you probably need to run like this..\n> >\n> > > see.genes(sigs$sig.genes[[1]])\n> >\n> > Ana\n> >\n> > Ingrid H. G. ?stensen wrote:\n> > > Hi\n> > >\n> > > I am using the maSigPro package but unfortunately I get an error\n> > that I can not find the solution to.\n> > >\n> > >> see.genes(sigs, edesign = designMa, show.fit = T, dis =\n> > designMa$dis, cluster.method = \"kmeans\", cluster.data = 1, k = 9)\n> > > [1] \"warning: no rows without missing values or less than 2 rows;\n> > impossible to compute heatmap\"\n> > > [1] \"warning: NULL data. No visualization possible\"\n> > > $cut\n> > > NULL\n> > >\n> > > $cluster.algorithm.used\n> > > NULL\n> > >\n> > > $groups\n> > > Control UV\n> > > UV_a1_t0 0 1\n> > > UV_a1_t30 0 1\n> > > UV_a1_t90 0 1\n> > > UV_a2_t0 0 1\n> > > UV_a2_t30 0 1\n> > > UV_a2_t90 0 1\n> > > C_a1_t0 1 0\n> > > C_a1_t30 1 0\n> > > C_a1_t90 1 0\n> > > C_a2_t0 1 0\n> > > C_a2_t30 1 0\n> > > C_a2_t90 1 0\n> > >\n> > > I have run the procedure with log2 values, linear values, with and\n> > without (used impute.knn) missing values but still get the error. Any\n> > suggestions?\n> > >\n> > >> sessionInfo()\n> > > R version 2.5.1 (2007-06-27)\n> > > i386-pc-mingw32\n> > >\n> > > locale:\n> > > LC_COLLATE=English_United Kingdom.1252;LC_CTYPE=English_United\n> > Kingdom.1252;LC_MONETARY=English_United\n> > Kingdom.1252;LC_NUMERIC=C;LC_TIME=English_United Kingdom.1252\n> > >\n> > > attached base packages:\n> > > [1] \"tcltk\" \"tools\" \"stats\" \"graphics\" \"grDevices\" \"utils\"\n> > \"datasets\" \"methods\" \"base\"\n> > >\n> > > other attached packages:\n> > > EMV marray tkWidgets DynDoc widgetTools maSigPro Biobase xtable\n> > impute limma\n> > > \"1.3.1\" \"1.14.0\" \"1.14.0\" \"1.14.0\" \"1.12.0\" \"2.0.1\" \"1.14.1\" \"1.5-1\"\n> > \"1.0-5\" \"2.10.7\"\n> > >\n> > >\n> > > Regards,\n> > > Ingrid\n> > >\n> > >\n> > > [[alternative HTML version deleted]]\n> > >\n> > > _______________________________________________\n> > > Bioconductor mailing list\n> > > Bioconductor at stat.math.ethz.ch\n> > > https://stat.ethz.ch/mailman/listinfo/bioconductor\n> > > Search the archives:\n> > http://news.gmane.org/gmane.science.biology.informatics.conductor\n> >\n> >\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi\n\nThis I already have gotten an answer for by Ana, the last thing I asked about is this:\n\n\nI am plotting the profiles using the PlotGroups method. I have two groups: control and treated. If a gene i",
       "thread_id": "thread-2b45e0c1c766",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071102/30f8575d/attachment.pl"
+      ]
     },
     {
       "id": "msg-60d299b74686",
@@ -778,11 +790,14 @@
         "<47d9979f0711010831n529151f7s1d0dbe5213c7d588@mail.gmail.com>",
         "<6.2.3.4.2.20071102113543.02438d60@imap.stat.psu.edu>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071102/1134ab38/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071102/1134ab38/attachment.pl",
+      "body_plain": "Greetings Naomi,\n\nthanks for reply. To generalize my question: when dealing with 2 sets of\nsamples, let's say  X1, X2, ...., Xn  and  Y1, Y2, ..., Yn,\nI could run the normalization in 2 ways: A. only X(1,n) and only Y(1,n), or\nB. both X(1,n),Y(1,n). Are there any a priori statistical\ncriteria that favors a way or the other ? If I  would take into\nconsideration biological criteria (the things I am interested in), the\nresults\nfrom A may sometimes look better than B', or vice versa. Thanks !\n\nBogdan\n\n\n\nOn 11/2/07, Naomi Altman <naomi at stat.psu.edu> wrote:\n>\n> Dear Bogdan,\n> I do not have an opinion on gcRMA versus RMA.  But if you are doing\n> differential expression analysis comparing the cell samples with the\n> organ samples, you need to normalize\n> all the samples together.\n>\n> --Naomi\n>\n> At 11:31 AM 11/1/2007, Bogdan Tanasa wrote:\n> >Hi folks,\n> >\n> >I would like to ask for your opinions on the following:\n> >\n> >I have 60 expression profiles of 60 samples (cells and organs in\n> >resting conditions).\n> >I normalized these arrays in many ways, including RMA.\n> >\n> >Considering the biological arguments (cells samples vs organs\n> >samples), I am planning to do the normalization separately, on the\n> >group of cell samples, and on the group of organ samples.\n> >\n> >My questions are:\n> >\n> >- after RMA normalization on separate groups of samples (cells vs\n> >organs), the results are different, but are these better ? GO analysis\n> >do not display major differences.\n> >\n> >- would gcRMA work better than RMA ? The majority of opinions in SoCal\n> >are pro-RMA.\n> >\n> >thanks,\n> >\n> >Bogdan\n> >\n> >_______________________________________________\n> >Bioconductor mailing list\n> >Bioconductor at stat.math.ethz.ch\n> >https://stat.ethz.ch/mailman/listinfo/bioconductor\n> >Search the archives:\n> >http://news.gmane.org/gmane.science.biology.informatics.conductor\n>\n> Naomi S. Altman                                814-865-3791 (voice)\n> Associate Professor\n> Dept. of Statistics                              814-863-7114 (fax)\n> Penn State University                         814-865-1348 (Statistics)\n> University Park, PA 16802-2111\n>\n>\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Greetings Naomi,\n\nthanks for reply. To generalize my question: when dealing with 2 sets of\nsamples, let's say  X1, X2, ...., Xn  and  Y1, Y2, ..., Yn,\nI could run the normalization in 2 ways: A. only ",
       "thread_id": "thread-bbea5513d130",
       "thread_depth": 2,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071102/1134ab38/attachment.pl"
+      ]
     },
     {
       "id": "msg-d5de66b3600b",
@@ -1248,11 +1263,14 @@
       "references": [
         "<!~!UENERkVCMDkAAQACAAAAAAAAAAAAAAAAABgAAAAAAAAAA8c/LYY6/UiCNiXum1WoosKAAAAQAAAAz5mYbGUAN0KfcOft2PJ5/AEAAAAA@cam.ac.uk>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/4df77a2d/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/4df77a2d/attachment.pl",
+      "body_plain": "Hi Krys:\n\n    We have also seen a probe which has more than 3000 beads. This probe \nis not included in the bead manifest file \n(Mouse-6_v1_1_11234304_A_manifest.csv). However it might be worthwhile \nto check if this probe is one of the control probes in the file \"control \nprobe profile\" output from BeadStudio.\n\nCheers,\nWei\n\nKrys Kelly wrote:\n> Hello\n>\n> I have data from 5 Illumina mouse 6 beadarray slides.  I have read in the\n> bead level data using the beadarray package and used tapply to count the\n> number of beads per probe.\n>\n> As an example, the output below is the summary and the top 10 counts for the\n> first strip of the first array of my first slide.\n>\n>\n>   \n>> summary(beadsPerProbe1[1,])\n>>     \n>    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n>    7.00   30.00   35.00   35.71   41.00 3470.00 \n>\n>   \n>> s <- sort(beadsPerProbe1[1,], decreasing=TRUE)\n>>     \n>\n>   \n>> s[1:10]\n>>     \n>  [1] 3470   90   81   79   78   78   78   78   78   75\n>\n> Unexpectedly (to me at least), there is one ProbeID with 3470 beads.  \n>\n> There is a single ProbeID with a bead count > 3000 for each of the 60\n> strips.  The probeID is different in every case.  The data (e.g.\n> BLData39A[[1]]$G) for the ProbeIDs with these high bead counts looks like\n> sensible data.  \n>\n> Does anyone know the meaning of this ProbeID with these high counts?\n>\n> I haven't included my code and sessionInfo() because I think this is a\n> feature of the array rather than a programming error.\n>\n> Thanks for any help.\n>\n> Krys\n>\n>\n>\n> Dr Krystyna A Kelly (Krys)\n>  \n> Department of Pathology\n> University of Cambridge, Tennis Court Road, Cambridge CB2 1QP\n> Tel: 01223 333331\n>\n> and\n>\n> MRC Biostatistics Unit\n> Institute of Public Health, Robinson Way, Cambridge CB2 0SR\n> Tel: 01223 767408\n>\n> Email: kak28 at cam.ac.uk\n>\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor at stat.math.ethz.ch\n> https://stat.ethz.ch/mailman/listinfo/bioconductor\n> Search the archives: http://news.gmane.org/gmane.science.biology.informatics.conductor\n>   \n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi Krys:\n\n    We have also seen a probe which has more than 3000 beads. This probe \nis not included in the bead manifest file \n(Mouse-6_v1_1_11234304_A_manifest.csv). However it might be worthwhile \nt",
       "thread_id": "thread-ad50bf02fba5",
       "thread_depth": 1,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/4df77a2d/attachment.pl"
+      ]
     },
     {
       "id": "msg-4b2d16ce391d",
@@ -1264,11 +1282,14 @@
       "subject_clean": "[BioC] BeadArray: Associating a gene list file to probe summary data.",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/2cc5416f/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/2cc5416f/attachment.pl",
+      "body_plain": "Hi all,\n\nI am very new to microarray analysis and bead arrays so please excuse me if this is a silly question.  I am attempting to associated the gene file for Mouse Ref 6 V1.1.  I am using the following code to load the summary file but I am unable to access the ProbeID information. \n\nc.names=list(exprs = \"AVG_Signal\", NoBeads = \"Avg_NBEADS\", Detection=\"Detection\", se.exprs =\"BEAD_STDEV\" ,Narrays=\"NARRAYS\", arrayStDev = \"ARRAY_STDEV\")\nBSData = readBeadSummaryData(dataFile,skip=7, ProbeID=\"TargetID\", columns=c.names)\nlibrary(illuminaMousev1p1)\nilluminaMousev1p1()\nids = rownames(exprs(BSData))\nchr = mget(ids, illuminaMousev1p1CHR,ifnotfound = NA)\nchrloc = mget(ids, illuminaMousev1p1CHRLOC,ifnotfound = NA)\nrefseq = mget(ids, illuminaMousev1p1REFSEQ,ifnotfound = NA)\ngenename = mget(ids, illuminaMousev1p1GENENAME,ifnotfound = NA)\nanno = cbind(Ill_ID = as.character(ids), Chr = as.character(chr), Loc = as.character(chrloc), RefSeq = as.character(refseq), Name = as.character(genename))\nebFit$genes = anno\ntopTable(ebFit)\n\nR version 2.6.0 (2007-10-03) \ni386-pc-mingw32 \n\nlocale:\nLC_COLLATE=English_United States.1252;LC_CTYPE=English_United States.1252;LC_MONETARY=English_United States.1252;LC_NUMERIC=C;LC_TIME=English_United States.1252\n\nattached base packages:\n[1] tools     stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n [1] illuminaMousev1p1_1.2.0 lumi_1.4.0              mgcv_1.3-27             beadarray_1.6.0         affy_1.16.0             preprocessCore_1.0.0   \n [7] affyio_1.6.1            geneplotter_1.16.0      lattice_0.16-5          annotate_1.16.1         xtable_1.5-2            AnnotationDbi_1.0.6    \n[13] RSQLite_0.6-3           DBI_0.2-4               Biobase_1.16.1          limma_2.12.0            gplots_2.3.2            gdata_2.3.1            \n[19] gtools_2.4.0           \n\nloaded via a namespace (and not attached):\n[1] grid_2.6.0         KernSmooth_2.22-21 RColorBrewer_1.0-2\n\n\n When I use the \"ids = rownames(exprs(BSData))\" command the information I get is the row number not the ProbeID.  Am I doing something incorrectly?  Any help would be very much appreciated.\n\nThank you,\nCherie\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi all,\n\nI am very new to microarray analysis and bead arrays so please excuse me if this is a silly question.  I am attempting to associated the gene file for Mouse Ref 6 V1.1.  I am using the follow",
       "thread_id": "thread-4b2d16ce391d",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/2cc5416f/attachment.pl"
+      ]
     },
     {
       "id": "msg-e730de61c5c2",
@@ -1280,11 +1301,14 @@
       "subject_clean": "[BioC] MICROARRAY AND R COURSES at Imperial College Dec 2007",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/4888be25/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/4888be25/attachment.pl",
+      "body_plain": "MICROARRAY AND R COURSES at Imperial College London, during December 2007 \n\n1) Introduction to R\n\n17 December: 10 - 5pm\n\nCost: £190\n\n2) Statistical Microarray Analysis Using R \n\n18 & 19 December: 10 - 5pm\n\nCost: £350\n\nDiscount rate of £495.00 to take both courses\n\n**Please note that we also provide courses in Stata, Minitab, Matlab & SPSS. Please contact 0207 594 3856 or stathelp at imperial.ac.uk <mailto:stathelp at imperial.ac.uk <mailto:stathelp at imperial.ac.uk> > for further information**\n\nThe location for each course is: Imperial College London, South Kensington \n\nCampus: Room 410, Huxley Building, South Kensington Campus, London SW7 2AZ.\n\n \n\nFor further information please contact Richard Kells on 0207 594 3856 or stathelp at imperial.ac.uk.\n\nAlternatively an application form and accompanying course outline can be downloaded from our web-site: www.imperial.ac.uk/stathelp <outbind://83/www.imperial.ac.uk/stathelp>  <http://www.imperial.ac.uk/stathelp <http://www.imperial.ac.uk/stathelp> > \n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "MICROARRAY AND R COURSES at Imperial College London, during December 2007 \n\n1) Introduction to R\n\n17 December: 10 - 5pm\n\nCost: £190\n\n2) Statistical Microarray Analysis Using R \n\n18 & 19 December: 10 -",
       "thread_id": "thread-e730de61c5c2",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/4888be25/attachment.pl"
+      ]
     },
     {
       "id": "msg-ae6dda4284fb",
@@ -1328,11 +1352,14 @@
       "subject_clean": "[BioC] Question Loading Imagene Files into Limma",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/42dee80a/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/42dee80a/attachment.pl",
+      "body_plain": "I'm new at this.\n\nI used the following scripts to exclude data flagged as 1 or 2\n\n >myfun <- function(x) as.numeric ( x$Flag <= 0 )\n\nfollowed by\n\n> read.maimages(files,source=\"imagene\",wt.fun=myfun)\n\nThen I get the following error messages\n\nRead header information\nRead 243c96Cy3flagschanged.txt \nRead 243c96Cy5flagschanged.txt \nError in if (skip > 0) readLines(file, skip) : argument is of length zero\nIn addition: Warning message:\nIn readImaGeneHeader(fullname) : End of file encountered before End Header\n\nWhat do these error messages mean and how do I fix them.\n\nSally\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "I'm new at this.\n\nI used the following scripts to exclude data flagged as 1 or 2\n\n >myfun <- function(x) as.numeric ( x$Flag <= 0 )\n\nfollowed by\n\n> read.maimages(files,source=\"imagene\",wt.fun=myfun)\n\n",
       "thread_id": "thread-7b4fd75f53c5",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/42dee80a/attachment.pl"
+      ]
     },
     {
       "id": "msg-614f4ebaca63",
@@ -1344,11 +1371,14 @@
       "subject_clean": "[BioC] Question Loading Imagene Files into Limma",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/afde583e/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/afde583e/attachment.pl",
+      "body_plain": "Oops! disregard the previous message.  The read.maimages script should read\n  ----- Original Message ----- \n  From: Sally \n  To: bioconductor at stat.math.ethz.ch \n  Cc: sagoldes at shaw.ca \n  Sent: Monday, November 05, 2007 11:37 AM\n  Subject: Question Loading Imagene Files into Limma\n\n\n  I'm new at this.\n\n  I used the following scripts to exclude data flagged as 1 or 2\n\n   >myfun <- function(x) as.numeric ( x$Flag <= 0 )\n\n  followed by\n\n  > RG<-read.maimages(files,source=\"imagene\",wt.fun=myfun)\n\n  Then I get the following error messages\n\n  Read header information\n  Read 243c96Cy3flagschanged.txt \n  Read 243c96Cy5flagschanged.txt \n  Error in if (skip > 0) readLines(file, skip) : argument is of length zero\n  In addition: Warning message:\n  In readImaGeneHeader(fullname) : End of file encountered before End Header\n\n  What do these error messages mean and how do I fix them.\n\n  Sally\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Oops! disregard the previous message.  The read.maimages script should read\n  ----- Original Message ----- \n  From: Sally \n  To: bioconductor at stat.math.ethz.ch \n  Cc: sagoldes at shaw.ca \n  Sent: M",
       "thread_id": "thread-614f4ebaca63",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/afde583e/attachment.pl"
+      ]
     },
     {
       "id": "msg-54e63548272e",
@@ -1415,11 +1445,14 @@
       "subject_clean": "[BioC] tpmap2bpmap in affxparser",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/aea495f6/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/aea495f6/attachment.pl",
+      "body_plain": "Has anyone successfully used \"tpmap2bpmap\" in affxparser to create a BPMAP from a TPMAP file?\n  \n   I successfully used the affxparser package to read in my BPMAP and  to write it out as a TPMAP.  When I try to write the TPMAP out back to  a BPMAP, i get an error.  The error is very upstream in the code, as it  doesnt matter whether the files I specify in the command even exist.\n  \n  Here is my error:\n  \n  > tpmap2bpmap(tpmapname='x', bpmapname='y');\n  \n  Error in tpmap2bpmap(tpmapname = \"x\", bpmapname = \"y\") :\n  INTEGER() can only be applied to a 'integer', not a 'double'\n  \n  \n  I'm using affxparser on a Windows machine under R2.5.\n  \n  Thanks\n  \n __________________________________________________\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Has anyone successfully used \"tpmap2bpmap\" in affxparser to create a BPMAP from a TPMAP file?\n  \n   I successfully used the affxparser package to read in my BPMAP and  to write it out as a TPMAP.  Whe",
       "thread_id": "thread-1b86c62eb751",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/aea495f6/attachment.pl"
+      ]
     },
     {
       "id": "msg-f93688e41c0c",
@@ -1431,11 +1464,14 @@
       "subject_clean": "[BioC] tpmap2bpmap in affxparser",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/96f789e3/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/96f789e3/attachment.pl",
+      "body_plain": "Has anyone successfully used \"tpmap2bpmap\" in affxparser to create a BPMAP from a TPMAP file?\n  \n   I successfully used the affxparser package to read in my BPMAP and  to write it out as a TPMAP.  When I try to write the TPMAP out back to  a BPMAP, i get an error.  The error is very upstream in the code, as it  doesnt matter whether the files I specify in the command even exist.\n  \n  Here is my error:\n  \n  > tpmap2bpmap(tpmapname='x', bpmapname='y');\n  \n  Error in tpmap2bpmap(tpmapname = \"x\", bpmapname = \"y\") :\n  INTEGER() can only be applied to a 'integer', not a 'double'\n  \n  \n  I'm using affxparser on a Windows machine under R2.5.\n  \n  Thanks\n  \n __________________________________________________\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Has anyone successfully used \"tpmap2bpmap\" in affxparser to create a BPMAP from a TPMAP file?\n  \n   I successfully used the affxparser package to read in my BPMAP and  to write it out as a TPMAP.  Whe",
       "thread_id": "thread-f93688e41c0c",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/96f789e3/attachment.pl"
+      ]
     },
     {
       "id": "msg-e77283d7f973",
@@ -1447,11 +1483,14 @@
       "subject_clean": "[BioC] using GSEABase objects to perform GSEA",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/6abf3b42/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/6abf3b42/attachment.pl",
+      "body_plain": "I am looking at the GSEABase vignette on how to create GeneSets.\nI was wondering if there is an example of how to use these sets to perform the actual GSEA analysis. \nThanks in advance\n-burak\n\n\n\n__________________________________________________\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "I am looking at the GSEABase vignette on how to create GeneSets.\nI was wondering if there is an example of how to use these sets to perform the actual GSEA analysis. \nThanks in advance\n-burak\n\n\n\n_____",
       "thread_id": "thread-e77283d7f973",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071105/6abf3b42/attachment.pl"
+      ]
     },
     {
       "id": "msg-2a6bcd3a0015",
@@ -1638,11 +1677,14 @@
       "subject_clean": "[BioC] tpmap2bpmap in affxparser",
       "in_reply_to": "<466EB04F-9335-49B9-A18E-36696DDAB193@stat.berkeley.edu>",
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071106/fc95b39d/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071106/fc95b39d/attachment.pl",
+      "body_plain": "Works perfectly!  Thank you for your incredibly prompt response!!!\n  \n  Cheers,\n  Dan\n\nKasper Daniel Hansen <khansen at stat.Berkeley.EDU> wrote:  This is a bug (which I seem to recall having seen before, so I don't  \nknow why it is still there, perhaps it was in another function). I  \nhave fixed it in the devel version.\n\nIf you just want a quick fix you can call the function as\n\ntpmap2bpmap(tpmapname='x', bpmapname='y', verbose = as.integer(0))\n\nKasper\n\nOn Nov 6, 2007, at 1:59 AM, Daniel Zak wrote:\n\n> Has anyone successfully used \"tpmap2bpmap\" in affxparser to create  \n> a BPMAP from a TPMAP file?\n>\n>    I successfully used the affxparser package to read in my BPMAP  \n> and  to write it out as a TPMAP.  When I try to write the TPMAP out  \n> back to  a BPMAP, i get an error.  The error is very upstream in  \n> the code, as it  doesnt matter whether the files I specify in the  \n> command even exist.\n>\n>   Here is my error:\n>\n>> tpmap2bpmap(tpmapname='x', bpmapname='y');\n>\n>   Error in tpmap2bpmap(tpmapname = \"x\", bpmapname = \"y\") :\n>   INTEGER() can only be applied to a 'integer', not a 'double'\n>\n>\n>   I'm using affxparser on a Windows machine under R2.5.\n>\n>   Thanks\n>\n>  __________________________________________________\n>\n>\n>\n>  [[alternative HTML version deleted]]\n>\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor at stat.math.ethz.ch\n> https://stat.ethz.ch/mailman/listinfo/bioconductor\n> Search the archives: http://news.gmane.org/ \n> gmane.science.biology.informatics.conductor\n\n\n\n __________________________________________________\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Works perfectly!  Thank you for your incredibly prompt response!!!\n  \n  Cheers,\n  Dan\n\nKasper Daniel Hansen <khansen at stat.Berkeley.EDU> wrote:  This is a bug (which I seem to recall having seen bef",
       "thread_id": "thread-1b86c62eb751",
       "thread_depth": 2,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071106/fc95b39d/attachment.pl"
+      ]
     },
     {
       "id": "msg-66978f1111b0",
@@ -1743,11 +1785,14 @@
       "subject_clean": "[BioC] Limma and Imagene flags",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071106/801d8f34/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071106/801d8f34/attachment.pl",
+      "body_plain": ">From reading the Limma User's Guide it says that a flag value of 0 means that Limma considers this a \"bad spot\" and removes data flagged 0 from subsequent preprocessing.  But in Imagene a flag value of 0 means that this is a \"good spot\".  How do you get around this?  \n\n\nSally\n\t[[alternative HTML version deleted]]",
+      "body_snippet": ">From reading the Limma User's Guide it says that a flag value of 0 means that Limma considers this a \"bad spot\" and removes data flagged 0 from subsequent preprocessing.  But in Imagene a flag value ",
       "thread_id": "thread-3e67f43ebfe6",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071106/801d8f34/attachment.pl"
+      ]
     },
     {
       "id": "msg-5d80a34f3508",
@@ -2033,11 +2078,14 @@
         "<473268E3.5030007@med.umich.edu>",
         "<8C9EFE7077381AD-BA8-3993@mblk-d19.sysops.aol.com>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/7af347ee/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/7af347ee/attachment.pl",
+      "body_plain": "Dear colleagues,\n\n\nI m trying to use the AffyProbeMiner packages available from http://gauss.dbb.georgetown.edu/liblab/affyprobeminer/gene.html?that can replace the usual CDF probes and annotation files available in BioC.\n\nI m using R 2.6.0 under WinXPPro SP2.\nI have downloaded the files available on the webpage above in the R library folder. \nThese are gz.rar compressed files and are not recognized in R windows : Packages -> Install packages from local zip files. \nI have used WinRar to uncompress these files and have copy and paste the?folders (ex: hgu133ageneccds) located in the uncompressed folders (ex: hgu133ageneccds_1.1.0) in the R folder library.??\n\nThen if I type:\n?> library(hgu133ageneccds)\n\nI obtain the following error:\nError in library(hgu133ageneccds) : \n? 'hgu133ageneccdscdf' is not a valid package -- installed < 2.0.0?\nThe same is true for all of these files\n\nIs it a problem of compatibility with R (too old files ?) ? Should I use a different way to install these packages in R 2.6.0 ?\n\n\nIs there a plan to include these files and their update in BioC metadata ?\n\n\nThanks for your help\nand hoping that this request will not be out of scope from this list since it is not a bioconductor package.\n\nPhilippe Guardiola, MD\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear colleagues,\n\n\nI m trying to use the AffyProbeMiner packages available from http://gauss.dbb.georgetown.edu/liblab/affyprobeminer/gene.html?that can replace the usual CDF probes and annotation fil",
       "thread_id": "thread-93f696f11d90",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/7af347ee/attachment.pl"
+      ]
     },
     {
       "id": "msg-a3583785960d",
@@ -2098,11 +2146,14 @@
         "<8C9EFE7BE8C9965-BA8-39AB@mblk-d19.sysops.aol.com>",
         "<4732BA69.9060701@fhcrc.org>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/e22acc63/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/e22acc63/attachment.pl",
+      "body_plain": "Thanks for these information.\n\nRegarding your proposal of using the remapped probe packages that are released through the \nBioconductor project for which we do have windows packages:\n1- Are those which are named CustomCDF ? \n2- The way to use these is not clear for me (if these are the one to be used) there are multiple files for a given chip and what they represent, how they have been built, and how to use these (for instance for affy chips using gcrma) is not clearly explained (unless I have missed something somewhere..?). Could it be possible to obtain a little bit of help on this from the BioC group.... \nThanks again\nPhilippe Guardiola, MD\n\n\n-----E-mail d'origine-----\nDe : Robert Gentleman <rgentlem at fhcrc.org>\nA : phguardiol at aol.com\nCc : Bioconductor at stat.math.ethz.ch\nEnvoyé le : Je 8 Novembre 2007 8:27\nSujet : Re: [BioC] Question about a packages not yet in Bioconductor: AffyProbeMiner in R260 under windows\n\n\n\nIt looks like you are using windows and they do not provide packages for \nindows users. The reason they are not recognized by R is that they \non't work.\nYour options are to\n) install enough tools on your computer to build packages (details can \ne found on CRAN)\n) use the remapped probe packages that are released through the \nioconductor project for which we do have windows packages\nI have no idea what the intentions of AffyProbeMiner are, they have \never submitted anything, and until they do, it won't even be considered,\n  best wishes\n   Robert\n\nhguardiol at aol.com wrote:\n Dear colleagues,\n \n \n I m trying to use the AffyProbeMiner packages available from \nttp://gauss.dbb.georgetown.edu/liblab/affyprobeminer/gene.html?that can replace \nhe usual CDF probes and annotation files available in BioC.\n \n I m using R 2.6.0 under WinXPPro SP2.\n I have downloaded the files available on the webpage above in the R library \nolder. \n These are gz.rar compressed files and are not recognized in R windows : \nackages -> Install packages from local zip files. \n I have used WinRar to uncompress these files and have copy and paste \nhe?folders (ex: hgu133ageneccds) located in the uncompressed folders (ex: \ngu133ageneccds_1.1.0) in the R folder library.??\n \n Then if I type:\n ?> library(hgu133ageneccds)\n \n I obtain the following error:\n Error in library(hgu133ageneccds) : \n ? 'hgu133ageneccdscdf' is not a valid package -- installed < 2.0.0?\n The same is true for all of these files\n \n Is it a problem of compatibility with R (too old files ?) ? Should I use a \nifferent way to install these packages in R 2.6.0 ?\n \n \n Is there a plan to include these files and their update in BioC metadata ?\n \n \n Thanks for your help\n and hoping that this request will not be out of scope from this list since it \ns not a bioconductor package.\n \n Philippe Guardiola, MD\n \n \n   [[alternative HTML version deleted]]\n \n _______________________________________________\n Bioconductor mailing list\n Bioconductor at stat.math.ethz.ch\n https://stat.ethz.ch/mailman/listinfo/bioconductor\n Search the archives: http://news.gmane.org/gmane.science.biology.informatics.conductor\n\n-- \nobert Gentleman, PhD\nrogram in Computational Biology\nivision of Public Health Sciences\nred Hutchinson Cancer Research Center\n100 Fairview Ave. N, M2-B876\nO Box 19024\neattle, Washington 98109-1024\n06-667-7700\ngentlem at fhcrc.org\n_______________________________________________\nioconductor mailing list\nioconductor at stat.math.ethz.ch\nttps://stat.ethz.ch/mailman/listinfo/bioconductor\nearch the archives: http://news.gmane.org/gmane.science.biology.informatics.conductor\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Thanks for these information.\n\nRegarding your proposal of using the remapped probe packages that are released through the \nBioconductor project for which we do have windows packages:\n1- Are those whic",
       "thread_id": "thread-93f696f11d90",
       "thread_depth": 2,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/e22acc63/attachment.pl"
+      ]
     },
     {
       "id": "msg-2b9f0894a933",
@@ -2139,11 +2190,14 @@
       "subject_clean": "[BioC] optimizazion cluster in Heatmap",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/0d52e84d/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/0d52e84d/attachment.pl",
+      "body_plain": "Hello everybody, I have a problem in doing a cluster with Heatmap. Briefly, I want a cluster with fixed column order and row order depending on the dendrogram produced by the clustering method. BUT, it seems that the row sorting is not optimal, that is genes with similar expression profiles are not group tpgrther but spread. This is the code I used: > mydist <- function(x) cor.dist(x)> myhclust <- function(x) hclust(x, method='average')> heatmap(exprs(exampleSet),Colv=NA, dist=mydist, hclust=myhclust) > sessionInfo()R version 2.5.0 (2007-04-23) i386-pc-mingw32 locale:LC_COLLATE=English_United States.1252;LC_CTYPE=English_United States.1252;LC_MONETARY=English_United States.1252;LC_NUMERIC=C;LC_TIME=English_United States.1252attached base packages:[1] 'splines'   'tools'     'stats'     'graphics'  'grDevices' 'utils'    [7] 'datasets'  'methods'   'base'     other attached packages:    bioDist          GO  genefilter    survival         ALL   Rgraphviz geneplotter     '1.8.0'    '1.16.0'    '1.14.1'      '2.31'     '1.4.3'    '1.14.1'    '1.14.0'     lattice    annotate     Biobase        RBGL       graph    '0.15-4'    '1.14.1'    '1.14.0'    '1.12.0'    '1.14.2' ANY idea about what I should do to have a good row sorting? THANK you in advance Regards, Alessandro\n_________________________________________________________________\n[[replacing trailing spam]]\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello everybody, I have a problem in doing a cluster with Heatmap. Briefly, I want a cluster with fixed column order and row order depending on the dendrogram produced by the clustering method. BUT, i",
       "thread_id": "thread-6f19dba0aee5",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/0d52e84d/attachment.pl"
+      ]
     },
     {
       "id": "msg-5ba79c869364",
@@ -2173,11 +2227,14 @@
       "subject_clean": "[BioC] Using beadarray for bead level data, what is the ProbeID with 1000's of beads?",
       "in_reply_to": "<472E5477.9080600@wehi.edu.au>",
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/5e8d48b7/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/5e8d48b7/attachment.pl",
+      "body_plain": "Hi Wei and Others\n\nEach Illumina slide has 6 arrays each with 2 \"strips\".  Each first strip has\nover 3000 beads with a ProbeID of 60112 and each second strip has over 3000\nbeads with a ProbeID of 100110288.  These two ProbeIDs are not in the bead\nmanifest file or control probe file. Our microarray service who run the\narrays for us do not know what these probes are.  \n\nI also noticed that I have 48,358 ProbeIDs (25491+22867), whereas the\nproduct literature says there are 48,318 probes.\n\nI have emailed our contact at Illumina asking for more information about\nthese findings.  I will let you know when I learn something.\n\nCheers\n\nKrys\n\n  _____  \n\nFrom: Wei Shi [mailto:shi at wehi.EDU.AU] \nSent: 04 November 2007 23:24\nTo: Krys Kelly\nCc: bioconductor at stat.math.ethz.ch\nSubject: Re: [BioC] Using beadarray for bead level data, what is the ProbeID\nwith 1000's of beads?\n\n \n\nHi Krys:\n\n    We have also seen a probe which has more than 3000 beads. This probe is\nnot included in the bead manifest file\n(Mouse-6_v1_1_11234304_A_manifest.csv). However it might be worthwhile to\ncheck if this probe is one of the control probes in the file \"control probe\nprofile\" output from BeadStudio.\n\nCheers,\nWei\n\nKrys Kelly wrote: \n\nHello\n \nI have data from 5 Illumina mouse 6 beadarray slides.  I have read in the\nbead level data using the beadarray package and used tapply to count the\nnumber of beads per probe.\n \nAs an example, the output below is the summary and the top 10 counts for the\nfirst strip of the first array of my first slide.\n \n \n  \n\nsummary(beadsPerProbe1[1,])\n    \n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   7.00   30.00   35.00   35.71   41.00 3470.00 \n \n  \n\ns <- sort(beadsPerProbe1[1,], decreasing=TRUE)\n    \n\n \n  \n\ns[1:10]\n    \n\n [1] 3470   90   81   79   78   78   78   78   78   75\n \nUnexpectedly (to me at least), there is one ProbeID with 3470 beads.  \n \nThere is a single ProbeID with a bead count > 3000 for each of the 60\nstrips.  The probeID is different in every case.  The data (e.g.\nBLData39A[[1]]$G) for the ProbeIDs with these high bead counts looks like\nsensible data.  \n \nDoes anyone know the meaning of this ProbeID with these high counts?\n \nI haven't included my code and sessionInfo() because I think this is a\nfeature of the array rather than a programming error.\n \nThanks for any help.\n \nKrys\n \n \n \nDr Krystyna A Kelly (Krys)\n \nDepartment of Pathology\nUniversity of Cambridge, Tennis Court Road, Cambridge CB2 1QP\nTel: 01223 333331\n \nand\n \nMRC Biostatistics Unit\nInstitute of Public Health, Robinson Way, Cambridge CB2 0SR\nTel: 01223 767408\n \nEmail: kak28 at cam.ac.uk\n \n_______________________________________________\nBioconductor mailing list\nBioconductor at stat.math.ethz.ch\nhttps://stat.ethz.ch/mailman/listinfo/bioconductor\nSearch the archives:\nhttp://news.gmane.org/gmane.science.biology.informatics.conductor\n  \n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi Wei and Others\n\nEach Illumina slide has 6 arrays each with 2 \"strips\".  Each first strip has\nover 3000 beads with a ProbeID of 60112 and each second strip has over 3000\nbeads with a ProbeID of 1001",
       "thread_id": "thread-ad50bf02fba5",
       "thread_depth": 2,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/5e8d48b7/attachment.pl"
+      ]
     },
     {
       "id": "msg-8dfe877a7017",
@@ -2247,11 +2304,14 @@
       "subject_clean": "[BioC] Limma: factorial design and batch effect",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/43006982/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/43006982/attachment.pl",
+      "body_plain": "Hi Dear BioC,\n \nI have question about design matrix considering the batch effect using limma.  The experiment design is factorial design.\n \nExperiment (Affy chip)\n        Array     Strain  Treatment  Replicate  Batch        1        A        No         1          1        2        A        No         2          1        3        A        No         3          1        4        A        Yes        1          1        5        A        Yes        2          1        6        A        Yes        3          1        7        B        No         1          2        8        B        No         2          2        9        B        No         3          2        10       B        Yes        1          2        11       B        Yes        2          2        12       B        Yes        3          2\n \nHere we want to konw which genes respond differently in treated vs. untreated, and we also want to find out the interaction.  However, the cluster analysis showed that there is a clear batch effect.  So I designed the following design matrix to remove the batch effect:\ndesign\n             A_unTrt  A_Trt    B_unTrt  B_Trt    Batch        1    1        0        0        0        0        2    1        0        0        0        0        3    1        0        0        0        0        4    0        1        0        0        0        5    0        1        0        0        0        6    0        1        0        0        0        7    0        0        1        0        1        8    0        0        1        0        1        9    0        0        1        0        1        10   0        0        0        1        1        11   0        0        0        1        1        12   0        0        0        1        1\n \nHowever, when I tried to fit the data and the following happes\n \nfit <- lmFit(myData, design)Coefficients not estimable: Batch \nI feel that the design matrix was not right for the experimental design, but as a new in both microarry and limmam, I do not how to set up the correct design and contrast matrices for this kind of study.  Any suggestions?\n \nBTW:  Limma (version: 2.10.5) and R (version: 2.5.1)\n \nMany thanks,\n \nJason\n_________________________________________________________________\n[[replacing trailing spam]]\n\nilnews\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi Dear BioC,\n \nI have question about design matrix considering the batch effect using limma.  The experiment design is factorial design.\n \nExperiment (Affy chip)\n        Array     Strain  Treatment  ",
       "thread_id": "thread-2727a6ab5ec9",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/43006982/attachment.pl"
+      ]
     },
     {
       "id": "msg-88621ded23d0",
@@ -2350,11 +2410,14 @@
       "subject_clean": "[BioC] how to estimate dye effect based on a very specific experiment design",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/339d46c8/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/339d46c8/attachment.pl",
+      "body_plain": "Hi, All,\n\nI have a very specific experiment design trying to compare two  \nsamples as follows:\n\n\n\ncy3\tcy5\n1\t\tReference\t\tA\n2\t\tReference\t\tA\n3\t\tReference\t\tA\n4\t\tB\t\tReference\n5\t\tB\t\tReference\n6\t\tB\t\tReference\nThere're a total of 6 arrays, and they all used the same common  \nreference; but unfortunately the 2 experimental samples are labeled  \nwith different dye. I'm using limma trying to get differentially  \nexpressed genes between A and B. There're clearly a dye effect here.  \nSince there's no dye swamp within each sample, it make it hard to  \nestimate the dye effect using limma. But they share a common  \nreference labeled with 2 different dye. I 'm wondering if there's any  \nway to use this information to estimate dye effect.\n\nAny help would be greatly appreciated!\n\nyan\n\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi, All,\n\nI have a very specific experiment design trying to compare two  \nsamples as follows:\n\n\n\ncy3\tcy5\n1\t\tReference\t\tA\n2\t\tReference\t\tA\n3\t\tReference\t\tA\n4\t\tB\t\tReference\n5\t\tB\t\tReference\n6\t\tB\t\tReferenc",
       "thread_id": "thread-fbc0cf6474a2",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/339d46c8/attachment.pl"
+      ]
     },
     {
       "id": "msg-0dafdf910634",
@@ -2475,11 +2538,14 @@
         "<5032046e0711081834w3f7c75c1u4880e65c7c1d1a93@mail.gmail.com>",
         "<7471614D-7BE4-46EE-8414-D5723E34F258@jhsph.edu>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/1d77551e/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/1d77551e/attachment.pl",
+      "body_plain": "Hi Ben,\n\nI checked it out and found oligo would produce data for two strands, sense\nand anti-sense.\nIs there a way to somehow combine the two type of data which will make\nsense?\n\nThank-you!\n\nAllen\n\n\nOn 11/8/07, Benilton Carvalho <bcarvalh at jhsph.edu> wrote:\n>\n> check the oligo package, but you also need to download the data\n> packages for the arrays you're using:\n>\n> pd.mapping250k.sty\n> pd.mapping250k.nsp\n>\n> b\n>\n> On Nov 8, 2007, at 9:34 PM, affy snp wrote:\n>\n> > Dear list,\n> >\n> > I am analyzing a bag of Affy SNP 500K arrays and would like to\n> > know which package can be used to read in the raw .CEL files\n> > and get the intensity values. In other words, I am looking for\n> > the function like:\n> >\n> > library(affy)\n> > mydata <- ReadAffy()\n> > eset_rma <- rma(mydata)\n> >\n> > provided by affy package to analyze affy gene expression data.\n> >\n> > Thank you very much!\n> >\n> > Sincerely,\n> >       Allen\n> >\n> > _______________________________________________\n> > Bioconductor mailing list\n> > Bioconductor at stat.math.ethz.ch\n> > https://stat.ethz.ch/mailman/listinfo/bioconductor\n> > Search the archives:\n> http://news.gmane.org/gmane.science.biology.informatics.conductor\n>\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi Ben,\n\nI checked it out and found oligo would produce data for two strands, sense\nand anti-sense.\nIs there a way to somehow combine the two type of data which will make\nsense?\n\nThank-you!\n\nAllen\n\n\nO",
       "thread_id": "thread-0b7cf3aee543",
       "thread_depth": 2,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/1d77551e/attachment.pl"
+      ]
     },
     {
       "id": "msg-5b103a5b4cd7",
@@ -2491,11 +2557,14 @@
       "subject_clean": "[BioC] Limma batch effect",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/36d47ac0/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/36d47ac0/attachment.pl",
+      "body_plain": "Hi Dear BioC\nI have question about design matrix considering the batch effect using limma.  The experiment design is a factorial design.\n Experiment (Affy chip)\n        Array     Strain  Treatment  Replicate  Batch\n        1        A        No         1          1\n        2        A        No         2          1\n        3        A        No         3          1\n        4        A        Yes        1          1\n        5        A        Yes        2          1\n        6        A        Yes        3          1\n        7        B        No         1          2\n        8        B        No         2          2\n        9        B        No         3          2\n        10       B        Yes        1          2\n        11       B        Yes        2          2\n        12       B        Yes        3          2\n Here we want to konw which genes respond differently in treated vs. untreated, and we also want to find out the interaction.   However, the cluster analysis showed that there is a clear batch effect.  So I designed the following design matrix to remove the\nbatch effect:\ndesign\n             A_unTrt  A_Trt    B_unTrt  B_Trt    Batch\n        1    1        0        0        0        0\n        2    1        0        0        0        0\n        3    1        0        0        0        0\n        4    0        1        0        0        0\n        5    0        1        0        0        0\n        6    0        1        0        0        0\n        7    0        0        1        0        1\n        8    0        0        1        0        1\n        9    0        0        1        0        1\n        10   0        0        0        1        1\n        11   0        0        0        1        1\n        12   0        0        0        1        1\n \ncontrast <- makeContrasts(\n       TrtvsUntrt=(A_Trt+B_trt)-(A_unTrt+B_unTrt),\n       interaction=(A_Trt-A_unTrt)-(B_Trt-B_unTrt),\n       levels=design)\nHowever, when I tried to fit the data and the following happes\n fit <- lmFit(myData, design)\nCoefficients not estimable: Batch \nI am using limma version 2.10.5 and R version 2.5.1\n \nAny suggestions?\n \nMany thanks,\n \nJason\n_________________________________________________________________\n[[replacing trailing spam]]\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi Dear BioC\nI have question about design matrix considering the batch effect using limma.  The experiment design is a factorial design.\n Experiment (Affy chip)\n        Array     Strain  Treatment  Re",
       "thread_id": "thread-5b103a5b4cd7",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071108/36d47ac0/attachment.pl"
+      ]
     },
     {
       "id": "msg-13cb0b60c0ec",
@@ -2684,11 +2753,14 @@
         "<7471614D-7BE4-46EE-8414-D5723E34F258@jhsph.edu>",
         "<5032046e0711081851s529cd4b0pac0cd963e1d760eb@mail.gmail.com>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071109/adecb6a1/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071109/adecb6a1/attachment.pl",
+      "body_plain": "oligo doesn't \"produce\" data on both strands, per se. :-)\n\nThe data are given on both strands, for some SNPs on the 500K array \nset. If one uses snprma(), oligo *summarizes* these data to the \nSNP-allele-strand level.\n\nIt's a little bit hard to say what to do, when we don't know what it's \ngoing to be used for...\n\nAn ad-hoc method for summarization to the SNP-Allele level can be \nachieved by taking the average log-intensities across strands; or one \ncan choose to manually run a summarization algorithm (say \nmedian-polish) on the SNP-allele sets (a la RLMM).\n\nCheers,\n\nb\n\nOn Nov 8, 2007, at 9:51 PM, affy snp wrote:\n\n> Hi Ben,\n>  \n> I checked it out and found oligo would produce data for two strands, \n> sense and anti-sense.\n> Is there a way to somehow combine the two type of data which will make \n> sense?\n>  \n> Thank-you!\n>  \n> Allen\n>\n>  \n> On 11/8/07, Benilton Carvalho <bcarvalh at jhsph.edu> wrote: check the \n> oligo package, but you also need to download the data\n>> packages for the arrays you're using:\n>>\n>> pd.mapping250k.sty\n>> pd.mapping250k.nsp\n>>\n>> b\n>>\n>> On Nov 8, 2007, at 9:34 PM, affy snp wrote:\n>>\n>> > Dear list,\n>> >\n>> > I am analyzing a bag of Affy SNP 500K arrays and would like to\n>> > know which package can be used to read in the raw .CEL files\n>> > and get the intensity values. In other words, I am looking for\n>> > the function like:\n>> >\n>> > library(affy)\n>> > mydata <- ReadAffy()\n>> > eset_rma <- rma(mydata)\n>> >\n>> > provided by affy package to analyze affy gene expression data.\n>> >\n>> > Thank you very much!\n>> >\n>> > Sincerely,\n>> >       Allen\n\n\t[[alternative text/enriched version deleted]]",
+      "body_snippet": "oligo doesn't \"produce\" data on both strands, per se. :-)\n\nThe data are given on both strands, for some SNPs on the 500K array \nset. If one uses snprma(), oligo *summarizes* these data to the \nSNP-all",
       "thread_id": "thread-0b7cf3aee543",
       "thread_depth": 3,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071109/adecb6a1/attachment.pl"
+      ]
     },
     {
       "id": "msg-ccf03a21a927",
@@ -2721,11 +2793,14 @@
       "subject_clean": "[BioC] Problem of using MultiClass SAM (siggenes package)",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071110/209f0b4a/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071110/209f0b4a/attachment.pl",
+      "body_plain": "Hello,\nI am using the package siggenes for multiclass problem.\n (R 2.6.0 ;BioConductor 2.1;siggenes 1.2.11)\nMy dataset is 9 samples in 3 classes, each class contains 3 samples.\nThere are totally 13915 genes.\nWhen I using siggenes to do Multiclass SAM,\n(code:   samResults<-sam(dd,cl, B=500, rand=123) )\nthe results are as follow:\n\nSAM Analysis for the Multi-Class Case with 3 Classes\n\n    Delta    p0     False     Called      FDR\n1     0.1 0.061     11893.018 13745       0.052440\n2   913.6 0.061     0.538     59          0.000553\n3  1827.2 0.061     0.084     12          0.000424\n\nAlso,I know I can use SAM for EXCEL to do this.\nHowever, the results are quite different:\n\ndelta\t# med false pos\t90th perc false pos # called\tmedian FDR\t90th perc FDR\t\n\n0.099   2119.652318\t2173.516349\t      13863\t0.152899972\t0.156785425\t\n1.046\t110.2554078\t341.349479            10251\t0.010755576\t0.033299139\t\n7.156\t0\t        3.475098814\t      1166\t0\t        0.002980359\t\n14.86\t0               0.473877111\t      166\t0\t        0.002854681\t\n61.90\t0\t        0\t              1\t        0\t        0\t\n\nBoth of them are computed with 500 permutation, and rand seed 123.\nWhat's going wrong with my work?\n\nI have read manual for several times(siggenes.pdf),\nbut the only information about multiclass is how to assign grouping.\nShould I assign more parameters when using SAM? How?\n\nThank you very much for answering.\n\n\nSincerely,\nRuo Yang, Lu\n\n\n===== ===== ===== ===== =====\nNTU Research Center For Medical Excellence\nBioinformatics and Biostatistics Core\nTEL:(02)2312-3456#8685\nFAX:(02)3322-4179\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello,\nI am using the package siggenes for multiclass problem.\n (R 2.6.0 ;BioConductor 2.1;siggenes 1.2.11)\nMy dataset is 9 samples in 3 classes, each class contains 3 samples.\nThere are totally 13915",
       "thread_id": "thread-41e5e59abbd4",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071110/209f0b4a/attachment.pl"
+      ]
     },
     {
       "id": "msg-cc6cd0eb4c16",
@@ -3804,11 +3879,14 @@
       "subject_clean": "[BioC] Reading 80 CEL files.",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071114/9a3b902a/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071114/9a3b902a/attachment.pl",
+      "body_plain": "Hello~~~\n\n \n\nI am trying to read 80 HG-U133A arrays so I did as follows:\n\n \n\n> memory.limit(size=4095)\n\n> options(object.size=10000000000, digits=8, scipen=100, memory=3200483647, contrasts=c(\"contr.treatment\", \"contr.poly\"))\n\n> library(affy)\n\n> cel.file <- ReadAffy(celfile.path = ¡¨D://CEL)  \n\n \n\nHowever, it showed\n\n \n\nError: cannot allocate vector of size 309.4 Mb\n\n \n\nI have tried adding the --max-mem-size=2Gb tag onto my shortcut. \n\nThe machine has 2G RAM and a 3.30GHz processor. \n\nIs there any idea to let R use more memory anywhere?\n\nThank you~\n\n \n\nBest Regards,\n\nPure\n\n\n       ___________________________________________________________________\nÅéÅç¥þ·sYahoo!©_¼¯¹q¤l«H½c2.0 - °¨¤WÅéÅç¡I\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello~~~\n\n \n\nI am trying to read 80 HG-U133A arrays so I did as follows:\n\n \n\n> memory.limit(size=4095)\n\n> options(object.size=10000000000, digits=8, scipen=100, memory=3200483647, contrasts=c(\"contr.t",
       "thread_id": "thread-acfb1e11043b",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071114/9a3b902a/attachment.pl"
+      ]
     },
     {
       "id": "msg-ec37faadf4c5",
@@ -3888,11 +3966,14 @@
       "subject_clean": "[BioC] plier package",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071114/4babad85/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071114/4babad85/attachment.pl",
+      "body_plain": "Hi\n\nDoes it exist any documentation on how to use the plier package? \n\nRegards,\nIngrid\n\n\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi\n\nDoes it exist any documentation on how to use the plier package? \n\nRegards,\nIngrid\n\n\n\n\n\n\t[[alternative HTML version deleted]]",
       "thread_id": "thread-6cfb7f04253e",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071114/4babad85/attachment.pl"
+      ]
     },
     {
       "id": "msg-d1bd694878cb",
@@ -3936,11 +4017,14 @@
       "subject_clean": "[BioC] Memory issues and QC'ing large datasets in simpleaffy",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071114/42e22438/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071114/42e22438/attachment.pl",
+      "body_plain": "Hi all,\n\nApologies if this has been asekd before, I have searched the archives and\nnot found an answer.\nI am running R2.6.0 on Windows XP\nI wish to read in ~150 cel files and then extract QC information using\nsimpleaffy and the qc function using the following loop.\nIs there a way to clean up memory within a program. I thought I would\nachieve this by using the loop to overwrite the variables each time. Failing\nthat is there a different way or a work around allowing me to obtain the\ninformation within one session without having to close and start again from\nwhere it failed.\n\nMany thanks in advance\n\nclaire\n\n> memory.limit(size = 3072)\n> fn <- list.celfiles()\n> output <- matrix(nrow=length(fn),ncol=9)\n> for (i in 37:length(fn)) {\n+    cat(\"Reading file: \",paste(fn[i],i,\"of\",length(fn),collapse=\"\\n\"),\"\\n\")\n+    eset <- ReadAffy(filenames=fn[i]);\n+    qc.eset = qc(eset)\n+    output[i,1] <- qc.eset at average.background\n+    output[i,2] <- qc.eset at percent.present\n+    output[i,3] <- qc.eset at scale.factors\n+    output[i,4:9] <- qc.eset at qc.probes\n+ }\n\n\nHowever after 36 iterations I get the following error message\n> Error in read.affybatch(filenames = l$filenames, phenoData = l$phenoData,\n:\n  Calloc could not allocate (1699741697 of 1) memory\n> traceback()\n3: .Call(\"ReadHeader\", as.character(filenames[[1]]), PACKAGE = \"affyio\")\n2: read.affybatch(filenames = l$filenames, phenoData = l$phenoData,\n       description = l$description, notes = notes, compress = compress,\n       rm.mask = rm.mask, rm.outliers = rm.outliers, rm.extra = rm.extra,\n       verbose = verbose, sd = sd, cdfname = cdfname)\n1: ReadAffy(filenames = fn[i])\n\n> memory.size()\n[1] 238.3641\n> sessionInfo()\nR version 2.6.0 (2007-10-03)\ni386-pc-mingw32\n\nlocale:\nLC_COLLATE=English_United Kingdom.1252;LC_CTYPE=English_United\nKingdom.1252;LC_MONETARY=English_United\nKingdom.1252;LC_NUMERIC=C;LC_TIME=English_United Kingdom.1252\n\nattached base packages:\n[1] splines   tools     stats     graphics  grDevices utils     datasets\n[8] methods   base\n\nother attached packages:\n [1] hgu133plus2cdf_1.16.0 simpleaffy_2.14.05    gcrma_2.10.0\n [4] matchprobes_1.10.0    genefilter_1.16.0     survival_2.32\n [7] affy_1.16.0           preprocessCore_1.0.0  affyio_1.6.1\n[10] Biobase_1.16.0\n\nloaded via a namespace (and not attached):\n[1] annotate_1.16.0     AnnotationDbi_1.0.5 DBI_0.2-3\n[4] rcompgen_0.1-15     RSQLite_0.6-3\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi all,\n\nApologies if this has been asekd before, I have searched the archives and\nnot found an answer.\nI am running R2.6.0 on Windows XP\nI wish to read in ~150 cel files and then extract QC informati",
       "thread_id": "thread-740f3039566c",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071114/42e22438/attachment.pl"
+      ]
     },
     {
       "id": "msg-1e66f6a838b1",
@@ -4022,11 +4106,14 @@
       "subject_clean": "[BioC] Scaling affy CEL files",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071114/ae06303c/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071114/ae06303c/attachment.pl",
+      "body_plain": "Dear Bioconductor users,\n \nI am trying to analyse expression experiment carried in two different Affymetrix facilities. The arrays from the two facilities show a significant difference in expression medians, and this difference persists when I use normalization such as RMA (with all the arrays togather). I would like to scale the CEL files and save the scaled data in the same format so I can use the new objects with the probe-level normalization methods offered by bioconductor, normalizing all the arrays together (i.e not just simple data frame of the expression values, but an object accepted by exspresso() or other functions). \n \n \nAny help will be greatly appreciated,\n \nThanks, Garry\n\n\n      ___________________________________________________________ \nWant ideas for reducing your carbon footprint? Visit Yahoo! For Good  http://uk.promotions.yahoo.com/forgood/environment.html\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear Bioconductor users,\n \nI am trying to analyse expression experiment carried in two different Affymetrix facilities. The arrays from the two facilities show a significant difference in expression m",
       "thread_id": "thread-2b8775495152",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071114/ae06303c/attachment.pl"
+      ]
     },
     {
       "id": "msg-74216ffcd8b2",
@@ -4204,11 +4291,14 @@
       "subject_clean": "[BioC] Question on SAM output",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071115/98c26b4b/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071115/98c26b4b/attachment.pl",
+      "body_plain": "Dear all,\n\nI used the sam analysis from the siggenes package to analyze differentially\nexpressed genes, and here is the output:\n\n  Delta    p0   False Called     FDR\n1    0.1 0.235 3033.95   8740 0.08144\n2    0.2 0.235 2539.17   8596 0.06930\n3    0.3 0.235 2108.23   8452 0.05852\n4    0.4 0.235 1788.62   8342 0.05030\n5    0.5 0.235 1508.60   8226 0.04303\n6    0.6 0.235 1261.23   8097 0.03655\n7    0.7 0.235 1048.82   7964 0.03090\n8    0.8 0.235  879.58   7828 0.02636\n9    0.9 0.235  761.43   7719 0.02314\n10   1.0 0.235  661.70   7580 0.02048\n11   1.1 0.235  590.24   7476 0.01852\n12   1.2 0.235  535.54   7407 0.01696\n\n\nI think I understand the mathematics and computation in SAM, but I am not\nquite sure how could I comprehend the results:\nThe \"False\" column is supposed to be the false positive identified, and the\n\"Called\" column is the number of genes called to be significantly\ndifferentially expressed, so the FDR is calculated by using False to divid\nCalled.\n\nI understand the False is probably just from the average of the null\ndistribution, but it still doesn't make sense:\neg. if we look at the data when Delta is equal 0.2, there are arond\n2539.17genes that are false positive, while the number of genes Called\nto be\nsignificant is 8596, then how could the FDR rate equals to 0.06930 ?\n\nAm I understand this in a wrong way, could anyone please show me or direct\nme to the right direction ?\n\nI greatly appreciate for any help or comment.\n\nThanks,\nAlex-\n\n-- \nLam C. Tsoi (Alex)\nMedical University of South Carolina\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear all,\n\nI used the sam analysis from the siggenes package to analyze differentially\nexpressed genes, and here is the output:\n\n  Delta    p0   False Called     FDR\n1    0.1 0.235 3033.95   8740 0.08",
       "thread_id": "thread-0c9af7344abc",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071115/98c26b4b/attachment.pl"
+      ]
     },
     {
       "id": "msg-469fd8bf7ce8",
@@ -4227,11 +4317,14 @@
         "<00e601c81b6b$b6eac930$2f01a8c0@olbricht>",
         "<D08F540A-8241-4E6D-A398-8C901516823D@jhsph.edu>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071115/a49a6390/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071115/a49a6390/attachment.pl",
+      "body_plain": "Hello,\n\nI am using the oligo package to work with tiling arrays.\n\nI was wondering if there is a way to either:\n\n1.  See how the pmindex function in oligo is calculating the indices?\nor\n2.  Obtain the actual x,y coordinates for each probe?\n\nI found the functions indices2xy and xy2indices in the affy package, but can't seem to find an equivalent function in oligo.\n\nAny advise would be greatly appreciated.  My session info is below, in case it is helpful.\n\nThanks!\n-Gayla Olbricht\n\n_______________________\n> sessionInfo()\nR version 2.6.0 (2007-10-03) \nx86_64-redhat-linux-gnu \n\nlocale:\nLC_CTYPE=en_US.UTF-8;LC_NUMERIC=C;LC_TIME=en_US.UTF-8;LC_COLLATE=en_US.UTF-8;LC_MONETARY=en_US.UTF-8;LC_MESSAGES=en_US.UTF-8;LC_PAPER=en_US.UTF-8;LC_NAME=C;LC_ADDRESS=C;LC_TELEPHONE=C;LC_MEASUREMENT=en_US.UTF-8;LC_IDENTIFICATION=C\n\nattached base packages:\n[1] splines   tools     stats     graphics  grDevices utils     datasets \n[8] methods   base     \n\nother attached packages:\n[1] pd.at35b.mr.v04_1.0.0 oligo_1.2.1           oligoClasses_1.0.3   \n[4] affxparser_1.10.1     AnnotationDbi_1.0.6   preprocessCore_1.0.0 \n[7] RSQLite_0.6-3         DBI_0.2-4             Biobase_1.16.1       \n\nloaded via a namespace (and not attached):\n[1] rcompgen_0.1-15\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello,\n\nI am using the oligo package to work with tiling arrays.\n\nI was wondering if there is a way to either:\n\n1.  See how the pmindex function in oligo is calculating the indices?\nor\n2.  Obtain the ",
       "thread_id": "thread-469fd8bf7ce8",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071115/a49a6390/attachment.pl"
+      ]
     },
     {
       "id": "msg-2bceeed5dd5c",
@@ -4306,11 +4399,14 @@
         "<C361D628.1BF3%Matt.Ritchie@cancer.org.uk>",
         "<473C6176.80603@vt.edu>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071116/a407338b/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071116/a407338b/attachment.pl",
+      "body_plain": "Hi Ina:\n\n    It surprised me that you only got around 320,000 beads. You should \nsee at least 700,000 beads for each strip since there are about 24,000 \nbead types in each strip and each bead type have 30 or more beads. And \nwe actually saw about 1 million beads for each strip for our data. I \nsuspect you did not retrieve bead level data correctly.\n\nCheers,\nWei\n\nIna Hoeschele wrote:\n> I have a total of 319952 beads. So I printed the information for the \n> first 10 and for 10 others towards the end. Even for the first 10 beads \n> the GrnX and GrnY are not negative. Here it is.\n>   \n>>  BLData[[1]][1:10,]\n>>     \n>    ProbeID          G Gb      GrnX      GrnY\n> 1    10008  0.0000000  0 1556.7592 13526.200\n> 2    10008  2.5249867  0 1713.2862 17711.700\n> 3    10008 -0.0359710  0   45.9317  6676.658\n> 4    10008  0.0000000  0 1401.8142  2153.181\n> 5    10008  0.0000000  0 2078.2252 15974.100\n> 6    10008 -6.8111267  0 1193.8842  8654.250\n> 7    10008  0.0000000  0   45.0026 13990.970\n> 8    10008 77.2345222  0  542.1487 14834.780\n> 9    10008 -0.8237067  0 1341.1462 13791.170\n> 10   10008 -0.2324444  0 1312.7072  7549.003\n>   \n>>  BLData[[1]][300000:300010,]\n>>     \n>        ProbeID           G Gb      GrnX      GrnY\n> 300000 2140131  0.00000000  0 1258.9752 17301.580\n> 300001 2140131 -0.24859133  0  398.1137  6108.199\n> 300002 2140131 -0.07388444  0 2094.6222 16298.300\n> 300003 2140131  0.00000000  0  642.9227  2094.740\n> 300004 2140131 11.67171933  0 1352.2322  6294.191\n> 300005 2140131  0.00000000  0 1104.5312 14069.740\n> 300006 2140131 -0.15372500  0  963.8952  9653.909\n> 300007 2140131  0.00000000  0  161.5619 14317.910\n> 300008 2140131 -0.08331556  0 1515.5492 13932.460\n> 300009 2140131  0.61296444  0 1934.0542 15118.710\n> 300010 2140131  0.00000000  0  177.0217 16717.080\n>\n>\n>   \n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi Ina:\n\n    It surprised me that you only got around 320,000 beads. You should \nsee at least 700,000 beads for each strip since there are about 24,000 \nbead types in each strip and each bead type hav",
       "thread_id": "thread-390d8541dce4",
       "thread_depth": 3,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071116/a407338b/attachment.pl"
+      ]
     },
     {
       "id": "msg-93f2ee1fab7b",
@@ -4381,11 +4477,14 @@
         "<4733D5AE.5010405@gerega.net>",
         "<loom.20071115T235926-721@post.gmane.org>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071116/ea59a611/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071116/ea59a611/attachment.pl",
+      "body_plain": "Hi Sebastien:\n\n    I suggest you can blat the sequences of probes with no corresponding \ngene symbols to the genome to see if they are sequenced matched to any \nof the genes. That might give you a clue of which genes these probes are \ninterrogating.\n\n    Hope this helps.\n\nCheers,\nWei\n\nSebastien Gerega wrote:\n> Sebastien Gerega <seb at ...> writes:\n>\n>   \n>> Hi,\n>> I am using the lumi package to analyse illumina microarray data.\n>> When it finally comes to getting the top 10 DE genes with topTable I get \n>> many hits with\n>> the geneSymbol <NA>. However, if I look up the ProbeID corresponding to \n>> the nuID\n>> that provide <NA>, I find that they do correspond to genes. Why aren't \n>> they being\n>> displayed in the topTable?\n>> thanks,\n>> Sebastien\n>>\n>>                       ID geneSymbol     logFC         t      P.Value    \n>> adj.P.Val        B\n>> 1917  fwfUovXT3rjAjqbpJU     S100A8 -5.307223 -50.43759 9.854174e-09 \n>> 0.0001383625 8.724832\n>> 12632 Qd_S7V4OkLjsX3jkt4      KRT6B -5.281406 -39.54237 3.896317e-08 \n>> 0.0002735409 8.229157\n>> 12149 BjSTT6BOqGLhpKKFGI       <NA> -3.118669 -30.01505 1.844180e-07 \n>> 0.0008631377 7.451766\n>> 7474  6ipCUUDxcp4ryIj6Uk       <NA> -3.155916 -24.45685 5.835502e-07 \n>> 0.0013366890 6.716048\n>> 3831  3nivfFfvk55Rd18lLk       <NA> -2.690362 -24.10891 6.324511e-07 \n>> 0.0013366890 6.659617\n>>\n>> _______________________________________________\n>> Bioconductor mailing list\n>> Bioconductor at ...\n>> https://stat.ethz.ch/mailman/listinfo/bioconductor\n>> Search the archives:\n>>     \n> http://news.gmane.org/gmane.science.biology.informatics.conductor\n>   \n>>     \n>\n>\n> I have looked into this problem a little more...\n>\n> I downloaded the Human6_v2_sequence spreadsheet from the Illumina\n> website and found that many of the targets that provide NA as\n> gene symbol have no symbol in the Illumina database either.\n>\n> For example:\n>\n> \tID\tgeneSymbol\n> 5903\tILMN_21212\tFAM43A\n> 3103\tILMN_1425\tFOXO4\n> 11993\tILMN_6504\tPPL\n> 5153\tILMN_19390\tST3GAL4\n> 1723\tILMN_12716\tCREB3L2\n> 4484\tILMN_17676\tTNS3\n> 2700\tILMN_138461\t<NA>\n> 1358\tILMN_12133\tFSCN1\n> 3507\tILMN_15271\tCITED4\n> 12401\tILMN_73087\t<NA>\n>\n> ILMN_73087 provides NA as gene symbol and does not have a gene\n> symbol in the Illumina DB either.\n>\n> However, ILMN_138461 provides NA as gene symbol but does have a\n> gene symbol in the Illumina DB. It is APM-1.\n>\n> In addition ILMN_73087 has no entries in either the\n> Illumina or BioC DB but when I do a search for ILMN_73087 in\n> Ensembl I a hit that has multiple EntrezGene listings.\n>\n> Is there any fix for the NA entries? Is this problem being addressed?\n> thanks,\n> Sebastien\n>\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor at stat.math.ethz.ch\n> https://stat.ethz.ch/mailman/listinfo/bioconductor\n> Search the archives: http://news.gmane.org/gmane.science.biology.informatics.conductor\n>   \n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi Sebastien:\n\n    I suggest you can blat the sequences of probes with no corresponding \ngene symbols to the genome to see if they are sequenced matched to any \nof the genes. That might give you a clu",
       "thread_id": "thread-4f1e1e88e242",
       "thread_depth": 2,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071116/ea59a611/attachment.pl"
+      ]
     },
     {
       "id": "msg-8d76b05d606a",
@@ -4708,11 +4807,14 @@
       "subject_clean": "[BioC] He fish",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071118/d059592b/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071118/d059592b/attachment.pl",
+      "body_plain": "elementary schools.  By this integration of digital technology\nof writing, I am eager to tap the dynamics of the realm of\nlive theater. In presenting to the masses through an electronic\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "elementary schools.  By this integration of digital technology\nof writing, I am eager to tap the dynamics of the realm of\nlive theater. In presenting to the masses through an electronic\n\n\t[[alternativ",
       "thread_id": "thread-a04eb2c9a1e4",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071118/d059592b/attachment.pl"
+      ]
     },
     {
       "id": "msg-c0e6630d8126",
@@ -4756,11 +4858,14 @@
       "subject_clean": "[BioC] CGH segmentation algorithms (snapCGH package)",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071119/bf3c8b96/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071119/bf3c8b96/attachment.pl",
+      "body_plain": "Dear all,\n \nI used 3 different segmentation algorithms (DNAcopy, GLAD and HomHMM from snapCGH package) to assess copy number variation in my data and I want to have a criteria to choose the best CNVs found. There are cases where all the 3 algorithms find the same CNV, cases where only 2 algorithms find the same CNV and cases where only 1 algorithm finds a CNV. \n \nSomebody could argue that a good criteria should be to exclude CNVs found with only 1 algorithm but I found that sometimes those CNVs are really there when I make a visual inspection of the data. \nI thought about making a Mann-Whitney test for each CNV to compare the log2-ratios between n probes from the CNV with (c-n) probes from the control region, where 'c' represents the total number of probes for that chromosome that are not in any CNV on that array. After correcting for multiple testing, a p-value is assign for each CNV giving me a criteria to choose the best CNVs found. \n \nAny comments on my approach and alternative ones will be very much appreciated.\nThanks in advance.\n \n\nBest regards,\nJoão Fadista\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear all,\n \nI used 3 different segmentation algorithms (DNAcopy, GLAD and HomHMM from snapCGH package) to assess copy number variation in my data and I want to have a criteria to choose the best CNVs ",
       "thread_id": "thread-a6ff7534947d",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071119/bf3c8b96/attachment.pl"
+      ]
     },
     {
       "id": "msg-1aa7bd9b227c",
@@ -4992,11 +5097,14 @@
       "subject_clean": "[BioC] was no notify",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071120/fe20aa33/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071120/fe20aa33/attachment.pl",
+      "body_plain": "capabilities is more pervasive as the years go by.  We have\nproducing and training workers. Technology is transforming\nmovement on the tablet.  I could even select brush sizes!  The\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "capabilities is more pervasive as the years go by.  We have\nproducing and training workers. Technology is transforming\nmovement on the tablet.  I could even select brush sizes!  The\n\n\t[[alternative HT",
       "thread_id": "thread-3f047daac0e6",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071120/fe20aa33/attachment.pl"
+      ]
     },
     {
       "id": "msg-58eaa6c19a7b",
@@ -5008,11 +5116,14 @@
       "subject_clean": "[BioC] VSN method",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071120/264c8bb2/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071120/264c8bb2/attachment.pl",
+      "body_plain": "Dear R-Bioconductor list,\n\n \n\nI want to thank Wolfgang Huber for his suggestions regarding an\nR-Biocnductor runs of VSN on Affymetrix cancer cell lines that I have\nbeen working on using R2.6.0. Please contact me or better yet experts\nlike Wolfgang or Robert Gentleman for your VSN questions.\n\n \n\nRegards,\n\nJean\n\n \n\nJean Roayaei, PhD\n\nSenior Biostatistician & Statistical Geneticist\n\nComputer and Statistical Services\n\nNational Cancer Institute at Ferederick MD 21702\n\n362 Miller Drive Office 28\n\nPhone: 301-846-5102\n\nFAX:    301-846-6196\n\nE-Mail: roayaeij at css.ncifcrf.gov <mailto:roayaeij at css.ncifcrf.gov>  \n\n \n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear R-Bioconductor list,\n\n \n\nI want to thank Wolfgang Huber for his suggestions regarding an\nR-Biocnductor runs of VSN on Affymetrix cancer cell lines that I have\nbeen working on using R2.6.0. Please",
       "thread_id": "thread-58eaa6c19a7b",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071120/264c8bb2/attachment.pl"
+      ]
     },
     {
       "id": "msg-5b3e1028012c",
@@ -5024,11 +5135,14 @@
       "subject_clean": "[BioC] ROC curves in affycomp",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071120/bcbeeb25/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071120/bcbeeb25/attachment.pl",
+      "body_plain": "Dear list,\n\n \n\nI am trying to recreate a Figure that I saw in a paper produced with\naffycomp.\n\nThe Figure is \"Figure 5b\" where ROC curves show the true/false positives\nrate for a set of data summarized with a particular method, using the\nLatinSquare experiment of the HGU133A arrays provided by Affymetrix.\n\n \n\nTo summarize my data with GCRMA and then produce the plot, I am running\nthe following instructions:\n\n \n\n>library(gcrma);\n\n>\n\n>### then I set the directory where I have the 42 CEL files of the\nLatinSquare HGU133A experiment, say \"C:/\"\n\n>setwd( \"C:/\")\n\n>\n\n>summarization=justGCRMA();\n\n> write.table(exprs(summarization),file=\"gcrma.csv\", sep = \",\",\ncol.names = NA);\n\n>\n\n>library(affycomp);\n\n>v = read.spikein(\"gcrma.csv\",cdfName=\"hgu133a\");\n\n>g = assessFC2( v , method.name=\"GCRMA\");\n\n>\n\n>affycomp.compfig5b(list(g),method.names=c(\"GCRMA\"));\n\n \n\n \n\nCan anyone please tell me if I have skipped a step or if I had done\nsomething wrong ?\n\nBecause I simply can't replicate the Figure I want to, and I am just\nafraid I might be doing something wrong, or skipping a step.\n\n \n\nThank you people.\n\n \n\n \n\nJose Manuel Arteaga\n\nPhd Student in Statistics\n\nUniversity of Essex\n\nUK\n\n \n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear list,\n\n \n\nI am trying to recreate a Figure that I saw in a paper produced with\naffycomp.\n\nThe Figure is \"Figure 5b\" where ROC curves show the true/false positives\nrate for a set of data summarize",
       "thread_id": "thread-5b3e1028012c",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071120/bcbeeb25/attachment.pl"
+      ]
     },
     {
       "id": "msg-e7c18799f191",
@@ -5040,11 +5154,14 @@
       "subject_clean": "[BioC] Open Biostatistician position with Immune Tolerance Network (Location: Bethesda, MD)",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071120/ae8e8465/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071120/ae8e8465/attachment.pl",
+      "body_plain": "We have an open biostatistician position, described below.  If anyone is\ninterested please contact David Schmeidler at\ndschmeidler at immunetolerance.org.  Thanks for your attention.\n\n \n\nLocation: Bethesda, MD\n\n \n\nFull Time\n\n \n\nJob Summary\n\nWorking closely with clinicians, statisticians, biologists and\nbioinformaticans, the incumbent will provide statistical consultancy and\nguidance in experimental design and approaches to analyzing data to the\nfunctional areas of the Immune Tolerance Network (ITN). The incumbent\nwill contribute to the development of novel methods, as well as the\napplication of these and existing methods, to solve complex problems in\ngenomics, proteomics and statistical genetics. An initial area of focus\nwill be flow cytometry and gene expression analysis.\n\n \n\nQualifications\n\nRequired qualifications for this position include a Master's degree or\nPh.D. in Biostatistics, Applied Mathematics, or related field; Knowledge\nof advanced statistical methods; Solid background and experience using\nstatistical approaches to analyze large data sets; Experience with\nparametric and non-parametric tests; Understanding of supervised and\nunsupervised machine learning algorithms; Knowledge of microarray\ntechnology is helpful. Ability to clearly communicate ideas and results\nof analyses with researchers of various backgrounds; Ability to work\nwell in a team environment; Excellent organizational and computer\nskills. Excellent written and verbal communications skills. \n\n \n\nPreferred Qualifications\n\nProgramming skills in R, S-PLUS, or SAS; Some biology background is\npreferred. Experience with Affymetrix technology is a plus; Knowledge of\nBioconductor/R is a plus. \n\n \n\nImmune Tolerance Network\n\nThe Immune Tolerance Network (ITN) is a collaborative research effort\nthat solicits, develops, implements and assesses clinical strategies and\nbiological assays for the purposes of inducing, maintaining and\nmonitoring tolerance in humans for kidney, liver and islet\ntransplantation, autoimmune diseases and allergy & asthma.  The ITN is\nfunded by the National Institute for Allergy and Infectious Diseases,\nthe National Institute for Diabetes and Digestive and Kidney Diseases\nand the Juvenile Diabetes Foundation.  It is headquartered at the\nUniversity of California San Francisco (UCSF) and maintains satellite\noffices in Bethesda, MD and Pittsburgh, PA.  \n\n \n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "We have an open biostatistician position, described below.  If anyone is\ninterested please contact David Schmeidler at\ndschmeidler at immunetolerance.org.  Thanks for your attention.\n\n \n\nLocation: Bet",
       "thread_id": "thread-e7c18799f191",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071120/ae8e8465/attachment.pl"
+      ]
     },
     {
       "id": "msg-eb05e02b4dcb",
@@ -5156,11 +5273,14 @@
       "subject_clean": "[BioC] SQLquery returns \"FALSE\" in stead of \"F\"",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071121/3026c7c7/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071121/3026c7c7/attachment.pl",
+      "body_plain": "Dear all,\n\n \n\nI use R to do SQLqueries in our Oracle database. When I do a query to lookup\npositions of a clone in a 96-well plate, and the result should be \"F\" for\nthe row and \"8\" for the column, the SQLquery gives me \"FALSE\" and \"8\" as a\nresult.\n\nWhy is \"F\" automatically displayed as \"FALSE\" and how do I correct this?\n\n \n\nMany thanks in advance!\n\n \n\nKind regards,\n\n \n\nRudy van Eijsden.\n\n \n\n=================================================\nRudy van Eijsden\n\nVIB MicroArray Facility\n <http://www.microarrays.be> http://www.microarrays.be\n <blocked::http://www.vib.be/> http://www.vib.be\n=================================================\n\n \n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear all,\n\n \n\nI use R to do SQLqueries in our Oracle database. When I do a query to lookup\npositions of a clone in a 96-well plate, and the result should be \"F\" for\nthe row and \"8\" for the column, the",
       "thread_id": "thread-090c276fa214",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071121/3026c7c7/attachment.pl"
+      ]
     },
     {
       "id": "msg-7a18e395218d",
@@ -5347,11 +5467,14 @@
       "subject_clean": "[BioC] aCGH normalization",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071121/f1893ece/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071121/f1893ece/attachment.pl",
+      "body_plain": "Hi friends,\n\nI am wondering any R package related to aCGH\ncan also do normalization. It seems to me that\nmost of aCGH packages requires data normalized\nelsewhere.\n\nThanks!\n      Allen\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi friends,\n\nI am wondering any R package related to aCGH\ncan also do normalization. It seems to me that\nmost of aCGH packages requires data normalized\nelsewhere.\n\nThanks!\n      Allen\n\n\t[[alternative ",
       "thread_id": "thread-7b547a118731",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071121/f1893ece/attachment.pl"
+      ]
     },
     {
       "id": "msg-4a07e1869db3",
@@ -5415,11 +5538,14 @@
       "subject_clean": "[BioC] Job ad:  Computational Biologist, Edinburgh University",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071123/8b201429/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071123/8b201429/attachment.pl",
+      "body_plain": "We are seeking to recruit an experienced computational biologist or\nbioinformatics technical specialist to work in a new commercial venture\nemanating from the University of Edinburgh, providing genomic data analysis\nservices to the academic and commercial sector based on expertise in the\narea of microarray data mining, statistical processing, pathway analysis,\nand new analytical software development. \n\nYou will be highly computer literate and have experience in dealing with\nlarge datasets, preferably microarray data.  Experience of particular\nrelevance includes, but is not limited to, sequence analysis, genomic\ndatabases, statistics, network and pathway analysis.  \n\nFor further information please visit\nhttp://www.pathwaymedicine.ed.ac.uk/vacancies, or contact Prof Peter Ghazal\n( <mailto:p.ghazal at ed.ac.uk> p.ghazal at ed.ac.uk) or Dr Tom Freeman (\n<mailto:tfreeman at staffmail.ed.ac.uk> tfreeman at staffmail.ed.ac.uk) for\nfurther details.  Closing date 14/12/07.\n\n \nRegards,\nGary Rubin\n\nGary Rubin, PhD\nBusiness/ Operations Manager\nDivision of Pathway Medicine\nUniversity of Edinburgh Medical School\nThe Chancellor's Building\nLittle France Crescent\nEdinburgh EH16 4SB\n\nT: +44 131 242 9437\nF: +44 131 242 6244\nwww.pathwaymedicine.ed.ac.uk \n\n \n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "We are seeking to recruit an experienced computational biologist or\nbioinformatics technical specialist to work in a new commercial venture\nemanating from the University of Edinburgh, providing genomi",
       "thread_id": "thread-0400f31820b7",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071123/8b201429/attachment.pl"
+      ]
     },
     {
       "id": "msg-8c80178268fe",
@@ -5465,11 +5591,14 @@
       "subject_clean": "[BioC] error using combineAffyBatch",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071123/c1baadce/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071123/c1baadce/attachment.pl",
+      "body_plain": "Hi,\n\nI am using combineAffyBatch function from package matchprobes,but I  \ngot the following error:\n\nlibrary(matchprobes)\nres<-combineAffyBatch(list(abatch1,abatch2), probepkg=c \n(\"hgu133a2probe\",\"hgu133plus2probe\"), newcdf=\"hgu133andPluscdf\",  \nverbose=TRUE)\nLoading required package: hgu133a2probe\npackage:hgu133a2probe\thgu133a2probe\t\npackage:hgu133plus2probe\thgu133plus2probe\t\n241837 unique probes in common\nError in alleq(levels(x[[nm]]), levels(y[[nm]])) && alleq(x \n[sharedRows,  :\n   invalid 'x' type in 'x && y'\n\n\nsessionInfo()\nR version 2.6.0 (2007-10-03)\ni386-apple-darwin8.10.1\n\nlocale:\nen_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8\n\nattached base packages:\n[1] splines   tools     stats     graphics  grDevices utils      \ndatasets  methods   base\n\nother attached packages:\n[1] hgu133a2probe_2.0.0    hgu133plus2probe_2.0.0  \nhgu133plus2cdf_2.0.0   affyQCReport_1.16.0    geneplotter_1.16.0\n[6] lattice_0.16-5         annotate_1.16.0         \nAnnotationDbi_1.0.6    RSQLite_0.6-3          DBI_0.2-3\n[11] RColorBrewer_1.0-1     affyPLM_1.14.0          \nxtable_1.5-2           simpleaffy_2.14.05     gcrma_2.10.0\n[16] matchprobes_1.10.0     genefilter_1.16.0       \nsurvival_2.34          affy_1.16.0            preprocessCore_1.0.0\n[21] affyio_1.6.1           Biobase_1.16.1\n\nloaded via a namespace (and not attached):\n[1] KernSmooth_2.22-21 grid_2.6.0\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi,\n\nI am using combineAffyBatch function from package matchprobes,but I  \ngot the following error:\n\nlibrary(matchprobes)\nres<-combineAffyBatch(list(abatch1,abatch2), probepkg=c \n(\"hgu133a2probe\",\"hgu",
       "thread_id": "thread-59dbd60f8619",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071123/c1baadce/attachment.pl"
+      ]
     },
     {
       "id": "msg-920e2d3b20aa",
@@ -5547,11 +5676,14 @@
       "subject_clean": "[BioC] about a lymphoma dataset",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071125/205fca0a/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071125/205fca0a/attachment.pl",
+      "body_plain": "Hi, \n\nI am trying to learn some basic stuff about cDNA array and followed the following slide in bioconductor website:\n\nhttp://www.bioconductor.org/workshops/2003/NGFN03/lymphoma.pdf\n\nHowever, there is one dataset named :\nlc7b048rex.DAT\nthat I do not have. I googled several times and can not seem to find it publicly available, could anybody provide some information on how I can obtain this dataset? \n\nThanks a lot!\n\nJames\n\n       \n---------------------------------\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi, \n\nI am trying to learn some basic stuff about cDNA array and followed the following slide in bioconductor website:\n\nhttp://www.bioconductor.org/workshops/2003/NGFN03/lymphoma.pdf\n\nHowever, there i",
       "thread_id": "thread-f3c4daa704f1",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071125/205fca0a/attachment.pl"
+      ]
     },
     {
       "id": "msg-40153abc905e",
@@ -5828,11 +5960,14 @@
       "subject_clean": "[BioC] probeSetSummary and named vector",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071126/1d89aece/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071126/1d89aece/attachment.pl",
+      "body_plain": "Hi\n\nI have found GO categorys in a data set and want to see which genes are in the different terms that are listed. Previously I have done the following:\n\n  annoPk <- \"illuminaHumanv2\"\n  entrezPk <- illuminaHumanv2ENTREZID\n  pVerdi_GO = 0.01\n\n  probe <- top2[,1] #top2 is a topTable object\n  \n  sigLL <- (unlist(mget(probe, env=entrezPk, ifnotfound=NA)))                    \n  sigLL <- sigLL[!is.na(sigLL)]                                                  \n  sigLL <- sigLL[!duplicated(sigLL)]                                             \n  \n  univ <- unique(getLL(ls(entrezPk), annoPk))                                  \n\n\n   params <- new(\"GOHyperGParams\", geneIds= sigLL, universeGeneIds=univ, annotation=annoPk, ontology=\"BP\", pvalueCutoff= pVerdi_GO, conditional=TRUE, testDirection=\"over\")\n  hgOver <- hyperGTest(params)\n  res_filNavn <- paste(i, \"_GO_summary_BP_over.html\", sep = \"\")                        \n  htmlReport(hgOver,file=res_filNavn)\n  ps <- probeSetSummary(hgOver)\n  res_filNavn_gener <- paste(i, \"_GO_prober_BP_over.txt\")\n  for(j in 1:length(ps))\n  {\n    write.table(ps[j], file = res_filNavn_gener, append=TRUE, sep=\"\")             \n  }  \n\nThis has worked fine. But now I am reading the topTable result as an .txt file (topTable files made previously and stored as a .txt file). I now have to use as.character to get the information into hyperGTest. \n\n  sigLL <- (unlist(mget(as.character(probe), env=entrezPk, ifnotfound=NA)))      \n  sigLL <- as.character(sigLL[!is.na(sigLL)])                                    \n  sigLL <- sigLL[!duplicated(sigLL)]                                               \n   \n  univ <- as.character(unique(getLL(ls(entrezPk), annoPk)))                      \n\nUnfortenatly probeSetSummary does not like this:\n\n\n> ps <- probeSetSummary(hgOver)\nWarning message:\nThe vector of geneIds used to create the GOHyperGParams object was not a named vector.\nIf you want to know the probesets that contributed to this result\nyou need to pass a named vector for geneIds. \n\nIs it possible to read a .txt file and get the probe ID into a named vector? Or get around this another way? I have tried on R 2.5.1 and 2.6.\n\n>   sessionInfo()\nR version 2.6.0 (2007-10-03) \ni386-pc-mingw32 \n\nlocale:\nLC_COLLATE=English_United Kingdom.1252;LC_CTYPE=English_United Kingdom.1252;LC_MONETARY=English_United Kingdom.1252;LC_NUMERIC=C;LC_TIME=English_United Kingdom.1252\n\nattached base packages:\n[1] splines   tools     stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n [1] illuminaHumanv2_1.4.0 GOstats_2.4.0         Category_2.4.0        genefilter_1.16.0     survival_2.34         RBGL_1.14.0           GO.db_2.0.2           graph_1.16.1         \n [9] lumi_1.4.0            mgcv_1.3-28           affy_1.16.0           preprocessCore_1.0.0  affyio_1.6.1          annaffy_1.10.1        KEGG_2.0.1            GO_2.0.1             \n[17] annotate_1.16.1       AnnotationDbi_1.0.6   RSQLite_0.6-4         DBI_0.2-4             Biobase_1.16.1        xtable_1.5-2          RColorBrewer_1.0-2    limma_2.12.0         \n\nloaded via a namespace (and not attached):\n[1] cluster_1.11.9\n>\n\nRegards,\nIngrid\n\n\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi\n\nI have found GO categorys in a data set and want to see which genes are in the different terms that are listed. Previously I have done the following:\n\n  annoPk <- \"illuminaHumanv2\"\n  entrezPk <- i",
       "thread_id": "thread-6cebadd07956",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071126/1d89aece/attachment.pl"
+      ]
     },
     {
       "id": "msg-225b1792a612",
@@ -5935,11 +6070,14 @@
       "subject_clean": "[BioC] Limma - write table??",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071126/f9e98a87/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071126/f9e98a87/attachment.pl",
+      "body_plain": "Hi All,\n\n \n\nI have read in my .gpr files, done normalization between and within arrays.\nI would now like to export my normalized R and G values to a file that I can\nsave.  \n\n \n\nI can export the R and the G values separately, but I would like a table as\nbelow:\n\nSpotName(fromGALfile)            R          G\n\n \n\nI used >write.table(RG$R,file=\"myout.txt\",sep=\"\\t\").  \n\n \n\nSo basically, can I specify that I want to include the gene information from\nthe gal file instead of just listing the values my number, and can I print\nout R and G?\n\n \n\nThanks,\n\n \n\nAlison\n\n \n\n \n\n******************************************\nAlison S. Waller  M.A.Sc.\nDoctoral Candidate\nawaller at chem-eng.utoronto.ca\n416-978-4222 (lab)\nDepartment of Chemical Engineering\nWallberg Building\n200 College st.\nToronto, ON\nM5S 3E5\n\n  \n\n \n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi All,\n\n \n\nI have read in my .gpr files, done normalization between and within arrays.\nI would now like to export my normalized R and G values to a file that I can\nsave.  \n\n \n\nI can export the R and ",
       "thread_id": "thread-0ca19ab671f2",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071126/f9e98a87/attachment.pl"
+      ]
     },
     {
       "id": "msg-401f6dbbfea5",
@@ -6251,11 +6389,14 @@
       "subject_clean": "[BioC] Computational biologist position at MedImmune",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071127/b7ed73bd/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071127/b7ed73bd/attachment.pl",
+      "body_plain": "Dear Bioconductor users:\nWe have an immediate opening in the pharmacogenomics/bioinformatics\ngroup within the translational science department.  We are looking for a\nhighly motivated computational biologist/statistician with experience in\nstatistical analysis, predictive modeling, and algorithm development to\nsupport research into the pathways and other biological mechanisms\nunderlying drug response.  The candidate should have demonstrated\nproficiency in the analysis of microarray, exon, and SNP array data\n(Affymetrix required, additional array technologies preferred).\nAdditional experience in data mining of biological databases (e.g.\npathway, promoter, sequence, etc.) and implementing biomarkers in\nclinical trials is highly desired.  The candidate should be capable of\nworking on multiple simultaneous projects.\n\nJob Requirements:\n*\tMS/PhD in computational biology, bioinformatics, or statistics;\n*\tMinimum 3 years of relevant experience;\n*\tExpertise in data analysis of microarrays, splice variants\nand/or SNPs, array CGH, cis-elements, and miRNAs;\n*\tMinimum 3 years proficiency with R analysis/programming and at\nleast one additional language (e.g. Perl, Python, C, Java) required;\n*\tExperience with Linux/UNIX environments and working knowledge of\ntraditional bioinformatics tools (e.g. GCG, BLAST, etc.);\n*\tFamiliarity with drug discovery is highly desired;\n*\tThe ability to interact in a cross functional environment, and\nstrong oral and written skills are required.\n\n----------\nPlease send CVs to higgsb at medimmune.com\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear Bioconductor users:\nWe have an immediate opening in the pharmacogenomics/bioinformatics\ngroup within the translational science department.  We are looking for a\nhighly motivated computational bio",
       "thread_id": "thread-6451b89a722d",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071127/b7ed73bd/attachment.pl"
+      ]
     },
     {
       "id": "msg-7d55483c2b97",
@@ -6267,11 +6408,14 @@
       "subject_clean": "[BioC] a modified cdf environment",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071127/8a5551ca/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071127/8a5551ca/attachment.pl",
+      "body_plain": "Hello,\n\nI have a few general questions about custom CDFs. I believe that I\nhave created a custom cdf environment by removing specific probes from\nthe current environment.\n\nI did so using a previous post\n\nhttp://article.gmane.org/gmane.science.biology.informatics.conductor/4258/match=\n\n\nI can see that an affybatch object reflects\nthe modification of the cdf. My problem is that I don't understand how\nto save this environment for future use. In fact I do not have a cdf\nfile for the cdf that I have created.\n\n\nwhen I do this:\nnewcdf <- wrapCdfEnvAffy(hgu133plus2cdf,1164,1164,\"hgu133plus2cdf\")\n\nI get an error\nError in as.environment(from) : invalid object for 'as.environment'\n\nThe wrapCdfEnvAffy function creates a CdfEnvAffy object and then seems\nto work OK until it gets to:\n\nvalid <- validCdfEnvAffy(object, verbose = verbose)\n\n\nThe following is the result of: print (object)\n\nI believe it is the - in HG-U133_Plus_2 which causes the object to be\ninvalid. I am not sure what to do to get around this problem. I read a few\nof the tutorials on the subject but I must be missing the answer.\n\nAny ideas would be appreciated.\n\n\nAn object of class \"CdfEnvAffy\"\nSlot \"envir\":\n<environment: 0x112e3ab8>\n\nSlot \"envName\":\n[1] \"HG-U133_Plus_2\"\n\nSlot \"index2xy\":\nfunction (object, i)\n{\n    indices2xy(i, nr = object at nrow) - getOption(\"BioC\")$affy$xy.offset\n}\n\nSlot \"xy2index\":\nfunction (object, x, y)\n{\n    o <- getOption(\"BioC\")$affy$xy.offset\n    xy2indices(x + o, y + o, nr = object at nrow)\n}\n\nSlot \"nrow\":\n[1] 1164\n\nSlot \"ncol\":\n[1] 1164\n\nSlot \"probeTypes\":\n[1] \"pm\" \"mm\"\n\nSlot \"chipType\":\n[1] \"HG-U133_Plus_2\"\n\n\nThanks for reading.\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello,\n\nI have a few general questions about custom CDFs. I believe that I\nhave created a custom cdf environment by removing specific probes from\nthe current environment.\n\nI did so using a previous po",
       "thread_id": "thread-7d55483c2b97",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071127/8a5551ca/attachment.pl"
+      ]
     },
     {
       "id": "msg-9eda84894dcc",
@@ -6315,11 +6459,14 @@
       "subject_clean": "[BioC] build of bioconductor on R 2.6.1 on mac os 10.5",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071128/0003a857/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071128/0003a857/attachment.pl",
+      "body_plain": "I just built bioconductor with 'biocLite.R' and upgraded it on my  \nsystem running R 2.6.1 over Mac OS 10.5, Leopard, on 64-bit powerpc  \nbased chips.  Upon trying to load Biobase it gives me an error  \nimplying it was built for a different architecture or kernel as noted  \nbelow in its output.  Searching for this problem on the web,  \nbioconductor.org, or r-project.org turned up anything similar.  This  \noccurred with building a few python modules too, but they were  \ndocumented, though vaguely, on the web.  Has anyone else come up with  \nthis problem or is it an isolated problem?\n\n > library(Biobase)\nError: package 'Biobase' was built for universal-apple-darwin8.10.1\n >\n\n21-CC-/Users/bioaddix/Desktop/Biobase %  uname -a\nDarwin CC.bioaddica 9.1.0 Darwin Kernel Version 9.1.0: Wed Oct 31  \n17:48:21 PDT 2007; root:xnu-1228.0.2~1/RELEASE_PPC Power Macintosh\n22-CC-/Users/bioaddix/Desktop/Biobase %\n\n24-CC-/Users/bioaddix/Desktop/Biobase %  gcc -v\nUsing built-in specs.\nTarget: powerpc-apple-darwin9\nConfigured with: /var/tmp/gcc/gcc-5465~16/src/configure --disable- \nchecking -enable-werror --prefix=/usr --mandir=/share/man --enable- \nlanguages=c,objc,c++,obj-c++ --program-transform-name=/^[cg][^.-]*$/s/ \n$/-4.0/ --with-gxx-include-dir=/include/c++/4.0.0 --with-slibdir=/usr/ \nlib --build=i686-apple-darwin9 --program-prefix= --host=powerpc-apple- \ndarwin9 --target=powerpc-apple-darwin9\nThread model: posix\ngcc version 4.0.1 (Apple Inc. build 5465)\n25-CC-/Users/bioaddix/Desktop/Biobase %\n\nany ideas are good ideas,\n\n\n_jason\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "I just built bioconductor with 'biocLite.R' and upgraded it on my  \nsystem running R 2.6.1 over Mac OS 10.5, Leopard, on 64-bit powerpc  \nbased chips.  Upon trying to load Biobase it gives me an error",
       "thread_id": "thread-5fe798ef62e4",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071128/0003a857/attachment.pl"
+      ]
     },
     {
       "id": "msg-f2fe6739b4fe",
@@ -6423,11 +6570,14 @@
         "<06CCEA2EB1B80A4A937ED59005FA8551013349D0@svits26.main.ad.rit.edu>",
         "<6phlk9j9nn1.fsf@gopher4.fhcrc.org>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071128/f8d70318/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071128/f8d70318/attachment.pl",
+      "body_plain": "Hi Martin,\n \nAfter updating the package, the expressionset was created. \n \nThank you for your help.\n \nYolande\n\n________________________________\n\nFrom: Martin Morgan [mailto:mtmorgan at fhcrc.org]\nSent: Wed 10/31/2007 1:53 PM\nTo: Yolande Tra\nCc: bioconductor at stat.math.ethz.ch\nSubject: Re: [BioC] creating expression set\n\n\n\nHi Yolande --\n\nThanks very much for that.\n\n> R version 2.6.0 (2007-10-03)\n> i386-pc-mingw32\n>\n> locale:\n> LC_COLLATE=English_United States.1252;LC_CTYPE=English_United\n> States.1252;LC_MONETARY=English_United\n> States.1252;LC_NUMERIC=C;LC_TIME=English_United States.1252\n>\n> attached base packages:\n> [1] tools     stats     graphics  grDevices utils     datasets  methods\n> [8] base    \n>\n> other attached packages:\n> [1] Biobase_1.14.1\n\nThe Biobase you are using is version 1.14.1, but should be 1.16.1 to\nwork with R 2.6.0. There are instructions for updating packages at\n\nhttp://www.bioconductor.org/docs/install-howto.html\n\nunder 'Update packages'. Be sure to do this in a new R session, and\nplease report back to the list, hopefully with success.\n\nMartin\n\n\"Yolande Tra\" <yvtsma at rit.edu> writes:\n\n> Here it is.\n>\n>> traceback()\n> 33: eval(expr, envir, enclos)\n> 32: eval(call, callEnv)\n> 31: callNextMethod(e1, e2)\n> 30: classVersion(object)[names(vers)] == vers\n> 29: classVersion(object)[names(vers)] == vers\n> 28: isCurrent(object, class(object))\n> 27: isCurrent(object, class(object))\n> 26: isCurrent(object)\n> 25: isCurrent(object)\n> 24: isValidVersion(object, \"eSet\")\n> 23: validMsg(NULL, isValidVersion(object, \"eSet\"))\n> 22: validityMethod(as(object, superClass))\n> 21: identical(x, TRUE)\n> 20: anyStrings(validityMethod(as(object, superClass)))\n> 19: validObject(.Object)\n> 18: .nextMethod(.Object, ...)\n> 17: eval(expr, envir, enclos)\n> 16: eval(call, callEnv)\n> 15: callNextMethod(.Object, ...)\n> 14: .local(.Object, ...)\n> 13: .nextMethod(.Object, assayData = assayData, phenoData = phenoData,\n>         featureData = featureData, experimentData = experimentData,\n>         annotation = annotation)\n> 12: eval(expr, envir, enclos)\n> 11: eval(call, callEnv)\n> 10: callNextMethod(.Object, assayData = assayData, phenoData = phenoData,\n>         featureData = featureData, experimentData = experimentData,\n>         annotation = annotation)\n> 9: .local(.Object, ...)\n> 8: .nextMethod(.Object, phenoData = phenoData, featureData = featureData,\n>        experimentData = experimentData, annotation = annotation,\n>        exprs = exprs, ...)\n> 7: eval(expr, envir, enclos)\n> 6: eval(call, callEnv)\n> 5: callNextMethod(.Object, phenoData = phenoData, featureData = featureData,\n>        experimentData = experimentData, annotation = annotation,\n>        exprs = exprs, ...)\n> 4: .local(.Object, ...)\n> 3: initialize(value, ...)\n> 2: initialize(value, ...)\n> 1: new(\"ExpressionSet\", exprs = exprs, phenoData = phenoData, annotation =\n> \"moe430a\")\n>> sessionInfo()\n> R version 2.6.0 (2007-10-03)\n> i386-pc-mingw32\n>\n> locale:\n> LC_COLLATE=English_United States.1252;LC_CTYPE=English_United\n> States.1252;LC_MONETARY=English_United\n> States.1252;LC_NUMERIC=C;LC_TIME=English_United States.1252\n>\n> attached base packages:\n> [1] tools     stats     graphics  grDevices utils     datasets  methods\n> [8] base    \n>\n> other attached packages:\n> [1] Biobase_1.14.1\n>\n> Thanks for your help.\n>\n> Yolande \n>\n>\n> ------------------------------------------------------------------------------\n>\n> From: Martin Morgan [mailto:mtmorgan at fhcrc.org]\n> Sent: Tue 10/30/2007 11:13 AM\n> To: Yolande Tra\n> Cc: bioconductor at stat.math.ethz.ch\n> Subject: Re: [BioC] creating expression set\n>\n>\n> Hi Yolande --\n> can you provide the output of traceback() after the error? This will\n> help localize where the error is occurring. Also, to eliminate problems\n> with version mismatch, can you provide the output of sessionInfo()?\n> Thank you,\n> Martin\n> \"Yolande Tra\" <yvtsma at rit.edu> writes:\n>> Dear List,\n>> \n>> When I run my script in R v 2.6.0 to create an expression set from scratch,\n> I got the following error. I have run the same program in R v 2.5.1 and I did\n> not get any problem. Could you help me? here is my script\n>> \n>>> library(moe430a)\n>>> library(tools)\n>>> library(Biobase)\n>>> exprsFile <- \"c:/affy/Cochlea.txt\"\n>>> exprs <- as.matrix(read.table(exprsFile, header = TRUE, sep =\n> \"\\t\",row.name=1, as.is = TRUE))\n>>> pDataFile<-\"c:/affy/functional.txt\"\n>>> pData<-read.table(pDataFile,row.names=1,header=TRUE,sep=\"\\t\")\n>>> sapply(pData, class)\n>>     cluster      ABRAge       Freq3       Freq6      Freq12      Freq24\n>>    \"factor\"   \"numeric\"   \"integer\"   \"integer\"   \"integer\"   \"integer\"\n>>      Freq32      Freq48    DPOAEAge    Mean.Low Mean.Middle   Mean.High\n>>   \"integer\"   \"integer\"   \"numeric\"   \"numeric\"   \"numeric\"   \"numeric\"\n>>> names(pData)\n>>  [1] \"cluster\"     \"ABRAge\"      \"Freq3\"       \"Freq6\"       \"Freq12\"    \n>>  [6] \"Freq24\"      \"Freq32\"      \"Freq48\"      \"DPOAEAge\"    \"Mean.Low\"  \n>> [11] \"Mean.Middle\" \"Mean.High\" \n>>> phenoData\n>>   rowNames: A, B, ..., AN (40 total)\n>>   varLabels and varMetadata:\n>>     cluster: cluster\n>>     ABRAge: ABRAge\n>>     ...: ...\n>>     Mean.High: Mean.High\n>>     (12 total)\n>>\n>>> metadata <- data.frame(labelDescription = c(\"cluster\", \"ABRAge\",\n> \"Freq3\",\"Freq6\",\"Freq12\",\"Freq24\",\"Freq32\",\"Freq48\",\"DPOAEAge\",\n>> + \"Mean.Low\",\"Mean.Middle\",\"Mean.High\"))\n>>>  row.names = c(\"cluster\",\"ABRAge\",\n> \"Freq3\",\"Freq6\",\"Freq12\",\"Freq24\",\"Freq32\",\"Freq48\",\"DPOAEAge\",\n>> + \"Mean.Low\",\"Mean.Middle\",\"Mean.High\")\n>>> phenoData <- new(\"AnnotatedDataFrame\", data = pData, varMetadata =\n> metadata)\n>>> annotation <- \"moe430a\"\n>>> all(rownames(pData) == colnames(exprs))\n>> [1] TRUE\n>>\n>>> exampleSet <- new(\"ExpressionSet\", exprs = exprs, phenoData = phenoData,\n>> + annotation=\"moe430a\")\n>> Error in .nextMethod(e1, e2) :\n>>   comparison of these types is not implemented\n>>\n>> \n>> Thanks.\n>> Yolande\n>>\n>>       [[alternative HTML version deleted]]\n>>\n>> _______________________________________________\n>> Bioconductor mailing list\n>> Bioconductor at stat.math.ethz.ch\n>> https://stat.ethz.ch/mailman/listinfo/bioconductor\n>> Search the archives:\n> http://news.gmane.org/gmane.science.biology.informatics.conductor\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi Martin,\n \nAfter updating the package, the expressionset was created. \n \nThank you for your help.\n \nYolande\n\n________________________________\n\nFrom: Martin Morgan [mailto:mtmorgan at fhcrc.org]\nSent",
       "thread_id": "thread-b97b728d7626",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071128/f8d70318/attachment.pl"
+      ]
     },
     {
       "id": "msg-471ff600c3df",
@@ -6545,11 +6695,14 @@
       "subject_clean": "[BioC] Using another array system but affy",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071128/a6abeb25/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071128/a6abeb25/attachment.pl",
+      "body_plain": "Hi,\n\nI'm a newbie to bioconductor, but I've already done some analysis an affy\narrays. However, I've got some data obtained in the codelink system that I'd\nlike to analyze in bioconductor as well. What packages should I use? Can\naffy packages be used for these data?\n\nthanks\n\nErika\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi,\n\nI'm a newbie to bioconductor, but I've already done some analysis an affy\narrays. However, I've got some data obtained in the codelink system that I'd\nlike to analyze in bioconductor as well. Wha",
       "thread_id": "thread-59fb39387b96",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071128/a6abeb25/attachment.pl"
+      ]
     },
     {
       "id": "msg-440b25f66c93",
@@ -6563,11 +6716,14 @@
       "references": [
         "<477f60110711280724v663606bey900ab8dc7f55df7b@mail.gmail.com>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071128/4c1d5317/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071128/4c1d5317/attachment.pl",
+      "body_plain": "Hi,\n\nI'm a newbie to bioconductor, but I've already done some analysis an affy\narrays. However, I've got some data obtained in the codelink system that I'd\nlike to analyze in bioconductor as well. What packages should I use? Can\naffy packages be used for these data?\n\nthanks\n\nErika\n\n\n\n-- \nLaboratório de Estudos de Genes de Desenvolvimento\nDepartamento de Genética e Biologia Evolutiva\nInstituto de Biociência - Universidade de São Paulo\nTel (11) 3091-9910\nRua do Matão,277 s.200 - CEP 05508-090\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi,\n\nI'm a newbie to bioconductor, but I've already done some analysis an affy\narrays. However, I've got some data obtained in the codelink system that I'd\nlike to analyze in bioconductor as well. Wha",
       "thread_id": "thread-59fb39387b96",
       "thread_depth": 1,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071128/4c1d5317/attachment.pl"
+      ]
     },
     {
       "id": "msg-cd510a061190",
@@ -6740,11 +6896,14 @@
       "subject_clean": "[BioC] marray package: maNorm function with \"loes\" normalization gives irrreproducable results",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071129/804fb870/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071129/804fb870/attachment.pl",
+      "body_plain": "Hi,\n\n \n\nI noticed that the maNorm function with the \"loes\" normalization option from\nthe marray package gives irreproducible results.\n\nWhen performing the maNorm function \"mnorm <- maNorm(mraw, norm=\"l\")\" on the\nsame marrayRaw object twice, the results for the M-values differ:\n\n \n\n*Attempt 1:\n\n> mnorm <- maNorm(mraw, norm=\"l\")\"\n\n> mnorm at maM[1:10,1:3]\n\n      Data/2006022035.txt Data/2006022036.txt Data/2006022037.txt\n\n [1,]         0.018879167        -0.021035459          0.27322552\n\n [2,]        -0.179815619         0.192413729         -0.10901411\n\n [3,]         1.198385736        -1.086524647         -0.60352712\n\n [4,]        -1.371507828        -0.105926648          1.70023850\n\n [5,]         3.312666352         3.995601174         -0.14438617\n\n [6,]        -0.477144371         0.203647479          0.12004524\n\n [7,]        -0.064336607        -0.264641717          0.27210932\n\n [8,]         0.007128637         0.086065114          0.41770312\n\n [9,]         0.052644302         0.001226107          0.52679449\n\n[10,]        -0.106066947         0.205590655         -0.01910152\n\n \n\n*Attempt 2:\n\n> mnorm <- maNorm(mraw, norm=\"l\")\"\n\n> mnorm at maM[1:10,1:3]\n\n      Data/2006022035.txt Data/2006022036.txt Data/2006022037.txt\n\n [1,]          0.03096721          0.03422194          0.31516138\n\n [2,]         -0.22138448          0.19523012         -0.13634274\n\n [3,]          1.00893182         -1.51642222         -0.53571460\n\n [4,]         -1.41207840         -0.12694801          1.67356748\n\n [5,]          2.84049228          3.15626457         -0.02876272\n\n [6,]         -0.47461025          0.20277810          0.09238030\n\n [7,]         -0.14826379         -0.30892746          0.23741928\n\n [8,]         -0.06984206          0.04507657          0.39866073\n\n [9,]          0.06391159          0.07672604          0.56632752\n\n[10,]         -0.14816946          0.20583996         -0.03607932\n\n \n\n \n\nThis is de session info:\n\n> sessionInfo()\n\nR version 2.6.0 (2007-10-03) \n\ni386-pc-mingw32 \n\n \n\nlocale:\n\nLC_COLLATE=English_United States.1252;LC_CTYPE=English_United\nStates.1252;LC_MONETARY=English_United\nStates.1252;LC_NUMERIC=C;LC_TIME=English_United States.1252\n\n \n\nattached base packages:\n\n[1] tools     stats     graphics  grDevices utils     datasets  methods\nbase     \n\n \n\nother attached packages:\n\n[1] Biobase_1.16.1 marray_1.16.0  limma_2.12.0\n\n \n\n \n\nI have also noticed the same problem on a Linux machine running the same\nversion of R and the marray package.\n\n \n\n \n\nAny suggestions?\n\n \n\n \n\nGreetings,\n\n \n\nRudy.\n\n \n\n=================================================\nRudy van Eijsden\n\nVIB MicroArray Facility\nHerestraat 49\n3000 Leuven\nPost Box: 816\nBelgium\n\ne-mail:\n <mailto:Rudy.vanEijsden at vib.be> Rudy.vanEijsden at vib.be\n\nweb:\n <http://www.microarrays.be> http://www.microarrays.be\n <blocked::http://www.vib.be/> http://www.vib.be\n\ntel: +32 (0)16 34 79 33\nfax: +32 (0)16 34 79 40\n=================================================\n\n \n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi,\n\n \n\nI noticed that the maNorm function with the \"loes\" normalization option from\nthe marray package gives irreproducible results.\n\nWhen performing the maNorm function \"mnorm <- maNorm(mraw, norm=\"",
       "thread_id": "thread-953bd86d0b15",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071129/804fb870/attachment.pl"
+      ]
     },
     {
       "id": "msg-671c476addbe",
@@ -6812,11 +6971,14 @@
         "<477f60110711280736y4c3c6d05r2c25357c8f123145@mail.gmail.com>",
         "<474DCC50.7000406@ebi.ac.uk>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071129/ab86bb7a/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071129/ab86bb7a/attachment.pl",
+      "body_plain": "Dear Wolfgang,\n\nMy apologies, I'll try to make my question more precise. I've got a table\nwith intensity raw data and flag data obtained from 14 codelink arrays, each\none from a distinct sample, from two categories. I'd like to know how I\ncould normalize this data and find differentiatly expressed genes.\nWith affy array data, I used to run rma and mas5, and then run empirical\nbayes to find differentiatly expressed genes.\nI hope I made my point clear.\n\nBest wishes\n\nErika\n\n2007/11/28, Wolfgang Huber <huber at ebi.ac.uk>:\n>\n> Dear Erika,\n>\n> > I'm a newbie to bioconductor, but I've already done some analysis an\n> affy\n> > arrays. However, I've got some data obtained in the codelink system that\n> I'd\n> > like to analyze in bioconductor as well. What packages should I use? Can\n> > affy packages be used for these data?\n>\n> Please have a look at the limma package.\n>\n> You might also try to formulate your question more precisely. \"analyse\"\n> is a fairly unspecific task description, almost all of the packages on\n> Bioconductor can be used for some kind of analysis or other.\n>\n> Best wishes\n>    Wolfgang\n>\n> ------------------------------------------------------------------\n> Wolfgang Huber  EBI/EMBL  Cambridge UK  http://www.ebi.ac.uk/huber\n>\n\n\n\n-- \nLaboratório de Estudos de Genes de Desenvolvimento\nDepartamento de Genética e Biologia Evolutiva\nInstituto de Biociência - Universidade de São Paulo\nTel (11) 3091-9910\nRua do Matão,277 s.200 - CEP 05508-090\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear Wolfgang,\n\nMy apologies, I'll try to make my question more precise. I've got a table\nwith intensity raw data and flag data obtained from 14 codelink arrays, each\none from a distinct sample, from ",
       "thread_id": "thread-59fb39387b96",
       "thread_depth": 3,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071129/ab86bb7a/attachment.pl"
+      ]
     },
     {
       "id": "msg-dcd1e768144a",
@@ -6907,11 +7069,14 @@
         "<474DCC50.7000406@ebi.ac.uk>",
         "<477f60110711290626u3b625a33jd223381fdeb142a9@mail.gmail.com>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071129/9c1da71d/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071129/9c1da71d/attachment.pl",
+      "body_plain": "On Nov 29, 2007 9:26 AM, Erika <yeh.erika at gmail.com> wrote:\n\n> Dear Wolfgang,\n>\n> My apologies, I'll try to make my question more precise. I've got a table\n> with intensity raw data and flag data obtained from 14 codelink arrays,\n> each\n> one from a distinct sample, from two categories. I'd like to know how I\n> could normalize this data and find differentiatly expressed genes.\n> With affy array data, I used to run rma and mas5, and then run empirical\n> bayes to find differentiatly expressed genes.\n> I hope I made my point clear.\n>\n\nHi, Erika.  You might want to take a look at:\n\nhttp://bioconductor.org/packages/2.1/bioc/html/codelink.html\n\nI have not used it, but it might do what you want.  That said, if your data\nare single-channel data, there are numerous methods you can use to normalize\nthem.  You could check in the limma documentation (since it sounds like you\nare already using limma) for details.\n\nSean\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "On Nov 29, 2007 9:26 AM, Erika <yeh.erika at gmail.com> wrote:\n\n> Dear Wolfgang,\n>\n> My apologies, I'll try to make my question more precise. I've got a table\n> with intensity raw data and flag data o",
       "thread_id": "thread-59fb39387b96",
       "thread_depth": 4,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071129/9c1da71d/attachment.pl"
+      ]
     },
     {
       "id": "msg-3fd6803a429b",
@@ -7040,11 +7205,14 @@
       "subject_clean": "[BioC] Or to spot",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071129/71d2e901/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071129/71d2e901/attachment.pl",
+      "body_plain": "process in which the work was executed, is received well when the\nevolutionary principles created on a computer.  He designed a\nto this.  The ability to lead a completely vicarious life,\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "process in which the work was executed, is received well when the\nevolutionary principles created on a computer.  He designed a\nto this.  The ability to lead a completely vicarious life,\n\n\t[[alternati",
       "thread_id": "thread-1ae3bffe0441",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071129/71d2e901/attachment.pl"
+      ]
     },
     {
       "id": "msg-b75f3f979aec",
@@ -7208,11 +7376,14 @@
       "references": [
         "<414636.29079.qm@web38114.mail.mud.yahoo.com>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071130/d78d3c5d/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071130/d78d3c5d/attachment.pl",
+      "body_plain": "geneSetTest might be more suitable specially when you have small number of\narrays.\n\nDi\n\n\n\nOn Nov 30, 2007 12:11 PM, Srinivas Iyyer <srini_iyyer_bio at yahoo.com> wrote:\n\n> Dear Group,\n>\n>\n> does limma provide gene set enrichment through a\n> wilcoxon rank sum test?\n>\n> I overheard someone discussing that enrichment scores\n> provided through this method (limma - wilcoxon rank\n> sum) are better than GSEA enrichment scores.\n>\n> I see some old 2005 tutorials usings Dr. Smiths gene\n> set test.\n>\n> I am finding difficult to find any vignette that\n> discuss Gene set test and wilcoxon rank sum.\n> Are there any new changes to  limma towards advanced\n> gene set test version.\n>\n> Please suggest.\n> thanks\n> srini\n>\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor at stat.math.ethz.ch\n> https://stat.ethz.ch/mailman/listinfo/bioconductor\n> Search the archives:\n> http://news.gmane.org/gmane.science.biology.informatics.conductor\n>\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "geneSetTest might be more suitable specially when you have small number of\narrays.\n\nDi\n\n\n\nOn Nov 30, 2007 12:11 PM, Srinivas Iyyer <srini_iyyer_bio at yahoo.com> wrote:\n\n> Dear Group,\n>\n>\n> does limma",
       "thread_id": "thread-1e68477ad452",
       "thread_depth": 1,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071130/d78d3c5d/attachment.pl"
+      ]
     },
     {
       "id": "msg-ff04c8fdc23f",
@@ -7259,11 +7430,14 @@
         "<AFE5B2464F1EB547BBACE62CCE8E40200B81B0@mr3k6001.ad.medicalresearch.no>",
         "<474D80FA.4010606@med.umich.edu>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071130/e9b29657/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071130/e9b29657/attachment.pl",
+      "body_plain": "Hi\n\nI found another way around it.\n\nInstead of using probe <- top2[,1] I used probe <- levels(top2[,1]) and drop all the as.character. I am not 100% sure if it is the ultimate way but probeSetSummary does not complain any more and I get the output that I am expecting.\n\nIngrid\n\n\n \nHi Ingrid,\n\nIngrid H. G. Østensen wrote:\n> Hi\n> \n> I have found GO categorys in a data set and want to see which genes are in the different terms that are listed. Previously I have done the following:\n> \n>   annoPk <- \"illuminaHumanv2\"\n>   entrezPk <- illuminaHumanv2ENTREZID\n>   pVerdi_GO = 0.01\n> \n>   probe <- top2[,1] #top2 is a topTable object\n>   \n>   sigLL <- (unlist(mget(probe, env=entrezPk, ifnotfound=NA)))                    \n>   sigLL <- sigLL[!is.na(sigLL)]                                                  \n>   sigLL <- sigLL[!duplicated(sigLL)]                                             \n>   \n>   univ <- unique(getLL(ls(entrezPk), annoPk))                                  \n> \n> \n>    params <- new(\"GOHyperGParams\", geneIds= sigLL, universeGeneIds=univ, annotation=annoPk, ontology=\"BP\", pvalueCutoff= pVerdi_GO, conditional=TRUE, testDirection=\"over\")\n>   hgOver <- hyperGTest(params)\n>   res_filNavn <- paste(i, \"_GO_summary_BP_over.html\", sep = \"\")                        \n>   htmlReport(hgOver,file=res_filNavn)\n>   ps <- probeSetSummary(hgOver)\n>   res_filNavn_gener <- paste(i, \"_GO_prober_BP_over.txt\")\n>   for(j in 1:length(ps))\n>   {\n>     write.table(ps[j], file = res_filNavn_gener, append=TRUE, sep=\"\")             \n>   }  \n> \n> This has worked fine. But now I am reading the topTable result as an .txt file (topTable files made previously and stored as a .txt file). I now have to use as.character to get the information into hyperGTest. \n> \n>   sigLL <- (unlist(mget(as.character(probe), env=entrezPk, ifnotfound=NA)))      \n>   sigLL <- as.character(sigLL[!is.na(sigLL)])                                    \n>   sigLL <- sigLL[!duplicated(sigLL)]                                               \n>    \n>   univ <- as.character(unique(getLL(ls(entrezPk), annoPk)))                      \n> \n> Unfortenatly probeSetSummary does not like this:\n> \n> \n>> ps <- probeSetSummary(hgOver)\n> Warning message:\n> The vector of geneIds used to create the GOHyperGParams object was not a named vector.\n> If you want to know the probesets that contributed to this result\n> you need to pass a named vector for geneIds. \n> \n> Is it possible to read a .txt file and get the probe ID into a named vector? Or get around this another way? I have tried on R 2.5.1 and 2.6.\n\nSure. Just read in the .txt file and then create another vector of names \nfor the vector, and do\n\nnames(thevector) <- thenamevector\n\nOf course this presupposes that you know the names for the vector... If \nnot, I think you are stuck.\n\nBest,\n\nJim\n\n\n> \n>>   sessionInfo()\n> R version 2.6.0 (2007-10-03) \n> i386-pc-mingw32 \n> \n> locale:\n> LC_COLLATE=English_United Kingdom.1252;LC_CTYPE=English_United Kingdom.1252;LC_MONETARY=English_United Kingdom.1252;LC_NUMERIC=C;LC_TIME=English_United Kingdom.1252\n> \n> attached base packages:\n> [1] splines   tools     stats     graphics  grDevices utils     datasets  methods   base     \n> \n> other attached packages:\n>  [1] illuminaHumanv2_1.4.0 GOstats_2.4.0         Category_2.4.0        genefilter_1.16.0     survival_2.34         RBGL_1.14.0           GO.db_2.0.2           graph_1.16.1         \n>  [9] lumi_1.4.0            mgcv_1.3-28           affy_1.16.0           preprocessCore_1.0.0  affyio_1.6.1          annaffy_1.10.1        KEGG_2.0.1            GO_2.0.1             \n> [17] annotate_1.16.1       AnnotationDbi_1.0.6   RSQLite_0.6-4         DBI_0.2-4             Biobase_1.16.1        xtable_1.5-2          RColorBrewer_1.0-2    limma_2.12.0         \n> \n> loaded via a namespace (and not attached):\n> [1] cluster_1.11.9\n> \n> Regards,\n> Ingrid\n> \n> \n> \n> \n> \n> \t[[alternative HTML version deleted]]\n> \n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor at stat.math.ethz.ch\n> https://stat.ethz.ch/mailman/listinfo/bioconductor\n> Search the archives: http://news.gmane.org/gmane.science.biology.informatics.conductor\n\n-- \nJames W. MacDonald, M.S.\nBiostatistician\nAffymetrix and cDNA Microarray Core\nUniversity of Michigan Cancer Center\n1500 E. Medical Center Drive\n7410 CCGC\nAnn Arbor MI 48109\n734-647-5623\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi\n\nI found another way around it.\n\nInstead of using probe <- top2[,1] I used probe <- levels(top2[,1]) and drop all the as.character. I am not 100% sure if it is the ultimate way but probeSetSummary ",
       "thread_id": "thread-6cebadd07956",
       "thread_depth": 2,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071130/e9b29657/attachment.pl"
+      ]
     },
     {
       "id": "msg-cdc00aeb937e",
@@ -7291,11 +7465,14 @@
       "subject_clean": "[BioC] aCGH library: problem with impute.lowess",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071130/77f4ebbb/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071130/77f4ebbb/attachment.pl",
+      "body_plain": "Hello,\n\nI'm Michela and I'm working with the aCGH package (version 1.12.0) and R\nversion 2.6.0..\n\n \n\nI have a problem when I run the impute.lowess function with more than 3\narrays:\n\n \n\nError in if (kb >= chrominfo$centromere[chr]) median(vec[clones.info$Chrom\n==  : \n\n  The argument has length zero\n\n \n\nI can't understand why the error comes only with more than 3 arrays!\n\n \n\nI don't have the problem if I imputing the log2ratios using HMM:\n\n \n\nhmm(arrays.acgh) <- find.hmm.states(arrays.acgh, aic = TRUE, \n\n  delta = 1.5)\n\nlog2.ratios.imputed(arrays.acgh)<-impute.HMM(arrays.acgh,  \n\n  chrominfo=clones.info, maxChrom=22)\n\n \n\n \n\nSomeone explain me why this?\n\n \n\nThanks a lot\n\nMichela \n\n \n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello,\n\nI'm Michela and I'm working with the aCGH package (version 1.12.0) and R\nversion 2.6.0..\n\n \n\nI have a problem when I run the impute.lowess function with more than 3\narrays:\n\n \n\nError in if (kb",
       "thread_id": "thread-b45e8e54e840",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071130/77f4ebbb/attachment.pl"
+      ]
     },
     {
       "id": "msg-5f3996d1a585",
@@ -7307,11 +7484,14 @@
       "subject_clean": "[BioC] PCA methods for probe level data",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071130/c91a8e11/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071130/c91a8e11/attachment.pl",
+      "body_plain": "Hello All,\n\nI am using Affy GeneChip for SFP detection and only interested in the\nprobe-level data. Who knows there are some PCA packages or tools that\ncan analyze probe-level data. I tried PCAplot in affycoretools package,\nbut seems it only takes expression data. Any suggestion? Thanks in\nadvance.\n\nBest,\n\n\nZhi Zhang\nLead Selection\nApplied Genomics\n\nSyngenta Biotechnology, Inc.\n3054 Cornwallis Road\nResearch Triangle Park, NC 27709-2257\n\nTel: (919)765-5052\nFax: (919)541-8585\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello All,\n\nI am using Affy GeneChip for SFP detection and only interested in the\nprobe-level data. Who knows there are some PCA packages or tools that\ncan analyze probe-level data. I tried PCAplot in",
       "thread_id": "thread-5f3996d1a585",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071130/c91a8e11/attachment.pl"
+      ]
     },
     {
       "id": "msg-3dc59a95007f",
@@ -7323,11 +7503,14 @@
       "subject_clean": "[BioC] Limma - error reading in .gpr files",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071130/3c5eb466/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20071130/3c5eb466/attachment.pl",
+      "body_plain": "Hi all,\n\n \n\nI'm having a problem reading in my genepix files using read.maimages.  If\nanyone could help interpret my error message that would be great thanks,\nAre these numbers specifiying a location in the spreadsheet where there\nmight be a problem.\n\n \n\nThanks so much,\n\n \n\nalison\n\n \n\n> library(limma)\n\n> targets<-readTargets(\"VCMeOHTargets.txt\")\n\n> RG<-read.maimages(targets$FileName)\n\nError in read.maimages(targets$FileName) : \n\n        must specify columns for generic input\n\n> RG<-read.maimages(targets$FileName,source=\"genepix\")\n\nRead 830scan3.gpr \n\nRead 778scan2.gpr \n\nRead 784scan2.gpr \n\nError in \"[<-\"(`*tmp*`, , i, value = c(106, 11029, 33, 33, 131, 87, 306,  : \n\n        number of items to replace is not a multiple of replacement length\n\n> \n\n \n\n******************************************\nAlison S. Waller  M.A.Sc.\nDoctoral Candidate\nawaller at chem-eng.utoronto.ca\n416-978-4222 (lab)\nDepartment of Chemical Engineering\nWallberg Building\n200 College st.\nToronto, ON\nM5S 3E5\n\n  \n\n \n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi all,\n\n \n\nI'm having a problem reading in my genepix files using read.maimages.  If\nanyone could help interpret my error message that would be great thanks,\nAre these numbers specifiying a location ",
       "thread_id": "thread-3dc59a95007f",
       "thread_depth": 0,
-      "month": "2007-11"
+      "month": "2007-11",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20071130/3c5eb466/attachment.pl"
+      ]
     }
   ],
   "threads": [

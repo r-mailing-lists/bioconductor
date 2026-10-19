@@ -176,11 +176,14 @@
       "subject_clean": "[BioC] GO in Bioconductor",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060103/4318ee8b/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060103/4318ee8b/attachment.pl",
+      "body_plain": "Dear all,\n \n How can I use Gene Ontology in BioC? Is there any tutorial or manual available? Especially how can I construct (extract) a tree if I have a gene name (e.g. RAD52)\n \n Thanks and regards,\n Kaustubh\n \n\n\t\t\n---------------------------------\n\n Ring in the New Year with Photo Calendars. Add photos, events, holidays, whatever.\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear all,\n \n How can I use Gene Ontology in BioC? Is there any tutorial or manual available? Especially how can I construct (extract) a tree if I have a gene name (e.g. RAD52)\n \n Thanks and regards,\n ",
       "thread_id": "thread-62855dc3a62b",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060103/4318ee8b/attachment.pl"
+      ]
     },
     {
       "id": "msg-a0d875d5e81c",
@@ -192,11 +195,14 @@
       "subject_clean": "[BioC]  affymetrix pig annotation data",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060103/4f09c004/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060103/4f09c004/attachment.pl",
+      "body_plain": "Dear Morten Mattingsdal \n \nSorry to bother you with this, but I just wondered if you ever managed to solve you problem with building a data annotation package (see below)?\n \nI am trying to do something similiar, although not with an affy chip, and I get the same error as you:\n \n'no direct or inherited method for function 'baseFile<-' for this call'\n \nKind regards,\nHenrik Hornshøj\n \nDepartment of Genetics and Biotechnology\nDanish Institute of Agricultural Sciences.\n \n \n\n[BioC] affymetrix pig annotation data\n\nMorten Mattingsdal morten.mattingsdal at student.uib.no <mailto:bioconductor%40stat.math.ethz.ch?Subject=%5BBioC%5D%20affymetrix%20pig%20annotation%20data&In-Reply-To=> \nMon Nov 14 18:28:32 CET 2005 \n\n*\tPrevious message: [BioC] Small bug in function 'countskip.FASTA.entries' from package 'altcdfenvs' <https://stat.ethz.ch/pipermail/bioconductor/2005-November/010955.html> \n*\tNext message: [BioC] gpr one color <https://stat.ethz.ch/pipermail/bioconductor/2005-November/010894.html> \n*\tMessages sorted by: [ date ] <https://stat.ethz.ch/pipermail/bioconductor/2005-November/date.html#10892>  [ thread ] <https://stat.ethz.ch/pipermail/bioconductor/2005-November/thread.html#10892>  [ subject ] <https://stat.ethz.ch/pipermail/bioconductor/2005-November/subject.html#10892>  [ author ] <https://stat.ethz.ch/pipermail/bioconductor/2005-November/author.html#10892>  \n\n________________________________\n\nHello open-source spirits,\n\nIm trying to build an annotation data library for the Sus scrofa (common \npig) affymetrix chip: GeneChip® Porcine Genome Array\nhttp://www.affymetrix.com/products/arrays/specific/porcine.affx\n\nbut Im not very sucessful in doing so.. my error is\n\nError in \"baseFile<-\"(`*tmp*`, value = \n\"C:\\\\DOCUME~1\\\\mortema\\\\LOCALS~1\\\\Temp\\\\Rtmp2376\\\\tempFile26288\") :\n        no direct or inherited method for function 'baseFile<-' for this \ncall\n\nand I dont know what this is trying so tell me. My imput is probe ID in \ncoloum 1 and genbank acc.nr in coloum 2.\n\"Ssc.11.1.S1_at\"    \"NM_213802.1\"\nand I have succesfully build packages before with human and mouse. But \nthis is my first go at pig.\n\nDoes anyone have this library already build or can someone help me build \nit ?\n\n(im deeply sorry if this is already listed in the metadata dir at \nbioconductor. But cant find anything related to pig)\n\nbest\nmorten\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear Morten Mattingsdal \n \nSorry to bother you with this, but I just wondered if you ever managed to solve you problem with building a data annotation package (see below)?\n \nI am trying to do somethin",
       "thread_id": "thread-a0d875d5e81c",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060103/4f09c004/attachment.pl"
+      ]
     },
     {
       "id": "msg-ebc1225fd317",
@@ -349,11 +355,14 @@
       "subject_clean": "[BioC] RankProd Error Message",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060103/c02c4951/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060103/c02c4951/attachment.pl",
+      "body_plain": "Hello all!\n\nI'm trying to analyze 16 Affy arrays with SAM, Limma and RankProd to\nlook at differential expression.\n\nI got the following error message from the RP function.  Any help as to\nwhat it means?\n\n> RP.out<- RP(eset_rma, eset.cl, num.perm = 100, logged=TRUE,\nna.rm=FALSE, plot=FALSE, gene.names=eset.gnames)\nError in if (total.sam != total.sam2) stop(\"Number of classes should\nmatch the columns in the data\") : \n        argument is of length zero\n\nI have included below the phenotype data of eset_rma and the listing of\neset.cl:\n\n> pData(eset_rma)\n                   SAMPLE_NUM TREATMENT TCELLS\nNE_MDM-INF1.CEL             1       INF      N\nNE_MDM-INF2.CEL             2       INF      N\nNE_MDM-INF3.CEL             3       INF      N\nNE_MDM-INF4.CEL             4       INF      N\nNE_MDM-T-1.CEL              5    NONINF      Y\nNE_MDM-T-2.CEL              6    NONINF      Y\nNE_MDM-T-3.CEL              7    NONINF      Y\nNE_MDM-T-4.CEL              8    NONINF      Y\nNE_MDM-T-INF-1.CEL          9       INF      Y\nNE_MDM-T-INF-2.CEL         10       INF      Y\nNE_MDM-T-INF-3.CEL         11       INF      Y\nNE_MDM-T-INF-4.CEL         12       INF      Y\nNE_MDM1.CEL                13    NONINF      N\nNE_MDM2.CEL                14    NONINF      N\nNE_MDM3.CEL                15    NONINF      N\nNE_MDM4.CEL                16    NONINF      N\n\n> eset.cl\n [1]  1  2  3  4 -5 -6 -7 -8  5  6  7  8 -1 -2 -3 -4\n\nThanks for any help you can provide!\n\n---Nick Ettinger\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello all!\n\nI'm trying to analyze 16 Affy arrays with SAM, Limma and RankProd to\nlook at differential expression.\n\nI got the following error message from the RP function.  Any help as to\nwhat it means",
       "thread_id": "thread-fb963248ebd3",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060103/c02c4951/attachment.pl"
+      ]
     },
     {
       "id": "msg-b32c597b5fb8",
@@ -384,11 +393,14 @@
       "subject_clean": "[BioC] design matrix",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060103/e28ec2fa/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060103/e28ec2fa/attachment.pl",
+      "body_plain": "My experiment involves 12 hybridizations of 3 stages (E, F ,G) and 2 types (Active, Inactive).  The direct comparisons are active (A) to inactive (I) for each stage using 4 biological replicates for each comparison with balanced dye swaps.\n\nI want to see the results of active vs inactive for each stage and then compare the results between stages E -> F and F -> G.  Is this design correct?  Slides 1->4 are stage E, 5->8 are stage F, and 9-12 are stage G.  The first two slides are labelled the same and the last two are dye swapped.  \n\nSlide E_AI F_AI G_AI E_F F_G\n1     1    0    0    1   0   \n2     1    0    0    1   0   \n3    -1    0    0   -1   0  \n4    -1    0    0   -1   0  \n5     0    1    0   -1   1   \n6     0    1    0   -1   1   \n7     0   -1    0    1  -1   \n8     0   -1    0    1  -1   \n9     0    0    1    0  -1  \n10    0    0    1    0  -1  \n11    0    0   -1    0   1  \n12    0    0   -1    0   1   \n\n\nOr is a contrast matrix the correct method for the indirect comparisons (between stages)?\n\nThanks.\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "My experiment involves 12 hybridizations of 3 stages (E, F ,G) and 2 types (Active, Inactive).  The direct comparisons are active (A) to inactive (I) for each stage using 4 biological replicates for e",
       "thread_id": "thread-921bf37b49e3",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060103/e28ec2fa/attachment.pl"
+      ]
     },
     {
       "id": "msg-168969eeda2f",
@@ -665,11 +677,14 @@
       "subject_clean": "[BioC] annaffy annotation",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060104/3ef78f31/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060104/3ef78f31/attachment.pl",
+      "body_plain": "I'm not sure of the best way to ask this question, but I'll try.  I \nused anncols and anntable within R to annotate my final list of up/down \ngenes from my array analysis.  I am using subsequent programs to look \nat these genes that use the Hs.xxxx unigene identifier to look up \nadditional information for each gene.  Some of the Hs.xxx numbers \nassigned to the affymetrix probe ids during the annotation now produce \nerrors in my further analyses.  When I look these ids up at Unigene I \nget a message that the id has been retired.  Is there a better way to \nhave this table annotated so that it is more current with the UniGene \ndatabase?\n\nStephanie\n\n\nStephanie K. Mewborn, Ph.D.\nPost-Doctoral Fellow\nUniversity of Chicago\nDepartment of Medicine, Section of Cardiology\nPhone:  773-702-2684\nFax:  773-702-2681\n\n\t[[alternative text/enriched version deleted]]",
+      "body_snippet": "I'm not sure of the best way to ask this question, but I'll try.  I \nused anncols and anntable within R to annotate my final list of up/down \ngenes from my array analysis.  I am using subsequent progr",
       "thread_id": "thread-6dbffe0dd944",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060104/3ef78f31/attachment.pl"
+      ]
     },
     {
       "id": "msg-4451e5335b0f",
@@ -785,11 +800,14 @@
       "subject_clean": "[BioC] GO in Bioconductor",
       "in_reply_to": "<20060104192955.E64B74CD0E@pascal.dfci.harvard.edu>",
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060105/32019df1/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060105/32019df1/attachment.pl",
+      "body_plain": "Dear John,\n \n Thank you very much for your reply. I would like to know, how to get GOID from gene name? Is it possible using BioC or I have to do it explicitely?\n \n Regards,\n Kaustubh\n\nJohn Zhang <jzhang at jimmy.harvard.edu> wrote: \n> How can I use Gene Ontology in BioC? Is there any tutorial or manual \navailable? Especially how can I construct (extract) a tree if I have a gene name \n(e.g. RAD52)\n\nGO() lists all the environments of the GO package.\n?environment name gives you the description of the environment of interest with \nsome example code.\n\nFor the thing you would like to do you may try to get the Gene id for the gene \n(e. g. 19365) and then do the following:\n\n> goids <- get(\"19365\", GOLOCUSID2GO)\n\nYou will get a few goids the gene maps to. Suppose we are interested in \nGO:0005515 that belongs to MF.\n\n> get(\"GO:0005515\", GOMFPARENTS) # Get the direct parents \n> get(\"GO:0005515\", GOMFCHILDREN) # Get the direct children\n> get(\"GO:0005515\", GOMFANCESTOR) # Get the parents and grand parents ...\n> get(\"GO:0005515\", GOMFOFFSPRING) # Get the children and grand children ...\n\nThe above do not give you enough to construct a GO tree but you can always \nsearch the Gene Ontology web site for a tree.\n\n\n\n> \n> Thanks and regards,\n> Kaustubh\n> \n>\n>  \n>---------------------------------\n>\n> Ring in the New Year with Photo Calendars. Add photos, events, holidays, \nwhatever.\n> [[alternative HTML version deleted]]\n>\n>_______________________________________________\n>Bioconductor mailing list\n>Bioconductor at stat.math.ethz.ch\n>https://stat.ethz.ch/mailman/listinfo/bioconductor\n\nJianhua Zhang\nDepartment of Medical Oncology\nDana-Farber Cancer Institute\n44 Binney Street\nBoston, MA 02115-6084\n\n\n\n\n\t\t\t\n---------------------------------\n\n Ring in the New Year with Photo Calendars. Add photos, events, holidays, whatever.\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear John,\n \n Thank you very much for your reply. I would like to know, how to get GOID from gene name? Is it possible using BioC or I have to do it explicitely?\n \n Regards,\n Kaustubh\n\nJohn Zhang <jzh",
       "thread_id": "thread-d1f86182e8c7",
       "thread_depth": 1,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060105/32019df1/attachment.pl"
+      ]
     },
     {
       "id": "msg-01dbc9569616",
@@ -801,11 +819,14 @@
       "subject_clean": "[BioC] 2-way Anova analysis",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060105/32ffd638/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060105/32ffd638/attachment.pl",
+      "body_plain": "Hi All,\n\nI am trying to analyze affy data for strain, treatment and their interaction\neffects (RMA normalized, log2 expression values). The design looks like\n\n   strain A --> treatment 1       strain B --> treatment 1\n                    treatment 2                         treatment 2\n\nso, I used anova(aov(expra ~ strain + treatment + strain*treatment, m)),\nwhere m <- data.frame(strain, treatment, expr)\n\nI have got the corresponding pvalues for strain, treatment & interaction\neffects( this for all the probsets).  Now, I would like to separate the\nnumber of significant probesets for strain A and strain B from strain effect\n(I would like to do the same for treatment effect).  How can I do this? Any\nhelp is very much appreciated.\n\nThanks in Advance.\nRegards,\nSharon\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi All,\n\nI am trying to analyze affy data for strain, treatment and their interaction\neffects (RMA normalized, log2 expression values). The design looks like\n\n   strain A --> treatment 1       strain ",
       "thread_id": "thread-01dbc9569616",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060105/32ffd638/attachment.pl"
+      ]
     },
     {
       "id": "msg-419d850204e7",
@@ -849,11 +870,14 @@
       "subject_clean": "[BioC] 2-way Anova analysis",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060105/c44bedfc/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060105/c44bedfc/attachment.pl",
+      "body_plain": "Hi All,\n\nI am trying to analyze affy data for strain, treatment and their interaction\neffects (RMA normalized, log2 expression values). The design looks like\n\n   strain A --> treatment 1       strain B --> treatment 1\n                    treatment 2                         treatment 2\n\nso, I used anova(aov(expra ~ strain + treatment + strain*treatment, m)),\nwhere m <- data.frame(strain, treatment, expr)\n\nI have got the corresponding pvalues for strain, treatment & interaction\neffects( this for all the probsets).  Now, I would like to separate the\nnumber of significant probesets for strain A and strain B from strain effect\n(I would like to do the same for treatment effect).  How can I do this? Any\nhelp is very much appreciated.\n\nThanks in Advance.\nRegards,\n Sharon\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi All,\n\nI am trying to analyze affy data for strain, treatment and their interaction\neffects (RMA normalized, log2 expression values). The design looks like\n\n   strain A --> treatment 1       strain ",
       "thread_id": "thread-1fa27ab34770",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060105/c44bedfc/attachment.pl"
+      ]
     },
     {
       "id": "msg-c044d9dc0d72",
@@ -1006,11 +1030,14 @@
       "references": [
         "<200601051825.k05IPrpr002572@itsa.ucsf.edu>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060106/4747e4e9/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060106/4747e4e9/attachment.pl",
+      "body_plain": "Hi Donglei & James\n\n\nThanks for your reply.  I am sorry for not making myself clear. I already\nhave this matrix that contains Probeset    p-value (strain effect) p-value\n(treatment effect) p-value (interaction).  As you suggested, I can use\npvalue cut-off to select probesets for strain effect. From the selected list\n(for strain effect), I would like to choose probsets that are significant\nfor Strain A and then for Strain B.  In the same way, I would like to select\nprobesets for Treatment A and Treatment B.\n\nI hope, this explains my problem.\nThanks again,\nSharon\n\n\nOn 1/5/06, donghu at itsa.ucsf.edu <donghu at itsa.ucsf.edu> wrote:\n>\n> Hi,\n>\n> You can make a matrix which has 4 columns:\n>\n> Probeset    p-value (strain effect) p-value (treatment effect) p-value\n> (interaction)\n>\n> Then you can select probe sets based on these p-values.\n>\n> Hope this helps.\n>\n> Donglei Hu\n>\n> On Thu, 5 Jan 2006 15:26:15 +0100 Sharon wrote:\n>\n> >  Hi All,\n> >\n> > I am trying to analyze affy data for strain, treatment and their\n> > interaction\n> > effects (RMA normalized, log2 expression values). The design looks like\n> >\n> >    strain A --> treatment 1       strain B --> treatment 1\n> >                     treatment 2                         treatment 2\n> >\n> > so, I used anova(aov(expra ~ strain + treatment + strain*treatment, m)),\n> > where m <- data.frame(strain, treatment, expr)\n> >\n> > I have got the corresponding pvalues for strain, treatment & interaction\n> > effects( this for all the probsets).  Now, I would like to separate the\n> > number of significant probesets for strain A and strain B from strain\n> > effect\n> > (I would like to do the same for treatment effect).  How can I do\n> > this? Any\n> > help is very much appreciated.\n> >\n> > Thanks in Advance.\n> > Regards,\n> >  Sharon\n> >\n> >       [[alternative HTML version deleted]]\n> >\n> > _______________________________________________\n> > Bioconductor mailing list\n> > Bioconductor at stat.math.ethz.ch\n> > https://stat.ethz.ch/mailman/listinfo/bioconductor\n> >\n>\n>\n>\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi Donglei & James\n\n\nThanks for your reply.  I am sorry for not making myself clear. I already\nhave this matrix that contains Probeset    p-value (strain effect) p-value\n(treatment effect) p-value (in",
       "thread_id": "thread-162d74a6129c",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060106/4747e4e9/attachment.pl"
+      ]
     },
     {
       "id": "msg-d224f1e14e43",
@@ -1096,11 +1123,14 @@
       "subject_clean": "[BioC] chromLocation",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060106/69d90a0e/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060106/69d90a0e/attachment.pl",
+      "body_plain": "Hello,\n \nI have created a chromLocation object by:\n \nchrObj.bands<-buildChromLocation.2(\"hgu133plus2\",major=c(\"arms\",\"bands\")\n \nI have a list of probe IDs for which I would like only the cytoband information. I am having trouble separating the genome position from the probe id and then matching the probe id to the cytoband information.  I would like a matrix:\n \nProbe Id     cytoband\nxxxxx           xxxxx\n \nAny help would be appreciated.\n \nThanks,\nBeth\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello,\n \nI have created a chromLocation object by:\n \nchrObj.bands<-buildChromLocation.2(\"hgu133plus2\",major=c(\"arms\",\"bands\")\n \nI have a list of probe IDs for which I would like only the cytoband info",
       "thread_id": "thread-f04956a58c23",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060106/69d90a0e/attachment.pl"
+      ]
     },
     {
       "id": "msg-52b6b813d360",
@@ -1199,11 +1229,14 @@
       "references": [
         "<3709c2370601050347x36abb801l71c6e10952d5ed5c@mail.gmail.com>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060109/a9dec95a/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060109/a9dec95a/attachment.pl",
+      "body_plain": "Hi,\nThank you very much for all your answers.\n\nSharon\n\nOn 1/5/06, Sharon Anbu <sharonanandhi at gmail.com> wrote:\n>\n> Hi All,\n>\n> I am trying to analyze affy data for strain, treatment and their\n> interaction effects (RMA normalized, log2 expression values). The design\n> looks like\n>\n>    strain A --> treatment 1       strain B --> treatment 1\n>                     treatment 2                         treatment 2\n>\n> so, I used anova(aov(expra ~ strain + treatment + strain*treatment, m)),\n> where m <- data.frame(strain, treatment, expr)\n>\n> I have got the corresponding pvalues for strain, treatment & interaction\n> effects( this for all the probsets).  Now, I would like to separate the\n> number of significant probesets for strain A and strain B from strain effect\n> (I would like to do the same for treatment effect).  How can I do this? Any\n> help is very much appreciated.\n>\n> Thanks in Advance.\n> Regards,\n> Sharon\n>\n>\n>\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi,\nThank you very much for all your answers.\n\nSharon\n\nOn 1/5/06, Sharon Anbu <sharonanandhi at gmail.com> wrote:\n>\n> Hi All,\n>\n> I am trying to analyze affy data for strain, treatment and their\n> int",
       "thread_id": "thread-01dbc9569616",
       "thread_depth": 1,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060109/a9dec95a/attachment.pl"
+      ]
     },
     {
       "id": "msg-04420729fa70",
@@ -1335,11 +1368,14 @@
       "subject_clean": "[BioC] GO enrichment for genome-wide analysis",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060109/e594c170/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060109/e594c170/attachment.pl",
+      "body_plain": "Hi,\n My understanding is that GOstats implements the GO term enrichment analysis for studies using microarrays (where the lib argument is passed to \"GOHyperG\" to define the microarray-specific environment, therefore the gene universe).\n I was wondering if there is a readilly-available function for determining GO term significance that uses the GO terms from the whole genome rather than the GO terms from the genes represented on an array. Please point me to this function if I have failed to find it in the documentation.\n Thanks \n -Burak Kutlu\n \n \n\n\t\t\t\n---------------------------------\n\n Got holiday prints? See all the ways to get quality prints in your hands ASAP.\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi,\n My understanding is that GOstats implements the GO term enrichment analysis for studies using microarrays (where the lib argument is passed to \"GOHyperG\" to define the microarray-specific environ",
       "thread_id": "thread-8acfdff493fb",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060109/e594c170/attachment.pl"
+      ]
     },
     {
       "id": "msg-4635d7053163",
@@ -1465,11 +1501,14 @@
       "subject_clean": "[BioC] GO enrichment for genome-wide analysis",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060110/d6a83ba3/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060110/d6a83ba3/attachment.pl",
+      "body_plain": "Hi,\n My understanding is that GOstats implements the GO term enrichment analysis for studies using microarrays (where the lib argument is passed to \"GOHyperG\" to define the microarray-specific environment, therefore the gene universe).\n I was wondering if there is a readilly-available function for determining GO term significance that uses the GO terms from the whole genome rather than the GO terms from the genes represented on an array. Please point me to this function if I have failed to find it in the documentation.\n Thanks \n -Burak Kutlu\n\n\t\t\n---------------------------------\n\n Ring in the New Year with Photo Calendars. Add photos, events, holidays, whatever.\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi,\n My understanding is that GOstats implements the GO term enrichment analysis for studies using microarrays (where the lib argument is passed to \"GOHyperG\" to define the microarray-specific environ",
       "thread_id": "thread-1e73a9de9cc8",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060110/d6a83ba3/attachment.pl"
+      ]
     },
     {
       "id": "msg-f5d4e8c2a667",
@@ -1657,11 +1696,14 @@
       "subject_clean": "[BioC] GO enrichment for genome-wide analysis",
       "in_reply_to": "<BFE9267F.35E1%sdavis2@mail.nih.gov>",
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060110/b86a6793/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060110/b86a6793/attachment.pl",
+      "body_plain": "Thanks a lot for the answer!\nIn that case, most of the software cited on the GO site are probably flawed. \n-burak\n\nSean Davis <sdavis2 at mail.nih.gov> wrote: \n\n\nOn 1/10/06 8:42 AM, \"James W. MacDonald\"  wrote:\n\n> burak kutlu wrote:\n>> Hi, My understanding is that GOstats implements the GO term\n>> enrichment analysis for studies using microarrays (where the lib\n>> argument is passed to \"GOHyperG\" to define the microarray-specific\n>> environment, therefore the gene universe). I was wondering if there\n>> is a readilly-available function for determining GO term significance\n>> that uses the GO terms from the whole genome rather than the GO terms\n>> from the genes represented on an array.\n> \n> I don't think you will find this anywhere, because it doesn't make\n> sense. The idea behind GOHyperG is similar to the canonical 'ball and\n> urn' scenario used in basic stats to explain the Hypergeometric\n> distribution.\n> \n> The goal is to determine the probability of reaching into an urn\n> containing a certain number of black and white balls, removing x balls\n> and having n of those balls be white.\n> \n> Your question is akin to asking the probability of reaching into an urn\n> containing black and white balls, removing x balls and having n of those\n> balls be white, but based on the relative proportion of black and white\n> balls in the world, instead of the proportion of black and white balls\n> in the urn. Since the proportion of black and white balls may be quite\n> different in the urn as compared to the world, you cannot generalize\n> like that.\n\nAs Jim points out, it's a bad idea to do what you propose, but if you really\nwant to, there ARE online and standalone applications that will allow you to\ndo this.  One example is at:\n\nhttp://david.niaid.nih.gov/david/ease.htm\n\nBut there are several others.\n\nSean\n\n\n\n\n\n\t\t\n---------------------------------\n\n Photo Books. You design it and we’ll bind it!\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Thanks a lot for the answer!\nIn that case, most of the software cited on the GO site are probably flawed. \n-burak\n\nSean Davis <sdavis2 at mail.nih.gov> wrote: \n\n\nOn 1/10/06 8:42 AM, \"James W. MacDonal",
       "thread_id": "thread-1e73a9de9cc8",
       "thread_depth": 3,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060110/b86a6793/attachment.pl"
+      ]
     },
     {
       "id": "msg-e24b2d7396fb",
@@ -1960,11 +2002,14 @@
       "subject_clean": "[BioC] loop design matrix",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060111/283343b1/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060111/283343b1/attachment.pl",
+      "body_plain": "I'm confused about my design matrix for a loop design experiment. This is a\nsix-membered direct design that can be drawn as a hexagram inscribed in a\nhexagon (where the corners are treatments, obviously).\n\nHere is what my targets look like:\n\nCy3 Cy5\nA   B\nB   C\nC   D\nD   E\nE  RC\nRC   A\nA   C\nB   D\nC   E\nD  RC\nE   A\nRC   B\n\nThere are three ways I can conceive of constructing my design matrix for\nthis. The first is to use the modelMatrix function with the parameters\nargument, but I don't really understand how this should be done, and this\nmight be my problem. The second is to declare an arbitrary reference and use\nthe modelMatrix function, as described in the user's manual:\n\ndesignmatrix <- modelMatrix(targets, ref=\"RC\")\n\nWhen I do this I get the following design matrix\n\nA  B  C  D  E\n-1  1  0  0  0\n0 -1  1  0  0\n0  0 -1  1  0\n0  0  0 -1  1\n0  0  0  0 -1\n1  0  0  0  0\n-1  0  1  0  0\n0 -1  0  1  0\n0  0 -1  0  1\n0  0  0 -1  0\n1  0  0  0 -1\n0  1  0  0  0\n\nWhich is fine, except when I use this to fit my data:\n\ndesignfit <- lmFit(RG, design=designmatrix, method=\"ls\")\n\nI see the following annotation in the generated data:\n\nWarning message:\ndesign matrix is singular\n\n>From reading threads on the listserv, I understand this to mean that some of\nthe coefficients are non-estimable, but I don't know why this is the case.\nSo as a third possibility, I thought I might create my own design matrix.  I\ncame up with the following matrix, which is apparently also wrong:\n\n       A  B  C  D  E RC\n [1,]  1 -1  0  0  0  0\n [2,]  0  1 -1  0  0  0\n [3,]  0  0  1 -1  0  0\n [4,]  0  0  0  1 -1  0\n [5,]  0  0  0  0  1 -1\n [6,] -1  0  0  0  0  1\n [7,]  1  0 -1  0  0  0\n [8,]  0  1  0 -1  0  0\n [9,]  0  0  1  0 -1  0\n[10,]  0  0  0  1  0 -1\n[11,] -1  0  0  0  1  0\n[12,]  0 -1  0  0  0  1\n\nI say it's apparently wrong because when I fit the data, I get the\nfollowing:\n\n> designfittest = lmFit(RGAn, design=design, method=\"ls\")\nCoefficients not estimable: RC\n\nIs this due to the same singularity problem? I did note on another web site\n(http://discover.nci.nih.gov/microarrayAnalysis/Experimental.Design.jsp)\nthat it is sometimes desirable to append the matrix with a row of 1's to\nforce a single solution to the fit and wondered if this was what I was\nmissing.  I know a few other people who are struggling with this same type\nof issue, and we'd all love some clarification.\n\nThanks,\n\nMatt\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "I'm confused about my design matrix for a loop design experiment. This is a\nsix-membered direct design that can be drawn as a hexagram inscribed in a\nhexagon (where the corners are treatments, obvious",
       "thread_id": "thread-8094f9165a20",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060111/283343b1/attachment.pl"
+      ]
     },
     {
       "id": "msg-e7b02acb2ccf",
@@ -2170,11 +2215,14 @@
         "<mailman.1.1137063600.21683.bioconductor@stat.math.ethz.ch>",
         "<3300.58.104.101.1.1137067198.squirrel@homebase.wehi.edu.au>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060112/347ce19a/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060112/347ce19a/attachment.pl",
+      "body_plain": "On 1/12/06, Gordon K Smyth <smyth at wehi.edu.au> wrote:\n>\n> > Date: Wed, 11 Jan 2006 10:50:16 -0700\n> > From: Matthew Scholz <schmatthew at gmail.com>\n> > Subject: [BioC] loop design matrix\n> > To: bioconductor at stat.math.ethz.ch\n> >\n> > I'm confused about my design matrix for a loop design experiment. This\n> is a\n> > six-membered direct design that can be drawn as a hexagram inscribed in\n> a\n> > hexagon (where the corners are treatments, obviously).\n> >\n> > Here is what my targets look like:\n> >\n> > Cy3 Cy5\n> > A   B\n> > B   C\n> > C   D\n> > D   E\n> > E  RC\n> > RC   A\n> > A   C\n> > B   D\n> > C   E\n> > D  RC\n> > E   A\n> > RC   B\n> >\n> > There are three ways I can conceive of constructing my design matrix for\n> > this. The first is to use the modelMatrix function with the parameters\n> > argument, but I don't really understand how this should be done, and\n> this\n> > might be my problem. The second is to declare an arbitrary reference and\n> use\n> > the modelMatrix function, as described in the user's manual:\n> >\n> > designmatrix <- modelMatrix(targets, ref=\"RC\")\n> >\n> > When I do this I get the following design matrix\n> >\n> > A  B  C  D  E\n> > -1  1  0  0  0\n> > 0 -1  1  0  0\n> > 0  0 -1  1  0\n> > 0  0  0 -1  1\n> > 0  0  0  0 -1\n> > 1  0  0  0  0\n> > -1  0  1  0  0\n> > 0 -1  0  1  0\n> > 0  0 -1  0  1\n> > 0  0  0 -1  0\n> > 1  0  0  0 -1\n> > 0  1  0  0  0\n>\n> This design matrix is perfectly correct.\n>\n> > Which is fine, except when I use this to fit my data:\n> >\n> > designfit <- lmFit(RG, design=designmatrix, method=\"ls\")\n> >\n> > I see the following annotation in the generated data:\n> >\n> > Warning message:\n> > design matrix is singular\n>\n> The warning message you report cannot be produced by the command that you\n> give.  This particular\n> warning can only be produced by subsetting your data object to reduce the\n> number of arrays, which\n> you must have done elsewhere during your R session.  Your confusion seems\n> to be simply that you\n> are not keeping track correctly of which commands produce which output.\n\n\nThe confusion is not *simply* that I am not keeping track of output. As I've\nalready stated, this message appears in the generated data (the data\nobject), not in the output. The question remains as to why it should appear\nat all if, as you say below, there is no singularity problem.\n\n\n>>From reading threads on the listserv, I understand this to mean that some\n> of\n> > the coefficients are non-estimable, but I don't know why this is the\n> case.\n> > So as a third possibility, I thought I might create my own design\n> matrix.  I\n> > came up with the following matrix, which is apparently also wrong:\n> >\n> >        A  B  C  D  E RC\n> >  [1,]  1 -1  0  0  0  0\n> >  [2,]  0  1 -1  0  0  0\n> >  [3,]  0  0  1 -1  0  0\n> >  [4,]  0  0  0  1 -1  0\n> >  [5,]  0  0  0  0  1 -1\n> >  [6,] -1  0  0  0  0  1\n> >  [7,]  1  0 -1  0  0  0\n> >  [8,]  0  1  0 -1  0  0\n> >  [9,]  0  0  1  0 -1  0\n> > [10,]  0  0  0  1  0 -1\n> > [11,] -1  0  0  0  1  0\n> > [12,]  0 -1  0  0  0  1\n> >\n> > I say it's apparently wrong because when I fit the data, I get the\n> > following:\n> >\n> >> designfittest = lmFit(RGAn, design=design, method=\"ls\")\n> > Coefficients not estimable: RC\n> >\n> > Is this due to the same singularity problem?\n>\n> Before there was no singularity problem.  Now there is.\n>\n> > I did note on another web site\n> > (http://discover.nci.nih.gov/microarrayAnalysis/Experimental.Design.jsp)\n> > that it is sometimes desirable to append the matrix with a row of 1's to\n> > force a single solution to the fit and wondered if this was what I was\n> > missing.\n>\n> There's no need for this.  If there was a need, it was say so in the\n> User's Guide.\n>\n> >  I know a few other people who are struggling with this same type\n> > of issue, and we'd all love some clarification.\n> >\n> > Thanks,\n> > Matt\n>\n> Has the above clarified the matter?\n\n\nNot really.\n\n\nWarmest regards,\n\n\n\nMatt\n\n\n\n\n--\nMatt Scholz\nSenior Research Specialist\nDepartment of Plant Sciences\nUniversity of Arizona\n(520) 621-1695\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "On 1/12/06, Gordon K Smyth <smyth at wehi.edu.au> wrote:\n>\n> > Date: Wed, 11 Jan 2006 10:50:16 -0700\n> > From: Matthew Scholz <schmatthew at gmail.com>\n> > Subject: [BioC] loop design matrix\n> > To: b",
       "thread_id": "thread-f4ccf71bad49",
       "thread_depth": 1,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060112/347ce19a/attachment.pl"
+      ]
     },
     {
       "id": "msg-e9f5f18f5e6b",
@@ -2189,11 +2237,14 @@
         "<mailman.1.1137063600.21683.bioconductor@stat.math.ethz.ch>",
         "<3300.58.104.101.1.1137067198.squirrel@homebase.wehi.edu.au>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060112/69e4e341/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060112/69e4e341/attachment.pl",
+      "body_plain": "On 1/12/06, Gordon K Smyth <smyth at wehi.edu.au> wrote:\n>\n> > Date: Wed, 11 Jan 2006 10:50:16 -0700\n> > From: Matthew Scholz <schmatthew at gmail.com>\n> > Subject: [BioC] loop design matrix\n> > To: bioconductor at stat.math.ethz.ch\n> >\n> > I'm confused about my design matrix for a loop design experiment. This\n> is a\n> > six-membered direct design that can be drawn as a hexagram inscribed in\n> a\n> > hexagon (where the corners are treatments, obviously).\n> >\n> > Here is what my targets look like:\n> >\n> > Cy3 Cy5\n> > A   B\n> > B   C\n> > C   D\n> > D   E\n> > E  RC\n> > RC   A\n> > A   C\n> > B   D\n> > C   E\n> > D  RC\n> > E   A\n> > RC   B\n> >\n> > There are three ways I can conceive of constructing my design matrix for\n> > this. The first is to use the modelMatrix function with the parameters\n> > argument, but I don't really understand how this should be done, and\n> this\n> > might be my problem. The second is to declare an arbitrary reference and\n> use\n> > the modelMatrix function, as described in the user's manual:\n> >\n> > designmatrix <- modelMatrix(targets, ref=\"RC\")\n> >\n> > When I do this I get the following design matrix\n> >\n> > A  B  C  D  E\n> > -1  1  0  0  0\n> > 0 -1  1  0  0\n> > 0  0 -1  1  0\n> > 0  0  0 -1  1\n> > 0  0  0  0 -1\n> > 1  0  0  0  0\n> > -1  0  1  0  0\n> > 0 -1  0  1  0\n> > 0  0 -1  0  1\n> > 0  0  0 -1  0\n> > 1  0  0  0 -1\n> > 0  1  0  0  0\n>\n> This design matrix is perfectly correct.\n>\n> > Which is fine, except when I use this to fit my data:\n> >\n> > designfit <- lmFit(RG, design=designmatrix, method=\"ls\")\n> >\n> > I see the following annotation in the generated data:\n> >\n> > Warning message:\n> > design matrix is singular\n>\n> The warning message you report cannot be produced by the command that you\n> give.  This particular\n> warning can only be produced by subsetting your data object to reduce the\n> number of arrays, which\n> you must have done elsewhere during your R session.  Your confusion seems\n> to be simply that you\n> are not keeping track correctly of which commands produce which output.\n\n\nThe confusion is not *simply* that I am not keeping track of output. As I've\nalready stated, this message appears in the generated data (the data\nobject), not in the output. The question remains as to why it should appear\nat all if, as you say below, there is no singularity problem.\n\n>>From reading threads on the listserv, I understand this to mean that some\n> of\n> > the coefficients are non-estimable, but I don't know why this is the\n> case.\n> > So as a third possibility, I thought I might create my own design\n> matrix.  I\n> > came up with the following matrix, which is apparently also wrong:\n> >\n> >        A  B  C  D  E RC\n> >  [1,]  1 -1  0  0  0  0\n> >  [2,]  0  1 -1  0  0  0\n> >  [3,]  0  0  1 -1  0  0\n> >  [4,]  0  0  0  1 -1  0\n> >  [5,]  0  0  0  0  1 -1\n> >  [6,] -1  0  0  0  0  1\n> >  [7,]  1  0 -1  0  0  0\n> >  [8,]  0  1  0 -1  0  0\n> >  [9,]  0  0  1  0 -1  0\n> > [10,]  0  0  0  1  0 -1\n> > [11,] -1  0  0  0  1  0\n> > [12,]  0 -1  0  0  0  1\n> >\n> > I say it's apparently wrong because when I fit the data, I get the\n> > following:\n> >\n> >> designfittest = lmFit(RGAn, design=design, method=\"ls\")\n> > Coefficients not estimable: RC\n> >\n> > Is this due to the same singularity problem?\n>\n> Before there was no singularity problem.  Now there is.\n>\n> > I did note on another web site\n> > (http://discover.nci.nih.gov/microarrayAnalysis/Experimental.Design.jsp)\n> > that it is sometimes desirable to append the matrix with a row of 1's to\n> > force a single solution to the fit and wondered if this was what I was\n> > missing.\n>\n> There's no need for this.  If there was a need, it was say so in the\n> User's Guide.\n>\n> >  I know a few other people who are struggling with this same type\n> > of issue, and we'd all love some clarification.\n> >\n> > Thanks,\n> > Matt\n>\n> Has the above clarified the matter?\n>\n> Not really.\n\n\n> Warmest regards,\n\n\n\nMatt\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "On 1/12/06, Gordon K Smyth <smyth at wehi.edu.au> wrote:\n>\n> > Date: Wed, 11 Jan 2006 10:50:16 -0700\n> > From: Matthew Scholz <schmatthew at gmail.com>\n> > Subject: [BioC] loop design matrix\n> > To: b",
       "thread_id": "thread-f4ccf71bad49",
       "thread_depth": 1,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060112/69e4e341/attachment.pl"
+      ]
     },
     {
       "id": "msg-919f1b8826f5",
@@ -2205,11 +2256,14 @@
       "subject_clean": "[BioC] brandes.betweenness.centrality (RBGL library) for weighted graphs",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060112/e3b2d501/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060112/e3b2d501/attachment.pl",
+      "body_plain": "Hello,\n\nI wish to calculate Brande's betweenness centrality for a weighted graph (where edges have weights).\nHowever, when I used brandes.betweenness.centrality (RBGL library), the results are the same for weighted and unweighted test graphs for which the results should differ.\nIs there a way to make this function work for weighted graphs?\n\nMany thanks,\nDan Bebber\n\nDepartment of Plant Sciences\nUniversity of Oxford\nUK\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello,\n\nI wish to calculate Brande's betweenness centrality for a weighted graph (where edges have weights).\nHowever, when I used brandes.betweenness.centrality (RBGL library), the results are the sam",
       "thread_id": "thread-919f1b8826f5",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060112/e3b2d501/attachment.pl"
+      ]
     },
     {
       "id": "msg-f64c24dd439b",
@@ -2382,11 +2436,14 @@
         "<3035b8df0601120722x507f2e0fv6c7879866234991b@mail.gmail.com>",
         "<3449.58.104.101.1.1137105294.squirrel@homebase.wehi.edu.au>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060112/096bd78a/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060112/096bd78a/attachment.pl",
+      "body_plain": "Gordon,\n\nThank you for your thoughtful reply. I apologize for not having provided a\nmore thorough accounting of my R session. To save space, I have left out the\noutput of the initial steps (reading in the files, kooperberg correcting\nthem, and quantile normalizing), but would be happy to provide them if you\nthink they would be of use. I have, nonetheless, included the code I\ninputted to generate the data object RGAn that I pass to the lmFit function.\n\n\ntargetsA <- readTargets(\"targetsA.txt\")\nspottypes <- readSpotTypes()\n\n# create filter for bad spots\n\nfilters <- function(x) {\nokred <- x[,\"F635 Mean\"] < 65534\nokgreen <- x[,\"F532 Mean\"] < 65534\nfat <- x[,\"Dia.\"] > 50\nskinny <- x[,\"Dia.\"] < 150\npresent <- x[,\"Normalize\"] < 1\ngood <- x[,\"Flags\"] > -50.5\nas.numeric(okred & okgreen & fat & skinny & present & good)\n}\n\n#read in data and gal file\n\nRGA = read.maimages(targetsA$FileName, source=\"genepix\", wt.fun=filters,\nother.columns=c(\"F635 SD\",\n\"B635 SD\", \"F532 SD\", \"B532 SD\", \"F Pixels\", \"B Pixels\", \"B532 Mean\",\"B635\nMean\"))\n\n## kooperberg correction\n\nRGAkoop <- kooperberg(RGA)\nRGAmodel <- normalizeWithinArrays(RGAkoop)\n\n#quantile normalization\nRGAn <- normalizeBetweenArrays(RGAmodel, method=\"quantile\")\n\n#Now, here is where I begin logging both input and output\n\n> targetsA\n                    SlideNumber Name                FileName Cy3 Cy5\n2005-11-18_A130high           1 A130 2005-11-18_A130high.gpr   A   B\n2005-11-16_A121high           2 A121 2005-11-16_A121high.gpr   B   C\n2005-11-15_A117high           3 A117 2005-11-15_A117high.gpr   C   D\n2005-11-16_A119high           4 A119 2005-11-16_A119high.gpr   D   E\n2005-11-17_A127high           5 A127 2005-11-17_A127high.gpr   E  RC\n2005-11-17_A128high           6 A128 2005-11-17_A128high.gpr  RC   A\n2005-11-17_A129high           7 A129 2005-11-17_A129high.gpr   A   C\n2005-11-18_A131high           8 A131 2005-11-18_A131high.gpr   B   D\n2005-11-16_A120high           9 A120 2005-11-16_A120high.gpr   C   E\n2005-11-15_A118high          10 A118 2005-11-15_A118high.gpr   D  RC\n2005-11-22_A137high          11 A137 2005-11-22_A137high.gpr   E   A\n2005-11-18_A136high          12 A136 2005-11-18_A136high.gpr  RC   B\n> designmatrix <- modelMatrix(targetsA, ref=\"RC\")\nFound unique target names:\n A B C D E RC\n> designmatrix\n                     A  B  C  D  E\n2005-11-18_A130high -1  1  0  0  0\n2005-11-16_A121high  0 -1  1  0  0\n2005-11-15_A117high  0  0 -1  1  0\n2005-11-16_A119high  0  0  0 -1  1\n2005-11-17_A127high  0  0  0  0 -1\n2005-11-17_A128high  1  0  0  0  0\n2005-11-17_A129high -1  0  1  0  0\n2005-11-18_A131high  0 -1  0  1  0\n2005-11-16_A120high  0  0 -1  0  1\n2005-11-15_A118high  0  0  0 -1  0\n2005-11-22_A137high  1  0  0  0 -1\n2005-11-18_A136high  0  1  0  0  0\n> designfitA <- lmFit(RGAn, design=designmatrix, method=\"ls\")\n> designfitA <- eBayes(designfitA)\n\n#And here's a look at a subset of the data object with the warning that I am\nasking about\n\n> designfitA[2,1]\nAn object of class \"MArrayLM\"\n$coefficients\n              A\n[1,] 0.07587446\n\n$stdev.unscaled\n             A\n[1,] 0.7007649\n\n$sigma\n[1] 2.338142\n\n$df.residual\n[1] 6\n\n$cov.coefficients\n          [,1]\n[1,] 0.4166667\n\n$pivot\n[1] 1 2 3 4 5\n\n$method\n[1] \"ls\"\n\n$design\n                     A B C D E\n2005-11-18_A130high -1 1 0 0 0\n\n$genes\n  Block Row Column         ID     Name\n2     1   1      2 MZ00040730 TC245883\n\n$Amean\n[1] 6.35853\n\n$df.prior\n[1] 3.102594\n\n$s2.prior\n[1] 0.5266471\n\n$var.prior\n[1] 0.5289733\n\n$proportion\n[1] 0.01\n\n$s2.post\n[1] 3.783035\n\n$t\n              A\n[1,] 0.05566768\n\n$p.value\n             A\n[1,] 0.9568093\n\n$lods\n             A\n[1,] -4.959734\n\n$F\n[1] 0.3347732\n\n$F.p.value\n[1] 0.879682\n\nWarning message:\ndesign matrix is singular\n\nThanks again,\n\nMatt\n\n\nOn 1/12/06, Gordon K Smyth <smyth at wehi.edu.au> wrote:\n>\n> On Fri, January 13, 2006 2:22 am, Matthew Scholz wrote:\n> >On 1/12/06, Gordon K Smyth <smyth at wehi.edu.au> wrote:\n> >> > Date: Wed, 11 Jan 2006 10:50:16 -0700\n> >> > From: Matthew Scholz <schmatthew at gmail.com>\n> >> > Subject: [BioC] loop design matrix\n> >> > To: bioconductor at stat.math.ethz.ch\n> >> >\n> >> > I'm confused about my design matrix for a loop design experiment.\n> This\n> >> is a\n> >> > six-membered direct design that can be drawn as a hexagram inscribed\n> in\n> >> a\n> >> > hexagon (where the corners are treatments, obviously).\n> >> >\n> >> > Here is what my targets look like:\n> >> >\n> >> > Cy3 Cy5\n> >> > A   B\n> >> > B   C\n> >> > C   D\n> >> > D   E\n> >> > E  RC\n> >> > RC   A\n> >> > A   C\n> >> > B   D\n> >> > C   E\n> >> > D  RC\n> >> > E   A\n> >> > RC   B\n> >> >\n> >> > There are three ways I can conceive of constructing my design matrix\n> for\n> >> > this. The first is to use the modelMatrix function with the\n> parameters\n> >> > argument, but I don't really understand how this should be done, and\n> >> this\n> >> > might be my problem. The second is to declare an arbitrary reference\n> and\n> >> use\n> >> > the modelMatrix function, as described in the user's manual:\n> >> >\n> >> > designmatrix <- modelMatrix(targets, ref=\"RC\")\n> >> >\n> >> > When I do this I get the following design matrix\n> >> >\n> >> > A  B  C  D  E\n> >> > -1  1  0  0  0\n> >> > 0 -1  1  0  0\n> >> > 0  0 -1  1  0\n> >> > 0  0  0 -1  1\n> >> > 0  0  0  0 -1\n> >> > 1  0  0  0  0\n> >> > -1  0  1  0  0\n> >> > 0 -1  0  1  0\n> >> > 0  0 -1  0  1\n> >> > 0  0  0 -1  0\n> >> > 1  0  0  0 -1\n> >> > 0  1  0  0  0\n> >>\n> >> This design matrix is perfectly correct.\n> >>\n> >> > Which is fine, except when I use this to fit my data:\n> >> >\n> >> > designfit <- lmFit(RG, design=designmatrix, method=\"ls\")\n> >> >\n> >> > I see the following annotation in the generated data:\n> >> >\n> >> > Warning message:\n> >> > design matrix is singular\n> >>\n> >> The warning message you report cannot be produced by the command that\n> you\n> >> give.  This particular\n> >> warning can only be produced by subsetting your data object to reduce\n> the\n> >> number of arrays, which\n> >> you must have done elsewhere during your R session.  Your confusion\n> seems\n> >> to be simply that you\n> >> are not keeping track correctly of which commands produce which output.\n> >\n> >The confusion is not *simply* that I am not keeping track of output. As\n> I've\n> >already stated, this message appears in the generated data (the data\n> >object), not in the output.\n>\n> I'm sorry that you're finding the design matrix confusing.  This is a\n> difficult topic, but I've\n> tried hard to make the process as smooth as possible in the limma package\n> and in the\n> documentation.\n>\n> Your particular question here remains very hard to understand.  You say\n> that you've found this\n> warning message in a data object, but limma commands do not imbed warning\n> messages in data\n> objects.  And the particular limma command that you give doesn't generate\n> this particular warning\n> message either at the screen or in a data object.\n>\n> Is it possible that you are not using limma directly, but are using it\n> through a third-party\n> interface of some sort?  If so, please tell us what software you are using\n> and how you are using\n> it.  Perhaps you are using R functions written by someone else.  Is it\n> possible that there are R\n> functions being used, other than those in limma and publicly available\n> packages, that you don't\n> see?\n>\n> If you are writing all your own R code, you need to give us the actual\n> code that produced the\n> warning message.  You need to tell us what the data object was and in what\n> part of it you found\n> the warning message.  Give us the R commands which created the object, and\n> the commands which you\n> used to extract the warning message.  In other words, cut and paste a\n> session from your computer\n> which produces the warning message, without editing anything out.  If the\n> session output is very\n> long, it might be a good idea to try create a session with produces less\n> output but still gives\n> the same warning message.  But the important thing is not to edit anything\n> out.\n>\n> Best wishes\n> Gordon\n>\n>\n>\n\n\n--\nMatt Scholz\nSenior Research Specialist\nDepartment of Plant Sciences\nUniversity of Arizona\n(520) 621-1695\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Gordon,\n\nThank you for your thoughtful reply. I apologize for not having provided a\nmore thorough accounting of my R session. To save space, I have left out the\noutput of the initial steps (reading in",
       "thread_id": "thread-f4ccf71bad49",
       "thread_depth": 3,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060112/096bd78a/attachment.pl"
+      ]
     },
     {
       "id": "msg-d8db0bf9e566",
@@ -2420,11 +2477,14 @@
       "subject_clean": "[BioC] meta analysis of multiple microarray data",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060112/2fb0af61/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060112/2fb0af61/attachment.pl",
+      "body_plain": "Hi, all,\n  I have four Affymetrix micorarray datasets from different platform and want to make the datasets meta analysis between the comparison of tumor and the normal tissues.\n   \n  Have you have the experience on this analysis? Any suggestiosn and advice will be much appreciated.\n   \n  Thanks in advance.\n   \n\n\nBest Regards\n \nHan Weinong  \nhanweinong at yahoo.com\n\n\t\t\t\n---------------------------------\n\n Got holiday prints? See all the ways to get quality prints in your hands ASAP.\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi, all,\n  I have four Affymetrix micorarray datasets from different platform and want to make the datasets meta analysis between the comparison of tumor and the normal tissues.\n   \n  Have you have th",
       "thread_id": "thread-933aa4998459",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060112/2fb0af61/attachment.pl"
+      ]
     },
     {
       "id": "msg-aca4c27f9dfd",
@@ -2914,11 +2974,14 @@
       "subject_clean": "[BioC] How to analysis Y98 chips using RankProd package?",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060116/6f5bfd4a/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060116/6f5bfd4a/attachment.pl",
+      "body_plain": "Dear R and Bioconductor Helpers,\n\nI am using a package called RankProd under Bioconductor to analysis my\nY98 (yeast) microarray data. I had no problem following the example in\nthe vignette but got stocked when I tried to analyze my own data. \n\nWhen I tried to run the following command, \n\nRP.out <- RP(rrf.sub, rrf.cl.sub, gene.names = y98.gnames, rand = 123)\n\nI got the following response:\n\nRank Product analysis for two-class case \n \nStarting 100 permutations... \nComputing pfp .. \nError in \"row.names<-.data.frame\"(`*tmp*`, value = c(\"logical(0)\",\n\"logical(0)\",  : \n        duplicate 'row.names' are not allowed\n\nWhat is the problem? Is there something wrong with my gene names file?\nHow can I fix it? \n\nThank you very much for your kind help. \n\n\nBest Regards,\n\n- Cleo \n\n\n\nChia-Wen Cleo Chang\nPhD Student\nCMB, BioCentrum-DTU, Building 223, room 213 \nTechnical University of Denmark, DK-2800 Lyngby, Denmark \nTelephone: +45 4525 2997, Fax: +45 4588 4148 \nE-mail: cwc at biocentrum.dtu.dk \n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear R and Bioconductor Helpers,\n\nI am using a package called RankProd under Bioconductor to analysis my\nY98 (yeast) microarray data. I had no problem following the example in\nthe vignette but got sto",
       "thread_id": "thread-395603bd996b",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060116/6f5bfd4a/attachment.pl"
+      ]
     },
     {
       "id": "msg-19aa0960e508",
@@ -2980,11 +3043,14 @@
       "subject_clean": "[BioC] affy & problems with memory",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060116/9919e2e9/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060116/9919e2e9/attachment.pl",
+      "body_plain": "For those of you who prefer to keep everything in R, here is a costly option: get a 64-bit machine and plenty of memory (> 64GB). In a large clinical trail setting or pharmaceuticals, this kind of machine is easily available. \n\nWith that being said, I have run many \"stupidly inefficient\" codes. It is efficient for your brain, though. \n\nA recent run was 250 arrays of human U133A. The peak memory usage was above 15 GB. No crash, the SAME code as I run 8 arrays.\n\n-Simon\n\nMessage: 18\nDate: Sat, 14 Jan 2006 09:22:02 -0000\nFrom: \"Xiaofan Li\" <xiaofan.mlist at gmail.com>\nSubject: Re: [BioC] affy & problems with memory\nTo: <kfbargad at ehu.es>\nCc: bioconductor at stat.math.ethz.ch\nMessage-ID: <43c8c2bb.30dbc6c5.0fb3.ffff945e at mx.gmail.com>\nContent-Type: text/plain; charset=\"ISO-8859-1\"\n\nHi,\n\nI have met with similar problems (memory allocation limit) dealing with\naffy. I have seen that the maximum memory allocation for R in Windows XP is\nthe same size as your physical memory, say, in my case it is 768M. Reading\nsome 40 U133A CEL files will cause the error. I managed to *avoid* this\nerror by *separately loading the files*, for example, I load 20 files at a\ntime then save the image, close R, re-open it and reload the image. I have\nsuccessfully loaded 1.4G CEL files (121 chips) on my 768M laptop, creating a\n450M RData image. \n\nHowever there are further problems with various data pre-processing methods.\nWith a certain pile of chips (about 20), it is very easy to cause a memory\nallocation fault when doing rma(), expresso() and normalize(), both in\nWindows XP and Linux. And the problem is no longer a typical \"768M limit\"\none, but related to the size of the target object. Since R seems to have\nused no object compressing approaches, this might have been the real memory\nlimit (in Windows: physical mem + virtual mem size; in Linux: physical mem +\nswap disk size).\n\nSince R doesn't seem to have a data compressing approach as well as cleaning\nand garbage collection mechanism, I would suggest that adding more RAMs into\nyour computer is the only way to solve the problem (alternatively you can\nincrease the swap/virtual memory size up to (4GB - physical mem), bearing\nthat extremely poor system performance).\n\nXiaofan Li\nDAMTP, University of Cambridge, CB3 0WA, UK Tel +44 7886 614030, Email\nxl252 at cam.ac.uk\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "For those of you who prefer to keep everything in R, here is a costly option: get a 64-bit machine and plenty of memory (> 64GB). In a large clinical trail setting or pharmaceuticals, this kind of mac",
       "thread_id": "thread-657cccc8f5d6",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060116/9919e2e9/attachment.pl"
+      ]
     },
     {
       "id": "msg-d9dab38c0e8c",
@@ -3014,11 +3080,14 @@
       "subject_clean": "[BioC] (no subject)",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060116/2ef1d3b4/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060116/2ef1d3b4/attachment.pl",
+      "body_plain": "Please dissregard the message sent earlier concerning problems with ebayes. I\nwas able to track down the problem on my end -- I had inadvertently renamed a\nfunction used by tmixture.vector. \n\n-----Original Message-----\nFrom: Dustin Potter\nSent: Mon 01/16/2006 17:56\nTo: bioconductor at stat.math.ethz.ch\nSubject: \n \nI keep getting the following error when trying to use the ebayes function in\nthe limma package:\n\n\"Error in tmixture.vector(tstat[, j], stdev.unscaled[, j], df, proportion,  :\n\n\tNAs are not allowed in subscripted assignments\"\n\nI am running R version 2.2 on a Mac OS X version 4.4. I get the  error even\nwhen I run the example given in the help file for ebayes, e.g.,\n\n> set.seed(2004); invisible(runif(100))\n> M <- matrix(rnorm(100*6,sd=0.3),100,6)\n> M[1,] <- M[1,] + 1\n> fit <- lmFit(M)\n> eb <- ebayes(fit)\nError in tmixture.vector(tstat[, j], stdev.unscaled[, j], df, proportion,  : \n\tNAs are not allowed in subscripted assignments\n\nHelp getting around this problem would be appreciated.\n\nThank you,\nDustin Potter\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Please dissregard the message sent earlier concerning problems with ebayes. I\nwas able to track down the problem on my end -- I had inadvertently renamed a\nfunction used by tmixture.vector. \n\n-----Ori",
       "thread_id": "thread-b95522c816a4",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060116/2ef1d3b4/attachment.pl"
+      ]
     },
     {
       "id": "msg-fb18190d2a09",
@@ -3283,11 +3352,14 @@
       "subject_clean": "[BioC] Gene Ontology graphs: root at the top?",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060118/54d5c51d/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060118/54d5c51d/attachment.pl",
+      "body_plain": "Dear BioC users,\n\nIs it possible to make a hierarchical graph with the root at the top?\n\n\tThe code I used so far is something like:\n\t\n\tlibrary(GOstats)\n\tlibrary(Rgraphviz)\n\tgoid <- c(\"GO:0006882\", \"GO:0016049\")\n\tbasic_graph <- GOGraph(goid, GOBPPARENTS)\n\tAttrs <- list()\n\tnode_color <- c(rep(\"red\",length(nodes(basic_graph))))\n\tAttrs$fillcolor <- node_color\n\tnode_fontsize <- c(rep(40,length(nodes(basic_graph))))\n\tAttrs$fontsize <- node_fontsize\n\tnode_shape <- rep(\"ellipse\", length(nodes(basic_graph)))\n\tAttrs$shape <- node_shape\n\tnode_fixedsize <- rep(FALSE, length(nodes(basic_graph)))\n\tAttrs$fixedsize <- node_fixedsize\n\tAttrs <- lapply(Attrs, function(x) {\n\t\tnames(x) <- nodes(basic_graph)\n\t\tx\n\t\t})\n\tbasic_nodes <- buildNodeList(basic_graph, nodeAttrs = Attrs)\n\tbasic_edges <- buildEdgeList(basic_graph)\n\tcolored_graph <- agopen(name = \"foo\", nodes = basic_nodes, edges =\nbasic_edges, edgeMode = \"undirected\")\n\tplot(colored_graph)\nThis last line will show a graph with the root at the bottom and the most\nspecific GOs at the top. Also plot(basic_graph) will show such a graph (but\nwith the standard attributes like white nodes in the shape of a circle etc).\nI would like to show it up side down (root at the top). \nI can specify a layout when plotting the object called \"basic_graph\" using\nthe plot() function. The layouts I know are dot (default), neato, twopi,\ncirco and fdp.  However, these options do not result in what I have in mind.\nSo far, I have not yet found the parameter(s) which define(s) the position\nof a node (e.g. x,y coordinates) on the plot. Could anyone give me a hint?\nThanks in advance!\nBest regards,\nAn\nScientist Functional Genomics\n\n\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear BioC users,\n\nIs it possible to make a hierarchical graph with the root at the top?\n\n\tThe code I used so far is something like:\n\t\n\tlibrary(GOstats)\n\tlibrary(Rgraphviz)\n\tgoid <- c(\"GO:0006882\", \"GO",
       "thread_id": "thread-f27e6060064d",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060118/54d5c51d/attachment.pl"
+      ]
     },
     {
       "id": "msg-7e7f998bce82",
@@ -3846,11 +3918,14 @@
         "<D3B2D1D42476904387B5F785D398F7C1274AB4@EMAIL.mpimp-golm.mpg.de>",
         "<001501c61dcc$be4c4080$6601ba81@GOPALANS>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060120/d95d417c/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060120/d95d417c/attachment.pl",
+      "body_plain": "What I tell my students in my experimental design class is that \nexperiments need to have both internal validity and external validity.\n\nInternal validity means that we can reproduce our results by a \nsimilar experiment.  This implies that we need to control extraneous \nfactors that might affect the outcome of interest.\n\nExternal validity means that we can make inference to the population \nof interest.  This implies that we need to assess the variability of \nthe response in the population at large, which is in opposition to \ncontrolling variation to ensure internal validity.\n\nThe strength of the randomized complete block design (i.e. batches \ngrown separately and all conditions measured on each block) is that \nwe can use tight control within block and do comparisons that are \ninternally valid, while allowing our blocks to reflect the population \nvariability.\n\nWe should not pool samples across different blocks.  We need an \nassessment of the between block variability to assess the \nreproducibility of the results in the entire population.  There is a \nnice literature on pooling (e.g. Kendziorski and colleagues which \nincludes experimental results or my paper in Applied Bioinformatics, \n2004 which gives theoretical results based on a 2nd order mixed model).\n\n--Naomi\n\nAt 09:20 AM 1/20/2006, Suresh Gopalan wrote:\n>I agree that independent replication is the best bet as of now, \n>though it has the risk of introduction of new defects/hidden \n>variables that influence the phenotype in question, which may indeed \n>be relevant or constitute another line of study.\n>\n>If one decides to take this risk or for other reasons does \n>experiments in perfectly identical (reproducible?) conditions and \n>take replicates pooled from a very large population (50 plants each \n>in 3 replicates) as mentioned below: if that removes some \n>variability inherent to each plant, so be it. Isn't the goal to \n>study the variable of interest masking the irrelevant variables (at \n>least in that study)?  How would this make statistical testing invalid?\n>\n>I wonder if in either case it is any different or worse than the \n>normalization schemes and assumptions used in many of the currently \n>used popular analysis or summary schemes?\n>\n>Suresh\n>\n>(Suresh Gopalan, Ph.D)\n>\n>\n>----- Original Message ----- From: \"Matthew Hannah\" <Hannah at mpimp-golm.mpg.de>\n>To: \"Naomi Altman\" <naomi at stat.psu.edu>; <fhong at salk.edu>\n>Cc: <bioconductor at stat.math.ethz.ch>\n>Sent: Friday, January 20, 2006 6:02 AM\n>Subject: Re: [BioC] Biological replication (was RNA degradation problem)\n>\n>\n>>>\n>>>The question of what is appropriate biological replication is\n>>>a tough one.  The objective is to obtain results that are\n>>>valid in the population of interest, which usually is not\n>>>plants grown in a single batch in the green house.  But how\n>>>much variability should we induce?  Each batch of plants\n>>>grown separately but in the same building (different growth\n>>>chambers), grown in different labs?  different universities?\n>>\n>>Yes, but this is more a question of 'some' biological replication versus\n>>none. Obviously, if you have perfect reproducability of your growth\n>>conditions then repeat experiments will have little influence, but in my\n>>experience independent experiments suitably accounts for slight\n>>environmental and sampling (eg:time) variability. Plants grown under the\n>>same conditions are highly reproducable, so even the random block design\n>>might not be ideal depending on what the environmental factors are -\n>>light, water, temp etc.. I would always favour separate, independent\n>>experiments.\n>>\n>>As for reproducability in general this is a problem. I'm sure in all\n>>fields that some patterns found by a certain lab, labelling, scanning\n>>etc.. will not be reproducible. For example, I wonder how many training\n>>set - sample set molecular diagnosis studies would continue to work if\n>>new independent data is introduced without updating the whole study.\n>>\n>>>In my very first Affy experiment, the investigator did the\n>>>following:  2 batches of plants grown separately, 2 samples\n>>>of plants from 1 of the batches, 2 microarrays from one of\n>>>the samples, for 4 arrays in all.\n>>>The correlation among the results was 2 arrays from same\n>>>sample > 2 samples from same batch > 2 batches.  This should\n>>>be no surprise, even though we did not have enough\n>>>replication to do any formal testing.\n>>>\n>>>I think at minimum that you want to achieve results that\n>>>would be replicable within your own lab.  That would suggest\n>>>batches of plants grown separately from separate batches of seed.\n>>>\n>>>The best plan is a randomized complete block design, with\n>>>every condition sampled in every block.  If the conditions\n>>>are tissues, this is readily achieved.\n>>\n>>I assume you mean random in each independent experiment, and then\n>>independently repeated, in which case this is the best approach.\n>>\n>>>Personally, I look at the density plots of the probes on the\n>>>arrays.  If they have the same \"shape\" (which is usually a\n>>>unimodal distribution with long tail to the right on the log2\n>>>scale) then I cross my fingers (that is supposed to bring\n>>>good luck) and use RMA.  Most of the experiments I have been\n>>>involved with using arabidopsis arrays have involved tissue\n>>>differences, and the amount of differential expression has\n>>>been huge on the probeset scale (over 60% of genes), but\n>>>these probe densities have been pretty similar.\n>>\n>>I always look at RNAdeg and PLM as well, but in most cases this is also\n>>seen on the density plots.\n>>\n>>Cheers,\n>>MAtt\n>>\n>>> >From: fhong at salk.edu [mailto:fhong at salk.edu]\n>>> >Sent: Thu 19/01/2006 21:27\n>>> >To: Matthew Hannah\n>>> >Cc: bioconductor at stat.math.ethz.ch\n>>> >Subject: Re: [BioC] RNA degradation problem\n>>> >\n>>> >\n>>> >\n>>> >Hi Matthew,\n>>> >\n>>> >Thank you very much for your help.\n>>> >\n>>> > > >It's amazing how many\n>>> > >> lab plant biologists see pooled samples from a bulk of\n>>>plants grown\n>>> > >> at the same time as biological replicates when they are\n>>>clearly not.\n>>> > >I would think that all plants under experiment shoudl be\n>>>grown at the\n>>> > >same time without different conditions/treatments. Biological\n>>> > >replicates should be tissue samples from differnt groupd\n>>>of plants,\n>>> > >say sample from 50 plants as replicate1 and sample from\n>>>another 50 as replicate 2.\n>>> > >Do you think that biological replicates should be grown at\n>>>different time?\n>>> >\n>>> >\n>>> >Absolutely! Biological replication must be either single\n>>>plants grown\n>>> >in the same experiment (but noone wants to risk single plants for\n>>> >arrays) or large pools of plants from INDEPENDENT\n>>>experiments (or the\n>>> >pools must be smaller than sample size - doesn't really happen for\n>>> >arrays) otherwise what biological variability are you\n>>>sampling? Say you\n>>> >have 150 plants growing in the greenhouse and you harvest 3 random\n>>> >pools of 50 as your 3 'biological replicates' then you will have\n>>> >eliminated all variability from them and the arrays will be\n>>>as good as\n>>> >technical replicates and any statistical testing is invalid.\n>>> >\n>>> > >> I find hist, RNA deg, AffyPLM and a simple RMA norm followed by\n>>> > >> plot(as.data.frame(exprs(eset.rma))) can answer in most\n>>>cases for\n>>> > >> why it didn't work, or won't work - in the rare case\n>>>when someone\n>>> > >> asks for QC\n>>> > > >before rather than after they realise the data is strange ;-)\n>>> > >This actually pull out another question: when % of\n>>>differential genes\n>>> > >is large, which normalization better works better?\n>>> >I've posted on this alot about 1.5 years ago, you should\n>>>find it in the\n>>> >archives - but simply noone knows or has tested it\n>>> >\n>>> >\n>>> > >http://cactus.salk.edu/temp/QC_t.doc\n>>> > >Take a look at the last plot, which clearly indicate homogeneous\n>>> > >within replicates and heterogeneous among samples.\n>>> > >(1) Will stem top and stem base differ so much? Or it is the\n>>> > >preparation process bring in extra correlaton within replicates.\n>>> > >(2) when % of differential genes is large, which\n>>>normalization better\n>>> > >works better?\n>>> >Looking at these scatterplots, I can honestly say I've never seen so\n>>> >much DE. I would be suprised if samples such as different stem\n>>> >positions were so different. Something must be wrong with\n>>>the samples\n>>> >or sampling in my opinion. The scatterplots are slightly more user\n>>> >friendly if you use pch=\".\"\n>>> >\n>>> >HTH,\n>>> >\n>>> >Matt\n>>> >\n>>> >\n>>> >\n>>> >\n>>> >\n>>> >\n>>> >--------------------\n>>> >Fangxin Hong  Ph.D.\n>>> >Plant Biology Laboratory\n>>> >The Salk Institute\n>>> >10010 N. Torrey Pines Rd.\n>>> >La Jolla, CA 92037\n>>> >E-mail: fhong at salk.edu\n>>> >(Phone): 858-453-4100 ext 1105\n>>> >\n>>> >_______________________________________________\n>>> >Bioconductor mailing list\n>>> >Bioconductor at stat.math.ethz.ch\n>>> >https://stat.ethz.ch/mailman/listinfo/bioconductor\n>>>\n>>>Naomi S. Altman                                814-865-3791 (voice)\n>>>Associate Professor\n>>>Dept. of Statistics                              814-863-7114 (fax)\n>>>Penn State University                         814-865-1348\n>>>(Statistics)\n>>>University Park, PA 16802-2111\n>>>\n>>\n>>_______________________________________________\n>>Bioconductor mailing list\n>>Bioconductor at stat.math.ethz.ch\n>>https://stat.ethz.ch/mailman/listinfo/bioconductor\n>\n>\n\nNaomi S. Altman                                814-865-3791 (voice)\nAssociate Professor\nDept. of Statistics                              814-863-7114 (fax)\nPenn State University                         814-865-1348 (Statistics)\nUniversity Park, PA 16802-2111\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "What I tell my students in my experimental design class is that \nexperiments need to have both internal validity and external validity.\n\nInternal validity means that we can reproduce our results by a ",
       "thread_id": "thread-8aa87c80b5c4",
       "thread_depth": 2,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060120/d95d417c/attachment.pl"
+      ]
     },
     {
       "id": "msg-af1d3fb960b1",
@@ -3984,11 +4059,14 @@
       "subject_clean": "[BioC] Limma design matrix or contract matrix",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060120/14b2990d/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060120/14b2990d/attachment.pl",
+      "body_plain": "I am using limma to analyze my experiment which involves twelve 2-color hybridizations of 3 stages (E, F ,G) with 4 biological replicates.  Each stage has 2 types (Active, Inactive).  The direct comparisons are active (A) to inactive (I) for each stage with balanced dye swaps.\n\nI want to see the results of active vs inactive for each stage and then compare the results between stages E -> F and F -> G.  Is this design correct, notably the last 2 columns?  Slides 1->4 are stage E, 5->8 are stage F, and 9-12 are stage G.  The first two slides are labelled the same and the last two are the dye swaps.  \n\nSlide E_AI F_AI G_AI E_F F_G\n1     1    0    0    1   0   \n2     1    0    0    1   0   \n3    -1    0    0   -1   0  \n4    -1    0    0   -1   0  \n5     0    1    0   -1   1   \n6     0    1    0   -1   1   \n7     0   -1    0    1  -1   \n8     0   -1    0    1  -1   \n9     0    0    1    0  -1  \n10    0    0    1    0  -1  \n11    0    0   -1    0   1  \n12    0    0   -1    0   1   \n\n\nIs a contrast matrix the correct method for the indirect comparisons (between stages)?\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "I am using limma to analyze my experiment which involves twelve 2-color hybridizations of 3 stages (E, F ,G) with 4 biological replicates.  Each stage has 2 types (Active, Inactive).  The direct compa",
       "thread_id": "thread-0af817539d32",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060120/14b2990d/attachment.pl"
+      ]
     },
     {
       "id": "msg-006d5db68c0e",
@@ -4270,11 +4348,14 @@
       "subject_clean": "[BioC] Problem in Making CDF Package",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060123/a40f0670/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060123/a40f0670/attachment.pl",
+      "body_plain": "hi, all,\n\nI am new in using Bioconductor. I have R (Version 2.2.1) and Packages \"affy\" and \"makecdfenv\" on the UNIX machine and a CDF file in working directory. When I used \n\n> make.cdf.package(\"enterocha520147F.CDF\")\nReading CDF file.\n^C\n>\n\nR never finished reading CDF file. I had to use ^C to get back. Thanks in advance for any help.\n\n-M\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "hi, all,\n\nI am new in using Bioconductor. I have R (Version 2.2.1) and Packages \"affy\" and \"makecdfenv\" on the UNIX machine and a CDF file in working directory. When I used \n\n> make.cdf.package(\"enter",
       "thread_id": "thread-bc8656c83b9d",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060123/a40f0670/attachment.pl"
+      ]
     },
     {
       "id": "msg-badbf69b302f",
@@ -4336,11 +4417,14 @@
       "subject_clean": "[BioC] limma: irregular spacing between within-array replicates",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060123/4a940a11/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060123/4a940a11/attachment.pl",
+      "body_plain": "Hi, Dr. Smyth and Bioconductor mailing list:\n\n \n\nDr. Smyth, Thank you very much for making such a nice package, limma, for\nmicroarray analysis. \n\n \n\nI have a question for irregular spacing for within-array replicates. I have\nfour technical replicates on one array, but the spacing between them is not\nregular. The spacing between the first and second replicates is 16, the\nspacing between the second and third is 176, and the spacing between the\nthird and the fourth is 16 again. How can I calculate correlation for within\narray replicates based on irregular spacing to make full use of within array\nreplicates?\n\n \n\nI highly appreciate any suggestions and comments.\n\n \n\nHua Weng\n\nMicroarray Core Facility\n\nOklahoma State University \n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi, Dr. Smyth and Bioconductor mailing list:\n\n \n\nDr. Smyth, Thank you very much for making such a nice package, limma, for\nmicroarray analysis. \n\n \n\nI have a question for irregular spacing for within-",
       "thread_id": "thread-2d21f549a86a",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060123/4a940a11/attachment.pl"
+      ]
     },
     {
       "id": "msg-7a527912f46f",
@@ -4402,11 +4486,14 @@
       "subject_clean": "[BioC] limma: irregular spacing between within-array replicates",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060123/4890ea8e/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060123/4890ea8e/attachment.pl",
+      "body_plain": "After normalization, which could rely on the chip layout, you can order your data by gene, and assume a spacing of 1\ni.e.\nMA<-MA[order(RG$genes[,\"Name\"]),]\ncorfit <- duplicateCorrelation(MA, ndups=4, spacing=1)\n\nthis assumes that:\n- there is a  Name column in the gens slot that contains the same value for each replicate spot\n- each gene is replicated exactly 4 times\n- if multiple probes are used for a gene they have different names\n\n-----Original Message-----\nFrom: bioconductor-bounces at stat.math.ethz.ch on behalf of Hua Weng\nSent: Mon 23-Jan-06 9:22 PM\nTo: 'Gordon Smyth'; 'BioC Mailing List'\nSubject: Re: [BioC] limma: irregular spacing between within-array replicates\n \nHi, Dr. Smyth and Bioconductor mailing list:\n\n \n\nDr. Smyth, Thank you very much for making such a nice package, limma, for\nmicroarray analysis. \n\n \n\nI have a question for irregular spacing for within-array replicates. I have\nfour technical replicates on one array, but the spacing between them is not\nregular. The spacing between the first and second replicates is 16, the\nspacing between the second and third is 176, and the spacing between the\nthird and the fourth is 16 again. How can I calculate correlation for within\narray replicates based on irregular spacing to make full use of within array\nreplicates?\n\n \n\nI highly appreciate any suggestions and comments.\n\n \n\nHua Weng\n\nMicroarray Core Facility\n\nOklahoma State University \n\n\n\t[[alternative HTML version deleted]]\n\n_______________________________________________\nBioconductor mailing list\nBioconductor at stat.math.ethz.ch\nhttps://stat.ethz.ch/mailman/listinfo/bioconductor\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "After normalization, which could rely on the chip layout, you can order your data by gene, and assume a spacing of 1\ni.e.\nMA<-MA[order(RG$genes[,\"Name\"]),]\ncorfit <- duplicateCorrelation(MA, ndups=4, ",
       "thread_id": "thread-149f85cc95c6",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060123/4890ea8e/attachment.pl"
+      ]
     },
     {
       "id": "msg-f76728c06d83",
@@ -4418,11 +4505,14 @@
       "subject_clean": "[BioC] limma control spot weights and normalization",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060123/0e0d13b7/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060123/0e0d13b7/attachment.pl",
+      "body_plain": "Will setting control spots to zero affect normalization within/among\narrays?\n\n \n\nI've inherited a set of scripts for gene expression analysis of Agilent\ntwo-color arrays.  We are using ScanExpress software by Perkins to get\nconvert the images to R,G intensities so \"read.maimages\" and readGAL\nhave been adapted.  \n\n \n\nI just noticed that there is a line that sets the RG$genes$ControlType\nvalues to zero if they are positive or negative controls.  Then those\nare included in the weights file.\n\n \n\nIs this a problem?  Should I be using something more like\nwtIgnore.Filter?   \n\n \n\nWe have 1502 control spots / array.\n\n \n\nThanks,  \n\n \n\nKathryn Steiger\n\nIllumigen Biosciences\n\nSeattle, WA\n\n \n\n \n\n \n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Will setting control spots to zero affect normalization within/among\narrays?\n\n \n\nI've inherited a set of scripts for gene expression analysis of Agilent\ntwo-color arrays.  We are using ScanExpress sof",
       "thread_id": "thread-f76728c06d83",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060123/0e0d13b7/attachment.pl"
+      ]
     },
     {
       "id": "msg-bb7225e46c5a",
@@ -4582,11 +4672,14 @@
       "subject_clean": "[BioC] limma: irregular spacing between within-array replicates",
       "in_reply_to": "<40964D91251A18469CB08B6E96FB30BA0EF765@mailc.lumcnet.prod.intern>",
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060124/2e12fcbd/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060124/2e12fcbd/attachment.pl",
+      "body_plain": "Dear Oosting and Dr. Smyth:\n\n \n\nAfter I tried my regular spacing microarray data, I found that the common\ncoefficient after order with spacing =1 is different from the coefficient\nwith original spacing without order. And the difference is big, the first\none with order is 0.5618, the second one without order is 0.1711. Also the\nB-statistics based on first one is only half of the value of the\nB-statistics of the second one. Could you be kind enough to tell me why this\nhappens and is there some other good way can solve this irregular spacing\nproblem?\n\n \n\nThank you very much,\n\n \n\nHua Weng\n\n \n\n  _____  \n\nFrom: Oosting, J. (PATH) [mailto:J.Oosting at lumc.nl] \nSent: Monday, January 23, 2006 3:50 PM\nTo: Hua Weng; Gordon Smyth; BioC Mailing List\nSubject: RE: [BioC] limma: irregular spacing between within-array replicates\n\n \n\nAfter normalization, which could rely on the chip layout, you can order your\ndata by gene, and assume a spacing of 1\ni.e.\nMA<-MA[order(RG$genes[,\"Name\"]),]\ncorfit <- duplicateCorrelation(MA, ndups=4, spacing=1)\n\nthis assumes that:\n- there is a  Name column in the gens slot that contains the same value for\neach replicate spot\n- each gene is replicated exactly 4 times\n- if multiple probes are used for a gene they have different names\n\n-----Original Message-----\nFrom: bioconductor-bounces at stat.math.ethz.ch on behalf of Hua Weng\nSent: Mon 23-Jan-06 9:22 PM\nTo: 'Gordon Smyth'; 'BioC Mailing List'\nSubject: Re: [BioC] limma: irregular spacing between within-array replicates\n\nHi, Dr. Smyth and Bioconductor mailing list:\n\n\n\nDr. Smyth, Thank you very much for making such a nice package, limma, for\nmicroarray analysis.\n\n\n\nI have a question for irregular spacing for within-array replicates. I have\nfour technical replicates on one array, but the spacing between them is not\nregular. The spacing between the first and second replicates is 16, the\nspacing between the second and third is 176, and the spacing between the\nthird and the fourth is 16 again. How can I calculate correlation for within\narray replicates based on irregular spacing to make full use of within array\nreplicates?\n\n\n\nI highly appreciate any suggestions and comments.\n\n\n\nHua Weng\n\nMicroarray Core Facility\n\nOklahoma State University\n\n\n        [[alternative HTML version deleted]]\n\n_______________________________________________\nBioconductor mailing list\nBioconductor at stat.math.ethz.ch\nhttps://stat.ethz.ch/mailman/listinfo/bioconductor\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear Oosting and Dr. Smyth:\n\n \n\nAfter I tried my regular spacing microarray data, I found that the common\ncoefficient after order with spacing =1 is different from the coefficient\nwith original spacin",
       "thread_id": "thread-149f85cc95c6",
       "thread_depth": 1,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060124/2e12fcbd/attachment.pl"
+      ]
     },
     {
       "id": "msg-fa33f8d8e16f",
@@ -4614,11 +4707,14 @@
       "subject_clean": "[BioC] Problem in Making CDF Package",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060124/17abd75a/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060124/17abd75a/attachment.pl",
+      "body_plain": "Thanks. Sorry for not giving enough information.\nWe successfully made the package on another machine. \n\n-M\n\n-----Original Message-----\nFrom: James W. MacDonald [mailto:jmacdon at med.umich.edu]\nSent: Tue 1/24/2006 9:40 AM\nTo: Yao, Minghua\nCc: bioconductor at stat.math.ethz.ch\nSubject: Re: [BioC] Problem in Making CDF Package\n \nYao, Minghua wrote:\n> hi, all,\n> \n> I am new in using Bioconductor. I have R (Version 2.2.1) and Packages\n> \"affy\" and \"makecdfenv\" on the UNIX machine and a CDF file in working\n> directory. When I used\n> \n> \n>> make.cdf.package(\"enterocha520147F.CDF\")\n> \n> Reading CDF file. ^C\n> \n> \n> R never finished reading CDF file. I had to use ^C to get back.\n> Thanks in advance for any help.\n\nThis is not enough information. How long did you wait for R to read the \nCDF file? This step can take several minutes, depending on the size of \nthe CDF (and much longer if you have very little RAM and are swapping). \nHow large is this CDF? How much RAM do you have? What is the result of a \nsessionInfo() after loading the makecdfenv package?\n\nBest,\n\nJim\n\n\n> \n> -M\n> \n> [[alternative HTML version deleted]]\n> \n> _______________________________________________ Bioconductor mailing\n> list Bioconductor at stat.math.ethz.ch \n> https://stat.ethz.ch/mailman/listinfo/bioconductor\n\n\n-- \nJames W. MacDonald\nAffymetrix and cDNA Microarray Core\nUniversity of Michigan Cancer Center\n1500 E. Medical Center Drive\n7410 CCGC\nAnn Arbor MI 48109\n734-647-5623\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Thanks. Sorry for not giving enough information.\nWe successfully made the package on another machine. \n\n-M\n\n-----Original Message-----\nFrom: James W. MacDonald [mailto:jmacdon at med.umich.edu]\nSent: ",
       "thread_id": "thread-af03d5bf4fbc",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060124/17abd75a/attachment.pl"
+      ]
     },
     {
       "id": "msg-4f9badb98d50",
@@ -4646,11 +4742,14 @@
       "subject_clean": "[BioC] limma: irregular spacing between within-array replicates",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060124/d879a78b/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060124/d879a78b/attachment.pl",
+      "body_plain": "Dear Hua Weng,\n\nYou should probably check whether your regular spacing data is indeed regular spacing. Try a few grep(\"genename\", RG$genes[,\"Name\"]) and check if the spacing is identical between spots\n\nBecause the correlation value is larger after sorting, I think that the spacing or layout you're using without ordering is not correct.\n \nJan Oosting \n\n>Dear Oosting and Dr. Smyth:\n>\n>After I tried my regular spacing microarray data, I found that the common coefficient after order with spacing =1 is different >from the coefficient with original spacing without order. And the difference is big, the first one with order is 0.5618, the >second one without order is 0.1711. Also the B-statistics based on first one is only half of the value of the B-statistics of the >second one. Could you be kind enough to tell me why this happens and is there some other good way can solve this irregular >spacing problem?\n>\n>Thank you very much,\n>\n> \n>\n>Hua Weng\n\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear Hua Weng,\n\nYou should probably check whether your regular spacing data is indeed regular spacing. Try a few grep(\"genename\", RG$genes[,\"Name\"]) and check if the spacing is identical between spots",
       "thread_id": "thread-b3c897f5c2ee",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060124/d879a78b/attachment.pl"
+      ]
     },
     {
       "id": "msg-053e096a0521",
@@ -4834,11 +4933,14 @@
       "subject_clean": "[BioC] Graph Layout",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060125/fce12440/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060125/fce12440/attachment.pl",
+      "body_plain": "Dear All,\n \n How can I use the numbers returned by the layout functions (like, kamada.kawai spring layout) for actually drawing a graph?\n \n I could not find it in the RBGL vignettes.\n \n Thank you and regards,\n Kaustubh\n \n\n\t\t\n---------------------------------\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear All,\n \n How can I use the numbers returned by the layout functions (like, kamada.kawai spring layout) for actually drawing a graph?\n \n I could not find it in the RBGL vignettes.\n \n Thank you and ",
       "thread_id": "thread-b4120cba27b2",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060125/fce12440/attachment.pl"
+      ]
     },
     {
       "id": "msg-9610069ebcaa",
@@ -4959,11 +5061,14 @@
         "<43D788FC.4010504@curie.fr>",
         "<43D7982F.70303@med.umich.edu>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060125/5a2a1cb9/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060125/5a2a1cb9/attachment.pl",
+      "body_plain": "Hi,\n\nWill working at probe-level instead of probesets be of any help in this\nsitutaion (with two samples)?\n\nNicolas, may be you can try this: HTself: self-self based statistical test\nfor low-replication microarray studies* @\nhttp://blasto.iq.usp.br/~rvencio/HTself/index.html\n<http://http://blasto.iq.usp.br/%7Ervencio/HTself/index.html>*\nHope, this helps.\nRegards,\nSharon\n\n\nOn 1/25/06, James W. MacDonald <jmacdon at med.umich.edu> wrote:\n>\n> Nicolas Servant wrote:\n> > Thanks for your answer,\n> > But in this case, i have to choose a fold change threshold ! And it is\n> > supported that the FC tends to be greater at low expression levels.\n> > For instance a FC greater than 2 for expression values near 50 is\n> > readily seen, but it is low probability to observe FC greater than 2 for\n> > expression values near 1000\n> > So i would like to use a more robust approach.\n>\n> With only two samples, you are stuck with fold changes. However, you\n> might be able to make your results more robust by filtering out those\n> genes that you think are too small. I often use kOverA() in the\n> genefilter package to do this.\n>\n> Best,\n>\n> Jim\n>\n>\n> >\n> > Regards,\n> > Nicolas S.\n> >\n> > Sean Davis wrote:\n> >\n> >\n> >>On 1/25/06 8:34 AM, \"Nicolas Servant\" <Nicolas.Servant at curie.fr> wrote:\n> >>\n> >>\n> >>\n> >>\n> >>>Hello,\n> >>>\n> >>>Does anybody know a R package or function to compare expression level\n> >>>(affy data) of two groups with no replicates in each group ? In fact,\n> >>>just compare one array to an other.\n> >>>The purpose is to find differentially expressed genes.\n> >>>We cannot used statistical test (not enougth replicates), but we can\n> >>>used graphical approach based on scatter plot, and outliers detection\n> >>>approach.\n> >>>\n> >>>\n> >>\n> >>Simply take array A and divide it by array B.  Then rank the genes by\n> those\n> >>ratios.\n> >>\n> >>Sean\n> >>\n> >>_______________________________________________\n> >>Bioconductor mailing list\n> >>Bioconductor at stat.math.ethz.ch\n> >>https://stat.ethz.ch/mailman/listinfo/bioconductor\n> >>\n> >>\n> >>\n> >>\n> >\n> >\n> >\n>\n>\n> --\n> James W. MacDonald\n> Affymetrix and cDNA Microarray Core\n> University of Michigan Cancer Center\n> 1500 E. Medical Center Drive\n> 7410 CCGC\n> Ann Arbor MI 48109\n> 734-647-5623\n>\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor at stat.math.ethz.ch\n> https://stat.ethz.ch/mailman/listinfo/bioconductor\n>\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi,\n\nWill working at probe-level instead of probesets be of any help in this\nsitutaion (with two samples)?\n\nNicolas, may be you can try this: HTself: self-self based statistical test\nfor low-replicati",
       "thread_id": "thread-04522a682e04",
       "thread_depth": 4,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060125/5a2a1cb9/attachment.pl"
+      ]
     },
     {
       "id": "msg-3f36fd088927",
@@ -5010,11 +5115,14 @@
       "subject_clean": "[BioC] subsetting in limma",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060125/ea01238d/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060125/ea01238d/attachment.pl",
+      "body_plain": "Hi Edmund,\n\n\n> > fit2 = contrasts.fit(fit, cont.matrix)\n> > fit2 = eBayes(fit2)\n> > results2 <- decideTests(fit2)\n> > selected.wt<- p.adjust(fit2$F.p.value, method=\"fdr\") < 0.05\n>\n> My question is how do I export the genes names in \"selected.wt\" out as a\n> text file?\n> I tried\n> > write.csv(selected.wt, \"selected.wt.csv\")\n> but I get a single column with TRUE and FALSE.\n\n\n\nSelected.wt contains the results of the Boolean test for every gene in fit2\n(i.e, TRUE/FALSE). To get the gene names try:\n\nselected_geneNames <- fit2$genes[selected.wt,]\n\nHope this helps,\n\nLourdes\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi Edmund,\n\n\n> > fit2 = contrasts.fit(fit, cont.matrix)\n> > fit2 = eBayes(fit2)\n> > results2 <- decideTests(fit2)\n> > selected.wt<- p.adjust(fit2$F.p.value, method=\"fdr\") < 0.05\n>\n> My question is how",
       "thread_id": "thread-f587c6976315",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060125/ea01238d/attachment.pl"
+      ]
     },
     {
       "id": "msg-000f30664cfb",
@@ -5095,11 +5203,14 @@
       "subject_clean": "[BioC] A question about multiple testing and GOHyperG",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060126/4416941e/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060126/4416941e/attachment.pl",
+      "body_plain": "Hi all. I'm about to submit a paper and I have used the functions available\nin the \"GOstats\" package to do most of the work for me. I have a question\nabout multiple testing and the output of significant GO-terms that you get\nusing the GOHyperG function. I quote R. Gentleman as he states it in the\nhelpfile.\n\n \n\n\"First and most importantly it is not clear how to do any form of p-value\n\n correction in this case. The tests are not independent and the\n\n underlying structure of the GO graph present certain problems that\n\n still need to be addressed.\"\n\n \n\nI have also red the very informative previous discussion on bioC list from\n2004 http://files.protsuggest.org/biocond/html/3732.html\n\n \n\nIf I want to motivate that I do not correct for multiple testing in my paper\nand mention that I am aware of that and that I see the results only as a\nguide to common \"themes\" in my data, does anyone have any suggestion of any\nreferences dealing with this issue that I can use? \n\n \n\nBest regards\n\n \n\nJohan L\n\n \n\n****************************************************************************\n***************\n\nJohan Lindberg\n\nRoyal Institute of Technology\n\nAlbaNova University Center\n\nStockholm Center for Physics, Astronomy and Biotechnology\n\nDepartment of Molecular Biotechnology\n\nVisiting address:\n\nRoslagstullsbacken 21, Floor 3\n\n106 91 Stockholm, Sweden\n\nDelivering address:\n\nRoslagstullsbacken 30B\n\n104 06 Stockholm, Sweden\n\nPhone (office) +46 8 553 783 44\n\nFax + 46 8 553 784 81\n\nhttp://www.ktharray.se/\n\nhttp://www.arrayadvice.se/\n\n****************************************************************************\n*************** \n\n \n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi all. I'm about to submit a paper and I have used the functions available\nin the \"GOstats\" package to do most of the work for me. I have a question\nabout multiple testing and the output of significa",
       "thread_id": "thread-65d196dd0141",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060126/4416941e/attachment.pl"
+      ]
     },
     {
       "id": "msg-1773fdfee8f6",
@@ -5268,11 +5379,14 @@
       "subject_clean": "[BioC] Normalization Strategies for Cross-species Comparisons",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060126/947981bf/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060126/947981bf/attachment.pl",
+      "body_plain": "Hi Folks:\n\n \n\nWe have affy chips from human tissues (hgu133A chip) and tissues from a\nmouse model (MOE403A chip).  The objective of this experiment is to\ncompare expression levels across species.  My primary question for the\ngroup is, \"What is the best strategy for normalizing the arrays?\"\nShould we use gc RMA to normalize the entire collection of arrays (human\nand mouse) as a single set; or, should we apply gc RMA separately to\neach set of chips?  What do you suggest?\n\n \n\nCheers,\n\n \n\nJohn E. Cornell, Ph.D.\n\nAssociate Professor\n\nCenter for Epidemiology and Biostatistics\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi Folks:\n\n \n\nWe have affy chips from human tissues (hgu133A chip) and tissues from a\nmouse model (MOE403A chip).  The objective of this experiment is to\ncompare expression levels across species.  My ",
       "thread_id": "thread-3838aa7a9cea",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060126/947981bf/attachment.pl"
+      ]
     },
     {
       "id": "msg-dbea69c1f55e",
@@ -5488,11 +5602,14 @@
       "subject_clean": "[BioC] Graph Layout",
       "in_reply_to": "<2352.128.178.84.133.1138357611.squirrel@expasy-ng.isb-sib.ch>",
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060127/27e9ea0f/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060127/27e9ea0f/attachment.pl",
+      "body_plain": "Hi,\n \n I want to draw graph using a spring-embedding.\n \n Regards,\n Kaustubh\n\nLi Long <lilong at isb-sib.ch> wrote: \nIf what you want is just to draw the graph, you really should consider\nusing Rgraphviz package, where \"neato\"/\"fdp\" do the layout using these\nalgorithms.\n\nLi\n\n> Dear All,\n>\n>  How can I use the numbers returned by the layout functions (like,\n> kamada.kawai spring layout) for actually drawing a graph?\n>\n>  I could not find it in the RBGL vignettes.\n>\n>  Thank you and regards,\n>  Kaustubh\n\n\n\n\n\t\t\n---------------------------------\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi,\n \n I want to draw graph using a spring-embedding.\n \n Regards,\n Kaustubh\n\nLi Long <lilong at isb-sib.ch> wrote: \nIf what you want is just to draw the graph, you really should consider\nusing Rgraphv",
       "thread_id": "thread-b4120cba27b2",
       "thread_depth": 2,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060127/27e9ea0f/attachment.pl"
+      ]
     },
     {
       "id": "msg-7b00ea3ac2e1",
@@ -5999,11 +6116,14 @@
       "subject_clean": "[BioC] Distribution of DE genes on Chromosomes",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060131/1232eb97/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060131/1232eb97/attachment.pl",
+      "body_plain": "Hi,\n\nI have a set (~600) of differentially expressed genes (rat230a chip). I\nwould like to see the distribution of these DE genes on chromosomes.\nSomething like, on X-axis: Chromosome 1 Bin (10Mb), Y-axis: Frequency. I\nexplored  'geneplotter' for a while but unable to do this. Any help will be\ngreatly appreciated.\n\nThanks in advance.\nRegards,\nSharon\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi,\n\nI have a set (~600) of differentially expressed genes (rat230a chip). I\nwould like to see the distribution of these DE genes on chromosomes.\nSomething like, on X-axis: Chromosome 1 Bin (10Mb), Y-",
       "thread_id": "thread-2694a2396584",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060131/1232eb97/attachment.pl"
+      ]
     },
     {
       "id": "msg-ac6ab0a2bf45",
@@ -6148,11 +6268,14 @@
       "subject_clean": "[BioC] samr and Spike in",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060131/dc290e3f/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060131/dc290e3f/attachment.pl",
+      "body_plain": "Hello, \n\nI would like to use samr for spike in genes (HG-U13A). I get expression values through affy Package and MAS 5.0.\n\n> raw <- ReadAffy(...)\n\n> exprs <- expresso(..)\n\n> mat <- exprs(exprs)\n\nand separate Spike in genes from expression values:\n\n> G1 <- mat[c(spike in genes),1:14] \n\n> G2 <- mat[c(spike in genes),15:28] \n\nand produce a list:\n> data=list(x=G1,y=G2, geneid=as.character(1:nrow(G1)),genenames=paste(\"g\",as.character(1:nrow(G1)),sep=\"\"), logged2=TRUE)\n\n> samr.obj<-samr(data, resp.type=\"Two class paired\", nperms=100)\nError in check.format(y, resp.type = resp.type, censoring.status = censoring.status) :\n Error in input response data: response type Two class paired specified; values must be -1, 1, -2, 2, etc\n>\n\nwhat isn't correct? And how can I write correctly?\n\nThanks,\n\nMohammad Esad-Djou\n\n \n\n \n\n\n\n\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello, \n\nI would like to use samr for spike in genes (HG-U13A). I get expression values through affy Package and MAS 5.0.\n\n> raw <- ReadAffy(...)\n\n> exprs <- expresso(..)\n\n> mat <- exprs(exprs)\n\nand s",
       "thread_id": "thread-d4db0eb8ae3c",
       "thread_depth": 0,
-      "month": "2006-01"
+      "month": "2006-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060131/dc290e3f/attachment.pl"
+      ]
     },
     {
       "id": "msg-ed906c194dc3",

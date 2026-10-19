@@ -296,11 +296,14 @@
       "subject_clean": "[BioC] help, reliability and toptable",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060502/aa8b6a77/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060502/aa8b6a77/attachment.pl",
+      "body_plain": "Dear List,\n\nI am using affymetrix chip in a methodology. I want to know the repeat level\nfrom duplicate or triplicate samples by reading chip results. any\nsuggestion? shall I use signal correlation coefficient? Or compare toptable?\nany other better way? Basically, I have 2 samples in each situation.\n\nRight now, I am comparing the toptables, produced by limma. It seems the\nresults sorted by \"M\", log fold change is reasonable to us. But I found,\nthere is better repeat level if I sorted by \"B\", the log odds ratio. Anybody\nhas this experience? and, could any one tell me what \"B\" really represent\nand come from?\n\nThanks in advance,\n\nDi Wu\nGraduate student, Research Assistant 3\nDepartment of Epidemilogy and Biostatistics, department of Pathology\nCase Western Reserve University\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear List,\n\nI am using affymetrix chip in a methodology. I want to know the repeat level\nfrom duplicate or triplicate samples by reading chip results. any\nsuggestion? shall I use signal correlation co",
       "thread_id": "thread-2de883454c68",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060502/aa8b6a77/attachment.pl"
+      ]
     },
     {
       "id": "msg-74ff8e8e6c00",
@@ -466,11 +469,14 @@
       "subject_clean": "[BioC] question about reliability and toptable",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060502/5047aa72/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060502/5047aa72/attachment.pl",
+      "body_plain": "Dear List,\n\nI am using affymetrix chip in a methodology. I want to know the repeat level\nfrom duplicate or triplicate samples by reading chip results. any\nsuggestion? shall I use signal correlation coefficient? Or compare toptable?\nany other better way? Basically, I have 2 samples in each situation.\n\nRight now, I am comparing the toptables, produced by limma. It seems the\nresults sorted by \"M\", log fold change is reasonable to us. But I found,\nthere is better repeat level if I sorted by \"B\", the log odds ratio. Anybody\nhas this experience? and, could any one tell me what \"B\" really represent\nand come from?\n\nThanks in advance,\n\nDi Wu\nGraduate student, Research Assistant 3\nDepartment of Epidemilogy and Biostatistics, department of Pathology\nCase Western Reserve University\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear List,\n\nI am using affymetrix chip in a methodology. I want to know the repeat level\nfrom duplicate or triplicate samples by reading chip results. any\nsuggestion? shall I use signal correlation co",
       "thread_id": "thread-846a337d4623",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060502/5047aa72/attachment.pl"
+      ]
     },
     {
       "id": "msg-5f33add742cd",
@@ -482,11 +488,14 @@
       "subject_clean": "[BioC] custom cdf files with just.gcrma",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060502/ebd557a2/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060502/ebd557a2/attachment.pl",
+      "body_plain": "Is there a way to get just.gcrma to work with a custom cdf file? I  checked the available documentation and searched the archives but did  not find anything obvious.\n    \n    I already tried ReadAffy with gcrma and got a memory error:\n        \ndata <- ReadAffy()\ndata at cdfName <- \"HSFocus_HS_ENTREZG_6\"\ngcrma(data)\n    Thanks in advance for your help.\n  \n  DC\n\t\t\n---------------------------------\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Is there a way to get just.gcrma to work with a custom cdf file? I  checked the available documentation and searched the archives but did  not find anything obvious.\n    \n    I already tried ReadAffy ",
       "thread_id": "thread-5f33add742cd",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060502/ebd557a2/attachment.pl"
+      ]
     },
     {
       "id": "msg-f83f283396cd",
@@ -932,11 +941,14 @@
       "subject_clean": "[BioC] estimation of number of False positive in limma",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060504/468534be/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060504/468534be/attachment.pl",
+      "body_plain": "Hi Bioconductorians,\n   \n  For my analyse , I use Limma in affylmGui... ( very practical).\n  After to see the documentation about B , pvalues, M, A ...I selectionnned my interesting DEG ( Differential Expressed Genes)... but I have always the same questions: how many False Positif have I in my list of genes?Is it possible to estimate this proportion ?\n  I know ( I believe ) that the usage of FDR in Limma's procedure adjusted only the p-value, and it's not available as in SAM analysis to estimate the proportion of FP..\n   \n  I would like your opinion on the problem..\n  Thanks \n  Greg\n   \n\n\n                               *\n          *          \n  ----------------- (o o)------------------- \n-. .-. .-oOOo~(_)~oOOo-. .-. .-. \n||X|||\\ /|||X|||\\ /|||X|||\\ /|||X|||\\ \n|/ \\|||X|||/ \\|||X|||/ \\|||X|||/ \\|||X \n' `-' `-' `-' `-' `-' `-' `-' \nVOISIN greg. \nBioinformaticien. \nCentre de recherche du CHUM. \nMONTREAL\n\n\n\t\t\n---------------------------------\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi Bioconductorians,\n   \n  For my analyse , I use Limma in affylmGui... ( very practical).\n  After to see the documentation about B , pvalues, M, A ...I selectionnned my interesting DEG ( Differential",
       "thread_id": "thread-5f443f8a991d",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060504/468534be/attachment.pl"
+      ]
     },
     {
       "id": "msg-d05855928f4c",
@@ -1243,11 +1255,14 @@
       "subject_clean": "[BioC] Insterest in this project",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060505/2dbe12ba/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060505/2dbe12ba/attachment.pl",
+      "body_plain": "I am interested in software development for this project. I have a finished\ndegree of bioinformatics from Simon Fraser University, and some experience\nin developing bioinformatics web applications and databases. Can anyone like\nto be my mentor?\n\nThanks,\n\nJustin\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "I am interested in software development for this project. I have a finished\ndegree of bioinformatics from Simon Fraser University, and some experience\nin developing bioinformatics web applications and",
       "thread_id": "thread-2b5072fe30e2",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060505/2dbe12ba/attachment.pl"
+      ]
     },
     {
       "id": "msg-93ec4e4b37c8",
@@ -1401,11 +1416,14 @@
       "subject_clean": "[BioC] Problems with COPA",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060508/df523429/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060508/df523429/attachment.pl",
+      "body_plain": "Dear Bioconductor users,\n\nI'm trying to use the function copa (from the package copa in bioconductor\n1.8) to detect recurrent chromosomal rearrangements in a set of 67 cancer\nsamples, with respect to 14 normal samples. I loaded the data from an\nexternal .txt table (81 samples, 19665 genes), with no missing data, but\nwhen I run the function it gives me this error message:\n\"error in quantile.default(num.out, probs = pct) :\n        missing values and NaN non allowed if 'na.rm' is FALSE\"\n\nI think that this quantile function is used inside the copaFilter function,\nbut I cannot do anything since it is an internal function.\n\nCan somebody help me?\n\nThank you\n\nFrancesca Guana\n\n--\nCancer Genomics Lab\nFondo Edo Tempia\nvia Malta 3, 13900 Biella (Italy)\nphone: +39 015351830\nfax: +39 01521116\nemail: francesca.guana at gmail.com\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear Bioconductor users,\n\nI'm trying to use the function copa (from the package copa in bioconductor\n1.8) to detect recurrent chromosomal rearrangements in a set of 67 cancer\nsamples, with respect to ",
       "thread_id": "thread-b445e4995d72",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060508/df523429/attachment.pl"
+      ]
     },
     {
       "id": "msg-d0e4c5e05d0c",
@@ -1522,11 +1540,14 @@
       "subject_clean": "[BioC] Communicating gene-probe relationships to sam",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060508/89d0e21b/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060508/89d0e21b/attachment.pl",
+      "body_plain": "Hi Charles' you've probably already noticed our Barley SFP paper and here is\nthe link to the method and data.  http://naturalvariation.org/barley .  In\nthis paper I first account for gene expression across all probes in a probe\nset, the residuals are then fit probe wise for SFPs.  I didn't notice you\ndoing this in your code. Let me know if you can't navigate the supplement\nscript linked \"barleySFP.R\n<http://naturalsystems.uchicago.edu/naturalvariation/barley/barleySFP.R> \"\nsee RNA section.. Good luck\n\nJustin\n\n \n\n \n\nMessage: 5\n\nDate: Sat, 6 May 2006 15:22:00 -0700\n\nFrom: \"Charles C. Berry\" <cberry at tajo.ucsd.edu>\n\nSubject: Re: [BioC] Communicating gene-probe relationships to sam\n\nTo: Charles Crane <ccrane at purdue.edu>\n\nCc: bioconductor at stat.math.ethz.ch\n\nMessage-ID: <Pine.LNX.4.64.0605061440310.27142 at tajo.ucsd.edu>\n\nContent-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed\n\n \n\n \n\n \n\nCharles,\n\n \n\nYou used method='cat.stat', which is (only) suitable for SNPs, I think.\n\n \n\nThis seems like an odd choice for detecting SFPs. You would have to do more\nwork to get this to work properly if you actually were counting SNPs\n\n- i.e. you would have to **call** the SNPs. (And reasonably enough, sam()\ndoesn't like small sample numbers either.)\n\n \n\nI suggest you use a linear model (method='d.stat') like the one in our\nGenome Research paper available here:\n\n \n\n      http://naturalsystems.uchicago.edu/naturalvariation/sfp/\n\n \n\nBTW, sam() will not object to very small sample numbers with\n'method=\"d.stat\"'\n\n \n\nHTH,\n\n \n\nChuck Berry\n\n \n\nOn Fri, 5 May 2006, Charles Crane wrote:\n\n \n\n> Dear newsgroup:\n\n>    I am trying to use sam to identify single-feature polymorphisms \n\n> between two barley cultivars.  I am running Bioconductor 1.7, Biobase \n\n> 1.8.0, affy 1.8.1, and siggenes 1.4.0 under Mac OS X 10.3.9.  I can \n\n> successfully extract probe-level data from my CEL files, background \n\n> correct the pm values with rma, quantile normalize, and isolate the pm \n\n> intensities in a data frame, but both sam and sam.snp consistently and \n\n> instantly fail with \"Error in FUN(data, cl, ...) : There should be at \n\n> least 25 samples.\"  This happens even though there are 22840 genes and \n\n> 11 probes per gene in the data.  What am I overlooking?  Does sam need \n\n> some sort of a mapping from the 11 probes to their parent gene?  A session\nhistory follows.\n\n>    Thank your very much for your time.  Also, do you plan to include \n\n> directions for using sam for SNP analysis, going all the way from \n\n> ReadAffy through sam for a case history, in a future vignette?  It \n\n> would save the uninitiated a lot of time and frustration.\n\n> \n\n> Charles Crane\n\n> USDA-ARS, MWA, Crop Production and Pest Control Research Unit And \n\n> Department of Botany and Plant Pathology, Purdue University\n\n \n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi Charles' you've probably already noticed our Barley SFP paper and here is\nthe link to the method and data.  http://naturalvariation.org/barley .  In\nthis paper I first account for gene expression a",
       "thread_id": "thread-f13a54ade795",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060508/89d0e21b/attachment.pl"
+      ]
     },
     {
       "id": "msg-2be1da2477fc",
@@ -1641,11 +1662,14 @@
       "subject_clean": "[BioC] Building devel affy on Windows - zlib",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060509/33619c03/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060509/33619c03/attachment.pl",
+      "body_plain": "Hi,\n\nI have some CEL files which I am unable read with the release version of\nthe affy package (using ReadAffy()), so I thought it would be worthwhile\ntrying the devel version.  I currently only have access to Windows and\nI'm trying to build affyio (required by affy), but I'm having trouble\nwith zlib etc. \n\nI downloaded the zlib libraries and header files from\nhttp://ftp.uni-kl.de/pub/windows/cygwin/release/mingw/mingw-zlib/ (the\nfirst hit from Googling \"mingw zlib\") and copied them into the mingw lib\nand include directories.  But I am getting the following errors:\n\ngcc  -shared -s  -o affyio.dll affyio.def read_abatch.o read_bpmap.o\nread_cdf_xda.o read_cdffile2.o affyio_res.o  -L\nC:/PROGRA~1/R/R-24~1.0DE/bin   -lR\nread_abatch.o:read_abatch.c:(.text+0x12f5): undefined reference to\n`gzgets'\nread_abatch.o:read_abatch.c:(.text+0x1335): undefined reference to\n`gzopen'\nread_abatch.o:read_abatch.c:(.text+0x136b): undefined reference to\n`gzrewind'\nread_abatch.o:read_abatch.c:(.text+0x159c): undefined reference to\n`gzclose'\n\netc.\n\nI'm using \nR version 2.4.0 Under development (unstable) (2006-05-05 r37982)\naffyio_1.0.0\naffy_1.10.0\n\nAny suggestions would be greatly appreciated.  \n\nThanks,\nJames\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi,\n\nI have some CEL files which I am unable read with the release version of\nthe affy package (using ReadAffy()), so I thought it would be worthwhile\ntrying the devel version.  I currently only have ",
       "thread_id": "thread-4bb16f0928ad",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060509/33619c03/attachment.pl"
+      ]
     },
     {
       "id": "msg-9183446b1f8a",
@@ -1859,11 +1883,14 @@
       "subject_clean": "[BioC] Merging 2 groups of samples",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060509/cba49d11/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060509/cba49d11/attachment.pl",
+      "body_plain": "Bioconductor users,\nWe have two groups of samples on HU133plus2 chips done 1 year apart.\nAfter I normalized with RMA,  the two groups are clustering into separate\nclusters at a low level of correlation.\nCan someone suggest a way to analyze these samples together?\n\nLana Schaffer\nBiostatistics/Informatics\nThe Scripps Research Institute\nDNA Array Core Facility\nLa Jolla, CA 92037\n(858) 784-2263\n(858) 784-2994\nschaffer at scripps.edu\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Bioconductor users,\nWe have two groups of samples on HU133plus2 chips done 1 year apart.\nAfter I normalized with RMA,  the two groups are clustering into separate\nclusters at a low level of correlatio",
       "thread_id": "thread-99aee001b304",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060509/cba49d11/attachment.pl"
+      ]
     },
     {
       "id": "msg-bfe7ff604bb9",
@@ -1927,11 +1954,14 @@
       "subject_clean": "[BioC] Missing values with COPA",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060510/8eeae8c3/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060510/8eeae8c3/attachment.pl",
+      "body_plain": "Dear James,\n\nnow the package COPA works well, if the data don't have missing values. Is\nthat right?\nMy original data have missing values, so I run pamr.knnimpute to impute\nmissing expression values. Do you think this is a good procedure? Otherwise\ndo you have any suggestion?\n\nBest regards\nFrancesca Guana\n\n-- \nCancer Genomics Lab\nFondo Edo Tempia\nvia Malta 3, 13900 Biella (Italy)\nphone: +39 015351830\nfax: +39 01521116\nemail: francesca.guana at gmail.com\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear James,\n\nnow the package COPA works well, if the data don't have missing values. Is\nthat right?\nMy original data have missing values, so I run pamr.knnimpute to impute\nmissing expression values. D",
       "thread_id": "thread-c46c6307c67f",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060510/8eeae8c3/attachment.pl"
+      ]
     },
     {
       "id": "msg-c7b099bddc97",
@@ -1961,11 +1991,14 @@
       "subject_clean": "[BioC] timecourse and day sample preparation effect",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060510/5e271a64/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060510/5e271a64/attachment.pl",
+      "body_plain": "> Hi,\n> we are investingating on Affymetrix Chips the effect of a compound over a time course (1, 2, 3, 4, 5 hours), we also have the mock cells at 1, 2, ,3, 4, 5 hours. All points are biological duplicates.\n> Since the experiment was part of a larger one, samples preparation and labelling were randomized .\n> Analysing the previously indicated transcription profiles we obeserved that, in PCA, they are clustering by preparation day, hiding the effect of the compound over the time course. \n> There is any way to make limma able to keep in account the \"day effect\" in the definition of differential expression?\n> \n> Thanks,\n> \n> Roberta\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "> Hi,\n> we are investingating on Affymetrix Chips the effect of a compound over a time course (1, 2, 3, 4, 5 hours), we also have the mock cells at 1, 2, ,3, 4, 5 hours. All points are biological dupl",
       "thread_id": "thread-f743ce61bb77",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060510/5e271a64/attachment.pl"
+      ]
     },
     {
       "id": "msg-ea6a7ddc8deb",
@@ -2009,11 +2042,14 @@
       "subject_clean": "[BioC] Rmpi installation in in IBM HCP",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060510/95515d3d/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060510/95515d3d/attachment.pl",
+      "body_plain": "Hi\nI.ve tried to install Rmpi using lam-mpi in a ibm cluster.\nI installed R without readline (suse has installed readline4)\n\n./configure –with-readline=no\n\nIn the master server x86_64 Ive installed lam-7.1.2\nUsing\n\n    ./configure --enable-shared --disable-static\n(seems work well)\n\nBecuase Rmpi a compilation problem\n\nFinally Rmpi\n/usr/local/lib64/R/bin/R CMD INSTALL\nRmpi_0.5-2.tar.gz--configure-args=--with-mpi=/usr/local/\n(it finally compille well)\n\nBut when I tryed to load de Rmpi library in R, it doesn't work\nWith this error:\n\n> library(Rmpi)\nError in dyn.load(x, as.logical(local), as.logical(now)) :\n        unable to load shared library\n'/usr/local/lib64/R/library/Rmpi/libs/Rmpi.so':\n  /usr/local/lib/liblam.so.0: undefined symbol: openpty\nError in library(Rmpi) : .First.lib failed for 'Rmpi'\nError in dyn.unload(x) : dynamic/shared library\n'/usr/local/lib64/R/library/Rmpi/libs/Rmpi.so' was not loaded\n>\n\nMay give me some advise\n\nEMILIANO\n\n\n\n\n--------------------------------------------------------\nEmiliano Barreto_Hernandez\nProfesor Asociado\nColombia EMBnet Node Manager\nCentro de Bioinformática\nInstituto de Biotecnología - Universidad Nacional de Colombia\nEdificio Manuel Ancizar\nBogotá - Colombia\nTel +57 3165000 ext 16956 Fax +571 3165415\nebarretoh at unal.edu.co\nhttp://bioinf.ibun.unal.edu.co\nhttp://www.co.embnet.org\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi\nI.ve tried to install Rmpi using lam-mpi in a ibm cluster.\nI installed R without readline (suse has installed readline4)\n\n./configure –with-readline=no\n\nIn the master server x86_64 Ive installed la",
       "thread_id": "thread-ad7e7dff4297",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060510/95515d3d/attachment.pl"
+      ]
     },
     {
       "id": "msg-4e138f11bf03",
@@ -2153,11 +2189,14 @@
         "<ae8a85340605110225u541256c0vb35bbdf2aab84e28@mail.gmail.com>",
         "<33244.130.223.128.12.1147341024.squirrel@squirrel.isb-sib.ch>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060511/9548cbdd/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060511/9548cbdd/attachment.pl",
+      "body_plain": "which version of the boost library do i need? i have boost 1.33.1\n\njo\n\nOn 5/11/06, Li.Long at isb-sib.ch <Li.Long at isb-sib.ch> wrote:\n>\n>\n> Pretty much all the msgs are about templates, so I would look more into\n> what your g++/STL and the likes on your machine.\n>\n> Li\n>\n> > hi Li\n> >\n> > thanks for your quick reply,\n> > concerning the extra parameters, i have not defined anything, i just\n> > downloaded the RBGL_1.8.1.tar.gz and run R CMD INSTALL on it, i did not\n> > specify any extra parameter... don't know from where they are coming.\n> > actually the R i installed is a precompiled one, i got it from one of\n> the\n> > fedora repositories, before i installed this one i compiled it myself,\n> but\n> > was also not able to install RBGL.\n> >\n> > R CMD INSTALL --configure-args='-g -O2' RBGL_1.8.1.tar.gz\n> >\n> > also resulted in an error (see the attachment).\n> > the version of g++ (i suppose it is an x86_64 version, at least it\n> > supports\n> > m32 and m64...):\n> >\n> > [jo at bugblatterbeast ~]$ g++ --version\n> > g++ (GCC) 4.1.0 20060304 (Red Hat 4.1.0-3)\n> > Copyright (C) 2006 Free Software Foundation, Inc.\n> > This is free software; see the source for copying conditions.  There is\n> NO\n> > warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR\n> > PURPOSE.\n> >\n> > i will now try to install it on an other machine running FC5, perhaps\n> > there\n> > is something wrong with my system...\n> >\n> > thanks\n> > jo\n> >\n> >\n> > On 5/11/06, Li.Long at isb-sib.ch <Li.Long at isb-sib.ch> wrote:\n> >>\n> >>\n> >> Hi,\n> >>\n> >> I'll be really interested in finding out what's happening in your\n> >> settings.\n> >> Could you provide additional info\n> >> o. why/how did you decide to use the extra parameters when compiling?\n> >> (such as protect-stack, and the like)  If you just use \"-g -O2\", what\n> do\n> >> you get?\n> >> o. what version of g++ do you have?  is it for 64bit?\n> >>\n> >> It's my package, I'll try to help you figure it out.\n> >>\n> >> Thanks\n> >>\n> >> Li\n> >>\n> >> > hi,\n> >> > i'm just moving from R 2.2 and BioC 1.7 to R 2.3 and BioC 1.8, but\n> got\n> >> a\n> >> > problem when i tried to install the RBGL package. i included the\n> whole\n> >> > output of the R CMD INSTALL call in the attachment, below is just the\n> >> > error\n> >> > message that causes the installation failure:\n> >> >\n> >> >\n> >> > boostIncl/boost/graph/depth_first_search.hpp:324: error: no matching\n> >> > function for call to 'vertices(const std::vector<std::vector<long\n> >> unsigned\n> >> > int, std::allocator<long unsigned int> >,\n> >> std::allocator<std::vector<long\n> >> > unsigned int, std::allocator<long unsigned int> > > >&)'\n> >> > make: *** [interfaces.o] Error 1\n> >> > chmod: cannot access `/usr/lib64/R/library/RBGL/libs/*': No such file\n> >> or\n> >> > directory\n> >> > ERROR: compilation failed for package 'RBGL'\n> >> > ** Removing '/usr/lib64/R/library/RBGL'\n> >> >\n> >> > i don't know if that is a problem of my system (running fedora core 5\n> >> on\n> >> a\n> >> > amd64) or not. has anyone experienced the same problems, or has\n> anyone\n> >> a\n> >> > solution to this problem?\n> >> >\n> >> > thanks in advance,\n> >> > jo\n> >> > --\n> >> > Johannes Rainer, Msc\n> >> > Tyrolean Cancer Research Institute\n> >> > Innrain 66, 6020 Innsbruck, Austria\n> >> > Tel.: +43 512 570485 15\n> >> > Email: johannes.rainer at tcri.at\n> >> >           johannes.rainer at tugraz.at\n> >> > _______________________________________________\n> >> > Bioconductor mailing list\n> >> > Bioconductor at stat.math.ethz.ch\n> >> > https://stat.ethz.ch/mailman/listinfo/bioconductor\n> >> > Search the archives:\n> >> > http://news.gmane.org/gmane.science.biology.informatics.conductor\n> >>\n> >>\n> >\n> >\n> > --\n> > Johannes Rainer, Msc\n> > Tyrolean Cancer Research Institute\n> > Innrain 66, 6020 Innsbruck, Austria\n> > Tel.: +43 512 570485 15\n> > Email: johannes.rainer at tcri.at\n> >           johannes.rainer at tugraz.at\n> > _______________________________________________\n> > Bioconductor mailing list\n> > Bioconductor at stat.math.ethz.ch\n> > https://stat.ethz.ch/mailman/listinfo/bioconductor\n> > Search the archives:\n> > http://news.gmane.org/gmane.science.biology.informatics.conductor\n>\n>\n\n\n-- \nJohannes Rainer, Msc\nTyrolean Cancer Research Institute\nInnrain 66, 6020 Innsbruck, Austria\nTel.: +43 512 570485 15\nEmail: johannes.rainer at tcri.at\n          johannes.rainer at tugraz.at\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "which version of the boost library do i need? i have boost 1.33.1\n\njo\n\nOn 5/11/06, Li.Long at isb-sib.ch <Li.Long at isb-sib.ch> wrote:\n>\n>\n> Pretty much all the msgs are about templates, so I would l",
       "thread_id": "thread-9b0c9073952b",
       "thread_depth": 2,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060511/9548cbdd/attachment.pl"
+      ]
     },
     {
       "id": "msg-77a5c301a343",
@@ -2227,11 +2266,14 @@
         "<ae8a85340605110309m6fb4260blaceb082b6e470a28@mail.gmail.com>",
         "<33530.130.223.128.12.1147344801.squirrel@squirrel.isb-sib.ch>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060511/30ff75c5/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060511/30ff75c5/attachment.pl",
+      "body_plain": "ok now i tested some other things. on a system (FC4) with the gcc 4.0 there\nis no problem installing the package. could it be that it does not work with\ngcc4.1? (although it compiles the source files neatly, but after the\ncompilation it gets that error).\ni edited also the Makeconf file located in /usr/lib64/R/etc and set the the\nCXXFLAGS to CXXFLAGS = -O2 -g -m64. nothing worked (i only got less warnings\nduring the compilation).\nactually i run out of ideas what i could try next...\n\njo\n\n\nOn 5/11/06, Li.Long at isb-sib.ch <Li.Long at isb-sib.ch> wrote:\n>\n>\n> That's right version.  boost lib is packaged in RBGL.  That's not what I\n> would worry about.\n>\n> Li\n>\n> > which version of the boost library do i need? i have boost 1.33.1\n> >\n> > jo\n> >\n> > On 5/11/06, Li.Long at isb-sib.ch <Li.Long at isb-sib.ch> wrote:\n> >>\n> >>\n> >> Pretty much all the msgs are about templates, so I would look more into\n> >> what your g++/STL and the likes on your machine.\n> >>\n> >> Li\n> >>\n> >> > hi Li\n> >> >\n> >> > thanks for your quick reply,\n> >> > concerning the extra parameters, i have not defined anything, i just\n> >> > downloaded the RBGL_1.8.1.tar.gz and run R CMD INSTALL on it, i did\n> >> not\n> >> > specify any extra parameter... don't know from where they are coming.\n> >> > actually the R i installed is a precompiled one, i got it from one of\n> >> the\n> >> > fedora repositories, before i installed this one i compiled it\n> myself,\n> >> but\n> >> > was also not able to install RBGL.\n> >> >\n> >> > R CMD INSTALL --configure-args='-g -O2' RBGL_1.8.1.tar.gz\n> >> >\n> >> > also resulted in an error (see the attachment).\n> >> > the version of g++ (i suppose it is an x86_64 version, at least it\n> >> > supports\n> >> > m32 and m64...):\n> >> >\n> >> > [jo at bugblatterbeast ~]$ g++ --version\n> >> > g++ (GCC) 4.1.0 20060304 (Red Hat 4.1.0-3)\n> >> > Copyright (C) 2006 Free Software Foundation, Inc.\n> >> > This is free software; see the source for copying conditions.  There\n> >> is\n> >> NO\n> >> > warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR\n> >> > PURPOSE.\n> >> >\n> >> > i will now try to install it on an other machine running FC5, perhaps\n> >> > there\n> >> > is something wrong with my system...\n> >> >\n> >> > thanks\n> >> > jo\n> >> >\n> >> >\n> >> > On 5/11/06, Li.Long at isb-sib.ch <Li.Long at isb-sib.ch> wrote:\n> >> >>\n> >> >>\n> >> >> Hi,\n> >> >>\n> >> >> I'll be really interested in finding out what's happening in your\n> >> >> settings.\n> >> >> Could you provide additional info\n> >> >> o. why/how did you decide to use the extra parameters when\n> compiling?\n> >> >> (such as protect-stack, and the like)  If you just use \"-g -O2\",\n> what\n> >> do\n> >> >> you get?\n> >> >> o. what version of g++ do you have?  is it for 64bit?\n> >> >>\n> >> >> It's my package, I'll try to help you figure it out.\n> >> >>\n> >> >> Thanks\n> >> >>\n> >> >> Li\n> >> >>\n> >> >> > hi,\n> >> >> > i'm just moving from R 2.2 and BioC 1.7 to R 2.3 and BioC 1.8, but\n> >> got\n> >> >> a\n> >> >> > problem when i tried to install the RBGL package. i included the\n> >> whole\n> >> >> > output of the R CMD INSTALL call in the attachment, below is just\n> >> the\n> >> >> > error\n> >> >> > message that causes the installation failure:\n> >> >> >\n> >> >> >\n> >> >> > boostIncl/boost/graph/depth_first_search.hpp:324: error: no\n> >> matching\n> >> >> > function for call to 'vertices(const std::vector<std::vector<long\n> >> >> unsigned\n> >> >> > int, std::allocator<long unsigned int> >,\n> >> >> std::allocator<std::vector<long\n> >> >> > unsigned int, std::allocator<long unsigned int> > > >&)'\n> >> >> > make: *** [interfaces.o] Error 1\n> >> >> > chmod: cannot access `/usr/lib64/R/library/RBGL/libs/*': No such\n> >> file\n> >> >> or\n> >> >> > directory\n> >> >> > ERROR: compilation failed for package 'RBGL'\n> >> >> > ** Removing '/usr/lib64/R/library/RBGL'\n> >> >> >\n> >> >> > i don't know if that is a problem of my system (running fedora\n> core\n> >> 5\n> >> >> on\n> >> >> a\n> >> >> > amd64) or not. has anyone experienced the same problems, or has\n> >> anyone\n> >> >> a\n> >> >> > solution to this problem?\n> >> >> >\n> >> >> > thanks in advance,\n> >> >> > jo\n> >> >> > --\n> >> >> > Johannes Rainer, Msc\n> >> >> > Tyrolean Cancer Research Institute\n> >> >> > Innrain 66, 6020 Innsbruck, Austria\n> >> >> > Tel.: +43 512 570485 15\n> >> >> > Email: johannes.rainer at tcri.at\n> >> >> >           johannes.rainer at tugraz.at\n> >> >> > _______________________________________________\n> >> >> > Bioconductor mailing list\n> >> >> > Bioconductor at stat.math.ethz.ch\n> >> >> > https://stat.ethz.ch/mailman/listinfo/bioconductor\n> >> >> > Search the archives:\n> >> >> > http://news.gmane.org/gmane.science.biology.informatics.conductor\n> >> >>\n> >> >>\n> >> >\n> >> >\n> >> > --\n> >> > Johannes Rainer, Msc\n> >> > Tyrolean Cancer Research Institute\n> >> > Innrain 66, 6020 Innsbruck, Austria\n> >> > Tel.: +43 512 570485 15\n> >> > Email: johannes.rainer at tcri.at\n> >> >           johannes.rainer at tugraz.at\n> >> > _______________________________________________\n> >> > Bioconductor mailing list\n> >> > Bioconductor at stat.math.ethz.ch\n> >> > https://stat.ethz.ch/mailman/listinfo/bioconductor\n> >> > Search the archives:\n> >> > http://news.gmane.org/gmane.science.biology.informatics.conductor\n> >>\n> >>\n> >\n> >\n> > --\n> > Johannes Rainer, Msc\n> > Tyrolean Cancer Research Institute\n> > Innrain 66, 6020 Innsbruck, Austria\n> > Tel.: +43 512 570485 15\n> > Email: johannes.rainer at tcri.at\n> >           johannes.rainer at tugraz.at\n> >\n>\n>\n\n\n-- \nJohannes Rainer, Msc\nTyrolean Cancer Research Institute\nInnrain 66, 6020 Innsbruck, Austria\nTel.: +43 512 570485 15\nEmail: johannes.rainer at tcri.at\n          johannes.rainer at tugraz.at\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "ok now i tested some other things. on a system (FC4) with the gcc 4.0 there\nis no problem installing the package. could it be that it does not work with\ngcc4.1? (although it compiles the source files ",
       "thread_id": "thread-ef782c2580fc",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060511/30ff75c5/attachment.pl"
+      ]
     },
     {
       "id": "msg-847ade6e6eb3",
@@ -2294,11 +2336,14 @@
         "<ae8a85340605110508g9ec5f6ax7b0a93b3cc155eb9@mail.gmail.com>",
         "<44633BD5.1000902@fhcrc.org>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060511/7761b00f/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060511/7761b00f/attachment.pl",
+      "body_plain": "hi,\n\nthanks robert for your help.\nbased on your suggestions i tested now some new settings, i used the gcc\n3.2.3 compiler (g++32 ) to compile the package (unfortunately there is no\n4.0 version available for FC5) and get, on my system with R 2.3 and\nRBGL_1.8.1 the same error as before. but interestingly the installation of\nRBGL_1.6.0.tar.gz with the g++32 worked (but not with the g++ from gcc 4.1).\nwell, i guess i will have to try on...\n\nthanks for your help\njo\n\nOn 5/11/06, rgentlem <rgentlem at fhcrc.org> wrote:\n>\n> Hi,\n>\n> Johannes Rainer wrote:\n> > ok now i tested some other things. on a system (FC4) with the gcc 4.0there\n> > is no problem installing the package. could it be that it does not work\n> with\n> > gcc4.1? (although it compiles the source files neatly, but after the\n> > compilation it gets that error).\n>\n>   Yes, it is entirely possible that such versions of gcc will fail on\n> something as heavily templated as BGL. gcc tends to be somewhat unstable\n> for versions near the bleeding edge.\n>\n>   You do not need a copy of BGL, it is included in the sources for the\n> package and in fact, having a copy around could cause some problems as I\n> think we (Li) have to patch from time to time (right now I think a\n> header file) and if you compile against the wrong one bad things are\n> going to happen.\n>\n>   I has nothing to do with 64bit, we build on that, but Suse not Redhat.\n>\n> > i edited also the Makeconf file located in /usr/lib64/R/etc and set the\n> the\n> > CXXFLAGS to CXXFLAGS = -O2 -g -m64. nothing worked (i only got less\n> warnings\n> > during the compilation).\n> > actually i run out of ideas what i could try next...\n>\n>    Use a version of gcc that is known to work? Your tests and ours have\n> indicated that gcc 4.0.x does work. I am afraid this looks like a\n> redhat/gcc problem and you might want to take it up with them.\n>\n>    best wishes\n>      Robert\n>\n> ps Li, I am not seeing your responses could you please make sure that\n> they are too the list, this is archived and many find it useful to be\n> able to follow the whole thread\n>\n> >\n> > jo\n> >\n> >\n> > On 5/11/06, Li.Long at isb-sib.ch <Li.Long at isb-sib.ch> wrote:\n> >>\n> >> That's right version.  boost lib is packaged in RBGL.  That's not what\n> I\n> >> would worry about.\n> >>\n> >> Li\n> >>\n> >>> which version of the boost library do i need? i have boost 1.33.1\n> >>>\n> >>> jo\n> >>>\n> >>> On 5/11/06, Li.Long at isb-sib.ch <Li.Long at isb-sib.ch> wrote:\n> >>>>\n> >>>> Pretty much all the msgs are about templates, so I would look more\n> into\n> >>>> what your g++/STL and the likes on your machine.\n> >>>>\n> >>>> Li\n> >>>>\n> >>>>> hi Li\n> >>>>>\n> >>>>> thanks for your quick reply,\n> >>>>> concerning the extra parameters, i have not defined anything, i just\n> >>>>> downloaded the RBGL_1.8.1.tar.gz and run R CMD INSTALL on it, i did\n> >>>> not\n> >>>>> specify any extra parameter... don't know from where they are\n> coming.\n> >>>>> actually the R i installed is a precompiled one, i got it from one\n> of\n> >>>> the\n> >>>>> fedora repositories, before i installed this one i compiled it\n> >> myself,\n> >>>> but\n> >>>>> was also not able to install RBGL.\n> >>>>>\n> >>>>> R CMD INSTALL --configure-args='-g -O2' RBGL_1.8.1.tar.gz\n> >>>>>\n> >>>>> also resulted in an error (see the attachment).\n> >>>>> the version of g++ (i suppose it is an x86_64 version, at least it\n> >>>>> supports\n> >>>>> m32 and m64...):\n> >>>>>\n> >>>>> [jo at bugblatterbeast ~]$ g++ --version\n> >>>>> g++ (GCC) 4.1.0 20060304 (Red Hat 4.1.0-3)\n> >>>>> Copyright (C) 2006 Free Software Foundation, Inc.\n> >>>>> This is free software; see the source for copying conditions.  There\n> >>>> is\n> >>>> NO\n> >>>>> warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR\n> >>>>> PURPOSE.\n> >>>>>\n> >>>>> i will now try to install it on an other machine running FC5,\n> perhaps\n> >>>>> there\n> >>>>> is something wrong with my system...\n> >>>>>\n> >>>>> thanks\n> >>>>> jo\n> >>>>>\n> >>>>>\n> >>>>> On 5/11/06, Li.Long at isb-sib.ch <Li.Long at isb-sib.ch> wrote:\n> >>>>>>\n> >>>>>> Hi,\n> >>>>>>\n> >>>>>> I'll be really interested in finding out what's happening in your\n> >>>>>> settings.\n> >>>>>> Could you provide additional info\n> >>>>>> o. why/how did you decide to use the extra parameters when\n> >> compiling?\n> >>>>>> (such as protect-stack, and the like)  If you just use \"-g -O2\",\n> >> what\n> >>>> do\n> >>>>>> you get?\n> >>>>>> o. what version of g++ do you have?  is it for 64bit?\n> >>>>>>\n> >>>>>> It's my package, I'll try to help you figure it out.\n> >>>>>>\n> >>>>>> Thanks\n> >>>>>>\n> >>>>>> Li\n> >>>>>>\n> >>>>>>> hi,\n> >>>>>>> i'm just moving from R 2.2 and BioC 1.7 to R 2.3 and BioC 1.8, but\n> >>>> got\n> >>>>>> a\n> >>>>>>> problem when i tried to install the RBGL package. i included the\n> >>>> whole\n> >>>>>>> output of the R CMD INSTALL call in the attachment, below is just\n> >>>> the\n> >>>>>>> error\n> >>>>>>> message that causes the installation failure:\n> >>>>>>>\n> >>>>>>>\n> >>>>>>> boostIncl/boost/graph/depth_first_search.hpp:324: error: no\n> >>>> matching\n> >>>>>>> function for call to 'vertices(const std::vector<std::vector<long\n> >>>>>> unsigned\n> >>>>>>> int, std::allocator<long unsigned int> >,\n> >>>>>> std::allocator<std::vector<long\n> >>>>>>> unsigned int, std::allocator<long unsigned int> > > >&)'\n> >>>>>>> make: *** [interfaces.o] Error 1\n> >>>>>>> chmod: cannot access `/usr/lib64/R/library/RBGL/libs/*': No such\n> >>>> file\n> >>>>>> or\n> >>>>>>> directory\n> >>>>>>> ERROR: compilation failed for package 'RBGL'\n> >>>>>>> ** Removing '/usr/lib64/R/library/RBGL'\n> >>>>>>>\n> >>>>>>> i don't know if that is a problem of my system (running fedora\n> >> core\n> >>>> 5\n> >>>>>> on\n> >>>>>> a\n> >>>>>>> amd64) or not. has anyone experienced the same problems, or has\n> >>>> anyone\n> >>>>>> a\n> >>>>>>> solution to this problem?\n> >>>>>>>\n> >>>>>>> thanks in advance,\n> >>>>>>> jo\n> >>>>>>> --\n> >>>>>>> Johannes Rainer, Msc\n> >>>>>>> Tyrolean Cancer Research Institute\n> >>>>>>> Innrain 66, 6020 Innsbruck, Austria\n> >>>>>>> Tel.: +43 512 570485 15\n> >>>>>>> Email: johannes.rainer at tcri.at\n> >>>>>>>           johannes.rainer at tugraz.at\n> >>>>>>> _______________________________________________\n> >>>>>>> Bioconductor mailing list\n> >>>>>>> Bioconductor at stat.math.ethz.ch\n> >>>>>>> https://stat.ethz.ch/mailman/listinfo/bioconductor\n> >>>>>>> Search the archives:\n> >>>>>>> http://news.gmane.org/gmane.science.biology.informatics.conductor\n> >>>>>>\n> >>>>>\n> >>>>> --\n> >>>>> Johannes Rainer, Msc\n> >>>>> Tyrolean Cancer Research Institute\n> >>>>> Innrain 66, 6020 Innsbruck, Austria\n> >>>>> Tel.: +43 512 570485 15\n> >>>>> Email: johannes.rainer at tcri.at\n> >>>>>           johannes.rainer at tugraz.at\n> >>>>> _______________________________________________\n> >>>>> Bioconductor mailing list\n> >>>>> Bioconductor at stat.math.ethz.ch\n> >>>>> https://stat.ethz.ch/mailman/listinfo/bioconductor\n> >>>>> Search the archives:\n> >>>>> http://news.gmane.org/gmane.science.biology.informatics.conductor\n> >>>>\n> >>>\n> >>> --\n> >>> Johannes Rainer, Msc\n> >>> Tyrolean Cancer Research Institute\n> >>> Innrain 66, 6020 Innsbruck, Austria\n> >>> Tel.: +43 512 570485 15\n> >>> Email: johannes.rainer at tcri.at\n> >>>           johannes.rainer at tugraz.at\n> >>>\n> >>\n> >\n> >\n>\n> --\n> Robert Gentleman, PhD\n> Program in Computational Biology\n> Division of Public Health Sciences\n> Fred Hutchinson Cancer Research Center\n> 1100 Fairview Ave. N, M2-B876\n> PO Box 19024\n> Seattle, Washington 98109-1024\n> 206-667-7700\n> rgentlem at fhcrc.org\n>\n\n\n\n-- \nJohannes Rainer, Msc\nTyrolean Cancer Research Institute\nInnrain 66, 6020 Innsbruck, Austria\nTel.: +43 512 570485 15\nEmail: johannes.rainer at tcri.at\n          johannes.rainer at tugraz.at\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "hi,\n\nthanks robert for your help.\nbased on your suggestions i tested now some new settings, i used the gcc\n3.2.3 compiler (g++32 ) to compile the package (unfortunately there is no\n4.0 version availab",
       "thread_id": "thread-ef782c2580fc",
       "thread_depth": 2,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060511/7761b00f/attachment.pl"
+      ]
     },
     {
       "id": "msg-b32525426178",
@@ -2355,11 +2400,14 @@
       "subject_clean": "[BioC] problem (and temporary solution for) using biomaRt function getGene to query Ensembl rat dataset",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060511/c0475aa0/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060511/c0475aa0/attachment.pl",
+      "body_plain": "Hello there\nI have recently installed the package biomaRt (v. 1.6.0)\nwith R version 2.3.0 running on a Debian (sarge) GNU/Linux system.\n\nI am extremely pleased that biomaRt is available.\nHowever I would like to report a difficulty using the\nfunction getGene\nto query Ensembl with IDs for Affymetrix probesets.\n\nI can execute the example code available from the vignette\n(for a human dataset) without problems.\n\nHowever when I try the following code on the rat dataset:\n\n > library(\"biomaRt\")\n > rat.mart <- useMart(\"ensembl\")\n > rat.mart <- useDataset(dataset=\"rnorvegicus_gene_ensembl\", mart=rat.mart)\n > getGene(id=\"AJ001517cds_at\", array=\"affy_rg_u34a\", mart= rat.mart)\nError in getBM(attributes = c(attrib, \"hgnc_symbol\", \"description\", \nchrname,  :\n    attribute: hgnc_symbol not found, please use the function \n'listAttributes' to get valid attribute names\n\nThe error seems to come from the attempt to retrieve\nHUGO gene symbols ('hgnc_symbol')\nfrom Ensembl in the calls to getBM in getGene.\nThese calls worked fine on the human dataset but not on the rat\n(I have not tried other datasets).\nThis may reflect a restriction at the Ensembl end,\nbut nevertheless it prevents getGene from returning\nany data at all.\n\nI got round the problem by modifying lines 103 and 124\nof getGene (the calls to getBM)\nto remove the second (\"hgnc_symbol\") attribute:\n\ntable = getBM(attributes = c(att, \"hgnc_symbol\",\n                \"description\", chrname, \"band\", strand, startpos,\n                endpos, geneid, transid), filters = filter, values = id,\n                mart = mart)\n\nand also modified line 130 to make the columns\nof the table returned consistent,\nby removing the one for the HUGO symbol:\n\ncolnames(table) = c(\"ID\", \"HUGO symbol\", \"description\",\n           \"chromosome\", \"band\", \"strand\", \"chromosome_start\",\n           \"chromosome_end\", \"ensembl_gene_id\", \"ensembl_transcript_id\")\n\nCalling the modified function getGene.withoutHUGO\nand executing it gives me other valuable data:\n\n > getGene.withoutHUGO(id=\"AJ001517cds_at\", array= \"affy_rg_u34a\", mart= \nrat.mart)\n              ID\n1 AJ001517cds_at\n2 AJ001517cds_at\n3 AJ001517cds_at\n                                                                                             \ndescription\n1 Hereditary hemochromatosis protein homolog precursor (RT1-CAFE). \n[Source:Uniprot/SWISSPROT;Acc:O35799]\n2 Hereditary hemochromatosis protein homolog precursor (RT1-CAFE). \n[Source:Uniprot/SWISSPROT;Acc:O35799]\n3 Hereditary hemochromatosis protein homolog precursor (RT1-CAFE). \n[Source:Uniprot/SWISSPROT;Acc:O35799]\n  chromosome band strand chromosome_start chromosome_end    ensembl_gene_id\n1         17  p11     -1         48469930       48478502 ENSRNOG00000016967\n2         17  p11     -1         48469930       48478502 ENSRNOG00000016967\n3         17  p11     -1         48469930       48478502 ENSRNOG00000016967\n  ensembl_transcript_id\n1    ENSRNOT00000022881\n2    ENSRNOT00000022809\n3    ENSRNOT00000022810\n\n\nSo I can happily carry on using biomaRt to annotate rat affys for now!\n\nMany thanks to biomaRt (and bioconductor) developers.\n\nVini.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nDr Vini PEREIRA\nCentre for the Study of Evolution\nSchool of Life Sciences\nThe University of Sussex\nFalmer\nBrighton BN1 9QG\nUK\n\nv.pereira at sussex.ac.uk\nTel. +44 (0)1273 872954\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n\n\"in the seed is the tree; in the tree is the forest\"\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello there\nI have recently installed the package biomaRt (v. 1.6.0)\nwith R version 2.3.0 running on a Debian (sarge) GNU/Linux system.\n\nI am extremely pleased that biomaRt is available.\nHowever I wou",
       "thread_id": "thread-88fb5af5c8a1",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060511/c0475aa0/attachment.pl"
+      ]
     },
     {
       "id": "msg-2bd77f9e9ab1",
@@ -2695,11 +2743,14 @@
       "subject_clean": "[BioC] dChip, liwong, probe response or phi",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060511/2d0b823d/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060511/2d0b823d/attachment.pl",
+      "body_plain": "Hi,\nI've looked through the archives to see if this question had been \nraised before, and not finding anything about it, thought I'd ask.\n\nI'm wondering if there is a way to get the phi values returned as \noutput when running expresso with the liwong method settings. Phi \nvalues in the dChip model are the \"probe sensitivity index\" (PSI).\n\nI know that expresso just returns the summarized expression value for a \nprobeset (gene) which is the Theta in the dChip model below:\n\nPM_ij - v_j = Theta_i*phi_j + e\nwith v_j a background term.\n\nIf not expresso, are there other functions or methods that can be \ntweaked to return the PSI values along with the Theta? If anyone has \ntried this before, I'd appreciate your insights.\n\nThanks,\nHemali\n\nHemali Patel\nDepartment of Biomedical Engineering\nBoston University\n\n\n\t[[alternative text/enriched version deleted]]",
+      "body_snippet": "Hi,\nI've looked through the archives to see if this question had been \nraised before, and not finding anything about it, thought I'd ask.\n\nI'm wondering if there is a way to get the phi values returne",
       "thread_id": "thread-7613c1ecdae0",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060511/2d0b823d/attachment.pl"
+      ]
     },
     {
       "id": "msg-ad8c7d6188c3",
@@ -2714,11 +2765,14 @@
         "<ae8a85340605110800o71184039ref92494f513a3148@mail.gmail.com>",
         "<Pine.SOL.4.20.0605111340310.20249-100000@santiam.dfci.harvard.edu>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060512/ef50ff51/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060512/ef50ff51/attachment.pl",
+      "body_plain": "hi all,\nas far as i understood the boost library (or RBGL) bases mainly on\ntemplates, concerning this i found something at the gcc site\nhttp://gcc.gnu.org/gcc-4.1/changes.html\n\nThe (undocumented) extension which permitted templates with default\narguments to be bound to template template parameters with fewer parameters\nhas been deprecated, and will be removed in the next major release of G++.\nFor example:\n\n       template <template <typename> class C>\n       void f(C<double>) {}\n\n       template <typename T, typename U = int>\n       struct S {};\n\n       template void f(S<double>);\n\nmakes use of the deprecated extension. The reason this code is not valid ISO\nC++ is that S is a template with two parameters; therefore, it cannot be\nbound to C which has only one parameter.\n\nif this is the reason that the package doesn't compile it won't work on\nsystems with the gcc4.1 or later...\n\njo\n\nOn 5/11/06, Jeff Gentry <jgentry at jimmy.harvard.edu> wrote:\n>\n> > based on your suggestions i tested now some new settings, i used the gcc\n> > 3.2.3 compiler (g++32 ) to compile the package (unfortunately there is\n> no\n> > 4.0 version available for FC5) and get, on my system with R 2.3 and\n> > RBGL_1.8.1 the same error as before. but interestingly the installation\n> of\n> > RBGL_1.6.0.tar.gz with the g++32 worked (but not with the g++ from gcc\n> 4.1).\n> > well, i guess i will have to try on...\n>\n> FWIW I have the same problem on my system (RHEL3, AMD64), and just looked\n> and indeed it is gcc 3.2.3.\n>\n>\n\n\n-- \nJohannes Rainer, Msc\nTyrolean Cancer Research Institute\nInnrain 66, 6020 Innsbruck, Austria\nTel.: +43 512 570485 15\nEmail: johannes.rainer at tcri.at\n          johannes.rainer at tugraz.at\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "hi all,\nas far as i understood the boost library (or RBGL) bases mainly on\ntemplates, concerning this i found something at the gcc site\nhttp://gcc.gnu.org/gcc-4.1/changes.html\n\nThe (undocumented) exte",
       "thread_id": "thread-ef782c2580fc",
       "thread_depth": 4,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060512/ef50ff51/attachment.pl"
+      ]
     },
     {
       "id": "msg-09b271dfb6ff",
@@ -2751,11 +2805,14 @@
       "subject_clean": "[BioC] How does Limma calculate the log2 fold change?",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060512/348d6c25/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060512/348d6c25/attachment.pl",
+      "body_plain": "Hello,\n\n \n\nThe topic of this email looks easy enough, but I cannot find in the\nLimma documentation how the (log2) fold changes are actually calculated.\n\n \n\nAs you probably now, Limma uses log2-scaled input (originating from e.g.\nRMA). So, if you want to calculate a log2 fold change, it is possible to\nkeep this log2-transformation into account or to discard it. What I mean\nwith this is that the mean of logged values is lower than the mean of\nthe unlogged values.\n\n \n\nTake for example the series: 2, 3, and 4\n\nlog2(mean(c(2^2, 2^3, 2^4)))\n\n[1] 3.222392\n\nmean(c(2,3,4))\n\n[1] 3\n\n \n\nTo my opinion, the top method, unlog, calculate the mean, and\nlog2-transform again, is the proper way and I do expect that Limma does\nit the same way. My question is: is this true?\n\n \n\nRegards,\n\n \n\nDr. Philip de Groot\n\nWageningen University\n\n \n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello,\n\n \n\nThe topic of this email looks easy enough, but I cannot find in the\nLimma documentation how the (log2) fold changes are actually calculated.\n\n \n\nAs you probably now, Limma uses log2-scaled ",
       "thread_id": "thread-037bcbf2a27b",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060512/348d6c25/attachment.pl"
+      ]
     },
     {
       "id": "msg-068e0e20f6a6",
@@ -2991,11 +3048,14 @@
       "subject_clean": "[BioC] European Conf. Computational Biology: Fellowships & Posters",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060515/51e4f4ca/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060515/51e4f4ca/attachment.pl",
+      "body_plain": "5th European Conference on Computational Biology - ECCB '06\n\nEilat, Israel\n\nSeptember 10-13, 2006\n\nwww.eccb06.org\n\n\nThe European Conference on Computational Biology (ECCB) is the \nleading European and a primary international conference in \ncomputational biology and bioinformatics. The fifth meeting in this \nseries will be held on September 10-13, 2006, in the resort town of \nEilat, Israel.\n\n** Travel fellowships are available for students and postdocs. The \ndeadline for applications is Monday, May 29, 2006. Please apply at:\n    http://www.eccb06.org/new_pages/submission/sub_travel.html\n\n** Posters are an important part of ECCB. The deadline for submitting \nposters is Thursday, June 8, 2006. Submit your poster at:\n    http://www.eccb06.org/new_pages/submission/sub_posters.html\n\n** Keynote speakers\nProf. Naama Barkai, Weizmann Institute of Science\nProf. Sir Tom Blundell, FRS, University of Cambridge\nProf. Richard Karp, University of California, Berkeley\nProf. Jeffrey Skolnick, Georgia Institute of Technology\nMarc Vidal, Ph.D., Harvard Medical School\nProf. Martin Vingron, Max Planck Institute for Molecular Genetics\n\n** Help us spread the word! Please download the conference poster and \nhang it on your door or a nearby bulletin board, and display it at \nthe beginning of seminars:\n    http://www.eccb06.org/other/eccbposter.pdf\n\n** For further information: See the conference website, \nhttp://www.eccb06.org, or send e-mail to the conference secretariat \nat eccb06 at diesenhaus.com.\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "5th European Conference on Computational Biology - ECCB '06\n\nEilat, Israel\n\nSeptember 10-13, 2006\n\nwww.eccb06.org\n\n\nThe European Conference on Computational Biology (ECCB) is the \nleading European and",
       "thread_id": "thread-709f5156d13e",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060515/51e4f4ca/attachment.pl"
+      ]
     },
     {
       "id": "msg-92a9c9b21559",
@@ -3141,11 +3201,14 @@
       "subject_clean": "[BioC] Simpleaffy QC summary table?",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060516/3eb9b68f/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060516/3eb9b68f/attachment.pl",
+      "body_plain": "Hi,\n \nIs there a command to output a summary table for the many qc metrics\nobtained by the qc function in simpleaffy (scale.factors,\npercent.present, average.background, AND ratios, etc)? I'd like to\noutput ONE table with all this info summarized for each chip (without\ncbinding every individual list in the qc object)\n \nMany thanks,\n \nTarun Nayar\nGenome Sciences Centre\nVancouver, BC\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi,\n \nIs there a command to output a summary table for the many qc metrics\nobtained by the qc function in simpleaffy (scale.factors,\npercent.present, average.background, AND ratios, etc)? I'd like to\n",
       "thread_id": "thread-4ee511faf022",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060516/3eb9b68f/attachment.pl"
+      ]
     },
     {
       "id": "msg-565721215e46",
@@ -3290,11 +3353,14 @@
       "subject_clean": "[BioC] GEOquery and platforms splitting",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060518/607b1533/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060518/607b1533/attachment.pl",
+      "body_plain": "Hi all,\n\nI downloaded a GSE file from GEO using GEOquery.\nThe GSM file contain two \"platforms\": GPL96 and GPL97. I need to make two separate exprset from the two (the GSMs are not contiguous for the two platforms, but are mixed).\nDo you have any suggestion on how I could make it?\n\nThanks in advance,\nRoberta\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi all,\n\nI downloaded a GSE file from GEO using GEOquery.\nThe GSM file contain two \"platforms\": GPL96 and GPL97. I need to make two separate exprset from the two (the GSMs are not contiguous for the t",
       "thread_id": "thread-daf2d9949115",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060518/607b1533/attachment.pl"
+      ]
     },
     {
       "id": "msg-d099f69d5723",
@@ -3511,11 +3577,14 @@
       "subject_clean": "[BioC] GEOquery and platforms splitting",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060519/69e25575/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060519/69e25575/attachment.pl",
+      "body_plain": "Hi Peter,\n\nthe GSE number is GSE4412.\n\nThanks,\nRoberta\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi Peter,\n\nthe GSE number is GSE4412.\n\nThanks,\nRoberta\n\n\t[[alternative HTML version deleted]]",
       "thread_id": "thread-d75842374879",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060519/69e25575/attachment.pl"
+      ]
     },
     {
       "id": "msg-77fcb5c0bce6",
@@ -3527,11 +3596,14 @@
       "subject_clean": "[BioC] RBGL installation on fedora core 5 (gcc4.1)",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060519/12a31334/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060519/12a31334/attachment.pl",
+      "body_plain": "hi,\ni have already posted once that the installation (or better said the\ncompilation) of the RBGL_1.8.1 package failes on FC5 linux systems. actually\nthe RBGL fails to compile with the gcc4.1 compiler and i found no way to fix\nthis or work around this problem. the only way to install it on my system\nwas to downloads the gcc4.0 source and install that compiler too, and\ncomiple the RBGL package with this compiler. nevertheless, it worked for me.\n\nbest regards, jo\n\n-- \nJohannes Rainer, Msc\nTyrolean Cancer Research Institute\nInnrain 66, 6020 Innsbruck, Austria\nTel.: +43 512 570485 15\nEmail: johannes.rainer at tcri.at\n          johannes.rainer at tugraz.at\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "hi,\ni have already posted once that the installation (or better said the\ncompilation) of the RBGL_1.8.1 package failes on FC5 linux systems. actually\nthe RBGL fails to compile with the gcc4.1 compiler",
       "thread_id": "thread-77fcb5c0bce6",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060519/12a31334/attachment.pl"
+      ]
     },
     {
       "id": "msg-45f95d135c07",
@@ -3580,11 +3652,14 @@
       "subject_clean": "[BioC]  Reading flag data from Agilent files",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060519/2fc12073/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060519/2fc12073/attachment.pl",
+      "body_plain": "Cher Monsieur,  je viens demander un peu d'aide sur l'utilisation du \npackage Limma: j'espère que vous allez pouvoir m'aider!\nje suis tombé sur une question ancienne relative au flag de spots lorsque \nLimma est utilisé pour traiter des data issues de F extraction d'agilent, \nj'ai un souci comparable à celui que vous aviez: je n'arrive pas à gérer \nles flags: pouvez vous me renseigner sur la commande à introduire ? dans \nmon objet Rg je n'ai pas de weight, ce qui était le cas lorsque je \ntravaillais avec Genepix et des .gpr\nMerci par avance\n\nmon script préliminaire sans fonction pour les flags car rien ne marche:\ntargets<- readTargets(\"target1.txt\",row.names=\"Slide number\")\nRG <-read.maimages(targets$FileName,source=\"agilent\")\n#Read 251239140435.txt\n#Read 251239140486.txt\n#Read 251239140436.txt\n#Read 251239140487.txt\n#Read 251239140465.txt\n#Read 251239140534.txt\n#Read 251239140537.txt\n#Read 251239140460.txt\n#Read 251239140539.txt\n#Read 251239140484.txt\n#Read 251239143844.txt\n#Read 251239140540.txt\n\nnames(RG)\n#[1] \"G\"       \"Gb\"      \"R\"       \"Rb\"      \"targets\" \"genes\"   \"source\"\nnames(RG$genes)\n#[1] \"Row\"            \"Col\"            \"ProbeUID\"       \"ControlType\"\n#[5] \"ProbeName\"      \"GeneName\"       \"SystematicName\" \"Description\"\n\n\n\n\nVotre message était:\nHi list,\n\ndoes somebody here knows if there's a function in the\nBioconductor packages for reading flags data (feature\nsaturation, non uniformity, etc...) or other kind of\ndata from Agilent files (from Feature Extraction\nsoftware). I used read.Agilent(marray) but it doesn't\nread other data that Fg and Bg intensities, wrong ? Or\nis there something to do with the '... further\narguments to scan(base)' ?\n\n\n\n\n\nFrederic Capel, Ph D\nPostDoc\nINSERM U586, Obesity Research Unit\nIFR31, Institut Louis Bugnard, BP 84225\n31432 TOULOUSE Cedex 4\nFrederic.Capel at toulouse.inserm.fr\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Cher Monsieur,  je viens demander un peu d'aide sur l'utilisation du \npackage Limma: j'espère que vous allez pouvoir m'aider!\nje suis tombé sur une question ancienne relative au flag de spots lorsque ",
       "thread_id": "thread-edbf5bd49c44",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060519/2fc12073/attachment.pl"
+      ]
     },
     {
       "id": "msg-a417cf181969",
@@ -3676,11 +3751,14 @@
       "subject_clean": "[BioC] Creating an interactive heatmap",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060519/207f18d2/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060519/207f18d2/attachment.pl",
+      "body_plain": "I need to create a heatmap that allows me to zoom in on clusters of\ngenes in order to identify which genes are included.  The standard\nheatmap makes it difficult to identify the genes if there are too many.\n\n \n\nI am using the hopach package to create the files needed for MapleTree,\nbut I've run into two problems.\n\n \n\nI am using the chapter on cluster analysis by Pollard and van der Laan\nin Gentleman, et al Bioinformatics and computational biology solutions\nusing R and Bioconductor as a guide.\n\n \n\n1.\tmy data is from an Affymetrix chip and I need to create a fill\nsimilar to the gene.desc with the gene description from annTable.\n2.\tthe function hopach2tree is not included in the hopach package\nfor R 2.3.0 on a Windows XP platform. \n\n \n\nHas anyone figured out how to create the necessary file with gene\ndescriptions for an Affymetrix chip?  And, where can I get hopach2tree\nfor the Window XP system.\n\n \n\nThank you,\n\n \n\nJohn E. Cornell, Ph.D.\n\nExpectation, hope, intention toward possibility that has still not\nbecome: this is not only a basic feature of human consciousness, but,\n..., a basic determination within objective reality as a whole.\n\n--Ernst Bloch\n\n--The Principle of Hope (Vol. 1)\n\n \n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "I need to create a heatmap that allows me to zoom in on clusters of\ngenes in order to identify which genes are included.  The standard\nheatmap makes it difficult to identify the genes if there are too",
       "thread_id": "thread-b4562350ceba",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060519/207f18d2/attachment.pl"
+      ]
     },
     {
       "id": "msg-fc2d72cce16f",
@@ -3763,11 +3841,14 @@
         "<m2d5ea6r9k.fsf@ziti.fhcrc.org>",
         "<446E3E40.6000502@ebi.ac.uk>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060522/c68f5737/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060522/c68f5737/attachment.pl",
+      "body_plain": "hi seth, hi wolfgang,\n\ni also think that that's a problem if the new gcc with the BGL, on the\nrelease notes of the gcc (http://gcc.gnu.org/gcc-4.1/changes.html) there is\nin the section c++ a point concerning templates which probably causes this\nproblem (as far as i understand).\nbest, jo\n\nOn 5/19/06, Wolfgang Huber <huber at ebi.ac.uk> wrote:\n>\n> Hi Seth,\n>\n> > Thanks for sending an update.  Glad to hear that you were able to get\n> > RBGL working on your system.\n> >\n> > Just to clarify a bit on what I think the issues are:\n> >\n> > RBGL includes prepackaged sources from the Boost Graph Library\n> > (heavily templated C++).  It's this library code that fails to compile\n> > on the newer gcc's.  This isn't really a Bioc issue as much as a Boost\n> > issue and ideally, the Boost project will fix their code.\n>\n> I have had the same problem with (R)BGL and gcc 4.1, just wanted to\n> point out that based on what we know (please correct if I'm wrong) the\n> problem is in the interaction between gcc 4.1 and the Boost Graph\n> Library, and it seems too harsh to say that the fault or the need for a\n> fix is necessarily on BGL's side.\n>\n> Best\n> W.\n>\n> --------------------------------------------------------------\n> Wolfgang Huber   EBI/EMBL   Cambridge UK  Tel. +44 1223 494642\n>\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor at stat.math.ethz.ch\n> https://stat.ethz.ch/mailman/listinfo/bioconductor\n> Search the archives:\n> http://news.gmane.org/gmane.science.biology.informatics.conductor\n>\n\n\n\n-- \nJohannes Rainer, Msc\nTyrolean Cancer Research Institute\nInnrain 66, 6020 Innsbruck, Austria\nTel.: +43 512 570485 15\nEmail: johannes.rainer at tcri.at\n          johannes.rainer at tugraz.at\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "hi seth, hi wolfgang,\n\ni also think that that's a problem if the new gcc with the BGL, on the\nrelease notes of the gcc (http://gcc.gnu.org/gcc-4.1/changes.html) there is\nin the section c++ a point con",
       "thread_id": "thread-77fcb5c0bce6",
       "thread_depth": 3,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060522/c68f5737/attachment.pl"
+      ]
     },
     {
       "id": "msg-754506b6b501",
@@ -3968,11 +4049,14 @@
       "subject_clean": "[BioC] expression output in simpleaffy",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060523/e1f12f88/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060523/e1f12f88/attachment.pl",
+      "body_plain": "Hi,\n \nHow can I output normalized data from an exprSet for all probe sets and\nall arrays in an experiment?\n \n...the results.summary and write.annotation functions appear to only\nwork once a pairwise.comparison is performed (?)\n \nthanks\n \nTarun Nayar\nGenome Sciences Centre\nVancouver, BC\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi,\n \nHow can I output normalized data from an exprSet for all probe sets and\nall arrays in an experiment?\n \n...the results.summary and write.annotation functions appear to only\nwork once a pairwise.c",
       "thread_id": "thread-897ed4f11682",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060523/e1f12f88/attachment.pl"
+      ]
     },
     {
       "id": "msg-a9f455656c69",
@@ -4002,11 +4086,14 @@
       "subject_clean": "[BioC] Experiment export in Gene Expression Omnibus (GEO) SOFT format",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060524/42d715fe/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060524/42d715fe/attachment.pl",
+      "body_plain": "Hi,\n \nAnyone know if there is an R script or package for exporting microarray experiments in SOFT file format for submission to GEO?\nCould be from expression data set objects, MA objects or other.\nI know there is GEOquery package, but I believe this is only for retrieving data from GEO.\n \nRegards,\nHenrik Hornshøj\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi,\n \nAnyone know if there is an R script or package for exporting microarray experiments in SOFT file format for submission to GEO?\nCould be from expression data set objects, MA objects or other.\nI k",
       "thread_id": "thread-d2324b66630e",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060524/42d715fe/attachment.pl"
+      ]
     },
     {
       "id": "msg-4c97df791946",
@@ -4034,11 +4121,14 @@
       "subject_clean": "[BioC] loading composite data (bg corrected) into limma",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060524/1fafc5d1/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060524/1fafc5d1/attachment.pl",
+      "body_plain": "Hi,\n\nI am looking for a way to load background corrected data (all the 24 arrays\nin a single file) into limma. This is a 2-channel array data, so I have 3\ncolumns (cy3, cy5 & flag) for each array with probe name & ID.  I have tried\nto load the data with read.table(). Now, do I need to convert this table\ninto RGList?\n\nAnother related question: Is it necessary to have each array data in a\nseparate file (txt file), in order to do DE analysis in limma? (basically\nfor thet target file).\n\nThanks in advance.\n\nRegards,\nSharon\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi,\n\nI am looking for a way to load background corrected data (all the 24 arrays\nin a single file) into limma. This is a 2-channel array data, so I have 3\ncolumns (cy3, cy5 & flag) for each array with",
       "thread_id": "thread-5289d844e112",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060524/1fafc5d1/attachment.pl"
+      ]
     },
     {
       "id": "msg-40ba8feaa4a9",
@@ -4082,11 +4172,14 @@
       "subject_clean": "[BioC] Time course experiment and timecourse package",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060524/3b7cc202/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060524/3b7cc202/attachment.pl",
+      "body_plain": "Hi,\nwe have recently finished a large microarray experiment on HGU133plus2 (each experimental point is in triplicate) made of 4 different compound treatments on the same cell line investigated at 0, 1,2,3,4,5,6,24 hours.\nWe have done a full randomization of experimental steps. We were quite disappointed when we observed that, after&nbsp;RMA calculation (quantile normalization),&nbsp;in PCA&nbsp; data are grouped also on the basis of the day of cRNA synthesis.\nWe would like to investigate this experiment using the timecourse package. Does anybody know if the model implemented in the timecouse package will handle this “day effect”?\n&nbsp;\nIs it a reasonable option to normalize first the data grouped by the \"day of cRNA synthesis\" and then, after combining all in a unique exprSet, performing a further normalization?\n&nbsp;\nBest\nRaffaele\n&nbsp;\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi,\nwe have recently finished a large microarray experiment on HGU133plus2 (each experimental point is in triplicate) made of 4 different compound treatments on the same cell line investigated at 0, 1",
       "thread_id": "thread-de2c5390a79c",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060524/3b7cc202/attachment.pl"
+      ]
     },
     {
       "id": "msg-b669dc8536d3",
@@ -4117,11 +4210,14 @@
         "<3709c2370605240306h4008b1dcw7de738bf79aab06@mail.gmail.com>",
         "<C099AE72.BE78%sdavis2@mail.nih.gov>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060524/7e2bc3f4/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060524/7e2bc3f4/attachment.pl",
+      "body_plain": "Hi Sean,\n\nThanks for the suggestions. As you suggested, I have created 3 different\nmatices (data.cy3, data.cy5, data.flag) from the large table. To make a\nRGList, I looked at read.maimages() in limma. Though, I can make a list with\n3 matrices, I am still not sure about making 'targets' filed.  It will be of\ngreat help if you send some info on making RGList by hand.\n\nThanks again for your help.\n\nFollowing is the code, which I have used:\n\nall <- read.table(\"data.txt\", sep=\"\\t\", header=TRUE)\ndata.cy5 <- all[, c(seq(3,74,by=3)] # have 24 slides\ndata.cy3 <- all[, c(seq(4,74,by=3)]\ndata.flag <- all[, c(seq(5,74,by=3)]\ngenes <- all[,2]\n\n\n\n\n\nOn 5/24/06, Sean Davis <sdavis2 at mail.nih.gov> wrote:\n>\n>\n>\n>\n> On 5/24/06 6:06 AM, \"Sharon\" <sharonanandhi at gmail.com> wrote:\n>\n> > Hi,\n> >\n> > I am looking for a way to load background corrected data (all the 24\n> arrays\n> > in a single file) into limma. This is a 2-channel array data, so I have\n> 3\n> > columns (cy3, cy5 & flag) for each array with probe name & ID.  I have\n> tried\n> > to load the data with read.table(). Now, do I need to convert this table\n> > into RGList?\n>\n> You need to make 3 separate matrices for cy3, cy5, and, if you want to use\n> flag, a \"weights\" matrix; all of this can be done by subsetting out the\n> columns that you want from your \"big table\".  Then you can construct your\n> RGList by hand.  You will of course probably want to add a \"targets\"\n> data.frame as well as gene information.  After that, everything should\n> proceed as normal.\n>\n> Sean\n>\n>\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi Sean,\n\nThanks for the suggestions. As you suggested, I have created 3 different\nmatices (data.cy3, data.cy5, data.flag) from the large table. To make a\nRGList, I looked at read.maimages() in limma.",
       "thread_id": "thread-5289d844e112",
       "thread_depth": 2,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060524/7e2bc3f4/attachment.pl"
+      ]
     },
     {
       "id": "msg-262e46f5dd56",
@@ -4149,11 +4245,14 @@
       "subject_clean": "[BioC] Protein/peptide mass",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060524/92d3b761/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060524/92d3b761/attachment.pl",
+      "body_plain": "Hello All\n \nApologies in advance if this is an obvious question but I have searched\nand cannot find an answer or a straightforward way to do it. \n \nIs there a way to calculate the mass of a protein/peptide using\nR/Bioconductor?  i.e. like the Expasy \"PeptideMass\" web page or like the\nEMBOSS pepstats? \n \nRegards\n \nJohn Seers\n \n \n \n \n \n \n \n \n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello All\n \nApologies in advance if this is an obvious question but I have searched\nand cannot find an answer or a straightforward way to do it. \n \nIs there a way to calculate the mass of a protein/pe",
       "thread_id": "thread-2b8bc44b189f",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060524/92d3b761/attachment.pl"
+      ]
     },
     {
       "id": "msg-7f83167ccbea",
@@ -5035,11 +5134,14 @@
       "subject_clean": "[BioC] CTBG Deploys World's Only Fully Rotating Well Fishing Tools - Ref. o38015",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060528/a713217d/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060528/a713217d/attachment.pl",
+      "body_plain": "Hudson,\n\nravenousness\n\nSPRING, TX--(MARKET WIRE)-- Coil Tubing Technology, Inc. (CTBG) announces the delivery of the first group of 8 Rotating Tools to oil and gas well service companies operating in Mexico and Oklahoma. Designed for use in \"fishing\" applications utilizing 2\" coiled tubing strings, these tools were delivered and \"in the field\" the week of May 1, 2006.\n\nsellar\n\nIn addition, CTBG has received orders for ten (10) more of these 2 7/8\" Rotating Tool units, plus five (5) 2 1/8\" Rotating Tools, all of which are scheduled for delivery to customers before the end of the month of May.\n\nreassimilate\n\nRead the whole story at Yahoo Finance: http://biz.yahoo.com/iw/060525/0129447.html\n\npsychotoxic\n\nIla Dodson, Acct. Rep. gr89677\n\nhobnob\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hudson,\n\nravenousness\n\nSPRING, TX--(MARKET WIRE)-- Coil Tubing Technology, Inc. (CTBG) announces the delivery of the first group of 8 Rotating Tools to oil and gas well service companies operating in ",
       "thread_id": "thread-1114142f0fbe",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060528/a713217d/attachment.pl"
+      ]
     },
     {
       "id": "msg-f1b3df6a8bcd",
@@ -5067,11 +5169,14 @@
       "subject_clean": "[BioC] Normexp background correction.",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060529/a59b12f8/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060529/a59b12f8/attachment.pl",
+      "body_plain": "/I'm using limma package to perform microarray data analysis. I've // \ntried backgorund correction method normexp and//. I've read that normexp \nis considered the best by now, but I// can't found any detailed \ninformation about it (how it works on data //and so on).// Does anyone \nknow where I can get this kind of information? //\nThanks! //\nAlpha DIALLO (University Joseph FOURIER ) /\n\n-- \nAlpha DIALLO\nLaboratoire TIMC-IMAG / Equipe RFMQ\nInstitut de l'Ingénierie de l'Information de Santé (IN3S)\nUniversité Joseph Fourier - Faculté de Médecine (Pavillon Taillefer)\nDomaine de la Merci - 38706 La Tronche Cedex FRANCE\nTél:+33 4 56 52 00 66  / +33 6 79 65 21 78\ne-mail : alpha.diallo at imag.fr\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "/I'm using limma package to perform microarray data analysis. I've // \ntried backgorund correction method normexp and//. I've read that normexp \nis considered the best by now, but I// can't found any ",
       "thread_id": "thread-817f49338746",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060529/a59b12f8/attachment.pl"
+      ]
     },
     {
       "id": "msg-1071badb3d24",
@@ -5240,11 +5345,14 @@
       "subject_clean": "[BioC] CTBG Deploys World's Only Fully Rotating Well Fishing Tools - Ref. mjh111205",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060530/43cf4c2e/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060530/43cf4c2e/attachment.pl",
+      "body_plain": "furness\nSPRING, TX--(MARKET WIRE)-- Coil Tubing Technology, Inc. (CTBG) announces the delivery of the first group of 8 Rotating Tools to oil and gas well service companies operating in Mexico and Oklahoma. Designed for use in \"fishing\" applications utilizing 2\" coiled tubing strings, these tools were delivered and \"in the field\" the week of May 1, 2006.nailery\ntonetically\nIn addition, CTBG has received orders for ten (10) more of these 2 7/8\" Rotating Tool units, plus five (5) 2 1/8\" Rotating Tools, all of which are scheduled for delivery to customers before the end of the month of May. urnfield\nsniped\nCTBG offers the only fully rotating tool for well fishing applications,\" stated Jerry Swinford, President of Coil Tubing Technology, Inc. \"Other tools in the marketplace only 'index' or 'turn' in 90 degree increments without fully rotating, which is an inefficient means of latching a fish. We are delighted by the overwhelming response from customers regarding the capabilities of these tools.\" immunohistology\nembryologic\nThe Rotating Tool is a device that attaches to the end of a coiled tube to assist with \"latching a fish,\" or removing production kits or undesired obstructions from the well by introducing rotation under mechanical pressure. The design and action of the tool is similar to a \"Yankee screwdriver.\" If, for example, during normal operations, a piece of coiled tube is broken off and remains lodged in the wellbore, it can be difficult to get the new coiled tubing line past the obstruction. By introducing rotation to the \"overshot,\" or latching mechanism at the end of the tool, obstructions can be cleared without the need to manually work the tool through the well head. southerner\ncontradict\nCoil Tubing Technology was established in 1998 by an innovative founder that has over thirty years experience in the design of oil-field tools in general and fifteen years of experience in the design of proprietary tools for the coiled tubing industry in particular. With more than fifteen patents either granted or pending, CTT is the leader in providing new technology to the coiled tubing industry. CTT has become a one stop rental tool company supplying a full line of standard as well as propietary coiled tubing downhole tools. collates\nredescribe\nCOILED TUBING DRILLING TOOLS  femmes\nerects\nThe Jet Motor maximizes torque and RPM combinations. This motor has the capability to establish bit hydraulics. The long life bearing package allows the tool to stay in the hole longer than average. It can be jarred without damaging the tool which is ideal for drilling through shale. The Jet Motor has been used successfully with MWD and steering tools in drilling applications. The nitrogen power source permits underbalanced drilling.  beautiful\nengrained\nThe Pulsator allows the weight on the bit to be maximized without stalling the motor as the torsional and axial torque are retained within the tool. The maximum tensible strength allows high energy jarring impact while the tool prevents spike loading from migrating up into the generic tool strings.  RND_WORD\nbounden\nThe HeavyHitter, when used on the upstroke only, provides variable tensible overpull due to its hydraulic metered detent system. The minimum axial drag at detent release provides high velocity of the hammer mass to the anvil.   servable\nhyperopia\nFor more information on CTBG, please visit Yahoo Finance - CTBG  coercivity\nseismoscopic\nlethargic\nINDUSTRY NEWS restaged\nsill\nOil-Rich Venezuela Looks to Tar Deposits\n Venezuela Looks to Tar Deposits to Supply Surging Global Energy Needs indurative\ninjuria\nJOSE, Venezuela (AP) -- Beneath the plains and winding tributaries of the Orinoco River lie what Venezuela believes is the planet's largest oil deposit -- a tar-soaked basin that could help meet spiraling global energy needs.\n  It's known as the \"Faja,\" or \"belt\": a strip three times the area of Kuwait potentially holding 1.2 trillion barrels of extra-heavy oil.  Jet-black, sticky and oozing like molasses, Orinoco oil was long written off as too difficult and costly to produce. Now rising oil prices make it increasingly attractive. fascicled\nsangaree\n\"Venezuela has the largest oil reserves in the world,\" Chavez declared recently, referring to the more than 300 billion barrels of oil he believes is recoverable, mostly from the Orinoco belt.  Saudi Arabia, which pumps more oil than any other nation, claims 260 billion barrels of so-called proven reserves, or roughly 25 percent of the world's conventional oil, according to the U.S. Department of Energy. hyperpiesis\nnonjudgmental\nusurers\nMARKET OVERVIEW campground\nunderservant\nRefinery Spending May Cut Into Gas Price\ncrossjacks\nDUBAI, United Arab Emirates (AP) -- Oil companies and other investors are spending a collective 100 billion DOLLARS on new oil refineries that could alleviate the current bottleneck in refining capacity -- and eventually translate into a small cut in the price of gasoline, a top project financier said here Sunday. sniffed\n leukotoxic\nWill Rathvon, global head of project finance for Standard Chartered Bank, said that more than 30 new or expanded refineries will come on stream over the next decade, adding at least 6.5 million barrels a day of badly needed capacity to global fuel markets. sadomasochist\ncleverest\n\"Right now refining is maxed out,\" Rathvon said on the sidelines of a Middle East energy conference. \"At this point, the shutdown of a single refinery -- even for maintenance -- can trigger an increase in gasoline prices.\" tumorigeneses\ncoccidiomycosis\nRefineries in fuel-thirsty Asia are operating at a frantic 95 percent capacity, Rathvon said. In North America and Europe, refineries are also running at over 90 percent capacity, he said. hay\nenteric\n\"Running that tight has put prices up,\" Rathvon told The Associated Press. eucestoda\ninheritrices\n\nThe BottomLine Report is not liable for any decisions by its readers or subscribers. The information contained herein has been provided as an information service only.  The BottomLine Report purchased 270,000 shares at 0.15.  We may close our positions at any time. shrugging\ndraghounds\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "furness\nSPRING, TX--(MARKET WIRE)-- Coil Tubing Technology, Inc. (CTBG) announces the delivery of the first group of 8 Rotating Tools to oil and gas well service companies operating in Mexico and Okla",
       "thread_id": "thread-45b102f1dfac",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060530/43cf4c2e/attachment.pl"
+      ]
     },
     {
       "id": "msg-f779d1866821",
@@ -5256,11 +5364,14 @@
       "subject_clean": "[BioC] help in creating custom venn diagrams from multiple contrasts",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060530/b015a780/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060530/b015a780/attachment.pl",
+      "body_plain": "Hi all, \n\nI am trying to run an analysis on 7 groups of chips (1 ctrl and 6 different conditions), each with 2 affymetrix chips.\n\nI am trying to replicate what affylm gui would do but instead I thought of using a gcrma.mle correction.\n\nAfter gathering as much info as I could from the forum ,still it seems to have stuck on how to choose which contrasts to use for the venn diagrams. (see part \"#create vennDiagram\" below). \n\nWhat I could consider important here is the ability to choose the contrasts that would be shown on the venn diagram , in a way that affylmGUI would enable the user to use.\n\nAny help would really be appreciated.\n\n----------\nBy the code used below I try to make a huge vennDiagram of all the 21 contrasts which is why possibly R returns\"cannot allocate a vector of 340000 kb\". Anyhow this would be a nice thing to have , possibly not usefull for the work I need to do ,  but just for the sake of seeing if this is possible to be done.\n----------\n\n\n# start by loading base libraries\nlibrary(affy)\nlibrary(limma)\nlibrary(gcrma)\n\n#read in files\n\ntargets <- readTargets(\"RT_target.txt\", row.names=\"Name\")\nex1<-ReadAffy(filenames=targets$FileName)\nex1.gcrma.mle<-gcrma(ex1,estimate=\"mle\",normalize=TRUE,summary.method = \"medianpolish\" )\n\n#create lin model and contrasts\ndesign <- model.matrix(~ -1+factor(c(1,1,2,2,3,3,4,4,5,5,6,6,7,7)))\ncolnames(design) <- c(\"CTRL\", \"IGF1\", \"ZOME\",\"TGFb\",\"CTED\",\"INT6\",\"ILTI\")\nfit <- lmFit(ex1.gcrma.mle, design)\ncontrast.matrix <- makeContrasts(IGF1-CTRL, ZOME-CTRL, TGFb-CTRL,CTED-CTRL,INT6-CTRL,ILTI-CTRL,ZOME - IGF1, TGFb-IGF1,CTED-IGF1,INT6-IGF1,ILTI-IGF1,TGFb-ZOME,CTED-ZOME,INT6-ZOME,ILTI-ZOME,CTED-TGFb,INT6-TGFb,ILTI-TGFb,INT6-CTED,ILTI-CTED,ILTI-INT6, levels=design)\nfit2 <- contrasts.fit(fit, contrast.matrix)\nfit2 <- eBayes(fit2)\ntopTable(fit2, coef=1, adjust=\"BH\")\n\n#create vennDiagram\nresults <- decideTests(fit2)\nresults\nvennDiagram(results)\n\n\n\n#Export toptable\nlibrary(affycoretools)\nlimma2annaffy(ex1,fit2,design,contrast.matrix, lib=\"hgu133a\",adjust = \"fdr\",anncols = aaf.handler()[c(1:13)], number = 30, pfilt = NULL, fldfilt= NULL,tstat = TRUE, pval = TRUE, FC = TRUE,expression = TRUE, html = TRUE, text = FALSE, save = FALSE, addname =NULL, interactive = TRUE)\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi all, \n\nI am trying to run an analysis on 7 groups of chips (1 ctrl and 6 different conditions), each with 2 affymetrix chips.\n\nI am trying to replicate what affylm gui would do but instead I though",
       "thread_id": "thread-f779d1866821",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060530/b015a780/attachment.pl"
+      ]
     },
     {
       "id": "msg-6dbbdd29a156",
@@ -5272,11 +5383,14 @@
       "subject_clean": "[BioC] help in creating custom venn diagrams from multiple contrasts",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060530/a0bc9ea3/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060530/a0bc9ea3/attachment.pl",
+      "body_plain": "Hi all, \n\nI am trying to run an analysis on 7 groups of chips (1 ctrl and 6 different conditions), each with 2 affymetrix chips.\n\nI am trying to replicate what affylm gui would do but instead I thought of using a gcrma.mle correction.\n\nAfter gathering as much info as I could from the forum ,still it seems to have stuck on how to choose which contrasts to use for the venn diagrams. (see part \"#create vennDiagram\" below). \n\nWhat I could consider important here is the ability to choose the contrasts that would be shown on the venn diagram , in a way that affylmGUI would enable the user to use.\n\nAny help would really be appreciated.\n\nTriantafillos Paparountas\nBSRC Fleming\n\n\n\n----------\nBy the code used below I try to make a huge vennDiagram of all the 21 contrasts which is why possibly R returns\"cannot allocate a vector of 340000 kb\". Anyhow this would be a nice thing to have , possibly not usefull for the work I need to do ,  but just for the sake of seeing if this is possible to be done.\n----------\n\n\n# start by loading base libraries\nlibrary(affy)\nlibrary(limma)\nlibrary(gcrma)\n\n#read in files\n\ntargets <- readTargets(\"RT_target.txt\", row.names=\"Name\")\nex1<-ReadAffy(filenames=targets$FileName)\nex1.gcrma.mle<-gcrma(ex1,estimate=\"mle\",normalize=TRUE,summary.method = \"medianpolish\" )\n\n#create lin model and contrasts\ndesign <- model.matrix(~ -1+factor(c(1,1,2,2,3,3,4,4,5,5,6,6,7,7)))\ncolnames(design) <- c(\"CTRL\", \"IGF1\", \"ZOME\",\"TGFb\",\"CTED\",\"INT6\",\"ILTI\")\nfit <- lmFit(ex1.gcrma.mle, design)\ncontrast.matrix <- makeContrasts(IGF1-CTRL, ZOME-CTRL, TGFb-CTRL,CTED-CTRL,INT6-CTRL,ILTI-CTRL,ZOME - IGF1, TGFb-IGF1,CTED-IGF1,INT6-IGF1,ILTI-IGF1,TGFb-ZOME,CTED-ZOME,INT6-ZOME,ILTI-ZOME,CTED-TGFb,INT6-TGFb,ILTI-TGFb,INT6-CTED,ILTI-CTED,ILTI-INT6, levels=design)\nfit2 <- contrasts.fit(fit, contrast.matrix)\nfit2 <- eBayes(fit2)\ntopTable(fit2, coef=1, adjust=\"BH\")\n\n#create vennDiagram\nresults <- decideTests(fit2)\nresults\nvennDiagram(results)\n\n\n\n#Export toptable\nlibrary(affycoretools)\nlimma2annaffy(ex1,fit2,design,contrast.matrix, lib=\"hgu133a\",adjust = \"fdr\",anncols = aaf.handler()[c(1:13)], number = 30, pfilt = NULL, fldfilt= NULL,tstat = TRUE, pval = TRUE, FC = TRUE,expression = TRUE, html = TRUE, text = FALSE, save = FALSE, addname =NULL, interactive = TRUE)\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi all, \n\nI am trying to run an analysis on 7 groups of chips (1 ctrl and 6 different conditions), each with 2 affymetrix chips.\n\nI am trying to replicate what affylm gui would do but instead I though",
       "thread_id": "thread-6dbbdd29a156",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060530/a0bc9ea3/attachment.pl"
+      ]
     },
     {
       "id": "msg-f87162275327",
@@ -5290,11 +5404,14 @@
       "references": [
         "<446CE0C0.1080706@hsc.vcu.edu>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060530/765b2e4c/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060530/765b2e4c/attachment.pl",
+      "body_plain": "Hi\n\nI'm currently running R version 2.2.0 under Windows XP with 2 Gb RAM.\n\nI'm working through the GOstats vignette using the GOstats.Rnw file to \nobtain the R code (for a description of the package see at end of this \nE-mail)\n\nThe first objective of this section of the vignette is to extract all of \nthe probe sets in the hgu95av2 chip that are associated with \ntranscription factor GO identifiers using:\n\nTF2 <- get(\"GO:0003700\", hgu95av2GO2ALLPROBES)\n\nFYI- length(TF2) = 834\n\nThe next step gets the locus links (Entrez Gene IDs) associated with \nthese probe sets thus:\n\nLLs <- getLL(TF2, \"hgu95av2\")\n\nFYI - length(LLs) = 834\n\nThe third step gets a vector of probe sets that have been selected that \nshow some level of expression and some variation in expression across \nsamples.  The data is contained within the exprSet = esetSub.\n\ngN = geneNames(esetSub)\n\nFYI - length(gN) = 2391\n\nSo far so good.  The next objective is to get probe sets that are common \nto both TF2 and gN and uses the following code:\n\nhv <- match(gN, TF2, 0)\n\nhv contains 159 non zero terms\n > length(hv[!(hv ==0 )])\n[1] 159\n\nHOWEVER, THESE NON ZERO TERMS ARE THE INDEX VALUES THAT LOCATE THE PROBE \nSETS in TF2 - NOT in gN!!!  The next part of the code is where the error \noccurs and this error is propagated in the subsequent code for this section.\n\noTF2 <- gN[hv]\n\nAs one would expect from the above, the length(oTF2) does equal 159.  \nHowever, VERY FEW of these probe sets in oTF2 belong to the vector of \nprobes selected on the basis of an association with GO::0003700 - that \nis - very few of them (only 14) are actually part of TF2.  Thus:\n\n > length(oTF2[oTF2 %in% TF2])\n[1] 14\n\nwhereas all values of oTF2 should be in TF2.\n\nIf one revises the above code thus:\n\nhvcorr <- hv[!(hv==0)]\n\noTF2corr<- TF2[hvcorr]\n\nOne again gets length(oTF2corr) = 159 but now the probe sets are in both \nTF2 and gN:\n\n > length(TF2[TF2 %in% oTF2corr])\n[1] 159\n\n > length(gN[gN %in% oTF2corr])\n[1] 159\n\nThus, all subsequent calculations in this section of the vignette that \ndepend on oTF2 are in error.\n\nThis problem has probably been raised before and I just now \nrediscovering it.  If so, I would appreciate your pointing me to the \nthread or location of the correction.\n\nThanks\n\nCarl Garrett\n\n\n\n\n======================================================================\nDescription\nPackage: GOstats\nTitle: Tools for manipulating GO and microarrays.\nVersion: 1.4.0\nDate: 20 Jan 2005\nAuthor: R. Gentleman\nDescription: A set of tools for interacting with GO and microarray\n        data. A variety of basic manipulation tools for graphs,\n        hypothesis testing and other simple calculations.\nbiocViews: Statistics, Annotation, GO, MultipleComparisons\nDepends: graph, GO, annotate, RBGL, xtable, Biobase, genefilter,\n        multtest\nSuggests: hgu95av2 (>= 1.6.0)\nMaintainer: R. Gentleman <rgentlem at fhcrc.org>\nLicense: GPL2.0\nPackaged: Wed Oct 12 21:34:06 2005; biocbuild\nBuilt: R 2.2.0; ; 2005-10-12 21:34:10; windows\n\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi\n\nI'm currently running R version 2.2.0 under Windows XP with 2 Gb RAM.\n\nI'm working through the GOstats vignette using the GOstats.Rnw file to \nobtain the R code (for a description of the package s",
       "thread_id": "thread-6be329530f4c",
       "thread_depth": 1,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060530/765b2e4c/attachment.pl"
+      ]
     },
     {
       "id": "msg-0f2fca6682b7",
@@ -5341,11 +5458,14 @@
       "subject_clean": "[BioC] when dimensionality is larger than the number of observations?",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060530/c40eb504/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060530/c40eb504/attachment.pl",
+      "body_plain": "Hi, there:\n\nCan anyone here kindly point some good reference or links on this topic?\nEsp. some solutions from BioConductor or R, when dealing with\nmicroarray-like, \"fat\" data?\n\nthanks,\n\n\n-- \nWeiwei Shi, Ph.D\n\n\"Did you always know?\"\n\"No, I did not. But I believed...\"\n---Matrix III\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi, there:\n\nCan anyone here kindly point some good reference or links on this topic?\nEsp. some solutions from BioConductor or R, when dealing with\nmicroarray-like, \"fat\" data?\n\nthanks,\n\n\n-- \nWeiwei Sh",
       "thread_id": "thread-9762401ed475",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060530/c40eb504/attachment.pl"
+      ]
     },
     {
       "id": "msg-ab2efaceab53",
@@ -5746,11 +5866,14 @@
       "subject_clean": "[BioC] flat microarray p-values",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060531/1ddb607c/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060531/1ddb607c/attachment.pl",
+      "body_plain": "I have a problem with my latest batch of microarrays. A histogram of all the\np-values is flat, so the qvalue package does not work. Quality control\nindicates that these are good arrays. Does anyone have any ideas?\n\n \n\nDarren\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "I have a problem with my latest batch of microarrays. A histogram of all the\np-values is flat, so the qvalue package does not work. Quality control\nindicates that these are good arrays. Does anyone ha",
       "thread_id": "thread-3afe1f2d617b",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060531/1ddb607c/attachment.pl"
+      ]
     },
     {
       "id": "msg-1c2e7570b04e",
@@ -5762,11 +5885,14 @@
       "subject_clean": "[BioC] getBM failing on complete probe list for hgu133plus2",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060531/a30db576/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060531/a30db576/attachment.pl",
+      "body_plain": "Dear BioC list,\n\nI'm getting some very strange behaviour from biomaRt.  The following script works perfectly if I supply a single probe id to the getBM function (i.e. values=probe_ids[1]).  But, when I supply the entire probe_ids list I get the following error.\n\nError in postForm(paste(mart at host, \"?\", sep = \"\"), query = xmlQuery) :\n        <not set>\n\nOnce I get the above error, I get a whole bunch of new errors for commands that would have worked before the error.\nexamples:\n> annotations=getBM(attributes=c(\"affy_hg_u133_plus_2\", \"ensembl_peptide_id\",\"entrezgene\", \"unified_uniprot_accession\", \"uniprot_swissprot_accession\"), filter=\"affy_hg_u133_plus_2\", values=sample_gene, mart=mart, output=\"list\", na.value=\"NA\")\nError in postForm(paste(mart at host, \"?\", sep = \"\"), query = xmlQuery) :\n        Couldn't resolve host 'www.biomart.org'\n\nIt seems to kill my connection to biomart until I quit R and start all over again.  Can anyone help?  Is there some kind of timeout for such a large query?  Has anyone gotten this sort of thing to work before or can you suggest an alternative way to map all affy probe ids to uniprot IDs in R?\n\n####Start R script#####\n#Load the appropriate libraries\nlibrary(affy)\nlibrary(gcrma)\nlibrary(\"annotate\")\nlibrary(\"biomaRt\")\nlibrary(\"hgu133plus2\")\n\nsetwd(\"/home/my_dir\")\n\n#just.gcrma method\n#Get file list\ncelfiles=list.files(path=\"/home/my_dir\")\n\n#Do gcrma normalization\ngcrma_exprset=just.gcrma(filenames=celfiles,normalize=TRUE,type=\"fullmodel\",verbose=TRUE,fast=FALSE,optimize.by=\"memory\")\n\nprobe_ids=geneNames(gcrma_exprset)\n\nmart <- useMart(\"ensembl\", \"hsapiens_gene_ensembl\")\n\nannotations=getBM(attributes=c(\"affy_hg_u133_plus_2\", \"ensembl_peptide_id\",\"entrezgene\", \"unified_uniprot_accession\", \"uniprot_swissprot_accession\"), filter=\"affy_hg_u133_plus_2\", values=probe_ids_nc, mart=mart, output=\"list\", na.value=\"NA\")\n####End R script#####\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear BioC list,\n\nI'm getting some very strange behaviour from biomaRt.  The following script works perfectly if I supply a single probe id to the getBM function (i.e. values=probe_ids[1]).  But, when ",
       "thread_id": "thread-1c2e7570b04e",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060531/a30db576/attachment.pl"
+      ]
     },
     {
       "id": "msg-83c0fa73b95e",
@@ -5778,11 +5904,14 @@
       "subject_clean": "[BioC] empty elements in uniprot_swissprot annotation",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060531/223fdcb1/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060531/223fdcb1/attachment.pl",
+      "body_plain": "When I use the getBM function to get 'uniprot_swissprot_accession' I see a lot of entries with strange empty elements.  If the probe has no annotation then 'NA' is correctly returned.  But, for those that have one or more annotations they often (but not always) come with extra elements with value \"\".  This 'empty' element can appear anywhere in the result and does not appear to follow any pattern.  This makes parsing/processing these results a little more awkward.  Is this a known bug?  Can anyone offer a solution?\n\n\n> annotations=getBM(attributes=\"uniprot_swissprot_accession\", filter=\"affy_hg_u133_plus_2\", values=probe_ids[1:10], mart=mart, output=\"list\", na.value=\"NA\") \n\n$uniprot_swissprot_accession$`1007_s_at`\n[1] \"Q08345\" \"\"\n\n$uniprot_swissprot_accession$`1053_at`\n[1] \"P35250\" \"\"\n\n$uniprot_swissprot_accession$`117_at`\n[1] \"P17066\" \"P48741\"\n\n$uniprot_swissprot_accession$`121_at`\n[1] \"Q06710\" \"\"\n\n$uniprot_swissprot_accession$`1255_g_at`\n[1] \"\"       \"P43080\"\n\n$uniprot_swissprot_accession$`1294_at`\n[1] \"\"       \"P41226\"\n\n$uniprot_swissprot_accession$`1316_at`\n[1] \"NA\"\n\n\n-----Original Message-----\nFrom: Obi Griffith\nSent: Wed 5/31/2006 4:47 PM\nTo: bioconductor at stat.math.ethz.ch\nSubject: getBM failing on complete probe list for hgu133plus2\n \n\nDear BioC list,\n\nI'm getting some very strange behaviour from biomaRt.  The following script works perfectly if I supply a single probe id to the getBM function (i.e. values=probe_ids[1]).  But, when I supply the entire probe_ids list I get the following error.\n\nError in postForm(paste(mart at host, \"?\", sep = \"\"), query = xmlQuery) :\n        <not set>\n\nOnce I get the above error, I get a whole bunch of new errors for commands that would have worked before the error.\nexamples:\n> annotations=getBM(attributes=c(\"affy_hg_u133_plus_2\", \"ensembl_peptide_id\",\"entrezgene\", \"unified_uniprot_accession\", \"uniprot_swissprot_accession\"), filter=\"affy_hg_u133_plus_2\", values=sample_gene, mart=mart, output=\"list\", na.value=\"NA\")\nError in postForm(paste(mart at host, \"?\", sep = \"\"), query = xmlQuery) :\n        Couldn't resolve host 'www.biomart.org'\n\nIt seems to kill my connection to biomart until I quit R and start all over again.  Can anyone help?  Is there some kind of timeout for such a large query?  Has anyone gotten this sort of thing to work before or can you suggest an alternative way to map all affy probe ids to uniprot IDs in R?\n\n####Start R script#####\n#Load the appropriate libraries\nlibrary(affy)\nlibrary(gcrma)\nlibrary(\"annotate\")\nlibrary(\"biomaRt\")\nlibrary(\"hgu133plus2\")\n\nsetwd(\"/home/my_dir\")\n\n#just.gcrma method\n#Get file list\ncelfiles=list.files(path=\"/home/my_dir\")\n\n#Do gcrma normalization\ngcrma_exprset=just.gcrma(filenames=celfiles,normalize=TRUE,type=\"fullmodel\",verbose=TRUE,fast=FALSE,optimize.by=\"memory\")\n\nprobe_ids=geneNames(gcrma_exprset)\n\nmart <- useMart(\"ensembl\", \"hsapiens_gene_ensembl\")\n\nannotations=getBM(attributes=c(\"affy_hg_u133_plus_2\", \"ensembl_peptide_id\",\"entrezgene\", \"unified_uniprot_accession\", \"uniprot_swissprot_accession\"), filter=\"affy_hg_u133_plus_2\", values=probe_ids_nc, mart=mart, output=\"list\", na.value=\"NA\")\n####End R script#####\n\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "When I use the getBM function to get 'uniprot_swissprot_accession' I see a lot of entries with strange empty elements.  If the probe has no annotation then 'NA' is correctly returned.  But, for those ",
       "thread_id": "thread-83c0fa73b95e",
       "thread_depth": 0,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060531/223fdcb1/attachment.pl"
+      ]
     },
     {
       "id": "msg-97deadb0810b",
@@ -5813,11 +5942,14 @@
         "<C09C585F.C05C%sdavis2@mail.nih.gov>",
         "<273912609.1148659612@math-pc345.maths.bris.ac.uk>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060531/79e2f4b7/attachment.pl",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nUrl: https://stat.ethz.ch/pipermail/bioconductor/attachments/20060531/79e2f4b7/attachment.pl",
+      "body_plain": "Dear all,\n\nI am a biostatistics student and working in a molecular biology lab. I have\nthe similar problem as Markis has. But the biology may be totally different.\nMy affy array samples come from pooled plasmid library(extract from yeast).\nThey are not from RNA.\nSo I did not expect it has same character as normal RNA profile.\n\nI have used the same chip,  yeast strain for RNA profile, I got hundreds\ngene express differentially; but the pooled plasmid library samples tole me\nmore than 3000  genes changed (mostly are from the library) although 9000\ngene on the chip and my library has 6000 genes only. Using Affy MAS5 or RMA\nfollowed by limma gave me similar number result : more than 3000. And the\ndata reproducibility is good, means high percent of the genes changes are\nreal.\n\nI am very curious if the way to normalize the chips are reasonable and if I\nshould trust the results. I am thinking, if the genelist can be trust, what\nI got from the chip is the relative ratio of each gene in the pooled\nchanged; which is related to what Naomi said: I know I gave the similar\namount of samples and the facility put on similar amount of tRNA on chips.\nIt's the assumption when we nomalize chips and it is also true in my case.\n\nJust want to descripe what problem I met, what related results I got and\nwould like to hear suggestions or related ideas.\n\nThanks,\n\nDi\nDivision of Biostatistics\nDepartment of Epidemiology and Biostatistics\nSchool of Medicine\nCase Western Reserve University\nCleveland, OH\n\n\nOn 5/26/06, E Motakis, Mathematics <E.Motakis at bristol.ac.uk> wrote:\n>\n> Dear all,\n>\n> I am working on two colours microarray experiments and, from a set of\n> 42000\n> genes, I would like to identify the differentially expressed ones. I have\n> read several articles on this issue and most of them imply that the number\n> of differential expressed genes in such experiments should be a small\n> number (compared to the whole set).\n>\n> Could anyone tell me why this is correct? What if I find half of the genes\n> to be differentially expressed according to the t-test p-value?\n>\n> I am not discussing the issue of p-values and q-values yet. I am asking\n> only about why most of the papers imply a low number of differentially\n> expressed genes.\n>\n> Thank you,\n> Makis\n>\n>\n> ----------------------\n> E Motakis, Mathematics\n> E.Motakis at bristol.ac.uk\n>\n> _______________________________________________\n> Bioconductor mailing list\n> Bioconductor at stat.math.ethz.ch\n> https://stat.ethz.ch/mailman/listinfo/bioconductor\n> Search the archives:\n> http://news.gmane.org/gmane.science.biology.informatics.conductor\n>\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear all,\n\nI am a biostatistics student and working in a molecular biology lab. I have\nthe similar problem as Markis has. But the biology may be totally different.\nMy affy array samples come from pool",
       "thread_id": "thread-7fb1ce1a6292",
       "thread_depth": 2,
-      "month": "2006-05"
+      "month": "2006-05",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20060531/79e2f4b7/attachment.pl"
+      ]
     },
     {
       "id": "msg-8abd8384fc3d",
