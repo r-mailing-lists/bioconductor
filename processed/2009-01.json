@@ -7139,11 +7139,14 @@
       "subject_clean": "[BioC] getSeq human genomic sequences",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nURL: <https://stat.ethz.ch/pipermail/bioconductor/attachments/20090129/98dab2ad/attachment.pl>",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nURL: <https://stat.ethz.ch/pipermail/bioconductor/attachments/20090129/98dab2ad/attachment.pl>",
+      "body_plain": "Hello,\n\nI used getSeq to retrieve human genomic sequences from the BSgenome data\npackage:\n\nlibrary(BSgenome.Hsapiens.UCSC.hg18)\n\n# cpg is GTF file\nchr6 <- cpg[grep(\"6\", cpg[[5]]),] # chrom 6\nlength(unique(chr6[,6])) # 10683 genomic positions\n\n# loop to match \"CG\" and print 100bp to file\nfor (i in 1:10683)\n{\nif (getSeq(Hsapiens, \"chr6\",\nunique(chr6[,6])[i],(unique(chr6[,6])[i]+1))==\"CG\")\n{\nwrite.table(paste(\">\",\nunique(chr6[,6])[i],sep=\"\"),file=\"chr6FOR\",row.names=F, col.names=F,\nappend=TRUE)\nwrite.table(getSeq(Hsapiens, \"chr6\",\n(unique(chr6[,6])[i]-50),(unique(chr6[,6])[i]+50)),file=\"chr6FOR\",row.names=F,\ncol.names=F, append=TRUE)\n}\n}\n\nHowever, I always got the error meg like the following when i = 5263\n\nError in solveUserSEW(length(x), start = start, end = end, width = width) :\n  solving row 1: 'allow.nonnarrowing' is FALSE and the supplied start\n(63219120) is > refwidth + 1\n\nPlease let me know if there's something I should be paying attention to.\n\nThanks!\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello,\n\nI used getSeq to retrieve human genomic sequences from the BSgenome data\npackage:\n\nlibrary(BSgenome.Hsapiens.UCSC.hg18)\n\n# cpg is GTF file\nchr6 <- cpg[grep(\"6\", cpg[[5]]),] # chrom 6\nlength(un",
       "thread_id": "thread-898b841a252b",
       "thread_depth": 0,
-      "month": "2009-01"
+      "month": "2009-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20090129/98dab2ad/attachment.pl"
+      ]
     },
     {
       "id": "msg-593932dee3b9",
@@ -7225,11 +7228,14 @@
       "subject_clean": "[BioC] FW: Rgraphviz install",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nURL: <https://stat.ethz.ch/pipermail/bioconductor/attachments/20090130/d8d1de18/attachment.pl>",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nURL: <https://stat.ethz.ch/pipermail/bioconductor/attachments/20090130/d8d1de18/attachment.pl>",
+      "body_plain": "Hi I've tried several times and followed what others suggest in installing Rgraphviz (https://stat.ethz.ch/pipermail/bioconductor/2008-June/022838.html)But I could not load library(Rgraphviz). There's a message that 'This application has failed to start because libcdt-4.dll was not found' Could anyone suggest me how to make it work? june\n\nWindows Live™ Hotmail®:…more than just e-mail. Check it out.\n_________________________________________________________________\n\n\nowitworks_012009\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hi I've tried several times and followed what others suggest in installing Rgraphviz (https://stat.ethz.ch/pipermail/bioconductor/2008-June/022838.html)But I could not load library(Rgraphviz). There's",
       "thread_id": "thread-c1dc2f1aee65",
       "thread_depth": 0,
-      "month": "2009-01"
+      "month": "2009-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20090130/d8d1de18/attachment.pl"
+      ]
     },
     {
       "id": "msg-8836dcb4144d",
@@ -7278,11 +7284,14 @@
       "references": [
         "<d70c15d40901300813n1d9d8d8ck30c9a61faa8c2753@mail.gmail.com>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nURL: <https://stat.ethz.ch/pipermail/bioconductor/attachments/20090130/2ed97de4/attachment.pl>",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nURL: <https://stat.ethz.ch/pipermail/bioconductor/attachments/20090130/2ed97de4/attachment.pl>",
+      "body_plain": "On Fri, Jan 30, 2009 at 11:13 AM, Gábor Csárdi <Gabor.Csardi at unil.ch> wrote:\n\n> Dear All,\n>\n> I am trying to create an annotation package that contains predicted\n> miRNA targets, basically it would be a mapping between Entrez Gene IDs\n> and miRNA families, for a couple of organisms, together with some\n> additional info or course.\n>\n> I am trying to make use of the AnnBuilder package, but could not find\n> out whether it can do this at all or not. Btw. the vignettes of it\n> seem to a bit outdated, e.g. the 'writeAnnData2Pkg' function is not\n> public any more.\n>\n> So my questions are:\n>\n> 1) Is AnnBuilder the right tool for this?\n>\n> 2) If not, are there any \"right\" tools? I don't mind creating the\n> sqlite database by hand, but how do I create AnnDbBimap objects for\n> it?\n>\n> 3) Are your scripts for building the standard annotation packages\n> (e.g. org.xx.eg.db) publicly available somewhere? It would be of great\n> help to see how this is done.\n>\n\nHi, Gabor.  Actually, the AnnBuilder way of building things is deprecated.\nYou will want to use the AnnotationDbi package and refer to the SQLForge\nvignette.\n\nHope that helps.  If you have more specific questions, be sure to include\nsessionInfo() output.\n\nSean\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "On Fri, Jan 30, 2009 at 11:13 AM, Gábor Csárdi <Gabor.Csardi at unil.ch> wrote:\n\n> Dear All,\n>\n> I am trying to create an annotation package that contains predicted\n> miRNA targets, basically it would",
       "thread_id": "thread-608cdfa7f4d5",
       "thread_depth": 1,
-      "month": "2009-01"
+      "month": "2009-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20090130/2ed97de4/attachment.pl"
+      ]
     },
     {
       "id": "msg-a8d8a8c01181",
@@ -7315,11 +7324,14 @@
       "references": [
         "<1ee6623e0901292011h56b8ad21y8f5822257946003a@mail.gmail.com>"
       ],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nURL: <https://stat.ethz.ch/pipermail/bioconductor/attachments/20090130/35f7d737/attachment.pl>",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nURL: <https://stat.ethz.ch/pipermail/bioconductor/attachments/20090130/35f7d737/attachment.pl>",
+      "body_plain": "Hello,\n\nI used the same codes for chr22, it didn't show any error msg.\n#chr22\nfor (i in 1:17183)\n{\nif (getSeq(Hsapiens, \"chr22\",\nunique(chr22[,6])[i],(unique(chr22[,6])[i]+1))==\"CG\")\n{\nwrite.table(paste(\">\",\nunique(chr22[,6])[i],sep=\"\"),file=\"chr22FOR\",row.names=F, col.names=F,\nappend=TRUE)\nwrite.table(getSeq(Hsapiens, \"chr22\",\n(unique(chr22[,6])[i]-50),(unique(chr22[,6])[i]+50)),file=\"chr22FOR\",row.names=F,\ncol.names=F, append=TRUE)\n}\n}\n\n> sessionInfo()\nR version 2.8.1 (2008-12-22)\ni486-pc-linux-gnu\n\nlocale:\nLC_CTYPE=en_US.UTF-8;LC_NUMERIC=C;LC_TIME=en_US.UTF-8;LC_COLLATE=en_US.UTF-8;LC_MONETARY=C;LC_MESSAGES=en_US.UTF-8;LC_PAPER=en_US.UTF-8;LC_NAME=C;LC_ADDRESS=C;LC_TELEPHONE=C;LC_MEASUREMENT=en_US.UTF-8;LC_IDENTIFICATION=C\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base\n\nother attached packages:\n[1] BSgenome.Hsapiens.UCSC.hg18_1.3.11 BSgenome_1.10.3\n[3] Biostrings_2.10.15                 IRanges_1.0.9\n\nloaded via a namespace (and not attached):\n[1] grid_2.8.1         lattice_0.17-20    Matrix_0.999375-18\ntools_2.8.1\n>\n\n\nOn Thu, Jan 29, 2009 at 9:11 PM, Tiandao Li <litd99 at gmail.com> wrote:\n\n> Hello,\n>\n> I used getSeq to retrieve human genomic sequences from the BSgenome data\n> package:\n>\n> library(BSgenome.Hsapiens.UCSC.hg18)\n>\n> # cpg is GTF file\n> chr6 <- cpg[grep(\"6\", cpg[[5]]),] # chrom 6\n> length(unique(chr6[,6])) # 10683 genomic positions\n>\n> # loop to match \"CG\" and print 100bp to file\n> for (i in 1:10683)\n> {\n> if (getSeq(Hsapiens, \"chr6\",\n> unique(chr6[,6])[i],(unique(chr6[,6])[i]+1))==\"CG\")\n> {\n> write.table(paste(\">\",\n> unique(chr6[,6])[i],sep=\"\"),file=\"chr6FOR\",row.names=F, col.names=F,\n> append=TRUE)\n> write.table(getSeq(Hsapiens, \"chr6\",\n> (unique(chr6[,6])[i]-50),(unique(chr6[,6])[i]+50)),file=\"chr6FOR\",row.names=F,\n> col.names=F, append=TRUE)\n> }\n> }\n>\n> However, I always got the error meg like the following when i = 5263\n>\n> Error in solveUserSEW(length(x), start = start, end = end, width = width) :\n>\n>   solving row 1: 'allow.nonnarrowing' is FALSE and the supplied start\n> (63219120) is > refwidth + 1\n>\n> Please let me know if there's something I should be paying attention to.\n>\n> Thanks!\n>\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Hello,\n\nI used the same codes for chr22, it didn't show any error msg.\n#chr22\nfor (i in 1:17183)\n{\nif (getSeq(Hsapiens, \"chr22\",\nunique(chr22[,6])[i],(unique(chr22[,6])[i]+1))==\"CG\")\n{\nwrite.table(pas",
       "thread_id": "thread-898b841a252b",
       "thread_depth": 1,
-      "month": "2009-01"
+      "month": "2009-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20090130/35f7d737/attachment.pl"
+      ]
     },
     {
       "id": "msg-843dbe2d0279",
@@ -7331,11 +7343,14 @@
       "subject_clean": "[BioC] Heatmap problem",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nURL: <https://stat.ethz.ch/pipermail/bioconductor/attachments/20090131/12eb3519/attachment.pl>",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nURL: <https://stat.ethz.ch/pipermail/bioconductor/attachments/20090131/12eb3519/attachment.pl>",
+      "body_plain": "Dear All\n\nI was trying to make a heatmap using library(gplots)\n\nlibrary(\"gplots\")\nt <-(read.table(\"target_file\",header=TRUE))\nY <-t$ID\nx<-as.matrix(t[2:7])\nheatmap.2(x,col=redgreen(75),Rowv=TRUE,Colv=TRUE,scale=\"row\",key=TRUE,symkey=FALSE,\ndensity.info\n=\"none\",labRow=Y,labCol=c(\"control\",\"control\",\"control\",\"stress\",\"stress\",\"stress\"),trace=\"none\",cexRow=0.5)\n\nMy problem is, it plots a heatmap which looks very odd, I want to control\nthe size of box it make in heatmap.\n\nUsing margin=c(12,12) in the function reduces the picture as a whole but not\nthe size of boxes it makes.\n\nCan anyone help me making the pretty heatmap\n\nI shall be very thankful for your kind help\n\nRegards\n\n-- \nHemant Ritturaj Kushwaha\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Dear All\n\nI was trying to make a heatmap using library(gplots)\n\nlibrary(\"gplots\")\nt <-(read.table(\"target_file\",header=TRUE))\nY <-t$ID\nx<-as.matrix(t[2:7])\nheatmap.2(x,col=redgreen(75),Rowv=TRUE,Colv=",
       "thread_id": "thread-843dbe2d0279",
       "thread_depth": 0,
-      "month": "2009-01"
+      "month": "2009-01",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20090131/12eb3519/attachment.pl"
+      ]
     },
     {
       "id": "msg-53e509f01397",
