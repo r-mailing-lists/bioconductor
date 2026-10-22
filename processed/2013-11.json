@@ -9801,7 +9801,7 @@
     {
       "id": "msg-d8babee05764",
       "message_id": "<20131129111850.C8CAD14182B@mamba.fhcrc.org>",
-      "from_name": "MarÃ­a Maqueda [guest]",
+      "from_name": "María Maqueda [guest]",
       "from_email_hash": "482b383a0e5e39d0afdc8cb7c3b9b71043030778eb8e103f3b4f0587465fd98b",
       "date": "2013-11-29T11:18:50Z",
       "subject": "[BioC] Analysis of Affymetrix Human Gene 2.0 ST arrays",
@@ -12683,8 +12683,8 @@
       "message_count": 4,
       "participants": [
         "James W. MacDonald",
-        "MarÃ­a Maqueda [guest]",
-        "María Maqueda González"
+        "María Maqueda González",
+        "María Maqueda [guest]"
       ],
       "started": "2013-11-29T11:18:50Z",
       "last_reply": "2013-11-29T19:33:36Z",

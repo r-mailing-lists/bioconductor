@@ -6879,7 +6879,7 @@
     {
       "id": "msg-cfeccf8afa91",
       "message_id": "<20140121164715.AF7F8143D0E@mamba.fhcrc.org>",
-      "from_name": "Joel RodrÃ­guez-Medina [guest]",
+      "from_name": "Joel Rodríguez-Medina [guest]",
       "from_email_hash": "482b383a0e5e39d0afdc8cb7c3b9b71043030778eb8e103f3b4f0587465fd98b",
       "date": "2014-01-21T16:47:15Z",
       "subject": "[BioC] Get actual coordinates for the predicted loci",
@@ -11039,7 +11039,7 @@
     {
       "id": "msg-1be478515dee",
       "message_id": "<20140131171615.724CE144235@mamba.fhcrc.org>",
-      "from_name": "OrÃ§un HaÃ§arÄ±z [guest]",
+      "from_name": "Orçun Haçarız [guest]",
       "from_email_hash": "482b383a0e5e39d0afdc8cb7c3b9b71043030778eb8e103f3b4f0587465fd98b",
       "date": "2014-01-31T17:16:15Z",
       "subject": "[BioC] Ontology",
@@ -12883,7 +12883,7 @@
       "subject": "[BioC] Get actual coordinates for the predicted loci",
       "message_count": 2,
       "participants": [
-        "Joel RodrÃ­guez-Medina [guest]",
+        "Joel Rodríguez-Medina [guest]",
         "Tom Hardcastle"
       ],
       "started": "2014-01-21T16:47:15Z",
@@ -13946,7 +13946,7 @@
       "subject": "[BioC] Ontology",
       "message_count": 2,
       "participants": [
-        "OrÃ§un HaÃ§arÄ±z [guest]",
+        "Orçun Haçarız [guest]",
         "Steve Lianoglou"
       ],
       "started": "2014-01-31T17:16:15Z",

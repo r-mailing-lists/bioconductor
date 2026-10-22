@@ -2913,7 +2913,7 @@
       "subject_clean": "[BioC] Mu11KsubA and Mu11KsubB",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "Hi,\n\nI'm working on some Affy mice chips, they are Mu11KsubA and Mu11KsubB.\nThe data on the chips are divided into two parts (maybe the gene list is\nlong), so when I try to read the data to R, it gave me an error message\nsaying\n\"Error in initialize (value,....) : Cel file C:/~/1DE_Mu11KB.CEL does\nnot seem to be of Mu11KsubA type.Â Â  Is there a way I can combine the\ndata into one, instead of analyzing two parts separately?\n\nThanks.\n\nYen Lin",
+      "body_plain": "Hi,\n\nI'm working on some Affy mice chips, they are Mu11KsubA and Mu11KsubB.\nThe data on the chips are divided into two parts (maybe the gene list is\nlong), so when I try to read the data to R, it gave me an error message\nsaying\n\"Error in initialize (value,....) : Cel file C:/~/1DE_Mu11KB.CEL does\nnot seem to be of Mu11KsubA type.   Is there a way I can combine the\ndata into one, instead of analyzing two parts separately?\n\nThanks.\n\nYen Lin",
       "body_snippet": "Hi,\n\nI'm working on some Affy mice chips, they are Mu11KsubA and Mu11KsubB.\nThe data on the chips are divided into two parts (maybe the gene list is\nlong), so when I try to read the data to R, it gave",
       "thread_id": "thread-0322f4ac84db",
       "thread_depth": 0,
