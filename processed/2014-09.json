@@ -3575,11 +3575,14 @@
       "subject_clean": "[BioC] what drives sample outliers in 450k (detectOutlier, lumi)",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "Hi there\n\nI am finding some sample outliers in the result from the detectOutlier method in lumi. I don?t see anything strange about these samples when I look at the mean beta values. I wonder how I can find out what drives these samples to be outliers (what set of probes, etc)? It would be good to know the reason for these, to determine whether they need to be re-included in a separate experiment. They do not seem to be outliers in the gender tests .. \n\nI would appreciate your thoughts on this. \n\nMany thanks\nVictoria\n\n\n--\nVictoria Svinti\nColon Cancer Genetics Group\nMRC Human Genetics Unit, IGMM\nUniversity of Edinburgh, Western General Hospital,\nCrewe Road, Edinburgh, EH4 2XU\n\n\n\n\n-------------- next part --------------\nAn embedded and charset-unspecified text was scrubbed...\nName: not available\nURL: <https://stat.ethz.ch/pipermail/bioconductor/attachments/20140912/48b09beb/attachment.pl>",
+      "body_plain": "Hi there\n\nI am finding some sample outliers in the result from the detectOutlier method in lumi. I don?t see anything strange about these samples when I look at the mean beta values. I wonder how I can find out what drives these samples to be outliers (what set of probes, etc)? It would be good to know the reason for these, to determine whether they need to be re-included in a separate experiment. They do not seem to be outliers in the gender tests .. \n\nI would appreciate your thoughts on this. \n\nMany thanks\nVictoria\n\n\n--\nVictoria Svinti\nColon Cancer Genetics Group\nMRC Human Genetics Unit, IGMM\nUniversity of Edinburgh, Western General Hospital,\nCrewe Road, Edinburgh, EH4 2XU\n\n\n\n\n-------------- next part --------------\nThe University of Edinburgh is a charitable body, registered in\nScotland, with registration number SC005336.",
       "body_snippet": "Hi there\n\nI am finding some sample outliers in the result from the detectOutlier method in lumi. I don?t see anything strange about these samples when I look at the mean beta values. I wonder how I ca",
       "thread_id": "thread-470184db2d7b",
       "thread_depth": 0,
-      "month": "2014-09"
+      "month": "2014-09",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/bioconductor/attachments/20140912/48b09beb/attachment.pl"
+      ]
     },
     {
       "id": "msg-27b2d7b68b48",
